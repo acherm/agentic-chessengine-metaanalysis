@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic chess-engine meta-analysis — interactive explorers</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --border: #2e3250;
+    --accent: #5b8af5;
+    --text: #d4d8f0;
+    --text-dim: #7880a8;
+    --text-bright: #eef0ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    min-height: 100vh; padding: 3rem 1.5rem;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { color: var(--text-bright); font-size: 1.6rem; margin-bottom: 0.4rem; font-weight: 600; }
+  .lede { color: var(--text-dim); margin-bottom: 2.5rem; font-size: 0.95rem; }
+  .lede a { color: var(--accent); }
+  .cards { display: grid; gap: 1rem; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 1.25rem 1.5rem; text-decoration: none;
+    color: var(--text); transition: border-color 120ms, transform 120ms;
+    display: block;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card h2 { color: var(--text-bright); font-size: 1.1rem; margin-bottom: 0.35rem; font-weight: 600; }
+  .card p { color: var(--text-dim); font-size: 0.9rem; }
+  footer {
+    margin-top: 3rem; color: var(--text-dim); font-size: 0.85rem; text-align: center;
+  }
+  footer a { color: var(--text-dim); }
+  footer a:hover { color: var(--accent); }
+  code { background: var(--surface); padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Agentic chess-engine meta-analysis</h1>
+  <p class="lede">
+    Companion artefacts for an empirical study of chess-engine projects built by
+    frontier coding agents (Claude Code, Codex) across 15+ programming languages.
+    Source repository:
+    <a href="https://github.com/acherm/agentic-chessengine-metaanalysis">github.com/acherm/agentic-chessengine-metaanalysis</a>.
+    Paper in preparation.
+  </p>
+
+  <div class="cards">
+    <a class="card" href="reports/features/feature_explorer.html">
+      <h2>Chess Engine Feature Explorer</h2>
+      <p>Browse the 26-engine corpus by chess-knowledge feature
+        (quiescence, transposition tables, evaluation, null-move pruning,
+        alpha-beta &hellip;); compare any pair of implementations side by side
+        across languages.</p>
+    </a>
+    <a class="card" href="reports/features/quiescence_art.html">
+      <h2>Quiescence search — implementations gallery</h2>
+      <p>Each engine's quiescence routine rendered as a scannable card.
+        Same algorithm template, 11 different language idioms.</p>
+    </a>
+    <a class="card" href="reports/features/quiescence_art_advanced.html">
+      <h2>Quiescence search — advanced view</h2>
+      <p>Heat-mapped, sortable variant of the gallery: surfaces stand-pat
+        guards, delta-pruning thresholds, check-evasion presence.</p>
+    </a>
+  </div>
+
+  <footer>
+    Static pages served from the GitHub repo via GitHub Pages.
+    For the full analysis material (Python toolkit, Bradley-Terry MLE
+    code, per-engine session JSONs, findings docs) see the
+    <a href="https://github.com/acherm/agentic-chessengine-metaanalysis">repository README</a>.
+  </footer>
+</main>
+</body>
+</html>
