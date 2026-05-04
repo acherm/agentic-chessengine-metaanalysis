@@ -1,0 +1,55 @@
+Indexing opening suite...
+Started game 1 of 8 (chess-rust-cc-redo vs asymptote)
+Started game 2 of 8 (asymptote vs chess-rust-cc-redo)
+Finished game 2 (asymptote vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs asymptote: 0 - 1 - 0  [0.000] 1
+Started game 3 of 8 (chess-rust-cc-redo vs asymptote)
+Finished game 3 (chess-rust-cc-redo vs asymptote): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs asymptote: 0 - 2 - 0  [0.000] 2
+Started game 4 of 8 (asymptote vs chess-rust-cc-redo)
+Finished game 1 (chess-rust-cc-redo vs asymptote): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-rust-cc-redo vs asymptote: 0 - 2 - 1  [0.167] 3
+Started game 5 of 8 (chess-rust-cc-redo vs asymptote)
+Finished game 4 (asymptote vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs asymptote: 0 - 3 - 1  [0.125] 4
+Started game 6 of 8 (asymptote vs chess-rust-cc-redo)
+Finished game 5 (chess-rust-cc-redo vs asymptote): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs asymptote: 0 - 4 - 1  [0.100] 5
+Started game 7 of 8 (chess-rust-cc-redo vs asymptote)
+Finished game 6 (asymptote vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs asymptote: 0 - 5 - 1  [0.083] 6
+Started game 8 of 8 (asymptote vs chess-rust-cc-redo)
+Finished game 7 (chess-rust-cc-redo vs asymptote): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs asymptote: 0 - 6 - 1  [0.071] 7
+Finished game 8 (asymptote vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs asymptote: 0 - 7 - 1  [0.063] 8
+...      chess-rust-cc-redo playing White: 0 - 3 - 1  [0.125] 4
+...      chess-rust-cc-redo playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 3 - 1  [0.563] 8
+Elo difference: -470.4 +/- nan, LOS: 0.4 %, DrawRatio: 12.5 %
+SPRT: llr -3.21 (-108.9%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-rust-cc-redo
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White wins by adjudication": 4
+Player: asymptote
+   "Draw by 3-fold repetition": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White wins by adjudication": 4
+Finished match
+...      chess-rust-cc-redo playing White: 0 - 3 - 1  [0.125] 4
+...      chess-rust-cc-redo playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 3 - 1  [0.563] 8
+Elo difference: -470.4 +/- nan, LOS: 0.4 %, DrawRatio: 12.5 %
+SPRT: llr -3.21 (-108.9%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-rust-cc-redo
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White wins by adjudication": 4
+Player: asymptote
+   "Draw by 3-fold repetition": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White wins by adjudication": 4
+Finished match

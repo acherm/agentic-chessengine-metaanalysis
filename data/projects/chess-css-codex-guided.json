@@ -1,0 +1,173 @@
+{
+  "name": "chess-css-codex-guided",
+  "path": "/Users/mathieuacher/SANDBOX/chess-css-codex-guided",
+  "primary_language": "JavaScript",
+  "loc": {
+    "files_by_lang": {
+      "HTML": 1,
+      "Markdown": 1,
+      "CSS": 1,
+      "JavaScript": 1
+    },
+    "loc_by_lang": {
+      "HTML": 420,
+      "Markdown": 26,
+      "CSS": 537,
+      "JavaScript": 1094
+    },
+    "total_files": 4,
+    "total_loc": 2077
+  },
+  "features": {
+    "FEN parsing": 4,
+    "Perft": 4,
+    "Castling": 3,
+    "En passant": 3,
+    "Promotion": 3,
+    "Check/Checkmate": 2,
+    "Mobility": 2,
+    "Material counting": 1,
+    "Opening book": 1
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "index.html",
+      "README.md",
+      "style.css",
+      "engine.js"
+    ],
+    "UCI protocol": [],
+    "Perft": [
+      "index.html",
+      "README.md",
+      "style.css",
+      "engine.js"
+    ],
+    "Castling": [
+      "index.html",
+      "README.md",
+      "engine.js"
+    ],
+    "En passant": [
+      "index.html",
+      "README.md",
+      "engine.js"
+    ],
+    "Promotion": [
+      "index.html",
+      "README.md",
+      "engine.js"
+    ],
+    "Check/Checkmate": [
+      "style.css",
+      "engine.js"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [
+      "style.css",
+      "engine.js"
+    ],
+    "Material counting": [
+      "engine.js"
+    ],
+    "Opening book": [
+      "engine.js"
+    ],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 9,
+    "n_assistant_messages": 36,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 89
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 7444720,
+        "output": 90187,
+        "cache_read": 7152256,
+        "cache_creation": 0,
+        "reasoning_output": 39992
+      },
+      "usd_estimate": 11.1
+    },
+    "first_ts": "2026-03-01T06:15:23.247Z",
+    "last_ts": "2026-03-01T07:51:49.726Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-03-01T07-14-38-019ca808-db44-7bd0-8760-b728065f028a",
+        "first_ts": "2026-03-01T06:15:23.247Z",
+        "last_ts": "2026-03-01T07:51:49.726Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 9,
+        "tokens": {
+          "input": 7444720,
+          "output": 90187,
+          "cache_read": 7152256,
+          "reasoning_output": 39992
+        },
+        "tool_uses": {
+          "exec_command": 89
+        },
+        "first_prompt_sample": "taking technical inspirations from https://lyra.horse/x86css/ incredible success, build a chess engine in pure CSS programming language... \n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

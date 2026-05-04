@@ -1,0 +1,48 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-cplusplus-claude"]
+[Black "chess-ruby-codex"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppp1ppp/4p3/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 d5 2. Nc3 Nf6 3. Qd3 Bd6 4. Bg5 O-O 5. O-O-O Nc6 6. e3 Nb4 7. Qd2 h6
+8. Bxf6 Qxf6 9. Qe1 Bd7 10. Rd2 c5 11. dxc5 Bxc5 12. Bd3 Nxd3+ 13. Rxd3 Rac8
+14. Rg1 Rc7 15. Kb1 b5 16. Rh1 b4 17. Ne2 Bb5 18. Rd1 Rfc8 19. Ng3 Bc4 20. Rg1
+a5 21. e4 d4 22. Rd2 e5 23. Ne2 Qe6 24. Nc1 a4 25. Qd1 a3 26. b3 Bb5 27. Nd3 Bd6
+28. Qe2 h5 29. Re1 Qf6 30. Red1 Qg6 31. Nh4 Qh7 32. Nf5 Bc5 33. Qf3 Bxd3
+34. Rxd3 Qg6 35. Qh3 h4 36. Qxh4 Qe6 37. Rh3 Qh6 38. Nxh6+ gxh6 39. Qxh6 f6
+40. Qxf6 Rg7 41. Qe6+ Rf7 42. Rdd3 Bf8 43. Rdg3+ Bg7 44. Rxg7+ Kxg7 45. Qh6+ Kg8
+46. Qh8# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-ruby-codex"]
+[Black "chess-cplusplus-claude"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppp1ppp/4p3/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. e4 c5 2. Nc3 cxd4 3. Qxd4 Nc6 4. Qe3 Nf6 5. Nf3 Bd6 6. Bb5 Ne5 7. Nxe5 Bxe5
+8. Bd2 O-O 9. Kf1 Ng4 10. Qh3 Nxf2 11. Kxf2 Bxc3 12. Qxc3 Qb6+ 13. Kf1 Qxb5+
+14. Kg1 d6 15. Be3 Bd7 16. a4 Qe2 17. Re1 Qa6 18. b3 Rfc8 19. Qd3 Qxd3 20. cxd3
+Rc2 21. Rc1 Re2 22. Bg5 Rb2 23. Rc3 Rc8 24. Rxc8+ Bxc8 25. h4 Bd7 26. a5 Bb5
+27. d4 Bd3 28. e5 dxe5 29. dxe5 Be4 30. Rh2 Rxb3 31. Bd8 Ra3 32. Rh1 Ra2 33. Rh2
+Kf8 34. h5 Kg8 35. g4 Ra1+ 36. Kf2 Ra3 37. Kf1 Kf8 38. Rd2 Bd5 39. Kf2 Rf3+
+40. Ke2 Rh3 41. Bg5 Ra3 42. Rc2 Bc6 43. Rd2 Rxa5 44. Rd8+ Be8 45. Bf4 h6 46. Rd2
+Ra4 47. Kf3 Bc6+ 48. Kg3 Ra3+ 49. Kh4 Rf3 50. Rd8+ Ke7 51. Rd4 Bd5 52. Bd2 Rf2
+53. Bb4+ Ke8 54. Bc5 Ra2 55. Bd6 Rh2+ 56. Kg3 Rg2+ 57. Kh3 Bc6 58. Rc4 Rg1
+59. Rc2 Rh1+ 60. Kg3 Ra1 61. Kh3 Ra5 62. Bc5 Be4 63. Rc4 Bd5 64. Rc2 Bc6 65. Kh4
+Be4 66. Rc4 Bd3 67. Rc3 Bb5 68. Bb4 Ra4 69. Rb3 Bc4 70. Rb2 Bd5 71. Bd6 Rc4
+72. Bb8 a6 73. Bd6 Rc3 74. Bb4 Rc1 75. Bd2 Rh1+ 76. Kg3 Rg1+ 77. Kh4 Bf3 78. Rb4
+Rh1+ 79. Kg3 Bc6 80. Rd4 Rd1 81. Rd6 Bd5 82. Bf4 Rg1+ 83. Kh4 Bf3 84. Kh3 Bxg4+
+85. Kh4 Bf5 86. Bh2 Rg4+ 87. Kh3 Rc4+ 88. Kg2 Bg4 89. Bg3 Bxh5 90. Rb6 Bg6
+91. Rd6 Be4+ 92. Kh2 Rc2+ 93. Kh3 Bf5+ 94. Kh4 Rc4+ 95. Bf4 Rxf4+ 96. Kg3 Rc4
+97. Rb6 Be4 98. Rd6 Bd5 99. Kh2 Rc6 100. Rxc6 Bxc6 101. Kh3 a5 102. Kh4 a4
+103. Kg4 a3 104. Kg3 a2 105. Kg4 a1=Q 106. Kf4 Qc3 107. Kg4 Qf3+ 108. Kh4 g5#
+0-1
+

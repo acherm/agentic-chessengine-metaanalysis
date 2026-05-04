@@ -1,0 +1,34 @@
+Indexing opening suite...
+Started game 2 of 2 (COBOL-chess vs chess-purec)
+Started game 1 of 2 (chess-purec vs COBOL-chess)
+Warning: Illegal PV move e7h4 from COBOL-chess (2)
+Warning: PV:  e7h4
+Warning: Illegal PV move e7h4 from COBOL-chess (2)
+Warning: PV:  e7h4
+Warning: Illegal PV move e7h4 from COBOL-chess (2)
+Warning: PV:  e7h4
+Warning: Illegal PV move e7h4 from COBOL-chess (2)
+Warning: PV:  e7h4
+Warning: Illegal PV move e7h4 from COBOL-chess (2)
+Warning: PV:  e7h4
+Warning: Illegal PV move e7h4 from COBOL-chess (2)
+Warning: PV:  e7h4
+Warning: Illegal PV move e7h4 from COBOL-chess (2)
+Warning: PV:  e7h4
+Finished game 2 (COBOL-chess vs chess-purec): 0-1 {White makes an illegal move: e7h4}
+Score of chess-purec vs COBOL-chess: 1 - 0 - 0  [1.000] 1
+Finished game 1 (chess-purec vs COBOL-chess): 1-0 {White mates}
+Score of chess-purec vs COBOL-chess: 2 - 0 - 0  [1.000] 2
+...      chess-purec playing White: 1 - 0 - 0  [1.000] 1
+...      chess-purec playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-purec
+   "Win: White makes an illegal move: e7h4": 1
+   "Win: White mates": 1
+Player: COBOL-chess
+   "Loss: White makes an illegal move: e7h4": 1
+   "Loss: White mates": 1
+Finished match

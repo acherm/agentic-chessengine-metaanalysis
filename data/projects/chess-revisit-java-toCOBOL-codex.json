@@ -1,0 +1,305 @@
+{
+  "name": "chess-revisit-java-toCOBOL-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-revisit-java-toRust-codex/chess-revisit-java-toCOBOL",
+  "primary_language": "COBOL",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 2,
+      "Python": 2,
+      "Shell": 1,
+      "COBOL": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 137,
+      "Python": 496,
+      "Shell": 4,
+      "COBOL": 6133
+    },
+    "total_files": 6,
+    "total_loc": 6770
+  },
+  "features": {
+    "FEN parsing": 6,
+    "UCI protocol": 9,
+    "Perft": 6,
+    "Castling": 6,
+    "En passant": 1,
+    "Promotion": 4,
+    "PGN": 2,
+    "Board: bitboard": 5,
+    "Board: magic bitboards": 2,
+    "Board: mailbox 8x8": 2,
+    "Minimax/Negamax": 3,
+    "Alpha-beta": 2,
+    "Iterative deepening": 2,
+    "Quiescence": 5,
+    "Transposition table": 5,
+    "Zobrist hashing": 5,
+    "Move ordering (MVV-LVA)": 3,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 2,
+    "Null-move pruning": 5,
+    "Late-move reduction (LMR)": 2,
+    "Futility pruning": 1,
+    "Evaluation/PST": 4,
+    "Tapered evaluation": 2,
+    "King safety": 2,
+    "Pawn structure": 2,
+    "Mobility": 5,
+    "Material counting": 4,
+    "Opening book": 6,
+    "Time management": 7
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "chess_engine",
+      "src/cobol/chess_engine.cob"
+    ],
+    "UCI protocol": [
+      "PORTING_NOTES.md",
+      "Makefile",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "chess_engine",
+      "scripts/polyglot_smoke.py",
+      "scripts/assess_elo.py",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Perft": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "chess_engine",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Castling": [
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "chess_engine",
+      "scripts/polyglot_smoke.py",
+      "src/cobol/chess_engine.cob"
+    ],
+    "En passant": [
+      "README.md"
+    ],
+    "Promotion": [
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Check/Checkmate": [],
+    "PGN": [
+      "README.md",
+      "scripts/assess_elo.py"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Board: magic bitboards": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Board: mailbox 8x8": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Alpha-beta": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Quiescence": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Transposition table": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Zobrist hashing": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Killer moves": [],
+    "History heuristic": [
+      "PORTING_NOTES.md"
+    ],
+    "Principal-variation (PV)": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Null-move pruning": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Late-move reduction (LMR)": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [
+      "PORTING_NOTES.md"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Tapered evaluation": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "King safety": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Pawn structure": [
+      "PORTING_NOTES.md",
+      "README.md"
+    ],
+    "Mobility": [
+      "PORTING_NOTES.md",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Material counting": [
+      "PORTING_NOTES.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Opening book": [
+      "PORTING_NOTES.md",
+      "Makefile",
+      "README.md",
+      "chess_engine_trace",
+      "scripts/polyglot_smoke.py",
+      "src/cobol/chess_engine.cob"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "Makefile",
+      "README.md",
+      "chess_engine_trace",
+      "chess_engine_dbg",
+      "chess_engine",
+      "scripts/assess_elo.py",
+      "src/cobol/chess_engine.cob"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 28,
+    "n_assistant_messages": 263,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 920,
+      "write_stdin": 398
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 171399134,
+        "output": 592115,
+        "cache_read": 167891200,
+        "cache_creation": 0,
+        "reasoning_output": 296750
+      },
+      "usd_estimate": 241.16
+    },
+    "first_ts": "2026-02-19T12:01:57.002Z",
+    "last_ts": "2026-02-21T13:20:42.334Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-19T13-01-27-019c75c6-c737-7522-b22d-99cdb231bd10",
+        "first_ts": "2026-02-19T12:01:57.002Z",
+        "last_ts": "2026-02-21T13:20:42.334Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 28,
+        "tokens": {
+          "input": 171399134,
+          "output": 592115,
+          "cache_read": 167891200,
+          "reasoning_output": 296750
+        },
+        "tool_uses": {
+          "exec_command": 920,
+          "write_stdin": 398
+        },
+        "first_prompt_sample": "The goal is to write a chess engine in COBOL programming language (using GNU Cobol) through the translation of an existing chess engine written in Java, and available here: /Users/mathieuacher/SANDBOX/chess-java-cc/\n\nPlease stick as much as possible to the original Java implementation, keeping the s"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

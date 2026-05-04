@@ -1,0 +1,89 @@
+Indexing opening suite...
+Started game 2 of 30 (rustic vs chess-rust-cc)
+Started game 1 of 30 (chess-rust-cc vs rustic)
+Finished game 1 (chess-rust-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 1 - 0 - 0  [1.000] 1
+Started game 3 of 30 (chess-rust-cc vs rustic)
+Finished game 2 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 2 - 0 - 0  [1.000] 2
+Started game 4 of 30 (rustic vs chess-rust-cc)
+Finished game 3 (chess-rust-cc vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 2 - 1 - 0  [0.667] 3
+Started game 5 of 30 (chess-rust-cc vs rustic)
+Finished game 4 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 3 - 1 - 0  [0.750] 4
+Started game 6 of 30 (rustic vs chess-rust-cc)
+Finished game 5 (chess-rust-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 4 - 1 - 0  [0.800] 5
+Started game 7 of 30 (chess-rust-cc vs rustic)
+Finished game 6 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 5 - 1 - 0  [0.833] 6
+Started game 8 of 30 (rustic vs chess-rust-cc)
+Finished game 8 (rustic vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 5 - 2 - 0  [0.714] 7
+Started game 9 of 30 (chess-rust-cc vs rustic)
+Finished game 7 (chess-rust-cc vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 5 - 3 - 0  [0.625] 8
+Started game 10 of 30 (rustic vs chess-rust-cc)
+Finished game 10 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 6 - 3 - 0  [0.667] 9
+Started game 11 of 30 (chess-rust-cc vs rustic)
+Finished game 9 (chess-rust-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 7 - 3 - 0  [0.700] 10
+Started game 12 of 30 (rustic vs chess-rust-cc)
+Finished game 11 (chess-rust-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 8 - 3 - 0  [0.727] 11
+Started game 13 of 30 (chess-rust-cc vs rustic)
+Finished game 13 (chess-rust-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 9 - 3 - 0  [0.750] 12
+Started game 14 of 30 (rustic vs chess-rust-cc)
+Finished game 12 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 10 - 3 - 0  [0.769] 13
+Started game 15 of 30 (chess-rust-cc vs rustic)
+Finished game 14 (rustic vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 10 - 4 - 0  [0.714] 14
+Started game 16 of 30 (rustic vs chess-rust-cc)
+Finished game 15 (chess-rust-cc vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 10 - 5 - 0  [0.667] 15
+Started game 17 of 30 (chess-rust-cc vs rustic)
+Finished game 16 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 11 - 5 - 0  [0.688] 16
+Started game 18 of 30 (rustic vs chess-rust-cc)
+Finished game 17 (chess-rust-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 12 - 5 - 0  [0.706] 17
+Started game 19 of 30 (chess-rust-cc vs rustic)
+Finished game 18 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 13 - 5 - 0  [0.722] 18
+Started game 20 of 30 (rustic vs chess-rust-cc)
+Finished game 19 (chess-rust-cc vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 13 - 6 - 0  [0.684] 19
+Started game 21 of 30 (chess-rust-cc vs rustic)
+Finished game 21 (chess-rust-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs rustic: 14 - 6 - 0  [0.700] 20
+Started game 22 of 30 (rustic vs chess-rust-cc)
+Finished game 20 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 15 - 6 - 0  [0.714] 21
+Started game 23 of 30 (chess-rust-cc vs rustic)
+Finished game 22 (rustic vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs rustic: 16 - 6 - 0  [0.727] 22
+Finished game 23 (chess-rust-cc vs rustic): * {No result}
+Score of chess-rust-cc vs rustic: 16 - 6 - 0  [0.727] 22
+...      chess-rust-cc playing White: 7 - 4 - 0  [0.636] 11
+...      chess-rust-cc playing Black: 9 - 2 - 0  [0.818] 11
+...      White vs Black: 9 - 13 - 0  [0.409] 22
+Elo difference: 170.4 +/- 189.9, LOS: 98.3 %, DrawRatio: 0.0 %
+SPRT: llr 2.95 (100.3%), lbound -2.94, ubound 2.94 - H1 was accepted
+
+Player: chess-rust-cc
+   "Loss: Black wins by adjudication": 4
+   "Loss: White wins by adjudication": 2
+   "No result": 1
+   "Win: Black wins by adjudication": 9
+   "Win: White wins by adjudication": 7
+Player: rustic
+   "Loss: Black wins by adjudication": 9
+   "Loss: White wins by adjudication": 7
+   "No result": 1
+   "Win: Black wins by adjudication": 4
+   "Win: White wins by adjudication": 2
+Finished match

@@ -1,0 +1,327 @@
+{
+  "name": "chess-cobol-cc",
+  "path": "/Users/mathieuacher/SANDBOX/chess-cobol-cc",
+  "primary_language": "C",
+  "loc": {
+    "files_by_lang": {
+      "C": 3,
+      "COBOL": 1
+    },
+    "loc_by_lang": {
+      "C": 8118,
+      "COBOL": 3460
+    },
+    "total_files": 4,
+    "total_loc": 11578
+  },
+  "features": {
+    "FEN parsing": 20,
+    "UCI protocol": 20,
+    "Castling": 25,
+    "En passant": 1,
+    "Promotion": 1,
+    "Check/Checkmate": 2,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 1,
+    "Transposition table": 2,
+    "Move ordering (MVV-LVA)": 1,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Late-move reduction (LMR)": 1,
+    "Aspiration windows": 1,
+    "Futility pruning": 3,
+    "Evaluation/PST": 3,
+    "Tapered evaluation": 1,
+    "Pawn structure": 1,
+    "Material counting": 3,
+    "Time management": 45
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "cobolchess",
+      "chess-engine-o3",
+      "chess-engine-v4b",
+      "chess-engine-new",
+      "chess-engine",
+      "chess-engine-v3b",
+      "chess-engine-v1",
+      "chess-engine.c.l.h",
+      "chess-engine.cob",
+      "chess-engine.c",
+      "chess-engine-v4test",
+      "chess-engine-o1",
+      "chess-engine-os",
+      "chess-engine-test2",
+      "chess-engine-dbg",
+      "chess-engine-noopt",
+      "chess-engine-fast",
+      "chess-engine-v2",
+      "chess-engine.c.h",
+      "chess-engine-v4"
+    ],
+    "UCI protocol": [
+      "cobolchess",
+      "chess-engine-o3",
+      "chess-engine-v4b",
+      "chess-engine-new",
+      "chess-engine",
+      "chess-engine-v3b",
+      "chess-engine-v1",
+      "chess-engine.c.l.h",
+      "chess-engine.cob",
+      "chess-engine.c",
+      "chess-engine-v4test",
+      "chess-engine-o1",
+      "chess-engine-os",
+      "chess-engine-test2",
+      "chess-engine-dbg",
+      "chess-engine-noopt",
+      "chess-engine-fast",
+      "chess-engine-v2",
+      "chess-engine.c.h",
+      "chess-engine-v4"
+    ],
+    "Perft": [],
+    "Castling": [
+      "phase5_vs1500.pgn",
+      "phase8_vs1500.pgn",
+      "phase4d_vs1320.pgn",
+      "phase7_vs1500.pgn",
+      "phase4e_vs1500.pgn",
+      "phase4d_timefix.pgn",
+      "stress_test2.pgn",
+      "phase4d_v2.pgn",
+      "phase4c_test.pgn",
+      "phase4b_test.pgn",
+      "phase4_test.pgn",
+      "chess-engine.cob",
+      "elo_vs1700.pgn",
+      "phase5b_vs1500.pgn",
+      "phase4d_final.pgn",
+      "phase9_vs1500.pgn",
+      "elo_vs1600.pgn",
+      "phase2_games.pgn",
+      "elo_vs1400.pgn",
+      "stress_test.pgn",
+      "phase6b_vs1500.pgn",
+      "phase6_vs1500.pgn",
+      "phase4d_test.pgn",
+      "phase3_test.pgn",
+      "phase4d_vs1500.pgn"
+    ],
+    "En passant": [
+      "chess-engine.cob"
+    ],
+    "Promotion": [
+      "chess-engine.cob"
+    ],
+    "Check/Checkmate": [
+      "phase4d_timefix.pgn",
+      "chess-engine.cob"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "chess-engine.cob"
+    ],
+    "Alpha-beta": [
+      "chess-engine.cob"
+    ],
+    "Iterative deepening": [
+      "chess-engine.cob"
+    ],
+    "Quiescence": [
+      "chess-engine.cob"
+    ],
+    "Transposition table": [
+      "chess-engine-test2",
+      "chess-engine-v2"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [
+      "chess-engine.cob"
+    ],
+    "Killer moves": [
+      "chess-engine.cob"
+    ],
+    "History heuristic": [
+      "chess-engine.cob"
+    ],
+    "Principal-variation (PV)": [
+      "chess-engine.cob"
+    ],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [
+      "chess-engine.cob"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "chess-engine.cob"
+    ],
+    "Futility pruning": [
+      "chess-engine.c.l.h",
+      "chess-engine.cob",
+      "chess-engine.c"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "chess-engine.c.l.h",
+      "chess-engine.cob",
+      "chess-engine.c"
+    ],
+    "Tapered evaluation": [
+      "chess-engine.cob"
+    ],
+    "King safety": [],
+    "Pawn structure": [
+      "chess-engine.cob"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "chess-engine.c.l.h",
+      "chess-engine.cob",
+      "chess-engine.c"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "cobolchess",
+      "phase5_vs1500.pgn",
+      "phase8_vs1500.pgn",
+      "phase4d_vs1320.pgn",
+      "chess-engine-o3",
+      "chess-engine-v4b",
+      "chess-engine-new",
+      "chess-engine",
+      "phase7_vs1500.pgn",
+      "chess-engine-v3b",
+      "phase4e_vs1500.pgn",
+      "phase4d_timefix.pgn",
+      "stress_test2.pgn",
+      "chess-engine-v1",
+      "chess-engine.c.l.h",
+      "phase4d_v2.pgn",
+      "phase4c_test.pgn",
+      "phase4b_test.pgn",
+      "phase4_test.pgn",
+      "chess-engine.cob",
+      "elo_vs1700.pgn",
+      "phase5b_vs1500.pgn",
+      "chess-engine.c",
+      "chess-engine-v4test",
+      "chess-engine-o1",
+      "phase4d_final.pgn",
+      "chess-engine-os",
+      "phase9_vs1500.pgn",
+      "chess-engine-test2",
+      "elo_vs1600.pgn",
+      "phase2_games.pgn",
+      "chess-engine-dbg",
+      "chess-engine-noopt",
+      "test_games.pgn",
+      "elo_vs1400.pgn",
+      "chess-engine-fast",
+      "stress_test.pgn",
+      "chess-engine-v2",
+      "phase6b_vs1500.pgn",
+      "phase6_vs1500.pgn",
+      "phase4d_test.pgn",
+      "phase3_test.pgn",
+      "chess-engine.c.h",
+      "chess-engine-v4",
+      "phase4d_vs1500.pgn"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 7,
+    "n_user_prompts": 46,
+    "n_assistant_messages": 1814,
+    "models": [
+      "<synthetic>",
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 712,
+      "Edit": 178,
+      "Read": 143,
+      "Grep": 57,
+      "TaskOutput": 53,
+      "Write": 9,
+      "ToolSearch": 2,
+      "Agent": 2
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 1937,
+        "output": 591930,
+        "cache_read": 166713533,
+        "cache_creation": 11943652
+      },
+      "usd_estimate": 518.44
+    },
+    "first_ts": "2026-03-12T19:37:10.667Z",
+    "last_ts": "2026-03-30T18:28:33.877Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "9d9bb74e-18ea-4bb9-844c-b4e175998988",
+        "first_ts": "2026-03-12T19:37:10.667Z",
+        "last_ts": "2026-03-30T18:28:33.877Z",
+        "models": [
+          "<synthetic>",
+          "claude-opus-4-6"
+        ],
+        "turns": 46,
+        "n_events": 3734,
+        "tokens": {
+          "input": 1937,
+          "output": 591930,
+          "cache_read": 166713533,
+          "cache_creation": 11943652
+        },
+        "tool_uses": {
+          "Bash": 712,
+          "Write": 9,
+          "Edit": 178,
+          "Read": 143,
+          "Grep": 57,
+          "ToolSearch": 2,
+          "TaskOutput": 53,
+          "Agent": 2
+        },
+        "first_prompt_sample": "I want to build a chess engine in COBOL (using GNU Cobol)\u2026 at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \u201csimilar\u201d levels."
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": false
+  }
+}

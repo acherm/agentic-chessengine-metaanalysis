@@ -1,0 +1,49 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-py-cc vs sf_skill15)
+Started game 2 of 30 (sf_skill15 vs chess-py-cc)
+Finished game 2 (sf_skill15 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill15: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-py-cc vs sf_skill15)
+Finished game 1 (chess-py-cc vs sf_skill15): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-py-cc vs sf_skill15: 0 - 1 - 1  [0.250] 2
+Started game 4 of 30 (sf_skill15 vs chess-py-cc)
+Finished game 3 (chess-py-cc vs sf_skill15): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill15: 0 - 2 - 1  [0.167] 3
+Started game 5 of 30 (chess-py-cc vs sf_skill15)
+Finished game 4 (sf_skill15 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill15: 0 - 3 - 1  [0.125] 4
+Started game 6 of 30 (sf_skill15 vs chess-py-cc)
+Finished game 5 (chess-py-cc vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill15: 0 - 4 - 1  [0.100] 5
+Started game 7 of 30 (chess-py-cc vs sf_skill15)
+Finished game 6 (sf_skill15 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill15: 0 - 5 - 1  [0.083] 6
+Started game 8 of 30 (sf_skill15 vs chess-py-cc)
+Finished game 7 (chess-py-cc vs sf_skill15): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill15: 0 - 6 - 1  [0.071] 7
+Started game 9 of 30 (chess-py-cc vs sf_skill15)
+Finished game 8 (sf_skill15 vs chess-py-cc): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill15: 0 - 7 - 1  [0.063] 8
+Finished game 9 (chess-py-cc vs sf_skill15): * {No result}
+Score of chess-py-cc vs sf_skill15: 0 - 7 - 1  [0.063] 8
+...      chess-py-cc playing White: 0 - 3 - 1  [0.125] 4
+...      chess-py-cc playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 3 - 1  [0.563] 8
+Elo difference: -470.4 +/- nan, LOS: 0.4 %, DrawRatio: 12.5 %
+SPRT: llr -3.21 (-108.9%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-py-cc
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 3
+   "No result": 1
+Player: sf_skill15
+   "Draw by 3-fold repetition": 1
+   "No result": 1
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 3
+Finished match

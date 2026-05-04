@@ -1,0 +1,86 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_skill2 vs chess-why3)
+Started game 1 of 20 (chess-why3 vs sf_skill2)
+Finished game 2 (sf_skill2 vs chess-why3): 0-1 {Black wins by adjudication}
+Score of chess-why3 vs sf_skill2: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-why3 vs sf_skill2)
+Finished game 1 (chess-why3 vs sf_skill2): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-why3 vs sf_skill2: 1 - 0 - 1  [0.750] 2
+Started game 4 of 20 (sf_skill2 vs chess-why3)
+Finished game 3 (chess-why3 vs sf_skill2): 0-1 {Black mates}
+Score of chess-why3 vs sf_skill2: 1 - 1 - 1  [0.500] 3
+Started game 5 of 20 (chess-why3 vs sf_skill2)
+Finished game 4 (sf_skill2 vs chess-why3): 1-0 {White mates}
+Score of chess-why3 vs sf_skill2: 1 - 2 - 1  [0.375] 4
+Started game 6 of 20 (sf_skill2 vs chess-why3)
+Finished game 6 (sf_skill2 vs chess-why3): 1-0 {White mates}
+Score of chess-why3 vs sf_skill2: 1 - 3 - 1  [0.300] 5
+Started game 7 of 20 (chess-why3 vs sf_skill2)
+Finished game 5 (chess-why3 vs sf_skill2): 1-0 {White mates}
+Score of chess-why3 vs sf_skill2: 2 - 3 - 1  [0.417] 6
+Started game 8 of 20 (sf_skill2 vs chess-why3)
+Finished game 7 (chess-why3 vs sf_skill2): 0-1 {Black mates}
+Score of chess-why3 vs sf_skill2: 2 - 4 - 1  [0.357] 7
+Started game 9 of 20 (chess-why3 vs sf_skill2)
+Finished game 8 (sf_skill2 vs chess-why3): 1-0 {White mates}
+Score of chess-why3 vs sf_skill2: 2 - 5 - 1  [0.313] 8
+Started game 10 of 20 (sf_skill2 vs chess-why3)
+Finished game 9 (chess-why3 vs sf_skill2): 1-0 {White wins by adjudication}
+Score of chess-why3 vs sf_skill2: 3 - 5 - 1  [0.389] 9
+Started game 11 of 20 (chess-why3 vs sf_skill2)
+Finished game 10 (sf_skill2 vs chess-why3): 0-1 {Black wins by adjudication}
+Score of chess-why3 vs sf_skill2: 4 - 5 - 1  [0.450] 10
+Started game 12 of 20 (sf_skill2 vs chess-why3)
+Finished game 11 (chess-why3 vs sf_skill2): 0-1 {Black mates}
+Score of chess-why3 vs sf_skill2: 4 - 6 - 1  [0.409] 11
+Started game 13 of 20 (chess-why3 vs sf_skill2)
+Finished game 12 (sf_skill2 vs chess-why3): 1-0 {White mates}
+Score of chess-why3 vs sf_skill2: 4 - 7 - 1  [0.375] 12
+Started game 14 of 20 (sf_skill2 vs chess-why3)
+Finished game 13 (chess-why3 vs sf_skill2): 0-1 {Black wins by adjudication}
+Score of chess-why3 vs sf_skill2: 4 - 8 - 1  [0.346] 13
+Started game 15 of 20 (chess-why3 vs sf_skill2)
+Finished game 14 (sf_skill2 vs chess-why3): 0-1 {Black mates}
+Score of chess-why3 vs sf_skill2: 5 - 8 - 1  [0.393] 14
+Started game 16 of 20 (sf_skill2 vs chess-why3)
+Finished game 15 (chess-why3 vs sf_skill2): 0-1 {Black wins by adjudication}
+Score of chess-why3 vs sf_skill2: 5 - 9 - 1  [0.367] 15
+Started game 17 of 20 (chess-why3 vs sf_skill2)
+Finished game 16 (sf_skill2 vs chess-why3): 1-0 {White mates}
+Score of chess-why3 vs sf_skill2: 5 - 10 - 1  [0.344] 16
+Started game 18 of 20 (sf_skill2 vs chess-why3)
+Finished game 17 (chess-why3 vs sf_skill2): 1-0 {White wins by adjudication}
+Score of chess-why3 vs sf_skill2: 6 - 10 - 1  [0.382] 17
+Started game 19 of 20 (chess-why3 vs sf_skill2)
+Finished game 18 (sf_skill2 vs chess-why3): 0-1 {Black wins by adjudication}
+Score of chess-why3 vs sf_skill2: 7 - 10 - 1  [0.417] 18
+Started game 20 of 20 (sf_skill2 vs chess-why3)
+Finished game 19 (chess-why3 vs sf_skill2): 1-0 {White wins by adjudication}
+Score of chess-why3 vs sf_skill2: 8 - 10 - 1  [0.447] 19
+Finished game 20 (sf_skill2 vs chess-why3): 0-1 {Black wins by adjudication}
+Score of chess-why3 vs sf_skill2: 9 - 10 - 1  [0.475] 20
+...      chess-why3 playing White: 4 - 5 - 1  [0.450] 10
+...      chess-why3 playing Black: 5 - 5 - 0  [0.500] 10
+...      White vs Black: 9 - 10 - 1  [0.475] 20
+Elo difference: -17.4 +/- 158.6, LOS: 40.9 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 3
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 5
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 3
+Player: sf_skill2
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 3
+   "Win: Black mates": 3
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 5
+Finished match

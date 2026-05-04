@@ -1,0 +1,14 @@
+Indexing opening suite...
+Terminating process of engine chess-css-codex-guided(3)
+Terminating process of engine chess-css-codex-guided(0)
+Finished game 1 (chess-css-codex-guided vs asymptote): * {No result}
+Score of chess-css-codex-guided vs asymptote: 0 - 0 - 0  [nan] 0
+Elo difference: nan +/- nan, LOS: nan %, DrawRatio: nan %
+SPRT: llr -5.55e-17 (-0.0%), lbound -2.94, ubound 2.94
+
+Player: chess-css-codex-guided
+   "No result": 1
+Player: asymptote
+   "No result": 1
+Warning: Could not initialize player chess-css-codex-guided: 
+Finished match

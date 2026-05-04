@@ -1,0 +1,135 @@
+{
+  "name": "chess-conway",
+  "path": "/Users/mathieuacher/SANDBOX/chess-conway",
+  "primary_language": "JavaScript",
+  "loc": {
+    "files_by_lang": {
+      "JavaScript": 5,
+      "HTML": 1
+    },
+    "loc_by_lang": {
+      "JavaScript": 878,
+      "HTML": 488
+    },
+    "total_files": 6,
+    "total_loc": 1366
+  },
+  "features": {
+    "Castling": 1,
+    "Promotion": 3,
+    "Check/Checkmate": 5,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 1,
+    "Material counting": 2
+  },
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [
+      "index.html"
+    ],
+    "En passant": [],
+    "Promotion": [
+      "game.js",
+      "index.html",
+      "chess.js"
+    ],
+    "Check/Checkmate": [
+      "ai.js",
+      "game.js",
+      "renderer.js",
+      "index.html",
+      "chess.js"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "ai.js"
+    ],
+    "Alpha-beta": [
+      "ai.js"
+    ],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "ai.js",
+      "chess.js"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "2c3ceb2|2026-03-02T21:36:13+01:00|Mathieu Acher|Initial commit: Chess x Conway's Game of Life hybrid game"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

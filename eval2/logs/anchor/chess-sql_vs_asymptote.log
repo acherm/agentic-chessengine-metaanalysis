@@ -1,0 +1,48 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-sql vs asymptote)
+Started game 2 of 30 (asymptote vs chess-sql)
+Finished game 2 (asymptote vs chess-sql): 1-0 {White mates}
+Score of chess-sql vs asymptote: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-sql vs asymptote)
+Finished game 1 (chess-sql vs asymptote): 0-1 {Black wins by adjudication}
+Score of chess-sql vs asymptote: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (asymptote vs chess-sql)
+Finished game 4 (asymptote vs chess-sql): 1-0 {White mates}
+Score of chess-sql vs asymptote: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (chess-sql vs asymptote)
+Finished game 3 (chess-sql vs asymptote): 0-1 {Black mates}
+Score of chess-sql vs asymptote: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (asymptote vs chess-sql)
+Finished game 6 (asymptote vs chess-sql): 1-0 {White mates}
+Score of chess-sql vs asymptote: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (chess-sql vs asymptote)
+Finished game 5 (chess-sql vs asymptote): 0-1 {Black mates}
+Score of chess-sql vs asymptote: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (asymptote vs chess-sql)
+Finished game 7 (chess-sql vs asymptote): 0-1 {Black mates}
+Score of chess-sql vs asymptote: 0 - 7 - 0  [0.000] 7
+Started game 9 of 30 (chess-sql vs asymptote)
+Finished game 8 (asymptote vs chess-sql): 1-0 {White mates}
+Score of chess-sql vs asymptote: 0 - 8 - 0  [0.000] 8
+Started game 10 of 30 (asymptote vs chess-sql)
+Finished game 9 (chess-sql vs asymptote): 0-1 {Black mates}
+Score of chess-sql vs asymptote: 0 - 9 - 0  [0.000] 9
+Finished game 10 (asymptote vs chess-sql): * {No result}
+Score of chess-sql vs asymptote: 0 - 9 - 0  [0.000] 9
+...      chess-sql playing White: 0 - 5 - 0  [0.000] 5
+...      chess-sql playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 5 - 0  [0.444] 9
+Elo difference: -inf +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr -3.17 (-107.7%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-sql
+   "Loss: Black mates": 4
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 4
+   "No result": 1
+Player: asymptote
+   "No result": 1
+   "Win: Black mates": 4
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 4
+Finished match

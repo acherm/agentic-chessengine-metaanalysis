@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-assembly-codex vs chess-ruby-cc)
+Started game 1 of 2 (chess-ruby-cc vs chess-assembly-codex)
+Finished game 1 (chess-ruby-cc vs chess-assembly-codex): 1-0 {White mates}
+Score of chess-ruby-cc vs chess-assembly-codex: 1 - 0 - 0  [1.000] 1
+Finished game 2 (chess-assembly-codex vs chess-ruby-cc): 0-1 {Black mates}
+Score of chess-ruby-cc vs chess-assembly-codex: 2 - 0 - 0  [1.000] 2
+...      chess-ruby-cc playing White: 1 - 0 - 0  [1.000] 1
+...      chess-ruby-cc playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-ruby-cc
+   "Win: Black mates": 1
+   "Win: White mates": 1
+Player: chess-assembly-codex
+   "Loss: Black mates": 1
+   "Loss: White mates": 1
+Finished match

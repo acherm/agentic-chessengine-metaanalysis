@@ -1,0 +1,9 @@
+gauntlet: chess-purec vs rustic (CCRL 1820) at 120+1
+gauntlet: chess-purec vs asymptote (CCRL 2150) at 120+1
+gauntlet: chess-purec-codex vs rustic (CCRL 1820) at 120+1
+gauntlet: chess-purec-codex vs asymptote (CCRL 2150) at 120+1
+gauntlet: chess-cplusplus-claude vs rustic (CCRL 1820) at 120+1
+gauntlet: chess-cplusplus-claude vs asymptote (CCRL 2150) at 120+1
+gauntlet: cplusplus-chess vs rustic (CCRL 1820) at 120+1
+gauntlet: cplusplus-chess vs asymptote (CCRL 2150) at 120+1
+gauntlet: chess-rust-cc vs rustic (CCRL 1820) at 120+1

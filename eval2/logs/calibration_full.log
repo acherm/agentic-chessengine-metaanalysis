@@ -1,0 +1,6 @@
+calibration: SF1320 vs SF1500 at 120+1 (30 games)
+calibration: SF1700 vs SF1900 at 120+1 (30 games)
+calibration: SF2300 vs SF2500 at 120+1 (30 games)
+calibration: tscp181 vs SF1700 at 120+1 (30 games)
+calibration: countergo40 vs SF2300 at 120+1 (30 games)
+calibration done. PGNs in pgn/calibration/, logs in logs/calibration/.

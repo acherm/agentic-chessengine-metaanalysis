@@ -1,0 +1,57 @@
+Indexing opening suite...
+Started game 2 of 30 (rustic vs chess-java-cc)
+Started game 1 of 30 (chess-java-cc vs rustic)
+Finished game 1 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 1 - 0 - 0  [1.000] 1
+Started game 3 of 30 (chess-java-cc vs rustic)
+Finished game 2 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 2 - 0 - 0  [1.000] 2
+Started game 4 of 30 (rustic vs chess-java-cc)
+Finished game 3 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 3 - 0 - 0  [1.000] 3
+Started game 5 of 30 (chess-java-cc vs rustic)
+Finished game 4 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 4 - 0 - 0  [1.000] 4
+Started game 6 of 30 (rustic vs chess-java-cc)
+Finished game 5 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 5 - 0 - 0  [1.000] 5
+Started game 7 of 30 (chess-java-cc vs rustic)
+Finished game 7 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 6 - 0 - 0  [1.000] 6
+Started game 8 of 30 (rustic vs chess-java-cc)
+Finished game 6 (rustic vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 6 - 1 - 0  [0.857] 7
+Started game 9 of 30 (chess-java-cc vs rustic)
+Finished game 8 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 7 - 1 - 0  [0.875] 8
+Started game 10 of 30 (rustic vs chess-java-cc)
+Finished game 9 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 8 - 1 - 0  [0.889] 9
+Started game 11 of 30 (chess-java-cc vs rustic)
+Finished game 10 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 9 - 1 - 0  [0.900] 10
+Started game 12 of 30 (rustic vs chess-java-cc)
+Finished game 11 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 10 - 1 - 0  [0.909] 11
+Started game 13 of 30 (chess-java-cc vs rustic)
+Finished game 12 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 11 - 1 - 0  [0.917] 12
+Finished game 13 (chess-java-cc vs rustic): * {No result}
+Score of chess-java-cc vs rustic: 11 - 1 - 0  [0.917] 12
+...      chess-java-cc playing White: 6 - 0 - 0  [1.000] 6
+...      chess-java-cc playing Black: 5 - 1 - 0  [0.833] 6
+...      White vs Black: 7 - 5 - 0  [0.583] 12
+Elo difference: 416.6 +/- nan, LOS: 99.8 %, DrawRatio: 0.0 %
+SPRT: llr 3.13 (106.5%), lbound -2.94, ubound 2.94 - H1 was accepted
+
+Player: chess-java-cc
+   "Loss: White wins by adjudication": 1
+   "No result": 1
+   "Win: Black wins by adjudication": 5
+   "Win: White wins by adjudication": 6
+Player: rustic
+   "Loss: Black wins by adjudication": 5
+   "Loss: White wins by adjudication": 6
+   "No result": 1
+   "Win: White wins by adjudication": 1
+Finished match

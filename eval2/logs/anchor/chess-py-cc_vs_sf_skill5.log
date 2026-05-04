@@ -1,0 +1,96 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-py-cc vs sf_skill5)
+Started game 2 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 1 (chess-py-cc vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-py-cc vs sf_skill5: 0 - 0 - 1  [0.500] 1
+Started game 3 of 30 (chess-py-cc vs sf_skill5)
+Finished game 2 (sf_skill5 vs chess-py-cc): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill5: 0 - 1 - 1  [0.250] 2
+Started game 4 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 3 (chess-py-cc vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 0 - 2 - 1  [0.167] 3
+Started game 5 of 30 (chess-py-cc vs sf_skill5)
+Finished game 4 (sf_skill5 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 0 - 3 - 1  [0.125] 4
+Started game 6 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 5 (chess-py-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill5: 0 - 4 - 1  [0.100] 5
+Started game 7 of 30 (chess-py-cc vs sf_skill5)
+Finished game 6 (sf_skill5 vs chess-py-cc): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 1 - 4 - 1  [0.250] 6
+Started game 8 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 7 (chess-py-cc vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 2 - 4 - 1  [0.357] 7
+Started game 9 of 30 (chess-py-cc vs sf_skill5)
+Finished game 8 (sf_skill5 vs chess-py-cc): 1/2-1/2 {Draw by adjudication}
+Score of chess-py-cc vs sf_skill5: 2 - 4 - 2  [0.375] 8
+Started game 10 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 9 (chess-py-cc vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 2 - 5 - 2  [0.333] 9
+Started game 11 of 30 (chess-py-cc vs sf_skill5)
+Finished game 10 (sf_skill5 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 2 - 6 - 2  [0.300] 10
+Started game 12 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 11 (chess-py-cc vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 2 - 7 - 2  [0.273] 11
+Started game 13 of 30 (chess-py-cc vs sf_skill5)
+Finished game 12 (sf_skill5 vs chess-py-cc): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 3 - 7 - 2  [0.333] 12
+Started game 14 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 13 (chess-py-cc vs sf_skill5): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill5: 4 - 7 - 2  [0.385] 13
+Started game 15 of 30 (chess-py-cc vs sf_skill5)
+Finished game 14 (sf_skill5 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 4 - 8 - 2  [0.357] 14
+Started game 16 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 15 (chess-py-cc vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 5 - 8 - 2  [0.400] 15
+Started game 17 of 30 (chess-py-cc vs sf_skill5)
+Finished game 16 (sf_skill5 vs chess-py-cc): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill5: 5 - 9 - 2  [0.375] 16
+Started game 18 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 17 (chess-py-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill5: 5 - 10 - 2  [0.353] 17
+Started game 19 of 30 (chess-py-cc vs sf_skill5)
+Finished game 18 (sf_skill5 vs chess-py-cc): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill5: 5 - 11 - 2  [0.333] 18
+Started game 20 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 19 (chess-py-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill5: 5 - 12 - 2  [0.316] 19
+Started game 21 of 30 (chess-py-cc vs sf_skill5)
+Finished game 20 (sf_skill5 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 5 - 13 - 2  [0.300] 20
+Started game 22 of 30 (sf_skill5 vs chess-py-cc)
+Finished game 22 (sf_skill5 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill5: 5 - 14 - 2  [0.286] 21
+Finished game 21 (chess-py-cc vs sf_skill5): * {No result}
+Score of chess-py-cc vs sf_skill5: 5 - 14 - 2  [0.286] 21
+...      chess-py-cc playing White: 3 - 6 - 1  [0.350] 10
+...      chess-py-cc playing Black: 2 - 8 - 1  [0.227] 11
+...      White vs Black: 11 - 8 - 2  [0.571] 21
+Elo difference: -159.2 +/- 175.2, LOS: 1.9 %, DrawRatio: 9.5 %
+SPRT: llr -2.98 (-101.3%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-py-cc
+   "Draw by 3-fold repetition": 1
+   "Draw by adjudication": 1
+   "Loss: Black mates": 3
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 5
+   "No result": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 2
+Player: sf_skill5
+   "Draw by 3-fold repetition": 1
+   "Draw by adjudication": 1
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 2
+   "No result": 1
+   "Win: Black mates": 3
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 5
+Finished match

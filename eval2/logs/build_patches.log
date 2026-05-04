@@ -1,0 +1,551 @@
+skip eval2/stockfish:16.1 (exists; pass --rebuild to override)
+skip eval2/anchor-tscp181:latest (exists; pass --rebuild to override)
+build eval2/anchor-madchess32:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.08kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:8.0
+#2 ...
+
+#3 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:8.0
+#3 DONE 1.1s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:8.0
+#2 DONE 1.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 resolve mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183 done
+#5 DONE 0.1s
+
+#6 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6
+#6 resolve mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6 done
+#6 sha256:aabbaee8d331f237a46340f701ba8497aae393f0051ad1a59783692a84dd2397 165B / 165B 0.1s done
+#6 sha256:68b3aadd01afc84c5471538023fc46e1a1dcc5f7d7e5fe07fbfda5e0caa3e3f4 3.33kB / 3.33kB 0.1s done
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 0B / 30.83MB 0.2s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 0B / 18.54MB 0.2s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 1.05MB / 18.54MB 1.2s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 2.10MB / 18.54MB 4.2s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 2.10MB / 30.83MB 4.8s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 3.15MB / 18.54MB 4.9s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 4.19MB / 18.54MB 5.5s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 5.24MB / 18.54MB 6.6s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 4.19MB / 30.83MB 6.9s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 6.29MB / 18.54MB 7.5s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 7.34MB / 18.54MB 8.2s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 6.29MB / 30.83MB 8.4s
+#6 ...
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 sha256:522c963bf63ad364ccc9bd925b58554d1508a87b7aee56b3935d42e05ffcf306 8.39MB / 17.05MB 10.0s
+#5 sha256:7b15e255622f993b6ac6e2f5d6990e5d8cab7e4b0030a2e752de81a194c79f64 2.70kB / 2.70kB 0.1s done
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 7.34MB / 174.61MB 9.7s
+#5 ...
+
+#6 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 7.34MB / 18.54MB 13.3s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 6.29MB / 30.83MB 13.5s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 8.39MB / 18.54MB 16.0s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 9.44MB / 18.54MB 16.6s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 8.39MB / 30.83MB 17.2s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 10.49MB / 18.54MB 17.5s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 11.53MB / 18.54MB 18.1s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 10.49MB / 30.83MB 18.7s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 12.58MB / 18.54MB 18.9s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 13.63MB / 18.54MB 19.6s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 12.58MB / 30.83MB 20.2s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 14.68MB / 18.54MB 20.2s
+#6 ...
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 sha256:522c963bf63ad364ccc9bd925b58554d1508a87b7aee56b3935d42e05ffcf306 14.68MB / 17.05MB 20.2s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 13.63MB / 174.61MB 19.9s
+#5 ...
+
+#6 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 15.73MB / 18.54MB 21.0s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 14.68MB / 30.83MB 21.6s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 16.78MB / 18.54MB 21.7s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 17.83MB / 18.54MB 22.6s
+#6 sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 18.54MB / 18.54MB 23.4s done
+#6 extracting sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 16.78MB / 30.83MB 23.5s
+#6 extracting sha256:e367c60b9a6dc3afbe8fa93cccda5448cb35680ea87b660c370aaeec8800cadb 0.2s done
+#6 extracting sha256:68b3aadd01afc84c5471538023fc46e1a1dcc5f7d7e5fe07fbfda5e0caa3e3f4 done
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 18.87MB / 30.83MB 25.3s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 20.97MB / 30.83MB 26.8s
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 23.07MB / 30.83MB 28.2s
+#6 ...
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 sha256:522c963bf63ad364ccc9bd925b58554d1508a87b7aee56b3935d42e05ffcf306 17.05MB / 17.05MB 21.8s done
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 24.12MB / 174.61MB 27.9s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 7.34MB / 31.36MB 6.3s
+#5 sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60 6.29MB / 10.76MB 5.0s
+#5 sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60 7.34MB / 10.76MB 5.9s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 9.44MB / 31.36MB 7.4s
+#5 sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60 8.39MB / 10.76MB 6.6s
+#5 sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60 9.44MB / 10.76MB 7.4s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 11.53MB / 31.36MB 9.0s
+#5 sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60 10.49MB / 10.76MB 8.1s
+#5 sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60 10.76MB / 10.76MB 8.2s done
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 13.63MB / 31.36MB 10.2s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 32.51MB / 174.61MB 33.1s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 15.73MB / 31.36MB 11.4s
+#5 ...
+
+#6 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6
+#6 sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 30.83MB / 30.83MB 33.2s done
+#6 extracting sha256:249950be05e00f7b4c8a954997235b059f1f703078cb48e9cb627dd585683f5d 0.3s done
+#6 extracting sha256:aabbaee8d331f237a46340f701ba8497aae393f0051ad1a59783692a84dd2397 done
+#6 DONE 33.5s
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 extracting sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60
+#5 extracting sha256:5614ce2c377fd1d69a3ce0a0ee707f708106b765795a478b9c84b3e4932b9b60 0.1s done
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 17.83MB / 31.36MB 12.3s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 19.92MB / 31.36MB 13.1s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 22.02MB / 31.36MB 13.8s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 24.12MB / 31.36MB 14.4s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 41.94MB / 174.61MB 36.6s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 26.21MB / 31.36MB 15.2s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 28.31MB / 31.36MB 15.9s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 30.41MB / 31.36MB 16.7s
+#5 sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 31.36MB / 31.36MB 17.0s done
+#5 extracting sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4
+#5 extracting sha256:affdeb7787d9a658bfa2fca35aec373cff77b5e9cf17d3636a6fa37ea5fc71b4 0.3s done
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 51.38MB / 174.61MB 39.5s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 60.82MB / 174.61MB 41.1s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 70.25MB / 174.61MB 42.8s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 79.69MB / 174.61MB 44.3s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 89.13MB / 174.61MB 45.9s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 98.57MB / 174.61MB 49.8s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 108.00MB / 174.61MB 51.8s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 117.44MB / 174.61MB 53.4s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 126.88MB / 174.61MB 55.8s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 136.31MB / 174.61MB 57.8s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 145.75MB / 174.61MB 59.4s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 155.19MB / 174.61MB 61.2s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 164.63MB / 174.61MB 63.3s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 174.61MB / 174.61MB 65.1s
+#5 sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 174.61MB / 174.61MB 65.1s done
+#5 extracting sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d
+#5 extracting sha256:6d473f093136bff538859645ceed98879cbf1dcaf0eb41ca8fb3ce9d100efb7d 1.5s done
+#5 DONE 66.9s
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 extracting sha256:7b15e255622f993b6ac6e2f5d6990e5d8cab7e4b0030a2e752de81a194c79f64 done
+#5 extracting sha256:522c963bf63ad364ccc9bd925b58554d1508a87b7aee56b3935d42e05ffcf306 0.1s done
+#5 DONE 67.1s
+
+#7 [build 2/6] WORKDIR /src
+#7 DONE 0.3s
+
+#8 [build 3/6] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#8 0.145 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#8 0.197 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#8 0.220 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#8 0.245 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8691 kB]
+#8 1.949 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#8 1.951 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [291 kB]
+#8 2.464 Fetched 9243 kB in 2s (3911 kB/s)
+#8 2.464 Reading package lists...
+#8 2.666 Reading package lists...
+#8 2.866 Building dependency tree...
+#8 2.908 Reading state information...
+#8 2.982 git is already the newest version (1:2.39.5-0+deb12u3).
+#8 2.982 ca-certificates is already the newest version (20230311+deb12u1).
+#8 2.982 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#8 DONE 3.0s
+
+#9 [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+#9 0.099 Cloning into 'MadChess'...
+#9 0.339 fatal: could not read Username for 'https://github.com': No such device or address
+#9 ERROR: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+------
+ > [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git:
+0.099 Cloning into 'MadChess'...
+0.339 fatal: could not read Username for 'https://github.com': No such device or address
+------
+Dockerfile:13
+--------------------
+  11 |     # NOTE: MadChess git tags don't follow a "v3.2" convention; tracking master
+  12 |     # for now. Pin to a specific commit SHA once we know the build works.
+  13 | >>> RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+  14 |     WORKDIR /src/MadChess
+  15 |     RUN dotnet publish -c Release -o /opt/madchess \
+--------------------
+ERROR: failed to solve: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+FAILED eval2/anchor-madchess32:latest
+skip eval2/anchor-countergo40:latest (exists; pass --rebuild to override)
+build eval2/chess-cplusplus-claude:latest  (src=/Users/mathieuacher/SANDBOX/chess-cplusplus-claude)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.20kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [build 1/5] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#4 DONE 0.0s
+
+#5 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends libstdc++6 && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 2.34MB 0.0s done
+#6 DONE 0.0s
+
+#7 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential cmake     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [build 3/5] COPY src/ /opt/engine/
+#8 DONE 0.0s
+
+#9 [build 4/5] WORKDIR /opt/engine
+#9 DONE 0.0s
+
+#10 [build 5/5] RUN CXXFLAGS="-include cstring" cmake -S . -B build -DCMAKE_BUILD_TYPE=Release  && cmake --build build -j --target engine  && strip build/engine
+#10 0.118 -- The CXX compiler identification is GNU 12.2.0
+#10 0.122 -- Detecting CXX compiler ABI info
+#10 0.157 -- Detecting CXX compiler ABI info - done
+#10 0.161 -- Check for working CXX compiler: /usr/bin/c++ - skipped
+#10 0.162 -- Detecting CXX compile features
+#10 0.162 -- Detecting CXX compile features - done
+#10 0.162 -- Configuring done
+#10 0.164 -- Generating done
+#10 0.164 -- Build files have been written to: /opt/engine/build
+#10 0.188 [ 18%] Building CXX object CMakeFiles/engine.dir/src/bitboard.cpp.o
+#10 0.188 [ 18%] Building CXX object CMakeFiles/engine.dir/src/main.cpp.o
+#10 0.188 [ 27%] Building CXX object CMakeFiles/engine.dir/src/position.cpp.o
+#10 0.188 [ 36%] Building CXX object CMakeFiles/engine.dir/src/evaluate.cpp.o
+#10 0.189 [ 63%] Building CXX object CMakeFiles/engine.dir/src/search.cpp.o
+#10 0.189 [ 72%] Building CXX object CMakeFiles/engine.dir/src/timeman.cpp.o
+#10 0.189 [ 63%] Building CXX object CMakeFiles/engine.dir/src/movegen.cpp.o
+#10 0.189 [ 72%] Building CXX object CMakeFiles/engine.dir/src/uci.cpp.o
+#10 0.189 [ 90%] Building CXX object CMakeFiles/engine.dir/src/movepick.cpp.o
+#10 0.189 [ 90%] Building CXX object CMakeFiles/engine.dir/src/tt.cpp.o
+#10 0.406 /opt/engine/src/search.cpp: In member function 'void Search::go(const SearchLimits&)':
+#10 0.406 /opt/engine/src/search.cpp:54:16: warning: 'void* memset(void*, int, size_t)' clearing an object of non-trivial type 'struct Search::Stack'; use assignment or value-initialization instead [-Wclass-memaccess]
+#10 0.406    54 |     std::memset(stack_, 0, sizeof(stack_));
+#10 0.406       |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+#10 0.406 In file included from /opt/engine/src/search.cpp:1:
+#10 0.406 /opt/engine/src/search.h:65:12: note: 'struct Search::Stack' declared here
+#10 0.406    65 |     struct Stack {
+#10 0.406       |            ^~~~~
+#10 0.406 /opt/engine/src/search.cpp: In member function 'int Search::alpha_beta(int, int, int, int, bool)':
+#10 0.406 /opt/engine/src/search.cpp:204:31: warning: enumerated and non-enumerated type in conditional expression [-Wextra]
+#10 0.406   204 |     uint8_t tt_bound = tt_hit ? tte->bound : BOUND_NONE;
+#10 0.406       |                        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+#10 0.665 [100%] Linking CXX executable engine
+#10 0.693 [100%] Built target engine
+#10 DONE 0.7s
+
+#11 [stage-1 3/4] COPY --from=build /opt/engine/build/engine /usr/local/bin/engine
+#11 DONE 0.0s
+
+#12 [stage-1 4/4] WORKDIR /opt/engine
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.0s done
+#13 exporting manifest sha256:2ecf413df88bd89e8970cddd1daea77882ee756af00b9ad8f902d8c5050658fe
+#13 exporting manifest sha256:2ecf413df88bd89e8970cddd1daea77882ee756af00b9ad8f902d8c5050658fe done
+#13 exporting config sha256:7ebe07ffd22c1deec42704d56df0ea3f77c8c982a6cc7efde3bee0c87f8db55c done
+#13 exporting attestation manifest sha256:fdf14fef37e49a151b3493dafe1ede6267cb4d14978f58af86ed71730f73f117 done
+#13 exporting manifest list sha256:acb87c5afabcb3454cc081012fd1cf5018f0f0e42cfdd834ad58595937ff7d4c done
+#13 naming to docker.io/eval2/chess-cplusplus-claude:latest done
+#13 unpacking to docker.io/eval2/chess-cplusplus-claude:latest done
+#13 DONE 0.1s
+build eval2/chess-why3-cc:latest  (src=/Users/mathieuacher/SANDBOX/chess-why3-cc)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.03kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#3 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 DONE 0.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends libgmp10 && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [build 1/5] FROM docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5
+#7 resolve docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5 done
+#7 CACHED
+
+#8 [internal] load build context
+#8 transferring context: 48.79MB 0.2s done
+#8 DONE 0.2s
+
+#9 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       libgmp-dev pkg-config     && rm -rf /var/lib/apt/lists/*
+#9 0.219 Hit:1 http://deb.debian.org/debian bookworm InRelease
+#9 0.231 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#9 0.263 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#9 0.306 Get:4 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [291 kB]
+#9 0.376 Fetched 394 kB in 0s (1922 kB/s)
+#9 0.376 Reading package lists...
+#9 0.590 Reading package lists...
+#9 0.793 Building dependency tree...
+#9 0.834 Reading state information...
+#9 0.899 The following additional packages will be installed:
+#9 0.899   libgmpxx4ldbl libpkgconf3 pkgconf pkgconf-bin
+#9 0.899 Suggested packages:
+#9 0.899   gmp-doc libgmp10-doc libmpfr-dev
+#9 0.933 The following NEW packages will be installed:
+#9 0.933   libgmp-dev libgmpxx4ldbl libpkgconf3 pkg-config pkgconf pkgconf-bin
+#9 0.967 0 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+#9 0.967 Need to get 1064 kB of archives.
+#9 0.967 After this operation, 2614 kB of additional disk space will be used.
+#9 0.967 Get:1 http://deb.debian.org/debian bookworm/main arm64 libgmpxx4ldbl arm64 2:6.2.1+dfsg1-1.1 [338 kB]
+#9 1.049 Get:2 http://deb.debian.org/debian bookworm/main arm64 libgmp-dev arm64 2:6.2.1+dfsg1-1.1 [622 kB]
+#9 1.174 Get:3 http://deb.debian.org/debian bookworm/main arm64 libpkgconf3 arm64 1.8.1-1 [35.3 kB]
+#9 1.181 Get:4 http://deb.debian.org/debian bookworm/main arm64 pkgconf-bin arm64 1.8.1-1 [28.9 kB]
+#9 1.196 Get:5 http://deb.debian.org/debian bookworm/main arm64 pkgconf arm64 1.8.1-1 [25.9 kB]
+#9 1.201 Get:6 http://deb.debian.org/debian bookworm/main arm64 pkg-config arm64 1.8.1-1 [13.7 kB]
+#9 1.272 debconf: delaying package configuration, since apt-utils is not installed
+#9 1.281 Fetched 1064 kB in 0s (3978 kB/s)
+#9 1.291 Selecting previously unselected package libgmpxx4ldbl:arm64.
+#9 1.291 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18809 files and directories currently installed.)
+#9 1.315 Preparing to unpack .../0-libgmpxx4ldbl_2%3a6.2.1+dfsg1-1.1_arm64.deb ...
+#9 1.317 Unpacking libgmpxx4ldbl:arm64 (2:6.2.1+dfsg1-1.1) ...
+#9 1.331 Selecting previously unselected package libgmp-dev:arm64.
+#9 1.332 Preparing to unpack .../1-libgmp-dev_2%3a6.2.1+dfsg1-1.1_arm64.deb ...
+#9 1.333 Unpacking libgmp-dev:arm64 (2:6.2.1+dfsg1-1.1) ...
+#9 1.355 Selecting previously unselected package libpkgconf3:arm64.
+#9 1.356 Preparing to unpack .../2-libpkgconf3_1.8.1-1_arm64.deb ...
+#9 1.357 Unpacking libpkgconf3:arm64 (1.8.1-1) ...
+#9 1.365 Selecting previously unselected package pkgconf-bin.
+#9 1.367 Preparing to unpack .../3-pkgconf-bin_1.8.1-1_arm64.deb ...
+#9 1.368 Unpacking pkgconf-bin (1.8.1-1) ...
+#9 1.378 Selecting previously unselected package pkgconf:arm64.
+#9 1.379 Preparing to unpack .../4-pkgconf_1.8.1-1_arm64.deb ...
+#9 1.380 Unpacking pkgconf:arm64 (1.8.1-1) ...
+#9 1.392 Selecting previously unselected package pkg-config:arm64.
+#9 1.393 Preparing to unpack .../5-pkg-config_1.8.1-1_arm64.deb ...
+#9 1.394 Unpacking pkg-config:arm64 (1.8.1-1) ...
+#9 1.406 Setting up libpkgconf3:arm64 (1.8.1-1) ...
+#9 1.409 Setting up libgmpxx4ldbl:arm64 (2:6.2.1+dfsg1-1.1) ...
+#9 1.412 Setting up pkgconf-bin (1.8.1-1) ...
+#9 1.416 Setting up libgmp-dev:arm64 (2:6.2.1+dfsg1-1.1) ...
+#9 1.418 Setting up pkgconf:arm64 (1.8.1-1) ...
+#9 1.423 Setting up pkg-config:arm64 (1.8.1-1) ...
+#9 1.425 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+#9 DONE 1.6s
+
+#10 [build 3/5] COPY --chown=opam:opam src/ /opt/engine/
+#10 DONE 0.1s
+
+#11 [build 4/5] WORKDIR /opt/engine
+#11 DONE 0.0s
+
+#12 [build 5/5] RUN opam install --yes dune zarith  && eval $(opam env) && dune build --release  && find _build/default -name '*.exe' -exec cp {} engine ; -quit  && test -x engine
+#12 1.688 The following actions will be performed:
+#12 1.688   - install dune            3.22.2
+#12 1.688   - install conf-pkg-config 4      [required by zarith]
+#12 1.688   - install ocamlfind       1.9.8  [required by zarith]
+#12 1.688   - install conf-gmp        5      [required by zarith]
+#12 1.688   - install zarith          1.14
+#12 1.688 ===== 5 to install =====
+#12 1.688 
+#12 1.688 <><> Gathering sources ><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#12 1.784 [conf-gmp.5/test.c] downloaded from https://opam.ocaml.org/cache
+#12 1.887 [ocamlfind.1.9.8] downloaded from cache at https://opam.ocaml.org/cache
+#12 1.987 [zarith.1.14] downloaded from cache at https://opam.ocaml.org/cache
+#12 2.334 [dune.3.22.2] downloaded from cache at https://opam.ocaml.org/cache
+#12 2.852 
+#12 2.852 <><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#12 3.619 -> installed conf-gmp.5
+#12 3.639 -> installed conf-pkg-config.4
+#12 4.734 -> installed ocamlfind.1.9.8
+#12 5.816 -> installed zarith.1.14
+#12 11.59 -> installed dune.3.22.2
+#12 11.68 Done.
+#12 11.68 # Run eval $(opam env) to update the current shell environment
+#12 DONE 11.8s
+
+#13 [stage-1 3/4] COPY --from=build /opt/engine/engine /usr/local/bin/engine
+#13 DONE 0.0s
+
+#14 [stage-1 4/4] WORKDIR /opt/engine
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers 0.1s done
+#15 exporting manifest sha256:b13b241af9c9bc372c566fdec497d4d5743b1b998947959135c5e2a4a13b8e79 done
+#15 exporting config sha256:31ef144290f50b1d7578d76b6e9514fb7b716748335f1808de457f9ac758d2de done
+#15 exporting attestation manifest sha256:aaaf07c6963f84d8f26f6bb72662452bcac5b152e8db3abe25228b2f0862af1e done
+#15 exporting manifest list sha256:7eb602b82579f4aa8d5e908e50cb5846debab78f951e00ba140d55df0ee57299
+#15 exporting manifest list sha256:7eb602b82579f4aa8d5e908e50cb5846debab78f951e00ba140d55df0ee57299 done
+#15 naming to docker.io/eval2/chess-why3-cc:latest done
+#15 unpacking to docker.io/eval2/chess-why3-cc:latest 0.0s done
+#15 DONE 0.1s
+build eval2/chess-why3:latest  (src=/Users/mathieuacher/SANDBOX/chess-why3)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.00kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#3 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 DONE 0.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 1/5] FROM docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5
+#6 resolve docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 2.74MB 0.0s done
+#7 DONE 0.0s
+
+#8 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       libgmp-dev pkg-config     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 3/5] COPY --chown=opam:opam src/ /opt/engine/
+#9 DONE 0.0s
+
+#10 [build 4/5] WORKDIR /opt/engine
+#10 DONE 0.0s
+
+#11 [build 5/5] RUN opam install --yes dune zarith  && eval $(opam env) && dune build --release  && cp _build/default/src/uci_ocaml/main.exe engine
+#11 1.703 The following actions will be performed:
+#11 1.703   - install dune            3.22.2
+#11 1.703   - install conf-pkg-config 4      [required by zarith]
+#11 1.703   - install ocamlfind       1.9.8  [required by zarith]
+#11 1.703   - install conf-gmp        5      [required by zarith]
+#11 1.703   - install zarith          1.14
+#11 1.703 ===== 5 to install =====
+#11 1.703 
+#11 1.703 <><> Gathering sources ><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#11 1.786 [conf-gmp.5/test.c] downloaded from https://opam.ocaml.org/cache
+#11 1.907 [ocamlfind.1.9.8] downloaded from cache at https://opam.ocaml.org/cache
+#11 2.102 [zarith.1.14] downloaded from cache at https://opam.ocaml.org/cache
+#11 2.646 [dune.3.22.2] downloaded from cache at https://opam.ocaml.org/cache
+#11 3.175 
+#11 3.175 <><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#11 3.944 -> installed conf-gmp.5
+#11 3.965 -> installed conf-pkg-config.4
+#11 5.103 -> installed ocamlfind.1.9.8
+#11 6.162 -> installed zarith.1.14
+#11 12.05 -> installed dune.3.22.2
+#11 12.14 Done.
+#11 12.14 # Run eval $(opam env) to update the current shell environment
+#11 DONE 12.3s
+
+#12 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends libgmp10 && rm -rf /var/lib/apt/lists/*
+#12 CACHED
+
+#13 [stage-1 3/4] COPY --from=build /opt/engine/engine /usr/local/bin/engine
+#13 DONE 0.0s
+
+#14 [stage-1 4/4] WORKDIR /opt/engine
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers 0.1s done
+#15 exporting manifest sha256:fcd10494996185e33f7b4c469ce0379e750e683c2591c6ccc08001678f6c885e done
+#15 exporting config sha256:5913b54e08b4dad3f1e94f31bd1464c7532417d248f6927c13fd52a173c30432 done
+#15 exporting attestation manifest sha256:ff2be7e679392bcc5b2eb360b2e10b17e5887177fd21d98d224ec84b54f4ae82 done
+#15 exporting manifest list sha256:01795e610a0429906d689b9ec80f1c7d36b32b48b1760b0255890b55888ad4f1
+#15 exporting manifest list sha256:01795e610a0429906d689b9ec80f1c7d36b32b48b1760b0255890b55888ad4f1 done
+#15 naming to docker.io/eval2/chess-why3:latest done
+#15 unpacking to docker.io/eval2/chess-why3:latest 0.0s done
+#15 DONE 0.1s
+build eval2/cobol-chess:latest  (src=/Users/mathieuacher/SANDBOX/COBOL-chess)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 810B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [build 1/5] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#4 DONE 0.0s
+
+#5 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends       libcob4 libgmp10     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 12.01MB 0.1s done
+#6 DONE 0.1s
+
+#7 [build 3/5] COPY src/ /opt/engine/
+#7 CACHED
+
+#8 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential gnucobol4     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 4/5] WORKDIR /opt/engine
+#9 CACHED
+
+#10 [build 5/5] RUN make bin/cobochess
+#10 0.071 make: 'bin/cobochess' is up to date.
+#10 DONE 0.1s
+
+#11 [stage-1 3/4] COPY --from=build /opt/engine/bin/cobochess /usr/local/bin/engine
+#11 DONE 0.0s
+
+#12 [stage-1 4/4] WORKDIR /opt/engine
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.0s done
+#13 exporting manifest sha256:8406c2123ad6226c53d22c63362f071c7c0bbf0c5229b4a7b4401581a7074180 done
+#13 exporting config sha256:a80537381c6fb862436c4bf5067e856d3cdea961c85243672d75fce2874a9293
+#13 exporting config sha256:a80537381c6fb862436c4bf5067e856d3cdea961c85243672d75fce2874a9293 done
+#13 exporting attestation manifest sha256:25106973883a83b665c69710243bb8dd8aafc3e8f4d75c833272d2e355b9d445 done
+#13 exporting manifest list sha256:8c730bb45071859e66d55e61fe6ff1b9765f291c90df67a34cdbef7fdd7dc59b done
+#13 naming to docker.io/eval2/cobol-chess:latest done
+#13 unpacking to docker.io/eval2/cobol-chess:latest 0.0s done
+#13 DONE 0.1s
+
+Build failures: 1 (see results/build_failures.txt)
+build_images.sh done.

@@ -1,0 +1,65 @@
+{
+  "project": "chess-latex-codex-replication",
+  "n_write_events": 37,
+  "cumulative": [
+    0,
+    0,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "first_appearances": {
+    "FEN parsing": {
+      "step": 3,
+      "ts": "2026-02-16T21:38:14.844Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-latex-codex-replication/engine/latex_move_picker.tex",
+      "kind": "heredoc",
+      "snippet": "\\str_if_eq:VnTF \\l_tmpa_tl {fen} { \\tl_cl"
+    },
+    "UCI protocol": {
+      "step": 3,
+      "ts": "2026-02-16T21:38:14.844Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-latex-codex-replication/engine/latex_move_picker.tex",
+      "kind": "heredoc",
+      "snippet": "le { \\cs_new:Npn \\ChessBestmoveFile { bestmove.txt } } \\cs_if_exist:NF \\ChessSearchDep"
+    },
+    "Castling": {
+      "step": 3,
+      "ts": "2026-02-16T21:38:14.844Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-latex-codex-replication/engine/latex_move_picker.tex",
+      "kind": "heredoc",
+      "snippet": "N \\l__chess_side_tl \\tl_new:N \\l__chess_castling_tl \\tl_new:N \\l__chess_ep_tl \\int_new:N"
+    },
+    "En passant": {
+      "step": 3,
+      "ts": "2026-02-16T21:38:14.844Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-latex-codex-replication/engine/latex_move_picker.tex",
+      "kind": "heredoc",
+      "snippet": "} } % Captures and en passant \\int_step_inline:nnn {-1}{2}"
+    },
+    "Promotion": {
+      "step": 3,
+      "ts": "2026-02-16T21:38:14.844Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-latex-codex-replication/engine/latex_move_picker.tex",
+      "kind": "heredoc",
+      "snippet": "ce_at_index:nn {\\l_tmpe_int} {.} % Promotions \\tl_set_eq:NN \\l_tmpk_tl \\l_tmp"
+    },
+    "Material counting": {
+      "step": 3,
+      "ts": "2026-02-16T21:38:14.844Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-latex-codex-replication/engine/latex_move_picker.tex",
+      "kind": "heredoc",
+      "snippet": "tate: } } \\cs_new:Npn \\__chess_piece_value:n #1 { \\str_case:nnF {#1} {"
+    }
+  }
+}

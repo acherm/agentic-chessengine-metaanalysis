@@ -1,0 +1,5 @@
+{
+  "engine": "chess-java",
+  "error": "BrokenPipeError(32, 'Broken pipe')",
+  "results": []
+}

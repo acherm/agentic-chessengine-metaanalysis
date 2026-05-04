@@ -1,0 +1,53 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-rust-codex"]
+[Black "chess-ruby-codex"]
+[Result "1/2-1/2"]
+[FEN "rnbqkbnr/pppppppp/8/8/1P6/8/P1PPPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nf3 d5 3. Bb2 Bf5 4. Nc3 e6 5. Nh4 Bxb4 6. Nxf5 exf5 7. e3 O-O
+8. Qf3 Qd7 9. Bd3 Ne4 10. Rd1 Nc6 11. Nb5 Rae8 12. Qf4 Bd6 13. Nxd6 cxd6 14. Bb5
+a6 15. Ba4 g5 16. Qf3 b5 17. Bb3 Ne5 18. Qh5 Nc4 19. Bd4 g4 20. f3 Ncxd2
+21. Rxd2 gxf3 22. gxf3 Re6 23. Rg1+ Rg6 24. Rxg6+ fxg6 25. Bxd5+ Rf7 26. Qh6 Nf6
+27. Bxf6 Qe6 28. Bxe6 f4 29. Rxd6 fxe3 30. Bxf7+ Kxf7 31. Qxh7+ Ke8 32. Qxg6+
+Kf8 33. Bg7+ Kg8 34. Re6 b4 35. Bf6+ Kf8 36. Be5 a5 37. Rf6+ Ke7 38. Qf7+ Kd8
+39. Rd6+ Kc8 40. Qd7+ Kb8 41. Rd5+ Ka8 42. Qc6+ Ka7 43. a4 b3 44. Bb8+ Kxb8
+45. Rb5+ Ka7 46. cxb3 e2 47. Qc7+ Ka8 48. Qd6 Ka7 49. Kxe2 Ka8 50. Qd8+ Ka7
+51. Kf1 Ka6 52. Kg2 Ka7 53. h3 Ka6 54. Kh2 Ka7 55. Qd4+ Ka6 56. Rb6+ Ka7 57. h4
+Ka8 58. Kh3 Ka7 59. Kg3 Ka8 60. Kf2 Ka7 61. Ke1 Ka8 62. Kd2 Ka7 63. Rb5+ Ka8
+64. Qd6 Ka7 65. Qd8 Ka6 66. Kd1 Ka7 67. h5 Ka6 68. h6 Ka7 69. h7 Ka6 70. h8=Q
+Ka7 71. Qhd4+ Ka6 72. Q4d6+ Ka7 73. Qd2 Ka6 74. Q8d6+ Ka7 75. f4 Ka8 76. Kc1 Ka7
+77. Kb2 Ka8 78. Qc6+ Ka7 79. Rb8 Kxb8 80. Qdc2 Ka7 81. Qb5 Ka8 82. Qg6 Ka7
+83. Kc3 Ka8 84. Kd4 Ka7 85. Qgb6+ Ka8 86. Qd6 Ka7 87. Ke4 Ka8 88. f5 Ka7 89. f6
+Ka8 90. Qd8+ Ka7 91. Qd6 Ka8 92. Qd8+ Ka7 93. Qbxa5+ Kb7 94. Qc3 Ka7 95. Qcc7+
+Ka6 96. Qc5 Kb7 97. Qc3 Ka7 98. Qcc7+ Ka6 99. Qa5+ Kb7 100. f7 Kc6 101. Qdb6+
+Kd7 102. Qaa7+ Kc8 103. Qg1 Kd8 104. a5 Kc8 105. Qc1+ Kd8 106. Qd1+ Kc8
+107. Qd8+ Kxd8 108. a6 Kc8 109. Qc5+ Kd7 110. f8=Q Ke6 111. a7 Kd7 112. Qf7+ Kd8
+113. Qff5 Ke8 114. Qf6 Kd7 115. Qf7+ Kd8 116. Qfh5 Kd7 117. Qg6 Kd8 118. b4 Kd7
+119. Qgb6 Ke8 120. Qb7 Kd8 121. Qg5+ Ke8 122. Qh6 Kd8 123. Kf3 Ke8 124. Kg4 Kd8
+125. Qf6+ Ke8 126. Qff3 Kd8 127. Qg7 Kc8 128. Qfc3+ Kd8 129. Qb2 Kc8 130. Kh5
+Kd8 131. Qc1 Ke8 132. b5 Kd8 133. Qcc7+ Ke8 134. Qc5 Kd8 135. b6 Ke8 136. b7 Kd8
+137. Qg6 Kd7 138. Qgb6 Ke8 139. b8=Q+ Kf7 140. Q8b7+ Ke8 141. Qg1 Kf8 142. Qg3
+Ke8 143. Qb4 Kd8 144. Qd3+ Ke8 145. Qe1+ Kf8 146. Qde2 Kg8 147. Qc3 Kf8
+148. Qce1 Kg8 149. Qc3 Kf8 150. Qa3+ Kg8 151. Qd7 Kh8 152. Qaa4 Kg8 153. Qg2+
+Kf8 154. Qg8+ Kxg8 155. Qad4 Kf8 156. Kh6 Kg8 157. Qh7+ Kf8 158. Qhd7 Kg8
+159. Qh7+ Kf8 160. Qhd7 1/2-1/2
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-ruby-codex"]
+[Black "chess-rust-codex"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/1P6/8/P1PPPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nc6 2. b5 Ne5 3. d4 Ng6 4. Nc3 Nf6 5. Nf3 d5 6. Qd3 Be6 7. Bd2 Qd7 8. Ng5
+Bf5 9. e4 dxe4 10. Ngxe4 O-O-O 11. Be3 Nxe4 12. Nxe4 e5 13. O-O-O exd4 14. Bxd4
+Qd5 15. f3 Qxa2 16. Nd6+ Bxd6 17. Qxf5+ Kb8 18. Rd3 Bf4+ 19. Be3 Bxe3+ 20. Kd1
+Nf4 21. Qxf4 Bxf4 22. Rxd8+ Rxd8+ 23. Ke1 Qa1+ 24. Kf2 Qd4+ 25. Ke1 Qd2# 0-1
+

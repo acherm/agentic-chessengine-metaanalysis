@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Specification Convergence — Quiescence Search (Multi-Select)</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #04060f;
+  --text: #c8d4f0;
+  --dim: #50608a;
+  --accent: #5b8af5;
+  --green: #5ecfaa;
+  --orange: #f0a060;
+}
+html, body { width:100%; height:100%; overflow:hidden; background:var(--bg); color:var(--text);
+  font-family:'Segoe UI',system-ui,sans-serif; }
+
+/* ── stars ── */
+#stars { position:fixed; inset:0; z-index:0; pointer-events:none; }
+
+/* ── stage ── */
+#stage { position:fixed; inset:0; z-index:1; overflow:hidden; }
+
+/* ── title ── */
+#title-area {
+  position:absolute; top:20px; left:50%; transform:translateX(-50%);
+  text-align:center; z-index:15; pointer-events:none;
+}
+#title-area h1 {
+  font-size:18px; font-weight:300; letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(180,200,255,.85);
+}
+#title-area p { font-size:11px; color:var(--dim); margin-top:5px; letter-spacing:.07em; }
+
+/* ── spec center ── */
+#spec-center {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:336px; z-index:15;
+  background:rgba(8,12,30,.94);
+  border:1px solid rgba(91,138,245,.45);
+  border-radius:14px;
+  padding:18px 20px 14px;
+  box-shadow: 0 0 40px rgba(91,138,245,.18), 0 0 100px rgba(91,138,245,.07);
+  backdrop-filter:blur(10px);
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+@keyframes pulseGlow {
+  0%,100% { box-shadow: 0 0 40px rgba(91,138,245,.18), 0 0 100px rgba(91,138,245,.07); }
+  50%      { box-shadow: 0 0 55px rgba(91,138,245,.28), 0 0 140px rgba(91,138,245,.12); }
+}
+#spec-center .spec-title {
+  font-size:11px; font-weight:700; letter-spacing:.10em; text-transform:uppercase;
+  color:rgba(140,170,255,.8); text-align:center;
+  margin-bottom:12px; padding-bottom:8px;
+  border-bottom:1px solid rgba(91,138,245,.18);
+}
+#spec-pre {
+  font-family:'JetBrains Mono','Fira Code','Cascadia Code',monospace;
+  font-size:10px; line-height:1.72; color:#9aa8d0;
+  tab-size:4; white-space:pre;
+}
+.spec-legend {
+  margin-top:10px; padding-top:8px;
+  border-top:1px solid rgba(91,138,245,.12);
+  display:flex; flex-wrap:wrap; gap:4px 10px;
+}
+.leg { font-size:8.5px; letter-spacing:.04em; white-space:nowrap; }
+.c1{color:#7ecfb3} .c2{color:#f0a060} .c3{color:#5b8af5}
+.c4{color:#c678dd} .c5{color:#e5c07b}
+
+/* ── orbit field ── */
+#orbit-field { position:absolute; inset:0; z-index:5; }
+
+/* ── orbit card ── */
+.orbit-card {
+  position:absolute; width:186px;
+  background:rgba(10,14,30,.90);
+  border:1px solid rgba(55,75,130,.5);
+  border-radius:8px; overflow:hidden;
+  cursor:pointer;
+  transition:box-shadow .25s, border-color .25s, transform .18s, opacity .35s, filter .35s;
+  backdrop-filter:blur(4px);
+  user-select:none;
+}
+.orbit-card:hover {
+  box-shadow:0 0 22px rgba(91,138,245,.4);
+  border-color:rgba(91,138,245,.75);
+  transform:scale(1.06);
+  z-index:30 !important;
+}
+.card-head {
+  padding:6px 9px 5px;
+  background:rgba(16,21,48,.85);
+  border-bottom:1px solid rgba(55,75,130,.3);
+  display:flex; align-items:center; gap:5px;
+}
+.card-name {
+  font-size:10px; font-weight:700; color:#c0d0f8;
+  flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.card-lang {
+  font-size:8px; padding:1px 4px; border-radius:3px;
+  border:1px solid; white-space:nowrap; flex-shrink:0;
+}
+.card-code-wrap {
+  padding:5px 7px; height:116px; overflow:hidden;
+  mask-image:linear-gradient(to bottom, #000 65%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom, #000 65%, transparent 100%);
+}
+pre.card-code {
+  font-family:'JetBrains Mono','Fira Code',monospace;
+  font-size:8.5px; line-height:1.6; color:#8090b8;
+  white-space:pre; tab-size:2; overflow:hidden; pointer-events:none;
+}
+.card-foot {
+  padding:4px 9px; background:rgba(16,21,48,.6);
+  border-top:1px solid rgba(55,75,130,.2);
+  display:flex; align-items:center; gap:5px;
+}
+.card-agent { font-size:8px; color:rgba(91,138,245,.7); flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.card-sf   { font-size:8px; color:var(--dim); white-space:nowrap; }
+
+/* ── dock panel ── */
+#dock {
+  position:fixed; bottom:0; left:0; right:0; height:58vh; z-index:50;
+  transform:translateY(100%);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+  background:rgba(5,8,20,.97);
+  border-top:2px solid rgba(91,138,245,.4);
+  backdrop-filter:blur(14px);
+  display:flex; flex-direction:column;
+  box-shadow:0 -6px 50px rgba(0,0,0,.55);
+}
+#dock.open { transform:translateY(0); }
+
+#dock-hdr {
+  padding:7px 14px; flex-shrink:0;
+  border-bottom:1px solid rgba(55,75,130,.3);
+  display:flex; align-items:center; gap:10px;
+  background:rgba(8,12,28,.85);
+}
+#dock-icon { font-size:14px; color:rgba(91,138,245,.65); }
+#dock-label { font-size:11px; font-weight:500; color:rgba(180,200,255,.7); flex:1; letter-spacing:.04em; }
+#dock-count-badge {
+  font-size:10px; padding:2px 9px; border-radius:10px;
+  background:rgba(91,138,245,.12); border:1px solid rgba(91,138,245,.3);
+  color:rgba(140,170,255,.9); white-space:nowrap;
+}
+#dock-clear {
+  background:none; border:1px solid rgba(200,80,100,.35); border-radius:4px;
+  color:rgba(200,80,100,.7); font-size:10px; padding:2px 9px; cursor:pointer;
+  transition:background .2s, color .2s;
+}
+#dock-clear:hover { background:rgba(200,80,100,.1); color:#e05f7a; }
+
+#dock-cards-wrap {
+  flex:1; overflow-x:auto; overflow-y:hidden;
+  display:flex; gap:14px; align-items:stretch;
+  padding:12px 16px; min-height:0;
+}
+#dock-cards-wrap::-webkit-scrollbar { height:5px; }
+#dock-cards-wrap::-webkit-scrollbar-thumb { background:rgba(91,138,245,.22); border-radius:3px; }
+
+/* ── dock card ── */
+.dc {
+  flex:1 1 320px; min-width:280px; max-width:none;
+  background:rgba(10,14,30,.95);
+  border:1px solid rgba(91,138,245,.3);
+  border-radius:10px;
+  display:flex; flex-direction:column;
+  overflow:hidden;
+  animation:dockIn .28s ease-out;
+}
+@keyframes dockIn {
+  from { transform:translateY(18px); opacity:0; }
+  to   { transform:none; opacity:1; }
+}
+.dc-hdr {
+  padding:7px 10px;
+  background:rgba(16,21,48,.9);
+  border-bottom:1px solid rgba(55,75,130,.3);
+  display:flex; align-items:center; gap:6px; flex-shrink:0;
+}
+.dc-name { font-size:12px; font-weight:700; color:#c0d0f8; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.dc-lang { font-size:10px; padding:2px 6px; border-radius:3px; border:1px solid; white-space:nowrap; flex-shrink:0; }
+.dc-agent { font-size:10px; color:rgba(91,138,245,.75); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex-shrink:1; min-width:0; }
+.dc-close {
+  background:none; border:none; color:rgba(80,100,160,.55); font-size:16px;
+  cursor:pointer; line-height:1; padding:0 3px; flex-shrink:0;
+  transition:color .15s;
+}
+.dc-close:hover { color:#e05f7a; }
+
+.dc-sfs {
+  padding:4px 8px; display:flex; flex-wrap:wrap; gap:3px;
+  border-bottom:1px solid rgba(55,75,130,.15);
+  flex-shrink:0; background:rgba(12,18,40,.5);
+}
+.dc-sf-badge { font-size:9px; padding:2px 6px; border-radius:3px; border:1px solid; white-space:nowrap; }
+.dc-sf-badge.on  { color:#5ecfaa; border-color:rgba(94,207,170,.3); background:rgba(94,207,170,.08); }
+.dc-sf-badge.off { color:var(--dim); border-color:rgba(55,75,130,.25); }
+
+.dc-scroll { flex:1; overflow:auto; min-height:0; }
+.dc-scroll::-webkit-scrollbar { width:4px; height:4px; }
+.dc-scroll::-webkit-scrollbar-thumb { background:rgba(91,138,245,.18); border-radius:2px; }
+pre.dc-code {
+  font-family:'JetBrains Mono','Fira Code',monospace;
+  font-size:11.5px; line-height:1.65; color:#bbc8f0;
+  padding:12px 16px; margin:0; white-space:pre; tab-size:4;
+}
+
+.dc-ftr {
+  padding:6px 12px; border-top:1px solid rgba(55,75,130,.18); flex-shrink:0;
+  font-size:10px; color:var(--dim); display:flex; gap:16px; flex-wrap:wrap;
+}
+.dc-mval { color:var(--green); font-weight:600; margin-left:3px; }
+
+/* ── search bar (top-left) ── */
+#search-bar {
+  position:fixed; top:14px; left:20px; z-index:20;
+  display:flex; align-items:center; gap:8px;
+  background:rgba(8,12,30,.88);
+  border:1px solid rgba(91,138,245,.28);
+  border-radius:28px; padding:6px 14px;
+  backdrop-filter:blur(10px);
+  transition:border-color .2s, box-shadow .2s;
+  box-shadow:0 2px 20px rgba(0,0,0,.4);
+}
+#search-bar:focus-within {
+  border-color:rgba(91,138,245,.7);
+  box-shadow:0 0 18px rgba(91,138,245,.15), 0 2px 20px rgba(0,0,0,.4);
+}
+#search-bar.invalid { border-color:rgba(224,95,122,.6); }
+#search-icon { font-size:12px; color:var(--dim); pointer-events:none; }
+#search-input {
+  background:none; border:none; outline:none;
+  color:rgba(200,215,255,.9); font-size:12px; width:170px;
+  letter-spacing:.03em; font-family:'Segoe UI',system-ui,sans-serif;
+}
+#search-input::placeholder { color:rgba(70,90,150,.8); }
+#search-count { font-size:10px; min-width:50px; white-space:nowrap; }
+#search-clear {
+  background:none; border:none; color:rgba(80,100,160,.5);
+  cursor:pointer; font-size:16px; padding:0 2px; line-height:1; display:none;
+}
+#search-clear:hover { color:#e05f7a; }
+
+/* ── instruction tip ── */
+#tip {
+  position:fixed; bottom:14px; right:20px; z-index:12;
+  font-size:10px; color:var(--dim); pointer-events:none; letter-spacing:.04em;
+  transition:opacity .3s;
+}
+#tip.hide { opacity:0; }
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<div id="stage">
+  <div id="title-area">
+    <h1>Specification Convergence</h1>
+    <p id="subtitle">Loading engines…</p>
+  </div>
+
+  <div id="spec-center">
+    <div class="spec-title">♟ Quiescence Search — Canonical Specification</div>
+    <pre id="spec-pre"></pre>
+    <div class="spec-legend">
+      <span class="leg c1">■ stand-pat</span>
+      <span class="leg c2">■ β-cutoff</span>
+      <span class="leg c3">■ α-update</span>
+      <span class="leg c4">■ captures only</span>
+      <span class="leg c5">■ negamax flip</span>
+    </div>
+  </div>
+
+  <div id="orbit-field"></div>
+</div>
+
+<div id="dock">
+  <div id="dock-hdr">
+    <span id="dock-icon">⊞</span>
+    <span id="dock-label">Variant comparison</span>
+    <span id="dock-count-badge">0 selected</span>
+    <button id="dock-clear">Clear all ✕</button>
+  </div>
+  <div id="dock-cards-wrap"></div>
+</div>
+
+<div id="search-bar">
+  <span id="search-icon">⌕</span>
+  <input id="search-input" type="text" placeholder="Language or engine… (regex)" spellcheck="false" autocomplete="off">
+  <span id="search-count"></span>
+  <button id="search-clear" title="Clear">×</button>
+</div>
+
+<div id="tip">Click any card to dock it · select multiple for side-by-side comparison · ✕ returns to orbit</div>
+
+<script>
+// ── ANNOTATED PSEUDOCODE ──────────────────────────────────────────────────
+document.getElementById('spec-pre').innerHTML =
+`<span style="color:#6070a0">int</span> <span style="color:#61afef;font-weight:600">Quiesce</span>( <span style="color:#6070a0">int</span> alpha, <span style="color:#6070a0">int</span> beta ) {
+
+    <span style="color:#6070a0">int</span> static_eval = <span style="color:#61afef">Evaluate</span>();
+
+<span class="c1">    // ❶ Stand-Pat
+    int best_value = static_eval;</span>
+
+<span class="c2">    // ❷ β-cutoff
+    if( best_value &gt;= beta )
+        return best_value;</span>
+
+<span class="c3">    // ❸ α-update
+    if( best_value &gt; alpha )
+        alpha = best_value;</span>
+
+<span class="c4">    // ❹ Captures only
+    until( every_capture_has_been_examined ) {
+        MakeCapture();</span>
+<span class="c5">        // ❺ Negamax sign-flip
+        score = -Quiesce( -beta, -alpha );</span>
+<span class="c4">        TakeBackMove();
+        if( score &gt;= beta )  return score;
+        if( score &gt; best_value )  best_value = score;
+        if( score &gt; alpha )  alpha = score;
+    }</span>
+
+    return best_value;
+}`;
+
+// ── LANGUAGE COLORS ───────────────────────────────────────────────────────
+const LC = {
+  'C':        ['#7ecfff','#3070a0'], 'C++':    ['#b090ff','#6040a0'],
+  'Java':     ['#ffb860','#a07020'], 'Python': ['#60d080','#306040'],
+  'Rust':     ['#ff8060','#a04030'], 'Ruby':   ['#ff6080','#a03050'],
+  'OCaml':    ['#f0a040','#a06020'],
+  'Coq':      ['#e8902a','#a06020'], 'COBOL':  ['#80c0ff','#305080'],
+  'Lean':     ['#c0a0ff','#603090'], 'APL':    ['#ff60c0','#a03080'],
+  'Assembly': ['#c0c0c0','#606060'], 'Icon':   ['#60e0d0','#308070'],
+  'Mojo':     ['#ff9040','#a05020'], 'HTML':   ['#e06060','#902020'],
+  'CSS':      ['#60c8f0','#2080a0'], 'JavaScript': ['#f0d060','#a08020'],
+  'LaTeX':    ['#d0c060','#808020'],
+};
+function lc(lang) { return LC[lang] || ['#8090b0','#404060']; }
+
+// ── AGENT MAPPING ─────────────────────────────────────────────────────────
+function agentOf(name) {
+  if (name === 'chess-brainfuck') return 'Codex (GPT-5.3)';
+  if (/codex/i.test(name)) return 'Codex / o1';
+  if (/-cc$/.test(name))   return 'Claude Code (Sonnet 3.7)';
+  const claudeNames = ['chess-java','chess-Rocq','COBOL-chess','chess-purec',
+    'chess-cplusplus','chess-mojo','cplusplus-chess',
+    'lean-chess','chess-py','chess-why3','chess-ruby','chess-css'];
+  if (claudeNames.some(n => name.startsWith(n))) return 'Claude Code';
+  return 'Claude Code';
+}
+
+function displayLang(name, lang) {
+  if (name === 'chess-brainfuck') return 'Brainfuck†';
+  return lang;
+}
+
+// ── SYNTAX HIGHLIGHTING ───────────────────────────────────────────────────
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+const CC = {re:/\/\/[^\n]*/g,cls:'#6a7090'};
+const CM = {re:/\/\*[\s\S]*?\*\//g,cls:'#6a7090'};
+const CS = {re:/"(?:[^"\\]|\\.)*"/g,cls:'#98c379'};
+const CN = {re:/\b\d+(?:\.\d+)?[uUlLfF]?\b/g,cls:'#d19a66'};
+const CT = {re:/\b[A-Z][A-Za-z0-9_]*\b/g,cls:'#e5c07b'};
+const CP = {re:/^#[^\n]*/gm,cls:'#c8a040'};
+const KW = k => ({re:new RegExp(`\\b(?:${k})\\b`,'g'),cls:'#c678dd'});
+
+const RULES = {
+  C:    [CC,CM,CS,CN,CP, KW('int|long|unsigned|char|float|double|void|bool|return|if|else|for|while|do|switch|case|break|continue|static|const|struct|typedef|sizeof|NULL|true|false|inline'), CT],
+  'C++':[CC,CM,CS,CN,CP, KW('int|long|auto|char|float|double|void|bool|return|if|else|for|while|do|switch|case|break|continue|static|const|constexpr|class|template|typename|namespace|using|public|private|protected|new|delete|nullptr|true|false|override|this'), CT],
+  Java: [CC,CM,CS,CN,     KW('int|long|boolean|char|float|double|void|byte|short|return|if|else|for|while|do|switch|case|break|continue|new|class|interface|public|private|protected|static|final|null|true|false|this|super|throw|try|catch'), CT],
+  Rust: [CC,CM,CS,CN,     KW('fn|let|mut|const|static|if|else|return|while|loop|for|in|impl|pub|use|mod|struct|enum|match|Some|None|true|false|break|continue|self|Self|as|where|type|trait|dyn|unsafe'),
+         {re:/\b(?:i32|i64|u32|u64|usize|f32|f64|bool|char|str|String|Vec|Box|Option|Result)\b/g,cls:'#e5c07b'}],
+  Python:[{re:/#[^\n]*/g,cls:'#6a7090'},{re:/"""[\s\S]*?"""|'''[\s\S]*?'''/g,cls:'#6a7090'},CS,CN,
+          KW('def|class|if|elif|else|return|for|in|while|import|from|True|False|None|not|and|or|self|try|except|finally|with|as|pass|break|continue|raise|lambda'),
+          {re:/\b[A-Z][A-Z0-9_]+\b/g,cls:'#e5c07b'},{re:/\b[a-z_]\w*(?=\s*\()/g,cls:'#61afef'}],
+  Ruby: [{re:/#[^\n]*/g,cls:'#6a7090'},CS,CN,
+         KW('def|end|if|elsif|else|unless|then|return|while|for|in|do|class|module|nil|true|false|self|rescue|raise|next|break|when|case|puts|print'),
+         {re:/:[a-z_]\w*/g,cls:'#e5c07b'},{re:/\b[A-Z]\w*\b/g,cls:'#e5c07b'}],
+  COBOL:[{re:/\*>[^\n]*/g,cls:'#6a7090'},{re:/^[ \t]{0,6}\*[^\n]*/gm,cls:'#6a7090'},
+         {re:/"[^"]*"/g,cls:'#98c379'},{re:/\b\d+(?:\.\d+)?\b/g,cls:'#d19a66'},
+         KW('PERFORM|CALL|IF|ELSE|END-IF|END-PERFORM|MOVE|COMPUTE|GOBACK|STOP|USING|VARYING|UNTIL|FROM|BY|VALUE|PIC|TO|ADD|SUBTRACT|MULTIPLY|DIVIDE|NOT|AND|OR|GREATER|LESS|EQUAL|THAN|INITIALIZE|EVALUATE|WHEN|END-EVALUATE|EXIT|CONTINUE'),
+         {re:/\b(?:WORKING-STORAGE|PROCEDURE|LINKAGE|SECTION|DIVISION|IDENTIFICATION|ENVIRONMENT|DATA)\b/g,cls:'#c8a040'}],
+  OCaml:[{re:/\(\*[\s\S]*?\*\)/g,cls:'#6a7090'},CS,{re:/\b\d+(?:\.\d+)?\b/g,cls:'#d19a66'},
+         KW('let|rec|in|fun|function|if|then|else|match|with|type|module|open|end|val|begin|when|and|or|not|true|false|ref|mutable|exception|raise|try|for|while|do|done'),
+         {re:/\b(?:Fixpoint|Definition|Theorem|Lemma|Proof|Qed|Inductive|Record|Require|Import|Section|Notation|Compute)\b/g,cls:'#c8a040'},
+         {re:/\b(?:nat|list|int|bool|string|unit|option|Some|None)\b/g,cls:'#e5c07b'},{re:/\b[A-Z]\w*\b/g,cls:'#e5c07b'}],
+  Lean: [{re:/--[^\n]*/g,cls:'#6a7090'},{re:/-[\s\S]*?-\//g,cls:'#6a7090'},CS,CN,
+         KW('def|theorem|lemma|let|in|fun|if|then|else|match|with|return|where|do|have|show|exact|apply|intro|simp|rfl|by|import|open|namespace|end|structure|inductive|class|instance|partial|noncomputable|private'),
+         {re:/\b(?:Nat|Int|Bool|String|List|Option|Array|IO|Prop|Type|Sort)\b/g,cls:'#e5c07b'}],
+  APL:  [{re:/⍝[^\n]*/g,cls:'#6a7090'},{re:/\b\d+(?:\.\d+)?\b/g,cls:'#d19a66'},
+         {re:/[⍺⍵⍶⍹∇⊢⊣⍳⍴⌽⊖⌿⍀⊃⊆↑↓⍋⍒⌊⌈|×÷+−*⍟○!?~∧∨⊤⊥<≤=≥>≠∊⍷∪∩~]/g,cls:'#c678dd'},
+         {re:/'[^']*'/g,cls:'#98c379'}],
+  Assembly:[{re:/;[^\n]*/g,cls:'#6a7090'},{re:/\b\d+\b/g,cls:'#d19a66'},
+            {re:/\b(?:mov|push|pop|call|ret|jmp|je|jne|jl|jg|jle|jge|cmp|add|sub|mul|div|xor|and|or|not|shl|shr|neg|lea|nop)\b/gi,cls:'#c678dd'},
+            {re:/[a-zA-Z_]\w*:/g,cls:'#e5c07b'}],
+};
+RULES['Icon'] = RULES['Python'];
+RULES['Mojo'] = RULES['Python'];
+RULES['HTML'] = RULES['Ruby'];
+RULES['LaTeX'] = [];
+
+function hlCode(raw, lang) {
+  const L = lang || '';
+  const key = Object.keys(RULES).find(k =>
+    k.toLowerCase() === L.toLowerCase() ||
+    (L.toLowerCase().includes('coq') && k === 'OCaml') ||
+    (L.toLowerCase().includes('why3') && k === 'OCaml'));
+  if (!key || !RULES[key].length) return escHtml(raw);
+  const rules = RULES[key];
+  const hits = [];
+  rules.forEach((r, ri) => {
+    const re = new RegExp(r.re.source, (r.re.flags||'').replace('g','')+'g');
+    let m;
+    while ((m = re.exec(raw)) !== null) {
+      hits.push({s:m.index, e:m.index+m[0].length, t:m[0], cls:r.cls, ri});
+      if (m[0].length === 0) re.lastIndex++;
+    }
+  });
+  hits.sort((a,b) => a.s !== b.s ? a.s - b.s : a.ri - b.ri);
+  let html='', pos=0;
+  for (const h of hits) {
+    if (h.s < pos) continue;
+    if (h.s > pos) html += escHtml(raw.slice(pos, h.s));
+    html += `<span style="color:${h.cls}">${escHtml(h.t)}</span>`;
+    pos = h.e;
+  }
+  return html + escHtml(raw.slice(pos));
+}
+
+// ── STARFIELD ─────────────────────────────────────────────────────────────
+function initStars() {
+  const cv = document.getElementById('stars');
+  const ctx = cv.getContext('2d');
+  function resize() { cv.width = innerWidth; cv.height = innerHeight; }
+  resize(); window.addEventListener('resize', resize);
+  const stars = Array.from({length:260}, () => ({
+    x:Math.random(), y:Math.random(),
+    r:Math.random()*1.5+.2,
+    ph:Math.random()*Math.PI*2, sp:0.3+Math.random()*.8
+  }));
+  let t=0;
+  (function draw() {
+    const W=cv.width, H=cv.height;
+    ctx.clearRect(0,0,W,H);
+    stars.forEach(s => {
+      const a = .15 + .65*(0.5+0.5*Math.sin(t*s.sp+s.ph));
+      ctx.fillStyle = `rgba(180,200,255,${a.toFixed(2)})`;
+      ctx.beginPath(); ctx.arc(s.x*W, s.y*H, s.r, 0, Math.PI*2); ctx.fill();
+    });
+    t += .012; requestAnimationFrame(draw);
+  })();
+}
+
+// ── ORBIT STATE ───────────────────────────────────────────────────────────
+let cards = [];
+
+function buildCards(engines, sfNames) {
+  const field = document.getElementById('orbit-field');
+  field.innerHTML = '';
+  cards = [];
+
+  const n = engines.length;
+  const r0 = Math.round(n * 0.30);
+  const r1 = Math.round(n * 0.35);
+  const r2 = n - r0 - r1;
+  const rings = [
+    { count:r0, rx:0.26, ry:0.22, speed:0.000260, offset:0 },
+    { count:r1, rx:0.39, ry:0.31, speed:0.000165, offset:Math.PI*0.15 },
+    { count:r2, rx:0.50, ry:0.39, speed:0.000110, offset:Math.PI*0.07 },
+  ];
+
+  let ei = 0;
+  rings.forEach(ring => {
+    for (let j = 0; j < ring.count && ei < n; j++, ei++) {
+      const eng = engines[ei];
+      const baseAngle = ring.offset + (j / ring.count) * 2 * Math.PI;
+      const c = lc(eng.language);
+      const sfCount = sfNames.filter(sf => eng.subfeatures && eng.subfeatures[sf]).length;
+      const snippet = (eng.snippet || '').split('\n').slice(0, 18).join('\n');
+      const agent = agentOf(eng.name);
+
+      const el = document.createElement('div');
+      el.className = 'orbit-card';
+      el.style.opacity = '0';
+      const dLang = displayLang(eng.name, eng.language);
+      const langTip = eng.name === 'chess-brainfuck'
+        ? 'Hybrid: board kernels in Brainfuck, search in Python (agent drifted from constraint)'
+        : eng.language;
+      el.innerHTML = `
+        <div class="card-head">
+          <span class="card-name" title="${escHtml(eng.name)}">${escHtml(eng.name)}</span>
+          <span class="card-lang" style="color:${c[0]};border-color:${c[1]}" title="${escHtml(langTip)}">${escHtml(dLang)}</span>
+        </div>
+        <div class="card-code-wrap"><pre class="card-code">${hlCode(snippet, eng.language)}</pre></div>
+        <div class="card-foot">
+          <span class="card-agent">${escHtml(agent)}</span>
+          <span class="card-sf">${sfCount}/${sfNames.length}</span>
+        </div>`;
+
+      const idx = ei;
+      el.addEventListener('click', () => toggleDock(idx));
+      el.addEventListener('mouseenter', () => { el._hover = true; });
+      el.addEventListener('mouseleave', () => { el._hover = false; });
+      field.appendChild(el);
+
+      setTimeout(() => { el.style.transition = 'opacity 1s'; el.style.opacity = '1'; }, 300 + ei * 60);
+
+      cards.push({
+        el, eng, sfCount, agent,
+        currentAngle: baseAngle,
+        speed: ring.speed * (1 + (Math.random()-.5)*.12),
+        rx: ring.rx, ry: ring.ry,
+        docked: false,
+      });
+    }
+  });
+}
+
+// ── ANIMATION LOOP ────────────────────────────────────────────────────────
+let lastT = 0;
+function animLoop(now) {
+  const dt = Math.min(now - (lastT || now), 50);
+  lastT = now;
+  const W = innerWidth, H = innerHeight;
+  const cx = W/2, cy = H/2;
+
+  cards.forEach(cd => {
+    // Always advance angle so orbit resumes smoothly after undocking
+    const slow = cd.el._hover ? 0.08 : 1;
+    cd.currentAngle += dt * cd.speed * slow;
+    if (cd.docked) return;
+    const rx = cd.rx * W, ry = cd.ry * H;
+    const x = cx + rx * Math.cos(cd.currentAngle) - cd.el.offsetWidth  / 2;
+    const y = cy + ry * Math.sin(cd.currentAngle) - cd.el.offsetHeight / 2;
+    cd.el.style.left = x + 'px';
+    cd.el.style.top  = y + 'px';
+  });
+  requestAnimationFrame(animLoop);
+}
+
+// ── DOCK LOGIC ────────────────────────────────────────────────────────────
+function toggleDock(idx) {
+  const cd = cards[idx];
+  if (cd.docked) return; // can't click docked card in orbit (invisible)
+  dockCard(cd);
+}
+
+function dockCard(cd) {
+  cd.docked = true;
+  cd.el.style.opacity = '0';
+  cd.el.style.pointerEvents = 'none';
+  cd.el.style.filter = '';
+  renderDock();
+}
+
+function undockCard(cd) {
+  cd.docked = false;
+  cd.el.style.pointerEvents = '';
+  // Reapply search state to restore correct opacity
+  applySearch();
+  renderDock();
+}
+
+function undockByName(name) {
+  const cd = cards.find(c => c.eng.name === name);
+  if (cd) undockCard(cd);
+}
+
+function clearAllDocked() {
+  cards.forEach(cd => {
+    if (!cd.docked) return;
+    cd.docked = false;
+    cd.el.style.pointerEvents = '';
+  });
+  applySearch();
+  renderDock();
+}
+
+function renderDock() {
+  const dockEl   = document.getElementById('dock');
+  const wrap     = document.getElementById('dock-cards-wrap');
+  const badge    = document.getElementById('dock-count-badge');
+  const tip      = document.getElementById('tip');
+  const sfNames  = window._sfNames || [];
+
+  const docked = cards.filter(cd => cd.docked);
+  const n = docked.length;
+  badge.textContent = n === 1 ? '1 variant' : `${n} variants`;
+
+  if (n === 0) {
+    dockEl.classList.remove('open');
+    tip.classList.remove('hide');
+    wrap.innerHTML = '';
+    return;
+  }
+
+  dockEl.classList.add('open');
+  tip.classList.add('hide');
+
+  wrap.innerHTML = '';
+  docked.forEach(cd => {
+    const { eng, agent } = cd;
+    const c    = lc(eng.language);
+    const dLang = displayLang(eng.name, eng.language);
+
+    const sfBadges = sfNames.map(sf => {
+      const on = eng.subfeatures && eng.subfeatures[sf];
+      return `<span class="dc-sf-badge ${on?'on':'off'}">${escHtml(sf.replace(/_/g,' '))}</span>`;
+    }).join('');
+
+    const fj = eng.avg_feat_j != null ? (eng.avg_feat_j*100).toFixed(1)+'%' : '—';
+    const tj = eng.avg_tok_j  != null ? (eng.avg_tok_j *100).toFixed(1)+'%' : '—';
+
+    const dcEl = document.createElement('div');
+    dcEl.className = 'dc';
+
+    // Warn for hybrid brainfuck
+    const hybridWarning = eng.name === 'chess-brainfuck'
+      ? `<div style="padding:4px 8px;font-size:9px;color:#f0a060;background:rgba(240,160,60,.07);border-bottom:1px solid rgba(240,160,60,.2);flex-shrink:0">
+           ⚠ Hybrid: board ops in Brainfuck, search drifted to Python
+         </div>`
+      : '';
+
+    dcEl.innerHTML = `
+      <div class="dc-hdr">
+        <span class="dc-name" title="${escHtml(eng.name)}">${escHtml(eng.name)}</span>
+        <span class="dc-lang" style="color:${c[0]};border-color:${c[1]}">${escHtml(dLang)}</span>
+        <span class="dc-agent">${escHtml(agent)}</span>
+        <button class="dc-close" title="Return to orbit">✕</button>
+      </div>
+      ${hybridWarning}
+      <div class="dc-sfs">${sfBadges}</div>
+      <div class="dc-scroll"><pre class="dc-code">${hlCode(eng.snippet || '', eng.language)}</pre></div>
+      <div class="dc-ftr">
+        <span>LOC: <span class="dc-mval">${eng.loc != null ? eng.loc : '—'}</span></span>
+        <span>Feat-J: <span class="dc-mval">${fj}</span></span>
+        <span>Tok-J: <span class="dc-mval">${tj}</span></span>
+      </div>`;
+
+    dcEl.querySelector('.dc-close').addEventListener('click', e => {
+      e.stopPropagation();
+      undockByName(eng.name);
+    });
+
+    wrap.appendChild(dcEl);
+  });
+}
+
+// ── SEARCH ────────────────────────────────────────────────────────────────
+let searchPat = '';
+
+function searchMatches(cd) {
+  try {
+    const re = new RegExp(searchPat, 'i');
+    return re.test(cd.eng.name) || re.test(cd.eng.language || '');
+  } catch(e) { return true; }
+}
+
+function applySearch() {
+  const bar      = document.getElementById('search-bar');
+  const countEl  = document.getElementById('search-count');
+  const clearBtn = document.getElementById('search-clear');
+  const active   = searchPat.length > 0;
+
+  let valid = true;
+  try { if (active) new RegExp(searchPat); } catch(e) { valid = false; }
+  bar.classList.toggle('invalid', !valid);
+
+  let matchCount = 0;
+  cards.forEach(cd => {
+    if (cd.docked) {
+      // Always keep docked cards invisible in the orbit layer
+      cd.el.style.opacity = '0';
+      cd.el.style.filter  = '';
+      cd.el.style.zIndex  = '5';
+      return;
+    }
+    const match = !active || (valid && searchMatches(cd));
+    if (match && active) matchCount++;
+    cd.el.style.opacity = active ? (match ? '1' : '0.07') : '1';
+    cd.el.style.filter  = (active && match)
+      ? 'drop-shadow(0 0 10px rgba(91,138,245,.55))' : '';
+    cd.el.style.zIndex  = (active && match) ? '25' : '5';
+  });
+
+  if (active && valid) {
+    countEl.textContent = matchCount ? `${matchCount} match${matchCount !== 1 ? 'es' : ''}` : 'no match';
+    countEl.style.color = matchCount ? 'rgba(240,160,96,.9)' : 'rgba(224,95,122,.9)';
+    clearBtn.style.display = '';
+  } else {
+    countEl.textContent = '';
+    clearBtn.style.display = 'none';
+  }
+}
+
+document.getElementById('search-input').addEventListener('input', e => {
+  searchPat = e.target.value;
+  applySearch();
+});
+document.getElementById('search-clear').addEventListener('click', () => {
+  searchPat = '';
+  document.getElementById('search-input').value = '';
+  applySearch();
+});
+document.getElementById('dock-clear').addEventListener('click', clearAllDocked);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const docked = cards.filter(cd => cd.docked);
+    if (docked.length > 0) { clearAllDocked(); return; }
+    if (searchPat) { searchPat = ''; document.getElementById('search-input').value = ''; applySearch(); }
+  }
+});
+
+// ── BOOT ──────────────────────────────────────────────────────────────────
+initStars();
+requestAnimationFrame(animLoop);
+
+fetch('feature_explorer_data.json')
+  .then(r => r.json())
+  .then(data => {
+    const qdata = data.quiescence;
+    window._sfNames = qdata.subfeature_names;
+
+    const engines = Object.entries(qdata.engines)
+      .filter(([,e]) => e.has_feature && e.snippet)
+      .map(([name, e]) => ({name, ...e}))
+      .sort((a,b) => {
+        const sa = qdata.subfeature_names.filter(sf => a.subfeatures && a.subfeatures[sf]).length;
+        const sb = qdata.subfeature_names.filter(sf => b.subfeatures && b.subfeatures[sf]).length;
+        return sb - sa;
+      });
+
+    buildCards(engines, qdata.subfeature_names);
+
+    const langs = [...new Set(engines.map(e => e.language))].sort();
+    document.getElementById('subtitle').textContent =
+      `${engines.length} engine variants · ${langs.length} programming languages · click to compare`;
+  })
+  .catch(() => {
+    document.getElementById('subtitle').textContent = 'Could not load feature_explorer_data.json';
+  });
+</script>
+</body>
+</html>

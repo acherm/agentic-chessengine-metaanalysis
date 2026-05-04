@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-Rocq vs chess-latex-codex-replication)
+Started game 2 of 2 (chess-latex-codex-replication vs chess-Rocq)
+Finished game 1 (chess-Rocq vs chess-latex-codex-replication): 1-0 {Black makes an illegal move: 0000}
+Score of chess-Rocq vs chess-latex-codex-replication: 1 - 0 - 0  [1.000] 1
+Finished game 2 (chess-latex-codex-replication vs chess-Rocq): 0-1 {White makes an illegal move: 0000}
+Score of chess-Rocq vs chess-latex-codex-replication: 2 - 0 - 0  [1.000] 2
+...      chess-Rocq playing White: 1 - 0 - 0  [1.000] 1
+...      chess-Rocq playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-Rocq
+   "Win: Black makes an illegal move: 0000": 1
+   "Win: White makes an illegal move: 0000": 1
+Player: chess-latex-codex-replication
+   "Loss: Black makes an illegal move: 0000": 1
+   "Loss: White makes an illegal move: 0000": 1
+Finished match

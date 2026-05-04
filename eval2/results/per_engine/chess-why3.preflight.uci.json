@@ -1,0 +1,20 @@
+{
+  "engine": "chess-why3",
+  "image": "eval2/chess-why3:latest",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.08
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.07
+    }
+  },
+  "total_s": 0.15,
+  "ok": true
+}

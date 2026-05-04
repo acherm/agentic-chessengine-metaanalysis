@@ -1,0 +1,86 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-purec-codex vs sf_skill3)
+Started game 2 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 2 (sf_skill3 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 1 (chess-purec-codex vs sf_skill3): 1/2-1/2 {Draw by insufficient mating material}
+Score of chess-purec-codex vs sf_skill3: 1 - 0 - 1  [0.750] 2
+Started game 4 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 3 (chess-purec-codex vs sf_skill3): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 2 - 0 - 1  [0.833] 3
+Started game 5 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 4 (sf_skill3 vs chess-purec-codex): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 2 - 1 - 1  [0.625] 4
+Started game 6 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 5 (chess-purec-codex vs sf_skill3): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 3 - 1 - 1  [0.700] 5
+Started game 7 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 6 (sf_skill3 vs chess-purec-codex): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 3 - 2 - 1  [0.583] 6
+Started game 8 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 8 (sf_skill3 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_skill3: 3 - 3 - 1  [0.500] 7
+Started game 9 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 7 (chess-purec-codex vs sf_skill3): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 3 - 4 - 1  [0.438] 8
+Started game 10 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 9 (chess-purec-codex vs sf_skill3): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 4 - 4 - 1  [0.500] 9
+Started game 11 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 10 (sf_skill3 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 5 - 4 - 1  [0.550] 10
+Started game 12 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 11 (chess-purec-codex vs sf_skill3): 1-0 {White mates}
+Score of chess-purec-codex vs sf_skill3: 6 - 4 - 1  [0.591] 11
+Started game 13 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 12 (sf_skill3 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_skill3: 6 - 5 - 1  [0.542] 12
+Started game 14 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 13 (chess-purec-codex vs sf_skill3): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 7 - 5 - 1  [0.577] 13
+Started game 15 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 14 (sf_skill3 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 8 - 5 - 1  [0.607] 14
+Started game 16 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 16 (sf_skill3 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_skill3: 9 - 5 - 1  [0.633] 15
+Started game 17 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 15 (chess-purec-codex vs sf_skill3): 0-1 {Black mates}
+Score of chess-purec-codex vs sf_skill3: 9 - 6 - 1  [0.594] 16
+Started game 18 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 17 (chess-purec-codex vs sf_skill3): 1-0 {White mates}
+Score of chess-purec-codex vs sf_skill3: 10 - 6 - 1  [0.618] 17
+Started game 19 of 20 (chess-purec-codex vs sf_skill3)
+Finished game 18 (sf_skill3 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_skill3: 10 - 7 - 1  [0.583] 18
+Started game 20 of 20 (sf_skill3 vs chess-purec-codex)
+Finished game 19 (chess-purec-codex vs sf_skill3): 0-1 {Black mates}
+Score of chess-purec-codex vs sf_skill3: 10 - 8 - 1  [0.553] 19
+Finished game 20 (sf_skill3 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_skill3: 10 - 9 - 1  [0.525] 20
+...      chess-purec-codex playing White: 6 - 3 - 1  [0.650] 10
+...      chess-purec-codex playing Black: 4 - 6 - 0  [0.400] 10
+...      White vs Black: 12 - 7 - 1  [0.625] 20
+Elo difference: 17.4 +/- 158.6, LOS: 59.1 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-purec-codex
+   "Draw by insufficient mating material": 1
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 4
+   "Loss: White wins by adjudication": 2
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 4
+Player: sf_skill3
+   "Draw by insufficient mating material": 1
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 4
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 4
+   "Win: White wins by adjudication": 2
+Finished match

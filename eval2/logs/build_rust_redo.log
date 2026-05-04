@@ -1,0 +1,305 @@
+skip eval2/stockfish:16.1 (exists; pass --rebuild to override)
+skip eval2/anchor-tscp181:latest (exists; pass --rebuild to override)
+build eval2/anchor-madchess32:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.08kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:8.0
+#2 ...
+
+#3 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:8.0
+#3 DONE 1.4s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:8.0
+#2 DONE 1.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d
+#5 resolve mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d done
+#5 sha256:5694444955304ba40c9d7387e6869e194241d4c888ba6f37ed71222daaba8ad6 164B / 164B 0.0s done
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 0B / 30.83MB 0.2s
+#5 sha256:d9200de991fb354570c4717bbc2bf44e459eb43250feee86fe47c6327346c305 3.33kB / 3.33kB 0.2s done
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 0B / 18.54MB 0.2s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 0B / 28.12MB 0.2s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 1.05MB / 18.54MB 2.3s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 1.05MB / 30.83MB 5.3s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 1.05MB / 28.12MB 5.3s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 2.10MB / 18.54MB 6.6s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 3.15MB / 28.12MB 7.2s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 3.15MB / 18.54MB 7.8s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 3.15MB / 30.83MB 8.7s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 4.19MB / 18.54MB 9.3s
+#5 ...
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 resolve mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493 done
+#6 sha256:0172f6215e54e637933a10a654f190c7da2e9c7865fe871cad543ed7d387751c 4.19MB / 17.05MB 9.8s
+#6 ...
+
+#5 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 5.24MB / 28.12MB 10.2s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 5.24MB / 18.54MB 10.4s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 5.24MB / 30.83MB 10.8s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 5.24MB / 28.12MB 15.3s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 5.24MB / 18.54MB 15.5s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 5.24MB / 30.83MB 15.9s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 6.29MB / 18.54MB 17.7s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 7.34MB / 28.12MB 18.3s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 7.34MB / 18.54MB 18.6s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 7.34MB / 30.83MB 19.1s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 8.39MB / 18.54MB 19.5s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 9.44MB / 28.12MB 20.1s
+#5 ...
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 sha256:0172f6215e54e637933a10a654f190c7da2e9c7865fe871cad543ed7d387751c 8.39MB / 17.05MB 20.0s
+#6 ...
+
+#5 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 9.44MB / 18.54MB 20.4s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 9.44MB / 30.83MB 21.2s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 10.49MB / 18.54MB 21.5s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 11.53MB / 28.12MB 22.2s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 11.53MB / 18.54MB 22.5s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 11.53MB / 30.83MB 23.1s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 12.58MB / 18.54MB 23.9s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 13.63MB / 28.12MB 24.5s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 13.63MB / 18.54MB 25.2s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 13.63MB / 30.83MB 26.0s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 14.68MB / 18.54MB 26.4s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 15.73MB / 28.12MB 27.0s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 15.73MB / 18.54MB 28.2s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 15.73MB / 30.83MB 29.4s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 16.78MB / 18.54MB 29.9s
+#5 ...
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 sha256:0172f6215e54e637933a10a654f190c7da2e9c7865fe871cad543ed7d387751c 15.73MB / 17.05MB 30.2s
+#6 ...
+
+#5 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 17.83MB / 28.12MB 30.9s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 17.83MB / 18.54MB 32.3s
+#5 sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 18.54MB / 18.54MB 33.7s done
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 17.83MB / 30.83MB 33.9s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 19.92MB / 28.12MB 35.6s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 19.92MB / 30.83MB 38.3s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 22.02MB / 28.12MB 39.0s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 22.02MB / 30.83MB 40.7s
+#5 ...
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 sha256:0172f6215e54e637933a10a654f190c7da2e9c7865fe871cad543ed7d387751c 17.05MB / 17.05MB 32.3s done
+#6 sha256:f6148466d1660da6ad1c709fa5f76ce7fca0e311ad2ce209f60d3c5d610288df 2.71kB / 2.71kB 0.2s done
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 4.19MB / 174.61MB 8.0s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 3.15MB / 31.36MB 6.9s
+#6 ...
+
+#5 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 24.12MB / 28.12MB 41.7s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 24.12MB / 30.83MB 44.3s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 25.17MB / 28.12MB 46.8s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 24.12MB / 30.83MB 49.4s
+#5 ...
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 6.29MB / 174.61MB 18.0s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 6.29MB / 31.36MB 17.0s
+#6 ...
+
+#5 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 26.21MB / 28.12MB 51.9s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 26.21MB / 30.83MB 52.8s
+#5 sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 28.12MB / 28.12MB 53.4s done
+#5 extracting sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d
+#5 extracting sha256:46ac7a0b9811e518f6b5a0d52940c913a1a560a8f78b82267804914e50244d2d 0.4s done
+#5 extracting sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605
+#5 extracting sha256:2e87b2c0a94c3ddb31a3e0f0843df4ffe6b034da8a8f5ba310869d795d4ad605 0.2s done
+#5 extracting sha256:d9200de991fb354570c4717bbc2bf44e459eb43250feee86fe47c6327346c305 done
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 28.31MB / 30.83MB 55.4s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 30.41MB / 30.83MB 57.9s
+#5 sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 30.83MB / 30.83MB 58.3s done
+#5 DONE 58.3s
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 12.58MB / 174.61MB 25.5s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 12.58MB / 31.36MB 24.5s
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 3.15MB / 10.76MB 4.8s
+#6 ...
+
+#5 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:24117fb11f2f27bdacc6f1ffab16e3a7cddd2417b4eae5e6bc825810a0d1746d
+#5 extracting sha256:a1b77c85b0b1d22b358325d9dcc4ed69f8e9393c88fdb0a8b7c3f933f525fb09 0.2s done
+#5 extracting sha256:5694444955304ba40c9d7387e6869e194241d4c888ba6f37ed71222daaba8ad6 done
+#5 DONE 58.5s
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 4.19MB / 10.76MB 5.3s
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 5.24MB / 10.76MB 6.2s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 14.68MB / 31.36MB 26.1s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 14.68MB / 174.61MB 30.6s
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 6.29MB / 10.76MB 10.4s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 15.73MB / 31.36MB 31.2s
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 7.34MB / 10.76MB 11.7s
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 8.39MB / 10.76MB 12.8s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 17.83MB / 31.36MB 33.2s
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 9.44MB / 10.76MB 13.7s
+#6 sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 10.76MB / 10.76MB 14.6s done
+#6 extracting sha256:b12521d94470d38445fb0dce5beb535d984a21a5b78d8f1b8c6f157ccc339236 0.1s done
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 19.92MB / 31.36MB 34.7s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 19.92MB / 174.61MB 35.7s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 22.02MB / 31.36MB 35.9s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 24.12MB / 31.36MB 36.9s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 26.21MB / 31.36MB 38.3s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 28.31MB / 31.36MB 39.5s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 28.31MB / 174.61MB 40.8s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 30.41MB / 31.36MB 40.7s
+#6 sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 31.36MB / 31.36MB 41.1s done
+#6 extracting sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0
+#6 extracting sha256:a13180bf2c3acc977ed485bdd999cb3835ee76d776406e8c121287d3a72a25f0 0.3s done
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 37.75MB / 174.61MB 44.3s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 47.19MB / 174.61MB 48.6s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 55.57MB / 174.61MB 53.7s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 65.01MB / 174.61MB 56.4s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 74.45MB / 174.61MB 59.1s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 83.89MB / 174.61MB 61.5s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 93.32MB / 174.61MB 64.1s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 102.76MB / 174.61MB 66.6s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 112.20MB / 174.61MB 69.0s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 121.63MB / 174.61MB 71.6s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 131.07MB / 174.61MB 74.1s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 140.51MB / 174.61MB 76.8s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 149.95MB / 174.61MB 80.9s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 159.38MB / 174.61MB 84.8s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 168.82MB / 174.61MB 89.3s
+#6 sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 174.61MB / 174.61MB 90.8s done
+#6 extracting sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29
+#6 extracting sha256:eefcf43936e7625832c6c9817a2b33c92277a584c4a987fdeaa45ec20268ca29 1.4s done
+#6 DONE 124.9s
+
+#6 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:4b1cdaa57eed2cecabcf29bdb9bce11e8ca1c287d39dfd2c8b534663ea94d493
+#6 extracting sha256:f6148466d1660da6ad1c709fa5f76ce7fca0e311ad2ce209f60d3c5d610288df done
+#6 extracting sha256:0172f6215e54e637933a10a654f190c7da2e9c7865fe871cad543ed7d387751c 0.1s done
+#6 DONE 125.1s
+
+#7 [build 2/6] WORKDIR /src
+#7 DONE 0.9s
+
+#8 [build 3/6] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#8 0.158 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#8 0.216 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#8 0.240 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#8 0.262 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8691 kB]
+#8 2.959 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#8 2.961 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [293 kB]
+#8 3.490 Fetched 9245 kB in 3s (2739 kB/s)
+#8 3.490 Reading package lists...
+#8 3.720 Reading package lists...
+#8 3.943 Building dependency tree...
+#8 3.996 Reading state information...
+#8 4.068 git is already the newest version (1:2.39.5-0+deb12u3).
+#8 4.068 ca-certificates is already the newest version (20230311+deb12u1).
+#8 4.068 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#8 DONE 4.1s
+
+#9 [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+#9 0.100 Cloning into 'MadChess'...
+#9 0.338 fatal: could not read Username for 'https://github.com': No such device or address
+#9 ERROR: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+------
+ > [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git:
+0.100 Cloning into 'MadChess'...
+0.338 fatal: could not read Username for 'https://github.com': No such device or address
+------
+Dockerfile:13
+--------------------
+  11 |     # NOTE: MadChess git tags don't follow a "v3.2" convention; tracking master
+  12 |     # for now. Pin to a specific commit SHA once we know the build works.
+  13 | >>> RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+  14 |     WORKDIR /src/MadChess
+  15 |     RUN dotnet publish -c Release -o /opt/madchess \
+--------------------
+ERROR: failed to solve: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+FAILED eval2/anchor-madchess32:latest
+skip eval2/anchor-countergo40:latest (exists; pass --rebuild to override)
+build eval2/chess-rust-cc-redo:latest  (src=/Users/mathieuacher/SANDBOX/chess-rust-cc-redo)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 662B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/rust:1.85-bookworm
+#3 DONE 0.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 130.91kB done
+#5 DONE 0.0s
+
+#6 [build 1/4] FROM docker.io/library/rust:1.85-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4
+#6 resolve docker.io/library/rust:1.85-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4 done
+#6 DONE 0.0s
+
+#7 [build 2/4] COPY src/ /opt/engine/
+#7 DONE 0.0s
+
+#8 [build 3/4] WORKDIR /opt/engine
+#8 DONE 0.0s
+
+#9 [stage-1 1/3] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#9 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#9 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d 0.6s done
+#9 DONE 0.6s
+
+#10 [build 4/4] RUN cargo build --release && strip target/release/chess_engine
+#10 0.242    Compiling chess_engine v0.1.0 (/opt/engine)
+#10 0.457 warning: value assigned to `result` is never read
+#10 0.457    --> src/search.rs:152:21
+#10 0.457     |
+#10 0.457 152 |             let mut result: (Option<Move>, i32) = (None, 0);
+#10 0.457     |                     ^^^^^^
+#10 0.457     |
+#10 0.457     = help: maybe it is overwritten before being read?
+#10 0.457     = note: `#[warn(unused_assignments)]` on by default
+#10 0.457 
+#10 ...
+
+#9 [stage-1 1/3] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#9 CACHED
+
+#10 [build 4/4] RUN cargo build --release && strip target/release/chess_engine
+#10 1.227 warning: `chess_engine` (lib) generated 1 warning
+#10 1.325     Finished `release` profile [optimized] target(s) in 1.16s
+#10 DONE 1.3s
+
+#11 [stage-1 2/3] COPY --from=build /opt/engine/target/release/chess_engine /usr/local/bin/engine
+#11 DONE 0.0s
+
+#12 [stage-1 3/3] WORKDIR /opt/engine
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.0s done
+#13 exporting manifest sha256:de6619f1ea19ffb0d262b3632d973ee078163d5a19aba76e26dc033d1796091f done
+#13 exporting config sha256:3f90f35ee2c19c2f9c10b47b19a79f7d41410b5f13d6112a7e50e8205c01a558 done
+#13 exporting attestation manifest sha256:8ed93ee181487b15b3f49359b9e889812b3a619958b27edf84cba67c382d0871
+#13 exporting attestation manifest sha256:8ed93ee181487b15b3f49359b9e889812b3a619958b27edf84cba67c382d0871 done
+#13 exporting manifest list sha256:93b54caf23971ae5984034f15b1c157dc35c32f6d3e4d4f8c962db39602e67c3 done
+#13 naming to docker.io/eval2/chess-rust-cc-redo:latest done
+#13 unpacking to docker.io/eval2/chess-rust-cc-redo:latest done
+#13 DONE 0.1s
+
+Build failures: 1 (see results/build_failures.txt)
+build_images.sh done.

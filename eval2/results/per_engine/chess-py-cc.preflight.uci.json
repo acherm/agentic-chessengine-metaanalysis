@@ -1,0 +1,20 @@
+{
+  "engine": "chess-py-cc",
+  "image": "eval2/chess-py-cc:latest",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.35
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.13
+    }
+  },
+  "total_s": 0.48,
+  "ok": true
+}

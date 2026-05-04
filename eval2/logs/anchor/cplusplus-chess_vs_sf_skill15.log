@@ -1,0 +1,46 @@
+Indexing opening suite...
+Started game 1 of 30 (cplusplus-chess vs sf_skill15)
+Started game 2 of 30 (sf_skill15 vs cplusplus-chess)
+Finished game 2 (sf_skill15 vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (cplusplus-chess vs sf_skill15)
+Finished game 1 (cplusplus-chess vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill15 vs cplusplus-chess)
+Finished game 4 (sf_skill15 vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (cplusplus-chess vs sf_skill15)
+Finished game 3 (cplusplus-chess vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (sf_skill15 vs cplusplus-chess)
+Finished game 5 (cplusplus-chess vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (cplusplus-chess vs sf_skill15)
+Finished game 6 (sf_skill15 vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (sf_skill15 vs cplusplus-chess)
+Finished game 7 (cplusplus-chess vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 7 - 0  [0.000] 7
+Started game 9 of 30 (cplusplus-chess vs sf_skill15)
+Finished game 8 (sf_skill15 vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 8 - 0  [0.000] 8
+Started game 10 of 30 (sf_skill15 vs cplusplus-chess)
+Finished game 9 (cplusplus-chess vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_skill15: 0 - 9 - 0  [0.000] 9
+Finished game 10 (sf_skill15 vs cplusplus-chess): * {No result}
+Score of cplusplus-chess vs sf_skill15: 0 - 9 - 0  [0.000] 9
+...      cplusplus-chess playing White: 0 - 5 - 0  [0.000] 5
+...      cplusplus-chess playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 5 - 0  [0.444] 9
+Elo difference: -inf +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr -3.17 (-107.7%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: cplusplus-chess
+   "Loss: Black wins by adjudication": 5
+   "Loss: White wins by adjudication": 4
+   "No result": 1
+Player: sf_skill15
+   "No result": 1
+   "Win: Black wins by adjudication": 5
+   "Win: White wins by adjudication": 4
+Finished match

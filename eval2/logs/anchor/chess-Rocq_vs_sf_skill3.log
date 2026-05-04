@@ -1,0 +1,38 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-Rocq vs sf_skill3)
+Started game 2 of 20 (sf_skill3 vs chess-Rocq)
+Finished game 1 (chess-Rocq vs sf_skill3): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-Rocq vs sf_skill3: 0 - 0 - 1  [0.500] 1
+Started game 3 of 20 (chess-Rocq vs sf_skill3)
+Finished game 2 (sf_skill3 vs chess-Rocq): 1-0 {White mates}
+Score of chess-Rocq vs sf_skill3: 0 - 1 - 1  [0.250] 2
+Started game 4 of 20 (sf_skill3 vs chess-Rocq)
+Finished game 3 (chess-Rocq vs sf_skill3): 1-0 {White wins by adjudication}
+Score of chess-Rocq vs sf_skill3: 1 - 1 - 1  [0.500] 3
+Started game 5 of 20 (chess-Rocq vs sf_skill3)
+Terminating process of engine chess-Rocq(3)
+Finished game 4 (sf_skill3 vs chess-Rocq): 1-0 {Black's connection stalls}
+Score of chess-Rocq vs sf_skill3: 1 - 2 - 1  [0.375] 4
+Warning: Engine chess-Rocq(0): no response to ping
+Terminating process of engine chess-Rocq(0)
+Finished game 5 (chess-Rocq vs sf_skill3): * {No result}
+Score of chess-Rocq vs sf_skill3: 1 - 2 - 1  [0.375] 4
+...      chess-Rocq playing White: 1 - 0 - 1  [0.750] 2
+...      chess-Rocq playing Black: 0 - 2 - 0  [0.000] 2
+...      White vs Black: 3 - 0 - 1  [0.875] 4
+Elo difference: -88.7 +/- nan, LOS: 28.2 %, DrawRatio: 25.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-Rocq
+   "Draw by 3-fold repetition": 1
+   "Loss: Black's connection stalls": 1
+   "Loss: White mates": 1
+   "No result": 1
+   "Win: White wins by adjudication": 1
+Player: sf_skill3
+   "Draw by 3-fold repetition": 1
+   "Loss: White wins by adjudication": 1
+   "No result": 1
+   "Win: Black's connection stalls": 1
+   "Win: White mates": 1
+Finished match

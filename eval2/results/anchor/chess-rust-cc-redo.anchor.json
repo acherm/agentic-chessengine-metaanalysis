@@ -1,0 +1,38 @@
+{
+  "elo": 2236.6,
+  "ci95": 355.5,
+  "status": "ok",
+  "spread_elo": 0.0,
+  "per_anchor": [
+    {
+      "anchor": "rustic",
+      "elo": 2236.6,
+      "se": 181.4,
+      "score_pct": 0.917,
+      "games": 12
+    }
+  ],
+  "engine": "chess-rust-cc-redo",
+  "raw_pairs": [
+    {
+      "anchor": "rustic",
+      "anchor_elo": 1820,
+      "games": 12,
+      "W/D/L": "11/0/1",
+      "score_pct": 0.917,
+      "elo": 2236.6,
+      "se": 181.4,
+      "bound": null
+    },
+    {
+      "anchor": "asymptote",
+      "anchor_elo": 2150,
+      "games": 9,
+      "W/D/L": "0/0/9",
+      "score_pct": 0.0,
+      "elo": 1768.0,
+      "se": null,
+      "bound": "upper"
+    }
+  ]
+}

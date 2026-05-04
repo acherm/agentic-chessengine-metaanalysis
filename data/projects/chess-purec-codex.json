@@ -1,0 +1,274 @@
+{
+  "name": "chess-purec-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-purec-codex",
+  "primary_language": "C",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1,
+      "JSON": 11,
+      "Shell": 2,
+      "Python": 1,
+      "C": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 113,
+      "JSON": 242,
+      "Shell": 61,
+      "Python": 196,
+      "C": 2483
+    },
+    "total_files": 16,
+    "total_loc": 3095
+  },
+  "features": {
+    "FEN parsing": 2,
+    "UCI protocol": 3,
+    "Perft": 4,
+    "Castling": 12,
+    "Promotion": 1,
+    "Check/Checkmate": 2,
+    "PGN": 14,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 2,
+    "Transposition table": 2,
+    "Zobrist hashing": 2,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 2,
+    "Late-move reduction (LMR)": 9,
+    "Aspiration windows": 2,
+    "Tapered evaluation": 1,
+    "Pawn structure": 1,
+    "Mobility": 1,
+    "Material counting": 3,
+    "Opening book": 2,
+    "Endgame tables": 1,
+    "Time management": 14
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "scripts/perft_check.sh",
+      "src/engine.c"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "scripts/run_match.py",
+      "src/engine.c"
+    ],
+    "Perft": [
+      "Makefile",
+      "README.md",
+      "scripts/perft_check.sh",
+      "src/engine.c"
+    ],
+    "Castling": [
+      "results/bench40-sf1800.pgn",
+      "results/lmrsee-bench40-sf1900.pgn",
+      "results/improved-bench40b-sf1700.pgn",
+      "results/bench-sf1600.pgn",
+      "results/improved-bench60-sf1700.pgn",
+      "results/improved-bench40-sf1800.pgn",
+      "results/lmrsee-bench40-sf1800.pgn",
+      "results/bench60-sf1700.pgn",
+      "results/bench80-sf1600.pgn",
+      "results/lmrsee-bench40b-sf1800.pgn",
+      "results/lmrsee-bench40-sf1700.pgn",
+      "src/engine.c"
+    ],
+    "En passant": [],
+    "Promotion": [
+      "src/engine.c"
+    ],
+    "Check/Checkmate": [
+      "results/bench80-sf1600.pgn",
+      "src/engine.c"
+    ],
+    "PGN": [
+      "README.md",
+      "results/improved-bench40b-sf1700.json",
+      "results/bench60-sf1700.json",
+      "results/lmrsee-bench40-sf1700.json",
+      "results/bench80-sf1600.json",
+      "results/lmrsee-bench40-sf1900.json",
+      "results/bench40-sf1800.json",
+      "results/bench-sf1600.json",
+      "results/lmrsee-bench40b-sf1800.json",
+      "results/improved-bench60-sf1700.json",
+      "results/lmrsee-bench40-sf1800.json",
+      "results/improved-bench40-sf1800.json",
+      "scripts/run_match.py",
+      "scripts/gauntlet_stockfish.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "src/engine.c"
+    ],
+    "Alpha-beta": [
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "src/engine.c"
+    ],
+    "Transposition table": [
+      "README.md",
+      "src/engine.c"
+    ],
+    "Zobrist hashing": [
+      "README.md",
+      "src/engine.c"
+    ],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [
+      "src/engine.c"
+    ],
+    "History heuristic": [
+      "src/engine.c"
+    ],
+    "Principal-variation (PV)": [
+      "README.md"
+    ],
+    "Null-move pruning": [
+      "README.md",
+      "src/engine.c"
+    ],
+    "Late-move reduction (LMR)": [
+      "README.md",
+      "results/lmrsee-bench40-sf1700.json",
+      "results/lmrsee-bench40-sf1900.pgn",
+      "results/lmrsee-bench40-sf1900.json",
+      "results/lmrsee-bench40-sf1800.pgn",
+      "results/lmrsee-bench40b-sf1800.json",
+      "results/lmrsee-bench40-sf1800.json",
+      "results/lmrsee-bench40b-sf1800.pgn",
+      "results/lmrsee-bench40-sf1700.pgn"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "README.md",
+      "src/engine.c"
+    ],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [
+      "README.md"
+    ],
+    "King safety": [],
+    "Pawn structure": [
+      "README.md"
+    ],
+    "Mobility": [
+      "README.md"
+    ],
+    "Material counting": [
+      "results/lmrsee-bench40-sf1900.pgn",
+      "results/improved-bench40b-sf1700.pgn",
+      "src/engine.c"
+    ],
+    "Opening book": [
+      "README.md",
+      "scripts/run_match.py"
+    ],
+    "Endgame tables": [
+      "README.md"
+    ],
+    "Time management": [
+      "README.md",
+      "results/bench40-sf1800.pgn",
+      "results/lmrsee-bench40-sf1900.pgn",
+      "results/improved-bench40b-sf1700.pgn",
+      "results/bench-sf1600.pgn",
+      "results/improved-bench60-sf1700.pgn",
+      "results/improved-bench40-sf1800.pgn",
+      "results/lmrsee-bench40-sf1800.pgn",
+      "results/bench60-sf1700.pgn",
+      "results/bench80-sf1600.pgn",
+      "results/lmrsee-bench40b-sf1800.pgn",
+      "results/lmrsee-bench40-sf1700.pgn",
+      "scripts/run_match.py",
+      "src/engine.c"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 4,
+    "n_assistant_messages": 44,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 85,
+      "write_stdin": 34
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 10971984,
+        "output": 95464,
+        "cache_read": 10580736,
+        "cache_creation": 0,
+        "reasoning_output": 44949
+      },
+      "usd_estimate": 15.99
+    },
+    "first_ts": "2026-02-19T08:41:25.684Z",
+    "last_ts": "2026-02-19T10:08:16.218Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-19T09-41-13-019c750f-7502-7ae0-9933-cfbb2425c0b0",
+        "first_ts": "2026-02-19T08:41:25.684Z",
+        "last_ts": "2026-02-19T10:08:16.218Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 4,
+        "tokens": {
+          "input": 10971984,
+          "output": 95464,
+          "cache_read": 10580736,
+          "reasoning_output": 44949
+        },
+        "tool_uses": {
+          "exec_command": 85,
+          "write_stdin": 34
+        },
+        "first_prompt_sample": "I want to build a chess engine in C programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

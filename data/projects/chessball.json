@@ -1,0 +1,289 @@
+{
+  "name": "chessball",
+  "path": "/Users/mathieuacher/SANDBOX/chessball",
+  "primary_language": "Rust",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 5,
+      "HTML": 8,
+      "CSS": 1,
+      "JavaScript": 1,
+      "TOML": 1,
+      "Text": 21,
+      "Rust": 18,
+      "Python": 9
+    },
+    "loc_by_lang": {
+      "Markdown": 856,
+      "HTML": 6089,
+      "CSS": 611,
+      "JavaScript": 1286,
+      "TOML": 6,
+      "Text": 18588,
+      "Rust": 11272,
+      "Python": 1306
+    },
+    "total_files": 64,
+    "total_loc": 40014
+  },
+  "features": {
+    "Check/Checkmate": 2,
+    "Board: bitboard": 8,
+    "Minimax/Negamax": 5,
+    "Alpha-beta": 2,
+    "Transposition table": 1,
+    "Evaluation/PST": 1,
+    "Mobility": 4,
+    "Material counting": 2,
+    "Endgame tables": 16
+  },
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [
+      "rust_chessball/src/minimax.rs",
+      "python_chessball/minimax.py"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "rust_chessball/src/weak_solve.rs",
+      "rust_chessball/src/solver.rs",
+      "rust_chessball/src/tournament.rs",
+      "rust_chessball/src/arena.rs",
+      "rust_chessball/src/agent.rs",
+      "rust_chessball/src/alphazero.rs",
+      "rust_chessball/src/record.rs",
+      "rust_chessball/src/engine.rs"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "rust_chessball/src/solver.rs",
+      "rust_chessball/src/lib.rs",
+      "rust_chessball/src/minimax.rs",
+      "rust_chessball/src/main.rs",
+      "python_chessball/minimax.py"
+    ],
+    "Alpha-beta": [
+      "rust_chessball/src/lib.rs",
+      "python_chessball/minimax.py"
+    ],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [
+      "CHESSBALL_SOLVER_STATUS.md"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "python_chessball/chessball_win_positions.py"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [
+      "rust_chessball/src/solver.rs",
+      "rust_chessball/src/heuristics.rs",
+      "rust_chessball/src/alphazero.rs",
+      "python_chessball/heuristics.py"
+    ],
+    "Material counting": [
+      "CHESSBALL_RULES_SPEC.md",
+      "python_chessball/heuristics.py"
+    ],
+    "Opening book": [],
+    "Endgame tables": [
+      "README.md",
+      "CHESSBALL_SOLVER_STATUS.md",
+      "rust_chessball/partial_tb/browser.html",
+      "rust_chessball/partial_tb/graph.dot",
+      "rust_chessball/overnight_partial_tb/browser.html",
+      "rust_chessball/overnight_partial_tb/graph.dot",
+      "rust_chessball/partial_tb_proofs/browser.html",
+      "rust_chessball/partial_tb_proofs/graph.dot",
+      "rust_chessball/partial_tb_long/browser.html",
+      "rust_chessball/partial_tb_long/graph.dot",
+      "rust_chessball/overnight_partial_tb_50m/browser.html",
+      "rust_chessball/overnight_partial_tb_1m/browser.html",
+      "rust_chessball/overnight_partial_tb_1m/graph.dot",
+      "rust_chessball/overnight_partial_tb_10m/browser.html",
+      "rust_chessball/src/partial_tablebase.rs",
+      "rust_chessball/src/lib.rs"
+    ],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 3,
+    "n_user_prompts": 88,
+    "n_assistant_messages": 530,
+    "models": [
+      "gpt-5.4"
+    ],
+    "tool_uses": {
+      "exec_command": 856,
+      "write_stdin": 170,
+      "update_plan": 16
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 92126109,
+        "output": 711364,
+        "cache_read": 81020416,
+        "cache_creation": 0,
+        "reasoning_output": 374474
+      },
+      "usd_estimate": 132.4
+    },
+    "first_ts": "2026-03-05T23:46:33.362Z",
+    "last_ts": "2026-04-02T13:01:35.279Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-03-11T12-49-13-019cdcba-c3dc-7d30-8cca-fbe6ae9d6d07",
+        "first_ts": "2026-03-11T11:50:46.292Z",
+        "last_ts": "2026-03-11T23:35:06.525Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 15,
+        "tokens": {
+          "input": 30856282,
+          "output": 144325,
+          "cache_read": 28016896,
+          "reasoning_output": 73429
+        },
+        "tool_uses": {
+          "exec_command": 196,
+          "update_plan": 3,
+          "write_stdin": 105
+        },
+        "first_prompt_sample": "Look at CHESSBALL_RULES_OFFICIAL_SPEC.\nImplement two engines: \n * one following AlphaZero principle (self-play)\n * another more \"classical\"\n"
+      },
+      {
+        "session_id": "rollout-2026-03-06T00-55-15-019cc06d-522c-7a80-b60d-d8469e662f46",
+        "first_ts": "2026-03-05T23:56:11.284Z",
+        "last_ts": "2026-03-06T00:43:26.438Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 3,
+        "tokens": {
+          "input": 1966801,
+          "output": 49600,
+          "cache_read": 1735680,
+          "reasoning_output": 19343
+        },
+        "tool_uses": {
+          "exec_command": 42,
+          "update_plan": 4
+        },
+        "first_prompt_sample": "Considering CHESSBALL_RULES_SPEC.md, can you write a Web app in HTML/CSS/JS that would allow to play games against himself or a random engine\n"
+      },
+      {
+        "session_id": "rollout-2026-03-06T00-45-06-019cc064-069e-7003-ac40-3d42a799d154",
+        "first_ts": "2026-03-05T23:46:33.362Z",
+        "last_ts": "2026-04-02T13:01:35.279Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 70,
+        "tokens": {
+          "input": 59303026,
+          "output": 517439,
+          "cache_read": 51267840,
+          "reasoning_output": 281702
+        },
+        "tool_uses": {
+          "exec_command": 618,
+          "update_plan": 9,
+          "write_stdin": 65
+        },
+        "first_prompt_sample": "Please analyze the repo and the rules of ChessBall as documented and implemented. Make a more formal specification of the rules of ChessBall. Don't search on the Internet, really stick to the content of the repo to infer rules\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "a4e3659|2026-04-02T14:54:16+02:00|Mathieu Acher|Document solver status and add run tooling",
+      "634e4f4|2026-03-11T18:19:06+01:00|Mathieu Acher|Add arena engines and sample arena games",
+      "d20de0a|2026-02-04T15:08:04+01:00|skunne|Use Add trait to replace method is_on_board with option return type",
+      "6318837|2026-02-04T14:35:50+01:00|skunne|Add trait Copy to Coord and add struct CoordDelta: remove hundreds of .clone() and more cleanly handle addition of coordinates",
+      "52200be|2026-01-24T16:43:42+01:00|skunne|Rules of ChessBall",
+      "07b8643|2026-01-24T16:42:57+01:00|skunne|Add Coord struct to replace (usize, usize) throughout; Better structure for MoveInfo; Fix bug with generating PushBall moves; fix rules of the game (size of board, number of pieces); Add rule that an Attacker cannot jump over a Defender that just tackled it, and that a Defender cannot tackle a Defender that just tackled it",
+      "95c7c3f|2026-01-22T19:11:50+01:00|skunne|First draft of report",
+      "0f0d941|2026-01-22T19:08:52+01:00|skunne|Attempt to fix bug in gen_ball_push_move_for",
+      "2fe8e46|2026-01-22T18:59:08+01:00|skunne|Refactor possible_moves into subfuctions possible_simple_move_for, possible_push_move_for, etc",
+      "36b0791|2026-01-22T18:38:37+01:00|skunne|cargo clippy",
+      "e85efb1|2026-01-22T18:14:51+01:00|skunne|tests possible moves push move",
+      "3940511|2026-01-22T18:10:34+01:00|skunne|First draft of report on solving ChessBall",
+      "71bcfeb|2025-12-12T14:06:43+01:00|skunne|Add command to make AI play for several turns.",
+      "0029dfb|2025-11-28T11:07:52+01:00|skunne|Improved CLI; fix small bug with disappearing Defender during tackle move",
+      "f240358|2025-11-28T10:48:23+01:00|skunne|Add doc and tests",
+      "0c11546|2025-11-28T10:16:00+01:00|skunne|better tests and place_ball",
+      "16f1750|2025-11-27T18:14:50+01:00|skunne|Translation from python into rust by copilot",
+      "dc21cb6|2025-11-07T11:05:09+01:00|skunne|Add minimax with optional alphabeta pruning, using heuristics",
+      "bd0fadd|2025-11-07T10:49:07+01:00|skunne|Add heuristics evaluation functions",
+      "765ab2b|2025-11-07T09:58:43+01:00|skunne|add unit tests for ChessBallBoard.from_str and ChessBallBoard.__repr__",
+      "318557e|2025-11-07T09:55:12+01:00|skunne|add ChessBallBoard.from_str method to construct ChessBallBoard object",
+      "d879b74|2025-11-05T17:25:22+01:00|skunne|better printing of tests for moves with print_two_boards",
+      "9b3e21d|2025-11-05T17:17:31+01:00|skunne|add tests for possible_previous_moves",
+      "731f443|2025-11-05T17:16:21+01:00|skunne|add tests for possible_moves",
+      "706d065|2025-11-05T17:12:59+01:00|skunne|add Defender tackle moves",
+      "df47fd0|2025-11-05T17:07:56+01:00|skunne|add Attacker jump moves",
+      "2c1208c|2025-11-05T17:06:21+01:00|skunne|add main function to chessball_win_positions to count unblockable win positions",
+      "5d0b418|2025-11-05T16:58:09+01:00|skunne|blocking moves",
+      "8b7e5b3|2025-11-05T16:51:33+01:00|skunne|generate unavoidable win positions",
+      "c260929|2025-11-05T16:49:53+01:00|skunne|more efficient checking that winning position is really reachable by ball push",
+      "3373ba7|2025-11-05T16:48:07+01:00|skunne|is_win_avoidable_by_opponent: checks whether the opponent could always have blocked this win, or if some previous position made the win inevitable",
+      "4f2e016|2025-11-05T16:46:04+01:00|skunne|winning moves",
+      "956dfa2|2025-11-05T16:44:17+01:00|skunne|is position reachable by ball push",
+      "368c76f|2025-11-05T16:43:10+01:00|skunne|use lazy generators instead of lists",
+      "715405f|2025-11-05T16:41:52+01:00|skunne|generate_white_win_positions",
+      "0ca239c|2025-11-05T16:39:47+01:00|skunne|forbid moves that push the ball onto the sides",
+      "10a830b|2025-11-05T16:38:08+01:00|skunne|ChessBallBoard class",
+      "0405c3d|2025-11-05T16:28:12+01:00|skunne|Initial commit"
+    ],
+    "n_commits": 38,
+    "authors": [
+      "36\tskunne <stephan.kunne@gmail.com>",
+      "     2\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-assembly-codex"]
+[Black "chess-latex-codex-replication"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppp1p/6p1/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-latex-codex-replication"]
+[Black "chess-assembly-codex"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppp1p/6p1/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+{White makes an illegal move: 0000} 0-1
+

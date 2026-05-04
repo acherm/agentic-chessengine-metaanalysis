@@ -1,0 +1,38 @@
+Indexing opening suite...
+Started game 1 of 6 (chess-cplusplus-claude vs rustic)
+Finished game 1 (chess-cplusplus-claude vs rustic): 1/2-1/2 {Draw by adjudication}
+Score of chess-cplusplus-claude vs rustic: 0 - 0 - 1  [0.500] 1
+Started game 2 of 6 (rustic vs chess-cplusplus-claude)
+Finished game 2 (rustic vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 0 - 1 - 1  [0.250] 2
+Started game 3 of 6 (chess-cplusplus-claude vs rustic)
+Finished game 3 (chess-cplusplus-claude vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 0 - 2 - 1  [0.167] 3
+Started game 4 of 6 (rustic vs chess-cplusplus-claude)
+Finished game 4 (rustic vs chess-cplusplus-claude): 1-0 {White mates}
+Score of chess-cplusplus-claude vs rustic: 0 - 3 - 1  [0.125] 4
+Started game 5 of 6 (chess-cplusplus-claude vs rustic)
+Finished game 5 (chess-cplusplus-claude vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 0 - 4 - 1  [0.100] 5
+Started game 6 of 6 (rustic vs chess-cplusplus-claude)
+Finished game 6 (rustic vs chess-cplusplus-claude): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 1 - 4 - 1  [0.250] 6
+...      chess-cplusplus-claude playing White: 0 - 2 - 1  [0.167] 3
+...      chess-cplusplus-claude playing Black: 1 - 2 - 0  [0.333] 3
+...      White vs Black: 2 - 3 - 1  [0.417] 6
+Elo difference: -190.8 +/- nan, LOS: 9.0 %, DrawRatio: 16.7 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-cplusplus-claude
+   "Draw by adjudication": 1
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 1
+   "Win: Black wins by adjudication": 1
+Player: rustic
+   "Draw by adjudication": 1
+   "Loss: Black wins by adjudication": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 1
+Finished match

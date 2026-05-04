@@ -1,0 +1,39 @@
+{
+  "engine": "chess-latex-codex-replication",
+  "native": null,
+  "external": {
+    "mode": "external",
+    "n_tested": 30,
+    "illegal_count": 30,
+    "timeout_count": 0,
+    "illegal_examples": [
+      {
+        "fen": "r1bqkb1r/p1pp1p2/np1n4/4p1pp/P4P1P/1PP5/3PP1P1/RNBQKBNR b KQkq - 0 9",
+        "bestmove": "0000",
+        "reason": "not in legal_moves"
+      },
+      {
+        "fen": "rnb1k1nr/3p1p1p/p1pbp1q1/6p1/RPQP2P1/2P1PN2/4BP1P/1NB1K2R b Kkq - 0 15",
+        "bestmove": "0000",
+        "reason": "not in legal_moves"
+      },
+      {
+        "fen": "rnb2br1/1ppk1ppp/p2pp3/8/1P1PP1n1/P1B3P1/2P1QP1q/RN2KBNR w KQ - 1 10",
+        "bestmove": "0000",
+        "reason": "not in legal_moves"
+      },
+      {
+        "fen": "rnbqkbnr/pppppp1p/6p1/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 1 2",
+        "bestmove": "0000",
+        "reason": "not in legal_moves"
+      },
+      {
+        "fen": "rnb1kbnr/ppppqppp/4p3/8/4N3/2PP4/PP2PPPP/1RBQKBNR b Kkq - 3 5",
+        "bestmove": "0000",
+        "reason": "not in legal_moves"
+      }
+    ],
+    "ok": false
+  },
+  "ok": false
+}

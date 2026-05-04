@@ -1,0 +1,82 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-java vs sf_skill4)
+Started game 2 of 20 (sf_skill4 vs chess-java)
+Finished game 2 (sf_skill4 vs chess-java): 0-1 {Black mates}
+Score of chess-java vs sf_skill4: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-java vs sf_skill4)
+Finished game 1 (chess-java vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_skill4 vs chess-java)
+Finished game 3 (chess-java vs sf_skill4): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-java vs sf_skill4)
+Finished game 4 (sf_skill4 vs chess-java): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf_skill4 vs chess-java)
+Finished game 5 (chess-java vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 3 - 2 - 0  [0.600] 5
+Started game 7 of 20 (chess-java vs sf_skill4)
+Finished game 7 (chess-java vs sf_skill4): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 4 - 2 - 0  [0.667] 6
+Started game 8 of 20 (sf_skill4 vs chess-java)
+Finished game 6 (sf_skill4 vs chess-java): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-java vs sf_skill4: 4 - 2 - 1  [0.643] 7
+Started game 9 of 20 (chess-java vs sf_skill4)
+Finished game 8 (sf_skill4 vs chess-java): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 4 - 3 - 1  [0.563] 8
+Started game 10 of 20 (sf_skill4 vs chess-java)
+Finished game 9 (chess-java vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 4 - 4 - 1  [0.500] 9
+Started game 11 of 20 (chess-java vs sf_skill4)
+Finished game 10 (sf_skill4 vs chess-java): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 4 - 5 - 1  [0.450] 10
+Started game 12 of 20 (sf_skill4 vs chess-java)
+Finished game 11 (chess-java vs sf_skill4): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 5 - 5 - 1  [0.500] 11
+Started game 13 of 20 (chess-java vs sf_skill4)
+Finished game 12 (sf_skill4 vs chess-java): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 5 - 6 - 1  [0.458] 12
+Started game 14 of 20 (sf_skill4 vs chess-java)
+Finished game 13 (chess-java vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 5 - 7 - 1  [0.423] 13
+Started game 15 of 20 (chess-java vs sf_skill4)
+Finished game 14 (sf_skill4 vs chess-java): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 6 - 7 - 1  [0.464] 14
+Started game 16 of 20 (sf_skill4 vs chess-java)
+Finished game 15 (chess-java vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 6 - 8 - 1  [0.433] 15
+Started game 17 of 20 (chess-java vs sf_skill4)
+Finished game 16 (sf_skill4 vs chess-java): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 6 - 9 - 1  [0.406] 16
+Started game 18 of 20 (sf_skill4 vs chess-java)
+Finished game 18 (sf_skill4 vs chess-java): 1-0 {White wins by adjudication}
+Score of chess-java vs sf_skill4: 6 - 10 - 1  [0.382] 17
+Started game 19 of 20 (chess-java vs sf_skill4)
+Finished game 17 (chess-java vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 6 - 11 - 1  [0.361] 18
+Started game 20 of 20 (sf_skill4 vs chess-java)
+Finished game 19 (chess-java vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 6 - 12 - 1  [0.342] 19
+Finished game 20 (sf_skill4 vs chess-java): 0-1 {Black wins by adjudication}
+Score of chess-java vs sf_skill4: 7 - 12 - 1  [0.375] 20
+...      chess-java playing White: 3 - 7 - 0  [0.300] 10
+...      chess-java playing Black: 4 - 5 - 1  [0.450] 10
+...      White vs Black: 8 - 11 - 1  [0.425] 20
+Elo difference: -88.7 +/- 166.9, LOS: 12.6 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-java
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 7
+   "Loss: White wins by adjudication": 5
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White wins by adjudication": 3
+Player: sf_skill4
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White wins by adjudication": 3
+   "Win: Black wins by adjudication": 7
+   "Win: White wins by adjudication": 5
+Finished match

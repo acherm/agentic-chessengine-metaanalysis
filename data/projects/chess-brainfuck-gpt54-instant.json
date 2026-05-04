@@ -1,0 +1,107 @@
+{
+  "name": "chess-brainfuck-gpt54-instant",
+  "path": "/Users/mathieuacher/SANDBOX/chess-brainfuck-gpt54-instant",
+  "primary_language": null,
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 3
+    },
+    "total_files": 1,
+    "total_loc": 3
+  },
+  "features": {},
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "c7b93b9|2026-03-05T20:51:21+01:00|Mathieu Acher|Initial commit"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

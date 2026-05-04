@@ -1,0 +1,14 @@
+{
+  "engine": "chess-css-codex-guided",
+  "image": "host-native",
+  "mode": "host",
+  "stages": {
+    "uciok": {
+      "ok": false,
+      "elapsed_s": 60.05
+    }
+  },
+  "error": "BrokenPipeError(32, 'Broken pipe')",
+  "total_s": 60.05,
+  "ok": false
+}

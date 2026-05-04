@@ -1,0 +1,79 @@
+{
+  "sf_skill0": {
+    "skill_level": 0,
+    "effective_elo": null,
+    "per_anchor": {
+      "rustic": {
+        "games": 30,
+        "score_pct": 0.0,
+        "elo": null,
+        "bound": "upper",
+        "elo_bound": 1229.0
+      },
+      "asymptote": {
+        "games": 29,
+        "score_pct": 0.0,
+        "elo": null,
+        "bound": "upper",
+        "elo_bound": 1565.0
+      }
+    }
+  },
+  "sf_skill5": {
+    "skill_level": 5,
+    "effective_elo": 1658.5,
+    "ci95": 126.3,
+    "per_anchor": {
+      "rustic": {
+        "games": 30,
+        "score_pct": 0.3,
+        "elo": 1672.8,
+        "se": 69.2
+      },
+      "asymptote": {
+        "games": 30,
+        "score_pct": 0.033,
+        "elo": 1565.0,
+        "se": 176.7
+      }
+    }
+  },
+  "sf_skill10": {
+    "skill_level": 10,
+    "effective_elo": 2004.5,
+    "ci95": 111.9,
+    "per_anchor": {
+      "rustic": {
+        "games": 30,
+        "score_pct": 0.833,
+        "elo": 2099.6,
+        "se": 85.1
+      },
+      "asymptote": {
+        "games": 30,
+        "score_pct": 0.217,
+        "elo": 1926.7,
+        "se": 77.0
+      }
+    }
+  },
+  "sf_skill15": {
+    "skill_level": 15,
+    "effective_elo": 2325.3,
+    "ci95": 124.3,
+    "per_anchor": {
+      "rustic": {
+        "games": 30,
+        "score_pct": 0.933,
+        "elo": 2278.5,
+        "se": 127.1
+      },
+      "asymptote": {
+        "games": 30,
+        "score_pct": 0.75,
+        "elo": 2340.8,
+        "se": 73.2
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+Indexing opening suite...
+Started game 2 of 30 (asymptote vs COBOL-chess)
+Started game 1 of 30 (COBOL-chess vs asymptote)
+Finished game 1 (COBOL-chess vs asymptote): 0-1 {Black mates}
+Score of COBOL-chess vs asymptote: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (COBOL-chess vs asymptote)
+Finished game 2 (asymptote vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs asymptote: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (asymptote vs COBOL-chess)
+Warning: Illegal PV move b4b2 from COBOL-chess (0)
+Warning: PV:  b4b2
+Warning: Illegal PV move b4b2 from COBOL-chess (0)
+Warning: PV:  b4b2
+Warning: Illegal PV move b4b2 from COBOL-chess (0)
+Warning: PV:  b4b2
+Warning: Illegal PV move b4b2 from COBOL-chess (0)
+Warning: PV:  b4b2
+Warning: Illegal PV move b4b2 from COBOL-chess (0)
+Warning: PV:  b4b2
+Warning: Illegal PV move b4b2 from COBOL-chess (0)
+Warning: PV:  b4b2
+Warning: Illegal PV move b4b2 from COBOL-chess (0)
+Warning: PV:  b4b2
+Finished game 3 (COBOL-chess vs asymptote): 0-1 {White makes an illegal move: b4b2}
+Score of COBOL-chess vs asymptote: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (COBOL-chess vs asymptote)
+Warning: Illegal PV move d5c4 from COBOL-chess (0)
+Warning: PV:  d5c4
+Warning: Illegal PV move d5c4 from COBOL-chess (0)
+Warning: PV:  d5c4
+Warning: Illegal PV move d5c4 from COBOL-chess (0)
+Warning: PV:  d5c4
+Warning: Illegal PV move d5c4 from COBOL-chess (0)
+Warning: PV:  d5c4
+Warning: Illegal PV move c6e5 from COBOL-chess (0)
+Warning: PV:  c6e5
+Warning: Illegal PV move d5c4 from COBOL-chess (0)
+Warning: PV:  d5c4
+Warning: Illegal PV move d5c4 from COBOL-chess (0)
+Warning: PV:  d5c4
+Finished game 5 (COBOL-chess vs asymptote): 0-1 {White makes an illegal move: d5c4}
+Score of COBOL-chess vs asymptote: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (asymptote vs COBOL-chess)
+Finished game 4 (asymptote vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs asymptote: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (COBOL-chess vs asymptote)
+Warning: Illegal PV move a7a5 from COBOL-chess (3)
+Warning: PV:  a7a5
+Warning: Illegal PV move a7a5 from COBOL-chess (3)
+Warning: PV:  a7a5
+Warning: Illegal PV move a7a5 from COBOL-chess (3)
+Warning: PV:  a7a5
+Warning: Illegal PV move a7a5 from COBOL-chess (3)
+Warning: PV:  a7a5
+Warning: Illegal PV move d7d6 from COBOL-chess (3)
+Warning: PV:  d7d6
+Warning: Illegal PV move d7d6 from COBOL-chess (3)
+Warning: PV:  d7d6
+Finished game 7 (COBOL-chess vs asymptote): 0-1 {White makes an illegal move: d7d6}
+Score of COBOL-chess vs asymptote: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (asymptote vs COBOL-chess)
+Finished game 6 (asymptote vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs asymptote: 0 - 7 - 0  [0.000] 7
+Started game 9 of 30 (COBOL-chess vs asymptote)
+Finished game 8 (asymptote vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs asymptote: 0 - 8 - 0  [0.000] 8
+Started game 10 of 30 (asymptote vs COBOL-chess)
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Finished game 9 (COBOL-chess vs asymptote): 0-1 {White makes an illegal move: e8f8}
+Score of COBOL-chess vs asymptote: 0 - 9 - 0  [0.000] 9
+Finished game 10 (asymptote vs COBOL-chess): * {No result}
+Score of COBOL-chess vs asymptote: 0 - 9 - 0  [0.000] 9
+...      COBOL-chess playing White: 0 - 5 - 0  [0.000] 5
+...      COBOL-chess playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 5 - 0  [0.444] 9
+Elo difference: -inf +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr -3.17 (-107.7%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: COBOL-chess
+   "Loss: Black mates": 1
+   "Loss: White makes an illegal move: b4b2": 1
+   "Loss: White makes an illegal move: d5c4": 1
+   "Loss: White makes an illegal move: d7d6": 1
+   "Loss: White makes an illegal move: e8f8": 1
+   "Loss: White mates": 4
+   "No result": 1
+Player: asymptote
+   "No result": 1
+   "Win: Black mates": 1
+   "Win: White makes an illegal move: b4b2": 1
+   "Win: White makes an illegal move: d5c4": 1
+   "Win: White makes an illegal move: d7d6": 1
+   "Win: White makes an illegal move: e8f8": 1
+   "Win: White mates": 4
+Finished match

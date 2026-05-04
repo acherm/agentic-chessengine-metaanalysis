@@ -1,0 +1,13 @@
+{
+  "engine": "chess-brainfuck-cc",
+  "image": "eval2/chess-brainfuck-cc:latest",
+  "stages": {
+    "uciok": {
+      "ok": false,
+      "elapsed_s": 60.01
+    }
+  },
+  "error": "BrokenPipeError(32, 'Broken pipe')",
+  "total_s": 60.01,
+  "ok": false
+}

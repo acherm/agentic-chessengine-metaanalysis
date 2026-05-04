@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Engine Feature Explorer</title>
+<style>
+/* ── reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #222638;
+  --border: #2e3250;
+  --accent: #5b8af5;
+  --accent2: #7ecfb3;
+  --accent3: #f0a060;
+  --text: #d4d8f0;
+  --text-dim: #7880a8;
+  --text-bright: #eef0ff;
+  --red: #e05f7a;
+  --green: #5ecfaa;
+  --yellow: #f5c842;
+  --heat0: #1a1d27;
+  --heat1: #1a3345;
+  --heat2: #1a4f5e;
+  --heat3: #1b6855;
+  --heat4: #2a8060;
+  --heat5: #3a9e72;
+  --heat6: #5ab88a;
+  --heat7: #7fce9f;
+  --heat8: #a8e0b8;
+  --heat9: #d0f0d0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+}
+a { color: var(--accent); text-decoration: none; }
+
+/* ── layout ── */
+#app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+#header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+#header h1 { font-size: 15px; font-weight: 600; color: var(--text-bright); white-space: nowrap; }
+#header .sub { font-size: 12px; color: var(--text-dim); }
+
+.feature-tabs { display: flex; gap: 4px; }
+.feature-tab {
+  padding: 5px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-dim);
+  border: 1px solid transparent;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.feature-tab:hover { color: var(--text); background: var(--surface2); }
+.feature-tab.active { color: var(--accent); border-color: var(--accent); background: rgba(91,138,245,.12); }
+
+#main { display: flex; flex: 1; overflow: hidden; }
+
+/* ── left panel: engine list ── */
+#panel-left {
+  width: 300px;
+  min-width: 200px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+}
+#panel-left .panel-header {
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sort-engines {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#engine-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px;
+}
+.engine-row {
+  padding: 7px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid transparent;
+  transition: background .12s;
+  margin-bottom: 2px;
+}
+.engine-row:hover { background: var(--surface2); }
+.engine-row.selected { background: rgba(91,138,245,.15); border-color: var(--accent); }
+.engine-row.pinned { border-color: var(--accent2); background: rgba(126,207,179,.08); }
+.engine-row.no-feature { opacity: .45; cursor: default; }
+.engine-row .eng-name { font-weight: 600; font-size: 13px; color: var(--text-bright); }
+.engine-row .eng-meta { font-size: 11px; color: var(--text-dim); display: flex; gap: 8px; align-items: center; }
+.lang-badge {
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.feat-pills { display: flex; flex-wrap: wrap; gap: 2px; }
+.feat-pill {
+  width: 8px; height: 8px;
+  border-radius: 2px;
+}
+.feat-pill.on { background: var(--green); }
+.feat-pill.off { background: var(--border); }
+.feat-count { font-size: 11px; color: var(--text-dim); white-space: nowrap; }
+
+/* ── language search ── */
+#lang-search-wrap {
+  padding: 6px 8px 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+#lang-search {
+  flex: 1;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 11px;
+  padding: 3px 7px;
+  outline: none;
+}
+#lang-search:focus { border-color: var(--accent); }
+#lang-search.invalid { border-color: var(--red); }
+#lang-search-count { font-size: 10px; color: var(--text-dim); white-space: nowrap; }
+.engine-row.lang-match {
+  outline: 2px solid var(--accent3);
+  outline-offset: -1px;
+  background: rgba(240,160,96,.10);
+}
+
+/* ── center panel: code viewer ── */
+#panel-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+.code-panes {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 1px;
+  background: var(--border);
+}
+.code-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  min-width: 0;
+  overflow: hidden;
+}
+.code-pane-header {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  background: var(--surface2);
+}
+.code-pane-header .pane-title { font-weight: 600; color: var(--text-bright); font-size: 13px; }
+.code-pane-header .pane-file { font-size: 11px; color: var(--text-dim); margin-left: auto; }
+.code-pane-header .pane-loc { font-size: 11px; color: var(--text-dim); white-space: nowrap; }
+.btn-pin {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-dim);
+  transition: all .12s;
+  white-space: nowrap;
+}
+.btn-pin:hover { border-color: var(--accent2); color: var(--accent2); }
+.btn-pin.active { border-color: var(--accent2); color: var(--accent2); background: rgba(126,207,179,.1); }
+.btn-close {
+  font-size: 13px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+.btn-close:hover { background: rgba(224,95,122,.2); color: var(--red); }
+.subfeature-bar {
+  padding: 5px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex-shrink: 0;
+  background: var(--surface);
+}
+.sf-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.sf-badge.on { background: rgba(94,207,170,.15); border-color: rgba(94,207,170,.4); color: var(--green); }
+.sf-badge.off { color: var(--text-dim); }
+.code-scroll { flex: 1; overflow: auto; }
+pre.code-block {
+  margin: 0;
+  padding: 12px 14px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 12px;
+  line-height: 1.65;
+  color: #c9d1f5;
+  tab-size: 4;
+  white-space: pre;
+}
+.empty-pane {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  font-size: 13px;
+  flex-direction: column;
+  gap: 8px;
+}
+.empty-pane .hint { font-size: 12px; color: var(--border); }
+
+/* ── right panel: pairwise scores ── */
+#panel-right {
+  width: 320px;
+  min-width: 220px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+}
+#panel-right .panel-header {
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#score-controls {
+  display: flex;
+  gap: 4px;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.score-type-btn {
+  padding: 3px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text-dim);
+  transition: all .12s;
+}
+.score-type-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(91,138,245,.12); }
+#filter-engine {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text);
+  flex: 1;
+  min-width: 80px;
+}
+#filter-engine::placeholder { color: var(--text-dim); }
+#score-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px;
+}
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-bottom: 2px;
+  transition: background .12s;
+}
+.score-row:hover { background: var(--surface2); }
+.score-row.active { background: rgba(91,138,245,.15); border-color: var(--accent); }
+.score-bar-wrap { flex: 1; min-width: 0; }
+.score-label { font-size: 11px; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.score-pair { display: flex; gap: 4px; align-items: center; overflow: hidden; }
+.score-eng { font-size: 11px; font-weight: 600; color: var(--text-bright); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px; }
+.score-sep { color: var(--text-dim); font-size: 11px; flex-shrink: 0; }
+.score-num {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: right;
+}
+.score-bar {
+  height: 3px;
+  border-radius: 2px;
+  margin-top: 3px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.score-bar-fill { height: 100%; border-radius: 2px; transition: width .3s; }
+
+/* ── similarity badge in diff view ── */
+#diff-bar {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--surface2);
+  font-size: 12px;
+  color: var(--text-dim);
+  flex-wrap: wrap;
+}
+.sim-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+}
+.sim-badge .sim-val { font-weight: 700; }
+
+/* ── scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+/* ── tooltip ── */
+#tooltip {
+  position: fixed;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 11px;
+  color: var(--text);
+  pointer-events: none;
+  z-index: 1000;
+  max-width: 200px;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+}
+
+/* ── resize handle ── */
+.resize-handle {
+  width: 4px;
+  background: var(--border);
+  cursor: col-resize;
+  flex-shrink: 0;
+  transition: background .1s;
+}
+.resize-handle:hover { background: var(--accent); }
+
+/* heat color for score */
+.h0 { color: var(--text-dim); }
+.h1 { color: #5e7ab0; }
+.h2 { color: #5e9ab0; }
+.h3 { color: #5eb0a0; }
+.h4 { color: #5ec090; }
+.h5 { color: #7ece80; }
+.h6 { color: #a0d870; }
+.h7 { color: #c8df60; }
+.h8 { color: #f0d040; }
+.h9 { color: #f0a840; }
+.h10 { color: #f06040; }
+.bar0 { background: #5e7ab0; }
+.bar1 { background: #5e9ab0; }
+.bar2 { background: #5eb0a0; }
+.bar3 { background: #5ec090; }
+.bar4 { background: #7ece80; }
+.bar5 { background: #a0d870; }
+.bar6 { background: #c8df60; }
+.bar7 { background: #f0d040; }
+.bar8 { background: #f0a840; }
+.bar9 { background: #f06040; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="header">
+    <h1>♟ Chess Engine Feature Explorer</h1>
+    <span class="sub">Browse &amp; compare LLM-synthesized chess engine implementations</span>
+    <div class="feature-tabs" id="feature-tabs"></div>
+  </div>
+  <div id="main">
+    <!-- LEFT: engine list -->
+    <div id="panel-left">
+      <div class="panel-header">
+        <span>Engines</span>
+        <select id="sort-engines">
+          <option value="feat-desc">Sort: sub-features ↓</option>
+          <option value="feat-asc">Sort: sub-features ↑</option>
+          <option value="avg-feat-desc">Sort: avg feat-J ↓</option>
+          <option value="alpha">Sort: name A–Z</option>
+          <option value="lang">Sort: language</option>
+        </select>
+      </div>
+      <div id="lang-search-wrap">
+        <input id="lang-search" type="text" placeholder="Filter language… (regex)" spellcheck="false">
+        <span id="lang-search-count"></span>
+      </div>
+      <div id="engine-list"></div>
+    </div>
+
+    <!-- CENTER: code viewer -->
+    <div id="panel-center">
+      <div id="diff-bar" style="display:none"></div>
+      <div class="code-panes" id="code-panes">
+        <div class="empty-pane" id="empty-hint">
+          <span>← Select an engine to view its implementation</span>
+          <span class="hint">Click a pairwise score on the right to compare two variants</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: pairwise scores -->
+    <div id="panel-right">
+      <div class="panel-header">
+        <span id="score-header-label">Pairwise Similarity</span>
+        <button id="btn-clear-pair" title="Show all pairs" style="display:none;background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:16px;padding:0 2px;line-height:1">×</button>
+      </div>
+      <div id="score-controls">
+        <button class="score-type-btn active" data-type="feat">Feat-J</button>
+        <button class="score-type-btn" data-type="tok">Tok-J</button>
+        <input id="filter-engine" type="text" placeholder="Filter by engine…">
+      </div>
+      <div id="score-list"></div>
+    </div>
+  </div>
+</div>
+<div id="tooltip"></div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────
+// Loaded from feature_explorer_data.json (same directory)
+let DATA = null;
+
+// ── STATE ─────────────────────────────────────────────────────────────────
+let state = {
+  feature: 'quiescence',
+  pinnedEngine: null,
+  selectedEngine: null,
+  scoreType: 'feat',
+  filterText: '',
+  sortMode: 'feat-desc',
+  activePairKey: null,
+  langPattern: '',
+};
+
+// ── BOOT ──────────────────────────────────────────────────────────────────
+fetch('feature_explorer_data.json')
+  .then(r => r.json())
+  .then(data => { DATA = data; init(); })
+  .catch(() => {
+    document.getElementById('empty-hint').innerHTML =
+      '<span style="color:var(--red)">Could not load feature_explorer_data.json</span>' +
+      '<span class="hint">Serve this file from the reports/features/ directory</span>';
+  });
+
+function init() {
+  buildFeatureTabs();
+  buildEngineList();
+  buildScoreList();
+  document.getElementById('sort-engines').addEventListener('change', e => {
+    state.sortMode = e.target.value;
+    buildEngineList();
+  });
+  document.querySelectorAll('.score-type-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.scoreType = btn.dataset.type;
+      document.querySelectorAll('.score-type-btn').forEach(b => b.classList.toggle('active', b === btn));
+      buildScoreList();
+    });
+  });
+  document.getElementById('filter-engine').addEventListener('input', e => {
+    state.filterText = e.target.value.toLowerCase();
+    buildScoreList();
+  });
+  const langInput = document.getElementById('lang-search');
+  langInput.addEventListener('input', () => {
+    state.langPattern = langInput.value;
+    langInput.classList.toggle('invalid', !isValidRegex(state.langPattern));
+    buildEngineList();
+  });
+
+  document.getElementById('btn-clear-pair').addEventListener('click', () => {
+    state.pinnedEngine = null;
+    state.selectedEngine = null;
+    state.activePairKey = null;
+    buildEngineList();
+    buildScoreList();
+    renderCodePanes();
+  });
+}
+
+// ── FEATURE TABS ──────────────────────────────────────────────────────────
+function buildFeatureTabs() {
+  const container = document.getElementById('feature-tabs');
+  container.innerHTML = '';
+  Object.entries(DATA).forEach(([key, fdata]) => {
+    const tab = document.createElement('button');
+    tab.className = 'feature-tab' + (key === state.feature ? ' active' : '');
+    tab.textContent = fdata.label;
+    tab.addEventListener('click', () => selectFeature(key));
+    container.appendChild(tab);
+  });
+}
+
+function selectFeature(key) {
+  state.feature = key;
+  state.pinnedEngine = null;
+  state.selectedEngine = null;
+  state.activePairKey = null;
+  document.querySelectorAll('.feature-tab').forEach((t, i) => {
+    t.classList.toggle('active', Object.keys(DATA)[i] === key);
+  });
+  buildEngineList();
+  buildScoreList();
+  renderCodePanes();
+}
+
+// ── ENGINE LIST ───────────────────────────────────────────────────────────
+function getFeatureData() { return DATA[state.feature]; }
+
+function sortedEngines() {
+  const fdata = getFeatureData();
+  const sfNames = fdata.subfeature_names;
+  let entries = Object.entries(fdata.engines);
+  // separate yes/no
+  const yes = entries.filter(([,e]) => e.has_feature && e.snippet);
+  const no  = entries.filter(([,e]) => !e.has_feature || !e.snippet);
+
+  const countSF = e => sfNames.filter(sf => e.subfeatures && e.subfeatures[sf]).length;
+
+  switch(state.sortMode) {
+    case 'feat-desc': yes.sort((a,b) => countSF(b[1]) - countSF(a[1])); break;
+    case 'feat-asc':  yes.sort((a,b) => countSF(a[1]) - countSF(b[1])); break;
+    case 'avg-feat-desc': yes.sort((a,b) => (b[1].avg_feat_j||0) - (a[1].avg_feat_j||0)); break;
+    case 'alpha': yes.sort((a,b) => a[0].localeCompare(b[0])); break;
+    case 'lang':  yes.sort((a,b) => (a[1].language||'').localeCompare(b[1].language||'')); break;
+  }
+  return [...yes, ...no];
+}
+
+function buildEngineList() {
+  const container = document.getElementById('engine-list');
+  container.innerHTML = '';
+  const fdata = getFeatureData();
+  const sfNames = fdata.subfeature_names;
+  const pat = state.langPattern;
+  let matchCount = 0;
+
+  sortedEngines().forEach(([name, eng]) => {
+    const hasSnippet = eng.has_feature && eng.snippet;
+    const isLangMatch = pat && isValidRegex(pat) && langMatches(eng.language, pat);
+    if (isLangMatch) matchCount++;
+    const row = document.createElement('div');
+    row.className = 'engine-row' +
+      (name === state.pinnedEngine ? ' selected' : '') +
+      (!hasSnippet ? ' no-feature' : '') +
+      (isLangMatch ? ' lang-match' : '');
+
+    const sfCount = sfNames.filter(sf => eng.subfeatures && eng.subfeatures[sf]).length;
+    const sfTotal = sfNames.length;
+
+    // Pills
+    const pills = sfNames.map(sf =>
+      `<span class="feat-pill ${(eng.subfeatures && eng.subfeatures[sf]) ? 'on' : 'off'}"
+        title="${sf}"></span>`
+    ).join('');
+
+    row.innerHTML = `
+      <div style="display:flex;align-items:center;gap:6px">
+        <span class="eng-name">${escHtml(name)}</span>
+        <span class="lang-badge" style="${langColor(eng.language)}">${escHtml(eng.language||'?')}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div class="feat-pills">${pills}</div>
+        ${hasSnippet ? `<span class="feat-count">${sfCount}/${sfTotal}</span>
+          <span style="font-size:10px;color:var(--text-dim);margin-left:auto">${(eng.avg_feat_j*100).toFixed(0)}% avg-J</span>` : '<span class="feat-count" style="color:var(--text-dim)">no snippet</span>'}
+      </div>`;
+
+    if (hasSnippet) {
+      row.addEventListener('click', () => selectEngine(name));
+    }
+    container.appendChild(row);
+  });
+
+  const countEl = document.getElementById('lang-search-count');
+  if (pat && isValidRegex(pat) && pat.length > 0) {
+    countEl.textContent = matchCount ? `${matchCount} match${matchCount > 1 ? 'es' : ''}` : 'no match';
+    countEl.style.color = matchCount ? 'var(--accent3)' : 'var(--red)';
+  } else {
+    countEl.textContent = '';
+  }
+}
+
+function selectEngine(name) {
+  if (state.pinnedEngine === name) {
+    state.pinnedEngine = null;
+    state.selectedEngine = null;
+    state.activePairKey = null;
+  } else {
+    state.pinnedEngine = name;
+    state.selectedEngine = null;
+    state.activePairKey = null;
+  }
+  buildEngineList();
+  buildScoreList();
+  renderCodePanes();
+}
+
+
+// ── CODE PANES ────────────────────────────────────────────────────────────
+function renderCodePanes() {
+  const container = document.getElementById('code-panes');
+  const diffBar  = document.getElementById('diff-bar');
+  container.innerHTML = '';
+
+  const fdata = getFeatureData();
+  const sfNames = fdata.subfeature_names;
+
+  const engA = state.pinnedEngine;
+  const engB = state.selectedEngine && state.selectedEngine !== engA
+    ? state.selectedEngine
+    : (state.selectedEngine || null);
+
+  if (!engA && !engB) {
+    container.innerHTML = `<div class="empty-pane" id="empty-hint">
+      <span>← Select an engine to view its implementation</span>
+      <span class="hint">Click a pairwise score on the right to compare two variants</span>
+    </div>`;
+    diffBar.style.display = 'none';
+    return;
+  }
+
+  const show = [engA, engB && engB !== engA ? engB : null].filter(Boolean);
+
+  // diff bar
+  if (show.length === 2) {
+    const key = makePairKey(show[0], show[1]);
+    const fj = (fdata.pairwise_feat[key] ?? fdata.pairwise_feat[makePairKey(show[1],show[0])] ?? null);
+    const tj = (fdata.pairwise_tok[key] ?? fdata.pairwise_tok[makePairKey(show[1],show[0])] ?? null);
+    diffBar.style.display = 'flex';
+    diffBar.innerHTML = `
+      <span>Comparing:</span>
+      <strong style="color:var(--accent2)">${escHtml(show[0])}</strong>
+      <span>vs</span>
+      <strong style="color:var(--accent3)">${escHtml(show[1])}</strong>
+      ${fj !== null ? `<span class="sim-badge" style="border-color:${heatColor(fj/100)}">
+        <span style="color:var(--text-dim)">feat-J</span>
+        <span class="sim-val" style="color:${heatColor(fj/100)}">${fj.toFixed(1)}%</span></span>` : ''}
+      ${tj !== null ? `<span class="sim-badge" style="border-color:${heatColor(tj/100)}">
+        <span style="color:var(--text-dim)">tok-J</span>
+        <span class="sim-val" style="color:${heatColor(tj/100)}">${tj.toFixed(1)}%</span></span>` : ''}`;
+  } else {
+    diffBar.style.display = 'none';
+  }
+
+  show.forEach((engName, idx) => {
+    const eng = fdata.engines[engName];
+    if (!eng) return;
+    const sfCount = sfNames.filter(sf => eng.subfeatures && eng.subfeatures[sf]).length;
+    const color = idx === 0 ? 'var(--accent2)' : 'var(--accent3)';
+
+    const pane = document.createElement('div');
+    pane.className = 'code-pane';
+
+    // Sub-feature badges
+    const sfBadges = sfNames.map(sf => {
+      const on = eng.subfeatures && eng.subfeatures[sf];
+      return `<span class="sf-badge ${on ? 'on' : 'off'}">${sf.replace(/_/g,' ')}</span>`;
+    }).join('');
+
+    pane.innerHTML = `
+      <div class="code-pane-header">
+        <span class="pane-title" style="color:${color}">${escHtml(engName)}</span>
+        <span class="lang-badge" style="${langColor(eng.language)}">${escHtml(eng.language||'?')}</span>
+        <span style="font-size:11px;color:var(--text-dim)">${sfCount}/${sfNames.length} features</span>
+        <span class="pane-file" title="${escHtml(eng.file||'')}">${escHtml(trimPath(eng.file||''))}</span>
+        <span class="pane-loc">${eng.loc ? eng.loc+'L' : ''}</span>
+        ${idx > 0 ? `<button class="btn-close" data-eng="${escHtml(engName)}" title="Close">✕</button>` : ''}
+      </div>
+      <div class="subfeature-bar">${sfBadges}</div>
+      <div class="code-scroll">
+        <pre class="code-block">${syntaxHL(eng.snippet || '(no snippet)', eng.language)}</pre>
+      </div>`;
+
+    const closeBtn = pane.querySelector('.btn-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        state.selectedEngine = null;
+        state.activePairKey = null;
+        renderCodePanes();
+        buildEngineList();
+        highlightActivePair();
+      });
+    }
+    container.appendChild(pane);
+  });
+}
+
+// ── SCORE LIST ────────────────────────────────────────────────────────────
+function buildScoreList() {
+  const container = document.getElementById('score-list');
+  container.innerHTML = '';
+  const fdata = getFeatureData();
+  const pairMap = state.scoreType === 'feat' ? fdata.pairwise_feat : fdata.pairwise_tok;
+  const filter = state.filterText;
+
+  // Update header to reflect current filter context
+  const headerLabel = document.getElementById('score-header-label');
+  const clearBtn = document.getElementById('btn-clear-pair');
+  if (state.pinnedEngine) {
+    headerLabel.textContent = 'Pairs: ' + state.pinnedEngine;
+    clearBtn.style.display = '';
+  } else {
+    headerLabel.textContent = 'Pairwise Similarity';
+    clearBtn.style.display = 'none';
+  }
+
+  let pairs = Object.entries(pairMap)
+    .map(([key, val]) => {
+      const [a, b] = key.split('|||');
+      return { key, a, b, val };
+    })
+    .filter(p => {
+      if (filter && !p.a.toLowerCase().includes(filter) && !p.b.toLowerCase().includes(filter)) return false;
+      if (state.pinnedEngine) return p.a === state.pinnedEngine || p.b === state.pinnedEngine;
+      return true;
+    })
+    .sort((x, y) => y.val - x.val);
+
+  pairs.forEach(p => {
+    const row = document.createElement('div');
+    row.className = 'score-row' + (p.key === state.activePairKey || makePairKey(p.b,p.a) === state.activePairKey ? ' active' : '');
+    row.dataset.key = p.key;
+
+    const pct = p.val;
+    const cls = heatClass(pct / 100);
+    const barCls = barClass(pct / 100);
+    const langA = (fdata.engines[p.a] || {}).language || '';
+    const langB = (fdata.engines[p.b] || {}).language || '';
+
+    row.innerHTML = `
+      <div class="score-bar-wrap">
+        <div class="score-pair">
+          <span class="score-eng" title="${escHtml(p.a)}">${escHtml(p.a)}</span>
+          <span style="font-size:9px;padding:1px 4px;border-radius:2px;border:1px solid var(--border);color:var(--text-dim)">${escHtml(langA)}</span>
+          <span class="score-sep">↔</span>
+          <span class="score-eng" title="${escHtml(p.b)}">${escHtml(p.b)}</span>
+          <span style="font-size:9px;padding:1px 4px;border-radius:2px;border:1px solid var(--border);color:var(--text-dim)">${escHtml(langB)}</span>
+        </div>
+        <div class="score-bar"><div class="score-bar-fill ${barCls}" style="width:${pct}%"></div></div>
+      </div>
+      <span class="score-num ${cls}">${pct.toFixed(0)}%</span>`;
+
+    row.addEventListener('click', () => selectPair(p.key, p.a, p.b));
+    container.appendChild(row);
+  });
+
+  if (pairs.length === 0) {
+    container.innerHTML = `<div style="padding:16px;color:var(--text-dim);font-size:12px">No pairs match filter</div>`;
+  }
+}
+
+function selectPair(key, engA, engB) {
+  state.activePairKey = key;
+  if (state.pinnedEngine === engB) {
+    state.selectedEngine = engA;
+  } else {
+    state.pinnedEngine = engA;
+    state.selectedEngine = engB;
+  }
+  buildEngineList();
+  renderCodePanes();
+  highlightActivePair();
+}
+
+function highlightActivePair() {
+  document.querySelectorAll('.score-row').forEach(row => {
+    const key = row.dataset.key;
+    const match = key === state.activePairKey ||
+      makePairKey(...key.split('|||').reverse()) === state.activePairKey;
+    row.classList.toggle('active', match);
+  });
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function isValidRegex(pat) {
+  if (!pat) return true;
+  try { new RegExp(pat, 'i'); return true; } catch(e) { return false; }
+}
+
+function langMatches(lang, pat) {
+  if (!pat) return false;
+  try { return new RegExp(pat, 'i').test(lang || ''); } catch(e) { return false; }
+}
+
+function makePairKey(a, b) {
+  // canonical: alphabetical order
+  return [a, b].sort().join('|||');
+}
+
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function trimPath(p) {
+  const parts = p.split('/');
+  return parts.length > 2 ? '…/' + parts.slice(-2).join('/') : p;
+}
+
+function heatClass(t) { // t 0-1
+  const i = Math.min(10, Math.round(t * 10));
+  return 'h' + i;
+}
+function barClass(t) {
+  const i = Math.min(9, Math.round(t * 9));
+  return 'bar' + i;
+}
+function heatColor(t) {
+  // interpolate green→yellow→red
+  const r = Math.round(t < .5 ? 94 + (t*2)*(240-94) : 240);
+  const g = Math.round(t < .5 ? 207 - (t*2)*(207-168) : 168 - ((t-.5)*2)*(168-96));
+  const b = Math.round(t < .5 ? 170 - (t*2)*170 : 64);
+  return `rgb(${r},${g},${b})`;
+}
+
+const LANG_COLORS = {
+  'C': 'color:#7ecfff;border-color:#3070a0',
+  'C++': 'color:#b090ff;border-color:#6040a0',
+  'Java': 'color:#ffb860;border-color:#a07020',
+  'Python': 'color:#60d080;border-color:#306040',
+  'Rust': 'color:#ff8060;border-color:#a04030',
+  'Ruby': 'color:#ff6080;border-color:#a03050',
+  'OCaml': 'color:#f0a040;border-color:#a06020',
+  'Coq':   'color:#e8902a;border-color:#a06020',
+  'COBOL': 'color:#80c0ff;border-color:#305080',
+  'Lean': 'color:#c0a0ff;border-color:#603090',
+  'APL': 'color:#ff60c0;border-color:#a03080',
+  'Icon': 'color:#60e0d0;border-color:#308070',
+  'Assembly': 'color:#c0c0c0;border-color:#606060',
+  'Mojo': 'color:#ff9040;border-color:#a05020',
+  'CSS':        'color:#60c8f0;border-color:#2080a0',
+  'JavaScript': 'color:#f0d060;border-color:#a08020',
+  'HTML': 'color:#e06060;border-color:#902020',
+  'LaTeX': 'color:#d0c060;border-color:#808020',
+  'SQL': 'color:#60d0e0;border-color:#308090',
+};
+function langColor(lang) {
+  return LANG_COLORS[lang] || 'color:var(--text-dim);border-color:var(--border)';
+}
+
+// ── SYNTAX HIGHLIGHTING ──────────────────────────────────────────────────
+// Takes RAW (unescaped) code, returns HTML-safe highlighted string.
+// Algorithm: collect all regex matches from all rules with positions,
+// sort by (start, rule-priority), skip overlaps, HTML-escape gaps.
+
+function syntaxHL(rawCode, lang) {
+  const L = (lang || '').toLowerCase();
+  if (!rawCode) return escHtml('(no snippet)');
+  const rules =
+    L === 'java'                           ? RULES_JAVA   :
+    L === 'c++'                            ? RULES_CPP    :
+    L === 'c'                              ? RULES_C      :
+    L === 'rust'                           ? RULES_RUST   :
+    L === 'python'                         ? RULES_PYTHON :
+    L === 'ruby'                           ? RULES_RUBY   :
+    L === 'cobol'                          ? RULES_COBOL  :
+    L === 'css'                                                                 ? RULES_CSS    :
+    (L === 'javascript' || L === 'js')                                          ? RULES_JS     :
+    (L === 'ocaml' || L === 'coq' || L.includes('why3') || L.includes('rocq')) ? RULES_OCAML  :
+    L === 'lean'                           ? RULES_LEAN   :
+    L === 'apl'                            ? RULES_APL    :
+    null;
+  return rules ? hlWithRules(rawCode, rules) : escHtml(rawCode);
+}
+
+function hlWithRules(rawCode, rules) {
+  // Collect all non-overlapping matches, earliest & highest-priority first
+  const hits = [];
+  for (let ri = 0; ri < rules.length; ri++) {
+    const src = rules[ri].re.source;
+    const flg = (rules[ri].re.flags || '').replace('g','') + 'g';
+    const re  = new RegExp(src, flg);
+    let m;
+    while ((m = re.exec(rawCode)) !== null) {
+      hits.push({ s: m.index, e: m.index + m[0].length, t: m[0], cls: rules[ri].cls, ri });
+      if (m[0].length === 0) { re.lastIndex++; }
+    }
+  }
+  // Sort: earlier position first; same position → lower ri (higher priority) first
+  hits.sort((a, b) => a.s !== b.s ? a.s - b.s : a.ri - b.ri);
+
+  let html = '';
+  let pos  = 0;
+  for (const h of hits) {
+    if (h.s < pos) continue;          // overlaps previous → skip
+    if (h.s > pos) html += escHtml(rawCode.slice(pos, h.s));
+    html += `<span style="color:${h.cls}">${escHtml(h.t)}</span>`;
+    pos = h.e;
+  }
+  html += escHtml(rawCode.slice(pos));
+  return html;
+}
+
+// ── Rule tables (plain regexes, no wrapping capture groups needed) ──────
+const C_COMMENT  = { re: /\/\/[^\n]*/g,           cls: '#6a7090' };
+const C_MCOMMENT = { re: /\/\*[\s\S]*?\*\//g,     cls: '#6a7090' };
+const C_STRING   = { re: /"(?:[^"\\]|\\.)*"/g,    cls: '#98c379' };
+const C_CHAR     = { re: /'(?:[^'\\]|\\.)*'/g,    cls: '#98c379' };
+const C_NUMBER   = { re: /\b\d+(?:\.\d+)?[uUlLfF]?\b/g, cls: '#d19a66' };
+const C_TYPE     = { re: /\b[A-Z][A-Za-z0-9_]*\b/g,     cls: '#e5c07b' };
+const C_PREPROC  = { re: /^#[^\n]*/gm,            cls: '#c8a040' };
+
+const RULES_C = [
+  C_COMMENT, C_MCOMMENT, C_STRING, C_NUMBER, C_PREPROC,
+  { re: /\b(?:int|long|unsigned|char|float|double|void|bool|return|if|else|for|while|do|switch|case|default|break|continue|static|const|struct|typedef|sizeof|NULL|true|false|inline|restrict|extern|goto)\b/g, cls: '#c678dd' },
+  C_TYPE,
+];
+const RULES_CPP = [
+  C_COMMENT, C_MCOMMENT, C_STRING, C_NUMBER, C_PREPROC,
+  { re: /\b(?:int|long|unsigned|char|float|double|void|bool|auto|return|if|else|for|while|do|switch|case|default|break|continue|static|const|constexpr|struct|class|template|typename|namespace|using|public|private|protected|new|delete|nullptr|true|false|inline|virtual|override|explicit|operator|sizeof|this)\b/g, cls: '#c678dd' },
+  C_TYPE,
+];
+const RULES_JAVA = [
+  C_COMMENT, C_MCOMMENT, C_STRING, C_NUMBER,
+  { re: /\b(?:int|long|boolean|char|float|double|void|byte|short|return|if|else|for|while|do|switch|case|default|break|continue|new|class|interface|extends|implements|public|private|protected|static|final|abstract|null|true|false|instanceof|this|super|import|package|throw|throws|try|catch|finally)\b/g, cls: '#c678dd' },
+  C_TYPE,
+];
+const RULES_RUST = [
+  C_COMMENT, C_MCOMMENT, C_STRING, C_NUMBER,
+  { re: /\b(?:fn|let|mut|const|static|if|else|return|while|loop|for|in|impl|pub|use|mod|struct|enum|match|Some|None|Ok|Err|true|false|break|continue|self|Self|super|as|where|type|trait|dyn|ref|move|async|await|unsafe|extern|crate)\b/g, cls: '#c678dd' },
+  { re: /\b(?:i8|i16|i32|i64|i128|isize|u8|u16|u32|u64|u128|usize|f32|f64|bool|char|str|String|Vec|Box|Option|Result)\b/g, cls: '#e5c07b' },
+  { re: /:[a-z_][a-z0-9_]*/g, cls: '#d19a66' },
+];
+const RULES_PYTHON = [
+  { re: /#[^\n]*/g,                        cls: '#6a7090' },
+  { re: /"""[\s\S]*?"""|'''[\s\S]*?'''/g,  cls: '#6a7090' },
+  { re: /"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'/g, cls: '#98c379' },
+  C_NUMBER,
+  { re: /\b(?:def|class|if|elif|else|return|for|in|while|import|from|True|False|None|not|and|or|self|cls|try|except|finally|with|as|yield|lambda|pass|break|continue|raise|assert|global|nonlocal|del|is)\b/g, cls: '#c678dd' },
+  { re: /\b[A-Z][A-Z0-9_]+\b/g,           cls: '#e5c07b' },
+  { re: /@[a-zA-Z_][a-zA-Z0-9_.]*\b/g,    cls: '#c8a040' },
+  { re: /\b[a-z_]\w*(?=\s*\()/g,          cls: '#61afef' },
+];
+const RULES_RUBY = [
+  { re: /#[^\n]*/g,                        cls: '#6a7090' },
+  { re: /"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'/g, cls: '#98c379' },
+  C_NUMBER,
+  { re: /\b(?:def|end|if|elsif|else|unless|then|return|while|until|for|in|do|begin|class|module|nil|true|false|self|attr_reader|attr_accessor|attr_writer|require|rescue|raise|next|break|yield|when|case|lambda|proc|puts|print)\b/g, cls: '#c678dd' },
+  { re: /:[a-z_]\w*/g,                     cls: '#e5c07b' },
+  { re: /@{1,2}[a-z_]\w*/g,               cls: '#61afef' },
+  { re: /\b[A-Z]\w*\b/g,                  cls: '#e5c07b' },
+];
+const RULES_COBOL = [
+  { re: /\*>[^\n]*/g,                      cls: '#6a7090' },  // >> comment
+  { re: /^[ \t]{0,6}\*[^\n]*/gm,          cls: '#6a7090' },  // col-7 comment
+  { re: /"[^"]*"/g,                        cls: '#98c379' },
+  { re: /\b\d+(?:\.\d+)?\b/g,             cls: '#d19a66' },
+  { re: /\b(?:PERFORM|CALL|IF|ELSE|END-IF|END-PERFORM|MOVE|COMPUTE|GOBACK|STOP RUN|STOP|USING|VARYING|UNTIL|FROM|BY|VALUE|PIC|OCCURS|TIMES|REDEFINES|TO|OF|ADD|SUBTRACT|MULTIPLY|DIVIDE|GIVING|NOT|AND|OR|GREATER|LESS|EQUAL|THAN|INITIALIZE|EVALUATE|WHEN|END-EVALUATE|EXIT|CONTINUE)\b/g, cls: '#c678dd' },
+  { re: /\b(?:WORKING-STORAGE|PROCEDURE|LINKAGE|SECTION|DIVISION|IDENTIFICATION|ENVIRONMENT|DATA|FILE|CONFIGURATION)\b/g, cls: '#c8a040' },
+  { re: /\bS9\([0-9]+\)|PIC\s+[A-Z9()\s]+/g, cls: '#e5c07b' },
+];
+const RULES_OCAML = [
+  { re: /\(\*[\s\S]*?\*\)/g,              cls: '#6a7090' },
+  { re: /"(?:[^"\\]|\\.)*"/g,             cls: '#98c379' },
+  { re: /\b\d+(?:\.\d+)?\b/g,             cls: '#d19a66' },
+  { re: /\b(?:let|rec|in|fun|function|if|then|else|match|with|type|module|open|end|val|begin|when|and|or|not|true|false|ref|mutable|exception|raise|try|for|while|do|done)\b/g, cls: '#c678dd' },
+  { re: /\b(?:Fixpoint|Definition|Theorem|Lemma|Proof|Qed|Inductive|Record|Require|Import|Section|End|Variable|Hypothesis|Notation|Check|Compute)\b/g, cls: '#c8a040' },
+  { re: /\b(?:nat|list|int|bool|string|unit|char|float|option|Some|None|Ok|Error|array)\b/g, cls: '#e5c07b' },
+  { re: /\b[A-Z]\w*\b/g,                  cls: '#e5c07b' },
+];
+const RULES_LEAN = [
+  { re: /--[^\n]*/g,                       cls: '#6a7090' },
+  { re: /-[\s\S]*?-\//g,                   cls: '#6a7090' },
+  { re: /"(?:[^"\\]|\\.)*"/g,             cls: '#98c379' },
+  { re: /\b\d+(?:\.\d+)?\b/g,             cls: '#d19a66' },
+  { re: /\b(?:def|theorem|lemma|let|in|fun|if|then|else|match|with|return|where|do|for|unless|have|show|exact|apply|intro|simp|rfl|by|import|open|namespace|end|structure|inductive|class|instance|deriving|partial|noncomputable|private|protected|public|abbrev)\b/g, cls: '#c678dd' },
+  { re: /\b(?:Nat|Int|Bool|String|List|Option|Array|IO|Float|UInt32|UInt64|Prop|Type|Sort)\b/g, cls: '#e5c07b' },
+  { re: /\b[A-Z]\w*\b/g,                  cls: '#e5c07b' },
+];
+const RULES_CSS = [
+  C_MCOMMENT,
+  { re: /\/\*[^*]*\*+(?:[^/*][^*]*\*+)*\//g, cls: '#6a7090' },
+  { re: /"[^"]*"|'[^']*'/g,                   cls: '#98c379' },
+  { re: /--[\w-]+/g,                           cls: '#e5c07b' },  // custom props
+  { re: /-?\d+(?:\.\d+)?(?:px|em|rem|%|vh|vw|fr|s|ms)?\b/g, cls: '#d19a66' },
+  { re: /:[:\w-]+(?=\s*[{(,])/g,              cls: '#c678dd' },  // pseudo/selectors
+  { re: /\[data-[\w-]+(?:=[^\]]+)?\]/g,       cls: '#61afef' },  // data-* attrs
+  { re: /\b(?:var|calc|if|and|not|or|max|min|clamp)\b/g, cls: '#c8a040' },
+  { re: /#[0-9a-fA-F]{3,8}\b/g,               cls: '#d19a66' },
+];
+const RULES_JS = [
+  C_COMMENT, C_MCOMMENT, C_STRING, C_NUMBER,
+  { re: /\b(?:const|let|var|function|return|if|else|for|while|do|switch|case|break|continue|new|class|extends|import|export|default|async|await|typeof|instanceof|null|undefined|true|false|this|super|throw|try|catch|finally|of|in)\b/g, cls: '#c678dd' },
+  C_TYPE,
+];
+const RULES_APL = [
+  { re: /⍝[^\n]*/g,                        cls: '#6a7090' },
+  { re: /\b\d+(?:\.\d+)?\b/g,             cls: '#d19a66' },
+  { re: /[⍺⍵⍶⍹∇⊢⊣⍳⍴⌽⊖⌿⍀⊃⊆↑↓⍋⍒⌊⌈|×÷+−*⍟○!?~∧∨⊤⊥<≤=≥>≠∊⍷∪∩~]/g, cls: '#c678dd' },
+  { re: /'[^']*'/g,                        cls: '#98c379' },
+  { re: /∇\s*\w+/g,                        cls: '#61afef' },
+];
+</script>
+</body>
+</html>

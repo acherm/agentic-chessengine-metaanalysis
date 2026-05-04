@@ -1,0 +1,7 @@
+spotcheck: chess-rust-cc vs asymptote
+spotcheck: chess-rust-cc vs sf_skill15
+spotcheck: chess-rust-cc-redo vs asymptote
+spotcheck: chess-rust-cc-redo vs sf_skill15
+spotcheck: chess-java-cc vs asymptote
+spotcheck: chess-cplusplus-claude vs asymptote
+spotcheck: chess-cplusplus-claude vs sf_skill15

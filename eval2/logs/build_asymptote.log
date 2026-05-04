@@ -1,0 +1,210 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 825B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.2s
+
+#3 [internal] load metadata for docker.io/library/rust:latest
+#3 DONE 2.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [build 1/6] FROM docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d
+#5 resolve docker.io/library/rust:latest@sha256:e4f09e8fe5a2366e7d3dc35e08bd25821151e3ed8fdbd3a6a16b51555f0c551d done
+#5 DONE 0.0s
+
+#6 [build 2/6] RUN apt-get update && apt-get install -y --no-install-recommends       git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [build 3/6] WORKDIR /src
+#7 CACHED
+
+#8 [build 1/7] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#8 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d 2.4s done
+#8 CACHED
+
+#9 [build 4/6] RUN git clone --depth 1 --branch v0.7 https://github.com/malu/asymptote.git  || git clone --depth 1 https://github.com/malu/asymptote.git
+#9 0.104 Cloning into 'asymptote'...
+#9 0.870 Note: switching to 'fff22e1d05b7b6121c00c6b5fb796747d77966dd'.
+#9 0.870 
+#9 0.870 You are in 'detached HEAD' state. You can look around, make experimental
+#9 0.870 changes and commit them, and you can discard any commits you make in this
+#9 0.870 state without impacting any branches by switching back to a branch.
+#9 0.870 
+#9 0.870 If you want to create a new branch to retain commits you create, you may
+#9 0.870 do so (now or later) by using -c with the switch command. Example:
+#9 0.870 
+#9 0.870   git switch -c <new-branch-name>
+#9 0.870 
+#9 0.870 Or undo this operation with:
+#9 0.870 
+#9 0.870   git switch -
+#9 0.870 
+#9 0.870 Turn off this advice by setting config variable advice.detachedHead to false
+#9 0.870 
+#9 DONE 0.9s
+
+#10 [build 5/6] WORKDIR /src/asymptote
+#10 DONE 0.0s
+
+#11 [build 6/6] RUN cargo build --release && strip target/release/asymptote
+#11 0.096     Updating crates.io index
+#11 1.013  Downloading crates ...
+#11 1.134   Downloaded crossbeam-queue v0.1.2
+#11 1.147   Downloaded nodrop v0.1.13
+#11 1.159   Downloaded arrayvec v0.4.11
+#11 1.162   Downloaded crossbeam v0.7.1
+#11 1.163   Downloaded memoffset v0.2.1
+#11 1.189   Downloaded cfg-if v0.1.7
+#11 1.206   Downloaded crossbeam-utils v0.6.5
+#11 1.209   Downloaded crossbeam-epoch v0.7.1
+#11 1.211   Downloaded scopeguard v0.3.3
+#11 1.243   Downloaded rand_core v0.2.1
+#11 1.244   Downloaded crossbeam-deque v0.7.1
+#11 1.278   Downloaded crossbeam-channel v0.3.8
+#11 1.572   Downloaded smallvec v0.6.9
+#11 1.607   Downloaded lazy_static v1.3.0
+#11 1.642   Downloaded rand v0.5.3
+#11 2.189   Downloaded libc v0.2.60
+#11 2.216    Compiling cfg-if v0.1.7
+#11 2.216    Compiling lazy_static v1.3.0
+#11 2.216    Compiling arrayvec v0.4.11
+#11 2.216    Compiling nodrop v0.1.13
+#11 2.217    Compiling libc v0.2.60
+#11 2.217    Compiling memoffset v0.2.1
+#11 2.217    Compiling scopeguard v0.3.3
+#11 2.218    Compiling smallvec v0.6.9
+#11 2.218    Compiling rand_core v0.2.1
+#11 2.231    Compiling crossbeam-utils v0.6.5
+#11 2.307    Compiling crossbeam-queue v0.1.2
+#11 2.307    Compiling crossbeam-channel v0.3.8
+#11 2.363    Compiling crossbeam-epoch v0.7.1
+#11 2.368    Compiling rand v0.5.3
+#11 2.422    Compiling crossbeam-deque v0.7.1
+#11 2.462    Compiling crossbeam v0.7.1
+#11 2.679    Compiling asymptote v0.7.0 (/src/asymptote)
+#11 2.695 warning: unnecessary trailing semicolon
+#11 2.695    --> src/movegen.rs:429:64
+#11 2.695     |
+#11 2.695 429 |         let us = self.position.us(self.position.white_to_move);;
+#11 2.695     |                                                                ^ help: remove this semicolon
+#11 2.695     |
+#11 2.695     = note: `#[warn(redundant_semicolons)]` (part of `#[warn(unused)]`) on by default
+#11 2.695 
+#11 2.752 warning: unused variable: `pos`
+#11 2.752    --> src/eval.rs:262:23
+#11 2.752     |
+#11 2.752 262 |     fn pst(&mut self, pos: &Position, white: bool) -> EScore {
+#11 2.752     |                       ^^^ help: if this is intentional, prefix it with an underscore: `_pos`
+#11 2.752     |
+#11 2.752     = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+#11 2.752 
+#11 2.792 warning: constant `ALL_SQUARES` is never used
+#11 2.792    --> src/bitboard.rs:293:11
+#11 2.792     |
+#11 2.792 293 | pub const ALL_SQUARES: Bitboard = Bitboard(0xFF_FF_FF_FF_FF_FF_FF_FF);
+#11 2.792     |           ^^^^^^^^^^^
+#11 2.792     |
+#11 2.792     = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+#11 2.792 
+#11 2.792 warning: function `S` should have a snake case name
+#11 2.792   --> src/eval.rs:52:10
+#11 2.792    |
+#11 2.792 52 | const fn S(mg: i16, eg: i16) -> EScore {
+#11 2.792    |          ^ help: convert the identifier to snake case (notice the capitalization): `s`
+#11 2.792    |
+#11 2.792    = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+#11 2.792 
+#11 2.793 warning: creating a shared reference to mutable static
+#11 2.793   --> src/movegen.rs:29:10
+#11 2.793    |
+#11 2.793 29 |         *MAGIC_TABLE.get_unchecked(magic.index(blockers))
+#11 2.793    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ shared reference to mutable static
+#11 2.793    |
+#11 2.793    = note: shared references to mutable statics are dangerous; it's undefined behavior if the static is mutated or if a mutable reference is created for it while the shared reference lives
+#11 2.793    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/static-mut-references.html>
+#11 2.793    = note: `#[warn(static_mut_refs)]` (part of `#[warn(rust_2024_compatibility)]`) on by default
+#11 2.793 
+#11 2.793 warning: creating a shared reference to mutable static
+#11 2.793   --> src/movegen.rs:36:10
+#11 2.793    |
+#11 2.793 36 |         *MAGIC_TABLE.get_unchecked(magic.index(blockers))
+#11 2.793    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ shared reference to mutable static
+#11 2.793    |
+#11 2.793    = note: shared references to mutable statics are dangerous; it's undefined behavior if the static is mutated or if a mutable reference is created for it while the shared reference lives
+#11 2.793    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/static-mut-references.html>
+#11 2.793 
+#11 2.793 warning: this method call resolves to `<&[T; N] as IntoIterator>::into_iter` (due to backwards compatibility), but will resolve to `<[T; N] as IntoIterator>::into_iter` in Rust 2021
+#11 2.793    --> src/movepick.rs:210:30
+#11 2.793     |
+#11 2.793 210 | ...                   .into_iter()
+#11 2.793     |                        ^^^^^^^^^
+#11 2.793     |
+#11 2.793     = warning: this changes meaning in Rust 2021
+#11 2.793     = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2021/IntoIterator-for-arrays.html>
+#11 2.793     = note: `#[warn(array_into_iter)]` (part of `#[warn(rust_2021_compatibility)]`) on by default
+#11 2.793 help: use `.iter()` instead of `.into_iter()` to avoid ambiguity
+#11 2.793     |
+#11 2.793 210 -                             .into_iter()
+#11 2.793 210 +                             .iter()
+#11 2.793     |
+#11 2.793 help: or use `IntoIterator::into_iter(..)` instead of `.into_iter()` to explicitly iterate by value
+#11 2.793     |
+#11 2.793 209 -                         self.killers
+#11 2.793 210 -                             .into_iter()
+#11 2.793 209 +                         IntoIterator::into_iter(self.killers)
+#11 2.793     |
+#11 2.793 
+#11 2.793 warning: hiding a lifetime that's named elsewhere is confusing
+#11 2.793   --> src/search.rs:89:10
+#11 2.793    |
+#11 2.793 87 |         tt: &'a SharedTT<'a>,
+#11 2.793    |              --          -- the lifetime is named here
+#11 2.793    |              |
+#11 2.793    |              the lifetime is named here
+#11 2.793 88 |         repetitions: Repetitions,
+#11 2.793 89 |     ) -> Search {
+#11 2.793    |          ^^^^^^ the same lifetime is hidden here
+#11 2.793    |
+#11 2.793    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+#11 2.793    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+#11 2.793 help: consistently use `'a`
+#11 2.793    |
+#11 2.793 89 |     ) -> Search<'a> {
+#11 2.793    |                ++++
+#11 2.793 
+#11 2.794 warning: hiding a lifetime that's elided elsewhere is confusing
+#11 2.794    --> src/tt.rs:153:18
+#11 2.794     |
+#11 2.794 153 |     pub fn share(&mut self) -> SharedTT {
+#11 2.794     |                  ^^^^^^^^^     ^^^^^^^^ the same lifetime is hidden here
+#11 2.794     |                  |
+#11 2.794     |                  the lifetime is elided here
+#11 2.794     |
+#11 2.794     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+#11 2.794 help: use `'_` for type paths
+#11 2.794     |
+#11 2.794 153 |     pub fn share(&mut self) -> SharedTT<'_> {
+#11 2.794     |                                        ++++
+#11 2.794 
+#11 6.328 warning: `asymptote` (bin "asymptote") generated 9 warnings (run `cargo fix --bin "asymptote" -p asymptote` to apply 4 suggestions)
+#11 6.328     Finished `release` profile [optimized + debuginfo] target(s) in 6.24s
+#11 DONE 6.3s
+
+#12 [stage-1 2/2] COPY --from=build /src/asymptote/target/release/asymptote /usr/local/bin/asymptote
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.0s done
+#13 exporting manifest sha256:53845b4e2f980379a574ecdd0fcb34959b398b7e9d0ccc7ec2d57f8544a077e3 done
+#13 exporting config sha256:cba22eb019ae5465eb0d42961e83f1173998fa9644c306c928d3bf6fc0ac818a done
+#13 exporting attestation manifest sha256:7416d4d8c1b99d3f83c730210f5bdfa081e20f74a34404419449164c18f0b55d done
+#13 exporting manifest list sha256:ec13020de5751ad89c61a4efd3e2e6ebdf7a80b182c33d94eb6f7c2c0f8cf104 done
+#13 naming to docker.io/eval2/anchor-asymptote:latest done
+#13 unpacking to docker.io/eval2/anchor-asymptote:latest done
+#13 DONE 0.0s

@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-Rocq vs chess-py)
+Started game 1 of 2 (chess-py vs chess-Rocq)
+Finished game 1 (chess-py vs chess-Rocq): 1-0 {Black loses on time}
+Score of chess-py vs chess-Rocq: 1 - 0 - 0  [1.000] 1
+Finished game 2 (chess-Rocq vs chess-py): 0-1 {Black mates}
+Score of chess-py vs chess-Rocq: 2 - 0 - 0  [1.000] 2
+...      chess-py playing White: 1 - 0 - 0  [1.000] 1
+...      chess-py playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-py
+   "Win: Black loses on time": 1
+   "Win: Black mates": 1
+Player: chess-Rocq
+   "Loss: Black loses on time": 1
+   "Loss: Black mates": 1
+Finished match

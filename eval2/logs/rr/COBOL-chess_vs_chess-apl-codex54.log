@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (COBOL-chess vs chess-apl-codex54)
+Started game 2 of 2 (chess-apl-codex54 vs COBOL-chess)
+Finished game 2 (chess-apl-codex54 vs COBOL-chess): 0-1 {Black mates}
+Score of COBOL-chess vs chess-apl-codex54: 1 - 0 - 0  [1.000] 1
+Finished game 1 (COBOL-chess vs chess-apl-codex54): 1-0 {White mates}
+Score of COBOL-chess vs chess-apl-codex54: 2 - 0 - 0  [1.000] 2
+...      COBOL-chess playing White: 1 - 0 - 0  [1.000] 1
+...      COBOL-chess playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: COBOL-chess
+   "Win: Black mates": 1
+   "Win: White mates": 1
+Player: chess-apl-codex54
+   "Loss: Black mates": 1
+   "Loss: White mates": 1
+Finished match

@@ -1,0 +1,38 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-revisit-java-toCOBOL-codex"]
+[Black "chess-newlang-codex"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e5 2. d4 exd4 3. exd4 Bb4+ 4. c3 Be7 5. Nf3 Nf6 6. Bd3 O-O 7. O-O Nc6
+8. Bf4 d5 9. Nbd2 Bd6 10. Bxd6 Qxd6 11. h3 Re8 12. Rc1 Ne4 13. Re1 Bf5 14. Nxe4
+dxe4 15. Bc2 exf3 16. Bxf5 Rxe1+ 17. Qxe1 fxg2 18. Kxg2 h6 19. Qe3 Qd5+ 20. Qe4
+Qxa2 21. d5 Na5 22. b4 Nc4 23. Rd1 a5 24. bxa5 Nd6 25. Qd3 Qxa5 26. Bh7+ Kh8
+27. Bf5 Qc5 28. h4 Ra3 29. Rc1 Ra4 30. Kg3 g6 31. Bxg6 fxg6 32. Qxg6 Ne4+
+33. Kg4 Nxf2+ 34. Kf3 Qf8+ 35. Ke2 h5 36. Qxh5+ Kg7 37. Rg1+ Kf6 38. Qg5+ Kf7
+39. Kxf2 Ra2+ 40. Ke3 Qc5+ 41. Kd3 Qb5+ 42. c4 Qb3+ 43. Kd4 Qb2+ 44. Ke4 b6
+45. Qg8+ Ke7 46. Qe6+ Kd8 47. Rg8# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-newlang-codex"]
+[Black "chess-revisit-java-toCOBOL-codex"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nc3 Nc6 3. d4 e6 4. Nf3 d5 5. Bd3 Bd6 6. O-O O-O 7. e4 dxe4 8. Nxe4
+Nxe4 9. Bxe4 Bd7 10. Re1 h6 11. Ne5 Nxe5 12. dxe5 Bxe5 13. Qd3 Bf6 14. Bxb7 Rb8
+15. Be4 Bb5 16. Qg3 Bc4 17. Bxh6 Rxb2 18. Bf4 a6 19. Bxc7 Qd7 20. Rad1 Bd5
+21. c4 Rc8 22. Be5 Bxe5 23. a3 Bxg3 24. hxg3 Qa7 25. cxd5 Qxf2+ 26. Kh2 Ra2
+27. Rf1 Qe3 28. Bf3 Qh6+ 29. Kg1 exd5 30. Bxd5 Qe3+ 31. Kh2 Qxa3 32. Rxf7 Rb8
+33. Rb7+ Kh7 34. g4 Rxb7 35. Be4+ Kh6 36. Bxb7 Qb4 37. Bf3 Qf4+ 38. Kg1 Ra5
+39. Rf1 Qe3+ 40. Kh2 Ra2 41. Kg3 Qe5+ 42. Kh3 Rd2 43. Rc1 a5 44. Rc8 Kg5 45. Rf8
+g6 46. Ra8 a4 47. Rc8 a3 48. Ra8 a2 49. Ra5 Qxa5 50. Be2 0-1
+

@@ -1,0 +1,13 @@
+{
+  "engine": "chess-css-codex",
+  "image": "eval2/chess-css-codex:latest",
+  "stages": {
+    "uciok": {
+      "ok": false,
+      "elapsed_s": 60.02
+    }
+  },
+  "error": "BrokenPipeError(32, 'Broken pipe')",
+  "total_s": 60.02,
+  "ok": false
+}

@@ -1,0 +1,152 @@
+Indexing opening suite...
+Started game 1 of 30 (COBOL-chess vs sf_skill5)
+Started game 2 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 2 (sf_skill5 vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs sf_skill5: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (COBOL-chess vs sf_skill5)
+Finished game 1 (COBOL-chess vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 3 (COBOL-chess vs sf_skill5): 1-0 {White wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 1 - 2 - 0  [0.333] 3
+Started game 5 of 30 (COBOL-chess vs sf_skill5)
+Finished game 4 (sf_skill5 vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs sf_skill5: 1 - 3 - 0  [0.250] 4
+Started game 6 of 30 (sf_skill5 vs COBOL-chess)
+Warning: Illegal PV move e6e5 from COBOL-chess (3)
+Warning: PV:  e6e5
+Warning: Illegal PV move c7c6 from COBOL-chess (3)
+Warning: PV:  c7c6
+Warning: Illegal PV move c7c6 from COBOL-chess (3)
+Warning: PV:  c7c6
+Warning: Illegal PV move c7c6 from COBOL-chess (3)
+Warning: PV:  c7c6
+Warning: Illegal PV move c7c6 from COBOL-chess (3)
+Warning: PV:  c7c6
+Warning: Illegal PV move c7c6 from COBOL-chess (3)
+Warning: PV:  c7c6
+Finished game 5 (COBOL-chess vs sf_skill5): 0-1 {White makes an illegal move: c7c6}
+Score of COBOL-chess vs sf_skill5: 1 - 4 - 0  [0.200] 5
+Started game 7 of 30 (COBOL-chess vs sf_skill5)
+Finished game 6 (sf_skill5 vs COBOL-chess): 0-1 {Black wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 2 - 4 - 0  [0.333] 6
+Started game 8 of 30 (sf_skill5 vs COBOL-chess)
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move g3f4 from COBOL-chess (3)
+Warning: PV:  g3f4
+Warning: Illegal PV move g3f4 from COBOL-chess (3)
+Warning: PV:  g3f4
+Finished game 7 (COBOL-chess vs sf_skill5): 0-1 {White makes an illegal move: g3f4}
+Score of COBOL-chess vs sf_skill5: 2 - 5 - 0  [0.286] 7
+Started game 9 of 30 (COBOL-chess vs sf_skill5)
+Finished game 8 (sf_skill5 vs COBOL-chess): 0-1 {Black wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 3 - 5 - 0  [0.375] 8
+Started game 10 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 9 (COBOL-chess vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 3 - 6 - 0  [0.333] 9
+Started game 11 of 30 (COBOL-chess vs sf_skill5)
+Finished game 11 (COBOL-chess vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of COBOL-chess vs sf_skill5: 3 - 6 - 1  [0.350] 10
+Started game 12 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 10 (sf_skill5 vs COBOL-chess): 1-0 {White wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 3 - 7 - 1  [0.318] 11
+Started game 13 of 30 (COBOL-chess vs sf_skill5)
+Finished game 12 (sf_skill5 vs COBOL-chess): 0-1 {Black wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 4 - 7 - 1  [0.375] 12
+Started game 14 of 30 (sf_skill5 vs COBOL-chess)
+Warning: Illegal PV move c6d4 from COBOL-chess (0)
+Warning: PV:  c6d4
+Warning: Illegal PV move c6e5 from COBOL-chess (0)
+Warning: PV:  c6e5
+Warning: Illegal PV move c6e5 from COBOL-chess (0)
+Warning: PV:  c6e5
+Warning: Illegal PV move c6e5 from COBOL-chess (0)
+Warning: PV:  c6e5
+Warning: Illegal PV move c6e5 from COBOL-chess (0)
+Warning: PV:  c6e5
+Warning: Illegal PV move f7f5 from COBOL-chess (0)
+Warning: PV:  f7f5
+Warning: Illegal PV move f7f5 from COBOL-chess (0)
+Warning: PV:  f7f5
+Finished game 13 (COBOL-chess vs sf_skill5): 0-1 {White makes an illegal move: f7f5}
+Score of COBOL-chess vs sf_skill5: 4 - 8 - 1  [0.346] 13
+Started game 15 of 30 (COBOL-chess vs sf_skill5)
+Finished game 14 (sf_skill5 vs COBOL-chess): 1-0 {White wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 4 - 9 - 1  [0.321] 14
+Started game 16 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 15 (COBOL-chess vs sf_skill5): 1-0 {White mates}
+Score of COBOL-chess vs sf_skill5: 5 - 9 - 1  [0.367] 15
+Started game 17 of 30 (COBOL-chess vs sf_skill5)
+Finished game 16 (sf_skill5 vs COBOL-chess): 1-0 {White wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 5 - 10 - 1  [0.344] 16
+Started game 18 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 17 (COBOL-chess vs sf_skill5): 0-1 {Black mates}
+Score of COBOL-chess vs sf_skill5: 5 - 11 - 1  [0.324] 17
+Started game 19 of 30 (COBOL-chess vs sf_skill5)
+Finished game 18 (sf_skill5 vs COBOL-chess): 1-0 {White wins by adjudication}
+Score of COBOL-chess vs sf_skill5: 5 - 12 - 1  [0.306] 18
+Started game 20 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 19 (COBOL-chess vs sf_skill5): 0-1 {Black mates}
+Score of COBOL-chess vs sf_skill5: 5 - 13 - 1  [0.289] 19
+Started game 21 of 30 (COBOL-chess vs sf_skill5)
+Warning: Illegal PV move g2g4 from COBOL-chess (3)
+Warning: PV:  g2g4
+Warning: Illegal PV move d3e3 from COBOL-chess (3)
+Warning: PV:  d3e3
+Warning: Illegal PV move d3h3 from COBOL-chess (3)
+Warning: PV:  d3h3
+Warning: Illegal PV move d3h3 from COBOL-chess (3)
+Warning: PV:  d3h3
+Warning: Illegal PV move d3h3 from COBOL-chess (3)
+Warning: PV:  d3h3
+Warning: Illegal PV move d3h3 from COBOL-chess (3)
+Warning: PV:  d3h3
+Finished game 20 (sf_skill5 vs COBOL-chess): 1-0 {Black makes an illegal move: d3h3}
+Score of COBOL-chess vs sf_skill5: 5 - 14 - 1  [0.275] 20
+Started game 22 of 30 (sf_skill5 vs COBOL-chess)
+Finished game 21 (COBOL-chess vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of COBOL-chess vs sf_skill5: 5 - 14 - 2  [0.286] 21
+Finished game 22 (sf_skill5 vs COBOL-chess): * {No result}
+Score of COBOL-chess vs sf_skill5: 5 - 14 - 2  [0.286] 21
+...      COBOL-chess playing White: 2 - 7 - 2  [0.273] 11
+...      COBOL-chess playing Black: 3 - 7 - 0  [0.300] 10
+...      White vs Black: 9 - 10 - 2  [0.476] 21
+Elo difference: -159.2 +/- 175.2, LOS: 1.9 %, DrawRatio: 9.5 %
+SPRT: llr -2.98 (-101.3%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: COBOL-chess
+   "Draw by 3-fold repetition": 2
+   "Loss: Black makes an illegal move: d3h3": 1
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 2
+   "Loss: White makes an illegal move: c7c6": 1
+   "Loss: White makes an illegal move: f7f5": 1
+   "Loss: White makes an illegal move: g3f4": 1
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 4
+   "No result": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 1
+Player: sf_skill5
+   "Draw by 3-fold repetition": 2
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 1
+   "No result": 1
+   "Win: Black makes an illegal move: d3h3": 1
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 2
+   "Win: White makes an illegal move: c7c6": 1
+   "Win: White makes an illegal move: f7f5": 1
+   "Win: White makes an illegal move: g3f4": 1
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 4
+Finished match

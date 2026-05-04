@@ -1,0 +1,238 @@
+{
+  "project": "chess-java-cc",
+  "n_write_events": 4,
+  "cumulative": [
+    0,
+    0,
+    0,
+    32,
+    32,
+    32
+  ],
+  "first_appearances": {
+    "FEN parsing": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ition with optional moves | | `position fen <fen> [moves ...]` | Set position from"
+    },
+    "UCI protocol": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ss Engine Specification ## Overview A UCI-compliant chess engine targeting ~1800+"
+    },
+    "Perft": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "gic bitboards) 5. King attacks ### 3.7 Perft The engine includes `perft(depth)` and"
+    },
+    "Castling": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "bit - a8: clear BQ bit On each move: `castlingRights &= CASTLING_MASK[from] & CASTLING"
+    },
+    "En passant": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "4-bit field (WK=1, WQ=2, BK=4, BQ=8) - En passant target square (-1 if none) - Half-move"
+    },
+    "Promotion": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "| | 12-13 | Promotion piece | 0=knight, 1=bishop, 2=rook,"
+    },
+    "Check/Checkmate": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ve and checking if the own king is left in check. - Separate generation for all moves vs"
+    },
+    "Board: bitboard": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ng ~1800+ Elo strength. The engine uses bitboard-based board representation, magic bitbo"
+    },
+    "Board: magic bitboards": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "es bitboard-based board representation, magic bitboards for sliding piece attack generation, n"
+    },
+    "Board: mailbox 8x8": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "itboards**: WHITE=0, BLACK=1, ALL=2 - **Mailbox array** `pieceAt[64]`: piece index at e"
+    },
+    "Minimax/Negamax": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ds for sliding piece attack generation, negamax search with alpha-beta pruning and nume"
+    },
+    "Alpha-beta": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "attack generation, negamax search with alpha-beta pruning and numerous enhancements, and"
+    },
+    "Iterative deepening": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "**Negamax** with alpha-beta pruning - **Iterative deepening** from depth 1 to maxDepth (128) - *"
+    },
+    "Quiescence": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "on for all moves vs. captures-only (for quiescence search). ### 3.2 Attack Tables (Precom"
+    },
+    "Transposition table": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "(for 50-move rule) - Full move number - Zobrist hash key (64-bit, incremental) - Pawn Z"
+    },
+    "Zobrist hashing": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "(for 50-move rule) - Full move number - Zobrist hash key (64-bit, incremental) - Pawn Z"
+    },
+    "Move ordering (MVV-LVA)": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "| | 2 | 1,000,000 + MVV-LVA | Captures (ordered by MVV-LVA) |"
+    },
+    "Killer moves": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "moveIndex) / 2.25)` **Adjustments**: - Killer move: reduction -= 1 - High history score (>"
+    },
+    "History heuristic": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "| 0 - ~1M | Quiet moves (ordered by history heuristic) | ### 6.2 MVV-LVA (Most Valuable Vict"
+    },
+    "Principal-variation (PV)": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ng** from depth 1 to maxDepth (128) - **Principal Variation Search (PVS)** - **Aspiration windows**"
+    },
+    "Null-move pruning": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "## 5.6 Reverse Futility Pruning (Static Null Move Pruning) **Conditions**: non-PV node,"
+    },
+    "Late-move reduction (LMR)": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "depth < alpha`, skip the move ### 5.9 Late Move Reductions (LMR) **Conditions**: move index >"
+    },
+    "Aspiration windows": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "*Principal Variation Search (PVS)** - **Aspiration windows** starting at depth 5 ### 5.2 Iterati"
+    },
+    "Futility pruning": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "he search by one ply). ### 5.6 Reverse Futility Pruning (Static Null Move Pruning) **C"
+    },
+    "Evaluation/PST": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ate, for pawn hash table) - Incremental PST scores: `[mg_score, eg_score]` - Game p"
+    },
+    "Tapered evaluation": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "runing and numerous enhancements, and a tapered evaluation function with PeSTO piece-sq"
+    },
+    "King safety": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "d EG (not tapered separately). ### 8.6 King Safety Only evaluated when the king is on a f"
+    },
+    "Pawn structure": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "upancy, masked with ~ownPieces ### 8.5 Pawn Structure Evaluated via dedicated **pawn hash ta"
+    },
+    "Mobility": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "n a side has 2 or more bishops ### 8.4 Mobility Counts pseudo-legal moves for each pie"
+    },
+    "Material counting": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "ply > 0, depth >= 3, side has non-pawn material **Reduction**: `R = 3 + depth / 6` Ma"
+    },
+    "Opening book": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "MB | | OwnBook | check | true | - | Use opening book | | BookFile | string | book.bin | - |"
+    },
+    "Time management": {
+      "step": 4,
+      "ts": "2026-03-10T20:16:41.906Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-java-cc/SPECIFICATION.md",
+      "kind": "Write",
+      "snippet": "d it's a knight or bishop) --- ## 11. Time Management ### Formula ``` if movesToGo == 0: mov"
+    }
+  }
+}

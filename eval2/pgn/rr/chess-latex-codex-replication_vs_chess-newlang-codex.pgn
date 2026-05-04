@@ -1,0 +1,24 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-latex-codex-replication"]
+[Black "chess-newlang-codex"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+{White makes an illegal move: 0000} 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-newlang-codex"]
+[Black "chess-latex-codex-replication"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 1-0
+

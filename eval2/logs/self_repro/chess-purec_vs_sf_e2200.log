@@ -1,0 +1,84 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_e2200 vs chess-purec)
+Started game 1 of 20 (chess-purec vs sf_e2200)
+Finished game 1 (chess-purec vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-purec vs sf_e2200)
+Finished game 2 (sf_e2200 vs chess-purec): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-purec vs sf_e2200: 1 - 0 - 1  [0.750] 2
+Started game 4 of 20 (sf_e2200 vs chess-purec)
+Finished game 3 (chess-purec vs sf_e2200): 1-0 {White mates}
+Score of chess-purec vs sf_e2200: 2 - 0 - 1  [0.833] 3
+Started game 5 of 20 (chess-purec vs sf_e2200)
+Finished game 4 (sf_e2200 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 2 - 1 - 1  [0.625] 4
+Started game 6 of 20 (sf_e2200 vs chess-purec)
+Finished game 6 (sf_e2200 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2200: 3 - 1 - 1  [0.700] 5
+Started game 7 of 20 (chess-purec vs sf_e2200)
+Finished game 5 (chess-purec vs sf_e2200): 1/2-1/2 {Draw by fifty moves rule}
+Score of chess-purec vs sf_e2200: 3 - 1 - 2  [0.667] 6
+Started game 8 of 20 (sf_e2200 vs chess-purec)
+Finished game 7 (chess-purec vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 4 - 1 - 2  [0.714] 7
+Started game 9 of 20 (chess-purec vs sf_e2200)
+Finished game 8 (sf_e2200 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 4 - 2 - 2  [0.625] 8
+Started game 10 of 20 (sf_e2200 vs chess-purec)
+Finished game 9 (chess-purec vs sf_e2200): 1-0 {White mates}
+Score of chess-purec vs sf_e2200: 5 - 2 - 2  [0.667] 9
+Started game 11 of 20 (chess-purec vs sf_e2200)
+Finished game 10 (sf_e2200 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 5 - 3 - 2  [0.600] 10
+Started game 12 of 20 (sf_e2200 vs chess-purec)
+Finished game 11 (chess-purec vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 6 - 3 - 2  [0.636] 11
+Started game 13 of 20 (chess-purec vs sf_e2200)
+Finished game 12 (sf_e2200 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2200: 7 - 3 - 2  [0.667] 12
+Started game 14 of 20 (sf_e2200 vs chess-purec)
+Finished game 13 (chess-purec vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 8 - 3 - 2  [0.692] 13
+Started game 15 of 20 (chess-purec vs sf_e2200)
+Finished game 15 (chess-purec vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 9 - 3 - 2  [0.714] 14
+Started game 16 of 20 (sf_e2200 vs chess-purec)
+Finished game 14 (sf_e2200 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2200: 10 - 3 - 2  [0.733] 15
+Started game 17 of 20 (chess-purec vs sf_e2200)
+Finished game 16 (sf_e2200 vs chess-purec): 1-0 {White mates}
+Score of chess-purec vs sf_e2200: 10 - 4 - 2  [0.688] 16
+Started game 18 of 20 (sf_e2200 vs chess-purec)
+Finished game 17 (chess-purec vs sf_e2200): 1-0 {White mates}
+Score of chess-purec vs sf_e2200: 11 - 4 - 2  [0.706] 17
+Started game 19 of 20 (chess-purec vs sf_e2200)
+Finished game 18 (sf_e2200 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 11 - 5 - 2  [0.667] 18
+Started game 20 of 20 (sf_e2200 vs chess-purec)
+Finished game 19 (chess-purec vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2200: 12 - 5 - 2  [0.684] 19
+Finished game 20 (sf_e2200 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2200: 13 - 5 - 2  [0.700] 20
+...      chess-purec playing White: 9 - 0 - 1  [0.950] 10
+...      chess-purec playing Black: 4 - 5 - 1  [0.450] 10
+...      White vs Black: 14 - 4 - 2  [0.750] 20
+Elo difference: 147.2 +/- 176.0, LOS: 97.0 %, DrawRatio: 10.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-purec
+   "Draw by 3-fold repetition": 1
+   "Draw by fifty moves rule": 1
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 4
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 6
+Player: sf_e2200
+   "Draw by 3-fold repetition": 1
+   "Draw by fifty moves rule": 1
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 6
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 4
+Finished match

@@ -1,0 +1,417 @@
+=== UCI handshake ===
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-purec  -> chess-purec.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-purec-codex  -> chess-purec-codex.preflight.uci.json
+PASS chess-cplusplus-claude  -> chess-cplusplus-claude.preflight.uci.json
+PASS cplusplus-chess  -> cplusplus-chess.preflight.uci.json
+PASS chess-rust-cc  -> chess-rust-cc.preflight.uci.json
+PASS chess-rust-codex  -> chess-rust-codex.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-why3-cc  -> chess-why3-cc.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-java  -> chess-java.preflight.uci.json
+PASS chess-java-cc  -> chess-java-cc.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-py  -> chess-py.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-py-cc  -> chess-py-cc.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-ruby-cc  -> chess-ruby-cc.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-ruby-codex  -> chess-ruby-codex.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-why3  -> chess-why3.preflight.uci.json
+PASS lean-chess  -> lean-chess.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL COBOL-chess  -> COBOL-chess.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-cobol-cc  -> chess-cobol-cc.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-css-codex-guided  -> chess-css-codex-guided.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-css-codex  -> chess-css-codex.preflight.uci.json
+PASS chess-latex-codex-replication  -> chess-latex-codex-replication.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL latex-chess-engine  -> latex-chess-engine.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-sql  -> chess-sql.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-brainfuck  -> chess-brainfuck.preflight.uci.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/uci_handshake.py", line 103, in main
+    out = run(name)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-brainfuck-cc  -> chess-brainfuck-cc.preflight.uci.json
+
+=== Perft (max-depth 3) ===
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-purec  (external)  -> chess-purec.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-purec-codex  (external)  -> chess-purec-codex.preflight.perft.json
+PASS chess-cplusplus-claude  (native)  -> chess-cplusplus-claude.preflight.perft.json
+FAIL cplusplus-chess  (native)  -> cplusplus-chess.preflight.perft.json
+PASS chess-rust-cc  (native)  -> chess-rust-cc.preflight.perft.json
+PASS chess-rust-codex  (external)  -> chess-rust-codex.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-why3-cc  (external)  -> chess-why3-cc.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-java  (external)  -> chess-java.preflight.perft.json
+PASS chess-java-cc  (native)  -> chess-java-cc.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-py  (external)  -> chess-py.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-py-cc  (external)  -> chess-py-cc.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-ruby-cc  (external)  -> chess-ruby-cc.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-ruby-codex  (external)  -> chess-ruby-codex.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-why3  (external)  -> chess-why3.preflight.perft.json
+PASS lean-chess  (external)  -> lean-chess.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL COBOL-chess  (external)  -> COBOL-chess.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-cobol-cc  (external)  -> chess-cobol-cc.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-css-codex-guided  (external)  -> chess-css-codex-guided.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-css-codex  (external)  -> chess-css-codex.preflight.perft.json
+FAIL chess-latex-codex-replication  (external)  -> chess-latex-codex-replication.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL latex-chess-engine  (external)  -> latex-chess-engine.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-sql  (external)  -> chess-sql.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-brainfuck  (external)  -> chess-brainfuck.preflight.perft.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 251, in main
+    native = try_native_perft(name, eng, suite, max_depth=args.max_depth)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/perft_audit.py", line 254, in main
+    external = external_legal_audit(name, eng, n_positions=args.n_legal_positions)
+BrokenPipeError: [Errno 32] Broken pipe
+FAIL chess-brainfuck-cc  (external)  -> chess-brainfuck-cc.preflight.perft.json
+
+=== WAC-20 (2s/move) ===
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-purec  ?% solved -> chess-purec.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-purec-codex  ?% solved -> chess-purec-codex.preflight.tactics.json
+  chess-cplusplus-claude  95.0% solved -> chess-cplusplus-claude.preflight.tactics.json
+  cplusplus-chess  0.0% solved -> cplusplus-chess.preflight.tactics.json
+  chess-rust-cc  100.0% solved -> chess-rust-cc.preflight.tactics.json
+  chess-rust-codex  100.0% solved -> chess-rust-codex.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-why3-cc  ?% solved -> chess-why3-cc.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-java  ?% solved -> chess-java.preflight.tactics.json
+  chess-java-cc  100.0% solved -> chess-java-cc.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-py  ?% solved -> chess-py.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-py-cc  ?% solved -> chess-py-cc.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-ruby-cc  ?% solved -> chess-ruby-cc.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-ruby-codex  ?% solved -> chess-ruby-codex.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-why3  ?% solved -> chess-why3.preflight.tactics.json
+  lean-chess  75.0% solved -> lean-chess.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  COBOL-chess  ?% solved -> COBOL-chess.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-cobol-cc  ?% solved -> chess-cobol-cc.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-css-codex-guided  ?% solved -> chess-css-codex-guided.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-css-codex  ?% solved -> chess-css-codex.preflight.tactics.json
+  chess-latex-codex-replication  0.0% solved -> chess-latex-codex-replication.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  latex-chess-engine  ?% solved -> latex-chess-engine.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-sql  ?% solved -> chess-sql.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-brainfuck  ?% solved -> chess-brainfuck.preflight.tactics.json
+Exception ignored while finalizing file <_io.TextIOWrapper name=4 encoding='UTF-8'>:
+Traceback (most recent call last):
+  File "/Users/mathieuacher/SANDBOX/chess-meta-analysis/eval2/preflight/tactics.py", line 154, in main
+    out = run(name, Path(args.epd), args.movetime_ms, args.limit)
+BrokenPipeError: [Errno 32] Broken pipe
+  chess-brainfuck-cc  ?% solved -> chess-brainfuck-cc.preflight.tactics.json

@@ -1,0 +1,88 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-brainfuck vs sf_skill2)
+Started game 2 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 2 (sf_skill2 vs chess-brainfuck): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 1 (chess-brainfuck vs sf_skill2): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 3 (chess-brainfuck vs sf_skill2): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill2: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 4 (sf_skill2 vs chess-brainfuck): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill2: 2 - 2 - 0  [0.500] 4
+Started game 6 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 5 (chess-brainfuck vs sf_skill2): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 3 - 2 - 0  [0.600] 5
+Started game 7 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 6 (sf_skill2 vs chess-brainfuck): 0-1 {Black wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 4 - 2 - 0  [0.667] 6
+Started game 8 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 8 (sf_skill2 vs chess-brainfuck): 0-1 {Black wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 5 - 2 - 0  [0.714] 7
+Started game 9 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 7 (chess-brainfuck vs sf_skill2): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-brainfuck vs sf_skill2: 5 - 2 - 1  [0.688] 8
+Started game 10 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 10 (sf_skill2 vs chess-brainfuck): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 5 - 3 - 1  [0.611] 9
+Started game 11 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 9 (chess-brainfuck vs sf_skill2): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 6 - 3 - 1  [0.650] 10
+Started game 12 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 11 (chess-brainfuck vs sf_skill2): 0-1 {Black wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 6 - 4 - 1  [0.591] 11
+Started game 13 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 12 (sf_skill2 vs chess-brainfuck): 0-1 {Black mates}
+Score of chess-brainfuck vs sf_skill2: 7 - 4 - 1  [0.625] 12
+Started game 14 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 14 (sf_skill2 vs chess-brainfuck): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill2: 7 - 5 - 1  [0.577] 13
+Started game 15 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 13 (chess-brainfuck vs sf_skill2): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 8 - 5 - 1  [0.607] 14
+Started game 16 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 16 (sf_skill2 vs chess-brainfuck): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill2: 8 - 6 - 1  [0.567] 15
+Started game 17 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 15 (chess-brainfuck vs sf_skill2): 0-1 {Black mates}
+Score of chess-brainfuck vs sf_skill2: 8 - 7 - 1  [0.531] 16
+Started game 18 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 17 (chess-brainfuck vs sf_skill2): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill2: 9 - 7 - 1  [0.559] 17
+Started game 19 of 20 (chess-brainfuck vs sf_skill2)
+Finished game 19 (chess-brainfuck vs sf_skill2): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill2: 10 - 7 - 1  [0.583] 18
+Started game 20 of 20 (sf_skill2 vs chess-brainfuck)
+Finished game 18 (sf_skill2 vs chess-brainfuck): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 10 - 8 - 1  [0.553] 19
+Finished game 20 (sf_skill2 vs chess-brainfuck): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill2: 10 - 9 - 1  [0.525] 20
+...      chess-brainfuck playing White: 7 - 2 - 1  [0.750] 10
+...      chess-brainfuck playing Black: 3 - 7 - 0  [0.300] 10
+...      White vs Black: 14 - 5 - 1  [0.725] 20
+Elo difference: 17.4 +/- 158.6, LOS: 59.1 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-brainfuck
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 4
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 4
+Player: sf_skill2
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 4
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 4
+Finished match

@@ -1,0 +1,9 @@
+depth_diag: chess-rust-cc vs rustic at 120+1, 6 games
+depth_diag: chess-rust-cc-redo vs rustic at 120+1, 6 games
+depth_diag: chess-cplusplus-claude vs rustic at 120+1, 6 games
+depth_diag: cplusplus-chess vs rustic at 120+1, 6 games
+depth_diag: chess-java-cc vs rustic at 120+1, 6 games
+depth_diag: chess-rust-codex vs rustic at 120+1, 6 games
+depth_diag: chess-purec vs rustic at 120+1, 6 games
+depth_diag: chess-py vs rustic at 120+1, 6 games
+depth_diag done. Score with: python3 lib/score_depth_diag.py

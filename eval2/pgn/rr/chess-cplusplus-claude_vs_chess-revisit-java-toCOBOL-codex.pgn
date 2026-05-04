@@ -1,0 +1,43 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-cplusplus-claude"]
+[Black "chess-revisit-java-toCOBOL-codex"]
+[Result "1-0"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 Nc6 2. Nf3 Nf6 3. d4 e5 4. d5 Nd4 5. Nxd4 exd4 6. Qxd4 Bd7 7. Bf4 Nh5
+8. Be3 Nf6 9. O-O-O Be7 10. Be2 O-O 11. Qb4 Ng4 12. Qxb7 Nxe3 13. fxe3 Bg5
+14. Rd3 a5 15. Qb3 a4 16. Qa3 Qf6 17. Bf3 Qh6 18. Ne2 Rfe8 19. Nd4 Rab8 20. Qc3
+Rb7 21. Nc6 Bf6 22. e5 dxe5 23. Be4 Bg4 24. d6 cxd6 25. Rxd6 Rd7 26. Rxd7 Bxd7
+27. Nb4 Bg5 28. Kb1 Bxe3 29. Bxh7+ Kxh7 30. Qd3+ Qg6 31. Qxd7 Qxg2 32. Re1 Rb8
+33. Nc6 Bf2 34. Qxf7 Bxe1 35. Qh5+ Kg8 36. Ne7+ Kf8 37. Ng6+ Kg8 38. Qh8+ Kf7
+39. Nxe5+ Ke6 40. Qxb8 Bf2 41. Qe8+ Kf5 42. Qh5+ g5 43. Qf3+ Qxf3 44. Nxf3 g4
+45. Nd2 Bg1 46. Nf1 Bc5 47. Kc1 Kf4 48. Kd2 Kf3 49. Kd3 Kg2 50. Ng3 Kxh2 51. Ne2
+g3 52. Kc4 Be7 53. Kb5 a3 54. b4 g2 55. c4 Bd6 56. c5 Be5 57. Kc4 Kh3 58. b5 Kg4
+59. b6 Bg3 60. c6 Kf3 61. Ng1+ Kf2 62. Nh3+ Kf3 63. c7 Bxc7 64. bxc7 Kg3
+65. c8=Q Kh2 66. Qg4 g1=Q 67. Nxg1 Kh1 68. Ne2 Kh2 69. Qg1+ Kh3 70. Qg3# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-revisit-java-toCOBOL-codex"]
+[Black "chess-cplusplus-claude"]
+[Result "0-1"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 Nf6 2. Nc3 Bg4 3. Nf3 e6 4. Be3 Be7 5. h3 Bxf3 6. Qxf3 Nbd7 7. Bd3 Qc8
+8. O-O O-O 9. a4 c5 10. Rfe1 cxd4 11. Bxd4 Ne5 12. Qg3 Nh5 13. Qe3 Nc6 14. e5
+dxe5 15. Bxe5 Nf6 16. Bh2 Rd8 17. Rad1 Nb4 18. Be5 Rxd3 19. cxd3 Nc2 20. Qg5
+Nxe1 21. Rxe1 Qd8 22. Rd1 Ne8 23. Qg3 Bf6 24. d4 Qa5 25. Qf3 Qb4 26. Qe2 Rd8
+27. Re1 Bg5 28. Ne4 Be7 29. Nc3 Nf6 30. Qc2 Nd7 31. Bc7 Rc8 32. Be5 Nxe5
+33. dxe5 Bc5 34. Re4 Bd4 35. a5 Qc5 36. Qe2 Bxc3 37. a6 Bd4 38. axb7 Rb8 39. Qd2
+Bxe5 40. Qe3 Qxe3 41. Rxe3 Bxb2 42. Rd3 Kf8 43. Rd7 Be5 44. f4 Bxf4 45. Kf1 Be5
+46. Ke2 Ke8 47. Rd1 Rxb7 48. Rc1 Rc7 49. Rxc7 Bxc7 50. Kd3 Kd7 51. g4 Kd6
+52. Kc3 Kd5 53. h4 Ke4 54. Kc4 Bg3 55. Kb5 Bxh4 56. Ka6 Bf2 57. g5 Kf5 58. Kb5
+e5 59. Kc6 e4 60. g6 Kxg6 61. Kb7 e3 62. Kxa7 e2+ 63. Kb7 e1=Q 64. Ka6 0-1
+

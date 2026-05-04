@@ -1,0 +1,84 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_e1500 vs chess-rust-codex)
+Started game 1 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 1 (chess-rust-codex vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 2 (sf_e1500 vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 2 - 0 - 0  [1.000] 2
+Started game 4 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 3 (chess-rust-codex vs sf_e1500): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 4 (sf_e1500 vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 6 (sf_e1500 vs chess-rust-codex): 0-1 {Black mates}
+Score of chess-rust-codex vs sf_e1500: 4 - 1 - 0  [0.800] 5
+Started game 7 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 5 (chess-rust-codex vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 5 - 1 - 0  [0.833] 6
+Started game 8 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 8 (sf_e1500 vs chess-rust-codex): 0-1 {Black mates}
+Score of chess-rust-codex vs sf_e1500: 6 - 1 - 0  [0.857] 7
+Started game 9 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 7 (chess-rust-codex vs sf_e1500): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-rust-codex vs sf_e1500: 6 - 1 - 1  [0.813] 8
+Started game 10 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 9 (chess-rust-codex vs sf_e1500): 1-0 {White mates}
+Score of chess-rust-codex vs sf_e1500: 7 - 1 - 1  [0.833] 9
+Started game 11 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 10 (sf_e1500 vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 8 - 1 - 1  [0.850] 10
+Started game 12 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 12 (sf_e1500 vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 9 - 1 - 1  [0.864] 11
+Started game 13 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 11 (chess-rust-codex vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 10 - 1 - 1  [0.875] 12
+Started game 14 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 14 (sf_e1500 vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 11 - 1 - 1  [0.885] 13
+Started game 15 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 13 (chess-rust-codex vs sf_e1500): 1-0 {White mates}
+Score of chess-rust-codex vs sf_e1500: 12 - 1 - 1  [0.893] 14
+Started game 16 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 15 (chess-rust-codex vs sf_e1500): 1-0 {White mates}
+Score of chess-rust-codex vs sf_e1500: 13 - 1 - 1  [0.900] 15
+Started game 17 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 16 (sf_e1500 vs chess-rust-codex): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 13 - 2 - 1  [0.844] 16
+Started game 18 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 17 (chess-rust-codex vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 14 - 2 - 1  [0.853] 17
+Started game 19 of 20 (chess-rust-codex vs sf_e1500)
+Finished game 18 (sf_e1500 vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 15 - 2 - 1  [0.861] 18
+Started game 20 of 20 (sf_e1500 vs chess-rust-codex)
+Finished game 19 (chess-rust-codex vs sf_e1500): 1-0 {White mates}
+Score of chess-rust-codex vs sf_e1500: 16 - 2 - 1  [0.868] 19
+Finished game 20 (sf_e1500 vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_e1500: 17 - 2 - 1  [0.875] 20
+...      chess-rust-codex playing White: 8 - 1 - 1  [0.850] 10
+...      chess-rust-codex playing Black: 9 - 1 - 0  [0.900] 10
+...      White vs Black: 9 - 10 - 1  [0.475] 20
+Elo difference: 338.0 +/- nan, LOS: 100.0 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-codex
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 7
+   "Win: White mates": 4
+   "Win: White wins by adjudication": 4
+Player: sf_e1500
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 7
+   "Loss: White mates": 4
+   "Loss: White wins by adjudication": 4
+   "Win: Black wins by adjudication": 1
+   "Win: White wins by adjudication": 1
+Finished match

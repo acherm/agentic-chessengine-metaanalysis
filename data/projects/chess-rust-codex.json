@@ -1,0 +1,262 @@
+{
+  "name": "chess-rust-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-rust-codex",
+  "primary_language": "Rust",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Markdown": 2,
+      "Shell": 2,
+      "Rust": 3
+    },
+    "loc_by_lang": {
+      "TOML": 7,
+      "Markdown": 172,
+      "Shell": 66,
+      "Rust": 1574
+    },
+    "total_files": 8,
+    "total_loc": 1819
+  },
+  "features": {
+    "FEN parsing": 1,
+    "UCI protocol": 5,
+    "Perft": 2,
+    "Castling": 13,
+    "En passant": 1,
+    "Promotion": 1,
+    "Check/Checkmate": 1,
+    "PGN": 4,
+    "Board: bitboard": 2,
+    "Minimax/Negamax": 2,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 2,
+    "Transposition table": 2,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 2,
+    "Late-move reduction (LMR)": 1,
+    "King safety": 1,
+    "Pawn structure": 2,
+    "Mobility": 2,
+    "Material counting": 2,
+    "Opening book": 1,
+    "Time management": 18
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "src/uci.rs"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "scripts/run_vs_stockfish.sh",
+      "reports/elo_assessment_2026-02-17.md",
+      "src/main.rs",
+      "src/uci.rs"
+    ],
+    "Perft": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Castling": [
+      "matches/sf_1800.pgn",
+      "matches/sf_2000_quick_after_v4.pgn",
+      "matches/sf_2000_quick_after_v5.pgn",
+      "matches/sf_1800_quick_after_v2.pgn",
+      "matches/sf_1800_quick_after_v3.pgn",
+      "matches/sf_2000_quick_after_v3.pgn",
+      "matches/sf_1800_quick_after_v1.pgn",
+      "matches/sf_2000_quick_after_v6_10g.pgn",
+      "matches/sf_2000_quick_after_v5_40g.pgn",
+      "matches/sf_1400.pgn",
+      "matches/sf_1600.pgn",
+      "matches/sf_1200.pgn",
+      "src/engine.rs"
+    ],
+    "En passant": [
+      "src/engine.rs"
+    ],
+    "Promotion": [
+      "src/engine.rs"
+    ],
+    "Check/Checkmate": [
+      "src/engine.rs"
+    ],
+    "PGN": [
+      "README.md",
+      "scripts/run_vs_stockfish.sh",
+      "scripts/calibrate_elo.sh",
+      "reports/elo_assessment_2026-02-17.md"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "src/uci.rs",
+      "src/engine.rs"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Alpha-beta": [
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Transposition table": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [
+      "README.md"
+    ],
+    "History heuristic": [
+      "README.md"
+    ],
+    "Principal-variation (PV)": [
+      "README.md"
+    ],
+    "Null-move pruning": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Late-move reduction (LMR)": [
+      "README.md"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [
+      "src/engine.rs"
+    ],
+    "Pawn structure": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Mobility": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Material counting": [
+      "README.md",
+      "src/engine.rs"
+    ],
+    "Opening book": [
+      "src/engine.rs"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "matches/sf_1800.pgn",
+      "matches/sf_2000_quick_after_v4.pgn",
+      "matches/sf_2000_quick_after_v5.pgn",
+      "matches/sf_1800_quick_after_v2.pgn",
+      "matches/sf_1800_quick_after_v3.pgn",
+      "matches/sf_2000_quick_after_v3.pgn",
+      "matches/sf_1800_quick_after_v1.pgn",
+      "matches/sf_2000_quick_after_v6_10g.pgn",
+      "matches/sf_2000_quick_after_v5_40g.pgn",
+      "matches/sf_1400.pgn",
+      "matches/sf_1600.pgn",
+      "matches/sf_1200.pgn",
+      "scripts/run_vs_stockfish.sh",
+      "scripts/calibrate_elo.sh",
+      "reports/elo_assessment_2026-02-17.md",
+      "src/uci.rs",
+      "src/engine.rs"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 3,
+    "n_assistant_messages": 44,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 93,
+      "write_stdin": 36
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 10594824,
+        "output": 79865,
+        "cache_read": 10192128,
+        "cache_creation": 0,
+        "reasoning_output": 34607
+      },
+      "usd_estimate": 15.32
+    },
+    "first_ts": "2026-02-16T21:14:11.158Z",
+    "last_ts": "2026-02-17T07:21:23.292Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-16T22-14-05-019c684d-a831-7fa2-9c38-91a79634bf24",
+        "first_ts": "2026-02-16T21:14:11.158Z",
+        "last_ts": "2026-02-17T07:21:23.292Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 3,
+        "tokens": {
+          "input": 10594824,
+          "output": 79865,
+          "cache_read": 10192128,
+          "reasoning_output": 34607
+        },
+        "tool_uses": {
+          "exec_command": 93,
+          "write_stdin": 36
+        },
+        "first_prompt_sample": "I want to build a chess engine in Rust programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "6ec6f2a|2026-02-17T08:21:07+01:00|Mathieu Acher|feat: add tapered eval and TT aging replacement policy",
+      "d562497|2026-02-17T08:16:19+01:00|Mathieu Acher|feat: strengthen engine and add Elo assessment report"
+    ],
+    "n_commits": 2,
+    "authors": [
+      "2\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

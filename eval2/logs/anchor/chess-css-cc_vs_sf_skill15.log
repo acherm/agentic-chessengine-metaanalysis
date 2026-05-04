@@ -1,0 +1,14 @@
+Indexing opening suite...
+Terminating process of engine chess-css-cc(0)
+Terminating process of engine chess-css-cc(3)
+Finished game 2 (sf_skill15 vs chess-css-cc): * {No result}
+Score of chess-css-cc vs sf_skill15: 0 - 0 - 0  [nan] 0
+Elo difference: nan +/- nan, LOS: nan %, DrawRatio: nan %
+SPRT: llr -5.55e-17 (-0.0%), lbound -2.94, ubound 2.94
+
+Player: chess-css-cc
+   "No result": 1
+Player: sf_skill15
+   "No result": 1
+Warning: Could not initialize player chess-css-cc: 
+Finished match

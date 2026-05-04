@@ -1,0 +1,239 @@
+{
+  "name": "chess-icon-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-icon-codex",
+  "primary_language": "Icon",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1,
+      "JSON": 6,
+      "Text": 6,
+      "Shell": 3,
+      "Python": 5,
+      "Icon": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 131,
+      "JSON": 272,
+      "Text": 19,
+      "Shell": 53,
+      "Python": 1082,
+      "Icon": 1660
+    },
+    "total_files": 22,
+    "total_loc": 3217
+  },
+  "features": {
+    "FEN parsing": 2,
+    "UCI protocol": 6,
+    "Perft": 3,
+    "Castling": 10,
+    "En passant": 1,
+    "Promotion": 2,
+    "Check/Checkmate": 1,
+    "PGN": 3,
+    "Board: 0x88": 1,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 2,
+    "Transposition table": 1,
+    "Move ordering (MVV-LVA)": 1,
+    "Killer moves": 1,
+    "Null-move pruning": 1,
+    "Late-move reduction (LMR)": 1,
+    "Aspiration windows": 1,
+    "Pawn structure": 1,
+    "Material counting": 4,
+    "Time management": 15
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "scripts/perft_check.py",
+      "src/icon_chess.icn"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "scripts/run_matches.py",
+      "scripts/perft_check.py",
+      "scripts/uci_smoke.py",
+      "scripts/quick_elo_skills.py",
+      "src/icon_chess.icn"
+    ],
+    "Perft": [
+      "README.md",
+      "scripts/perft_check.py",
+      "src/icon_chess.icn"
+    ],
+    "Castling": [
+      "README.md",
+      "results/skill_ladder_20260224_174750/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_174750/games_vs_sf_skill_4.pgn",
+      "results/skill_ladder_20260223_224958/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_175045/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_174051/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_175104/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_174931/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_175023/games_vs_sf_skill_0.pgn",
+      "src/icon_chess.icn"
+    ],
+    "En passant": [
+      "README.md"
+    ],
+    "Promotion": [
+      "README.md",
+      "src/icon_chess.icn"
+    ],
+    "Check/Checkmate": [
+      "src/icon_chess.icn"
+    ],
+    "PGN": [
+      "README.md",
+      "scripts/run_matches.py",
+      "scripts/quick_elo_skills.py"
+    ],
+    "Board: 0x88": [
+      "README.md"
+    ],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "src/icon_chess.icn"
+    ],
+    "Transposition table": [
+      "README.md"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [
+      "README.md"
+    ],
+    "Killer moves": [
+      "README.md"
+    ],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [
+      "README.md"
+    ],
+    "Late-move reduction (LMR)": [
+      "README.md"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "README.md"
+    ],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [
+      "src/icon_chess.icn"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "README.md",
+      "results/skill_ladder_20260224_174051/cutechess_vs_sf_skill_0.log",
+      "results/skill_ladder_20260224_174051/games_vs_sf_skill_0.pgn",
+      "src/icon_chess.icn"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "results/skill_ladder_20260224_174750/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_174750/games_vs_sf_skill_4.pgn",
+      "results/skill_ladder_20260223_224958/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_175045/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260223_224435/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_174051/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_174051/games_vs_sf_skill_4.pgn",
+      "results/skill_ladder_20260224_175104/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_174931/games_vs_sf_skill_0.pgn",
+      "results/skill_ladder_20260224_175023/games_vs_sf_skill_0.pgn",
+      "scripts/run_matches.py",
+      "scripts/uci_smoke.py",
+      "scripts/quick_elo_skills.py",
+      "src/icon_chess.icn"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 6,
+    "n_assistant_messages": 36,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 129,
+      "write_stdin": 7
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 13603046,
+        "output": 88489,
+        "cache_read": 12961664,
+        "cache_creation": 0,
+        "reasoning_output": 44536
+      },
+      "usd_estimate": 19.51
+    },
+    "first_ts": "2026-02-23T20:12:51.490Z",
+    "last_ts": "2026-02-24T16:51:57.302Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-23T21-12-06-019c8c21-6c2b-7892-9813-e0bbb1f4db4a",
+        "first_ts": "2026-02-23T20:12:51.490Z",
+        "last_ts": "2026-02-24T16:51:57.302Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 6,
+        "tokens": {
+          "input": 13603046,
+          "output": 88489,
+          "cache_read": 12961664,
+          "reasoning_output": 44536
+        },
+        "tool_uses": {
+          "exec_command": 129,
+          "write_stdin": 7
+        },
+        "first_prompt_sample": "I want to build a chess engine in Icon programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

@@ -1,0 +1,8 @@
+=== chess-assembly-codex re-run Mon Apr 27 21:15:49 CEST 2026 ===
+gauntlet: chess-assembly-codex vs rustic at 120+1
+gauntlet: chess-assembly-codex vs asymptote at 120+1
+gauntlet: chess-assembly-codex vs sf_skill5 at 120+1
+gauntlet: chess-assembly-codex vs sf_skill10 at 120+1
+gauntlet: chess-assembly-codex vs sf_skill15 at 120+1
+anchor gauntlet done. PGNs in pgn/anchor/, logs in logs/anchor/.
+=== ASM DONE Mon Apr 27 22:24:49 CEST 2026 ===

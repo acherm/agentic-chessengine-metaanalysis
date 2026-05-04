@@ -1,0 +1,78 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_skill8 vs chess-rust-cc)
+Started game 1 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 2 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 1 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 0 - 2 - 0  [0.000] 2
+Started game 4 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 3 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 0 - 3 - 0  [0.000] 3
+Started game 5 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 4 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 0 - 4 - 0  [0.000] 4
+Started game 6 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 5 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 0 - 5 - 0  [0.000] 5
+Started game 7 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 6 (sf_skill8 vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 5 - 0  [0.167] 6
+Started game 8 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 7 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 6 - 0  [0.143] 7
+Started game 9 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 8 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 7 - 0  [0.125] 8
+Started game 10 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 9 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 8 - 0  [0.111] 9
+Started game 11 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 10 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 9 - 0  [0.100] 10
+Started game 12 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 11 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 10 - 0  [0.091] 11
+Started game 13 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 12 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 11 - 0  [0.083] 12
+Started game 14 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 13 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 12 - 0  [0.077] 13
+Started game 15 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 14 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 13 - 0  [0.071] 14
+Started game 16 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 15 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 14 - 0  [0.067] 15
+Started game 17 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 16 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 15 - 0  [0.063] 16
+Started game 18 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 17 (chess-rust-cc vs sf_skill8): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 16 - 0  [0.059] 17
+Started game 19 of 20 (chess-rust-cc vs sf_skill8)
+Finished game 18 (sf_skill8 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 1 - 17 - 0  [0.056] 18
+Started game 20 of 20 (sf_skill8 vs chess-rust-cc)
+Finished game 19 (chess-rust-cc vs sf_skill8): 1-0 {White mates}
+Score of chess-rust-cc vs sf_skill8: 2 - 17 - 0  [0.105] 19
+Finished game 20 (sf_skill8 vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_skill8: 3 - 17 - 0  [0.150] 20
+...      chess-rust-cc playing White: 1 - 9 - 0  [0.100] 10
+...      chess-rust-cc playing Black: 2 - 8 - 0  [0.200] 10
+...      White vs Black: 9 - 11 - 0  [0.450] 20
+Elo difference: -301.3 +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-cc
+   "Loss: Black wins by adjudication": 9
+   "Loss: White wins by adjudication": 8
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 1
+Player: sf_skill8
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 1
+   "Win: Black wins by adjudication": 9
+   "Win: White wins by adjudication": 8
+Finished match

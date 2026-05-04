@@ -1,0 +1,12 @@
+========================================================================
+HOTSPOT REPORT  —  Feature: Alpha-beta
+Patterns: alpha[- ]?beta|alphabeta, alpha.beta\|alphabeta\|negamax
+Generated: 2026-04-20T12:03:17.586626+00:00
+Engines with feature: 0 / 1
+========================================================================
+
+[NO]  chess-purec  (C)
+
+========================================================================
+Engines WITHOUT the feature:
+  - chess-purec  (C)

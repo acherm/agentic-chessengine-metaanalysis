@@ -1,0 +1,350 @@
+{
+  "name": "chess-rust-cc-redo",
+  "path": "/Users/mathieuacher/SANDBOX/chess-rust-cc-redo",
+  "primary_language": "Rust",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Python": 1,
+      "Markdown": 1,
+      "Shell": 1,
+      "Rust": 14
+    },
+    "loc_by_lang": {
+      "TOML": 6,
+      "Python": 165,
+      "Markdown": 107,
+      "Shell": 48,
+      "Rust": 3003
+    },
+    "total_files": 18,
+    "total_loc": 3329
+  },
+  "features": {
+    "FEN parsing": 3,
+    "UCI protocol": 5,
+    "Perft": 5,
+    "Castling": 17,
+    "En passant": 7,
+    "Promotion": 7,
+    "Check/Checkmate": 7,
+    "PGN": 3,
+    "Board: bitboard": 11,
+    "Board: mailbox 8x8": 1,
+    "Minimax/Negamax": 1,
+    "Iterative deepening": 3,
+    "Quiescence": 1,
+    "Transposition table": 7,
+    "Zobrist hashing": 5,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 2,
+    "Late-move reduction (LMR)": 2,
+    "Late-move pruning (LMP)": 2,
+    "Aspiration windows": 1,
+    "Futility pruning": 2,
+    "Tapered evaluation": 2,
+    "King safety": 2,
+    "Pawn structure": 2,
+    "Mobility": 2,
+    "Material counting": 15,
+    "Opening book": 2,
+    "Time management": 14
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "tests/correctness.rs",
+      "src/board.rs",
+      "src/uci.rs"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "elo_test.sh",
+      "src/lib.rs",
+      "src/main.rs",
+      "src/uci.rs"
+    ],
+    "Perft": [
+      "README.md",
+      "tests/correctness.rs",
+      "src/perft.rs",
+      "src/lib.rs",
+      "src/uci.rs"
+    ],
+    "Castling": [
+      "README.md",
+      "tests/correctness.rs",
+      "elo_results_v3/sf_level8.pgn",
+      "elo_results_v3/sf_level13.pgn",
+      "elo_results_v3/sf_level5.pgn",
+      "elo_results_v3/sf_level10.pgn",
+      "elo_results_v2/sf_level8.pgn",
+      "elo_results_v2/sf_level13.pgn",
+      "elo_results_v2/sf_level5.pgn",
+      "elo_results_v2/sf_level10.pgn",
+      "elo_results/sf_level8.pgn",
+      "elo_results/sf_level13.pgn",
+      "elo_results/sf_level5.pgn",
+      "elo_results/sf_level10.pgn",
+      "src/movegen.rs",
+      "src/zobrist.rs",
+      "src/board.rs"
+    ],
+    "En passant": [
+      "README.md",
+      "tests/correctness.rs",
+      "src/types.rs",
+      "src/movegen.rs",
+      "src/board.rs",
+      "src/eval.rs",
+      "src/search.rs"
+    ],
+    "Promotion": [
+      "README.md",
+      "tests/correctness.rs",
+      "src/types.rs",
+      "src/movegen.rs",
+      "src/board.rs",
+      "src/eval.rs",
+      "src/search.rs"
+    ],
+    "Check/Checkmate": [
+      "tests/correctness.rs",
+      "elo_results_v3/sf_level8.pgn",
+      "elo_results_v3/sf_level13.pgn",
+      "elo_results/sf_level10.pgn",
+      "src/movegen.rs",
+      "src/eval.rs",
+      "src/search.rs"
+    ],
+    "PGN": [
+      "compute_elo.py",
+      "README.md",
+      "elo_test.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "README.md",
+      "src/tt.rs",
+      "src/movegen.rs",
+      "src/perft.rs",
+      "src/zobrist.rs",
+      "src/board.rs",
+      "src/attacks.rs",
+      "src/eval.rs",
+      "src/book.rs",
+      "src/search.rs",
+      "src/uci.rs"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "README.md"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "src/search.rs"
+    ],
+    "Alpha-beta": [],
+    "Iterative deepening": [
+      "README.md",
+      "src/search.rs",
+      "src/uci.rs"
+    ],
+    "Quiescence": [
+      "src/search.rs"
+    ],
+    "Transposition table": [
+      "README.md",
+      "tests/correctness.rs",
+      "src/tt.rs",
+      "src/zobrist.rs",
+      "src/lib.rs",
+      "src/board.rs",
+      "src/search.rs"
+    ],
+    "Zobrist hashing": [
+      "README.md",
+      "src/zobrist.rs",
+      "src/lib.rs",
+      "src/board.rs",
+      "src/search.rs"
+    ],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [
+      "README.md"
+    ],
+    "History heuristic": [
+      "README.md"
+    ],
+    "Principal-variation (PV)": [
+      "README.md"
+    ],
+    "Null-move pruning": [
+      "README.md",
+      "src/search.rs"
+    ],
+    "Late-move reduction (LMR)": [
+      "README.md",
+      "src/search.rs"
+    ],
+    "Late-move pruning (LMP)": [
+      "README.md",
+      "src/search.rs"
+    ],
+    "Aspiration windows": [
+      "README.md"
+    ],
+    "Futility pruning": [
+      "README.md",
+      "src/search.rs"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [
+      "README.md",
+      "src/eval.rs"
+    ],
+    "King safety": [
+      "README.md",
+      "src/eval.rs"
+    ],
+    "Pawn structure": [
+      "README.md",
+      "src/eval.rs"
+    ],
+    "Mobility": [
+      "README.md",
+      "src/eval.rs"
+    ],
+    "Material counting": [
+      "README.md",
+      "elo_results_v3/sf_level8.pgn",
+      "elo_results_v3/sf_level13.pgn",
+      "elo_results_v3/sf_level5.pgn",
+      "elo_results_v3/sf_level10.pgn",
+      "elo_results_v2/sf_level8.pgn",
+      "elo_results_v2/sf_level13.pgn",
+      "elo_results_v2/sf_level5.pgn",
+      "elo_results_v2/sf_level10.pgn",
+      "elo_results/sf_level8.pgn",
+      "elo_results/sf_level13.pgn",
+      "elo_results/sf_level5.pgn",
+      "elo_results/sf_level10.pgn",
+      "src/eval.rs",
+      "src/search.rs"
+    ],
+    "Opening book": [
+      "README.md",
+      "src/uci.rs"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "elo_results_v3/sf_level8.pgn",
+      "elo_results_v3/sf_level13.pgn",
+      "elo_results_v3/sf_level5.pgn",
+      "elo_results_v3/sf_level10.pgn",
+      "elo_results_v2/sf_level8.pgn",
+      "elo_results_v2/sf_level13.pgn",
+      "elo_results_v2/sf_level5.pgn",
+      "elo_results_v2/sf_level10.pgn",
+      "elo_results/sf_level8.pgn",
+      "elo_results/sf_level13.pgn",
+      "elo_results/sf_level5.pgn",
+      "elo_results/sf_level10.pgn",
+      "src/uci.rs"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 2,
+    "n_user_prompts": 55,
+    "n_assistant_messages": 960,
+    "models": [
+      "<synthetic>",
+      "claude-sonnet-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 304,
+      "Read": 99,
+      "Edit": 95,
+      "Write": 31,
+      "Glob": 2,
+      "Agent": 2,
+      "Grep": 2
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 1383,
+        "output": 1458461,
+        "cache_read": 92046283,
+        "cache_creation": 3853189
+      },
+      "usd_estimate": 63.94
+    },
+    "first_ts": "2026-04-19T15:47:51.975Z",
+    "last_ts": "2026-04-22T14:07:09.615Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "bd32e433-e56a-4205-bf0a-32497952d6d4",
+        "first_ts": "2026-04-19T15:47:51.975Z",
+        "last_ts": "2026-04-22T14:07:09.615Z",
+        "models": [
+          "<synthetic>",
+          "claude-sonnet-4-6"
+        ],
+        "turns": 55,
+        "n_events": 2169,
+        "tokens": {
+          "input": 1383,
+          "output": 1458461,
+          "cache_read": 92046283,
+          "cache_creation": 3853189
+        },
+        "tool_uses": {
+          "Glob": 2,
+          "Bash": 304,
+          "Read": 99,
+          "Write": 31,
+          "Edit": 95,
+          "Agent": 2,
+          "Grep": 2
+        },
+        "first_prompt_sample": "<local-command-caveat>Caveat: The messages below were generated by the user while running local commands. DO NOT respond to these messages or otherwise consider them in your response unless the user explicitly asks you to.</local-command-caveat>"
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "3f04dd7|2026-04-22T16:01:46+02:00|Mathieu Acher|Upgrade engine from ~1728 to ~1879 Elo (+151)",
+      "100ad56|2026-04-20T12:52:32+02:00|Mathieu Acher|Initial chess engine: ~1728 Elo mailbox engine in Rust"
+    ],
+    "n_commits": 2,
+    "authors": [
+      "2\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

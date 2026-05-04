@@ -1,0 +1,314 @@
+{
+  "name": "chess-apl-codex54",
+  "path": "/Users/mathieuacher/SANDBOX/chess-apl-codex54",
+  "primary_language": "APL",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Markdown": 2,
+      "Python": 6,
+      "APL": 1
+    },
+    "loc_by_lang": {
+      "TOML": 10,
+      "Markdown": 297,
+      "Python": 1258,
+      "APL": 2087
+    },
+    "total_files": 10,
+    "total_loc": 3652
+  },
+  "features": {
+    "FEN parsing": 4,
+    "UCI protocol": 8,
+    "Perft": 4,
+    "Castling": 9,
+    "En passant": 3,
+    "Promotion": 3,
+    "Check/Checkmate": 3,
+    "PGN": 3,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 3,
+    "Iterative deepening": 2,
+    "Quiescence": 3,
+    "Transposition table": 3,
+    "Zobrist hashing": 1,
+    "Move ordering (MVV-LVA)": 1,
+    "History heuristic": 1,
+    "Null-move pruning": 1,
+    "Evaluation/PST": 1,
+    "Tapered evaluation": 2,
+    "King safety": 3,
+    "Pawn structure": 4,
+    "Mobility": 2,
+    "Material counting": 2,
+    "Opening book": 1,
+    "Time management": 14
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "README.md",
+      "tests/test_apl_engine.py",
+      "tests/test_uci_proxy.py",
+      "src/apl/engine.apl"
+    ],
+    "UCI protocol": [
+      "pyproject.toml",
+      "README.md",
+      "tests/test_apl_engine.py",
+      "tests/test_uci_proxy.py",
+      "docs/roadmap.md",
+      "scripts/run_matches.py",
+      "scripts/uci_proxy.py",
+      "src/apl/engine.apl"
+    ],
+    "Perft": [
+      "README.md",
+      "tests/test_apl_engine.py",
+      "docs/roadmap.md",
+      "src/apl/engine.apl"
+    ],
+    "Castling": [
+      "README.md",
+      "tests/test_apl_engine.py",
+      "docs/roadmap.md",
+      "results/benchmarks/2026-03-20_stockfish-1320_tc120plus1_2g.pgn",
+      "results/benchmarks/2026-03-20_stockfish-1320_tc120plus1_2g_postfix.pgn",
+      "results/benchmarks/2026-03-20_stockfish-1320_tc120plus1_6g_postfix.pgn",
+      "results/tournaments/2026-03-20_apl-vs-random_8g_tc30plus0.5_d4.pgn",
+      "results/tournaments/2026-03-20_apl-vs-random_2g_tc30plus0.5_d4.pgn",
+      "results/tournaments/2026-03-20_apl-vs-random_2g_st1.0_d4.pgn"
+    ],
+    "En passant": [
+      "README.md",
+      "tests/test_apl_engine.py",
+      "docs/roadmap.md"
+    ],
+    "Promotion": [
+      "README.md",
+      "docs/roadmap.md",
+      "src/apl/engine.apl"
+    ],
+    "Check/Checkmate": [
+      "README.md",
+      "results/tournaments/2026-03-20_apl-vs-random_8g_tc30plus0.5_d4.pgn",
+      "src/apl/engine.apl"
+    ],
+    "PGN": [
+      "README.md",
+      "tests/test_run_matches.py",
+      "scripts/run_matches.py"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "README.md"
+    ],
+    "Alpha-beta": [
+      "README.md",
+      "docs/roadmap.md",
+      "src/apl/engine.apl"
+    ],
+    "Iterative deepening": [
+      "README.md",
+      "docs/roadmap.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "docs/roadmap.md",
+      "src/apl/engine.apl"
+    ],
+    "Transposition table": [
+      "README.md",
+      "tests/test_apl_engine.py",
+      "docs/roadmap.md"
+    ],
+    "Zobrist hashing": [
+      "README.md"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "README.md"
+    ],
+    "Killer moves": [],
+    "History heuristic": [
+      "README.md"
+    ],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [
+      "README.md"
+    ],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "src/apl/engine.apl"
+    ],
+    "Tapered evaluation": [
+      "README.md",
+      "docs/roadmap.md"
+    ],
+    "King safety": [
+      "README.md",
+      "docs/roadmap.md",
+      "src/apl/engine.apl"
+    ],
+    "Pawn structure": [
+      "README.md",
+      "tests/test_apl_engine.py",
+      "docs/roadmap.md",
+      "src/apl/engine.apl"
+    ],
+    "Mobility": [
+      "README.md",
+      "docs/roadmap.md"
+    ],
+    "Material counting": [
+      "README.md",
+      "src/apl/engine.apl"
+    ],
+    "Opening book": [
+      "README.md"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "tests/test_apl_engine.py",
+      "tests/test_run_matches.py",
+      "tests/test_uci_proxy.py",
+      "docs/roadmap.md",
+      "results/benchmarks/2026-03-20_stockfish-1320_tc120plus1_2g.pgn",
+      "results/benchmarks/2026-03-20_stockfish-1320_tc120plus1_2g_postfix.pgn",
+      "results/benchmarks/2026-03-20_stockfish-1320_tc120plus1_6g_postfix.pgn",
+      "results/tournaments/2026-03-20_apl-vs-random_8g.pgn",
+      "results/tournaments/2026-03-20_apl-vs-random_8g_tc30plus0.5_d4.pgn",
+      "results/tournaments/2026-03-20_apl-vs-random_2g_tc30plus0.5_d4.pgn",
+      "results/tournaments/2026-03-20_apl-vs-random_2g_st1.0_d4.pgn",
+      "scripts/run_matches.py",
+      "src/apl/engine.apl"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 1,
+    "n_user_prompts": 9,
+    "n_assistant_messages": 39,
+    "models": [
+      "<synthetic>",
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 18,
+      "Read": 3,
+      "Edit": 2,
+      "Agent": 1,
+      "Write": 1,
+      "Glob": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 58,
+        "output": 6855,
+        "cache_read": 902121,
+        "cache_creation": 170135
+      },
+      "usd_estimate": 5.06
+    },
+    "first_ts": "2026-03-20T06:08:26.917Z",
+    "last_ts": "2026-03-20T15:31:32.562Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "ce60d105-07ca-4e27-972d-19d2039acae5",
+        "first_ts": "2026-03-20T06:08:26.917Z",
+        "last_ts": "2026-03-20T15:31:32.562Z",
+        "models": [
+          "<synthetic>",
+          "claude-opus-4-6"
+        ],
+        "turns": 9,
+        "n_events": 154,
+        "tokens": {
+          "input": 58,
+          "output": 6855,
+          "cache_read": 902121,
+          "cache_creation": 170135
+        },
+        "tool_uses": {
+          "Agent": 1,
+          "Read": 3,
+          "Write": 1,
+          "Bash": 18,
+          "Edit": 2,
+          "Glob": 1
+        },
+        "first_prompt_sample": "please analyze the code base and assess whether we can consider this chess engine implementation as a \"pure\" APL implementation... report on the features, architecture"
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 26,
+    "n_assistant_messages": 446,
+    "models": [
+      "gpt-5.4"
+    ],
+    "tool_uses": {
+      "exec_command": 474,
+      "write_stdin": 299,
+      "update_plan": 13
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 78170766,
+        "output": 364058,
+        "cache_read": 74594432,
+        "cache_creation": 0,
+        "reasoning_output": 185951
+      },
+      "usd_estimate": 110.68
+    },
+    "first_ts": "2026-03-05T19:58:23.720Z",
+    "last_ts": "2026-03-20T15:33:56.121Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-03-05T20-58-07-019cbf94-34db-7b22-8641-f649a478bb49",
+        "first_ts": "2026-03-05T19:58:23.720Z",
+        "last_ts": "2026-03-20T15:33:56.121Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 26,
+        "tokens": {
+          "input": 78170766,
+          "output": 364058,
+          "cache_read": 74594432,
+          "reasoning_output": 185951
+        },
+        "tool_uses": {
+          "exec_command": 474,
+          "update_plan": 13,
+          "write_stdin": 299
+        },
+        "first_prompt_sample": "I want to build a chess engine in APL programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "771aa4f|2026-03-20T16:33:26+01:00|Mathieu Acher|Add README attribution",
+      "28ef582|2026-03-20T16:31:01+01:00|Mathieu Acher|Add PGN game results and engine/tooling improvements",
+      "24ad9f3|2026-03-20T14:50:47+01:00|Mathieu Acher|Initial commit: pure APL chess engine with Python UCI bridge"
+    ],
+    "n_commits": 3,
+    "authors": [
+      "3\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

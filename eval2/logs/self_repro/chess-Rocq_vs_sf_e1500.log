@@ -1,0 +1,86 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_e1500 vs chess-Rocq)
+Started game 1 of 20 (chess-Rocq vs sf_e1500)
+Finished game 1 (chess-Rocq vs sf_e1500): 1-0 {White mates}
+Score of chess-Rocq vs sf_e1500: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-Rocq vs sf_e1500)
+Finished game 2 (sf_e1500 vs chess-Rocq): 0-1 {Black mates}
+Score of chess-Rocq vs sf_e1500: 2 - 0 - 0  [1.000] 2
+Started game 4 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 3 (chess-Rocq vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 3 - 0 - 0  [1.000] 3
+Started game 5 of 20 (chess-Rocq vs sf_e1500)
+Finished game 4 (sf_e1500 vs chess-Rocq): 1-0 {White mates}
+Score of chess-Rocq vs sf_e1500: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 5 (chess-Rocq vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 4 - 1 - 0  [0.800] 5
+Started game 7 of 20 (chess-Rocq vs sf_e1500)
+Finished game 6 (sf_e1500 vs chess-Rocq): 1-0 {White mates}
+Score of chess-Rocq vs sf_e1500: 4 - 2 - 0  [0.667] 6
+Started game 8 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 7 (chess-Rocq vs sf_e1500): 1-0 {White mates}
+Score of chess-Rocq vs sf_e1500: 5 - 2 - 0  [0.714] 7
+Started game 9 of 20 (chess-Rocq vs sf_e1500)
+Finished game 8 (sf_e1500 vs chess-Rocq): 1-0 {White mates}
+Score of chess-Rocq vs sf_e1500: 5 - 3 - 0  [0.625] 8
+Started game 10 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 9 (chess-Rocq vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 6 - 3 - 0  [0.667] 9
+Started game 11 of 20 (chess-Rocq vs sf_e1500)
+Finished game 10 (sf_e1500 vs chess-Rocq): 0-1 {Black wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 7 - 3 - 0  [0.700] 10
+Started game 12 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 11 (chess-Rocq vs sf_e1500): 0-1 {Black mates}
+Score of chess-Rocq vs sf_e1500: 7 - 4 - 0  [0.636] 11
+Started game 13 of 20 (chess-Rocq vs sf_e1500)
+Finished game 12 (sf_e1500 vs chess-Rocq): 0-1 {Black wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 8 - 4 - 0  [0.667] 12
+Started game 14 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 13 (chess-Rocq vs sf_e1500): 0-1 {White loses on time}
+Score of chess-Rocq vs sf_e1500: 8 - 5 - 0  [0.615] 13
+Started game 15 of 20 (chess-Rocq vs sf_e1500)
+Finished game 14 (sf_e1500 vs chess-Rocq): 1/2-1/2 {Draw by stalemate}
+Score of chess-Rocq vs sf_e1500: 8 - 5 - 1  [0.607] 14
+Started game 16 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 15 (chess-Rocq vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 9 - 5 - 1  [0.633] 15
+Started game 17 of 20 (chess-Rocq vs sf_e1500)
+Finished game 16 (sf_e1500 vs chess-Rocq): 0-1 {Black mates}
+Score of chess-Rocq vs sf_e1500: 10 - 5 - 1  [0.656] 16
+Started game 18 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 17 (chess-Rocq vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 11 - 5 - 1  [0.676] 17
+Started game 19 of 20 (chess-Rocq vs sf_e1500)
+Finished game 18 (sf_e1500 vs chess-Rocq): 1-0 {White mates}
+Score of chess-Rocq vs sf_e1500: 11 - 6 - 1  [0.639] 18
+Started game 20 of 20 (sf_e1500 vs chess-Rocq)
+Finished game 19 (chess-Rocq vs sf_e1500): 0-1 {Black mates}
+Score of chess-Rocq vs sf_e1500: 11 - 7 - 1  [0.605] 19
+Finished game 20 (sf_e1500 vs chess-Rocq): 0-1 {Black wins by adjudication}
+Score of chess-Rocq vs sf_e1500: 12 - 7 - 1  [0.625] 20
+...      chess-Rocq playing White: 7 - 3 - 0  [0.700] 10
+...      chess-Rocq playing Black: 5 - 4 - 1  [0.550] 10
+...      White vs Black: 11 - 8 - 1  [0.575] 20
+Elo difference: 88.7 +/- 166.9, LOS: 87.4 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-Rocq
+   "Draw by stalemate": 1
+   "Loss: Black mates": 2
+   "Loss: White loses on time": 1
+   "Loss: White mates": 4
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 5
+Player: sf_e1500
+   "Draw by stalemate": 1
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 5
+   "Win: Black mates": 2
+   "Win: White loses on time": 1
+   "Win: White mates": 4
+Finished match

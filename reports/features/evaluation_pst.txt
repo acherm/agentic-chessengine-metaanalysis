@@ -1,0 +1,3169 @@
+========================================================================
+Feature: Evaluation/PST
+Patterns: piece[_ ]?square|\bPST\b
+Generated: 2026-04-21T06:43:43.595821+00:00
+Engines with feature: 20 / 36
+========================================================================
+
+[NO]  COBOL-chess  (COBOL)  — 0 match(es)
+
+[YES] chess-Rocq  (OCaml)  — 16 match(es)
+  theories/Eval.v:39
+          36      Actual bonus = table_value - 50 *)
+          37  Definition pst_offset : int := 50.
+          38  
+    >>>   39  (** Pawn PST *)
+          40  Definition pawn_pst (sq : Square) : int :=
+          41    let r := sq_rank sq in
+          42    let f := sq_file sq in
+
+  theories/Eval.v:51
+          48    else 0 in
+          49    add (add pst_offset rank_bonus) center_bonus.
+          50  
+    >>>   51  (** Knight PST *)
+          52  Definition knight_pst (sq : Square) : int :=
+          53    let r := sq_rank sq in
+          54    let f := sq_file sq in
+
+  theories/Eval.v:64
+          61      else 0 in
+          62    add (sub (add pst_offset center_bonus) edge_penalty) 0.
+          63  
+    >>>   64  (** Bishop PST *)
+          65  Definition bishop_pst (sq : Square) : int :=
+          66    let r := sq_rank sq in
+          67    let f := sq_file sq in
+
+  theories/Eval.v:73
+          70      else 0 in
+          71    add pst_offset center_bonus.
+          72  
+    >>>   73  (** Rook PST *)
+          74  Definition rook_pst (sq : Square) : int :=
+          75    let r := sq_rank sq in
+          76    (* Rooks on 7th rank *)
+
+  theories/Eval.v:80
+          77    let seventh := if eqb r 6 then 15 else 0 in
+          78    add pst_offset seventh.
+          79  
+    >>>   80  (** Queen PST - fairly flat *)
+          81  Definition queen_pst (sq : Square) : int := pst_offset.
+          82  
+          83  (** King PST (middlegame - prefer safety) *)
+
+  theories/Eval.v:83
+          80  (** Queen PST - fairly flat *)
+          81  Definition queen_pst (sq : Square) : int := pst_offset.
+          82  
+    >>>   83  (** King PST (middlegame - prefer safety) *)
+          84  Definition king_pst (sq : Square) : int :=
+          85    let r := sq_rank sq in
+          86    let f := sq_file sq in
+
+  theories/Eval.v:103
+         100    | King => king_pst sq
+         101    end.
+         102  
+    >>>  103  (** Mirror a square vertically for Black's PST *)
+         104  Definition mirror_sq (sq : Square) : Square :=
+         105    Uint63.lxor sq 56. (* flip rank: xor with 111000 = 56 *)
+         106  
+
+  theories/Eval.v:107
+         104  Definition mirror_sq (sq : Square) : Square :=
+         105    Uint63.lxor sq 56. (* flip rank: xor with 111000 = 56 *)
+         106  
+    >>>  107  (** Evaluate material + PST for one side *)
+         108  Definition eval_side (pos : Position) (c : Color) : int :=
+         109    let eval_piece (pk : PieceKind) : int :=
+         110      let bb := get_piece_bb pos c pk in
+
+  _build/default/theories/Eval.v:39
+          36      Actual bonus = table_value - 50 *)
+          37  Definition pst_offset : int := 50.
+          38  
+    >>>   39  (** Pawn PST *)
+          40  Definition pawn_pst (sq : Square) : int :=
+          41    let r := sq_rank sq in
+          42    let f := sq_file sq in
+
+  _build/default/theories/Eval.v:51
+          48    else 0 in
+          49    add (add pst_offset rank_bonus) center_bonus.
+          50  
+    >>>   51  (** Knight PST *)
+          52  Definition knight_pst (sq : Square) : int :=
+          53    let r := sq_rank sq in
+          54    let f := sq_file sq in
+
+  _build/default/theories/Eval.v:64
+          61      else 0 in
+          62    add (sub (add pst_offset center_bonus) edge_penalty) 0.
+          63  
+    >>>   64  (** Bishop PST *)
+          65  Definition bishop_pst (sq : Square) : int :=
+          66    let r := sq_rank sq in
+          67    let f := sq_file sq in
+
+  _build/default/theories/Eval.v:73
+          70      else 0 in
+          71    add pst_offset center_bonus.
+          72  
+    >>>   73  (** Rook PST *)
+          74  Definition rook_pst (sq : Square) : int :=
+          75    let r := sq_rank sq in
+          76    (* Rooks on 7th rank *)
+
+  _build/default/theories/Eval.v:80
+          77    let seventh := if eqb r 6 then 15 else 0 in
+          78    add pst_offset seventh.
+          79  
+    >>>   80  (** Queen PST - fairly flat *)
+          81  Definition queen_pst (sq : Square) : int := pst_offset.
+          82  
+          83  (** King PST (middlegame - prefer safety) *)
+
+  _build/default/theories/Eval.v:83
+          80  (** Queen PST - fairly flat *)
+          81  Definition queen_pst (sq : Square) : int := pst_offset.
+          82  
+    >>>   83  (** King PST (middlegame - prefer safety) *)
+          84  Definition king_pst (sq : Square) : int :=
+          85    let r := sq_rank sq in
+          86    let f := sq_file sq in
+
+  _build/default/theories/Eval.v:103
+         100    | King => king_pst sq
+         101    end.
+         102  
+    >>>  103  (** Mirror a square vertically for Black's PST *)
+         104  Definition mirror_sq (sq : Square) : Square :=
+         105    Uint63.lxor sq 56. (* flip rank: xor with 111000 = 56 *)
+         106  
+
+  _build/default/theories/Eval.v:107
+         104  Definition mirror_sq (sq : Square) : Square :=
+         105    Uint63.lxor sq 56. (* flip rank: xor with 111000 = 56 *)
+         106  
+    >>>  107  (** Evaluate material + PST for one side *)
+         108  Definition eval_side (pos : Position) (c : Color) : int :=
+         109    let eval_piece (pk : PieceKind) : int :=
+         110      let bb := get_piece_bb pos c pk in
+
+[YES] chess-apl-codex54  (APL)  — 10 match(es)
+  src/apl/engine.apl:209
+         206  WHITE: Z←RANK_OF IDX
+         207  ∇
+         208  
+    >>>  209  ∇Z←PIECE_SQUARE_OPEN_VALUE QUERY;PIECE;IDX;LOOKUP
+         210   PIECE←⊃QUERY[0]
+         211   IDX←⊃QUERY[1]
+         212   LOOKUP←IDX
+
+  src/apl/engine.apl:238
+         235  KING: Z←KING_OPEN_PST[LOOKUP]
+         236  ∇
+         237  
+    >>>  238  ∇Z←PIECE_SQUARE_END_VALUE QUERY;PIECE;IDX;LOOKUP
+         239   PIECE←⊃QUERY[0]
+         240   IDX←⊃QUERY[1]
+         241   LOOKUP←IDX
+
+  src/apl/engine.apl:267
+         264  KING: Z←KING_END_PST[LOOKUP]
+         265  ∇
+         266  
+    >>>  267  ∇Z←PIECE_SQUARE_VALUE QUERY
+         268   Z←PIECE_SQUARE_OPEN_VALUE QUERY
+         269  ∇
+         270  
+
+  src/apl/engine.apl:268
+         265  ∇
+         266  
+         267  ∇Z←PIECE_SQUARE_VALUE QUERY
+    >>>  268   Z←PIECE_SQUARE_OPEN_VALUE QUERY
+         269  ∇
+         270  
+         271  ∇Z←KING_CHAR SIDE
+
+  src/apl/engine.apl:1158
+        1155   →(IS_BLACK PIECE)⍴ADD_BLACK
+        1156   →NEXT
+        1157  ADD_WHITE:
+    >>> 1158   WHITE_OPEN←WHITE_OPEN+(PIECE_VALUE PIECE)+(PIECE_SQUARE_OPEN_VALUE (⊂PIECE),(⊂I))
+        1159   WHITE_END←WHITE_END+(PIECE_VALUE PIECE)+(PIECE_SQUARE_END_VALUE (⊂PIECE),(⊂I))
+        1160   →NEXT
+        1161  ADD_BLACK:
+
+  src/apl/engine.apl:1159
+        1156   →NEXT
+        1157  ADD_WHITE:
+        1158   WHITE_OPEN←WHITE_OPEN+(PIECE_VALUE PIECE)+(PIECE_SQUARE_OPEN_VALUE (⊂PIECE),(⊂I))
+    >>> 1159   WHITE_END←WHITE_END+(PIECE_VALUE PIECE)+(PIECE_SQUARE_END_VALUE (⊂PIECE),(⊂I))
+        1160   →NEXT
+        1161  ADD_BLACK:
+        1162   BLACK_OPEN←BLACK_OPEN+(PIECE_VALUE PIECE)+(PIECE_SQUARE_OPEN_VALUE (⊂PIECE),(⊂I))
+
+  src/apl/engine.apl:1162
+        1159   WHITE_END←WHITE_END+(PIECE_VALUE PIECE)+(PIECE_SQUARE_END_VALUE (⊂PIECE),(⊂I))
+        1160   →NEXT
+        1161  ADD_BLACK:
+    >>> 1162   BLACK_OPEN←BLACK_OPEN+(PIECE_VALUE PIECE)+(PIECE_SQUARE_OPEN_VALUE (⊂PIECE),(⊂I))
+        1163   BLACK_END←BLACK_END+(PIECE_VALUE PIECE)+(PIECE_SQUARE_END_VALUE (⊂PIECE),(⊂I))
+        1164  NEXT:
+        1165   I←I+1
+
+  src/apl/engine.apl:1163
+        1160   →NEXT
+        1161  ADD_BLACK:
+        1162   BLACK_OPEN←BLACK_OPEN+(PIECE_VALUE PIECE)+(PIECE_SQUARE_OPEN_VALUE (⊂PIECE),(⊂I))
+    >>> 1163   BLACK_END←BLACK_END+(PIECE_VALUE PIECE)+(PIECE_SQUARE_END_VALUE (⊂PIECE),(⊂I))
+        1164  NEXT:
+        1165   I←I+1
+        1166   →LOOP
+
+  src/apl/engine.apl:1213
+        1210  EP_CAPTURE:
+        1211   CAPTURE←100
+        1212  CAPTURE_DONE:
+    >>> 1213   SCORE←(PIECE_SQUARE_VALUE (⊂PIECE),(⊂TO))-(PIECE_SQUARE_VALUE (⊂PIECE),(⊂FROM))
+        1214   →(CAPTURE>0)⍴CAPTURE_BONUS
+        1215   →PROMO_TEST
+        1216  CAPTURE_BONUS:
+
+  src/apl/engine.apl:1225
+        1222   PROMO←MOVE[4]
+        1223   PROMOTED←SIDE PROMOTE_CHAR PROMO
+        1224   DELTA←(PIECE_VALUE PROMOTED)-(PIECE_VALUE PIECE)
+    >>> 1225   DELTA←DELTA+(PIECE_SQUARE_VALUE (⊂PROMOTED),(⊂TO))-(PIECE_SQUARE_VALUE (⊂PIECE),(⊂FROM))
+        1226   SCORE←SCORE+MOVE_ORDER_PROMO_BONUS+DELTA
+        1227  CASTLE_TEST:
+        1228   →((PIECE∊'Kk')∧(2=|((FILE_OF TO)-(FILE_OF FROM))))⍴CASTLE_BONUS
+
+[NO]  chess-assembly-codex  (Assembly)  — 0 match(es)
+
+[YES] chess-brainfuck  (Python)  — 5 match(es)
+  src/bf_board.py:449
+         446              pst_idx = (sq ^ 56) if is_white else sq
+         447              base = PIECE_VALUES[ptype]
+         448              if ptype == 6:
+    >>>  449                  pst = PST_KING_END[pst_idx] if endgame else PST_KING_MID[pst_idx]
+         450              else:
+         451                  pst = PST_BY_PIECE[ptype][pst_idx]
+         452  
+
+  src/bf_board.py:451
+         448              if ptype == 6:
+         449                  pst = PST_KING_END[pst_idx] if endgame else PST_KING_MID[pst_idx]
+         450              else:
+    >>>  451                  pst = PST_BY_PIECE[ptype][pst_idx]
+         452  
+         453              unit_score = base + pst
+         454              if is_white:
+
+  src/bf_board.py:453
+         450              else:
+         451                  pst = PST_BY_PIECE[ptype][pst_idx]
+         452  
+    >>>  453              unit_score = base + pst
+         454              if is_white:
+         455                  score += unit_score
+         456              else:
+
+  src/search.py:160
+         157              score += 500
+         158  
+         159          # Quiet-move ordering: reward piece-square improvement to avoid edge drifts.
+    >>>  160          score += self._piece_square_delta(move) * 8
+         161          score += self._opening_development_bonus(move, moving_type)
+         162          score += self._piece_value(moving)
+         163          return score
+
+  src/search.py:193
+         190                  bonus += 120
+         191          return bonus
+         192  
+    >>>  193      def _piece_square_delta(self, move: Move) -> int:
+         194          frm, to, promo = move
+         195          moving = int(self.board.tape[frm]) if 0 <= frm < 64 else 0
+         196          moving_type = self._piece_type(moving)
+
+[NO]  chess-brainfuck-cc  (Python)  — 0 match(es)
+
+[YES] chess-cobol-cc  (C)  — 55 match(es)
+  chess-engine.c:6873
+        6870    /* initialize field WS-POSITIONAL */
+        6871    memset (b_283, 48, 8);
+        6872  
+    >>> 6873    /* initialize field WS-PST-INDEX */
+        6874    memset (b_284, (unsigned char)'0', 2);
+        6875  
+        6876    /* initialize field FILLER 33 */
+
+  chess-engine.c.l.h:197
+         194  static cob_u8_t	b_281[1] __attribute__((aligned));	/* WS-EVAL-PIECE */
+         195  static cob_u8_t	b_282[8] __attribute__((aligned));	/* WS-MATERIAL */
+         196  static cob_u8_t	b_283[8] __attribute__((aligned));	/* WS-POSITIONAL */
+    >>>  197  static cob_u8_t	b_284[2] __attribute__((aligned));	/* WS-PST-INDEX */
+         198  static cob_u8_t	b_285[256] __attribute__((aligned));	/* WS-PST-PAWN-DATA */
+         199  static cob_u8_t	b_352[256] __attribute__((aligned));	/* WS-PST-KNIGHT-DATA */
+         200  static cob_u8_t	b_419[256] __attribute__((aligned));	/* WS-PST-BISHOP-DATA */
+
+  chess-engine.c.l.h:198
+         195  static cob_u8_t	b_282[8] __attribute__((aligned));	/* WS-MATERIAL */
+         196  static cob_u8_t	b_283[8] __attribute__((aligned));	/* WS-POSITIONAL */
+         197  static cob_u8_t	b_284[2] __attribute__((aligned));	/* WS-PST-INDEX */
+    >>>  198  static cob_u8_t	b_285[256] __attribute__((aligned));	/* WS-PST-PAWN-DATA */
+         199  static cob_u8_t	b_352[256] __attribute__((aligned));	/* WS-PST-KNIGHT-DATA */
+         200  static cob_u8_t	b_419[256] __attribute__((aligned));	/* WS-PST-BISHOP-DATA */
+         201  static cob_u8_t	b_486[256] __attribute__((aligned));	/* WS-PST-ROOK-DATA */
+
+  chess-engine.c.l.h:199
+         196  static cob_u8_t	b_283[8] __attribute__((aligned));	/* WS-POSITIONAL */
+         197  static cob_u8_t	b_284[2] __attribute__((aligned));	/* WS-PST-INDEX */
+         198  static cob_u8_t	b_285[256] __attribute__((aligned));	/* WS-PST-PAWN-DATA */
+    >>>  199  static cob_u8_t	b_352[256] __attribute__((aligned));	/* WS-PST-KNIGHT-DATA */
+         200  static cob_u8_t	b_419[256] __attribute__((aligned));	/* WS-PST-BISHOP-DATA */
+         201  static cob_u8_t	b_486[256] __attribute__((aligned));	/* WS-PST-ROOK-DATA */
+         202  static cob_u8_t	b_553[256] __attribute__((aligned));	/* WS-PST-KING-DATA */
+
+  chess-engine.c.l.h:200
+         197  static cob_u8_t	b_284[2] __attribute__((aligned));	/* WS-PST-INDEX */
+         198  static cob_u8_t	b_285[256] __attribute__((aligned));	/* WS-PST-PAWN-DATA */
+         199  static cob_u8_t	b_352[256] __attribute__((aligned));	/* WS-PST-KNIGHT-DATA */
+    >>>  200  static cob_u8_t	b_419[256] __attribute__((aligned));	/* WS-PST-BISHOP-DATA */
+         201  static cob_u8_t	b_486[256] __attribute__((aligned));	/* WS-PST-ROOK-DATA */
+         202  static cob_u8_t	b_553[256] __attribute__((aligned));	/* WS-PST-KING-DATA */
+         203  
+
+  chess-engine.c.l.h:201
+         198  static cob_u8_t	b_285[256] __attribute__((aligned));	/* WS-PST-PAWN-DATA */
+         199  static cob_u8_t	b_352[256] __attribute__((aligned));	/* WS-PST-KNIGHT-DATA */
+         200  static cob_u8_t	b_419[256] __attribute__((aligned));	/* WS-PST-BISHOP-DATA */
+    >>>  201  static cob_u8_t	b_486[256] __attribute__((aligned));	/* WS-PST-ROOK-DATA */
+         202  static cob_u8_t	b_553[256] __attribute__((aligned));	/* WS-PST-KING-DATA */
+         203  
+         204  /* End of local data storage */
+
+  chess-engine.c.l.h:202
+         199  static cob_u8_t	b_352[256] __attribute__((aligned));	/* WS-PST-KNIGHT-DATA */
+         200  static cob_u8_t	b_419[256] __attribute__((aligned));	/* WS-PST-BISHOP-DATA */
+         201  static cob_u8_t	b_486[256] __attribute__((aligned));	/* WS-PST-ROOK-DATA */
+    >>>  202  static cob_u8_t	b_553[256] __attribute__((aligned));	/* WS-PST-KING-DATA */
+         203  
+         204  /* End of local data storage */
+         205  
+
+  chess-engine.c.l.h:297
+         294  static cob_field f_280	= {1, b_280, &a_13};	/* WS-EVAL-COL */
+         295  static cob_field f_282	= {8, b_282, &a_16};	/* WS-MATERIAL */
+         296  static cob_field f_283	= {8, b_283, &a_16};	/* WS-POSITIONAL */
+    >>>  297  static cob_field f_284	= {2, b_284, &a_8};	/* WS-PST-INDEX */
+         298  
+         299  /* End of fields */
+         300  
+
+  chess-engine.cob:372
+         369         01  WS-EVAL-PIECE           PIC X(1).
+         370         01  WS-MATERIAL             PIC S9(8) VALUE 0.
+         371         01  WS-POSITIONAL           PIC S9(8) VALUE 0.
+    >>>  372         01  WS-PST-INDEX            PIC 9(2).
+         373        * Bishop pair & rook file bonuses
+         374         01  WS-WHITE-BISHOP-CNT     PIC 9 VALUE 0.
+         375         01  WS-BLACK-BISHOP-CNT     PIC 9 VALUE 0.
+
+  chess-engine.cob:402
+         399        * Stored as: row 1 cols 1-8, row 2 cols 1-8, etc.
+         400        * Values in centipawns added to piece value
+         401  
+    >>>  402        * Pawn PST
+         403         01  WS-PST-PAWN-DATA.
+         404           05 FILLER PIC S9(4) VALUE +0.
+         405           05 FILLER PIC S9(4) VALUE +0.
+
+  chess-engine.cob:403
+         400        * Values in centipawns added to piece value
+         401  
+         402        * Pawn PST
+    >>>  403         01  WS-PST-PAWN-DATA.
+         404           05 FILLER PIC S9(4) VALUE +0.
+         405           05 FILLER PIC S9(4) VALUE +0.
+         406           05 FILLER PIC S9(4) VALUE +0.
+
+  chess-engine.cob:468
+         465           05 FILLER PIC S9(4) VALUE +0.
+         466           05 FILLER PIC S9(4) VALUE +0.
+         467           05 FILLER PIC S9(4) VALUE +0.
+    >>>  468         01  WS-PST-PAWN REDEFINES WS-PST-PAWN-DATA.
+         469           05  WS-PST-PAWN-VAL       PIC S9(4)
+         470                                      OCCURS 64 TIMES.
+         471  
+
+  chess-engine.cob:469
+         466           05 FILLER PIC S9(4) VALUE +0.
+         467           05 FILLER PIC S9(4) VALUE +0.
+         468         01  WS-PST-PAWN REDEFINES WS-PST-PAWN-DATA.
+    >>>  469           05  WS-PST-PAWN-VAL       PIC S9(4)
+         470                                      OCCURS 64 TIMES.
+         471  
+         472        * Knight PST
+
+  chess-engine.cob:472
+         469           05  WS-PST-PAWN-VAL       PIC S9(4)
+         470                                      OCCURS 64 TIMES.
+         471  
+    >>>  472        * Knight PST
+         473         01  WS-PST-KNIGHT-DATA.
+         474           05 FILLER PIC S9(4) VALUE -50.
+         475           05 FILLER PIC S9(4) VALUE -40.
+
+  chess-engine.cob:473
+         470                                      OCCURS 64 TIMES.
+         471  
+         472        * Knight PST
+    >>>  473         01  WS-PST-KNIGHT-DATA.
+         474           05 FILLER PIC S9(4) VALUE -50.
+         475           05 FILLER PIC S9(4) VALUE -40.
+         476           05 FILLER PIC S9(4) VALUE -30.
+
+  chess-engine.cob:538
+         535           05 FILLER PIC S9(4) VALUE -30.
+         536           05 FILLER PIC S9(4) VALUE -40.
+         537           05 FILLER PIC S9(4) VALUE -50.
+    >>>  538         01  WS-PST-KNIGHT REDEFINES WS-PST-KNIGHT-DATA.
+         539           05  WS-PST-KNIGHT-VAL     PIC S9(4)
+         540                                      OCCURS 64 TIMES.
+         541  
+
+  chess-engine.cob:539
+         536           05 FILLER PIC S9(4) VALUE -40.
+         537           05 FILLER PIC S9(4) VALUE -50.
+         538         01  WS-PST-KNIGHT REDEFINES WS-PST-KNIGHT-DATA.
+    >>>  539           05  WS-PST-KNIGHT-VAL     PIC S9(4)
+         540                                      OCCURS 64 TIMES.
+         541  
+         542        * Bishop PST
+
+  chess-engine.cob:542
+         539           05  WS-PST-KNIGHT-VAL     PIC S9(4)
+         540                                      OCCURS 64 TIMES.
+         541  
+    >>>  542        * Bishop PST
+         543         01  WS-PST-BISHOP-DATA.
+         544           05 FILLER PIC S9(4) VALUE -20.
+         545           05 FILLER PIC S9(4) VALUE -10.
+
+  chess-engine.cob:543
+         540                                      OCCURS 64 TIMES.
+         541  
+         542        * Bishop PST
+    >>>  543         01  WS-PST-BISHOP-DATA.
+         544           05 FILLER PIC S9(4) VALUE -20.
+         545           05 FILLER PIC S9(4) VALUE -10.
+         546           05 FILLER PIC S9(4) VALUE -10.
+
+  chess-engine.cob:608
+         605           05 FILLER PIC S9(4) VALUE -10.
+         606           05 FILLER PIC S9(4) VALUE -10.
+         607           05 FILLER PIC S9(4) VALUE -20.
+    >>>  608         01  WS-PST-BISHOP REDEFINES WS-PST-BISHOP-DATA.
+         609           05  WS-PST-BISHOP-VAL     PIC S9(4)
+         610                                      OCCURS 64 TIMES.
+         611  
+
+  chess-engine.cob:609
+         606           05 FILLER PIC S9(4) VALUE -10.
+         607           05 FILLER PIC S9(4) VALUE -20.
+         608         01  WS-PST-BISHOP REDEFINES WS-PST-BISHOP-DATA.
+    >>>  609           05  WS-PST-BISHOP-VAL     PIC S9(4)
+         610                                      OCCURS 64 TIMES.
+         611  
+         612        * Rook PST
+
+  chess-engine.cob:612
+         609           05  WS-PST-BISHOP-VAL     PIC S9(4)
+         610                                      OCCURS 64 TIMES.
+         611  
+    >>>  612        * Rook PST
+         613         01  WS-PST-ROOK-DATA.
+         614           05 FILLER PIC S9(4) VALUE +0.
+         615           05 FILLER PIC S9(4) VALUE +0.
+
+  chess-engine.cob:613
+         610                                      OCCURS 64 TIMES.
+         611  
+         612        * Rook PST
+    >>>  613         01  WS-PST-ROOK-DATA.
+         614           05 FILLER PIC S9(4) VALUE +0.
+         615           05 FILLER PIC S9(4) VALUE +0.
+         616           05 FILLER PIC S9(4) VALUE +5.
+
+  chess-engine.cob:678
+         675           05 FILLER PIC S9(4) VALUE +0.
+         676           05 FILLER PIC S9(4) VALUE +0.
+         677           05 FILLER PIC S9(4) VALUE +0.
+    >>>  678         01  WS-PST-ROOK REDEFINES WS-PST-ROOK-DATA.
+         679           05  WS-PST-ROOK-VAL       PIC S9(4)
+         680                                      OCCURS 64 TIMES.
+         681  
+
+  chess-engine.cob:679
+         676           05 FILLER PIC S9(4) VALUE +0.
+         677           05 FILLER PIC S9(4) VALUE +0.
+         678         01  WS-PST-ROOK REDEFINES WS-PST-ROOK-DATA.
+    >>>  679           05  WS-PST-ROOK-VAL       PIC S9(4)
+         680                                      OCCURS 64 TIMES.
+         681  
+         682        * King PST (middlegame - prefer safety)
+
+  chess-engine.cob:682
+         679           05  WS-PST-ROOK-VAL       PIC S9(4)
+         680                                      OCCURS 64 TIMES.
+         681  
+    >>>  682        * King PST (middlegame - prefer safety)
+         683         01  WS-PST-KING-DATA.
+         684           05 FILLER PIC S9(4) VALUE +20.
+         685           05 FILLER PIC S9(4) VALUE +30.
+
+  chess-engine.cob:683
+         680                                      OCCURS 64 TIMES.
+         681  
+         682        * King PST (middlegame - prefer safety)
+    >>>  683         01  WS-PST-KING-DATA.
+         684           05 FILLER PIC S9(4) VALUE +20.
+         685           05 FILLER PIC S9(4) VALUE +30.
+         686           05 FILLER PIC S9(4) VALUE +10.
+
+  chess-engine.cob:748
+         745           05 FILLER PIC S9(4) VALUE -40.
+         746           05 FILLER PIC S9(4) VALUE -40.
+         747           05 FILLER PIC S9(4) VALUE -30.
+    >>>  748         01  WS-PST-KING REDEFINES WS-PST-KING-DATA.
+         749           05  WS-PST-KING-VAL       PIC S9(4)
+         750                                      OCCURS 64 TIMES.
+         751  
+
+  chess-engine.cob:749
+         746           05 FILLER PIC S9(4) VALUE -40.
+         747           05 FILLER PIC S9(4) VALUE -30.
+         748         01  WS-PST-KING REDEFINES WS-PST-KING-DATA.
+    >>>  749           05  WS-PST-KING-VAL       PIC S9(4)
+         750                                      OCCURS 64 TIMES.
+         751  
+         752        * Endgame king PST: centralization bonus
+
+  chess-engine.cob:752
+         749           05  WS-PST-KING-VAL       PIC S9(4)
+         750                                      OCCURS 64 TIMES.
+         751  
+    >>>  752        * Endgame king PST: centralization bonus
+         753         01  WS-PST-KING-EG-DATA.
+         754           05 FILLER PIC S9(4) VALUE -50.
+         755           05 FILLER PIC S9(4) VALUE -30.
+
+  chess-engine.cob:753
+         750                                      OCCURS 64 TIMES.
+         751  
+         752        * Endgame king PST: centralization bonus
+    >>>  753         01  WS-PST-KING-EG-DATA.
+         754           05 FILLER PIC S9(4) VALUE -50.
+         755           05 FILLER PIC S9(4) VALUE -30.
+         756           05 FILLER PIC S9(4) VALUE -20.
+
+  chess-engine.cob:818
+         815           05 FILLER PIC S9(4) VALUE -20.
+         816           05 FILLER PIC S9(4) VALUE -30.
+         817           05 FILLER PIC S9(4) VALUE -50.
+    >>>  818         01  WS-PST-KING-EG REDEFINES WS-PST-KING-EG-DATA.
+         819           05  WS-PST-KING-EG-VAL   PIC S9(4)
+         820                                      OCCURS 64 TIMES.
+         821  
+
+  chess-engine.cob:819
+         816           05 FILLER PIC S9(4) VALUE -30.
+         817           05 FILLER PIC S9(4) VALUE -50.
+         818         01  WS-PST-KING-EG REDEFINES WS-PST-KING-EG-DATA.
+    >>>  819           05  WS-PST-KING-EG-VAL   PIC S9(4)
+         820                                      OCCURS 64 TIMES.
+         821  
+         822        * Game phase tracking (for tapered eval)
+
+  chess-engine.cob:2388
+        2385        * White pieces add positive, black pieces add negative
+        2386        ******************************************************************
+        2387         EVAL-SINGLE-PIECE.
+    >>> 2388        * PST index for white: (row-1)*8 + col
+        2389        * PST index for black: (8-row)*8 + col (mirror vertically)
+        2390             EVALUATE WS-EVAL-PIECE
+        2391               WHEN "P"
+
+  chess-engine.cob:2389
+        2386        ******************************************************************
+        2387         EVAL-SINGLE-PIECE.
+        2388        * PST index for white: (row-1)*8 + col
+    >>> 2389        * PST index for black: (8-row)*8 + col (mirror vertically)
+        2390             EVALUATE WS-EVAL-PIECE
+        2391               WHEN "P"
+        2392                 ADD 100 TO WS-MATERIAL
+
+  chess-engine.cob:2393
+        2390             EVALUATE WS-EVAL-PIECE
+        2391               WHEN "P"
+        2392                 ADD 100 TO WS-MATERIAL
+    >>> 2393                 COMPUTE WS-PST-INDEX =
+        2394                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+        2395                 ADD WS-PST-PAWN-VAL(WS-PST-INDEX)
+        2396                   TO WS-POSITIONAL
+
+  chess-engine.cob:2395
+        2392                 ADD 100 TO WS-MATERIAL
+        2393                 COMPUTE WS-PST-INDEX =
+        2394                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+    >>> 2395                 ADD WS-PST-PAWN-VAL(WS-PST-INDEX)
+        2396                   TO WS-POSITIONAL
+        2397                 ADD 1 TO WS-WPF(WS-EVAL-COL)
+        2398                 IF WS-EVAL-ROW > WS-WPBR(WS-EVAL-COL)
+
+  chess-engine.cob:2404
+        2401                 END-IF
+        2402               WHEN "p"
+        2403                 SUBTRACT 100 FROM WS-MATERIAL
+    >>> 2404                 COMPUTE WS-PST-INDEX =
+        2405                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+        2406                 SUBTRACT WS-PST-PAWN-VAL(WS-PST-INDEX)
+        2407                   FROM WS-POSITIONAL
+
+  chess-engine.cob:2406
+        2403                 SUBTRACT 100 FROM WS-MATERIAL
+        2404                 COMPUTE WS-PST-INDEX =
+        2405                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+    >>> 2406                 SUBTRACT WS-PST-PAWN-VAL(WS-PST-INDEX)
+        2407                   FROM WS-POSITIONAL
+        2408                 ADD 1 TO WS-BPF(WS-EVAL-COL)
+        2409                 IF WS-EVAL-ROW < WS-BPBR(WS-EVAL-COL)
+
+  chess-engine.cob:2415
+        2412                 END-IF
+        2413               WHEN "N"
+        2414                 ADD 320 TO WS-MATERIAL
+    >>> 2415                 COMPUTE WS-PST-INDEX =
+        2416                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+        2417                 ADD WS-PST-KNIGHT-VAL(WS-PST-INDEX)
+        2418                   TO WS-POSITIONAL
+
+  chess-engine.cob:2417
+        2414                 ADD 320 TO WS-MATERIAL
+        2415                 COMPUTE WS-PST-INDEX =
+        2416                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+    >>> 2417                 ADD WS-PST-KNIGHT-VAL(WS-PST-INDEX)
+        2418                   TO WS-POSITIONAL
+        2419               WHEN "n"
+        2420                 SUBTRACT 320 FROM WS-MATERIAL
+
+  chess-engine.cob:2421
+        2418                   TO WS-POSITIONAL
+        2419               WHEN "n"
+        2420                 SUBTRACT 320 FROM WS-MATERIAL
+    >>> 2421                 COMPUTE WS-PST-INDEX =
+        2422                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+        2423                 SUBTRACT WS-PST-KNIGHT-VAL(WS-PST-INDEX)
+        2424                   FROM WS-POSITIONAL
+
+  chess-engine.cob:2423
+        2420                 SUBTRACT 320 FROM WS-MATERIAL
+        2421                 COMPUTE WS-PST-INDEX =
+        2422                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+    >>> 2423                 SUBTRACT WS-PST-KNIGHT-VAL(WS-PST-INDEX)
+        2424                   FROM WS-POSITIONAL
+        2425               WHEN "B"
+        2426                 ADD 330 TO WS-MATERIAL
+
+  chess-engine.cob:2427
+        2424                   FROM WS-POSITIONAL
+        2425               WHEN "B"
+        2426                 ADD 330 TO WS-MATERIAL
+    >>> 2427                 COMPUTE WS-PST-INDEX =
+        2428                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+        2429                 ADD WS-PST-BISHOP-VAL(WS-PST-INDEX)
+        2430                   TO WS-POSITIONAL
+
+  chess-engine.cob:2429
+        2426                 ADD 330 TO WS-MATERIAL
+        2427                 COMPUTE WS-PST-INDEX =
+        2428                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+    >>> 2429                 ADD WS-PST-BISHOP-VAL(WS-PST-INDEX)
+        2430                   TO WS-POSITIONAL
+        2431                 ADD 1 TO WS-WHITE-BISHOP-CNT
+        2432               WHEN "b"
+
+  chess-engine.cob:2434
+        2431                 ADD 1 TO WS-WHITE-BISHOP-CNT
+        2432               WHEN "b"
+        2433                 SUBTRACT 330 FROM WS-MATERIAL
+    >>> 2434                 COMPUTE WS-PST-INDEX =
+        2435                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+        2436                 SUBTRACT WS-PST-BISHOP-VAL(WS-PST-INDEX)
+        2437                   FROM WS-POSITIONAL
+
+  chess-engine.cob:2436
+        2433                 SUBTRACT 330 FROM WS-MATERIAL
+        2434                 COMPUTE WS-PST-INDEX =
+        2435                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+    >>> 2436                 SUBTRACT WS-PST-BISHOP-VAL(WS-PST-INDEX)
+        2437                   FROM WS-POSITIONAL
+        2438                 ADD 1 TO WS-BLACK-BISHOP-CNT
+        2439               WHEN "R"
+
+  chess-engine.cob:2441
+        2438                 ADD 1 TO WS-BLACK-BISHOP-CNT
+        2439               WHEN "R"
+        2440                 ADD 500 TO WS-MATERIAL
+    >>> 2441                 COMPUTE WS-PST-INDEX =
+        2442                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+        2443                 ADD WS-PST-ROOK-VAL(WS-PST-INDEX)
+        2444                   TO WS-POSITIONAL
+
+  chess-engine.cob:2443
+        2440                 ADD 500 TO WS-MATERIAL
+        2441                 COMPUTE WS-PST-INDEX =
+        2442                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+    >>> 2443                 ADD WS-PST-ROOK-VAL(WS-PST-INDEX)
+        2444                   TO WS-POSITIONAL
+        2445                 IF WS-WR-CNT < 2
+        2446                   ADD 1 TO WS-WR-CNT
+
+  chess-engine.cob:2452
+        2449                 END-IF
+        2450               WHEN "r"
+        2451                 SUBTRACT 500 FROM WS-MATERIAL
+    >>> 2452                 COMPUTE WS-PST-INDEX =
+        2453                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+        2454                 SUBTRACT WS-PST-ROOK-VAL(WS-PST-INDEX)
+        2455                   FROM WS-POSITIONAL
+
+  chess-engine.cob:2454
+        2451                 SUBTRACT 500 FROM WS-MATERIAL
+        2452                 COMPUTE WS-PST-INDEX =
+        2453                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+    >>> 2454                 SUBTRACT WS-PST-ROOK-VAL(WS-PST-INDEX)
+        2455                   FROM WS-POSITIONAL
+        2456                 IF WS-BR-CNT < 2
+        2457                   ADD 1 TO WS-BR-CNT
+
+  chess-engine.cob:2467
+        2464                 SUBTRACT 900 FROM WS-MATERIAL
+        2465               WHEN "K"
+        2466                 ADD 20000 TO WS-MATERIAL
+    >>> 2467                 COMPUTE WS-PST-INDEX =
+        2468                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+        2469                 ADD WS-PST-KING-VAL(WS-PST-INDEX)
+        2470                   TO WS-POSITIONAL
+
+  chess-engine.cob:2469
+        2466                 ADD 20000 TO WS-MATERIAL
+        2467                 COMPUTE WS-PST-INDEX =
+        2468                   (WS-EVAL-ROW - 1) * 8 + WS-EVAL-COL
+    >>> 2469                 ADD WS-PST-KING-VAL(WS-PST-INDEX)
+        2470                   TO WS-POSITIONAL
+        2471               WHEN "k"
+        2472                 SUBTRACT 20000 FROM WS-MATERIAL
+
+  chess-engine.cob:2473
+        2470                   TO WS-POSITIONAL
+        2471               WHEN "k"
+        2472                 SUBTRACT 20000 FROM WS-MATERIAL
+    >>> 2473                 COMPUTE WS-PST-INDEX =
+        2474                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+        2475                 SUBTRACT WS-PST-KING-VAL(WS-PST-INDEX)
+        2476                   FROM WS-POSITIONAL
+
+  chess-engine.cob:2475
+        2472                 SUBTRACT 20000 FROM WS-MATERIAL
+        2473                 COMPUTE WS-PST-INDEX =
+        2474                   (8 - WS-EVAL-ROW) * 8 + WS-EVAL-COL
+    >>> 2475                 SUBTRACT WS-PST-KING-VAL(WS-PST-INDEX)
+        2476                   FROM WS-POSITIONAL
+        2477             END-EVALUATE.
+        2478  
+
+[YES] chess-cplusplus-claude  (C++)  — 3 match(es)
+  src/evaluate.cpp:20
+          17  static constexpr int PhaseWeight[PIECE_TYPE_NB] = { 0, 0, 1, 1, 2, 4, 0 };
+          18  static constexpr int TotalPhase = 24;
+          19  
+    >>>   20  // PST values from PeSTO
+          21  static const int PawnMG[SQUARE_NB] = {
+          22        0,   0,   0,   0,   0,   0,  0,   0,
+          23       98, 134,  61,  95,  68, 126, 34, -11,
+
+  src/evaluate.cpp:224
+         221      Bitboard all_pawns[COLOR_NB] = { pos.pieces(WHITE, PAWN), pos.pieces(BLACK, PAWN) };
+         222      Bitboard occupied = pos.pieces();
+         223  
+    >>>  224      // --- PST + Material ---
+         225      for (Color c : {WHITE, BLACK}) {
+         226          for (int pt = PAWN; pt <= KING; ++pt) {
+         227              Bitboard bb = pos.pieces(c, PieceType(pt));
+
+  src/position.cpp:149
+         146      if (st.ep_square != SQ_NONE)
+         147          st.key ^= zobrist_ep[file_of(st.ep_square)];
+         148  
+    >>>  149      // Compute game phase and PST scores (initialized in evaluate)
+         150      st.game_phase = 0;
+         151      st.pst_mg[WHITE] = st.pst_mg[BLACK] = 0;
+         152      st.pst_eg[WHITE] = st.pst_eg[BLACK] = 0;
+
+[YES] chess-css-cc  (HTML)  — 12 match(es)
+  scripts/generate-css.js:15
+          12  // Piece-square tables (from white's perspective, a1=index 0, h8=index 63)
+          13  // Values in centipawns, added to material value
+          14  // Indexed [rank 8..1][file a..h] — rank 8 is row 0 (top of board from white's view)
+    >>>   15  const PST = {
+          16    P: [
+          17      [  0,  0,  0,  0,  0,  0,  0,  0],
+          18      [ 50, 50, 50, 50, 50, 50, 50, 50],
+
+  scripts/generate-css.js:102
+          99        for (let fileIdx = 0; fileIdx < 8; fileIdx++) {
+         100          const sq = FILES[fileIdx] + RANKS[rankIdx];
+         101          const material = MATERIAL[piece];
+    >>>  102          const pst = PST[piece][rankIdx][fileIdx];
+         103  
+         104          // White piece: positive contribution
+         105          const whiteVal = material + pst;
+
+  scripts/generate-css.js:105
+         102          const pst = PST[piece][rankIdx][fileIdx];
+         103  
+         104          // White piece: positive contribution
+    >>>  105          const whiteVal = material + pst;
+         106          rules.push(`.sq[data-p="w${piece}"][data-s="${sq}"] { --piece-value: ${whiteVal}; }`);
+         107          ruleCount++;
+         108  
+
+  scripts/generate-css.js:109
+         106          rules.push(`.sq[data-p="w${piece}"][data-s="${sq}"] { --piece-value: ${whiteVal}; }`);
+         107          ruleCount++;
+         108  
+    >>>  109          // Black piece: negative contribution, PST mirrored vertically
+         110          const mirroredRankIdx = 7 - rankIdx;
+         111          const blackPst = PST[piece][mirroredRankIdx][fileIdx];
+         112          const blackVal = -(material + blackPst);
+
+  scripts/generate-css.js:111
+         108  
+         109          // Black piece: negative contribution, PST mirrored vertically
+         110          const mirroredRankIdx = 7 - rankIdx;
+    >>>  111          const blackPst = PST[piece][mirroredRankIdx][fileIdx];
+         112          const blackVal = -(material + blackPst);
+         113          rules.push(`.sq[data-p="b${piece}"][data-s="${sq}"] { --piece-value: ${blackVal}; }`);
+         114          ruleCount++;
+
+  scripts/generate-css.js:141
+         138      const file = square.charCodeAt(0) - 'a'.charCodeAt(0);
+         139      const rank = parseInt(square[1]);
+         140  
+    >>>  141      // PST index: rank 8 = row 0, rank 1 = row 7
+         142      const material = MATERIAL[piece];
+         143  
+         144      if (color === 'w') {
+
+  scripts/generate-css.js:146
+         143  
+         144      if (color === 'w') {
+         145        const rankIdx = 8 - rank; // rank 8 → 0, rank 1 → 7
+    >>>  146        const pst = PST[piece][rankIdx][file];
+         147        score += material + pst;
+         148      } else {
+         149        // For black, mirror the PST vertically
+
+  scripts/generate-css.js:147
+         144      if (color === 'w') {
+         145        const rankIdx = 8 - rank; // rank 8 → 0, rank 1 → 7
+         146        const pst = PST[piece][rankIdx][file];
+    >>>  147        score += material + pst;
+         148      } else {
+         149        // For black, mirror the PST vertically
+         150        const rankIdx = rank - 1; // rank 1 → 0, rank 8 → 7 (mirrored)
+
+  scripts/generate-css.js:149
+         146        const pst = PST[piece][rankIdx][file];
+         147        score += material + pst;
+         148      } else {
+    >>>  149        // For black, mirror the PST vertically
+         150        const rankIdx = rank - 1; // rank 1 → 0, rank 8 → 7 (mirrored)
+         151        const pst = PST[piece][rankIdx][file];
+         152        score -= (material + pst);
+
+  scripts/generate-css.js:151
+         148      } else {
+         149        // For black, mirror the PST vertically
+         150        const rankIdx = rank - 1; // rank 1 → 0, rank 8 → 7 (mirrored)
+    >>>  151        const pst = PST[piece][rankIdx][file];
+         152        score -= (material + pst);
+         153      }
+         154    }
+
+  scripts/generate-css.js:152
+         149        // For black, mirror the PST vertically
+         150        const rankIdx = rank - 1; // rank 1 → 0, rank 8 → 7 (mirrored)
+         151        const pst = PST[piece][rankIdx][file];
+    >>>  152        score -= (material + pst);
+         153      }
+         154    }
+         155    return score;
+
+  scripts/generate-css.js:162
+         159    generateEvalCss();
+         160  }
+         161  
+    >>>  162  module.exports = { generateEvalCss, getReferenceEval, MATERIAL, PST };
+
+[NO]  chess-css-codex  (HTML)  — 0 match(es)
+
+[NO]  chess-css-codex-guided  (JavaScript)  — 0 match(es)
+
+[NO]  chess-icon-codex  (Icon)  — 0 match(es)
+
+[YES] chess-java  (Java)  — 4 match(es)
+  src/main/java/com/example/chess/engine/Evaluator.java:82
+          79  
+          80              int type = Piece.typeOf(piece);
+          81              int material = Piece.materialValue(type);
+    >>>   82              int pst = pieceSquareBonus(type, piece > 0 ? square : Square.mirrorForBlack(square));
+          83  
+          84              if (piece > 0) {
+          85                  white += material + pst;
+
+  src/main/java/com/example/chess/engine/Evaluator.java:85
+          82              int pst = pieceSquareBonus(type, piece > 0 ? square : Square.mirrorForBlack(square));
+          83  
+          84              if (piece > 0) {
+    >>>   85                  white += material + pst;
+          86              } else {
+          87                  black += material + pst;
+          88              }
+
+  src/main/java/com/example/chess/engine/Evaluator.java:87
+          84              if (piece > 0) {
+          85                  white += material + pst;
+          86              } else {
+    >>>   87                  black += material + pst;
+          88              }
+          89          }
+          90  
+
+  src/main/java/com/example/chess/engine/Evaluator.java:95
+          92          return board.sideToMove() == 1 ? score : -score;
+          93      }
+          94  
+    >>>   95      private int pieceSquareBonus(int pieceType, int square) {
+          96          switch (pieceType) {
+          97              case Piece.PAWN:
+          98                  return PAWN_PST[square];
+
+[YES] chess-java-cc  (Java)  — 21 match(es)
+  src/main/java/com/chess/engine/Engine.java:8
+           5  import com.chess.engine.move.MoveGenerator;
+           6  import com.chess.engine.board.FEN;
+           7  import com.chess.engine.board.Board;
+    >>>    8  import com.chess.engine.eval.PieceSquareTables;
+           9  import com.chess.engine.uci.UCI;
+          10  
+          11  /**
+
+  src/main/java/com/chess/engine/Engine.java:28
+          25          // Touch classes to force static initialization
+          26          long dummy = AttackTables.KNIGHT_ATTACKS[0];
+          27          dummy ^= MagicBitboards.rookAttacks(0, 0L);
+    >>>   28          dummy ^= PieceSquareTables.MG_TABLE[0][0];
+          29          Board board = FEN.parse(FEN.START_POS);
+          30          MoveGenerator.generateLegalMoves(board);
+          31      }
+
+  src/main/java/com/chess/engine/board/Board.java:53
+          50      /** Pawn Zobrist key (for pawn hash table). */
+          51      public long pawnKey;
+          52  
+    >>>   53      /** Incremental PST scores: [0]=mg, [1]=eg. Updated in make/unmake. */
+          54      public int[] pstScore = new int[2];
+          55  
+          56      /** Game phase (for tapered eval). */
+
+  src/main/java/com/chess/engine/board/Board.java:129
+         126              pawnKey ^= Zobrist.PIECE_KEYS[piece][sq];
+         127          }
+         128          phase += PHASE_VALUES[pieceType];
+    >>>  129          // Incremental PST
+         130          int pstSq = color == WHITE ? sq : sq ^ 56;
+         131          pstScore[0] += com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         132          pstScore[1] += com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+
+  src/main/java/com/chess/engine/board/Board.java:131
+         128          phase += PHASE_VALUES[pieceType];
+         129          // Incremental PST
+         130          int pstSq = color == WHITE ? sq : sq ^ 56;
+    >>>  131          pstScore[0] += com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         132          pstScore[1] += com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         133      }
+         134  
+
+  src/main/java/com/chess/engine/board/Board.java:132
+         129          // Incremental PST
+         130          int pstSq = color == WHITE ? sq : sq ^ 56;
+         131          pstScore[0] += com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+    >>>  132          pstScore[1] += com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         133      }
+         134  
+         135      public void removePiece(int piece, int sq) {
+
+  src/main/java/com/chess/engine/board/Board.java:148
+         145              pawnKey ^= Zobrist.PIECE_KEYS[piece][sq];
+         146          }
+         147          phase -= PHASE_VALUES[pieceType];
+    >>>  148          // Incremental PST
+         149          int pstSq = color == WHITE ? sq : sq ^ 56;
+         150          pstScore[0] -= com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         151          pstScore[1] -= com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+
+  src/main/java/com/chess/engine/board/Board.java:150
+         147          phase -= PHASE_VALUES[pieceType];
+         148          // Incremental PST
+         149          int pstSq = color == WHITE ? sq : sq ^ 56;
+    >>>  150          pstScore[0] -= com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         151          pstScore[1] -= com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         152      }
+         153  
+
+  src/main/java/com/chess/engine/board/Board.java:151
+         148          // Incremental PST
+         149          int pstSq = color == WHITE ? sq : sq ^ 56;
+         150          pstScore[0] -= com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+    >>>  151          pstScore[1] -= com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+         152      }
+         153  
+         154      public void movePiece(int piece, int from, int to) {
+
+  src/main/java/com/chess/engine/board/Board.java:167
+         164          if (pieceType == 0) {
+         165              pawnKey ^= Zobrist.PIECE_KEYS[piece][from] ^ Zobrist.PIECE_KEYS[piece][to];
+         166          }
+    >>>  167          // Incremental PST
+         168          int sign = color == WHITE ? 1 : -1;
+         169          int fromPst = color == WHITE ? from : from ^ 56;
+         170          int toPst = color == WHITE ? to : to ^ 56;
+
+  src/main/java/com/chess/engine/board/Board.java:171
+         168          int sign = color == WHITE ? 1 : -1;
+         169          int fromPst = color == WHITE ? from : from ^ 56;
+         170          int toPst = color == WHITE ? to : to ^ 56;
+    >>>  171          pstScore[0] += sign * (com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][toPst] -
+         172                                 com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][fromPst]);
+         173          pstScore[1] += sign * (com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][toPst] -
+         174                                 com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][fromPst]);
+
+  src/main/java/com/chess/engine/board/Board.java:172
+         169          int fromPst = color == WHITE ? from : from ^ 56;
+         170          int toPst = color == WHITE ? to : to ^ 56;
+         171          pstScore[0] += sign * (com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][toPst] -
+    >>>  172                                 com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][fromPst]);
+         173          pstScore[1] += sign * (com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][toPst] -
+         174                                 com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][fromPst]);
+         175      }
+
+  src/main/java/com/chess/engine/board/Board.java:173
+         170          int toPst = color == WHITE ? to : to ^ 56;
+         171          pstScore[0] += sign * (com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][toPst] -
+         172                                 com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][fromPst]);
+    >>>  173          pstScore[1] += sign * (com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][toPst] -
+         174                                 com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][fromPst]);
+         175      }
+         176  
+
+  src/main/java/com/chess/engine/board/Board.java:174
+         171          pstScore[0] += sign * (com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][toPst] -
+         172                                 com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][fromPst]);
+         173          pstScore[1] += sign * (com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][toPst] -
+    >>>  174                                 com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][fromPst]);
+         175      }
+         176  
+         177      // ---- Make / Unmake ----
+
+  src/main/java/com/chess/engine/eval/Evaluation.java:10
+           7  
+           8  /**
+           9   * Static board evaluation with tapered eval (MG/EG interpolation).
+    >>>   10   * Material + PST + bishop pair + mobility + pawn structure + king safety + tempo.
+          11   */
+          12  public final class Evaluation {
+          13  
+
+  src/main/java/com/chess/engine/eval/Evaluation.java:31
+          28      private Evaluation() {}
+          29  
+          30      public static int evaluate(Board board) {
+    >>>   31          // Use incremental PST scores maintained by Board
+          32          int mgScore = board.pstScore[0];
+          33          int egScore = board.pstScore[1];
+          34          int phase = board.phase;
+
+  src/main/java/com/chess/engine/eval/PieceSquareTables.java:8
+           5   * Tables are from white's perspective; flip for black.
+           6   * Values include material, so MG_TABLE[piece][sq] = MG_MATERIAL + MG_PST[piece][sq].
+           7   */
+    >>>    8  public final class PieceSquareTables {
+           9  
+          10      // Combined material + PST tables: [piece_type 0-5][square 0-63]
+          11      // From white's perspective with a1=0
+
+  src/main/java/com/chess/engine/eval/PieceSquareTables.java:10
+           7   */
+           8  public final class PieceSquareTables {
+           9  
+    >>>   10      // Combined material + PST tables: [piece_type 0-5][square 0-63]
+          11      // From white's perspective with a1=0
+          12      public static final int[][] MG_TABLE = new int[6][64];
+          13      public static final int[][] EG_TABLE = new int[6][64];
+
+  src/main/java/com/chess/engine/eval/PieceSquareTables.java:15
+          12      public static final int[][] MG_TABLE = new int[6][64];
+          13      public static final int[][] EG_TABLE = new int[6][64];
+          14  
+    >>>   15      // PeSTO PST values (from white's perspective, a8=0 layout, need to flip)
+          16      // Pawn MG
+          17      private static final int[] MG_PAWN_TABLE = {
+          18            0,   0,   0,   0,   0,   0,  0,   0,
+
+  src/main/java/com/chess/engine/eval/PieceSquareTables.java:162
+         159  
+         160      static {
+         161          // Convert from a8=index0 layout to a1=index0 (LERF)
+    >>>  162          // The PST arrays above are in rank 8..1 order (a8 first).
+         163          // We need to flip vertically for white's perspective in LERF.
+         164          int[][] mgPst = {MG_PAWN_TABLE, MG_KNIGHT_TABLE, MG_BISHOP_TABLE, MG_ROOK_TABLE, MG_QUEEN_TABLE, MG_KING_TABLE};
+         165          int[][] egPst = {EG_PAWN_TABLE, EG_KNIGHT_TABLE, EG_BISHOP_TABLE, EG_ROOK_TABLE, EG_QUEEN_TABLE, EG_KING_TABLE};
+
+  src/main/java/com/chess/engine/eval/PieceSquareTables.java:179
+         176          }
+         177      }
+         178  
+    >>>  179      private PieceSquareTables() {}
+         180  }
+
+[NO]  chess-latex-codex-replication  (LaTeX)  — 0 match(es)
+
+[NO]  chess-mojo  (Mojo)  — 0 match(es)
+
+[NO]  chess-newlang-codex  (C++)  — 0 match(es)
+
+[NO]  chess-purec  (C)  — 0 match(es)
+
+[NO]  chess-purec-codex  (C)  — 0 match(es)
+
+[YES] chess-py  (Python)  — 13 match(es)
+  chesspy/board.py:24
+          21  )
+          22  from .move import FLAG_CASTLE, FLAG_EP, FLAG_PAWN2, FLAG_NONE, flag, from_sq, make_move, promo_piece, to_sq
+          23  from .squares import coord_to_sq, sq_to_64, sq_to_coord
+    >>>   24  from .zobrist import CASTLING, EP_FILE, PIECE_SQUARE, SIDE, piece_index
+          25  
+          26  
+          27  KNIGHT_DIRS = (31, 33, 14, 18, -31, -33, -14, -18)
+
+  chesspy/board.py:116
+         113                  continue
+         114              piece = self.squares[sq]
+         115              if piece:
+    >>>  116                  key ^= PIECE_SQUARE[piece_index(piece)][sq]
+         117          key ^= CASTLING[self.castling_rights]
+         118          if self.ep_square is not None:
+         119              key ^= EP_FILE[self.ep_square & 7]
+
+  chesspy/board.py:330
+         327  
+         328          # Move piece out
+         329          self.squares[f] = 0
+    >>>  330          self.zobrist_key ^= PIECE_SQUARE[piece_index(piece)][f]
+         331  
+         332          # Captures (incl EP)
+         333          if fl == FLAG_EP:
+
+  chesspy/board.py:337
+         334              captured_sq = t - (16 * self.turn)
+         335              captured = self.squares[captured_sq]
+         336              self.squares[captured_sq] = 0
+    >>>  337              self.zobrist_key ^= PIECE_SQUARE[piece_index(captured)][captured_sq]
+         338          else:
+         339              captured = self.squares[t]
+         340              if captured:
+
+  chesspy/board.py:341
+         338          else:
+         339              captured = self.squares[t]
+         340              if captured:
+    >>>  341                  self.zobrist_key ^= PIECE_SQUARE[piece_index(captured)][t]
+         342  
+         343          # Promotions
+         344          moved_piece = piece
+
+  chesspy/board.py:350
+         347  
+         348          # Place moved piece
+         349          self.squares[t] = moved_piece
+    >>>  350          self.zobrist_key ^= PIECE_SQUARE[piece_index(moved_piece)][t]
+         351  
+         352          # Castling rook move
+         353          if fl == FLAG_CASTLE:
+
+  chesspy/board.py:365
+         362              rook = self.squares[rook_from]
+         363              self.squares[rook_from] = 0
+         364              self.squares[rook_to] = rook
+    >>>  365              self.zobrist_key ^= PIECE_SQUARE[piece_index(rook)][rook_from]
+         366              self.zobrist_key ^= PIECE_SQUARE[piece_index(rook)][rook_to]
+         367  
+         368          # Update king squares
+
+  chesspy/board.py:366
+         363              self.squares[rook_from] = 0
+         364              self.squares[rook_to] = rook
+         365              self.zobrist_key ^= PIECE_SQUARE[piece_index(rook)][rook_from]
+    >>>  366              self.zobrist_key ^= PIECE_SQUARE[piece_index(rook)][rook_to]
+         367  
+         368          # Update king squares
+         369          if abs(piece) == KING:
+
+  chesspy/eval.py:489
+         486      -50,
+         487  ]
+         488  
+    >>>  489  PST = {
+         490      PAWN: PST_PAWN,
+         491      KNIGHT: PST_KNIGHT,
+         492      BISHOP: PST_BISHOP,
+
+  chesspy/eval.py:574
+         571                  white_king_idx = idx
+         572                  white_king_sq = sq
+         573              if ptype != KING:
+    >>>  574                  score += PST[ptype][idx]
+         575          else:
+         576              score -= base
+         577              if ptype == BISHOP:
+
+  chesspy/eval.py:590
+         587                  black_king_idx = idx
+         588                  black_king_sq = sq
+         589              if ptype != KING:
+    >>>  590                  score -= PST[ptype][mirror_64(idx)]
+         591  
+         592          # Mobility bonus (pseudo-legal, ignores pins).
+         593          if ptype in MOBILITY_WEIGHT:
+
+  chesspy/eval.py:628
+         625  
+         626      phase = min(MAX_PHASE, phase)
+         627  
+    >>>  628      # King PST (tapered)
+         629      if white_king_idx is not None:
+         630          score += _blend(PST_KING_MG[white_king_idx], PST_KING_EG[white_king_idx], phase)
+         631      if black_king_idx is not None:
+
+  chesspy/zobrist.py:29
+          26      return base + (ptype - 1)
+          27  
+          28  
+    >>>   29  PIECE_SQUARE = [[_rng.getrandbits(64) for _ in range(128)] for _ in range(12)]
+          30  CASTLING = [_rng.getrandbits(64) for _ in range(16)]
+          31  EP_FILE = [_rng.getrandbits(64) for _ in range(8)]
+          32  SIDE = _rng.getrandbits(64)
+
+[YES] chess-py-cc  (Python)  — 6 match(es)
+  tables/pst.py:17
+          14  PHASE_INC = [0, 0, 1, 1, 2, 4, 0]
+          15  TOTAL_PHASE = 24  # 4 knights + 4 bishops + 4 rooks + 2 queens = 4+4+8+8 = 24
+          16  
+    >>>   17  # PST values are bonus/penalty on top of material value
+          18  # Laid out rank 1..8 (index 0..63 = a1..h8)
+          19  
+          20  # fmt: off
+
+  tables/pst.py:176
+         173      _KING_EG,
+         174  ]
+         175  
+    >>>  176  # Combined tables: material + PST bonus
+         177  # COMBINED_MG[piece_type][square] = piece_value_mg + pst_mg[square]
+         178  COMBINED_MG = [None]  # index 0 unused
+         179  COMBINED_EG = [None]
+
+  engine/board.py:67
+          64          self.fullmove = 1
+          65          self.hash = 0
+          66          self.king_sq = [E1, E8]  # [WHITE, BLACK]
+    >>>   67          # Incremental PST scores
+          68          self.pst_mg = 0
+          69          self.pst_eg = 0
+          70          # History stack for unmake
+
+  engine/evaluate.py:1
+    >>>    1  """Static evaluation: tapered PST + positional terms."""
+           2  
+           3  from engine.types import (
+           4      WHITE, BLACK, PAWN, KNIGHT, BISHOP, ROOK, QUEEN, KING,
+
+  engine/evaluate.py:14
+          11      PAWN_ATTACKS, KNIGHT_ATTACKS, KING_ATTACKS,
+          12      rook_attacks, bishop_attacks, queen_attacks,
+          13  )
+    >>>   14  from tables.pst import COMBINED_MG, COMBINED_EG, PHASE_INC, TOTAL_PHASE
+          15  
+          16  # Evaluation constants
+          17  BISHOP_PAIR_MG = 30
+
+  engine/evaluate.py:97
+          94      b_pawns = board.piece_bb(BLACK, PAWN)
+          95      occ = board.occupied()
+          96  
+    >>>   97      # --- Material + PST (computed from scratch) ---
+          98      for pt in range(1, 7):
+          99          # White pieces
+         100          for sq in iter_bits(board.piece_bb(WHITE, pt)):
+
+[YES] chess-revisit-java-toCOBOL-codex  (COBOL)  — 33 match(es)
+  chess_engine_trace:13821
+        13818  A� �0  �"A� �0  �&A� �0  �.A� �0  �@� �0  �@� �0  �
+        13819  @� �0  �@� �0  �@� �0  �@� �0  �@� �0  �
+        13820  @� �0  �"@� �0  �&@� �0  �*@� �0  �.@� �0  �2@� �0  �6@� �0  �:@� �0  �>@� �0  �B@� �0  �F@� �0  �J@� �0  �N@� �0  �R@� �0  �V@� �0  �Z@� �0  �^@� �0  �b@� �0  �f@� �0  �j@� �0  �n@� �0  �r@� �0  �v@� �0  �z@� �0  �~@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �A� �0  �A� �0  �
+    >>> 13821  A� �0  �A� �0  �A� �0  �2A� �0  �6A� �0  �:A� ִ  src/cobol/chess_engine.cob 3.2  CHESS-ENGINE LEGAL-MOVE TOKEN UCI-LINE FEN-PART-1 FEN-PART-3 Z-CASTLING-KEY Z-EP-KEY B-PIECES B-OCCUPANCY B-PIECE-AT Z-PIECE-KEY-SQ EVAL-MG-SQ EVAL-EG-SQ EVAL-PHASE-INC 0000     FILE-CHARS RANK-CHARS PROMO-CHARS U-MOVE U-ZOBRIST U-PAWN-KEY U-CASTLING U-EP-SQUARE U-HALF-MOVE U-FULL-MOVE U-PST-MG U-PST-EG U-PHASE POS-HISTORY CASTLING-MASK PSEUDO-MOVE CAPTURE-MOVE KNIGHT-ATTACKS KING-ATTACKS PAWN-ATTACK-S PF-DEPTH PF-SIZE PF-IDX PF-MOVE POLY-RANDOM MB-U64-A0 MB-U64-B0 MB-U64-B1 MB-U64-A1 MB-U64-PROD-LOW MB-U64-CROSS-LOW MB-U32-MOD MB-U64-PROD-MOD 00 POLY-BOOK-RECORD POLY-BOOK-KEY POLY-BOOK-MOVE POLY-BOOK-WEIGHT MVV-LVA-ATTACKER KILLER-L1 KILLER-L2 HISTORY-TO TT-KEY TT-DATA ������� ������� POLL-STATE poll EVAL-KN-MOB-MG EVAL-KN-MOB-EG EVAL-BI-MOB-MG EVAL-BI-MOB-EG EVAL-RK-MOB-MG EVAL-RK-MOB-EG PH-KEY PH-SCORE BB-FILE-MASK EVAL-ADJ-FILE EVAL-PASSED-SQ EVAL-PASSED-BONUS SI-PV-LEN SF-SIZE SF-MOVE SF-TT-MOVE SF-PLY SF-SCORE QF-SIZE QF-MOVE QF-SCORE QF-STATE QF-PLY QF-IN-CHECK QF-BEST-SCORE QF-IDX QF-STANDPAT QF-BETA QF-ALPHA QF-CUR-MOVE SF-CUR-MOVE SI-PV-MOVE SF-STATE SF-DEPTH SF-ALPHA SF-BETA SF-IN-CHECK SF-IS-PV SF-STATIC-EVAL SF-NULL-DONE SF-NULL-R SF-ORIG-ALPHA SF-RESEARCH SF-CUR-RSDONE SF-BEST-SCORE SF-BEST-MOVE SF-FLAG SF-IDX SF-CUR-RED SF-CUR-NULLW SF-CUR-QUIET SF-CUR-CHDEPTH SF-CUR-GCHECK MB-ROOK-MASK MB-ROOK-BITS MB-ROOK-SHIFT MB-ROOK-IDX-MASK MB-ROOK-MAGIC MB-ROOK-ATTACK-IDX MB-BISHOP-MASK MB-BISHOP-BITS MB-BISHOP-SHIFT MB-BISHOP-IDX-MASK MB-BISHOP-MAGIC MB-BISHOP-ATTACK-IDX MB-U64-SHIFT-DIV MB-U64-OCC-V MB-U64-MOD MB-U64-MAGIC-V MB-U64-QUOT SEE-GAIN SEE-VALUE BB-RANK-MASK rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1                         PNBRQKpnbrqk abcdefgh 12345678 nbrq book.bin POLY-BOOK-IN 0   uci id name ChessEngine-COBOL id author Translation option name Hash type spin default 64 min 1 max 1024 option name OwnBook type check default true option name BookFile type string default book.bin uciok isready readyok ucinewgame position legal info string legal-size  moves 1 e8attacked 60 info string e8 by white  e8diag d key info string key  draw info string draw   repetition   halfmove  perft Nodes:  Nodes: 0 go setoption stop quit 128 2 wtime btime winc binc movestogo depth movetime infinite 30 10 bestmove  bestmove 0000 name value Hash 1024 OwnBook true BookFile startpos 3 fen 56 b - -1 8 4 5 6 7 9 11 15 61 62 59 58 100 320 330 500 900 20000 10723151780598845931 50 90 1000000 10000 ponderhit 24 13 14 30000 10000000 900000 075 info depth   score mate   nodes   nps   time   score cp  info pv  a 756607761056301088 486389076241424385 72092778679042112 2630106649158748161 180146733941000192 648589814731636770 180146184134856832 2918332697065554048 11529355785708503092 1267187687899136 2490631468938694656 293015506591416352 288934097953489024 3096241940480520 2596606664451031552 281616710647938 9719133065330688 1193595738806829072 576745526890856466 360429257568030720 722829389795952768 9223513324166054400 144397214955930112 576744426307850385 140739637952517 1170971088563208264 19799803437186 942527774937055360 5070958365245568 72061994232053888 10385301842383864320 581848436590281801 329150075794096256 72128031505784833 5197155070050832448 288300890958333970 146649081425430530 581105115214119936 4828149286694814032 2323899487900144641 18049857767899136 9223654062661107744 9516248984046403600 1153765998257045536 577591050391027840 5066584209096708 1152939105383088648 4827859488876920833 180144604161573632 63067988042981952 35188671256320 2469116105206038656 2251817001949568 562984581857792 9227893237937669120 2305843628831998464 4647715366276964609 18014538100186369 2307340820539246849 360850989000950818 5231493951774524418 281767035013651 4611687186792841348 10696191184830530 9917227751251903040 2307114353926610960 2335125204253151232 7099935816794769416 1130435459416064 72200668527460369 13836258868546633738 11400320691298305 288310780225421568 144612171694473348 37163495452180496 8935681818720 2305988166290530304 3459059462248091652 1155173665466746882 9314574473536473344 146375853238993920 20266336064686592 1087641317556690952 1154047576346992641 594756660686751761 18049591482261512 140738897911808 9800118663272763392 369299586550874768 1154051803924398209 2306414859195514913 1126724741955906 10670162350880858112 457257199186501649 110345957249649152 5188217414386523136 73258399252365824 365081849510826017 1128253566878720 9277419647610126624 9241387535958149122 324401040235561104 72621153876968002 578994379315020032 9223937469837230208 302023234194513920 7036977531065344 144116571189805184 3677198029416300800 292751911566753824 4616754818640315144 2342470636376440960 76847071520890880 7494838608309258752 2378182361733988352 9367487226022232098 2269924327424 634426866335808 18032007883821056 586040256495747604 18155688169644036 40816225332369609 288935455733403656 40533771111638032 281476087169285 4504184552499712 2675147045886527752 4616224805122081088 82 47 81 67 106 120 78 72 85 115 70 55 80 77 94 99 88 92 57 68 95 103 105 76 89 108 113 147 138 107 180 216 143 177 150 208 116 71 232 316 279 304 309 318 314 308 284 325 334 336 355 323 328 349 347 356 354 362 321 324 341 353 350 365 358 329 390 374 406 359 290 397 402 421 466 410 381 264 296 409 373 360 399 344 170 248 303 288 398 240 322 230 332 351 352 326 369 380 372 386 366 379 392 383 375 378 391 377 361 370 384 415 363 408 405 400 339 395 424 283 340 357 458 464 478 494 493 484 440 451 433 461 457 468 476 488 471 432 452 460 480 477 472 444 441 465 486 470 483 454 453 503 501 512 469 496 513 522 538 504 509 535 539 557 544 521 519 528 540 508 520 1007 1016 1036 1000 994 975 998 990 1017 1027 1033 1040 1022 1026 1011 1014 1023 1020 1039 1030 999 1015 1021 1028 1009 1042 1012 1008 1032 1054 1081 1072 1082 1001 986 1053 1079 997 1025 1037 1084 1069 1068 1070 -15 36 12 -54 -28 -8 -64 -43 -16 -14 -22 -46 -44 -30 -27 -49 -39 -33 -51 -17 -20 -12 -25 -36 -9 22 29 -7 -4 -38 -29 -65 23 16 -56 -34 102 84 104 98 101 93 86 91 87 97 126 118 111 188 194 179 161 176 178 272 267 252 228 241 226 259 281 258 266 263 231 217 239 261 271 276 237 278 280 291 275 297 306 298 285 292 289 257 262 256 273 229 223 243 268 253 250 254 218 182 274 301 282 270 294 305 307 310 300 311 299 295 293 286 514 515 511 507 499 516 492 506 505 517 525 523 530 527 524 903 908 914 893 931 904 916 895 913 906 920 909 951 942 945 953 946 941 918 964 955 983 967 970 959 939 958 960 981 993 976 972 985 971 919 956 968 977 961 966 936 927 963 -53 -21 -11 -24 -5 -19 -3 21 -18 27 26 33 17 20 45 44 38 -74 -35 35 -10 18 -40 28 25 31 1070372 info string e8 pawn  info string e8 knight  info string e8 bishopq  info string e8 rookq  info string e8 king  info string FEN part1= info string side=  castling= info string ep=  half=  full= info string a4-piece=  d7-piece=  d6-piece= Feb 20 2026 20:32:33 64 2685821657736338717 4294967296 18446744073709551616 225 200 2047 16383 255 48 65535 32 4294967295 29000 63   !                   A             @          	   A                                       "                                     CHESS-ENGINE MAIN-ENTRY INIT-ENGINE UCI-LOOP HANDLE-GO HANDLE-SETOPTION HANDLE-POSITION TOKENIZE-LINE PARSE-FEN FEN-CHAR-TO-PIECE BOARD-CLEAR BOARD-PUT-PIECE       A         BOARD-REMOVE-PIECE BOARD-MOVE-PIECE MOVE-ENCODE MOVE-DECODE MOVE-TO-UCI PARSE-UCI-MOVE BOARD-MAKE-MOVE BOARD-UNMAKE-MOVE BOARD-MAKE-NULL-MOVE BOARD-UNMAKE-NULL-MOVE UPDATE-CASTLING-RIGHTS IS-REPETITION IS-INSUFFICIENT-MATERIAL IS-DRAW GENERATE-LEGAL-MOVES GENERATE-LEGAL-CAPTURES GENERATE-PSEUDO-MOVES GENERATE-PAWN-MOVES GENERATE-KNIGHT-MOVES GENERATE-BISHOP-MOVES GENERATE-ROOK-MOVES GENERATE-QUEEN-MOVES ADD-SLIDING-MOVES GENERATE-KING-MOVES GENERATE-CASTLING-MOVES ADD-PSEUDO-MOVE ADD-PROMOTION-MOVES FIND-KING-SQUARE IS-SQUARE-ATTACKED BISHOP-ATTACKS-SLOW ROOK-ATTACKS-SLOW RUN-PERFT INIT-SEE INIT-POLYGLOT POLY-NEXT-RANDOM U64-MUL-MOD POLY-BOOK-LOAD POLY-DECODE-ENTRY POLY-BOOK-PROBE POLY-COMPUTE-KEY POLY-MAP-PIECE POLY-CONVERT-MOVE INIT-SEARCH INIT-MVV-LVA KILLERS-CLEAR KILLER-STORE HISTORY-CLEAR HISTORY-AGE HISTORY-UPDATE TT-CONFIGURE TT-CLEAR TT-SCORE-TO-STORE TT-SCORE-FROM-PROBE TT-PROBE TT-STORE GET-TIME-MS CHECK-TIME POLL-UCI-DURING-SEARCH PIECE-TYPE-VALUE EVALUATE-POSITION EVALUATE-MOBILITY EVAL-BITCOUNT-MASK EVALUATE-PAWN-STRUCTURE EVALUATE-PAWNS-FOR-COLOR EVALUATE-KING-SAFETY EVALUATE-KING-FOR-COLOR IS-IN-CHECK HAS-NONPAWN-MATERIAL SEARCH-RESET RUN-SEARCH SEARCH-SCORE-MOVES SEARCH-PICK-BEST QUIESC-SCORE-MOVES QUIESC-PICK-BEST QUIESC-RETURN-NODE SEARCH-QUIESCENCE SEARCH-UPDATE-PV SEARCH-RETURN-NODE SEARCH-NEGAMAX PRINT-SEARCH-INFO CHAR-PAIR-TO-SQUARE BIT-OF-SQ INIT-MAGIC-BITBOARDS INIT-MAGIC-U64 MAGIC-COMPUTE-INDEX MAGIC-BITCOUNT-MASK MAGIC-ROOK-MASK-FROM-SQ MAGIC-BISHOP-MASK-FROM-SQ ROOK-ATTACKS-BLOCKERS-SLOW BISHOP-ATTACKS-BLOCKERS-SLOW ROOK-ATTACKS-MAGIC ROOK-ATTACKS-MAGIC-OCC BISHOP-ATTACKS-MAGIC BISHOP-ATTACKS-MAGIC-OCC QUEEN-ATTACKS-MAGIC SEE-EVALUATE SEE-GE SEE-GET-SMALLEST-ATTACKER SEE-FIRST-BIT-SQUARE INIT-MAGIC-CONSTANTS LOAD-EVAL-TABLES INIT-EVALUATION INIT-EVAL-PAWN-TABLES INIT-ZOBRIST Z-NEXT-RANDOM RESET-POSITION-HISTORY INIT-BITBOARD-MASKS INIT-CASTLING-MASKS INIT-ATTACK-TABLES ADD-ATTACK-IF-ONBOARD DEBUG-E8-DIAG DEBUG-DUMP                     "               !                                                                                                                                                                                                                              
+        13822                            
+        13823                         
+        13824         
+
+  src/cobol/chess_engine.cob:123
+         120             05  B-FULL-MOVE           PIC S9(4) COMP-5 VALUE 1.
+         121             05  B-ZOBRIST-KEY         USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+         122             05  B-PAWN-KEY            USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+    >>>  123             05  B-PST-MG              PIC S9(9) COMP-5 VALUE 0.
+         124             05  B-PST-EG              PIC S9(9) COMP-5 VALUE 0.
+         125             05  B-PHASE               PIC S9(4) COMP-5 VALUE 0.
+         126  
+
+  src/cobol/chess_engine.cob:124
+         121             05  B-ZOBRIST-KEY         USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+         122             05  B-PAWN-KEY            USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+         123             05  B-PST-MG              PIC S9(9) COMP-5 VALUE 0.
+    >>>  124             05  B-PST-EG              PIC S9(9) COMP-5 VALUE 0.
+         125             05  B-PHASE               PIC S9(4) COMP-5 VALUE 0.
+         126  
+         127         01  ZOBRIST-TABLES.
+
+  src/cobol/chess_engine.cob:286
+         283             05  U-EP-SQUARE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE -1.
+         284             05  U-HALF-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         285             05  U-FULL-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 1.
+    >>>  286             05  U-PST-MG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+         287             05  U-PST-EG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+         288             05  U-PHASE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         289  
+
+  src/cobol/chess_engine.cob:287
+         284             05  U-HALF-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         285             05  U-FULL-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 1.
+         286             05  U-PST-MG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+    >>>  287             05  U-PST-EG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+         288             05  U-PHASE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         289  
+         290         01  CASTLING-MASKS.
+
+  src/cobol/chess_engine.cob:1166
+        1163             MOVE 1 TO B-FULL-MOVE
+        1164             MOVE 0 TO B-ZOBRIST-KEY
+        1165             MOVE 0 TO B-PAWN-KEY
+    >>> 1166             MOVE 0 TO B-PST-MG
+        1167             MOVE 0 TO B-PST-EG
+        1168             MOVE 0 TO B-PHASE
+        1169             MOVE 0 TO B-PLY
+
+  src/cobol/chess_engine.cob:1167
+        1164             MOVE 0 TO B-ZOBRIST-KEY
+        1165             MOVE 0 TO B-PAWN-KEY
+        1166             MOVE 0 TO B-PST-MG
+    >>> 1167             MOVE 0 TO B-PST-EG
+        1168             MOVE 0 TO B-PHASE
+        1169             MOVE 0 TO B-PLY
+        1170             MOVE 0 TO POS-HISTORY-COUNT
+
+  src/cobol/chess_engine.cob:1211
+        1208                 IF PIECE-COLOR = WHITE
+        1209                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1210                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1211                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+        1212                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1213                     END-IF
+        1214                 ELSE
+
+  src/cobol/chess_engine.cob:1212
+        1209                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1210                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1211                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+    >>> 1212                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1213                     END-IF
+        1214                 ELSE
+        1215                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+
+  src/cobol/chess_engine.cob:1217
+        1214                 ELSE
+        1215                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1216                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1217                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+        1218                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1219                     END-IF
+        1220                 END-IF
+
+  src/cobol/chess_engine.cob:1218
+        1215                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1216                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1217                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+    >>> 1218                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1219                     END-IF
+        1220                 END-IF
+        1221                 ADD EVAL-PHASE-INC(TMP-INT) TO B-PHASE
+
+  src/cobol/chess_engine.cob:1261
+        1258                 IF PIECE-COLOR = WHITE
+        1259                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1260                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1261                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+        1262                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1263                     END-IF
+        1264                 ELSE
+
+  src/cobol/chess_engine.cob:1262
+        1259                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1260                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1261                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+    >>> 1262                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1263                     END-IF
+        1264                 ELSE
+        1265                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+
+  src/cobol/chess_engine.cob:1267
+        1264                 ELSE
+        1265                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1266                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1267                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+        1268                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1269                     END-IF
+        1270                 END-IF
+
+  src/cobol/chess_engine.cob:1268
+        1265                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1266                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1267                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+    >>> 1268                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1269                     END-IF
+        1270                 END-IF
+        1271                 SUBTRACT EVAL-PHASE-INC(TMP-INT) FROM B-PHASE
+
+  src/cobol/chess_engine.cob:1326
+        1323                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1324                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1325                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+        1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+        1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+        1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+
+  src/cobol/chess_engine.cob:1327
+        1324                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1325                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+    >>> 1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+        1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+        1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+        1330                     END-IF
+
+  src/cobol/chess_engine.cob:1328
+        1325                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+        1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+    >>> 1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+        1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+        1330                     END-IF
+        1331                 ELSE
+
+  src/cobol/chess_engine.cob:1329
+        1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+        1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+        1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+    >>> 1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+        1330                     END-IF
+        1331                 ELSE
+        1332                     COMPUTE TMP-INT = (FROM-SQ B-XOR 56) + 1
+
+  src/cobol/chess_engine.cob:1336
+        1333                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1334                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1335                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+        1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+        1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+        1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+
+  src/cobol/chess_engine.cob:1337
+        1334                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1335                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+    >>> 1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+        1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+        1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+        1340                     END-IF
+
+  src/cobol/chess_engine.cob:1338
+        1335                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+        1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+    >>> 1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+        1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+        1340                     END-IF
+        1341                 END-IF
+
+  src/cobol/chess_engine.cob:1339
+        1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+        1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+        1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+    >>> 1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+        1340                     END-IF
+        1341                 END-IF
+        1342             END-IF
+
+  src/cobol/chess_engine.cob:1454
+        1451             MOVE B-EP-SQUARE TO U-EP-SQUARE(B-PLY)
+        1452             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1453             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+    >>> 1454             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+        1455             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1456             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1457  
+
+  src/cobol/chess_engine.cob:1455
+        1452             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1453             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+        1454             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+    >>> 1455             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1456             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1457  
+        1458             PERFORM MOVE-DECODE
+
+  src/cobol/chess_engine.cob:1672
+        1669             MOVE U-EP-SQUARE(B-PLY) TO B-EP-SQUARE
+        1670             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1671             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+    >>> 1672             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+        1673             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1674             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1675             SUBTRACT 1 FROM B-PLY
+
+  src/cobol/chess_engine.cob:1673
+        1670             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1671             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+        1672             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+    >>> 1673             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1674             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1675             SUBTRACT 1 FROM B-PLY
+        1676             .
+
+  src/cobol/chess_engine.cob:1691
+        1688             MOVE B-EP-SQUARE TO U-EP-SQUARE(B-PLY)
+        1689             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1690             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+    >>> 1691             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+        1692             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1693             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1694  
+
+  src/cobol/chess_engine.cob:1692
+        1689             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1690             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+        1691             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+    >>> 1692             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1693             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1694  
+        1695             IF B-EP-SQUARE NOT = -1
+
+  src/cobol/chess_engine.cob:1735
+        1732             MOVE U-EP-SQUARE(B-PLY) TO B-EP-SQUARE
+        1733             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1734             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+    >>> 1735             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+        1736             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1737             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1738             SUBTRACT 1 FROM B-PLY
+
+  src/cobol/chess_engine.cob:1736
+        1733             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1734             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+        1735             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+    >>> 1736             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1737             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1738             SUBTRACT 1 FROM B-PLY
+        1739             .
+
+  src/cobol/chess_engine.cob:3101
+        3098             .
+        3099  
+        3100         EVALUATE-POSITION.
+    >>> 3101             MOVE B-PST-MG TO EVAL-MG-SCORE
+        3102             MOVE B-PST-EG TO EVAL-EG-SCORE
+        3103             MOVE B-PHASE TO EVAL-PHASE
+        3104  
+
+  src/cobol/chess_engine.cob:3102
+        3099  
+        3100         EVALUATE-POSITION.
+        3101             MOVE B-PST-MG TO EVAL-MG-SCORE
+    >>> 3102             MOVE B-PST-EG TO EVAL-EG-SCORE
+        3103             MOVE B-PHASE TO EVAL-PHASE
+        3104  
+        3105             COMPUTE I = WB + 1
+
+[YES] chess-revisit-java-toRust-codex  (COBOL)  — 44 match(es)
+  chess-revisit-java-toCOBOL/chess_engine_trace:13821
+        13818  A� �0  �"A� �0  �&A� �0  �.A� �0  �@� �0  �@� �0  �
+        13819  @� �0  �@� �0  �@� �0  �@� �0  �@� �0  �
+        13820  @� �0  �"@� �0  �&@� �0  �*@� �0  �.@� �0  �2@� �0  �6@� �0  �:@� �0  �>@� �0  �B@� �0  �F@� �0  �J@� �0  �N@� �0  �R@� �0  �V@� �0  �Z@� �0  �^@� �0  �b@� �0  �f@� �0  �j@� �0  �n@� �0  �r@� �0  �v@� �0  �z@� �0  �~@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �A� �0  �A� �0  �
+    >>> 13821  A� �0  �A� �0  �A� �0  �2A� �0  �6A� �0  �:A� ִ  src/cobol/chess_engine.cob 3.2  CHESS-ENGINE LEGAL-MOVE TOKEN UCI-LINE FEN-PART-1 FEN-PART-3 Z-CASTLING-KEY Z-EP-KEY B-PIECES B-OCCUPANCY B-PIECE-AT Z-PIECE-KEY-SQ EVAL-MG-SQ EVAL-EG-SQ EVAL-PHASE-INC 0000     FILE-CHARS RANK-CHARS PROMO-CHARS U-MOVE U-ZOBRIST U-PAWN-KEY U-CASTLING U-EP-SQUARE U-HALF-MOVE U-FULL-MOVE U-PST-MG U-PST-EG U-PHASE POS-HISTORY CASTLING-MASK PSEUDO-MOVE CAPTURE-MOVE KNIGHT-ATTACKS KING-ATTACKS PAWN-ATTACK-S PF-DEPTH PF-SIZE PF-IDX PF-MOVE POLY-RANDOM MB-U64-A0 MB-U64-B0 MB-U64-B1 MB-U64-A1 MB-U64-PROD-LOW MB-U64-CROSS-LOW MB-U32-MOD MB-U64-PROD-MOD 00 POLY-BOOK-RECORD POLY-BOOK-KEY POLY-BOOK-MOVE POLY-BOOK-WEIGHT MVV-LVA-ATTACKER KILLER-L1 KILLER-L2 HISTORY-TO TT-KEY TT-DATA ������� ������� POLL-STATE poll EVAL-KN-MOB-MG EVAL-KN-MOB-EG EVAL-BI-MOB-MG EVAL-BI-MOB-EG EVAL-RK-MOB-MG EVAL-RK-MOB-EG PH-KEY PH-SCORE BB-FILE-MASK EVAL-ADJ-FILE EVAL-PASSED-SQ EVAL-PASSED-BONUS SI-PV-LEN SF-SIZE SF-MOVE SF-TT-MOVE SF-PLY SF-SCORE QF-SIZE QF-MOVE QF-SCORE QF-STATE QF-PLY QF-IN-CHECK QF-BEST-SCORE QF-IDX QF-STANDPAT QF-BETA QF-ALPHA QF-CUR-MOVE SF-CUR-MOVE SI-PV-MOVE SF-STATE SF-DEPTH SF-ALPHA SF-BETA SF-IN-CHECK SF-IS-PV SF-STATIC-EVAL SF-NULL-DONE SF-NULL-R SF-ORIG-ALPHA SF-RESEARCH SF-CUR-RSDONE SF-BEST-SCORE SF-BEST-MOVE SF-FLAG SF-IDX SF-CUR-RED SF-CUR-NULLW SF-CUR-QUIET SF-CUR-CHDEPTH SF-CUR-GCHECK MB-ROOK-MASK MB-ROOK-BITS MB-ROOK-SHIFT MB-ROOK-IDX-MASK MB-ROOK-MAGIC MB-ROOK-ATTACK-IDX MB-BISHOP-MASK MB-BISHOP-BITS MB-BISHOP-SHIFT MB-BISHOP-IDX-MASK MB-BISHOP-MAGIC MB-BISHOP-ATTACK-IDX MB-U64-SHIFT-DIV MB-U64-OCC-V MB-U64-MOD MB-U64-MAGIC-V MB-U64-QUOT SEE-GAIN SEE-VALUE BB-RANK-MASK rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1                         PNBRQKpnbrqk abcdefgh 12345678 nbrq book.bin POLY-BOOK-IN 0   uci id name ChessEngine-COBOL id author Translation option name Hash type spin default 64 min 1 max 1024 option name OwnBook type check default true option name BookFile type string default book.bin uciok isready readyok ucinewgame position legal info string legal-size  moves 1 e8attacked 60 info string e8 by white  e8diag d key info string key  draw info string draw   repetition   halfmove  perft Nodes:  Nodes: 0 go setoption stop quit 128 2 wtime btime winc binc movestogo depth movetime infinite 30 10 bestmove  bestmove 0000 name value Hash 1024 OwnBook true BookFile startpos 3 fen 56 b - -1 8 4 5 6 7 9 11 15 61 62 59 58 100 320 330 500 900 20000 10723151780598845931 50 90 1000000 10000 ponderhit 24 13 14 30000 10000000 900000 075 info depth   score mate   nodes   nps   time   score cp  info pv  a 756607761056301088 486389076241424385 72092778679042112 2630106649158748161 180146733941000192 648589814731636770 180146184134856832 2918332697065554048 11529355785708503092 1267187687899136 2490631468938694656 293015506591416352 288934097953489024 3096241940480520 2596606664451031552 281616710647938 9719133065330688 1193595738806829072 576745526890856466 360429257568030720 722829389795952768 9223513324166054400 144397214955930112 576744426307850385 140739637952517 1170971088563208264 19799803437186 942527774937055360 5070958365245568 72061994232053888 10385301842383864320 581848436590281801 329150075794096256 72128031505784833 5197155070050832448 288300890958333970 146649081425430530 581105115214119936 4828149286694814032 2323899487900144641 18049857767899136 9223654062661107744 9516248984046403600 1153765998257045536 577591050391027840 5066584209096708 1152939105383088648 4827859488876920833 180144604161573632 63067988042981952 35188671256320 2469116105206038656 2251817001949568 562984581857792 9227893237937669120 2305843628831998464 4647715366276964609 18014538100186369 2307340820539246849 360850989000950818 5231493951774524418 281767035013651 4611687186792841348 10696191184830530 9917227751251903040 2307114353926610960 2335125204253151232 7099935816794769416 1130435459416064 72200668527460369 13836258868546633738 11400320691298305 288310780225421568 144612171694473348 37163495452180496 8935681818720 2305988166290530304 3459059462248091652 1155173665466746882 9314574473536473344 146375853238993920 20266336064686592 1087641317556690952 1154047576346992641 594756660686751761 18049591482261512 140738897911808 9800118663272763392 369299586550874768 1154051803924398209 2306414859195514913 1126724741955906 10670162350880858112 457257199186501649 110345957249649152 5188217414386523136 73258399252365824 365081849510826017 1128253566878720 9277419647610126624 9241387535958149122 324401040235561104 72621153876968002 578994379315020032 9223937469837230208 302023234194513920 7036977531065344 144116571189805184 3677198029416300800 292751911566753824 4616754818640315144 2342470636376440960 76847071520890880 7494838608309258752 2378182361733988352 9367487226022232098 2269924327424 634426866335808 18032007883821056 586040256495747604 18155688169644036 40816225332369609 288935455733403656 40533771111638032 281476087169285 4504184552499712 2675147045886527752 4616224805122081088 82 47 81 67 106 120 78 72 85 115 70 55 80 77 94 99 88 92 57 68 95 103 105 76 89 108 113 147 138 107 180 216 143 177 150 208 116 71 232 316 279 304 309 318 314 308 284 325 334 336 355 323 328 349 347 356 354 362 321 324 341 353 350 365 358 329 390 374 406 359 290 397 402 421 466 410 381 264 296 409 373 360 399 344 170 248 303 288 398 240 322 230 332 351 352 326 369 380 372 386 366 379 392 383 375 378 391 377 361 370 384 415 363 408 405 400 339 395 424 283 340 357 458 464 478 494 493 484 440 451 433 461 457 468 476 488 471 432 452 460 480 477 472 444 441 465 486 470 483 454 453 503 501 512 469 496 513 522 538 504 509 535 539 557 544 521 519 528 540 508 520 1007 1016 1036 1000 994 975 998 990 1017 1027 1033 1040 1022 1026 1011 1014 1023 1020 1039 1030 999 1015 1021 1028 1009 1042 1012 1008 1032 1054 1081 1072 1082 1001 986 1053 1079 997 1025 1037 1084 1069 1068 1070 -15 36 12 -54 -28 -8 -64 -43 -16 -14 -22 -46 -44 -30 -27 -49 -39 -33 -51 -17 -20 -12 -25 -36 -9 22 29 -7 -4 -38 -29 -65 23 16 -56 -34 102 84 104 98 101 93 86 91 87 97 126 118 111 188 194 179 161 176 178 272 267 252 228 241 226 259 281 258 266 263 231 217 239 261 271 276 237 278 280 291 275 297 306 298 285 292 289 257 262 256 273 229 223 243 268 253 250 254 218 182 274 301 282 270 294 305 307 310 300 311 299 295 293 286 514 515 511 507 499 516 492 506 505 517 525 523 530 527 524 903 908 914 893 931 904 916 895 913 906 920 909 951 942 945 953 946 941 918 964 955 983 967 970 959 939 958 960 981 993 976 972 985 971 919 956 968 977 961 966 936 927 963 -53 -21 -11 -24 -5 -19 -3 21 -18 27 26 33 17 20 45 44 38 -74 -35 35 -10 18 -40 28 25 31 1070372 info string e8 pawn  info string e8 knight  info string e8 bishopq  info string e8 rookq  info string e8 king  info string FEN part1= info string side=  castling= info string ep=  half=  full= info string a4-piece=  d7-piece=  d6-piece= Feb 20 2026 20:32:33 64 2685821657736338717 4294967296 18446744073709551616 225 200 2047 16383 255 48 65535 32 4294967295 29000 63   !                   A             @          	   A                                       "                                     CHESS-ENGINE MAIN-ENTRY INIT-ENGINE UCI-LOOP HANDLE-GO HANDLE-SETOPTION HANDLE-POSITION TOKENIZE-LINE PARSE-FEN FEN-CHAR-TO-PIECE BOARD-CLEAR BOARD-PUT-PIECE       A         BOARD-REMOVE-PIECE BOARD-MOVE-PIECE MOVE-ENCODE MOVE-DECODE MOVE-TO-UCI PARSE-UCI-MOVE BOARD-MAKE-MOVE BOARD-UNMAKE-MOVE BOARD-MAKE-NULL-MOVE BOARD-UNMAKE-NULL-MOVE UPDATE-CASTLING-RIGHTS IS-REPETITION IS-INSUFFICIENT-MATERIAL IS-DRAW GENERATE-LEGAL-MOVES GENERATE-LEGAL-CAPTURES GENERATE-PSEUDO-MOVES GENERATE-PAWN-MOVES GENERATE-KNIGHT-MOVES GENERATE-BISHOP-MOVES GENERATE-ROOK-MOVES GENERATE-QUEEN-MOVES ADD-SLIDING-MOVES GENERATE-KING-MOVES GENERATE-CASTLING-MOVES ADD-PSEUDO-MOVE ADD-PROMOTION-MOVES FIND-KING-SQUARE IS-SQUARE-ATTACKED BISHOP-ATTACKS-SLOW ROOK-ATTACKS-SLOW RUN-PERFT INIT-SEE INIT-POLYGLOT POLY-NEXT-RANDOM U64-MUL-MOD POLY-BOOK-LOAD POLY-DECODE-ENTRY POLY-BOOK-PROBE POLY-COMPUTE-KEY POLY-MAP-PIECE POLY-CONVERT-MOVE INIT-SEARCH INIT-MVV-LVA KILLERS-CLEAR KILLER-STORE HISTORY-CLEAR HISTORY-AGE HISTORY-UPDATE TT-CONFIGURE TT-CLEAR TT-SCORE-TO-STORE TT-SCORE-FROM-PROBE TT-PROBE TT-STORE GET-TIME-MS CHECK-TIME POLL-UCI-DURING-SEARCH PIECE-TYPE-VALUE EVALUATE-POSITION EVALUATE-MOBILITY EVAL-BITCOUNT-MASK EVALUATE-PAWN-STRUCTURE EVALUATE-PAWNS-FOR-COLOR EVALUATE-KING-SAFETY EVALUATE-KING-FOR-COLOR IS-IN-CHECK HAS-NONPAWN-MATERIAL SEARCH-RESET RUN-SEARCH SEARCH-SCORE-MOVES SEARCH-PICK-BEST QUIESC-SCORE-MOVES QUIESC-PICK-BEST QUIESC-RETURN-NODE SEARCH-QUIESCENCE SEARCH-UPDATE-PV SEARCH-RETURN-NODE SEARCH-NEGAMAX PRINT-SEARCH-INFO CHAR-PAIR-TO-SQUARE BIT-OF-SQ INIT-MAGIC-BITBOARDS INIT-MAGIC-U64 MAGIC-COMPUTE-INDEX MAGIC-BITCOUNT-MASK MAGIC-ROOK-MASK-FROM-SQ MAGIC-BISHOP-MASK-FROM-SQ ROOK-ATTACKS-BLOCKERS-SLOW BISHOP-ATTACKS-BLOCKERS-SLOW ROOK-ATTACKS-MAGIC ROOK-ATTACKS-MAGIC-OCC BISHOP-ATTACKS-MAGIC BISHOP-ATTACKS-MAGIC-OCC QUEEN-ATTACKS-MAGIC SEE-EVALUATE SEE-GE SEE-GET-SMALLEST-ATTACKER SEE-FIRST-BIT-SQUARE INIT-MAGIC-CONSTANTS LOAD-EVAL-TABLES INIT-EVALUATION INIT-EVAL-PAWN-TABLES INIT-ZOBRIST Z-NEXT-RANDOM RESET-POSITION-HISTORY INIT-BITBOARD-MASKS INIT-CASTLING-MASKS INIT-ATTACK-TABLES ADD-ATTACK-IF-ONBOARD DEBUG-E8-DIAG DEBUG-DUMP                     "               !                                                                                                                                                                                                                              
+        13822                            
+        13823                         
+        13824         
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:123
+         120             05  B-FULL-MOVE           PIC S9(4) COMP-5 VALUE 1.
+         121             05  B-ZOBRIST-KEY         USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+         122             05  B-PAWN-KEY            USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+    >>>  123             05  B-PST-MG              PIC S9(9) COMP-5 VALUE 0.
+         124             05  B-PST-EG              PIC S9(9) COMP-5 VALUE 0.
+         125             05  B-PHASE               PIC S9(4) COMP-5 VALUE 0.
+         126  
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:124
+         121             05  B-ZOBRIST-KEY         USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+         122             05  B-PAWN-KEY            USAGE BINARY-LONG-LONG UNSIGNED VALUE 0.
+         123             05  B-PST-MG              PIC S9(9) COMP-5 VALUE 0.
+    >>>  124             05  B-PST-EG              PIC S9(9) COMP-5 VALUE 0.
+         125             05  B-PHASE               PIC S9(4) COMP-5 VALUE 0.
+         126  
+         127         01  ZOBRIST-TABLES.
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:286
+         283             05  U-EP-SQUARE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE -1.
+         284             05  U-HALF-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         285             05  U-FULL-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 1.
+    >>>  286             05  U-PST-MG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+         287             05  U-PST-EG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+         288             05  U-PHASE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         289  
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:287
+         284             05  U-HALF-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         285             05  U-FULL-MOVE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 1.
+         286             05  U-PST-MG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+    >>>  287             05  U-PST-EG OCCURS MAX-PLY TIMES PIC S9(9) COMP-5 VALUE 0.
+         288             05  U-PHASE OCCURS MAX-PLY TIMES PIC S9(4) COMP-5 VALUE 0.
+         289  
+         290         01  CASTLING-MASKS.
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1166
+        1163             MOVE 1 TO B-FULL-MOVE
+        1164             MOVE 0 TO B-ZOBRIST-KEY
+        1165             MOVE 0 TO B-PAWN-KEY
+    >>> 1166             MOVE 0 TO B-PST-MG
+        1167             MOVE 0 TO B-PST-EG
+        1168             MOVE 0 TO B-PHASE
+        1169             MOVE 0 TO B-PLY
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1167
+        1164             MOVE 0 TO B-ZOBRIST-KEY
+        1165             MOVE 0 TO B-PAWN-KEY
+        1166             MOVE 0 TO B-PST-MG
+    >>> 1167             MOVE 0 TO B-PST-EG
+        1168             MOVE 0 TO B-PHASE
+        1169             MOVE 0 TO B-PLY
+        1170             MOVE 0 TO POS-HISTORY-COUNT
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1211
+        1208                 IF PIECE-COLOR = WHITE
+        1209                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1210                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1211                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+        1212                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1213                     END-IF
+        1214                 ELSE
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1212
+        1209                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1210                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1211                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+    >>> 1212                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1213                     END-IF
+        1214                 ELSE
+        1215                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1217
+        1214                 ELSE
+        1215                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1216                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1217                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+        1218                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1219                     END-IF
+        1220                 END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1218
+        1215                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1216                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1217                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+    >>> 1218                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1219                     END-IF
+        1220                 END-IF
+        1221                 ADD EVAL-PHASE-INC(TMP-INT) TO B-PHASE
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1261
+        1258                 IF PIECE-COLOR = WHITE
+        1259                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1260                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1261                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+        1262                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1263                     END-IF
+        1264                 ELSE
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1262
+        1259                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1260                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1261                         SUBTRACT EVAL-MG-SQ(TMP-INT TMP-INT-2) FROM B-PST-MG
+    >>> 1262                         SUBTRACT EVAL-EG-SQ(TMP-INT TMP-INT-2) FROM B-PST-EG
+        1263                     END-IF
+        1264                 ELSE
+        1265                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1267
+        1264                 ELSE
+        1265                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1266                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1267                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+        1268                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1269                     END-IF
+        1270                 END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1268
+        1265                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1266                     IF TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1267                         ADD EVAL-MG-SQ(TMP-INT TMP-INT-2) TO B-PST-MG
+    >>> 1268                         ADD EVAL-EG-SQ(TMP-INT TMP-INT-2) TO B-PST-EG
+        1269                     END-IF
+        1270                 END-IF
+        1271                 SUBTRACT EVAL-PHASE-INC(TMP-INT) FROM B-PHASE
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1326
+        1323                     COMPUTE TMP-INT-2 = TO-SQ + 1
+        1324                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1325                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+        1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+        1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+        1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1327
+        1324                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1325                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+    >>> 1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+        1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+        1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+        1330                     END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1328
+        1325                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+        1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+    >>> 1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+        1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+        1330                     END-IF
+        1331                 ELSE
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1329
+        1326                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-MG
+        1327                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-MG
+        1328                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) TO B-PST-EG
+    >>> 1329                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT) FROM B-PST-EG
+        1330                     END-IF
+        1331                 ELSE
+        1332                     COMPUTE TMP-INT = (FROM-SQ B-XOR 56) + 1
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1336
+        1333                     COMPUTE TMP-INT-2 = (TO-SQ B-XOR 56) + 1
+        1334                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1335                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+    >>> 1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+        1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+        1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+        1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1337
+        1334                     IF TMP-INT >= 1 AND TMP-INT <= 64
+        1335                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+    >>> 1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+        1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+        1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+        1340                     END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1338
+        1335                        AND TMP-INT-2 >= 1 AND TMP-INT-2 <= 64
+        1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+        1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+    >>> 1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+        1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+        1340                     END-IF
+        1341                 END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1339
+        1336                         ADD EVAL-MG-SQ(TMP-INT-3 TMP-INT) TO B-PST-MG
+        1337                         SUBTRACT EVAL-MG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-MG
+        1338                         ADD EVAL-EG-SQ(TMP-INT-3 TMP-INT) TO B-PST-EG
+    >>> 1339                         SUBTRACT EVAL-EG-SQ(TMP-INT-3 TMP-INT-2) FROM B-PST-EG
+        1340                     END-IF
+        1341                 END-IF
+        1342             END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1454
+        1451             MOVE B-EP-SQUARE TO U-EP-SQUARE(B-PLY)
+        1452             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1453             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+    >>> 1454             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+        1455             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1456             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1457  
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1455
+        1452             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1453             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+        1454             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+    >>> 1455             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1456             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1457  
+        1458             PERFORM MOVE-DECODE
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1672
+        1669             MOVE U-EP-SQUARE(B-PLY) TO B-EP-SQUARE
+        1670             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1671             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+    >>> 1672             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+        1673             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1674             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1675             SUBTRACT 1 FROM B-PLY
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1673
+        1670             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1671             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+        1672             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+    >>> 1673             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1674             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1675             SUBTRACT 1 FROM B-PLY
+        1676             .
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1691
+        1688             MOVE B-EP-SQUARE TO U-EP-SQUARE(B-PLY)
+        1689             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1690             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+    >>> 1691             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+        1692             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1693             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1694  
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1692
+        1689             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+        1690             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+        1691             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+    >>> 1692             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+        1693             MOVE B-PHASE TO U-PHASE(B-PLY)
+        1694  
+        1695             IF B-EP-SQUARE NOT = -1
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1735
+        1732             MOVE U-EP-SQUARE(B-PLY) TO B-EP-SQUARE
+        1733             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1734             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+    >>> 1735             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+        1736             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1737             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1738             SUBTRACT 1 FROM B-PLY
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1736
+        1733             MOVE U-HALF-MOVE(B-PLY) TO B-HALF-MOVE
+        1734             MOVE U-FULL-MOVE(B-PLY) TO B-FULL-MOVE
+        1735             MOVE U-PST-MG(B-PLY) TO B-PST-MG
+    >>> 1736             MOVE U-PST-EG(B-PLY) TO B-PST-EG
+        1737             MOVE U-PHASE(B-PLY) TO B-PHASE
+        1738             SUBTRACT 1 FROM B-PLY
+        1739             .
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:3101
+        3098             .
+        3099  
+        3100         EVALUATE-POSITION.
+    >>> 3101             MOVE B-PST-MG TO EVAL-MG-SCORE
+        3102             MOVE B-PST-EG TO EVAL-EG-SCORE
+        3103             MOVE B-PHASE TO EVAL-PHASE
+        3104  
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:3102
+        3099  
+        3100         EVALUATE-POSITION.
+        3101             MOVE B-PST-MG TO EVAL-MG-SCORE
+    >>> 3102             MOVE B-PST-EG TO EVAL-EG-SCORE
+        3103             MOVE B-PHASE TO EVAL-PHASE
+        3104  
+        3105             COMPUTE I = WB + 1
+
+  src/engine.rs:16
+          13  pub fn init() {
+          14      let mut dummy = KNIGHT_ATTACKS[0];
+          15      dummy ^= magic_bitboards::rook_attacks(0, 0);
+    >>>   16      dummy ^= crate::eval::piece_square_tables::mg_table()[0][0] as u64;
+          17      let board = fen::parse(fen::START_POS);
+          18      let _ = move_generator::generate_legal_moves(&board);
+          19      std::hint::black_box(dummy);
+
+  src/board/board.rs:3
+           1  use crate::board::bitboard;
+           2  use crate::board::zobrist::ZOBRIST;
+    >>>    3  use crate::eval::piece_square_tables;
+           4  use crate::mv::move_data;
+           5  
+           6  pub const WP: usize = 0;
+
+  src/board/board.rs:153
+         150  
+         151          let pst_sq = if color == WHITE { sq } else { sq ^ 56 };
+         152          let sign = if color == WHITE { 1 } else { -1 };
+    >>>  153          self.pst_score[0] += piece_square_tables::mg_table()[piece_type][pst_sq] * sign;
+         154          self.pst_score[1] += piece_square_tables::eg_table()[piece_type][pst_sq] * sign;
+         155      }
+         156  
+
+  src/board/board.rs:154
+         151          let pst_sq = if color == WHITE { sq } else { sq ^ 56 };
+         152          let sign = if color == WHITE { 1 } else { -1 };
+         153          self.pst_score[0] += piece_square_tables::mg_table()[piece_type][pst_sq] * sign;
+    >>>  154          self.pst_score[1] += piece_square_tables::eg_table()[piece_type][pst_sq] * sign;
+         155      }
+         156  
+         157      pub fn remove_piece(&mut self, piece: usize, sq: usize) {
+
+  src/board/board.rs:175
+         172  
+         173          let pst_sq = if color == WHITE { sq } else { sq ^ 56 };
+         174          let sign = if color == WHITE { 1 } else { -1 };
+    >>>  175          self.pst_score[0] -= piece_square_tables::mg_table()[piece_type][pst_sq] * sign;
+         176          self.pst_score[1] -= piece_square_tables::eg_table()[piece_type][pst_sq] * sign;
+         177      }
+         178  
+
+  src/board/board.rs:176
+         173          let pst_sq = if color == WHITE { sq } else { sq ^ 56 };
+         174          let sign = if color == WHITE { 1 } else { -1 };
+         175          self.pst_score[0] -= piece_square_tables::mg_table()[piece_type][pst_sq] * sign;
+    >>>  176          self.pst_score[1] -= piece_square_tables::eg_table()[piece_type][pst_sq] * sign;
+         177      }
+         178  
+         179      pub fn move_piece(&mut self, piece: usize, from: usize, to: usize) {
+
+  src/board/board.rs:200
+         197          let to_pst = if color == WHITE { to } else { to ^ 56 };
+         198  
+         199          self.pst_score[0] += sign
+    >>>  200              * (piece_square_tables::mg_table()[piece_type][to_pst]
+         201                  - piece_square_tables::mg_table()[piece_type][from_pst]);
+         202          self.pst_score[1] += sign
+         203              * (piece_square_tables::eg_table()[piece_type][to_pst]
+
+  src/board/board.rs:201
+         198  
+         199          self.pst_score[0] += sign
+         200              * (piece_square_tables::mg_table()[piece_type][to_pst]
+    >>>  201                  - piece_square_tables::mg_table()[piece_type][from_pst]);
+         202          self.pst_score[1] += sign
+         203              * (piece_square_tables::eg_table()[piece_type][to_pst]
+         204                  - piece_square_tables::eg_table()[piece_type][from_pst]);
+
+  src/board/board.rs:203
+         200              * (piece_square_tables::mg_table()[piece_type][to_pst]
+         201                  - piece_square_tables::mg_table()[piece_type][from_pst]);
+         202          self.pst_score[1] += sign
+    >>>  203              * (piece_square_tables::eg_table()[piece_type][to_pst]
+         204                  - piece_square_tables::eg_table()[piece_type][from_pst]);
+         205      }
+         206  
+
+  src/board/board.rs:204
+         201                  - piece_square_tables::mg_table()[piece_type][from_pst]);
+         202          self.pst_score[1] += sign
+         203              * (piece_square_tables::eg_table()[piece_type][to_pst]
+    >>>  204                  - piece_square_tables::eg_table()[piece_type][from_pst]);
+         205      }
+         206  
+         207      pub fn make_move(&mut self, mv: u32) {
+
+  src/eval/mod.rs:5
+           2  pub mod evaluation;
+           3  pub mod king_safety;
+           4  pub mod pawn_structure;
+    >>>    5  pub mod piece_square_tables;
+
+[YES] chess-ruby-cc  (Ruby)  — 15 match(es)
+  lib/chess_engine.rb:6
+           3  require_relative "chess_engine/constants"
+           4  require_relative "chess_engine/move"
+           5  require_relative "chess_engine/zobrist"
+    >>>    6  require_relative "chess_engine/piece_square_tables"
+           7  require_relative "chess_engine/board"
+           8  require_relative "chess_engine/attack"
+           9  require_relative "chess_engine/move_generator"
+
+  lib/chess_engine/board.rb:370
+         367  
+         368      def tapered_score
+         369        p = @phase
+    >>>  370        p = PST::MAX_PHASE if p > PST::MAX_PHASE
+         371        (@mg_score * p + @eg_score * (PST::MAX_PHASE - p)) / PST::MAX_PHASE
+         372      end
+         373  
+
+  lib/chess_engine/board.rb:371
+         368      def tapered_score
+         369        p = @phase
+         370        p = PST::MAX_PHASE if p > PST::MAX_PHASE
+    >>>  371        (@mg_score * p + @eg_score * (PST::MAX_PHASE - p)) / PST::MAX_PHASE
+         372      end
+         373  
+         374      def find_move_from_uci(uci_str)
+
+  lib/chess_engine/board.rb:416
+         413      private
+         414  
+         415      def add_piece_eval(piece, pt, color, sq)
+    >>>  416        mg_pst = PST::MG_TABLES[piece]
+         417        eg_pst = PST::EG_TABLES[piece]
+         418        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+         419        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+
+  lib/chess_engine/board.rb:417
+         414  
+         415      def add_piece_eval(piece, pt, color, sq)
+         416        mg_pst = PST::MG_TABLES[piece]
+    >>>  417        eg_pst = PST::EG_TABLES[piece]
+         418        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+         419        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+         420  
+
+  lib/chess_engine/board.rb:418
+         415      def add_piece_eval(piece, pt, color, sq)
+         416        mg_pst = PST::MG_TABLES[piece]
+         417        eg_pst = PST::EG_TABLES[piece]
+    >>>  418        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+         419        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+         420  
+         421        if color == WHITE
+
+  lib/chess_engine/board.rb:419
+         416        mg_pst = PST::MG_TABLES[piece]
+         417        eg_pst = PST::EG_TABLES[piece]
+         418        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+    >>>  419        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+         420  
+         421        if color == WHITE
+         422          @mg_score += mg_val
+
+  lib/chess_engine/board.rb:432
+         429          @b_bishops += 1 if pt == BISHOP
+         430          @b_pawn_files[sq & 7] += 1 if pt == PAWN
+         431        end
+    >>>  432        @phase += PST::PHASE_WEIGHTS[pt] || 0
+         433      end
+         434  
+         435      def remove_piece_eval(piece, pt, color, sq)
+
+  lib/chess_engine/board.rb:436
+         433      end
+         434  
+         435      def remove_piece_eval(piece, pt, color, sq)
+    >>>  436        mg_pst = PST::MG_TABLES[piece]
+         437        eg_pst = PST::EG_TABLES[piece]
+         438        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+         439        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+
+  lib/chess_engine/board.rb:437
+         434  
+         435      def remove_piece_eval(piece, pt, color, sq)
+         436        mg_pst = PST::MG_TABLES[piece]
+    >>>  437        eg_pst = PST::EG_TABLES[piece]
+         438        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+         439        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+         440  
+
+  lib/chess_engine/board.rb:438
+         435      def remove_piece_eval(piece, pt, color, sq)
+         436        mg_pst = PST::MG_TABLES[piece]
+         437        eg_pst = PST::EG_TABLES[piece]
+    >>>  438        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+         439        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+         440  
+         441        if color == WHITE
+
+  lib/chess_engine/board.rb:439
+         436        mg_pst = PST::MG_TABLES[piece]
+         437        eg_pst = PST::EG_TABLES[piece]
+         438        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+    >>>  439        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+         440  
+         441        if color == WHITE
+         442          @mg_score -= mg_val
+
+  lib/chess_engine/board.rb:452
+         449          @b_bishops -= 1 if pt == BISHOP
+         450          @b_pawn_files[sq & 7] -= 1 if pt == PAWN
+         451        end
+    >>>  452        @phase -= PST::PHASE_WEIGHTS[pt] || 0
+         453      end
+         454  
+         455      def compute_hash
+
+  lib/chess_engine/evaluation.rb:32
+          29      module_function
+          30  
+          31      def evaluate(board)
+    >>>   32        # Tapered material + PST from incremental tracking (very fast)
+          33        score = board.tapered_score
+          34  
+          35        squares = board.squares
+
+  lib/chess_engine/piece_square_tables.rb:4
+           1  # frozen_string_literal: true
+           2  
+           3  module ChessEngine
+    >>>    4    module PST
+           5      # Phase weights for tapered evaluation
+           6      PHASE_WEIGHTS = { PAWN => 0, KNIGHT => 1, BISHOP => 1, ROOK => 2, QUEEN => 4, KING => 0 }.freeze
+           7      MAX_PHASE = 24
+
+[YES] chess-ruby-codex  (Ruby)  — 2 match(es)
+  lib/ruby_chess_engine/evaluator.rb:30
+          27        "q" => 6
+          28      }.freeze
+          29  
+    >>>   30      PIECE_SQUARE_TABLES = {
+          31        "p" => [
+          32          0, 0, 0, 0, 0, 0, 0, 0,
+          33          54, 58, 66, 70, 70, 66, 58, 54,
+
+  lib/ruby_chess_engine/evaluator.rb:202
+         199          piece_kind = piece.downcase
+         200          index = (row * 8) + col
+         201          lookup_index = color == :white ? index : mirror_index(index)
+    >>>  202          PIECE_SQUARE_TABLES[piece_kind][lookup_index]
+         203        end
+         204  
+         205        def pawn_structure_bonus(color:, pawns:, own_pawn_files:, enemy_pawns:)
+
+[YES] chess-rust-cc  (Rust)  — 21 match(es)
+  src/board.rs:28
+          25      pub hash: u64,
+          26      pub pawn_hash: u64,
+          27  
+    >>>   28      // Incremental PST scores: [white, black]
+          29      pub mg_pst: [i32; 2],
+          30      pub eg_pst: [i32; 2],
+          31      pub phase: i32,
+
+  src/board.rs:141
+         138          board.hash = board.compute_hash();
+         139          board.pawn_hash = board.compute_pawn_hash();
+         140  
+    >>>  141          // Compute incremental PST scores
+         142          board.init_pst();
+         143  
+         144          board.history.push(board.hash);
+
+  src/board.rs:286
+         283      }
+         284  
+         285      fn init_pst(&mut self) {
+    >>>  286          use crate::pst;
+         287          self.mg_pst = [0; 2];
+         288          self.eg_pst = [0; 2];
+         289          self.phase = 0;
+
+  src/board.rs:299
+         296                      (sq ^ 56) as usize
+         297                  };
+         298                  let pt = piece.piece_type.index();
+    >>>  299                  self.mg_pst[ci] += pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+         300                  self.eg_pst[ci] += pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+         301                  self.phase += pst::PHASE_VALUES[pt];
+         302              }
+
+  src/board.rs:300
+         297                  };
+         298                  let pt = piece.piece_type.index();
+         299                  self.mg_pst[ci] += pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+    >>>  300                  self.eg_pst[ci] += pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+         301                  self.phase += pst::PHASE_VALUES[pt];
+         302              }
+         303          }
+
+  src/board.rs:301
+         298                  let pt = piece.piece_type.index();
+         299                  self.mg_pst[ci] += pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+         300                  self.eg_pst[ci] += pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+    >>>  301                  self.phase += pst::PHASE_VALUES[pt];
+         302              }
+         303          }
+         304      }
+
+  src/board.rs:308
+         305  
+         306      #[inline]
+         307      fn add_pst(&mut self, piece: Piece, sq: Square) {
+    >>>  308          use crate::pst;
+         309          let ci = piece.color.index();
+         310          let pst_sq = if piece.color == Color::White {
+         311              sq.index()
+
+  src/board.rs:316
+         313              sq.flip().index()
+         314          };
+         315          let pt = piece.piece_type.index();
+    >>>  316          self.mg_pst[ci] += pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+         317          self.eg_pst[ci] += pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+         318          self.phase += pst::PHASE_VALUES[pt];
+         319      }
+
+  src/board.rs:317
+         314          };
+         315          let pt = piece.piece_type.index();
+         316          self.mg_pst[ci] += pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+    >>>  317          self.eg_pst[ci] += pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+         318          self.phase += pst::PHASE_VALUES[pt];
+         319      }
+         320  
+
+  src/board.rs:318
+         315          let pt = piece.piece_type.index();
+         316          self.mg_pst[ci] += pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+         317          self.eg_pst[ci] += pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+    >>>  318          self.phase += pst::PHASE_VALUES[pt];
+         319      }
+         320  
+         321      #[inline]
+
+  src/board.rs:323
+         320  
+         321      #[inline]
+         322      fn remove_pst(&mut self, piece: Piece, sq: Square) {
+    >>>  323          use crate::pst;
+         324          let ci = piece.color.index();
+         325          let pst_sq = if piece.color == Color::White {
+         326              sq.index()
+
+  src/board.rs:331
+         328              sq.flip().index()
+         329          };
+         330          let pt = piece.piece_type.index();
+    >>>  331          self.mg_pst[ci] -= pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+         332          self.eg_pst[ci] -= pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+         333          self.phase -= pst::PHASE_VALUES[pt];
+         334      }
+
+  src/board.rs:332
+         329          };
+         330          let pt = piece.piece_type.index();
+         331          self.mg_pst[ci] -= pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+    >>>  332          self.eg_pst[ci] -= pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+         333          self.phase -= pst::PHASE_VALUES[pt];
+         334      }
+         335  
+
+  src/board.rs:333
+         330          let pt = piece.piece_type.index();
+         331          self.mg_pst[ci] -= pst::PIECE_VALUES[pt][0] + pst::MG_TABLES[pt][pst_sq];
+         332          self.eg_pst[ci] -= pst::PIECE_VALUES[pt][1] + pst::EG_TABLES[pt][pst_sq];
+    >>>  333          self.phase -= pst::PHASE_VALUES[pt];
+         334      }
+         335  
+         336      fn compute_hash(&self) -> u64 {
+
+  src/board.rs:439
+         436              self.halfmove = 0;
+         437          }
+         438  
+    >>>  439          // Move the piece (update PST: remove from old sq, add to new sq)
+         440          self.hash ^= z.piece(us, pt, from);
+         441          self.remove_pst(Piece::new(us, pt), from);
+         442          self.move_piece(from, to);
+
+  src/eval.rs:4
+           1  use crate::attacks;
+           2  use crate::bitboard::{Bitboard, FILES, RANKS};
+           3  use crate::board::Board;
+    >>>    4  use crate::pst;
+           5  use crate::types::*;
+           6  
+           7  pub const MATE_SCORE: i32 = 30000;
+
+  src/eval.rs:62
+          59  
+          60      /// Evaluate with optional pawn hash table
+          61      pub fn evaluate_with_pht(&self, pht: Option<&mut PawnHashTable>) -> i32 {
+    >>>   62          // Use incrementally updated PST scores
+          63          let mut mg_score = self.mg_pst;
+          64          let mut eg_score = self.eg_pst;
+          65          let mut phase = self.phase;
+
+  src/eval.rs:120
+         117          let mg = mg_score[0] - mg_score[1];
+         118          let eg = eg_score[0] - eg_score[1];
+         119  
+    >>>  120          phase = std::cmp::min(phase, pst::TOTAL_PHASE);
+         121          let score = (mg * phase + eg * (pst::TOTAL_PHASE - phase)) / pst::TOTAL_PHASE;
+         122  
+         123          // Return from side to move's perspective
+
+  src/eval.rs:121
+         118          let eg = eg_score[0] - eg_score[1];
+         119  
+         120          phase = std::cmp::min(phase, pst::TOTAL_PHASE);
+    >>>  121          let score = (mg * phase + eg * (pst::TOTAL_PHASE - phase)) / pst::TOTAL_PHASE;
+         122  
+         123          // Return from side to move's perspective
+         124          if self.side == Color::White {
+
+  src/lib.rs:10
+           7  pub mod board;
+           8  pub mod movegen;
+           9  pub mod perft;
+    >>>   10  pub mod pst;
+          11  pub mod eval;
+          12  pub mod tt;
+          13  pub mod history;
+
+  src/pst.rs:21
+          18  pub const PHASE_VALUES: [i32; 6] = [0, 1, 1, 2, 4, 0];
+          19  pub const TOTAL_PHASE: i32 = 24; // 4*1 + 4*1 + 4*2 + 2*4
+          20  
+    >>>   21  // PST tables: [piece_type][square] for midgame and endgame
+          22  // Indexed from White's perspective (A1=0)
+          23  // To get Black's values: flip the square vertically (sq ^ 56)
+          24  
+
+[NO]  chess-rust-codex  (Rust)  — 0 match(es)
+
+[YES] chess-sql  (Python)  — 18 match(es)
+  sql/eval.sql:18
+          15          s.file AS f,
+          16          substr(p.board, s.sq + 1, 1) AS piece,
+          17          COALESCE(pv.value, 0) AS mat_value,
+    >>>   18          -- PST bonus: for white pieces use sq directly, for black pieces mirror vertically
+          19          COALESCE(
+          20              CASE
+          21                  WHEN substr(p.board, s.sq + 1, 1) BETWEEN 'A' AND 'Z' THEN
+
+  sql/eval.sql:22
+          19          COALESCE(
+          20              CASE
+          21                  WHEN substr(p.board, s.sq + 1, 1) BETWEEN 'A' AND 'Z' THEN
+    >>>   22                      (SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(p.board, s.sq + 1, 1)) AND pst.sq = s.sq)
+          23                  WHEN substr(p.board, s.sq + 1, 1) BETWEEN 'a' AND 'z' THEN
+          24                      -(SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(p.board, s.sq + 1, 1)) AND pst.sq = (7 - s.rank) * 8 + s.file)
+          25                  ELSE 0
+
+  sql/eval.sql:24
+          21                  WHEN substr(p.board, s.sq + 1, 1) BETWEEN 'A' AND 'Z' THEN
+          22                      (SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(p.board, s.sq + 1, 1)) AND pst.sq = s.sq)
+          23                  WHEN substr(p.board, s.sq + 1, 1) BETWEEN 'a' AND 'z' THEN
+    >>>   24                      -(SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(p.board, s.sq + 1, 1)) AND pst.sq = (7 - s.rank) * 8 + s.file)
+          25                  ELSE 0
+          26              END, 0
+          27          ) AS pst_bonus
+
+  sql/schema.sql:42
+          39  -- Piece-square tables (from white's perspective; negate for black)
+          40  -- Values stored for white pieces; sq is the square index 0..63
+          41  -- For black pieces, we mirror vertically: use sq' = (7 - rank)*8 + file
+    >>>   42  CREATE TABLE IF NOT EXISTS pst (
+          43      piece TEXT NOT NULL,
+          44      sq    INTEGER NOT NULL,
+          45      bonus INTEGER NOT NULL,
+
+  sql/schema.sql:49
+          46      PRIMARY KEY (piece, sq)
+          47  );
+          48  
+    >>>   49  -- Pawn PST (white perspective, index 0=a8, 63=h1)
+          50  INSERT INTO pst (piece, sq, bonus) VALUES
+          51  -- rank 8 (sq 0-7): pawns never here
+          52  ('P',0,0),('P',1,0),('P',2,0),('P',3,0),('P',4,0),('P',5,0),('P',6,0),('P',7,0),
+
+  sql/schema.sql:50
+          47  );
+          48  
+          49  -- Pawn PST (white perspective, index 0=a8, 63=h1)
+    >>>   50  INSERT INTO pst (piece, sq, bonus) VALUES
+          51  -- rank 8 (sq 0-7): pawns never here
+          52  ('P',0,0),('P',1,0),('P',2,0),('P',3,0),('P',4,0),('P',5,0),('P',6,0),('P',7,0),
+          53  -- rank 7 (sq 8-15): about to promote
+
+  sql/schema.sql:68
+          65  -- rank 1 (sq 56-63): pawns never here
+          66  ('P',56,0),('P',57,0),('P',58,0),('P',59,0),('P',60,0),('P',61,0),('P',62,0),('P',63,0);
+          67  
+    >>>   68  -- Knight PST
+          69  INSERT INTO pst (piece, sq, bonus) VALUES
+          70  ('N',0,-50),('N',1,-40),('N',2,-30),('N',3,-30),('N',4,-30),('N',5,-30),('N',6,-40),('N',7,-50),
+          71  ('N',8,-40),('N',9,-20),('N',10,0),('N',11,0),('N',12,0),('N',13,0),('N',14,-20),('N',15,-40),
+
+  sql/schema.sql:69
+          66  ('P',56,0),('P',57,0),('P',58,0),('P',59,0),('P',60,0),('P',61,0),('P',62,0),('P',63,0);
+          67  
+          68  -- Knight PST
+    >>>   69  INSERT INTO pst (piece, sq, bonus) VALUES
+          70  ('N',0,-50),('N',1,-40),('N',2,-30),('N',3,-30),('N',4,-30),('N',5,-30),('N',6,-40),('N',7,-50),
+          71  ('N',8,-40),('N',9,-20),('N',10,0),('N',11,0),('N',12,0),('N',13,0),('N',14,-20),('N',15,-40),
+          72  ('N',16,-30),('N',17,0),('N',18,10),('N',19,15),('N',20,15),('N',21,10),('N',22,0),('N',23,-30),
+
+  sql/schema.sql:79
+          76  ('N',48,-40),('N',49,-20),('N',50,0),('N',51,5),('N',52,5),('N',53,0),('N',54,-20),('N',55,-40),
+          77  ('N',56,-50),('N',57,-40),('N',58,-30),('N',59,-30),('N',60,-30),('N',61,-30),('N',62,-40),('N',63,-50);
+          78  
+    >>>   79  -- Bishop PST
+          80  INSERT INTO pst (piece, sq, bonus) VALUES
+          81  ('B',0,-20),('B',1,-10),('B',2,-10),('B',3,-10),('B',4,-10),('B',5,-10),('B',6,-10),('B',7,-20),
+          82  ('B',8,-10),('B',9,0),('B',10,0),('B',11,0),('B',12,0),('B',13,0),('B',14,0),('B',15,-10),
+
+  sql/schema.sql:80
+          77  ('N',56,-50),('N',57,-40),('N',58,-30),('N',59,-30),('N',60,-30),('N',61,-30),('N',62,-40),('N',63,-50);
+          78  
+          79  -- Bishop PST
+    >>>   80  INSERT INTO pst (piece, sq, bonus) VALUES
+          81  ('B',0,-20),('B',1,-10),('B',2,-10),('B',3,-10),('B',4,-10),('B',5,-10),('B',6,-10),('B',7,-20),
+          82  ('B',8,-10),('B',9,0),('B',10,0),('B',11,0),('B',12,0),('B',13,0),('B',14,0),('B',15,-10),
+          83  ('B',16,-10),('B',17,0),('B',18,5),('B',19,10),('B',20,10),('B',21,5),('B',22,0),('B',23,-10),
+
+  sql/schema.sql:90
+          87  ('B',48,-10),('B',49,5),('B',50,0),('B',51,0),('B',52,0),('B',53,0),('B',54,5),('B',55,-10),
+          88  ('B',56,-20),('B',57,-10),('B',58,-10),('B',59,-10),('B',60,-10),('B',61,-10),('B',62,-10),('B',63,-20);
+          89  
+    >>>   90  -- Rook PST
+          91  INSERT INTO pst (piece, sq, bonus) VALUES
+          92  ('R',0,0),('R',1,0),('R',2,0),('R',3,0),('R',4,0),('R',5,0),('R',6,0),('R',7,0),
+          93  ('R',8,5),('R',9,10),('R',10,10),('R',11,10),('R',12,10),('R',13,10),('R',14,10),('R',15,5),
+
+  sql/schema.sql:91
+          88  ('B',56,-20),('B',57,-10),('B',58,-10),('B',59,-10),('B',60,-10),('B',61,-10),('B',62,-10),('B',63,-20);
+          89  
+          90  -- Rook PST
+    >>>   91  INSERT INTO pst (piece, sq, bonus) VALUES
+          92  ('R',0,0),('R',1,0),('R',2,0),('R',3,0),('R',4,0),('R',5,0),('R',6,0),('R',7,0),
+          93  ('R',8,5),('R',9,10),('R',10,10),('R',11,10),('R',12,10),('R',13,10),('R',14,10),('R',15,5),
+          94  ('R',16,-5),('R',17,0),('R',18,0),('R',19,0),('R',20,0),('R',21,0),('R',22,0),('R',23,-5),
+
+  sql/schema.sql:101
+          98  ('R',48,-5),('R',49,0),('R',50,0),('R',51,5),('R',52,5),('R',53,0),('R',54,0),('R',55,-5),
+          99  ('R',56,0),('R',57,0),('R',58,0),('R',59,5),('R',60,5),('R',61,0),('R',62,0),('R',63,0);
+         100  
+    >>>  101  -- Queen PST
+         102  INSERT INTO pst (piece, sq, bonus) VALUES
+         103  ('Q',0,-20),('Q',1,-10),('Q',2,-10),('Q',3,-5),('Q',4,-5),('Q',5,-10),('Q',6,-10),('Q',7,-20),
+         104  ('Q',8,-10),('Q',9,0),('Q',10,0),('Q',11,0),('Q',12,0),('Q',13,0),('Q',14,0),('Q',15,-10),
+
+  sql/schema.sql:102
+          99  ('R',56,0),('R',57,0),('R',58,0),('R',59,5),('R',60,5),('R',61,0),('R',62,0),('R',63,0);
+         100  
+         101  -- Queen PST
+    >>>  102  INSERT INTO pst (piece, sq, bonus) VALUES
+         103  ('Q',0,-20),('Q',1,-10),('Q',2,-10),('Q',3,-5),('Q',4,-5),('Q',5,-10),('Q',6,-10),('Q',7,-20),
+         104  ('Q',8,-10),('Q',9,0),('Q',10,0),('Q',11,0),('Q',12,0),('Q',13,0),('Q',14,0),('Q',15,-10),
+         105  ('Q',16,-10),('Q',17,0),('Q',18,5),('Q',19,5),('Q',20,5),('Q',21,5),('Q',22,0),('Q',23,-10),
+
+  sql/schema.sql:112
+         109  ('Q',48,-10),('Q',49,0),('Q',50,5),('Q',51,0),('Q',52,0),('Q',53,0),('Q',54,0),('Q',55,-10),
+         110  ('Q',56,-20),('Q',57,-10),('Q',58,-10),('Q',59,-5),('Q',60,-5),('Q',61,-10),('Q',62,-10),('Q',63,-20);
+         111  
+    >>>  112  -- King PST (middlegame)
+         113  INSERT INTO pst (piece, sq, bonus) VALUES
+         114  ('K',0,-30),('K',1,-40),('K',2,-40),('K',3,-50),('K',4,-50),('K',5,-40),('K',6,-40),('K',7,-30),
+         115  ('K',8,-30),('K',9,-40),('K',10,-40),('K',11,-50),('K',12,-50),('K',13,-40),('K',14,-40),('K',15,-30),
+
+  sql/schema.sql:113
+         110  ('Q',56,-20),('Q',57,-10),('Q',58,-10),('Q',59,-5),('Q',60,-5),('Q',61,-10),('Q',62,-10),('Q',63,-20);
+         111  
+         112  -- King PST (middlegame)
+    >>>  113  INSERT INTO pst (piece, sq, bonus) VALUES
+         114  ('K',0,-30),('K',1,-40),('K',2,-40),('K',3,-50),('K',4,-50),('K',5,-40),('K',6,-40),('K',7,-30),
+         115  ('K',8,-30),('K',9,-40),('K',10,-40),('K',11,-50),('K',12,-50),('K',13,-40),('K',14,-40),('K',15,-30),
+         116  ('K',16,-30),('K',17,-40),('K',18,-40),('K',19,-50),('K',20,-50),('K',21,-40),('K',22,-40),('K',23,-30),
+
+  sql/search.sql:39
+          36                  COALESCE(SUM(
+          37                      CASE
+          38                          WHEN substr(cp.board, s.sq + 1, 1) BETWEEN 'A' AND 'Z' THEN
+    >>>   39                              COALESCE((SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(cp.board, s.sq + 1, 1)) AND pst.sq = s.sq), 0)
+          40                          WHEN substr(cp.board, s.sq + 1, 1) BETWEEN 'a' AND 'z' THEN
+          41                              -COALESCE((SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(cp.board, s.sq + 1, 1)) AND pst.sq = (7 - s.rank) * 8 + s.file), 0)
+          42                          ELSE 0
+
+  sql/search.sql:41
+          38                          WHEN substr(cp.board, s.sq + 1, 1) BETWEEN 'A' AND 'Z' THEN
+          39                              COALESCE((SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(cp.board, s.sq + 1, 1)) AND pst.sq = s.sq), 0)
+          40                          WHEN substr(cp.board, s.sq + 1, 1) BETWEEN 'a' AND 'z' THEN
+    >>>   41                              -COALESCE((SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(cp.board, s.sq + 1, 1)) AND pst.sq = (7 - s.rank) * 8 + s.file), 0)
+          42                          ELSE 0
+          43                      END
+          44                  ), 0)
+
+[NO]  chess-why3  (OCaml)  — 0 match(es)
+
+[YES] chess-why3-cc  (C)  — 33 match(es)
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:5
+           2  #include "board.h"
+           3  #include "catch.hpp"
+           4  
+    >>>    5  TEST_CASE("Piece square tables work as expected") {
+           6    PSquareTable pst;
+           7  
+           8    SECTION("PSquareTables initially have score 0 for white and black") {
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:6
+           3  #include "catch.hpp"
+           4  
+           5  TEST_CASE("Piece square tables work as expected") {
+    >>>    6    PSquareTable pst;
+           7  
+           8    SECTION("PSquareTables initially have score 0 for white and black") {
+           9      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:9
+           6    PSquareTable pst;
+           7  
+           8    SECTION("PSquareTables initially have score 0 for white and black") {
+    >>>    9      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          10      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          11    }
+          12  
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:10
+           7  
+           8    SECTION("PSquareTables initially have score 0 for white and black") {
+           9      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+    >>>   10      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          11    }
+          12  
+          13    SECTION("PSquareTables add and remove value for the correct color") {
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:14
+          11    }
+          12  
+          13    SECTION("PSquareTables add and remove value for the correct color") {
+    >>>   14      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          15      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          16  
+          17      pst.addPiece(WHITE, PAWN, e4);
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:15
+          12  
+          13    SECTION("PSquareTables add and remove value for the correct color") {
+          14      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+    >>>   15      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          16  
+          17      pst.addPiece(WHITE, PAWN, e4);
+          18      REQUIRE(pst.getScore(OPENING, WHITE) > 0);
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:17
+          14      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          15      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          16  
+    >>>   17      pst.addPiece(WHITE, PAWN, e4);
+          18      REQUIRE(pst.getScore(OPENING, WHITE) > 0);
+          19      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          20  
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:18
+          15      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          16  
+          17      pst.addPiece(WHITE, PAWN, e4);
+    >>>   18      REQUIRE(pst.getScore(OPENING, WHITE) > 0);
+          19      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          20  
+          21      pst.removePiece(WHITE, PAWN, e4);
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:19
+          16  
+          17      pst.addPiece(WHITE, PAWN, e4);
+          18      REQUIRE(pst.getScore(OPENING, WHITE) > 0);
+    >>>   19      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          20  
+          21      pst.removePiece(WHITE, PAWN, e4);
+          22      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:21
+          18      REQUIRE(pst.getScore(OPENING, WHITE) > 0);
+          19      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          20  
+    >>>   21      pst.removePiece(WHITE, PAWN, e4);
+          22      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          23      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          24    }
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:22
+          19      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          20  
+          21      pst.removePiece(WHITE, PAWN, e4);
+    >>>   22      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          23      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          24    }
+          25  
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:23
+          20  
+          21      pst.removePiece(WHITE, PAWN, e4);
+          22      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+    >>>   23      REQUIRE(pst.getScore(OPENING, BLACK) == 0);
+          24    }
+          25  
+          26    SECTION("PSquareTables move pieces with movePiece()") {
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:27
+          24    }
+          25  
+          26    SECTION("PSquareTables move pieces with movePiece()") {
+    >>>   27      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          28  
+          29      pst.addPiece(WHITE, BISHOP, e4);
+          30      int initScore = pst.getScore(OPENING, WHITE);
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:29
+          26    SECTION("PSquareTables move pieces with movePiece()") {
+          27      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          28  
+    >>>   29      pst.addPiece(WHITE, BISHOP, e4);
+          30      int initScore = pst.getScore(OPENING, WHITE);
+          31  
+          32      pst.movePiece(WHITE, BISHOP, e4, a8);
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:30
+          27      REQUIRE(pst.getScore(OPENING, WHITE) == 0);
+          28  
+          29      pst.addPiece(WHITE, BISHOP, e4);
+    >>>   30      int initScore = pst.getScore(OPENING, WHITE);
+          31  
+          32      pst.movePiece(WHITE, BISHOP, e4, a8);
+          33  
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:32
+          29      pst.addPiece(WHITE, BISHOP, e4);
+          30      int initScore = pst.getScore(OPENING, WHITE);
+          31  
+    >>>   32      pst.movePiece(WHITE, BISHOP, e4, a8);
+          33  
+          34      REQUIRE(pst.getScore(OPENING, WHITE) != initScore);
+          35    }
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:34
+          31  
+          32      pst.movePiece(WHITE, BISHOP, e4, a8);
+          33  
+    >>>   34      REQUIRE(pst.getScore(OPENING, WHITE) != initScore);
+          35    }
+          36  
+          37    SECTION("PSquareTables apply different tables for different game phases") {
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:43
+          40      // opening evaluation, however, the evaluated advantage should be lower
+          41      Board endgameBoard("4k3/3pp2P/P7/8/8/8/8/4K3 w KQkq -");
+          42  
+    >>>   43      PSquareTable pst(endgameBoard);
+          44  
+          45      REQUIRE(pst.getScore(ENDGAME, WHITE) > pst.getScore(ENDGAME, BLACK));
+          46      REQUIRE(pst.getScore(OPENING, WHITE) > pst.getScore(OPENING, BLACK));
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:45
+          42  
+          43      PSquareTable pst(endgameBoard);
+          44  
+    >>>   45      REQUIRE(pst.getScore(ENDGAME, WHITE) > pst.getScore(ENDGAME, BLACK));
+          46      REQUIRE(pst.getScore(OPENING, WHITE) > pst.getScore(OPENING, BLACK));
+          47      REQUIRE(pst.getScore(ENDGAME, WHITE) > pst.getScore(OPENING, WHITE));
+          48    }
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:46
+          43      PSquareTable pst(endgameBoard);
+          44  
+          45      REQUIRE(pst.getScore(ENDGAME, WHITE) > pst.getScore(ENDGAME, BLACK));
+    >>>   46      REQUIRE(pst.getScore(OPENING, WHITE) > pst.getScore(OPENING, BLACK));
+          47      REQUIRE(pst.getScore(ENDGAME, WHITE) > pst.getScore(OPENING, WHITE));
+          48    }
+          49  }
+
+  tests/engines/shallowblue-src/test/psquaretable_test.cc:47
+          44  
+          45      REQUIRE(pst.getScore(ENDGAME, WHITE) > pst.getScore(ENDGAME, BLACK));
+          46      REQUIRE(pst.getScore(OPENING, WHITE) > pst.getScore(OPENING, BLACK));
+    >>>   47      REQUIRE(pst.getScore(ENDGAME, WHITE) > pst.getScore(OPENING, WHITE));
+          48    }
+          49  }
+
+  tests/engines/shallowblue-src/src/board.h:213
+         210    ZKey getPawnStructureZKey() const;
+         211  
+         212    /**
+    >>>  213     * @brief Returns the Piece Square Table of this board for its current state.
+         214     *
+         215     * @return The Piece Square Table of this board for its current state.
+         216     */
+
+  tests/engines/shallowblue-src/src/board.h:215
+         212    /**
+         213     * @brief Returns the Piece Square Table of this board for its current state.
+         214     *
+    >>>  215     * @return The Piece Square Table of this board for its current state.
+         216     */
+         217    PSquareTable getPSquareTable() const;
+         218  
+
+  tests/engines/shallowblue-src/src/board.h:301
+         298   private:
+         299  
+         300    /**
+    >>>  301     * @brief Piece Square table for this board in its current state.
+         302     */
+         303    PSquareTable _pst;
+         304  
+
+  tests/engines/shallowblue-src/src/eval.cc:209
+         206    score += MATERIAL_VALUES[phase][QUEEN]
+         207        * (_popCount(board.getPieces(color, QUEEN)) - _popCount(board.getPieces(otherColor, QUEEN)));
+         208  
+    >>>  209    // Piece square tables
+         210    score += board.getPSquareTable().getScore(phase, color) - board.getPSquareTable().getScore(phase, otherColor);
+         211  
+         212    // Mobility
+
+  tests/engines/shallowblue-src/src/psquaretable.h:10
+           7  class Board;
+           8  
+           9  /**
+    >>>   10   * @brief Represents a Piece Square Table.
+          11   */
+          12  class PSquareTable {
+          13   public:
+
+  tests/engines/shallowblue-src/src/psquaretable.h:17
+          14    PSquareTable();
+          15  
+          16    /**
+    >>>   17     * @brief Constructs a new piece square table from the given board.
+          18     *
+          19     * @param board Board to construct this PSquareTable for
+          20     */
+
+  tests/engines/shallowblue-src/src/psquaretable.h:59
+          56    void movePiece(Color, PieceType, unsigned int, unsigned int);
+          57  
+          58    /**
+    >>>   59     * @brief Gets the piece square table score of the given player in the
+          60     * given phase
+          61     *
+          62     * @param phase GamePhase to get score
+
+  tests/engines/shallowblue-src/src/psquaretable.h:64
+          61     *
+          62     * @param phase GamePhase to get score
+          63     * @param  color Color to get score for
+    >>>   64     * @return The piece square table score for the given player
+          65     */
+          66    int getScore(GamePhase, Color);
+          67  
+
+  tests/engines/shallowblue-src/src/psquaretable.h:96
+          93    static std::vector<int> _mirrorList(std::vector<int>);
+          94  
+          95    /**
+    >>>   96     * @brief Array indexed by [GamePhase][Color] of each color's piece square table score.
+          97     */
+          98    int _scores[2][2] = {{0}};
+          99  };
+
+  tests/engines/bbc-src/src/bbc_nnue/bbc.c:2681
+        2678      // array of square indices converted to Stockfish square indices
+        2679      int squares[33];
+        2680      
+    >>> 2681      // pieces and squares current index to write next piece square pair at
+        2682      int index = 2;
+        2683      
+        2684      // loop over piece bitboards
+
+  src/eval.mlw:207
+         204    let pst_eg (pt: int63) (idx: int63) : int63
+         205      requires { 0 <= idx < 64 }
+         206    = if pt = (6:int63) then pst_king_eg idx
+    >>>  207      else pst_mg pt idx  (* Use same PST for EG except king *)
+         208  
+         209    (* Passed pawn bonus by rank (0-7) *)
+         210    let passed_bonus (r: int63) : int63
+
+  src/eval.mlw:239
+         236            let color = piece_color p in
+         237            let r = rank_of sq in
+         238            let f = file_of sq in
+    >>>  239            (* PST index: from White perspective *)
+         240            let pst_idx = if color = (0:int63) then r * (8:int63) + f
+         241                          else ((7:int63) - r) * (8:int63) + f in
+         242            let mg_val = mg_material pt + pst_mg pt pst_idx in
+
+[NO]  countergo40  (?)  — 0 match(es)
+
+[YES] cplusplus-chess  (C++)  — 20 match(es)
+  src/board.cpp:150
+         147    for (int sq = 0; sq < 64; ++sq) {
+         148      const Piece p = pieces_[sq];
+         149      if (p == Piece::Empty) continue;
+    >>>  150      k ^= zobrist::PieceSquare[piece_index(p)][sq];
+         151    }
+         152    k ^= zobrist::Castling[castling_rights_ & 0xF];
+         153    if (ep_square_ != -1) k ^= zobrist::EpFile[file_of(ep_square_)];
+
+  src/board.cpp:324
+         321    if (!is_empty(captured)) {
+         322      u.captured_piece = captured;
+         323      u.captured_square = m.to;
+    >>>  324      zobrist_key_ ^= zobrist::PieceSquare[piece_index(captured)][m.to];
+         325      remove_piece(m.to);
+         326      did_capture = true;
+         327    }
+
+  src/board.cpp:335
+         332      const Piece ep_captured = pieces_[cap_sq];
+         333      u.captured_piece = ep_captured;
+         334      u.captured_square = cap_sq;
+    >>>  335      zobrist_key_ ^= zobrist::PieceSquare[piece_index(ep_captured)][cap_sq];
+         336      remove_piece(cap_sq);
+         337      did_capture = true;
+         338    }
+
+  src/board.cpp:341
+         338    }
+         339  
+         340    // Move piece (remove + add) + zobrist
+    >>>  341    zobrist_key_ ^= zobrist::PieceSquare[piece_index(moving)][m.from];
+         342    remove_piece(m.from);
+         343    put_piece(moving, m.to);
+         344    zobrist_key_ ^= zobrist::PieceSquare[piece_index(moving)][m.to];
+
+  src/board.cpp:344
+         341    zobrist_key_ ^= zobrist::PieceSquare[piece_index(moving)][m.from];
+         342    remove_piece(m.from);
+         343    put_piece(moving, m.to);
+    >>>  344    zobrist_key_ ^= zobrist::PieceSquare[piece_index(moving)][m.to];
+         345  
+         346    // Promotions
+         347    if (m.flags & MF_PROMOTION) {
+
+  src/board.cpp:350
+         347    if (m.flags & MF_PROMOTION) {
+         348      const Piece promo_piece = make_piece(us, static_cast<PieceType>(m.promo));
+         349      // Replace pawn on 'to' with promo piece
+    >>>  350      zobrist_key_ ^= zobrist::PieceSquare[piece_index(moving)][m.to];  // remove pawn
+         351      remove_piece(m.to);
+         352      put_piece(promo_piece, m.to);
+         353      zobrist_key_ ^= zobrist::PieceSquare[piece_index(promo_piece)][m.to];
+
+  src/board.cpp:353
+         350      zobrist_key_ ^= zobrist::PieceSquare[piece_index(moving)][m.to];  // remove pawn
+         351      remove_piece(m.to);
+         352      put_piece(promo_piece, m.to);
+    >>>  353      zobrist_key_ ^= zobrist::PieceSquare[piece_index(promo_piece)][m.to];
+         354      halfmove_clock_ = 0;
+         355    }
+         356  
+
+  src/board.cpp:362
+         359      if (us == Color::White) {
+         360        if (m.to == 6) {  // e1g1
+         361          move_piece(7, 5);
+    >>>  362          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][7];
+         363          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][5];
+         364        } else if (m.to == 2) {  // e1c1
+         365          move_piece(0, 3);
+
+  src/board.cpp:363
+         360        if (m.to == 6) {  // e1g1
+         361          move_piece(7, 5);
+         362          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][7];
+    >>>  363          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][5];
+         364        } else if (m.to == 2) {  // e1c1
+         365          move_piece(0, 3);
+         366          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][0];
+
+  src/board.cpp:366
+         363          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][5];
+         364        } else if (m.to == 2) {  // e1c1
+         365          move_piece(0, 3);
+    >>>  366          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][0];
+         367          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][3];
+         368        }
+         369      } else {
+
+  src/board.cpp:367
+         364        } else if (m.to == 2) {  // e1c1
+         365          move_piece(0, 3);
+         366          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][0];
+    >>>  367          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::WR)][3];
+         368        }
+         369      } else {
+         370        if (m.to == 62) {  // e8g8
+
+  src/board.cpp:372
+         369      } else {
+         370        if (m.to == 62) {  // e8g8
+         371          move_piece(63, 61);
+    >>>  372          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][63];
+         373          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][61];
+         374        } else if (m.to == 58) {  // e8c8
+         375          move_piece(56, 59);
+
+  src/board.cpp:373
+         370        if (m.to == 62) {  // e8g8
+         371          move_piece(63, 61);
+         372          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][63];
+    >>>  373          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][61];
+         374        } else if (m.to == 58) {  // e8c8
+         375          move_piece(56, 59);
+         376          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][56];
+
+  src/board.cpp:376
+         373          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][61];
+         374        } else if (m.to == 58) {  // e8c8
+         375          move_piece(56, 59);
+    >>>  376          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][56];
+         377          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][59];
+         378        }
+         379      }
+
+  src/board.cpp:377
+         374        } else if (m.to == 58) {  // e8c8
+         375          move_piece(56, 59);
+         376          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][56];
+    >>>  377          zobrist_key_ ^= zobrist::PieceSquare[piece_index(Piece::BR)][59];
+         378        }
+         379      }
+         380    }
+
+  src/eval.h:12
+           9  
+          10  struct EvalFeatures {
+          11    int phase = 0;     // 0..24
+    >>>   12    int mg_fixed = 0;  // material + PST
+          13    int eg_fixed = 0;  // material + PST
+          14  
+          15    int bishop_pair = 0;
+
+  src/eval.h:13
+          10  struct EvalFeatures {
+          11    int phase = 0;     // 0..24
+          12    int mg_fixed = 0;  // material + PST
+    >>>   13    int eg_fixed = 0;  // material + PST
+          14  
+          15    int bishop_pair = 0;
+          16    int doubled_pawn = 0;
+
+  src/zobrist.cpp:16
+          13  
+          14  namespace zobrist {
+          15  
+    >>>   16  uint64_t PieceSquare[12][64];
+          17  uint64_t Castling[16];
+          18  uint64_t EpFile[8];
+          19  uint64_t SideToMove;
+
+  src/zobrist.cpp:25
+          22    uint64_t seed = 0xC0D3C0D3ULL ^ 0x123456789ABCDEF0ULL;  // deterministic
+          23    for (int p = 0; p < 12; ++p) {
+          24      for (int sq = 0; sq < 64; ++sq) {
+    >>>   25        PieceSquare[p][sq] = splitmix64(seed);
+          26      }
+          27    }
+          28    for (int i = 0; i < 16; ++i) Castling[i] = splitmix64(seed);
+
+  src/zobrist.h:7
+           4  
+           5  namespace zobrist {
+           6  
+    >>>    7  extern uint64_t PieceSquare[12][64];
+           8  extern uint64_t Castling[16];
+           9  extern uint64_t EpFile[8];
+          10  extern uint64_t SideToMove;
+
+[YES] latex-chess-engine  (LaTeX)  — 11 match(es)
+  chess-engine.tex:38
+          35    \advance\count190 by 1\relax
+          36  \repeat
+          37  
+    >>>   38  % Precompute mirror table for PST: mirror(sq) = (8-rank)*8+file
+          39  % Used for black pieces: look up PST from white's perspective with mirrored square
+          40  \count190=1\relax
+          41  \loop\ifnum\count190<65
+
+  chess-engine.tex:39
+          36  \repeat
+          37  
+          38  % Precompute mirror table for PST: mirror(sq) = (8-rank)*8+file
+    >>>   39  % Used for black pieces: look up PST from white's perspective with mirrored square
+          40  \count190=1\relax
+          41  \loop\ifnum\count190<65
+          42    \count191=\csname sq@file@\the\count190\endcsname\relax  % file 1-8
+
+  chess-engine.tex:51
+          48  \repeat
+          49  
+          50  % --- Piece-Square Tables (Simplified Eval Function, white perspective) ---
+    >>>   51  % Pawn PST (sq 1-64, a1=1, rank 1 at bottom)
+          52  \expandafter\def\csname psq@1@1\endcsname{0}\expandafter\def\csname psq@1@2\endcsname{0}\expandafter\def\csname psq@1@3\endcsname{0}\expandafter\def\csname psq@1@4\endcsname{0}\expandafter\def\csname psq@1@5\endcsname{0}\expandafter\def\csname psq@1@6\endcsname{0}\expandafter\def\csname psq@1@7\endcsname{0}\expandafter\def\csname psq@1@8\endcsname{0}%
+          53  \expandafter\def\csname psq@1@9\endcsname{5}\expandafter\def\csname psq@1@10\endcsname{10}\expandafter\def\csname psq@1@11\endcsname{10}\expandafter\def\csname psq@1@12\endcsname{-20}\expandafter\def\csname psq@1@13\endcsname{-20}\expandafter\def\csname psq@1@14\endcsname{10}\expandafter\def\csname psq@1@15\endcsname{10}\expandafter\def\csname psq@1@16\endcsname{5}%
+          54  \expandafter\def\csname psq@1@17\endcsname{5}\expandafter\def\csname psq@1@18\endcsname{-5}\expandafter\def\csname psq@1@19\endcsname{-10}\expandafter\def\csname psq@1@20\endcsname{0}\expandafter\def\csname psq@1@21\endcsname{0}\expandafter\def\csname psq@1@22\endcsname{-10}\expandafter\def\csname psq@1@23\endcsname{-5}\expandafter\def\csname psq@1@24\endcsname{5}%
+
+  chess-engine.tex:60
+          57  \expandafter\def\csname psq@1@41\endcsname{10}\expandafter\def\csname psq@1@42\endcsname{10}\expandafter\def\csname psq@1@43\endcsname{20}\expandafter\def\csname psq@1@44\endcsname{30}\expandafter\def\csname psq@1@45\endcsname{30}\expandafter\def\csname psq@1@46\endcsname{20}\expandafter\def\csname psq@1@47\endcsname{10}\expandafter\def\csname psq@1@48\endcsname{10}%
+          58  \expandafter\def\csname psq@1@49\endcsname{50}\expandafter\def\csname psq@1@50\endcsname{50}\expandafter\def\csname psq@1@51\endcsname{50}\expandafter\def\csname psq@1@52\endcsname{50}\expandafter\def\csname psq@1@53\endcsname{50}\expandafter\def\csname psq@1@54\endcsname{50}\expandafter\def\csname psq@1@55\endcsname{50}\expandafter\def\csname psq@1@56\endcsname{50}%
+          59  \expandafter\def\csname psq@1@57\endcsname{0}\expandafter\def\csname psq@1@58\endcsname{0}\expandafter\def\csname psq@1@59\endcsname{0}\expandafter\def\csname psq@1@60\endcsname{0}\expandafter\def\csname psq@1@61\endcsname{0}\expandafter\def\csname psq@1@62\endcsname{0}\expandafter\def\csname psq@1@63\endcsname{0}\expandafter\def\csname psq@1@64\endcsname{0}%
+    >>>   60  % Knight PST
+          61  \expandafter\def\csname psq@2@1\endcsname{-50}\expandafter\def\csname psq@2@2\endcsname{-40}\expandafter\def\csname psq@2@3\endcsname{-30}\expandafter\def\csname psq@2@4\endcsname{-30}\expandafter\def\csname psq@2@5\endcsname{-30}\expandafter\def\csname psq@2@6\endcsname{-30}\expandafter\def\csname psq@2@7\endcsname{-40}\expandafter\def\csname psq@2@8\endcsname{-50}%
+          62  \expandafter\def\csname psq@2@9\endcsname{-40}\expandafter\def\csname psq@2@10\endcsname{-20}\expandafter\def\csname psq@2@11\endcsname{0}\expandafter\def\csname psq@2@12\endcsname{5}\expandafter\def\csname psq@2@13\endcsname{5}\expandafter\def\csname psq@2@14\endcsname{0}\expandafter\def\csname psq@2@15\endcsname{-20}\expandafter\def\csname psq@2@16\endcsname{-40}%
+          63  \expandafter\def\csname psq@2@17\endcsname{-30}\expandafter\def\csname psq@2@18\endcsname{0}\expandafter\def\csname psq@2@19\endcsname{10}\expandafter\def\csname psq@2@20\endcsname{15}\expandafter\def\csname psq@2@21\endcsname{15}\expandafter\def\csname psq@2@22\endcsname{10}\expandafter\def\csname psq@2@23\endcsname{0}\expandafter\def\csname psq@2@24\endcsname{-30}%
+
+  chess-engine.tex:69
+          66  \expandafter\def\csname psq@2@41\endcsname{-30}\expandafter\def\csname psq@2@42\endcsname{5}\expandafter\def\csname psq@2@43\endcsname{10}\expandafter\def\csname psq@2@44\endcsname{15}\expandafter\def\csname psq@2@45\endcsname{15}\expandafter\def\csname psq@2@46\endcsname{10}\expandafter\def\csname psq@2@47\endcsname{5}\expandafter\def\csname psq@2@48\endcsname{-30}%
+          67  \expandafter\def\csname psq@2@49\endcsname{-40}\expandafter\def\csname psq@2@50\endcsname{-20}\expandafter\def\csname psq@2@51\endcsname{0}\expandafter\def\csname psq@2@52\endcsname{0}\expandafter\def\csname psq@2@53\endcsname{0}\expandafter\def\csname psq@2@54\endcsname{0}\expandafter\def\csname psq@2@55\endcsname{-20}\expandafter\def\csname psq@2@56\endcsname{-40}%
+          68  \expandafter\def\csname psq@2@57\endcsname{-50}\expandafter\def\csname psq@2@58\endcsname{-40}\expandafter\def\csname psq@2@59\endcsname{-30}\expandafter\def\csname psq@2@60\endcsname{-30}\expandafter\def\csname psq@2@61\endcsname{-30}\expandafter\def\csname psq@2@62\endcsname{-30}\expandafter\def\csname psq@2@63\endcsname{-40}\expandafter\def\csname psq@2@64\endcsname{-50}%
+    >>>   69  % Bishop PST
+          70  \expandafter\def\csname psq@3@1\endcsname{-20}\expandafter\def\csname psq@3@2\endcsname{-10}\expandafter\def\csname psq@3@3\endcsname{-10}\expandafter\def\csname psq@3@4\endcsname{-10}\expandafter\def\csname psq@3@5\endcsname{-10}\expandafter\def\csname psq@3@6\endcsname{-10}\expandafter\def\csname psq@3@7\endcsname{-10}\expandafter\def\csname psq@3@8\endcsname{-20}%
+          71  \expandafter\def\csname psq@3@9\endcsname{-10}\expandafter\def\csname psq@3@10\endcsname{5}\expandafter\def\csname psq@3@11\endcsname{0}\expandafter\def\csname psq@3@12\endcsname{0}\expandafter\def\csname psq@3@13\endcsname{0}\expandafter\def\csname psq@3@14\endcsname{0}\expandafter\def\csname psq@3@15\endcsname{5}\expandafter\def\csname psq@3@16\endcsname{-10}%
+          72  \expandafter\def\csname psq@3@17\endcsname{-10}\expandafter\def\csname psq@3@18\endcsname{10}\expandafter\def\csname psq@3@19\endcsname{10}\expandafter\def\csname psq@3@20\endcsname{10}\expandafter\def\csname psq@3@21\endcsname{10}\expandafter\def\csname psq@3@22\endcsname{10}\expandafter\def\csname psq@3@23\endcsname{10}\expandafter\def\csname psq@3@24\endcsname{-10}%
+
+  chess-engine.tex:78
+          75  \expandafter\def\csname psq@3@41\endcsname{-10}\expandafter\def\csname psq@3@42\endcsname{0}\expandafter\def\csname psq@3@43\endcsname{5}\expandafter\def\csname psq@3@44\endcsname{10}\expandafter\def\csname psq@3@45\endcsname{10}\expandafter\def\csname psq@3@46\endcsname{5}\expandafter\def\csname psq@3@47\endcsname{0}\expandafter\def\csname psq@3@48\endcsname{-10}%
+          76  \expandafter\def\csname psq@3@49\endcsname{-10}\expandafter\def\csname psq@3@50\endcsname{0}\expandafter\def\csname psq@3@51\endcsname{0}\expandafter\def\csname psq@3@52\endcsname{0}\expandafter\def\csname psq@3@53\endcsname{0}\expandafter\def\csname psq@3@54\endcsname{0}\expandafter\def\csname psq@3@55\endcsname{0}\expandafter\def\csname psq@3@56\endcsname{-10}%
+          77  \expandafter\def\csname psq@3@57\endcsname{-20}\expandafter\def\csname psq@3@58\endcsname{-10}\expandafter\def\csname psq@3@59\endcsname{-10}\expandafter\def\csname psq@3@60\endcsname{-10}\expandafter\def\csname psq@3@61\endcsname{-10}\expandafter\def\csname psq@3@62\endcsname{-10}\expandafter\def\csname psq@3@63\endcsname{-10}\expandafter\def\csname psq@3@64\endcsname{-20}%
+    >>>   78  % Rook PST
+          79  \expandafter\def\csname psq@4@1\endcsname{0}\expandafter\def\csname psq@4@2\endcsname{0}\expandafter\def\csname psq@4@3\endcsname{0}\expandafter\def\csname psq@4@4\endcsname{5}\expandafter\def\csname psq@4@5\endcsname{5}\expandafter\def\csname psq@4@6\endcsname{0}\expandafter\def\csname psq@4@7\endcsname{0}\expandafter\def\csname psq@4@8\endcsname{0}%
+          80  \expandafter\def\csname psq@4@9\endcsname{-5}\expandafter\def\csname psq@4@10\endcsname{0}\expandafter\def\csname psq@4@11\endcsname{0}\expandafter\def\csname psq@4@12\endcsname{0}\expandafter\def\csname psq@4@13\endcsname{0}\expandafter\def\csname psq@4@14\endcsname{0}\expandafter\def\csname psq@4@15\endcsname{0}\expandafter\def\csname psq@4@16\endcsname{-5}%
+          81  \expandafter\def\csname psq@4@17\endcsname{-5}\expandafter\def\csname psq@4@18\endcsname{0}\expandafter\def\csname psq@4@19\endcsname{0}\expandafter\def\csname psq@4@20\endcsname{0}\expandafter\def\csname psq@4@21\endcsname{0}\expandafter\def\csname psq@4@22\endcsname{0}\expandafter\def\csname psq@4@23\endcsname{0}\expandafter\def\csname psq@4@24\endcsname{-5}%
+
+  chess-engine.tex:87
+          84  \expandafter\def\csname psq@4@41\endcsname{-5}\expandafter\def\csname psq@4@42\endcsname{0}\expandafter\def\csname psq@4@43\endcsname{0}\expandafter\def\csname psq@4@44\endcsname{0}\expandafter\def\csname psq@4@45\endcsname{0}\expandafter\def\csname psq@4@46\endcsname{0}\expandafter\def\csname psq@4@47\endcsname{0}\expandafter\def\csname psq@4@48\endcsname{-5}%
+          85  \expandafter\def\csname psq@4@49\endcsname{5}\expandafter\def\csname psq@4@50\endcsname{10}\expandafter\def\csname psq@4@51\endcsname{10}\expandafter\def\csname psq@4@52\endcsname{10}\expandafter\def\csname psq@4@53\endcsname{10}\expandafter\def\csname psq@4@54\endcsname{10}\expandafter\def\csname psq@4@55\endcsname{10}\expandafter\def\csname psq@4@56\endcsname{5}%
+          86  \expandafter\def\csname psq@4@57\endcsname{0}\expandafter\def\csname psq@4@58\endcsname{0}\expandafter\def\csname psq@4@59\endcsname{0}\expandafter\def\csname psq@4@60\endcsname{0}\expandafter\def\csname psq@4@61\endcsname{0}\expandafter\def\csname psq@4@62\endcsname{0}\expandafter\def\csname psq@4@63\endcsname{0}\expandafter\def\csname psq@4@64\endcsname{0}%
+    >>>   87  % Queen PST
+          88  \expandafter\def\csname psq@5@1\endcsname{-20}\expandafter\def\csname psq@5@2\endcsname{-10}\expandafter\def\csname psq@5@3\endcsname{-10}\expandafter\def\csname psq@5@4\endcsname{-5}\expandafter\def\csname psq@5@5\endcsname{-5}\expandafter\def\csname psq@5@6\endcsname{-10}\expandafter\def\csname psq@5@7\endcsname{-10}\expandafter\def\csname psq@5@8\endcsname{-20}%
+          89  \expandafter\def\csname psq@5@9\endcsname{-10}\expandafter\def\csname psq@5@10\endcsname{0}\expandafter\def\csname psq@5@11\endcsname{5}\expandafter\def\csname psq@5@12\endcsname{0}\expandafter\def\csname psq@5@13\endcsname{0}\expandafter\def\csname psq@5@14\endcsname{0}\expandafter\def\csname psq@5@15\endcsname{0}\expandafter\def\csname psq@5@16\endcsname{-10}%
+          90  \expandafter\def\csname psq@5@17\endcsname{-10}\expandafter\def\csname psq@5@18\endcsname{5}\expandafter\def\csname psq@5@19\endcsname{5}\expandafter\def\csname psq@5@20\endcsname{5}\expandafter\def\csname psq@5@21\endcsname{5}\expandafter\def\csname psq@5@22\endcsname{5}\expandafter\def\csname psq@5@23\endcsname{0}\expandafter\def\csname psq@5@24\endcsname{-10}%
+
+  chess-engine.tex:96
+          93  \expandafter\def\csname psq@5@41\endcsname{-10}\expandafter\def\csname psq@5@42\endcsname{0}\expandafter\def\csname psq@5@43\endcsname{5}\expandafter\def\csname psq@5@44\endcsname{5}\expandafter\def\csname psq@5@45\endcsname{5}\expandafter\def\csname psq@5@46\endcsname{5}\expandafter\def\csname psq@5@47\endcsname{0}\expandafter\def\csname psq@5@48\endcsname{-10}%
+          94  \expandafter\def\csname psq@5@49\endcsname{-10}\expandafter\def\csname psq@5@50\endcsname{0}\expandafter\def\csname psq@5@51\endcsname{0}\expandafter\def\csname psq@5@52\endcsname{0}\expandafter\def\csname psq@5@53\endcsname{0}\expandafter\def\csname psq@5@54\endcsname{0}\expandafter\def\csname psq@5@55\endcsname{0}\expandafter\def\csname psq@5@56\endcsname{-10}%
+          95  \expandafter\def\csname psq@5@57\endcsname{-20}\expandafter\def\csname psq@5@58\endcsname{-10}\expandafter\def\csname psq@5@59\endcsname{-10}\expandafter\def\csname psq@5@60\endcsname{-5}\expandafter\def\csname psq@5@61\endcsname{-5}\expandafter\def\csname psq@5@62\endcsname{-10}\expandafter\def\csname psq@5@63\endcsname{-10}\expandafter\def\csname psq@5@64\endcsname{-20}%
+    >>>   96  % King PST (middlegame)
+          97  \expandafter\def\csname psq@6@1\endcsname{20}\expandafter\def\csname psq@6@2\endcsname{30}\expandafter\def\csname psq@6@3\endcsname{10}\expandafter\def\csname psq@6@4\endcsname{0}\expandafter\def\csname psq@6@5\endcsname{0}\expandafter\def\csname psq@6@6\endcsname{10}\expandafter\def\csname psq@6@7\endcsname{30}\expandafter\def\csname psq@6@8\endcsname{20}%
+          98  \expandafter\def\csname psq@6@9\endcsname{20}\expandafter\def\csname psq@6@10\endcsname{20}\expandafter\def\csname psq@6@11\endcsname{0}\expandafter\def\csname psq@6@12\endcsname{0}\expandafter\def\csname psq@6@13\endcsname{0}\expandafter\def\csname psq@6@14\endcsname{0}\expandafter\def\csname psq@6@15\endcsname{20}\expandafter\def\csname psq@6@16\endcsname{20}%
+          99  \expandafter\def\csname psq@6@17\endcsname{-10}\expandafter\def\csname psq@6@18\endcsname{-20}\expandafter\def\csname psq@6@19\endcsname{-20}\expandafter\def\csname psq@6@20\endcsname{-20}\expandafter\def\csname psq@6@21\endcsname{-20}\expandafter\def\csname psq@6@22\endcsname{-20}\expandafter\def\csname psq@6@23\endcsname{-20}\expandafter\def\csname psq@6@24\endcsname{-10}%
+
+  chess-engine.tex:1524
+        1521      \ifnum\eval@piece=0 \else
+        1522        \eval@abs=\eval@piece\relax
+        1523        \ifnum\eval@abs<0 \eval@abs=-\eval@abs\relax\fi
+    >>> 1524        % Material value + PST bonus
+        1525        \eval@bonus=\csname piecemat@\the\eval@abs\endcsname\relax
+        1526        \ifnum\eval@piece>0
+        1527          \advance\eval@bonus by \csname psq@\the\eval@abs @\the\eval@sq\endcsname\relax
+
+  chess-engine.tex:1530
+        1527          \advance\eval@bonus by \csname psq@\the\eval@abs @\the\eval@sq\endcsname\relax
+        1528          \advance\eval@sum by \eval@bonus\relax
+        1529        \else
+    >>> 1530          % Black: use mirrored square for PST
+        1531          \advance\eval@bonus by \csname psq@\the\eval@abs @\csname sq@mirror@\the\eval@sq\endcsname\endcsname\relax
+        1532          \advance\eval@sum by -\eval@bonus\relax
+        1533        \fi
+
+  chess-engine.tex:1540
+        1537    \fi
+        1538  }
+        1539  
+    >>> 1540  % (eval@positional removed — replaced by PST lookups in eval@boardloop)
+        1541  
+        1542  %% ========================================================
+        1543  %% Step 17: State Stack for Nested Make/Unmake
+
+[YES] lean-chess  (Lean)  — 3 match(es)
+  Chess/Eval.lean:42
+          39    else
+          40      0
+          41  
+    >>>   42  def pieceSquareValue (piece : Piece) (isEndgame : Bool) (sq : Square) : Int :=
+          43    let c := centrality sq
+          44    let adv := Int.ofNat (forwardRank piece.color sq)
+          45    let edgePenalty := if isEdgeSquare sq then 1 else 0
+
+  Chess/Eval.lean:171
+         168        | none => pure ()
+         169        | some p =>
+         170            nonPawnMaterial := nonPawnMaterial + pieceNonPawnMaterial p
+    >>>  171            let pstMid := pieceSquareValue p false sq
+         172            let pstEnd :=
+         173              if p.kind = .king then
+         174                pieceSquareValue p true sq
+
+  Chess/Eval.lean:174
+         171            let pstMid := pieceSquareValue p false sq
+         172            let pstEnd :=
+         173              if p.kind = .king then
+    >>>  174                pieceSquareValue p true sq
+         175              else
+         176                pstMid
+         177            let vMid := pieceValue p.kind + pstMid
+
+[NO]  madchess32  (?)  — 0 match(es)
+
+[NO]  tscp181  (?)  — 0 match(es)
+
+========================================================================
+Summary (engines WITHOUT the feature):
+  - COBOL-chess  (COBOL)
+  - chess-assembly-codex  (Assembly)
+  - chess-brainfuck-cc  (Python)
+  - chess-css-codex  (HTML)
+  - chess-css-codex-guided  (JavaScript)
+  - chess-icon-codex  (Icon)
+  - chess-latex-codex-replication  (LaTeX)
+  - chess-mojo  (Mojo)
+  - chess-newlang-codex  (C++)
+  - chess-purec  (C)
+  - chess-purec-codex  (C)
+  - chess-rust-codex  (Rust)
+  - chess-why3  (OCaml)
+  - countergo40  (?)
+  - madchess32  (?)
+  - tscp181  (?)

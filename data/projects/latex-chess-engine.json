@@ -1,0 +1,288 @@
+{
+  "name": "latex-chess-engine",
+  "path": "/Users/mathieuacher/SANDBOX/latex-chess-engine",
+  "primary_language": "LaTeX",
+  "loc": {
+    "files_by_lang": {
+      "Shell": 2,
+      "Python": 2,
+      "LaTeX": 17,
+      "Text": 1,
+      "Markdown": 1
+    },
+    "loc_by_lang": {
+      "Shell": 301,
+      "Python": 920,
+      "LaTeX": 39838,
+      "Text": 1,
+      "Markdown": 125
+    },
+    "total_files": 23,
+    "total_loc": 41185
+  },
+  "features": {
+    "FEN parsing": 7,
+    "UCI protocol": 6,
+    "Castling": 24,
+    "En passant": 5,
+    "Promotion": 26,
+    "Check/Checkmate": 6,
+    "PGN": 3,
+    "Board: mailbox 8x8": 1,
+    "Minimax/Negamax": 3,
+    "Alpha-beta": 2,
+    "Iterative deepening": 1,
+    "Quiescence": 4,
+    "Move ordering (MVV-LVA)": 1,
+    "Evaluation/PST": 1,
+    "Material counting": 2,
+    "Time management": 9
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "test-debug.log",
+      "engine-output.dat",
+      "chess-test.log",
+      "chess-engine.tex",
+      "run-elo-test.sh",
+      "pgn2latex.py",
+      "chess-test.tex"
+    ],
+    "UCI protocol": [
+      "chess-uci.py",
+      "chess-uci.tex",
+      "chess-engine.tex",
+      "run-elo-test.sh",
+      "README.md",
+      "chess-uci.log"
+    ],
+    "Perft": [],
+    "Castling": [
+      "chess-game.tex",
+      "chess-test.log",
+      "chess-engine.tex",
+      "README.md",
+      "pgn2latex.py",
+      "chess-test.tex",
+      "games/elo-games.pgn",
+      "games/elo-games-native.tex",
+      "games/elo1320-games.pgn",
+      "games/elo1500-games.pgn",
+      "games/elo1600-games.tex",
+      "games/elo1400-games-native.tex",
+      "games/elo1320-games.tex",
+      "games/elo1500-games.tex",
+      "games/elo1600-games.pgn",
+      "games/elo-games.tex",
+      "games/elo1700-games-native.tex",
+      "games/elo1400-games.pgn",
+      "games/elo1700-games.tex",
+      "games/elo1600-games-native.tex",
+      "games/elo1320-games-native.tex",
+      "games/elo1500-games-native.tex",
+      "games/elo1400-games.tex",
+      "games/elo1700-games.pgn"
+    ],
+    "En passant": [
+      "chess-test.log",
+      "chess-engine.tex",
+      "README.md",
+      "pgn2latex.py",
+      "chess-test.tex"
+    ],
+    "Promotion": [
+      "test-greedy.log",
+      "test-mm8.log",
+      "test-debug.log",
+      "test-mm-final.log",
+      "chess-test.log",
+      "chess-engine.tex",
+      "test-mm-debug.log",
+      "test-reg.log",
+      "README.md",
+      "test-minimax.log",
+      "pgn2latex.py",
+      "test-mm3.log",
+      "test-mm2.log",
+      "test-mm6.log",
+      "chess-uci.log",
+      "test-eval.log",
+      "test-mm7.log",
+      "test-mm5.log",
+      "test-mm4.log",
+      "chess-game.log",
+      "games/elo1500-games-native.log",
+      "games/elo1600-games-native.log",
+      "games/elo1320-games-native.log",
+      "games/elo-games-native.log",
+      "games/elo1700-games-native.log",
+      "games/elo1400-games-native.log"
+    ],
+    "Check/Checkmate": [
+      "chess-interactive.sh",
+      "chess-game.tex",
+      "chess-test.log",
+      "chess-engine.tex",
+      "README.md",
+      "chess-test.tex"
+    ],
+    "PGN": [
+      "run-elo-test.sh",
+      "README.md",
+      "pgn2latex.py"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "chess-engine.tex"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "chess-engine.tex",
+      "README.md",
+      "test-minimax.log"
+    ],
+    "Alpha-beta": [
+      "chess-engine.tex",
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "chess-uci.py"
+    ],
+    "Quiescence": [
+      "chess-uci.py",
+      "chess-game.tex",
+      "chess-engine.tex",
+      "README.md"
+    ],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [
+      "README.md"
+    ],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "chess-engine.tex"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "chess-engine.tex",
+      "README.md"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "chess-uci.py",
+      "run-elo-test.sh",
+      "README.md",
+      "games/elo-games.pgn",
+      "games/elo1320-games.pgn",
+      "games/elo1500-games.pgn",
+      "games/elo1600-games.pgn",
+      "games/elo1400-games.pgn",
+      "games/elo1700-games.pgn"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 23,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 14,
+    "n_assistant_messages": 22,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 56
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 3946313,
+        "output": 33397,
+        "cache_read": 3546368,
+        "cache_creation": 0,
+        "reasoning_output": 16279
+      },
+      "usd_estimate": 5.71
+    },
+    "first_ts": "2026-02-19T14:01:24.836Z",
+    "last_ts": "2026-02-19T15:19:59.048Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-19T14-59-54-019c7633-38a4-7122-84ba-f2bc25ce60dd",
+        "first_ts": "2026-02-19T14:01:24.836Z",
+        "last_ts": "2026-02-19T15:19:59.048Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 14,
+        "tokens": {
+          "input": 3946313,
+          "output": 33397,
+          "cache_read": 3546368,
+          "reasoning_output": 16279
+        },
+        "tool_uses": {
+          "exec_command": 56
+        },
+        "first_prompt_sample": "I'd like to understand this code base... perform an in-depth analysis of implementation details, features of the chess engine, of the general approach and architecture. Pinpoint very important code snippets coming from the implementation\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "697931b|2026-02-26T07:26:08+01:00|Mathieu Acher|overleaf link",
+      "26a07ee|2026-02-26T07:00:47+01:00|Mathieu Acher|edits before release",
+      "778b75f|2026-02-26T06:49:15+01:00|Mathieu Acher|Remove LaTeX build artifacts from tracking",
+      "1aa4d17|2026-02-26T06:00:56+01:00|Mathieu Acher|for elo in 1320 1400 1500; do GAMES=50 STOCKFISH_ELO=1500 bash run-elo-test.sh; done ~[1200, 1322] Elo",
+      "fa66457|2026-02-25T07:58:39+01:00|Mathieu Acher|for elo in 1320 1400 1500 1600 1700; do GAMES=10 STOCKFISH_ELO= bash run-elo-test.sh; done",
+      "b034419|2026-02-24T18:51:02+01:00|Mathieu Acher|fixing some timeouts UCI + results with latex-chess-engine % GAMES=100 STOCKFISH_ELO=1320 bash run-elo-test.sh Score of TeX Chess Engine vs Stockfish: 45 - 48 - 7  [0.485] 100 ...      TeX Chess Engine playing White: 22 - 24 - 4  [0.480] 50 ...      TeX Chess Engine playing Black: 23 - 24 - 3  [0.490] 50 ...      White vs Black: 46 - 47 - 7  [0.495] 100 Elo difference: -10.4 +/- 66.4, LOS: 37.8 %, DrawRatio: 7.0 % SPRT: llr 0 (0.0%), lbound -inf, ubound inf",
+      "2e8331e|2026-02-24T07:28:22+01:00|Mathieu Acher|results with GAMES=100 STOCKFISH_ELO=1320 TIME_CONTROL=\"40/60+1\" bash run-elo-test.sh",
+      "3c51f09|2026-02-23T18:10:21+01:00|Mathieu Acher|Add first-ever claim and video demos to README",
+      "9476f9a|2026-02-23T17:38:20+01:00|Mathieu Acher|Add README documenting the TeX chess engine",
+      "d16b663|2026-02-23T13:51:09+01:00|Mathieu Acher|Add engine strength configuration to chess-game.tex",
+      "04c51d5|2026-02-16T08:54:28+01:00|Mathieu Acher|Add PSTs, depth-3 alpha-beta search, and quiescence",
+      "926869f|2026-02-14T21:59:23+01:00|Mathieu Acher|Add native TeX board rendering mode to pgn2latex.py",
+      "081f9de|2026-02-14T21:52:14+01:00|Mathieu Acher|Fix pgn2latex.py to parse SAN notation from cutechess-cli",
+      "2571f5b|2026-02-14T21:48:18+01:00|Mathieu Acher|Add UCI protocol wrapper and Elo assessment infrastructure",
+      "9e4b41a|2026-02-14T19:28:05+01:00|Mathieu Acher|Add chess engine in pure pdfLaTeX"
+    ],
+    "n_commits": 15,
+    "authors": [
+      "15\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

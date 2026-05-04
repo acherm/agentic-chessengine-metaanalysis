@@ -1,0 +1,50 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-why3-cc vs sf_e2200)
+Started game 2 of 20 (sf_e2200 vs chess-why3-cc)
+Finished game 1 (chess-why3-cc vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_e2200: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-why3-cc vs sf_e2200)
+Finished game 2 (sf_e2200 vs chess-why3-cc): 0-1 {Black wins by adjudication}
+Score of chess-why3-cc vs sf_e2200: 2 - 0 - 0  [1.000] 2
+Started game 4 of 20 (sf_e2200 vs chess-why3-cc)
+Finished game 4 (sf_e2200 vs chess-why3-cc): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_e2200: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-why3-cc vs sf_e2200)
+Finished game 3 (chess-why3-cc vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_e2200: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf_e2200 vs chess-why3-cc)
+Finished game 5 (chess-why3-cc vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_e2200: 4 - 1 - 0  [0.800] 5
+Started game 7 of 20 (chess-why3-cc vs sf_e2200)
+Finished game 6 (sf_e2200 vs chess-why3-cc): 0-1 {Black wins by adjudication}
+Score of chess-why3-cc vs sf_e2200: 5 - 1 - 0  [0.833] 6
+Started game 8 of 20 (sf_e2200 vs chess-why3-cc)
+Finished game 7 (chess-why3-cc vs sf_e2200): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-why3-cc vs sf_e2200: 5 - 1 - 1  [0.786] 7
+Started game 9 of 20 (chess-why3-cc vs sf_e2200)
+Terminating process of engine chess-why3-cc(0)
+Finished game 8 (sf_e2200 vs chess-why3-cc): 1-0 {Black's connection stalls}
+Score of chess-why3-cc vs sf_e2200: 5 - 2 - 1  [0.688] 8
+Finished game 9 (chess-why3-cc vs sf_e2200): * {No result}
+Score of chess-why3-cc vs sf_e2200: 5 - 2 - 1  [0.688] 8
+...      chess-why3-cc playing White: 3 - 0 - 1  [0.875] 4
+...      chess-why3-cc playing Black: 2 - 2 - 0  [0.500] 4
+...      White vs Black: 5 - 2 - 1  [0.688] 8
+Elo difference: 137.0 +/- 396.2, LOS: 87.2 %, DrawRatio: 12.5 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3-cc
+   "Draw by 3-fold repetition": 1
+   "Loss: Black's connection stalls": 1
+   "Loss: White wins by adjudication": 1
+   "No result": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White wins by adjudication": 3
+Player: sf_e2200
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 2
+   "Loss: White wins by adjudication": 3
+   "No result": 1
+   "Win: Black's connection stalls": 1
+   "Win: White wins by adjudication": 1
+Finished match

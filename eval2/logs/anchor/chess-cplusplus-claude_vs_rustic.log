@@ -1,0 +1,67 @@
+Indexing opening suite...
+Started game 2 of 30 (rustic vs chess-cplusplus-claude)
+Started game 1 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 2 (rustic vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 1 (chess-cplusplus-claude vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (rustic vs chess-cplusplus-claude)
+Finished game 4 (rustic vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 3 (chess-cplusplus-claude vs rustic): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 1 - 3 - 0  [0.250] 4
+Started game 6 of 30 (rustic vs chess-cplusplus-claude)
+Finished game 5 (chess-cplusplus-claude vs rustic): 1/2-1/2 {Draw by adjudication}
+Score of chess-cplusplus-claude vs rustic: 1 - 3 - 1  [0.300] 5
+Started game 7 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 6 (rustic vs chess-cplusplus-claude): 1-0 {White mates}
+Score of chess-cplusplus-claude vs rustic: 1 - 4 - 1  [0.250] 6
+Started game 8 of 30 (rustic vs chess-cplusplus-claude)
+Finished game 7 (chess-cplusplus-claude vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 1 - 5 - 1  [0.214] 7
+Started game 9 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 8 (rustic vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 1 - 6 - 1  [0.188] 8
+Started game 10 of 30 (rustic vs chess-cplusplus-claude)
+Finished game 10 (rustic vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 1 - 7 - 1  [0.167] 9
+Started game 11 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 9 (chess-cplusplus-claude vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 1 - 8 - 1  [0.150] 10
+Started game 12 of 30 (rustic vs chess-cplusplus-claude)
+Finished game 12 (rustic vs chess-cplusplus-claude): 1-0 {White mates}
+Score of chess-cplusplus-claude vs rustic: 1 - 9 - 1  [0.136] 11
+Started game 13 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 11 (chess-cplusplus-claude vs rustic): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 2 - 9 - 1  [0.208] 12
+Started game 14 of 30 (rustic vs chess-cplusplus-claude)
+Finished game 13 (chess-cplusplus-claude vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs rustic: 2 - 10 - 1  [0.192] 13
+Started game 15 of 30 (chess-cplusplus-claude vs rustic)
+Finished game 14 (rustic vs chess-cplusplus-claude): 1/2-1/2 {Draw by adjudication}
+Score of chess-cplusplus-claude vs rustic: 2 - 10 - 2  [0.214] 14
+Finished game 15 (chess-cplusplus-claude vs rustic): * {No result}
+Score of chess-cplusplus-claude vs rustic: 2 - 10 - 2  [0.214] 14
+...      chess-cplusplus-claude playing White: 2 - 4 - 1  [0.357] 7
+...      chess-cplusplus-claude playing Black: 0 - 6 - 1  [0.071] 7
+...      White vs Black: 8 - 4 - 2  [0.643] 14
+Elo difference: -225.7 +/- 289.2, LOS: 1.0 %, DrawRatio: 14.3 %
+SPRT: llr -2.96 (-100.5%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-cplusplus-claude
+   "Draw by adjudication": 2
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 4
+   "No result": 1
+   "Win: White wins by adjudication": 2
+Player: rustic
+   "Draw by adjudication": 2
+   "Loss: White wins by adjudication": 2
+   "No result": 1
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 4
+Finished match

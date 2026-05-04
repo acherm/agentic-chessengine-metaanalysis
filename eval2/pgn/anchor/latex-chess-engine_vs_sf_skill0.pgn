@@ -1,0 +1,120 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "1"]
+[White "latex-chess-engine"]
+[Black "sf_skill0"]
+[Result "0-1"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 e6 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "1"]
+[White "sf_skill0"]
+[Black "latex-chess-engine"]
+[Result "1-0"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "2"]
+[White "latex-chess-engine"]
+[Black "sf_skill0"]
+[Result "0-1"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 e6 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "2"]
+[White "sf_skill0"]
+[Black "latex-chess-engine"]
+[Result "1-0"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "3"]
+[White "latex-chess-engine"]
+[Black "sf_skill0"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e6 2. Nc3 d6 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "3"]
+[White "sf_skill0"]
+[Black "latex-chess-engine"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+{Black makes an illegal move: b1c3} 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "4"]
+[White "latex-chess-engine"]
+[Black "sf_skill0"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e5 2. Nc3 d6 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "4"]
+[White "sf_skill0"]
+[Black "latex-chess-engine"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+{Black makes an illegal move: b1c3} 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "5"]
+[White "latex-chess-engine"]
+[Black "sf_skill0"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... g6 2. Nc3 Bg7 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "5"]
+[White "sf_skill0"]
+[Black "latex-chess-engine"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+{Black makes an illegal move: b1c3} 1-0
+

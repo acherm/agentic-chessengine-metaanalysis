@@ -1,0 +1,116 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-py vs sf_skill5)
+Started game 2 of 30 (sf_skill5 vs chess-py)
+Finished game 2 (sf_skill5 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-py vs sf_skill5)
+Finished game 1 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill5 vs chess-py)
+Finished game 4 (sf_skill5 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (chess-py vs sf_skill5)
+Finished game 3 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (sf_skill5 vs chess-py)
+Finished game 5 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (chess-py vs sf_skill5)
+Finished game 6 (sf_skill5 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (sf_skill5 vs chess-py)
+Finished game 7 (chess-py vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 1 - 6 - 0  [0.143] 7
+Started game 9 of 30 (chess-py vs sf_skill5)
+Finished game 8 (sf_skill5 vs chess-py): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 2 - 6 - 0  [0.250] 8
+Started game 10 of 30 (sf_skill5 vs chess-py)
+Finished game 9 (chess-py vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 3 - 6 - 0  [0.333] 9
+Started game 11 of 30 (chess-py vs sf_skill5)
+Finished game 10 (sf_skill5 vs chess-py): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 4 - 6 - 0  [0.400] 10
+Started game 12 of 30 (sf_skill5 vs chess-py)
+Finished game 11 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 4 - 7 - 0  [0.364] 11
+Started game 13 of 30 (chess-py vs sf_skill5)
+Finished game 12 (sf_skill5 vs chess-py): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 5 - 7 - 0  [0.417] 12
+Started game 14 of 30 (sf_skill5 vs chess-py)
+Finished game 13 (chess-py vs sf_skill5): 1-0 {White mates}
+Score of chess-py vs sf_skill5: 6 - 7 - 0  [0.462] 13
+Started game 15 of 30 (chess-py vs sf_skill5)
+Finished game 14 (sf_skill5 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 6 - 8 - 0  [0.429] 14
+Started game 16 of 30 (sf_skill5 vs chess-py)
+Finished game 15 (chess-py vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 7 - 8 - 0  [0.467] 15
+Started game 17 of 30 (chess-py vs sf_skill5)
+Finished game 16 (sf_skill5 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 7 - 9 - 0  [0.438] 16
+Started game 18 of 30 (sf_skill5 vs chess-py)
+Finished game 17 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 7 - 10 - 0  [0.412] 17
+Started game 19 of 30 (chess-py vs sf_skill5)
+Finished game 18 (sf_skill5 vs chess-py): 1/2-1/2 {Draw by insufficient mating material}
+Score of chess-py vs sf_skill5: 7 - 10 - 1  [0.417] 18
+Started game 20 of 30 (sf_skill5 vs chess-py)
+Finished game 19 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 7 - 11 - 1  [0.395] 19
+Started game 21 of 30 (chess-py vs sf_skill5)
+Finished game 20 (sf_skill5 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 7 - 12 - 1  [0.375] 20
+Started game 22 of 30 (sf_skill5 vs chess-py)
+Finished game 21 (chess-py vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-py vs sf_skill5: 7 - 12 - 2  [0.381] 21
+Started game 23 of 30 (chess-py vs sf_skill5)
+Finished game 22 (sf_skill5 vs chess-py): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 8 - 12 - 2  [0.409] 22
+Started game 24 of 30 (sf_skill5 vs chess-py)
+Finished game 23 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 8 - 13 - 2  [0.391] 23
+Started game 25 of 30 (chess-py vs sf_skill5)
+Finished game 24 (sf_skill5 vs chess-py): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 9 - 13 - 2  [0.417] 24
+Started game 26 of 30 (sf_skill5 vs chess-py)
+Finished game 25 (chess-py vs sf_skill5): 1-0 {White mates}
+Score of chess-py vs sf_skill5: 10 - 13 - 2  [0.440] 25
+Started game 27 of 30 (chess-py vs sf_skill5)
+Finished game 26 (sf_skill5 vs chess-py): 0-1 {Black mates}
+Score of chess-py vs sf_skill5: 11 - 13 - 2  [0.462] 26
+Started game 28 of 30 (sf_skill5 vs chess-py)
+Finished game 28 (sf_skill5 vs chess-py): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 12 - 13 - 2  [0.481] 27
+Started game 29 of 30 (chess-py vs sf_skill5)
+Finished game 27 (chess-py vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill5: 12 - 14 - 2  [0.464] 28
+Started game 30 of 30 (sf_skill5 vs chess-py)
+Finished game 30 (sf_skill5 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill5: 12 - 15 - 2  [0.448] 29
+Finished game 29 (chess-py vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-py vs sf_skill5: 12 - 15 - 3  [0.450] 30
+...      chess-py playing White: 5 - 8 - 2  [0.400] 15
+...      chess-py playing Black: 7 - 7 - 1  [0.500] 15
+...      White vs Black: 12 - 15 - 3  [0.450] 30
+Elo difference: -34.9 +/- 123.4, LOS: 28.2 %, DrawRatio: 10.0 %
+SPRT: llr -0.972 (-33.0%), lbound -2.94, ubound 2.94
+
+Player: chess-py
+   "Draw by 3-fold repetition": 2
+   "Draw by insufficient mating material": 1
+   "Loss: Black wins by adjudication": 8
+   "Loss: White wins by adjudication": 7
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 6
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 3
+Player: sf_skill5
+   "Draw by 3-fold repetition": 2
+   "Draw by insufficient mating material": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 6
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 3
+   "Win: Black wins by adjudication": 8
+   "Win: White wins by adjudication": 7
+Finished match

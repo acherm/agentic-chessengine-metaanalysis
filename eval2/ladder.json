@@ -1,0 +1,97 @@
+{
+  "name": "canonical-stockfish-ladder-2026-eval2",
+  "stockfish": {
+    "version": "16.1",
+    "image": "eval2/stockfish:16.1",
+    "options": {
+      "UCI_LimitStrength": "true",
+      "Threads": 1,
+      "Hash": 128
+    },
+    "rungs_uci_elo": [1320, 1500, 1700, 1900, 2100, 2300, 2500, 2700, 2900]
+  },
+  "anchors_used": ["tscp181", "madchess32", "countergo40"],
+  "time_controls": {
+    "tier_A": {
+      "primary": "120+1",
+      "fast_bracket": "30+0.3",
+      "rr": "60+0.6"
+    },
+    "tier_B": {
+      "primary": "120+1",
+      "fast_bracket": "30+0.3",
+      "rr": "60+0.6",
+      "fallback_movetime_ms_if_timeout": 30000
+    },
+    "tier_C": {
+      "primary": "st=30",
+      "long": "st=60",
+      "rungs_subset_uci_elo": [1320],
+      "games_per_pairing": 10
+    }
+  },
+  "phases": {
+    "0_build_images": {"hours_budget": 3},
+    "1_preflight": {
+      "wac_positions": 100,
+      "perft_positions": 6,
+      "illegal_check_positions": 100,
+      "movetime_per_position_ms": 5000,
+      "hours_budget": 3
+    },
+    "2_calibration": {
+      "self_play_pairings": ["sf1320-vs-sf1500","sf1700-vs-sf1900","sf2300-vs-sf2500"],
+      "anchor_pairings": ["tscp181-vs-sf1700","countergo40-vs-sf2300"],
+      "games_per_pairing": 30,
+      "tc": "120+1",
+      "hours_budget": 6
+    },
+    "3a_pass1_bracket": {
+      "tc": "30+0.3",
+      "games_per_rung": 10,
+      "sprt_elo0": -50, "sprt_elo1": 50, "sprt_alpha": 0.05, "sprt_beta": 0.05,
+      "concurrency": 4,
+      "hours_budget": 12
+    },
+    "3b_pass2_focused": {
+      "tc": "120+1",
+      "rungs_around_pass1": 2,
+      "games_per_rung": 20,
+      "sprt_elo0": -25, "sprt_elo1": 25, "sprt_alpha": 0.05, "sprt_beta": 0.05,
+      "concurrency": 1,
+      "hours_budget": 20
+    },
+    "4_tier_rr": {
+      "tc": "60+0.6",
+      "games_per_pairing": 4,
+      "concurrency": 2,
+      "hours_budget": 12
+    },
+    "5_slow_battery": {
+      "tc": "st=30",
+      "rungs_uci_elo": [1320],
+      "games_per_pairing": 10,
+      "include_random_mover": true,
+      "hours_budget": 6
+    }
+  },
+  "adjudication": {
+    "draw_movecount": 6,
+    "draw_score_cp": 10,
+    "draw_movenumber": 40,
+    "resign_movecount": 5,
+    "resign_score_cp": 900,
+    "max_plies": 400
+  },
+  "opening_book": {
+    "file": "fixtures/openings.epd",
+    "format": "epd",
+    "order": "random"
+  },
+  "notes": [
+    "SF 16.1 chosen because UCI_Elo curve is documented and CCRL 40/4 anchored.",
+    "Tier C engines report bounded Elo ('between random and SF1000'); not point estimates.",
+    "Random-mover baseline runs in every tier, always.",
+    "All times above assume one machine, ~8 cores free."
+  ]
+}

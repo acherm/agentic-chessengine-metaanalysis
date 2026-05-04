@@ -1,0 +1,70 @@
+Indexing opening suite...
+Started game 1 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Started game 2 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 1 (cplusplus-chess-NATIVE vs rustic-NATIVE): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 0 - 1 - 0  [0.000] 1
+Started game 3 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Finished game 2 (rustic-NATIVE vs cplusplus-chess-NATIVE): 1-0 {White wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 0 - 2 - 0  [0.000] 2
+Started game 4 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 4 (rustic-NATIVE vs cplusplus-chess-NATIVE): 1-0 {White wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 0 - 3 - 0  [0.000] 3
+Started game 5 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Finished game 3 (cplusplus-chess-NATIVE vs rustic-NATIVE): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 0 - 4 - 0  [0.000] 4
+Started game 6 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 5 (cplusplus-chess-NATIVE vs rustic-NATIVE): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 0 - 5 - 0  [0.000] 5
+Started game 7 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Finished game 6 (rustic-NATIVE vs cplusplus-chess-NATIVE): 1-0 {White wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 0 - 6 - 0  [0.000] 6
+Started game 8 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 7 (cplusplus-chess-NATIVE vs rustic-NATIVE): 0-1 {Black mates}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 0 - 7 - 0  [0.000] 7
+Started game 9 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Finished game 9 (cplusplus-chess-NATIVE vs rustic-NATIVE): 1-0 {White wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 1 - 7 - 0  [0.125] 8
+Started game 10 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 8 (rustic-NATIVE vs cplusplus-chess-NATIVE): 1/2-1/2 {Draw by 3-fold repetition}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 1 - 7 - 1  [0.167] 9
+Started game 11 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Finished game 10 (rustic-NATIVE vs cplusplus-chess-NATIVE): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 2 - 7 - 1  [0.250] 10
+Started game 12 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 11 (cplusplus-chess-NATIVE vs rustic-NATIVE): 1/2-1/2 {Draw by 3-fold repetition}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 2 - 7 - 2  [0.273] 11
+Started game 13 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Finished game 12 (rustic-NATIVE vs cplusplus-chess-NATIVE): 1-0 {White wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 2 - 8 - 2  [0.250] 12
+Started game 14 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 14 (rustic-NATIVE vs cplusplus-chess-NATIVE): 1/2-1/2 {Draw by 3-fold repetition}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 2 - 8 - 3  [0.269] 13
+Started game 15 of 16 (cplusplus-chess-NATIVE vs rustic-NATIVE)
+Finished game 13 (cplusplus-chess-NATIVE vs rustic-NATIVE): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 2 - 9 - 3  [0.250] 14
+Started game 16 of 16 (rustic-NATIVE vs cplusplus-chess-NATIVE)
+Finished game 15 (cplusplus-chess-NATIVE vs rustic-NATIVE): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 2 - 10 - 3  [0.233] 15
+Finished game 16 (rustic-NATIVE vs cplusplus-chess-NATIVE): 1-0 {White wins by adjudication}
+Score of cplusplus-chess-NATIVE vs rustic-NATIVE: 2 - 11 - 3  [0.219] 16
+...      cplusplus-chess-NATIVE playing White: 1 - 6 - 1  [0.188] 8
+...      cplusplus-chess-NATIVE playing Black: 1 - 5 - 2  [0.250] 8
+...      White vs Black: 6 - 7 - 3  [0.469] 16
+Elo difference: -221.1 +/- 224.0, LOS: 0.6 %, DrawRatio: 18.8 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: cplusplus-chess-NATIVE
+   "Draw by 3-fold repetition": 3
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 5
+   "Loss: White wins by adjudication": 5
+   "Win: Black wins by adjudication": 1
+   "Win: White wins by adjudication": 1
+Player: rustic-NATIVE
+   "Draw by 3-fold repetition": 3
+   "Loss: Black wins by adjudication": 1
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 5
+   "Win: White wins by adjudication": 5
+Finished match

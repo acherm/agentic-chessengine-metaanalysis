@@ -1,0 +1,82 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_skill1 vs chess-icon-codex)
+Started game 1 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 1 (chess-icon-codex vs sf_skill1): 1-0 {White wins by adjudication}
+Score of chess-icon-codex vs sf_skill1: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 2 (sf_skill1 vs chess-icon-codex): 0-1 {Black wins by adjudication}
+Score of chess-icon-codex vs sf_skill1: 2 - 0 - 0  [1.000] 2
+Started game 4 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 4 (sf_skill1 vs chess-icon-codex): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 3 (chess-icon-codex vs sf_skill1): 1-0 {White wins by adjudication}
+Score of chess-icon-codex vs sf_skill1: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 6 (sf_skill1 vs chess-icon-codex): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 3 - 2 - 0  [0.600] 5
+Started game 7 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 5 (chess-icon-codex vs sf_skill1): 0-1 {Black mates}
+Score of chess-icon-codex vs sf_skill1: 3 - 3 - 0  [0.500] 6
+Started game 8 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 7 (chess-icon-codex vs sf_skill1): 0-1 {Black mates}
+Score of chess-icon-codex vs sf_skill1: 3 - 4 - 0  [0.429] 7
+Started game 9 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 8 (sf_skill1 vs chess-icon-codex): 0-1 {Black wins by adjudication}
+Score of chess-icon-codex vs sf_skill1: 4 - 4 - 0  [0.500] 8
+Started game 10 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 9 (chess-icon-codex vs sf_skill1): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 5 - 4 - 0  [0.556] 9
+Started game 11 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 10 (sf_skill1 vs chess-icon-codex): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 5 - 5 - 0  [0.500] 10
+Started game 12 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 11 (chess-icon-codex vs sf_skill1): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 6 - 5 - 0  [0.545] 11
+Started game 13 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 12 (sf_skill1 vs chess-icon-codex): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 6 - 6 - 0  [0.500] 12
+Started game 14 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 13 (chess-icon-codex vs sf_skill1): 1-0 {White wins by adjudication}
+Score of chess-icon-codex vs sf_skill1: 7 - 6 - 0  [0.538] 13
+Started game 15 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 14 (sf_skill1 vs chess-icon-codex): 0-1 {Black wins by adjudication}
+Score of chess-icon-codex vs sf_skill1: 8 - 6 - 0  [0.571] 14
+Started game 16 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 15 (chess-icon-codex vs sf_skill1): 1-0 {White wins by adjudication}
+Score of chess-icon-codex vs sf_skill1: 9 - 6 - 0  [0.600] 15
+Started game 17 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 16 (sf_skill1 vs chess-icon-codex): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 9 - 7 - 0  [0.563] 16
+Started game 18 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 17 (chess-icon-codex vs sf_skill1): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 10 - 7 - 0  [0.588] 17
+Started game 19 of 20 (chess-icon-codex vs sf_skill1)
+Finished game 18 (sf_skill1 vs chess-icon-codex): 0-1 {Black mates}
+Score of chess-icon-codex vs sf_skill1: 11 - 7 - 0  [0.611] 18
+Started game 20 of 20 (sf_skill1 vs chess-icon-codex)
+Finished game 19 (chess-icon-codex vs sf_skill1): 0-1 {Black mates}
+Score of chess-icon-codex vs sf_skill1: 11 - 8 - 0  [0.579] 19
+Finished game 20 (sf_skill1 vs chess-icon-codex): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill1: 11 - 9 - 0  [0.550] 20
+...      chess-icon-codex playing White: 7 - 3 - 0  [0.700] 10
+...      chess-icon-codex playing Black: 4 - 6 - 0  [0.400] 10
+...      White vs Black: 13 - 7 - 0  [0.650] 20
+Elo difference: 34.9 +/- 164.5, LOS: 67.3 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-icon-codex
+   "Loss: Black mates": 3
+   "Loss: White mates": 6
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 4
+Player: sf_skill1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 4
+   "Win: Black mates": 3
+   "Win: White mates": 6
+Finished match

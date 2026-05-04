@@ -1,0 +1,82 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-cplusplus-claude vs sf_sk7)
+Started game 2 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 2 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White mates}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 1 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 2 - 0  [0.000] 2
+Started game 4 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 4 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White mates}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 3 - 0  [0.000] 3
+Started game 5 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 3 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 4 - 0  [0.000] 4
+Started game 6 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 5 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black mates}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 5 - 0  [0.000] 5
+Started game 7 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 6 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 6 - 0  [0.000] 6
+Started game 8 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 7 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 7 - 0  [0.000] 7
+Started game 9 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 8 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 8 - 0  [0.000] 8
+Started game 10 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 9 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 9 - 0  [0.000] 9
+Started game 11 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 10 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White mates}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 10 - 0  [0.000] 10
+Started game 12 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 12 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 11 - 0  [0.000] 11
+Started game 13 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 11 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 12 - 0  [0.000] 12
+Started game 14 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 14 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 0 - 13 - 0  [0.000] 13
+Started game 15 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 13 (chess-cplusplus-claude vs sf_sk7): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 1 - 13 - 0  [0.071] 14
+Started game 16 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 15 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black mates}
+Score of chess-cplusplus-claude vs sf_sk7: 1 - 14 - 0  [0.067] 15
+Started game 17 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 16 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 1 - 15 - 0  [0.063] 16
+Started game 18 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 17 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 1 - 16 - 0  [0.059] 17
+Started game 19 of 20 (chess-cplusplus-claude vs sf_sk7)
+Finished game 18 (sf_sk7 vs chess-cplusplus-claude): 1-0 {White mates}
+Score of chess-cplusplus-claude vs sf_sk7: 1 - 17 - 0  [0.056] 18
+Started game 20 of 20 (sf_sk7 vs chess-cplusplus-claude)
+Finished game 19 (chess-cplusplus-claude vs sf_sk7): 0-1 {Black wins by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 1 - 18 - 0  [0.053] 19
+Finished game 20 (sf_sk7 vs chess-cplusplus-claude): 1/2-1/2 {Draw by adjudication}
+Score of chess-cplusplus-claude vs sf_sk7: 1 - 18 - 1  [0.075] 20
+...      chess-cplusplus-claude playing White: 1 - 9 - 0  [0.100] 10
+...      chess-cplusplus-claude playing Black: 0 - 9 - 1  [0.050] 10
+...      White vs Black: 10 - 9 - 1  [0.525] 20
+Elo difference: -436.4 +/- nan, LOS: 0.0 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-cplusplus-claude
+   "Draw by adjudication": 1
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 7
+   "Loss: White mates": 4
+   "Loss: White wins by adjudication": 5
+   "Win: White wins by adjudication": 1
+Player: sf_sk7
+   "Draw by adjudication": 1
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 7
+   "Win: White mates": 4
+   "Win: White wins by adjudication": 5
+Finished match

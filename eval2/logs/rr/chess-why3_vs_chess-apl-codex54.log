@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-apl-codex54 vs chess-why3)
+Started game 1 of 2 (chess-why3 vs chess-apl-codex54)
+Finished game 1 (chess-why3 vs chess-apl-codex54): 1-0 {White mates}
+Score of chess-why3 vs chess-apl-codex54: 1 - 0 - 0  [1.000] 1
+Finished game 2 (chess-apl-codex54 vs chess-why3): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-why3 vs chess-apl-codex54: 1 - 0 - 1  [0.750] 2
+...      chess-why3 playing White: 1 - 0 - 0  [1.000] 1
+...      chess-why3 playing Black: 0 - 0 - 1  [0.500] 1
+...      White vs Black: 1 - 0 - 1  [0.750] 2
+Elo difference: 190.8 +/- nan, LOS: 84.1 %, DrawRatio: 50.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3
+   "Draw by 3-fold repetition": 1
+   "Win: White mates": 1
+Player: chess-apl-codex54
+   "Draw by 3-fold repetition": 1
+   "Loss: White mates": 1
+Finished match

@@ -1,0 +1,312 @@
+build eval2/stockfish:16.1
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 1.55kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [build 1/6] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d 0.7s done
+#4 DONE 0.7s
+
+#5 [build 4/6] RUN git clone --depth 1 --branch sf_16.1 https://github.com/official-stockfish/Stockfish.git
+#5 CACHED
+
+#6 [build 5/6] WORKDIR /src/Stockfish/src
+#6 CACHED
+
+#7 [build 6/6] RUN ARCH=$(uname -m) && case "$ARCH" in       x86_64)        SF_ARCH=x86-64-modern ;;       aarch64|arm64) SF_ARCH=armv8 ;;       *) echo "Unsupported arch $ARCH" >&2; exit 1 ;;     esac &&     make -j build ARCH="$SF_ARCH" && strip stockfish && cp stockfish /usr/local/bin/
+#7 CACHED
+
+#8 [build 2/6] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential git ca-certificates wget     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 3/6] WORKDIR /src
+#9 CACHED
+
+#10 [stage-1 2/2] COPY --from=build /usr/local/bin/stockfish /usr/local/bin/stockfish
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:7685bcb84366d102eb5c3b5e65b9484147bac604cd7daaa8292b79bf511d3ab6 done
+#11 exporting config sha256:f80127a828ed0e085f1cf18c7c444e68f0fc150e3de1949e5a2e85397b244c5b done
+#11 exporting attestation manifest sha256:bdd6e22bdb734a495c72c11391356c63ee19d90bbda5d1b8247b70df3baabd88 done
+#11 exporting manifest list sha256:f25be74b98fe14b76f43a23f4b505217ba167c1eb02abfe5cafb4faf5ab0b72a done
+#11 naming to docker.io/eval2/stockfish:16.1 done
+#11 unpacking to docker.io/eval2/stockfish:16.1 done
+#11 DONE 0.0s
+build eval2/anchor-tscp181:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.41kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 66B done
+#4 DONE 0.0s
+
+#5 [build 1/5] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 4/5] ADD https://www.tckerrigan.com/Chess/TSCP/tscp181.zip tscp181.zip
+#6 DONE 0.5s
+
+#7 [build 4/5] ADD https://www.tckerrigan.com/Chess/TSCP/tscp181.zip tscp181.zip
+#7 CACHED
+
+#8 [build 5/5] RUN unzip tscp181.zip     && cd tscp181     && gcc -O2 -o tscp main.c board.c book.c data.c eval.c search.c
+#8 CACHED
+
+#9 [stage-1 3/4] COPY --from=build /src/tscp181/tscp /usr/local/bin/tscp
+#9 CACHED
+
+#10 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends       polyglot     && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential wget unzip ca-certificates     && rm -rf /var/lib/apt/lists/*
+#11 CACHED
+
+#12 [build 3/5] WORKDIR /src
+#12 CACHED
+
+#13 [stage-1 4/4] COPY tscp.cfg /etc/tscp/polyglot.cfg
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:87ffd8edfb03c5374f3346b1ce0c574936c05caa90288afd4b0e6e110a591806 done
+#14 exporting config sha256:ac1d1289e99d188d03912f6fda60ca59cdd9772eb98c3ed6a550858acb120a6d done
+#14 exporting attestation manifest sha256:722521afd0adc9a399261ce2ed9d4cb3f2d9dd3a97c88dac1fb258a86d3e9fdf done
+#14 exporting manifest list sha256:ea332ec50a105f17dfab20853792e2faccaf1076e8f8719e192fae4875a09aa1 done
+#14 naming to docker.io/eval2/anchor-tscp181:latest done
+#14 unpacking to docker.io/eval2/anchor-tscp181:latest done
+#14 DONE 0.0s
+build eval2/anchor-madchess32:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.08kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:8.0
+#2 DONE 0.1s
+
+#3 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:8.0
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 resolve mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183 done
+#5 DONE 0.0s
+
+#6 [build 2/6] WORKDIR /src
+#6 CACHED
+
+#7 [build 3/6] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6
+#8 resolve mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6 done
+#8 CACHED
+
+#9 [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+#9 0.087 Cloning into 'MadChess'...
+#9 0.324 fatal: could not read Username for 'https://github.com': No such device or address
+#9 ERROR: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+------
+ > [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git:
+0.087 Cloning into 'MadChess'...
+0.324 fatal: could not read Username for 'https://github.com': No such device or address
+------
+Dockerfile:13
+--------------------
+  11 |     # NOTE: MadChess git tags don't follow a "v3.2" convention; tracking master
+  12 |     # for now. Pin to a specific commit SHA once we know the build works.
+  13 | >>> RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+  14 |     WORKDIR /src/MadChess
+  15 |     RUN dotnet publish -c Release -o /opt/madchess \
+--------------------
+ERROR: failed to solve: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+FAILED eval2/anchor-madchess32:latest
+build eval2/anchor-countergo40:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 927B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.22-bookworm
+#3 DONE 1.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [build 1/5] FROM docker.io/library/golang:1.22-bookworm@sha256:3d699e4d15d0f8f13c9195c0632a16702b8cbdece2955af1c23b37ae5d55a253
+#5 resolve docker.io/library/golang:1.22-bookworm@sha256:3d699e4d15d0f8f13c9195c0632a16702b8cbdece2955af1c23b37ae5d55a253 done
+#5 DONE 0.0s
+
+#6 [stage-1 1/2] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#6 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#6 DONE 0.0s
+
+#7 [build 3/5] RUN git clone --depth 1 https://github.com/ChizhovVadim/CounterGo.git
+#7 CACHED
+
+#8 [build 4/5] WORKDIR /src/CounterGo
+#8 CACHED
+
+#9 [build 5/5] RUN go build -o /opt/countergo/counter ./cmd/counter  || go build -o /opt/countergo/counter .
+#9 CACHED
+
+#10 [build 2/5] WORKDIR /src
+#10 CACHED
+
+#11 [stage-1 2/2] COPY --from=build /opt/countergo/counter /opt/countergo/counter
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:20cfc3f8b49c8bec150ac0cf60a269616ca5468e712b3bb736db03b98eadd457 done
+#12 exporting config sha256:a6d4814f95afc67c63776d8c4670578b09c28345b72f318ff0265af4c26f53bf done
+#12 exporting attestation manifest sha256:09647a3aaedc90aafd6929235901d2b62c0d8bc2d5b70e6fea0f88f2775dcc85 done
+#12 exporting manifest list sha256:7f65def2de8733cf2c7150a1ce75fcd45ce678f076e23c6130ed2b1ce39ce328 done
+#12 naming to docker.io/eval2/anchor-countergo40:latest done
+#12 unpacking to docker.io/eval2/anchor-countergo40:latest done
+#12 DONE 0.0s
+build eval2/chess-apl-codex54:latest  (src=/Users/mathieuacher/SANDBOX/chess-apl-codex54)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.54kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [build 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#6 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#6 DONE 0.0s
+
+#7 [stage-1 1/7] FROM docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf
+#7 resolve docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf
+#7 resolve docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf 0.7s done
+#7 DONE 0.7s
+
+#8 [stage-1 2/7] RUN apt-get update && apt-get install -y --no-install-recommends       libreadline8t64 libncurses6 libpcre2-8-0 libsqlite3-0     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 2/4] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential wget ca-certificates libreadline-dev libncurses-dev       libpcre3-dev libsqlite3-dev     && rm -rf /var/lib/apt/lists/*
+#9 CACHED
+
+#10 [build 3/4] WORKDIR /tmp
+#10 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 121.20kB done
+#5 DONE 0.0s
+
+#11 [build 4/4] RUN wget -q https://ftp.gnu.org/gnu/apl/apl-1.8.tar.gz  && tar xzf apl-1.8.tar.gz  && cd apl-1.8  && ./configure --prefix=/usr/local --build=aarch64-linux-gnu  && make -j && make install
+#11 1.556 checking for gcc... gcc
+#11 1.564 checking whether the C compiler works... yes
+#11 1.578 checking for C compiler default output file name... a.out
+#11 1.578 checking for suffix of executables... 
+#11 1.593 checking whether we are cross compiling... no
+#11 1.608 checking for suffix of object files... o
+#11 1.616 checking whether we are using the GNU C compiler... yes
+#11 1.624 checking whether gcc accepts -g... yes
+#11 1.632 checking for gcc option to accept ISO C89... none needed
+#11 1.646 checking whether gcc understands -c and -o together... yes
+#11 1.660 checking how to run the C preprocessor... gcc -E
+#11 1.679 checking for grep that handles long lines and -e... /usr/bin/grep
+#11 1.679 checking for egrep... /usr/bin/grep -E
+#11 1.680 checking for ANSI C header files... yes
+#11 1.724 checking for sys/types.h... yes
+#11 1.735 checking for sys/stat.h... yes
+#11 1.747 checking for stdlib.h... yes
+#11 1.759 checking for string.h... yes
+#11 1.771 checking for memory.h... yes
+#11 1.783 checking for strings.h... yes
+#11 1.796 checking for inttypes.h... yes
+#11 1.808 checking for stdint.h... yes
+#11 1.820 checking for unistd.h... yes
+#11 1.833 checking minix/config.h usability... no
+#11 1.844 checking minix/config.h presence... no
+#11 1.850 checking for minix/config.h... no
+#11 1.850 checking whether it is safe to define __EXTENSIONS__... yes
+#11 1.865 checking for a BSD-compatible install... /usr/bin/install -c
+#11 1.868 checking whether build environment is sane... yes
+#11 1.871 checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+#11 1.872 checking for gawk... no
+#11 1.872 checking for mawk... mawk
+#11 1.872 checking whether make sets $(MAKE)... yes
+#11 1.876 checking for style of include used by make... GNU
+#11 1.878 checking whether make supports nested variables... yes
+#11 1.880 checking dependency style of gcc... gcc3
+#11 1.893 checking whether to enable maintainer-specific portions of Makefiles... no
+#11 1.896 checking build system type... Invalid configuration `aarch64-linux-gnu': machine `aarch64' not recognized
+#11 1.899 configure: error: /bin/bash ./config.sub aarch64-linux-gnu failed
+#11 ERROR: process "/bin/sh -c wget -q https://ftp.gnu.org/gnu/apl/apl-1.8.tar.gz  && tar xzf apl-1.8.tar.gz  && cd apl-1.8  && ./configure --prefix=/usr/local --build=aarch64-linux-gnu  && make -j && make install" did not complete successfully: exit code: 1
+------
+ > [build 4/4] RUN wget -q https://ftp.gnu.org/gnu/apl/apl-1.8.tar.gz  && tar xzf apl-1.8.tar.gz  && cd apl-1.8  && ./configure --prefix=/usr/local --build=aarch64-linux-gnu  && make -j && make install:
+1.871 checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+1.872 checking for gawk... no
+1.872 checking for mawk... mawk
+1.872 checking whether make sets $(MAKE)... yes
+1.876 checking for style of include used by make... GNU
+1.878 checking whether make supports nested variables... yes
+1.880 checking dependency style of gcc... gcc3
+1.893 checking whether to enable maintainer-specific portions of Makefiles... no
+1.896 checking build system type... Invalid configuration `aarch64-linux-gnu': machine `aarch64' not recognized
+1.899 configure: error: /bin/bash ./config.sub aarch64-linux-gnu failed
+------
+Dockerfile:11
+--------------------
+  10 |     # GNU APL upstream. Tag apl-1.8 is the latest widely-compiled release.
+  11 | >>> RUN wget -q https://ftp.gnu.org/gnu/apl/apl-1.8.tar.gz \
+  12 | >>>  && tar xzf apl-1.8.tar.gz \
+  13 | >>>  && cd apl-1.8 \
+  14 | >>>  && ./configure --prefix=/usr/local --build=aarch64-linux-gnu \
+  15 | >>>  && make -j && make install
+  16 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c wget -q https://ftp.gnu.org/gnu/apl/apl-1.8.tar.gz  && tar xzf apl-1.8.tar.gz  && cd apl-1.8  && ./configure --prefix=/usr/local --build=aarch64-linux-gnu  && make -j && make install" did not complete successfully: exit code: 1
+FAILED eval2/chess-apl-codex54:latest
+
+Build failures: 2 (see results/build_failures.txt)
+build_images.sh done.

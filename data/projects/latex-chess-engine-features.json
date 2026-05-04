@@ -1,0 +1,52 @@
+{
+  "project": "latex-chess-engine",
+  "n_write_events": 16,
+  "cumulative": [
+    0,
+    6
+  ],
+  "first_appearances": {
+    "Evaluation/PST": {
+      "step": 2,
+      "ts": "step-0002",
+      "file": "chess-engine.tex",
+      "kind": "update",
+      "snippet": "% Precompute mirror table for PST: mirror(sq) = (8-rank)*8+file"
+    },
+    "Material counting": {
+      "step": 2,
+      "ts": "step-0002",
+      "file": "chess-engine.tex",
+      "kind": "update",
+      "snippet": "% Material value + PST bonus"
+    },
+    "Promotion": {
+      "step": 2,
+      "ts": "step-0002",
+      "file": "chess-engine.tex",
+      "kind": "update",
+      "snippet": "% Pass 1: promotions + captures of Q/R (high value)"
+    },
+    "Minimax/Negamax": {
+      "step": 2,
+      "ts": "step-0002",
+      "file": "chess-engine.tex",
+      "kind": "update",
+      "snippet": "% Minimax depth-2 search (kept for strength=2)"
+    },
+    "Alpha-beta": {
+      "step": 2,
+      "ts": "step-0002",
+      "file": "chess-engine.tex",
+      "kind": "update",
+      "snippet": "%% Step 19b: Depth-3 Negamax with Alpha-Beta & Quiescence"
+    },
+    "Quiescence": {
+      "step": 2,
+      "ts": "step-0002",
+      "file": "chess-engine.tex",
+      "kind": "update",
+      "snippet": "19b: Depth-3 Negamax with Alpha-Beta & Quiescence"
+    }
+  }
+}

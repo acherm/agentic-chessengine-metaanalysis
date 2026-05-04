@@ -1,0 +1,20 @@
+{
+  "engine": "chess-revisit-java-toRust-codex",
+  "image": "eval2/chess-revisit-java-torust-codex:latest",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.16
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.07
+    }
+  },
+  "total_s": 0.23,
+  "ok": true
+}

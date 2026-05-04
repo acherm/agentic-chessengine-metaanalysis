@@ -1,0 +1,406 @@
+{
+  "name": "chess-java-cc",
+  "path": "/Users/mathieuacher/SANDBOX/chess-java-cc",
+  "primary_language": "Java",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 2,
+      "XML": 1,
+      "Shell": 1,
+      "Text": 1,
+      "Java": 30
+    },
+    "loc_by_lang": {
+      "Markdown": 924,
+      "XML": 58,
+      "Shell": 193,
+      "Text": 11,
+      "Java": 3698
+    },
+    "total_files": 35,
+    "total_loc": 4884
+  },
+  "features": {
+    "FEN parsing": 10,
+    "UCI protocol": 5,
+    "Perft": 4,
+    "Castling": 13,
+    "En passant": 7,
+    "Promotion": 5,
+    "Check/Checkmate": 7,
+    "PGN": 3,
+    "Board: bitboard": 18,
+    "Board: magic bitboards": 7,
+    "Board: mailbox 8x8": 2,
+    "Minimax/Negamax": 2,
+    "Alpha-beta": 3,
+    "Iterative deepening": 2,
+    "Quiescence": 3,
+    "Transposition table": 13,
+    "Zobrist hashing": 10,
+    "Move ordering (MVV-LVA)": 2,
+    "Killer moves": 3,
+    "History heuristic": 4,
+    "Principal-variation (PV)": 4,
+    "Null-move pruning": 4,
+    "Late-move reduction (LMR)": 3,
+    "Aspiration windows": 3,
+    "Futility pruning": 3,
+    "Evaluation/PST": 5,
+    "Tapered evaluation": 4,
+    "King safety": 4,
+    "Pawn structure": 4,
+    "Mobility": 3,
+    "Material counting": 10,
+    "Opening book": 6,
+    "Time management": 11
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "SPECIFICATION.md",
+      "src/test/java/com/chess/engine/move/MoveGeneratorTest.java",
+      "src/test/java/com/chess/engine/board/ZobristTest.java",
+      "src/test/java/com/chess/engine/board/FENTest.java",
+      "src/test/java/com/chess/engine/board/BoardTest.java",
+      "src/test/java/com/chess/engine/search/SearchTest.java",
+      "src/test/java/com/chess/engine/eval/EvaluationTest.java",
+      "src/main/java/com/chess/engine/Engine.java",
+      "src/main/java/com/chess/engine/board/FEN.java",
+      "src/main/java/com/chess/engine/uci/UCI.java"
+    ],
+    "UCI protocol": [
+      "SPECIFICATION.md",
+      "elo-test.sh",
+      "src/test/java/com/chess/engine/search/SearchTest.java",
+      "src/main/java/com/chess/engine/Engine.java",
+      "src/main/java/com/chess/engine/uci/UCI.java"
+    ],
+    "Perft": [
+      "SPECIFICATION.md",
+      "src/test/java/com/chess/engine/move/MoveGeneratorTest.java",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/uci/UCI.java"
+    ],
+    "Castling": [
+      "SPECIFICATION.md",
+      "match.pgn",
+      "match-2200.pgn",
+      "elo-results/match-sf1800.pgn",
+      "elo-results/match-sf2500.pgn",
+      "elo-results/match-sf2200.pgn",
+      "src/test/java/com/chess/engine/board/FENTest.java",
+      "src/test/java/com/chess/engine/board/BoardTest.java",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/move/Move.java",
+      "src/main/java/com/chess/engine/board/FEN.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/book/PolyglotBook.java"
+    ],
+    "En passant": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/move/Move.java",
+      "src/main/java/com/chess/engine/board/Zobrist.java",
+      "src/main/java/com/chess/engine/board/FEN.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/book/PolyglotBook.java"
+    ],
+    "Promotion": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/move/Move.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/uci/UCI.java"
+    ],
+    "Check/Checkmate": [
+      "SPECIFICATION.md",
+      "elo-results/match-sf1800.pgn",
+      "elo-results/match-sf2200.pgn",
+      "src/test/java/com/chess/engine/move/MoveGeneratorTest.java",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "PGN": [
+      "ELO_REPORT.md",
+      "elo-test.sh",
+      "elo-results/summary.txt"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/test/java/com/chess/engine/board/FENTest.java",
+      "src/test/java/com/chess/engine/board/BoardTest.java",
+      "src/main/java/com/chess/engine/Engine.java",
+      "src/main/java/com/chess/engine/move/AttackTables.java",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/move/SEE.java",
+      "src/main/java/com/chess/engine/move/MagicBitboards.java",
+      "src/main/java/com/chess/engine/move/Move.java",
+      "src/main/java/com/chess/engine/board/Bitboard.java",
+      "src/main/java/com/chess/engine/board/FEN.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/book/PolyglotBook.java",
+      "src/main/java/com/chess/engine/uci/UCI.java",
+      "src/main/java/com/chess/engine/eval/Evaluation.java",
+      "src/main/java/com/chess/engine/eval/KingSafety.java",
+      "src/main/java/com/chess/engine/eval/PawnStructure.java"
+    ],
+    "Board: magic bitboards": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/Engine.java",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/move/SEE.java",
+      "src/main/java/com/chess/engine/move/MagicBitboards.java",
+      "src/main/java/com/chess/engine/eval/Evaluation.java"
+    ],
+    "Board: mailbox 8x8": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/board/Board.java"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Alpha-beta": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Iterative deepening": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Quiescence": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/move/MoveGenerator.java",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Transposition table": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/test/java/com/chess/engine/move/MoveGeneratorTest.java",
+      "src/test/java/com/chess/engine/board/ZobristTest.java",
+      "src/test/java/com/chess/engine/board/BoardTest.java",
+      "src/test/java/com/chess/engine/search/SearchTest.java",
+      "src/main/java/com/chess/engine/board/Zobrist.java",
+      "src/main/java/com/chess/engine/board/FEN.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/search/TranspositionTable.java",
+      "src/main/java/com/chess/engine/search/Search.java",
+      "src/main/java/com/chess/engine/book/PolyglotBook.java",
+      "src/main/java/com/chess/engine/uci/UCI.java"
+    ],
+    "Zobrist hashing": [
+      "SPECIFICATION.md",
+      "src/test/java/com/chess/engine/move/MoveGeneratorTest.java",
+      "src/test/java/com/chess/engine/board/ZobristTest.java",
+      "src/test/java/com/chess/engine/board/BoardTest.java",
+      "src/main/java/com/chess/engine/board/Zobrist.java",
+      "src/main/java/com/chess/engine/board/FEN.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/search/TranspositionTable.java",
+      "src/main/java/com/chess/engine/search/Search.java",
+      "src/main/java/com/chess/engine/book/PolyglotBook.java"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Killer moves": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/search/KillerMoves.java",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "History heuristic": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/search/HistoryTable.java",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Principal-variation (PV)": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/search/SearchInfo.java",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Null-move pruning": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Late-move reduction (LMR)": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Futility pruning": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/search/Search.java"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "SPECIFICATION.md",
+      "src/main/java/com/chess/engine/Engine.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/eval/Evaluation.java",
+      "src/main/java/com/chess/engine/eval/PieceSquareTables.java"
+    ],
+    "Tapered evaluation": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/eval/Evaluation.java"
+    ],
+    "King safety": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/eval/Evaluation.java",
+      "src/main/java/com/chess/engine/eval/KingSafety.java"
+    ],
+    "Pawn structure": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/eval/Evaluation.java",
+      "src/main/java/com/chess/engine/eval/PawnStructure.java"
+    ],
+    "Mobility": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/eval/Evaluation.java"
+    ],
+    "Material counting": [
+      "SPECIFICATION.md",
+      "elo-results/match-sf2500.pgn",
+      "src/test/java/com/chess/engine/board/BoardTest.java",
+      "src/test/java/com/chess/engine/eval/EvaluationTest.java",
+      "src/main/java/com/chess/engine/move/SEE.java",
+      "src/main/java/com/chess/engine/board/Board.java",
+      "src/main/java/com/chess/engine/search/Search.java",
+      "src/main/java/com/chess/engine/eval/Evaluation.java",
+      "src/main/java/com/chess/engine/eval/PieceSquareTables.java",
+      "src/main/java/com/chess/engine/eval/EvalConstants.java"
+    ],
+    "Opening book": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "src/main/java/com/chess/engine/move/SEE.java",
+      "src/main/java/com/chess/engine/move/Move.java",
+      "src/main/java/com/chess/engine/book/PolyglotBook.java",
+      "src/main/java/com/chess/engine/uci/UCI.java"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "SPECIFICATION.md",
+      "ELO_REPORT.md",
+      "match.pgn",
+      "elo-test.sh",
+      "match-2200.pgn",
+      "elo-results/match-sf1800.pgn",
+      "elo-results/match-sf2500.pgn",
+      "elo-results/match-sf2200.pgn",
+      "elo-results/summary.txt",
+      "src/main/java/com/chess/engine/search/TimeManager.java",
+      "src/main/java/com/chess/engine/uci/UCI.java"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 3,
+    "n_user_prompts": 3,
+    "n_assistant_messages": 38,
+    "models": [
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Read": 19,
+      "Glob": 5,
+      "Edit": 2,
+      "Agent": 1,
+      "Write": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 54,
+        "output": 13943,
+        "cache_read": 1666421,
+        "cache_creation": 223501
+      },
+      "usd_estimate": 7.74
+    },
+    "first_ts": "2026-03-10T20:09:25.227Z",
+    "last_ts": "2026-03-10T20:19:30.714Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "50f80dc4-ab60-4042-b5b5-4a6a4ac59502",
+        "first_ts": "2026-03-10T20:09:25.227Z",
+        "last_ts": "2026-03-10T20:19:30.714Z",
+        "models": [
+          "claude-opus-4-6"
+        ],
+        "turns": 3,
+        "n_events": 170,
+        "tokens": {
+          "input": 54,
+          "output": 13943,
+          "cache_read": 1666421,
+          "cache_creation": 223501
+        },
+        "tool_uses": {
+          "Agent": 1,
+          "Read": 19,
+          "Write": 1,
+          "Glob": 5,
+          "Edit": 2
+        },
+        "first_prompt_sample": "could you specify a specification of the current chess engine (including supported features and design choices) in such a way I can share it to a coding agent that could try to implement the same software system, independently of the language?"
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "fe25b94|2026-02-19T09:46:49+01:00|Mathieu Acher|Add calibrated Elo results at 120+1 TC matching SF calibration",
+      "d747e48|2026-02-18T11:33:10+01:00|Mathieu Acher|Update Elo report with calibration analysis and corrected estimates",
+      "d0d43a6|2026-02-18T10:25:14+01:00|Mathieu Acher|Add configurable Elo testing script",
+      "201399e|2026-02-18T08:41:44+01:00|Mathieu Acher|Add Elo assessment report and match PGNs",
+      "f909c32|2026-02-17T20:46:19+01:00|Mathieu Acher|Implement UCI chess engine with bitboard representation targeting ~1800+ Elo"
+    ],
+    "n_commits": 5,
+    "authors": [
+      "5\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

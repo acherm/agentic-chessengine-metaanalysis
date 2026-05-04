@@ -1,0 +1,30 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-java-cc"]
+[Black "chess-py-cc"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. exd5 Nf6 3. Nf3 Bf5 4. c4 e5 5. Nxe5 Qe7 6. d4 Nbd7 7. Qe2 O-O-O
+8. Nc3 Qe8 9. Bf4 Bd6 10. c5 Bg4 11. f3 Nh5 12. cxd6 Nxf4 13. Qe3 cxd6 14. Nxg4
+h5 15. Ne4 hxg4 16. Qxf4 gxf3 17. Kf2 Nf6 18. Nxd6+ Rxd6 19. Rc1+ Rc6 20. Rxc6+
+bxc6 21. Ba6+ Kd7 22. dxc6+ Kxc6 23. Rc1+ Kb6 24. Qd6+ Ka5 25. Rc5+ Ka4 26. b3+
+Kb4 27. Rc6+ Ka5 28. Qc5# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-py-cc"]
+[Black "chess-java-cc"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e5 2. Nc3 Nc6 3. Nf3 Nf6 4. d3 d5 5. Nxd5 Nxd5 6. exd5 Qxd5 7. c4 Bb4+
+8. Ke2 Qe6 9. Bd2 e4 10. dxe4 Qxe4+ 11. Be3 Be6 12. b3 Rd8 13. Rc1 Bg4 14. Rb1
+Nd4+ 15. Qxd4 Qc2+ 16. Bd2 Rxd4 17. Ke1 Qxd2+ 18. Nxd2 Bxd2# 0-1
+

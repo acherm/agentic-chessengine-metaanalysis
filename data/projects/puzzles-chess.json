@@ -1,0 +1,111 @@
+{
+  "name": "puzzles-chess",
+  "path": "/Users/mathieuacher/SANDBOX/puzzles-chess",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Python": 3
+    },
+    "loc_by_lang": {
+      "Python": 714
+    },
+    "total_files": 3,
+    "total_loc": 714
+  },
+  "features": {
+    "FEN parsing": 2,
+    "Castling": 1,
+    "Endgame tables": 1
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "stockfish_depth_sensitivity.py",
+      "puzzlegen_arxiv_lichess_links_strict_evaluated.csv"
+    ],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [
+      "stockfish_depth_sensitivity.py"
+    ],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [],
+    "Opening book": [],
+    "Endgame tables": [
+      "stockfish_depth_sensitivity.py"
+    ],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": false
+  }
+}

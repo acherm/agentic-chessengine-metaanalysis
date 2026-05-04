@@ -1,0 +1,37 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-py"]
+[Black "chess-assembly-codex"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 d5 2. Nc3 Nf6 3. e5 Ne4 4. d4 Nxc3 5. bxc3 Qa5 6. Bd2 Bf5 7. c4 Qc7
+8. Bd3 Bxd3 9. cxd3 dxc4 10. dxc4 c5 11. d5 Nd7 12. Qe2 g6 13. O-O O-O-O 14. Bc3
+Nb6 15. Ng5 Na4 16. Bd2 e6 17. dxe6 fxe6 18. Nxe6 Rxd2 19. Qxd2 Qd7 20. Rad1
+Qxd2 21. Rxd2 Be7 22. Rc1 Re8 23. Re1 Nb6 24. Re4 Nd7 25. Nf4 Bg5 26. Rd5 Bxf4
+27. e6 Nf8 28. Rxf4 Nxe6 29. Re4 b6 30. Rd6 Ng7 31. f3 Rf8 32. Re7 Ne8 33. Rdd7
+a5 34. Ra7 Kb8 35. Reb7+ Kc8 36. Rxh7 Kb8 37. Rab7+ Ka8 38. Rxb6 Rf6 39. Rxf6
+Nxf6 40. Rf7 Nh5 41. g4 Kb8 42. gxh5 gxh5 43. Rf5 h4 44. Rxc5 a4 45. Kf2 Kb7
+46. Rh5 h3 47. Rxh3 Kb6 48. Rh5 Ka6 49. Rb5 Ka7 50. f4 Ka6 51. f5 Ka7 52. f6 Ka8
+53. f7 Ka7 54. f8=Q Ka6 55. Qa8# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-assembly-codex"]
+[Black "chess-py"]
+[Result "1/2-1/2"]
+[FEN "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 d5 2. e5 d4 3. Bc4 Bf5 4. O-O b5 5. Bb3 Na6 6. Nh4 Bd7 7. Nf3 Bf5 8. Nc3
+dxc3 9. dxc3 Nc5 10. Nd4 Be4 11. f3 Nxb3 12. axb3 Bd5 13. c4 bxc4 14. Ra4 cxb3
+15. c4 c5 16. Nxb3 Bc6 17. Qxd8+ Kxd8 18. Ra6 Kc7 19. Nxc5 e6 20. Be3 Ne7
+21. Nd3 Nf5 22. Rxa7+ Rxa7 23. Bxa7 Be7 24. Bc5 Bxc5+ 25. Nxc5 Rd8 26. Re1 Rd4
+27. b3 Rd2 28. Ne4 Rb2 29. Ra1 Rxb3 30. Ng5 Ne3 31. Ra7+ Bb7 32. c5 Rb2 33. g3
+Rg2+ 34. Kh1 Rc2 35. Kg1 Rg2+ 36. Kh1 Rc2 37. Kg1 Rg2+ 1/2-1/2
+

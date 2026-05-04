@@ -1,0 +1,47 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-why3-cc vs sf_skill10)
+Started game 2 of 30 (sf_skill10 vs chess-why3-cc)
+Finished game 1 (chess-why3-cc vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-why3-cc vs sf_skill10: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-why3-cc vs sf_skill10)
+Finished game 2 (sf_skill10 vs chess-why3-cc): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_skill10: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill10 vs chess-why3-cc)
+Finished game 4 (sf_skill10 vs chess-why3-cc): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_skill10: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (chess-why3-cc vs sf_skill10)
+Finished game 3 (chess-why3-cc vs sf_skill10): 0-1 {White loses on time}
+Score of chess-why3-cc vs sf_skill10: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (sf_skill10 vs chess-why3-cc)
+Finished game 6 (sf_skill10 vs chess-why3-cc): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-why3-cc vs sf_skill10: 0 - 4 - 1  [0.100] 5
+Started game 7 of 30 (chess-why3-cc vs sf_skill10)
+Finished game 5 (chess-why3-cc vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-why3-cc vs sf_skill10: 0 - 5 - 1  [0.083] 6
+Started game 8 of 30 (sf_skill10 vs chess-why3-cc)
+Finished game 7 (chess-why3-cc vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-why3-cc vs sf_skill10: 0 - 6 - 1  [0.071] 7
+Started game 9 of 30 (chess-why3-cc vs sf_skill10)
+Finished game 8 (sf_skill10 vs chess-why3-cc): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_skill10: 0 - 7 - 1  [0.063] 8
+Finished game 9 (chess-why3-cc vs sf_skill10): * {No result}
+Score of chess-why3-cc vs sf_skill10: 0 - 7 - 1  [0.063] 8
+...      chess-why3-cc playing White: 0 - 4 - 0  [0.000] 4
+...      chess-why3-cc playing Black: 0 - 3 - 1  [0.125] 4
+...      White vs Black: 3 - 4 - 1  [0.438] 8
+Elo difference: -470.4 +/- nan, LOS: 0.4 %, DrawRatio: 12.5 %
+SPRT: llr -3.21 (-108.9%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-why3-cc
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White loses on time": 1
+   "Loss: White wins by adjudication": 3
+   "No result": 1
+Player: sf_skill10
+   "Draw by 3-fold repetition": 1
+   "No result": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White loses on time": 1
+   "Win: White wins by adjudication": 3
+Finished match

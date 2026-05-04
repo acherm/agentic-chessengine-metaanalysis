@@ -1,0 +1,44 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-py-cc"]
+[Black "chess-revisit-java-toCOBOL-codex"]
+[Result "1/2-1/2"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nc3 Nc6 3. Nf3 e6 4. Bd3 Bb4 5. b3 O-O 6. O-O d5 7. Bb2 e5 8. Nb5 e4
+9. a3 Be7 10. Bxf6 Bxf6 11. Nc3 exd3 12. cxd3 a5 13. Rc1 Re8 14. Re1 Be6 15. d4
+Bf5 16. d3 Be6 17. h3 h6 18. Kh1 Qd6 19. Nb5 Qd7 20. e4 a4 21. bxa4 dxe4
+22. dxe4 Rad8 23. d5 Bxh3 24. gxh3 Qxh3+ 25. Kg1 Re7 26. a5 Bb2 27. Rc5 Qg4+
+28. Kh1 Qh5+ 29. Kg1 Qg6+ 30. Kh1 Bf6 31. Qe2 Qh5+ 32. Kg1 Nxa5 33. Rxc7 Qg4+
+34. Kf1 Qh3+ 35. Kg1 Rxc7 36. Nxc7 Qg4+ 37. Kf1 Qh3+ 38. Kg1 Qg4+ 39. Kf1 Nb3
+40. Qe3 Qh3+ 41. Ke2 Qd7 42. Qxb3 Qxc7 43. Qd3 Qf4 44. Kf1 Be7 45. Rb1 Rb8
+46. e5 Qg4 47. d6 Qd7 48. Qb5 Qh3+ 49. Ke2 Bh4 50. d7 Rd8 51. Rd1 Be7 52. Qxb7
+Bxa3 53. Qb5 Be7 54. Qd3 h5 55. Qd5 h4 56. Rd3 Bb4 57. e6 Qxe6+ 58. Qxe6 fxe6
+59. Nxh4 Kf7 60. Nf3 Kf6 61. Kf1 e5 62. Rb3 e4 63. Rxb4 exf3 64. Rf4+ Ke6
+65. Rxf3 Rxd7 66. Kg2 Rd1 67. Rb3 g5 68. Kg3 Kf5 69. Rb5+ Kf6 70. Kg4 Rg1+
+71. Kh3 Ke6 72. Kh2 Rg4 73. f3 Rh4+ 74. Kg3 Kf6 75. Rf5+ Kxf5 76. Kf2 Rg4
+77. fxg4+ Kxg4 78. Kg2 Kf4 79. Kf2 g4 80. Kg2 g3 81. Kg1 Kf3 82. Kf1 g2+ 83. Kg1
+Kg3 1/2-1/2
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-revisit-java-toCOBOL-codex"]
+[Black "chess-py-cc"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nc3 Nc6 3. Nf3 d5 4. Be2 e5 5. d4 e4 6. Ne5 Bd6 7. Nxc6 bxc6 8. O-O
+O-O 9. Bd2 Rb8 10. b3 Bf5 11. a4 Kh8 12. a5 h6 13. f3 exf3 14. Bxf3 Qc8 15. a6
+Re8 16. Be2 Qe6 17. h3 Rb4 18. Bf3 Qc8 19. Ne2 Rb6 20. Nc3 Qe6 21. Be2 Rd8
+22. Na4 Rbb8 23. Nc5 Bxc5 24. dxc5 Kg8 25. c4 d4 26. exd4 Rxd4 27. b4 Rbd8
+28. Ra2 Rxd2 29. Rxd2 Qe3+ 30. Kh2 Rxd2 31. Rxf5 Rxd1 32. Bxd1 Qd2 33. Bf3 Qxb4
+34. Bxc6 Qxc4 35. Bb7 Qe6 36. g4 g6 37. Rf2 c6 38. Rf1 Qe5+ 39. Kg2 Qd5+ 40. Kg3
+Ne4+ 41. Kh2 Qd2+ 42. Kh1 Qd3 43. Kg2 Qg3+ 44. Kh1 Qxh3+ 45. Kg1 Qxg4+ 46. Kh2
+Nd2 47. Rf2 Nf3+ 48. Rxf3 Qxf3 49. Bc8 Qf2+ 50. Kh3 0-1
+

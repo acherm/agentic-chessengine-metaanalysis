@@ -1,0 +1,32 @@
+Indexing opening suite...
+Started game 2 of 6 (chess-icon-codex vs chess-sql)
+Started game 1 of 6 (chess-sql vs chess-icon-codex)
+Finished game 2 (chess-icon-codex vs chess-sql): 1-0 {White mates}
+Score of chess-sql vs chess-icon-codex: 0 - 1 - 0  [0.000] 1
+Started game 3 of 6 (chess-sql vs chess-icon-codex)
+Finished game 1 (chess-sql vs chess-icon-codex): 0-1 {Black mates}
+Score of chess-sql vs chess-icon-codex: 0 - 2 - 0  [0.000] 2
+Started game 4 of 6 (chess-icon-codex vs chess-sql)
+Finished game 3 (chess-sql vs chess-icon-codex): 0-1 {Black mates}
+Score of chess-sql vs chess-icon-codex: 0 - 3 - 0  [0.000] 3
+Started game 5 of 6 (chess-sql vs chess-icon-codex)
+Finished game 4 (chess-icon-codex vs chess-sql): 1-0 {White mates}
+Score of chess-sql vs chess-icon-codex: 0 - 4 - 0  [0.000] 4
+Started game 6 of 6 (chess-icon-codex vs chess-sql)
+Finished game 5 (chess-sql vs chess-icon-codex): 0-1 {Black mates}
+Score of chess-sql vs chess-icon-codex: 0 - 5 - 0  [0.000] 5
+Finished game 6 (chess-icon-codex vs chess-sql): 1-0 {White mates}
+Score of chess-sql vs chess-icon-codex: 0 - 6 - 0  [0.000] 6
+...      chess-sql playing White: 0 - 3 - 0  [0.000] 3
+...      chess-sql playing Black: 0 - 3 - 0  [0.000] 3
+...      White vs Black: 3 - 3 - 0  [0.500] 6
+Elo difference: -inf +/- nan, LOS: 0.7 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-sql
+   "Loss: Black mates": 3
+   "Loss: White mates": 3
+Player: chess-icon-codex
+   "Win: Black mates": 3
+   "Win: White mates": 3
+Finished match

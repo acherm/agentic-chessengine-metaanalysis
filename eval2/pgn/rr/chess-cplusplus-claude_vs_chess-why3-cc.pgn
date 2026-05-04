@@ -1,0 +1,48 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-cplusplus-claude"]
+[Black "chess-why3-cc"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e6 2. Nf3 Nf6 3. Nc3 Nc6 4. Bd3 d5 5. O-O Bd7 6. e4 d4 7. Ne2 e5 8. Bb5 Qe7
+9. d3 Qc5 10. Bxc6 Bxc6 11. Bg5 Be7 12. Ng3 O-O 13. Re1 h6 14. Bxf6 Bxf6 15. Re2
+Rac8 16. Nh5 Be7 17. Rd2 Bd6 18. Qc1 Bd7 19. h3 Be6 20. Ng3 Be7 21. Qb1 Bf6
+22. Re2 Rcd8 23. Nf1 Qd6 24. N1d2 Qc5 25. Kh2 Qd6 26. Kg3 Rfe8 27. Qe1 Qc6
+28. Qd1 Qb5 29. Qb1 Qc5 30. Qc1 Qd6 31. Kh2 Qb4 32. Kh1 Qc5 33. Nb3 Qb6 34. Qe1
+a6 35. Rc1 h5 36. Qg1 a5 37. Rb1 h4 38. Nc1 a4 39. Qe1 Kh7 40. Kh2 Kg8 41. Qg1
+Kh7 42. Qh1 Kg8 43. Qe1 a3 44. b4 c5 45. Nb3 cxb4 46. Nc1 Be7 47. Kh1 Qc7
+48. Nb3 Kh7 49. Ra1 Kg8 50. Qg1 Qd6 51. Qh2 Bf6 52. Kg1 Qc6 53. Rd1 Qc3 54. Red2
+Rc8 55. Rb1 Qc6 56. Kh1 Qc3 57. Qg1 Rcd8 58. Re2 Qc7 59. Qc1 Qb6 60. Qd2 Qd6
+61. Qe1 Rc8 62. Qf1 Qc7 63. Ra1 Rcd8 64. Kg1 Qc3 65. Rd2 Rc8 66. Qe1 Red8
+67. Rad1 Qc6 68. Re2 Qc3 69. Kf1 Rc7 70. Qxc3 bxc3 71. Rb1 Rcc8 72. Nc1 Rb8
+73. Re1 Kf8 74. Rb5 Bd7 75. Rb6 Be6 76. Nb3 Kg8 77. Kg1 Re8 78. Ra1 Rec8 79. Rb5
+Re8 80. Nc5 b6 81. Nxe6 Rxe6 82. Rab1 Rb7 83. Ra5 bxa5 84. Rxb7 Re8 85. Rb5 a4
+86. Rb1 Kh8 87. Kf1 Kh7 88. Rb5 Kh6 89. Nh2 g5 90. Ng4+ Kg7 91. Rb7 Re6 92. Ke2
+Re8 93. Rb6 Re6 94. Rxe6 fxe6 95. Ke1 Kf7 96. Kf1 Bg7 97. Kg1 Ke7 98. Nh2 Kd6
+99. Kf1 Kc5 100. Ke2 Kd6 101. Kf3 Bh6 102. Kg4 Bf8 103. Nf3 Bg7 104. Kh5 Bf8
+105. Kg6 Be7 106. Nxg5 Bxg5 107. Kxg5 Ke7 108. Kg6 Kd7 109. Kf6 Kd6 110. f3 Kd7
+111. Kf7 Kd6 112. Ke8 Kc6 113. Ke7 Kc5 114. Kxe6 Kc6 115. Kxe5 Kc5 116. Ke6 Kb5
+117. Kf7 Kc5 118. e5 Kd5 119. e6 Ke5 120. e7 Kf4 121. e8=Q Kg3 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-why3-cc"]
+[Black "chess-cplusplus-claude"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nf3 d5 3. Bb5+ Bd7 4. Bxd7+ Qxd7 5. Nc3 Nc6 6. d4 O-O-O 7. Ne5 Qe6
+8. f4 Kb8 9. f5 Qxf5 10. Nxf7 Nb4 11. e4 Qg6 12. O-O Qxf7 13. e5 Qg6 14. exf6
+Nxc2 15. fxe7 Bxe7 16. Rb1 Bf6 17. Rxf6 gxf6 18. Bf4 Rhg8 19. Bg3 Ne3 20. Qd2
+Nf5 21. Rf1 Nxg3 22. hxg3 Qxg3 23. Rxf6 Rde8 24. Nxd5 Re1+ 25. Rf1 Rxf1+
+26. Kxf1 Rf8+ 27. Kg1 Re8 28. Kf1 Qh4 29. Qc3 Qh1+ 30. Kf2 Rf8+ 31. Kg3 Rg8+
+32. Kf4 Qf1+ 33. Ke5 Rg5+ 34. Ke4 Qf5+ 35. Ke3 Rg3+ 36. Ke2 Rxg2+ 37. Ke3 Qe6+
+38. Kf4 Rg4+ 39. Kf3 Qe4+ 40. Kf2 Rg2+ 41. Kf1 Qe2# 0-1
+

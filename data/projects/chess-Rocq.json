@@ -1,0 +1,421 @@
+{
+  "name": "chess-Rocq",
+  "path": "/Users/mathieuacher/SANDBOX/chess-Rocq",
+  "primary_language": "OCaml",
+  "loc": {
+    "files_by_lang": {
+      "Shell": 3,
+      "Markdown": 3,
+      "Coq/Rocq": 18,
+      "OCaml": 27
+    },
+    "loc_by_lang": {
+      "Shell": 233,
+      "Markdown": 493,
+      "Coq/Rocq": 2386,
+      "OCaml": 3223
+    },
+    "total_files": 51,
+    "total_loc": 6335
+  },
+  "features": {
+    "FEN parsing": 5,
+    "UCI protocol": 9,
+    "Perft": 7,
+    "Castling": 25,
+    "En passant": 20,
+    "Promotion": 16,
+    "Check/Checkmate": 17,
+    "PGN": 2,
+    "Board: bitboard": 50,
+    "Board: magic bitboards": 1,
+    "Minimax/Negamax": 4,
+    "Alpha-beta": 6,
+    "Iterative deepening": 3,
+    "Quiescence": 5,
+    "Transposition table": 4,
+    "Move ordering (MVV-LVA)": 2,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Evaluation/PST": 4,
+    "King safety": 2,
+    "Pawn structure": 2,
+    "Mobility": 2,
+    "Material counting": 10,
+    "Opening book": 2,
+    "Time management": 15
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "bench.sh",
+      "README.md",
+      "test/test_perft.sh",
+      "_build/default/extraction/main.ml",
+      "extraction/main.ml"
+    ],
+    "UCI protocol": [
+      "bench.sh",
+      "ELO_ASSESSMENT.md",
+      "chess_rocq",
+      "README.md",
+      "gauntlet.sh",
+      "BUILD_OPTIMIZATIONS.md",
+      "test/test_perft.sh",
+      "_build/default/extraction/main.ml",
+      "extraction/main.ml"
+    ],
+    "Perft": [
+      "bench.sh",
+      "chess_rocq",
+      "README.md",
+      "BUILD_OPTIMIZATIONS.md",
+      "test/test_perft.sh",
+      "_build/default/extraction/main.ml",
+      "extraction/main.ml"
+    ],
+    "Castling": [
+      "gauntlet_fixed_skill0.pgn",
+      "gauntlet_skill0.pgn",
+      "gauntlet_skill1.pgn",
+      "gauntlet_1320.pgn",
+      "chess_rocq",
+      "tournament_skill0.pgn",
+      "gauntlet_1500.pgn",
+      "gauntlet_1700.pgn",
+      "gauntlet_100.pgn",
+      "tournament.pgn",
+      "tournament_v2.pgn",
+      "theories/MoveGen.v",
+      "theories/Board.v",
+      "_build/default/theories/MoveGen.v",
+      "_build/default/theories/Board.vo",
+      "_build/default/theories/Board.glob",
+      "_build/default/theories/Board.v",
+      "_build/default/theories/MoveGen.vo",
+      "_build/default/theories/MoveGen.glob",
+      "_build/default/extraction/MoveGen.mli",
+      "_build/default/extraction/main.ml",
+      "_build/default/extraction/Board.ml",
+      "_build/default/extraction/Board.mli",
+      "_build/default/extraction/MoveGen.ml",
+      "extraction/main.ml"
+    ],
+    "En passant": [
+      "chess_rocq",
+      "theories/MoveGen.v",
+      "theories/Board.v",
+      "theories/Types.v",
+      "_build/default/theories/MoveGen.v",
+      "_build/default/theories/Board.vo",
+      "_build/default/theories/Types.glob",
+      "_build/default/theories/Board.glob",
+      "_build/default/theories/Board.v",
+      "_build/default/theories/MoveGen.vo",
+      "_build/default/theories/Types.vo",
+      "_build/default/theories/MoveGen.glob",
+      "_build/default/theories/Types.v",
+      "_build/default/extraction/main.ml",
+      "_build/default/extraction/Board.ml",
+      "_build/default/extraction/Board.mli",
+      "_build/default/extraction/Types.ml",
+      "_build/default/extraction/Types.mli",
+      "_build/default/extraction/MoveGen.ml",
+      "extraction/main.ml"
+    ],
+    "Promotion": [
+      "ELO_ASSESSMENT.md",
+      "chess_rocq",
+      "README.md",
+      "theories/MoveGen.v",
+      "theories/Search.v",
+      "theories/Types.v",
+      "_build/default/theories/MoveGen.v",
+      "_build/default/theories/Types.glob",
+      "_build/default/theories/MoveGen.vo",
+      "_build/default/theories/Types.vo",
+      "_build/default/theories/MoveGen.glob",
+      "_build/default/theories/Search.v",
+      "_build/default/theories/Types.v",
+      "_build/default/extraction/Types.ml",
+      "_build/default/extraction/Types.mli",
+      "_build/default/extraction/MoveGen.ml"
+    ],
+    "Check/Checkmate": [
+      "ELO_ASSESSMENT.md",
+      "chess_rocq",
+      "README.md",
+      "gauntlet_100.pgn",
+      "theories/MoveGen.v",
+      "theories/Search.v",
+      "_build/default/theories/MoveGen.v",
+      "_build/default/theories/MoveGen.vo",
+      "_build/default/theories/MoveGen.glob",
+      "_build/default/theories/Search.glob",
+      "_build/default/theories/Search.v",
+      "_build/default/theories/Search.vo",
+      "_build/default/extraction/Search.ml",
+      "_build/default/extraction/Extract.v",
+      "_build/default/extraction/MoveGen.mli",
+      "_build/default/extraction/MoveGen.ml",
+      "extraction/Extract.v"
+    ],
+    "PGN": [
+      "ELO_ASSESSMENT.md",
+      "gauntlet.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "ELO_ASSESSMENT.md",
+      "chess_rocq",
+      "README.md",
+      "BUILD_OPTIMIZATIONS.md",
+      "theories/Eval.v",
+      "theories/MoveGen.v",
+      "theories/Board.v",
+      "theories/Attacks.v",
+      "theories/Search.v",
+      "theories/Engine.v",
+      "theories/Bitboard.v",
+      "_build/log",
+      "_build/default/theories/Eval.v",
+      "_build/default/theories/MoveGen.v",
+      "_build/default/theories/Board.vo",
+      "_build/default/theories/Board.glob",
+      "_build/default/theories/Engine.glob",
+      "_build/default/theories/Board.v",
+      "_build/default/theories/MoveGen.vo",
+      "_build/default/theories/Attacks.v",
+      "_build/default/theories/MoveGen.glob",
+      "_build/default/theories/Search.glob",
+      "_build/default/theories/Search.v",
+      "_build/default/theories/Attacks.glob",
+      "_build/default/theories/Engine.v",
+      "_build/default/theories/Engine.vo",
+      "_build/default/theories/Eval.glob",
+      "_build/default/theories/Bitboard.glob",
+      "_build/default/theories/Search.vo",
+      "_build/default/theories/Eval.vo",
+      "_build/default/theories/Bitboard.v",
+      "_build/default/theories/Attacks.vo",
+      "_build/default/theories/Bitboard.vo",
+      "_build/default/extraction/Extract.v",
+      "_build/default/extraction/MoveGen.mli",
+      "_build/default/extraction/Eval.mli",
+      "_build/default/extraction/Bitboard.ml",
+      "_build/default/extraction/Attacks.ml",
+      "_build/default/extraction/main.ml",
+      "_build/default/extraction/Eval.ml",
+      "_build/default/extraction/Extract.glob",
+      "_build/default/extraction/Bitboard.mli",
+      "_build/default/extraction/Attacks.mli",
+      "_build/default/extraction/Board.ml",
+      "_build/default/extraction/Board.mli",
+      "_build/default/extraction/MoveGen.ml",
+      "_build/default/extraction/Extract.vo",
+      "extraction/Extract.v",
+      "extraction/dune",
+      "extraction/main.ml"
+    ],
+    "Board: magic bitboards": [
+      "chess_rocq"
+    ],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "ELO_ASSESSMENT.md",
+      "README.md",
+      "theories/Search.v",
+      "_build/default/theories/Search.v"
+    ],
+    "Alpha-beta": [
+      "ELO_ASSESSMENT.md",
+      "README.md",
+      "BUILD_OPTIMIZATIONS.md",
+      "theories/Search.v",
+      "_build/default/theories/Search.v",
+      "_build/default/extraction/Search.ml"
+    ],
+    "Iterative deepening": [
+      "ELO_ASSESSMENT.md",
+      "README.md",
+      "BUILD_OPTIMIZATIONS.md"
+    ],
+    "Quiescence": [
+      "ELO_ASSESSMENT.md",
+      "README.md",
+      "BUILD_OPTIMIZATIONS.md",
+      "theories/Search.v",
+      "_build/default/theories/Search.v"
+    ],
+    "Transposition table": [
+      "ELO_ASSESSMENT.md",
+      "chess_rocq",
+      "README.md",
+      "BUILD_OPTIMIZATIONS.md"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [
+      "ELO_ASSESSMENT.md",
+      "README.md"
+    ],
+    "Killer moves": [
+      "README.md"
+    ],
+    "History heuristic": [
+      "README.md"
+    ],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "ELO_ASSESSMENT.md",
+      "README.md",
+      "theories/Eval.v",
+      "_build/default/theories/Eval.v"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [
+      "ELO_ASSESSMENT.md",
+      "README.md"
+    ],
+    "Pawn structure": [
+      "ELO_ASSESSMENT.md",
+      "README.md"
+    ],
+    "Mobility": [
+      "ELO_ASSESSMENT.md",
+      "README.md"
+    ],
+    "Material counting": [
+      "ELO_ASSESSMENT.md",
+      "chess_rocq",
+      "README.md",
+      "gauntlet_100.pgn",
+      "theories/Eval.v",
+      "_build/default/theories/Eval.v",
+      "_build/default/theories/Eval.glob",
+      "_build/default/theories/Eval.vo",
+      "_build/default/extraction/Eval.mli",
+      "_build/default/extraction/Eval.ml"
+    ],
+    "Opening book": [
+      "ELO_ASSESSMENT.md",
+      "README.md"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "gauntlet_fixed_skill0.pgn",
+      "gauntlet_skill0.pgn",
+      "gauntlet_skill1.pgn",
+      "ELO_ASSESSMENT.md",
+      "gauntlet_1320.pgn",
+      "tournament_skill0.pgn",
+      "README.md",
+      "gauntlet_1500.pgn",
+      "gauntlet_1700.pgn",
+      "gauntlet_100.pgn",
+      "tournament.pgn",
+      "tournament_v2.pgn",
+      "selfplay.pgn",
+      "_build/default/extraction/main.ml",
+      "extraction/main.ml"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 6,
+    "n_user_prompts": 4,
+    "n_assistant_messages": 49,
+    "models": [
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 21,
+      "Read": 4,
+      "Grep": 2,
+      "Edit": 2,
+      "Agent": 1,
+      "Write": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 868,
+        "output": 16036,
+        "cache_read": 1326660,
+        "cache_creation": 82575
+      },
+      "usd_estimate": 4.75
+    },
+    "first_ts": "2026-04-09T10:04:54.516Z",
+    "last_ts": "2026-04-09T10:18:40.872Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "cc04d812-ce14-41e0-b8f1-102e5df59f6e",
+        "first_ts": "2026-04-09T10:04:54.516Z",
+        "last_ts": "2026-04-09T10:18:40.872Z",
+        "models": [
+          "claude-opus-4-6"
+        ],
+        "turns": 4,
+        "n_events": 110,
+        "tokens": {
+          "input": 868,
+          "output": 16036,
+          "cache_read": 1326660,
+          "cache_creation": 82575
+        },
+        "tool_uses": {
+          "Bash": 21,
+          "Agent": 1,
+          "Read": 4,
+          "Write": 1,
+          "Grep": 2,
+          "Edit": 2
+        },
+        "first_prompt_sample": "I would like to find traces of historical session in this repo... especially \"prompts\" I have used. I couldn't find them.\n  Perhaps in ~/.claude ? or is it codex?"
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "08115bc|2026-04-09T12:18:24+02:00|Mathieu Acher|Add README with architecture, build instructions, and Elo assessment",
+      "155f441|2026-02-16T22:23:32+01:00|Mathieu Acher|Update Elo assessment with second gauntlet run (200 total games)",
+      "eb6fe85|2026-02-16T18:32:32+01:00|Mathieu Acher|Document build optimization benchmark results: no measurable impact",
+      "131d090|2026-02-16T17:00:53+01:00|Mathieu Acher|Add performance benchmark and build optimization documentation",
+      "563d498|2026-02-16T14:46:31+01:00|Mathieu Acher|Add Elo assessment report and gauntlet script",
+      "488a1a6|2026-02-16T12:33:41+01:00|Mathieu Acher|Add quiescence search, move ordering, and eval improvements",
+      "8256f10|2026-02-15T18:16:59+01:00|Mathieu Acher|Fix time management: engine was searching depth 2 instead of 4",
+      "1580fea|2026-02-15T15:10:22+01:00|Mathieu Acher|Initial implementation of ChessRocq chess engine"
+    ],
+    "n_commits": 8,
+    "authors": [
+      "8\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

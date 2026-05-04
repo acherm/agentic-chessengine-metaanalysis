@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-rust-cc-redo vs chess-cplusplus-claude)
+Started game 2 of 2 (chess-cplusplus-claude vs chess-rust-cc-redo)
+Finished game 2 (chess-cplusplus-claude vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs chess-cplusplus-claude: 1 - 0 - 0  [1.000] 1
+Finished game 1 (chess-rust-cc-redo vs chess-cplusplus-claude): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs chess-cplusplus-claude: 2 - 0 - 0  [1.000] 2
+...      chess-rust-cc-redo playing White: 1 - 0 - 0  [1.000] 1
+...      chess-rust-cc-redo playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-cc-redo
+   "Win: Black wins by adjudication": 1
+   "Win: White wins by adjudication": 1
+Player: chess-cplusplus-claude
+   "Loss: Black wins by adjudication": 1
+   "Loss: White wins by adjudication": 1
+Finished match

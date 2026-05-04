@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-ruby-cc vs chess-revisit-java-toRust-codex)
+Started game 2 of 2 (chess-revisit-java-toRust-codex vs chess-ruby-cc)
+Finished game 1 (chess-ruby-cc vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs chess-revisit-java-toRust-codex: 0 - 1 - 0  [0.000] 1
+Finished game 2 (chess-revisit-java-toRust-codex vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs chess-revisit-java-toRust-codex: 0 - 2 - 0  [0.000] 2
+...      chess-ruby-cc playing White: 0 - 1 - 0  [0.000] 1
+...      chess-ruby-cc playing Black: 0 - 1 - 0  [0.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: -inf +/- nan, LOS: 7.9 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-ruby-cc
+   "Loss: Black wins by adjudication": 1
+   "Loss: White wins by adjudication": 1
+Player: chess-revisit-java-toRust-codex
+   "Win: Black wins by adjudication": 1
+   "Win: White wins by adjudication": 1
+Finished match

@@ -1,0 +1,198 @@
+{
+  "name": "chess-sql",
+  "path": "/Users/mathieuacher/SANDBOX/chess-sql",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1,
+      "Shell": 2,
+      "Python": 8,
+      "SQL": 4
+    },
+    "loc_by_lang": {
+      "Markdown": 81,
+      "Shell": 60,
+      "Python": 1150,
+      "SQL": 725
+    },
+    "total_files": 15,
+    "total_loc": 2016
+  },
+  "features": {
+    "FEN parsing": 7,
+    "UCI protocol": 5,
+    "Perft": 3,
+    "Castling": 6,
+    "En passant": 4,
+    "Promotion": 4,
+    "Check/Checkmate": 5,
+    "PGN": 1,
+    "Minimax/Negamax": 2,
+    "Quiescence": 1,
+    "Move ordering (MVV-LVA)": 1,
+    "Evaluation/PST": 4,
+    "King safety": 1,
+    "Pawn structure": 1,
+    "Material counting": 4,
+    "Time management": 3
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "uci_wrapper.py",
+      "engine.py",
+      "tests/test_tactics.py",
+      "tests/test_movegen.py",
+      "tests/test_uci.py",
+      "tests/test_perft.py",
+      "tests/test_eval.py"
+    ],
+    "UCI protocol": [
+      "uci_wrapper.py",
+      "engine.py",
+      "tools/run_tournament.sh",
+      "tests/test_movegen.py",
+      "tests/test_uci.py"
+    ],
+    "Perft": [
+      "uci_wrapper.py",
+      "engine.py",
+      "tests/test_perft.py"
+    ],
+    "Castling": [
+      "engine.py",
+      "tournament.pgn",
+      "tests/test_movegen.py",
+      "sql/schema.sql",
+      "sql/moves.sql",
+      "sql/search.sql"
+    ],
+    "En passant": [
+      "engine.py",
+      "tests/test_movegen.py",
+      "sql/schema.sql",
+      "sql/moves.sql"
+    ],
+    "Promotion": [
+      "engine.py",
+      "sql/schema.sql",
+      "sql/moves.sql",
+      "sql/search.sql"
+    ],
+    "Check/Checkmate": [
+      "TOURNAMENT_REPORT.md",
+      "engine.py",
+      "tests/test_tactics.py",
+      "tests/test_movegen.py",
+      "sql/moves.sql"
+    ],
+    "PGN": [
+      "tools/run_tournament.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "TOURNAMENT_REPORT.md",
+      "sql/search.sql"
+    ],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [
+      "TOURNAMENT_REPORT.md"
+    ],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [
+      "TOURNAMENT_REPORT.md"
+    ],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "TOURNAMENT_REPORT.md",
+      "sql/schema.sql",
+      "sql/eval.sql",
+      "sql/search.sql"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [
+      "TOURNAMENT_REPORT.md"
+    ],
+    "Pawn structure": [
+      "TOURNAMENT_REPORT.md"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "TOURNAMENT_REPORT.md",
+      "sql/schema.sql",
+      "sql/eval.sql",
+      "sql/search.sql"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "TOURNAMENT_REPORT.md",
+      "tournament.pgn",
+      "tools/run_tournament.sh"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 3,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "30e5631|2026-02-16T17:17:56+01:00|Mathieu Acher|Implement chess engine with all chess logic in pure SQL (SQLite)"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-java"]
+[Black "chess-py-cc"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppp1ppp/4p3/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 Nc6 2. Nc3 Bb4 3. Qd3 Nf6 4. Bg5 d5 5. O-O-O O-O 6. Nb5 Bd7 7. Ne5 Be7
+8. Nc3 Qe8 9. Qg3 Nh5 10. Nxc6 Bxc6 11. Qh4 Bxg5+ 12. Qxg5 Nf6 13. Kb1 Rd8
+14. Qf4 b5 15. Qxc7 b4 16. Rd3 Rc8 17. Qxa7 bxc3 18. Rxc3 Ne4 19. Ra3 Nxf2
+20. Rg1 Qd8 21. g3 Ne4 22. Qa5 Qf6 23. Rh1 Nf2 24. Qd2 Nxh1 25. Rf3 Qg6 26. Bg2
+Nxg3 27. Rxg3 Qf6 28. Rf3 Qh4 29. Bh3 h6 30. Rg3 Qf6 31. Rf3 Qg6 32. Rg3 Qh7
+33. Rc3 Rfd8 34. Bg2 Qg6 35. Rg3 Qf6 36. Rf3 Qh4 37. Bh3 Bb5 38. Rg3 Qf6 39. Qe3
+h5 40. Rg1 h4 41. Rf1 Qg6 42. Rc1 Rc7 43. Qf4 Rdc8 44. Qd2 Kh8 45. b3 Rc3
+46. Bf1 e5 47. dxe5 Qe4 48. e6 fxe6 49. Kb2 Qe5 50. Kb1 Qxh2 51. Qd4 h3 52. Qh4+
+Kg8 53. Qg4 Kf7 54. Qh5+ Kf6 55. Qh4+ Ke5 56. Qg5+ Kd6 57. Qxg7 Bxe2 58. Bxe2
+Qxe2 59. Ka1 h2 60. Qd4 Rxc2 61. Qf4+ Qe5+ 62. Qxe5+ Kxe5 63. Re1+ Kf6 64. Rf1+
+Kg6 65. Kb1 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-py-cc"]
+[Black "chess-java"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppp1ppp/4p3/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 Nc6 2. Nc3 Nf6 3. e4 Bb4 4. Bd3 Bxc3+ 5. bxc3 Qe7 6. e5 Nd5 7. O-O Nxc3
+8. Qe1 Nd5 9. c4 Nb6 10. Bg5 Qb4 11. Bd2 Qa4 12. Rc1 Qxa2 13. c5 Nd5 14. Qe4
+Ncb4 15. Bc4 Qa4 16. Qg4 Kf8 17. Rb1 Nc6 18. Bb3 Qa6 19. h3 Nce7 20. Kh1 Qd3
+21. h4 Rb8 22. Rfd1 Nc3 23. Bxc3 Qxc3 24. Qh3 Ra8 25. Rdc1 Qd3 26. h5 Nf5
+27. Rd1 Qe2 28. g4 Ne7 29. Rd2 Qe4 30. Rdb2 Qf4 31. Rd1 Kg8 32. Rc2 Qe4 33. h6
+gxh6 34. Rcd2 Kg7 35. Bc2 Qc6 36. Bd3 Nd5 37. Qg3 Nc3 38. Rc1 Ne4 39. Bxe4 Qxe4
+40. Qh3 Rg8 41. Re1 Qd5 42. Kh2 b6 43. Re3 bxc5 44. dxc5 Qxc5 45. Rb3 Qc4
+46. Rb1 Qe4 47. Rb3 Kh8 48. Kg3 Qg6 49. Rd1 Qc2 50. Rbd3 Rg6 51. Qh4 Kg7 52. Qh2
+Ba6 53. Rxd7 Qe4 54. g5 Be2 55. Qh1 Bxf3 56. Rxf7+ Kxf7 57. Qxf3+ Qxf3+ 58. Kxf3
+Rxg5 59. Rd7+ Kg8 60. Ke4 Rg7 61. Rd3 Rf8 62. f3 Rgf7 63. Rd1 Rxf3 64. Kd4 Rd8+
+65. Ke4 Rxd1 66. Kxf3 c5 67. Kg3 c4 68. Kf3 c3 69. Ke4 c2 70. Kf3 c1=Q 71. Ke2
+0-1
+

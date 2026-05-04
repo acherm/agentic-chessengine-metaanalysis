@@ -1,0 +1,22 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-newlang-codex vs chess-why3-cc)
+Started game 1 of 2 (chess-why3-cc vs chess-newlang-codex)
+Terminating process of engine chess-why3-cc(3)
+Finished game 2 (chess-newlang-codex vs chess-why3-cc): 1-0 {Black's connection stalls}
+Score of chess-why3-cc vs chess-newlang-codex: 0 - 1 - 0  [0.000] 1
+Warning: Engine chess-why3-cc(0): no response to ping
+Terminating process of engine chess-why3-cc(0)
+Finished game 1 (chess-why3-cc vs chess-newlang-codex): * {No result}
+Score of chess-why3-cc vs chess-newlang-codex: 0 - 1 - 0  [0.000] 1
+...      chess-why3-cc playing Black: 0 - 1 - 0  [0.000] 1
+...      White vs Black: 1 - 0 - 0  [1.000] 1
+Elo difference: -inf +/- nan, LOS: 15.9 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3-cc
+   "Loss: Black's connection stalls": 1
+   "No result": 1
+Player: chess-newlang-codex
+   "No result": 1
+   "Win: Black's connection stalls": 1
+Finished match

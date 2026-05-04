@@ -1,0 +1,393 @@
+{
+  "name": "chess-brainfuck-cc",
+  "path": "/Users/mathieuacher/SANDBOX/chess-brainfuck-cc",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Python": 13,
+      "C": 1,
+      "Text": 1,
+      "Markdown": 2,
+      "Brainfuck": 1
+    },
+    "loc_by_lang": {
+      "Python": 7219,
+      "C": 177,
+      "Text": 39,
+      "Markdown": 443,
+      "Brainfuck": 1
+    },
+    "total_files": 18,
+    "total_loc": 7879
+  },
+  "features": {
+    "FEN parsing": 3,
+    "UCI protocol": 13,
+    "Perft": 5,
+    "Castling": 24,
+    "En passant": 5,
+    "Promotion": 6,
+    "Check/Checkmate": 7,
+    "PGN": 5,
+    "Board: mailbox 8x8": 1,
+    "Minimax/Negamax": 4,
+    "Alpha-beta": 3,
+    "Iterative deepening": 1,
+    "Move ordering (MVV-LVA)": 19,
+    "King safety": 2,
+    "Pawn structure": 1,
+    "Material counting": 4,
+    "Opening book": 1,
+    "Endgame tables": 1,
+    "Time management": 4
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "play_random.py",
+      "play_stockfish.py",
+      "depth3_10games.log"
+    ],
+    "UCI protocol": [
+      "generate.py",
+      "Makefile",
+      "bf_movegen.py",
+      "play.py",
+      "README.md",
+      "play_random.py",
+      "auto_play.py",
+      "ASSESSMENT.md",
+      "bf_chess.py",
+      "test_perft.py",
+      "bf_memory.py",
+      "play_stockfish.py",
+      "bf_uci.py"
+    ],
+    "Perft": [
+      "bf_movegen.py",
+      "README.md",
+      "test_perft.py",
+      "bf_memory.py",
+      "bf_uci.py"
+    ],
+    "Castling": [
+      "bfchess_vs_stockfish.pgn",
+      "bench.pgn",
+      "depth2_game1.pgn",
+      "elo_calibrated_v2.pgn",
+      "depth3_10games.pgn",
+      "fixed2.pgn",
+      "depth3_game2.pgn",
+      "bf_movegen.py",
+      "README.md",
+      "improved2.pgn",
+      "hanging.pgn",
+      "improved3.pgn",
+      "auto_play.py",
+      "depth2_10games.pgn",
+      "confirm.pgn",
+      "random_v2.pgn",
+      "ASSESSMENT.md",
+      "random_tournament.pgn",
+      "bf_chess.py",
+      "depth3_fixed.pgn",
+      "improved3_quick.pgn",
+      "bf_memory.py",
+      "fixed.pgn",
+      "improved.pgn"
+    ],
+    "En passant": [
+      "bf_movegen.py",
+      "README.md",
+      "ASSESSMENT.md",
+      "test_perft.py",
+      "bf_memory.py"
+    ],
+    "Promotion": [
+      "bf_movegen.py",
+      "play.py",
+      "README.md",
+      "ASSESSMENT.md",
+      "bf_chess.py",
+      "test_perft.py"
+    ],
+    "Check/Checkmate": [
+      "bf_movegen.py",
+      "README.md",
+      "play_random.py",
+      "ASSESSMENT.md",
+      "bf_memory.py",
+      "play_stockfish.py",
+      "depth3_10games.log"
+    ],
+    "PGN": [
+      "README.md",
+      "play_random.py",
+      "ASSESSMENT.md",
+      "play_stockfish.py",
+      "depth3_10games.log"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "bf_memory.py"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "bf_movegen.py",
+      "README.md",
+      "ASSESSMENT.md",
+      "bf_uci.py"
+    ],
+    "Alpha-beta": [
+      "README.md",
+      "ASSESSMENT.md",
+      "bf_memory.py"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [
+      "bfchess_vs_stockfish.pgn",
+      "bench.pgn",
+      "depth2_game1.pgn",
+      "depth3_10games.pgn",
+      "fixed2.pgn",
+      "depth3_game1.pgn",
+      "depth3_game2.pgn",
+      "bf_movegen.py",
+      "README.md",
+      "improved2.pgn",
+      "hanging.pgn",
+      "improved3.pgn",
+      "depth2_10games.pgn",
+      "confirm.pgn",
+      "ASSESSMENT.md",
+      "depth3_fixed.pgn",
+      "improved3_quick.pgn",
+      "fixed.pgn",
+      "improved.pgn"
+    ],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [
+      "README.md",
+      "ASSESSMENT.md"
+    ],
+    "Pawn structure": [
+      "README.md"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "bf_movegen.py",
+      "README.md",
+      "ASSESSMENT.md",
+      "bf_memory.py"
+    ],
+    "Opening book": [
+      "README.md"
+    ],
+    "Endgame tables": [
+      "README.md"
+    ],
+    "Time management": [
+      "elo_calibrated_v2.pgn",
+      "README.md",
+      "ASSESSMENT.md",
+      "play_stockfish.py"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 3,
+    "subagent_sessions_count": 148,
+    "n_user_prompts": 55,
+    "n_assistant_messages": 645,
+    "models": [
+      "<synthetic>",
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 171,
+      "Edit": 70,
+      "Read": 66,
+      "TaskOutput": 40,
+      "Grep": 20,
+      "Write": 7,
+      "Agent": 5,
+      "TaskStop": 3,
+      "Task": 2,
+      "ToolSearch": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 40426,
+        "output": 101355,
+        "cache_read": 54827035,
+        "cache_creation": 3589647
+      },
+      "usd_estimate": 157.75
+    },
+    "first_ts": "2026-02-28T16:03:46.577Z",
+    "last_ts": "2026-03-31T09:21:37.051Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "1ca361c5-f792-40ed-ad4b-1503cd587948",
+        "first_ts": "2026-03-23T18:21:57.494Z",
+        "last_ts": "2026-03-23T20:35:50.554Z",
+        "models": [
+          "claude-opus-4-6"
+        ],
+        "turns": 4,
+        "n_events": 88,
+        "tokens": {
+          "input": 176,
+          "output": 15229,
+          "cache_read": 1082601,
+          "cache_creation": 205440
+        },
+        "tool_uses": {
+          "Read": 1,
+          "Bash": 20,
+          "Write": 3
+        },
+        "first_prompt_sample": "consider chess.bf and reorganize the first characters to draw a knight (ASCII-like format)"
+      },
+      {
+        "session_id": "326e1d15-5667-4fad-9289-636e5da8796f",
+        "first_ts": "2026-02-28T16:03:46.577Z",
+        "last_ts": "2026-03-31T09:21:37.051Z",
+        "models": [
+          "<synthetic>",
+          "claude-opus-4-6"
+        ],
+        "turns": 38,
+        "n_events": 11325,
+        "tokens": {
+          "input": 570,
+          "output": 54476,
+          "cache_read": 42268263,
+          "cache_creation": 2722256
+        },
+        "tool_uses": {
+          "Read": 43,
+          "Grep": 14,
+          "Edit": 33,
+          "Bash": 130,
+          "Task": 2,
+          "Write": 3,
+          "TaskOutput": 40,
+          "TaskStop": 3,
+          "Agent": 1,
+          "ToolSearch": 1
+        },
+        "first_prompt_sample": "Implement the following plan:\n\n# Plan: Integrate Proper Chess Piece Values\n\n## Context\n\nBFChess's `_score_move()` uses MVV capture values that don't reflect standard chess piece values:\n- Current: P=10, N=30, **B=30**, R=50, Q=90\n- **Bug**: Knight and Bishop have identical values (both 30), so the e"
+      },
+      {
+        "session_id": "a7a18765-f17c-43f0-91e0-1ef43de6b493",
+        "first_ts": "2026-03-23T08:08:40.600Z",
+        "last_ts": "2026-03-23T18:32:55.333Z",
+        "models": [
+          "claude-opus-4-6"
+        ],
+        "turns": 13,
+        "n_events": 466,
+        "tokens": {
+          "input": 39680,
+          "output": 31650,
+          "cache_read": 11476171,
+          "cache_creation": 661951
+        },
+        "tool_uses": {
+          "Agent": 4,
+          "Read": 22,
+          "Bash": 21,
+          "Write": 1,
+          "Edit": 37,
+          "Grep": 6
+        },
+        "first_prompt_sample": "I'd like to write a blog post in /Users/mathieuacher/SANDBOX/acherm.github.io/_posts in the same vein as the blog post about Latex chess engine... https://blog.mathieuacher.com/TeXCCChessEngine/ \nhowever, the post should be much more concise... also the takeaway is that the chess engine is not at a "
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 3,
+    "n_assistant_messages": 14,
+    "models": [
+      "gpt-5.4"
+    ],
+    "tool_uses": {
+      "exec_command": 56,
+      "update_plan": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 1964473,
+        "output": 18360,
+        "cache_read": 1557120,
+        "cache_creation": 0,
+        "reasoning_output": 11036
+      },
+      "usd_estimate": 2.83
+    },
+    "first_ts": "2026-03-06T00:26:15.387Z",
+    "last_ts": "2026-03-20T14:08:00.368Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-03-06T01-24-37-019cc088-3390-7892-b990-3afd4bfd5694",
+        "first_ts": "2026-03-06T00:26:15.387Z",
+        "last_ts": "2026-03-20T14:08:00.368Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 3,
+        "tokens": {
+          "input": 1964473,
+          "output": 18360,
+          "cache_read": 1557120,
+          "reasoning_output": 11036
+        },
+        "tool_uses": {
+          "exec_command": 56,
+          "update_plan": 1
+        },
+        "first_prompt_sample": "I'd like to review this repo and understand the basic architecture of the Brainfuck chess engine, the way it is implemented, the features of the chess engine, etc. \n\nI would like to have strong arguments against the idea it is not a pure Brainfuck implementation. There are some Python files (fine!)."
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "1e8ff38|2026-03-23T21:35:41+01:00|Mathieu Acher|Add bishop ASCII art rendered from chess.bf BF characters",
+      "14a6e06|2026-03-23T18:53:41+01:00|Mathieu Acher|Add generated chess.bf (5.6 MB) and refine assessment wording",
+      "930ee22|2026-03-23T10:58:51+01:00|Mathieu Acher|Rewrite ASSESSMENT.md with current depth-3 engine results",
+      "08d36a6|2026-03-23T09:25:51+01:00|Mathieu Acher|Add authors section to README",
+      "1e2684b|2026-03-23T08:59:38+01:00|Mathieu Acher|Add historical PGN game records from development and testing",
+      "eaca77d|2026-03-23T08:59:00+01:00|Mathieu Acher|Add stalemate detection, calibrated Stockfish tournament, and updated README",
+      "67088cf|2026-03-01T06:31:43+01:00|Mathieu Acher|Use standard chess piece values (P=20,N=64,B=66,R=100,Q=180) for better material evaluation",
+      "d5a39d4|2026-02-28T10:36:12+01:00|Mathieu Acher|Add RLE interpreter, full move handling, and Stockfish testing",
+      "85b3a32|2026-02-26T16:47:15+01:00|Mathieu Acher|Add depth-3 minimax search with alpha-beta pruning",
+      "747bfd7|2026-02-22T21:51:00+01:00|Mathieu Acher|Add domove protocol and move legality checking",
+      "0fc3441|2026-02-22T16:28:25+01:00|Mathieu Acher|Fix space-handling bug in move parser, add game scripts",
+      "3e042a3|2026-02-22T15:48:30+01:00|Mathieu Acher|BFChess: UCI chess engine in Brainfuck (733 KB)"
+    ],
+    "n_commits": 12,
+    "authors": [
+      "12\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

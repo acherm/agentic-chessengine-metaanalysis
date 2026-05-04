@@ -1,0 +1,61 @@
+Indexing opening suite...
+Started game 2 of 30 (sf_skill10 vs chess-ruby-cc)
+Started game 1 of 30 (chess-ruby-cc vs sf_skill10)
+Finished game 2 (sf_skill10 vs chess-ruby-cc): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 0 - 0  [1.000] 1
+Started game 3 of 30 (chess-ruby-cc vs sf_skill10)
+Finished game 1 (chess-ruby-cc vs sf_skill10): 1/2-1/2 {Draw by fifty moves rule}
+Score of chess-ruby-cc vs sf_skill10: 1 - 0 - 1  [0.750] 2
+Started game 4 of 30 (sf_skill10 vs chess-ruby-cc)
+Finished game 3 (chess-ruby-cc vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 1 - 1  [0.500] 3
+Started game 5 of 30 (chess-ruby-cc vs sf_skill10)
+Finished game 4 (sf_skill10 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 2 - 1  [0.375] 4
+Started game 6 of 30 (sf_skill10 vs chess-ruby-cc)
+Finished game 5 (chess-ruby-cc vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 3 - 1  [0.300] 5
+Started game 7 of 30 (chess-ruby-cc vs sf_skill10)
+Finished game 6 (sf_skill10 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 4 - 1  [0.250] 6
+Started game 8 of 30 (sf_skill10 vs chess-ruby-cc)
+Finished game 7 (chess-ruby-cc vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 5 - 1  [0.214] 7
+Started game 9 of 30 (chess-ruby-cc vs sf_skill10)
+Finished game 8 (sf_skill10 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 6 - 1  [0.188] 8
+Started game 10 of 30 (sf_skill10 vs chess-ruby-cc)
+Finished game 9 (chess-ruby-cc vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 7 - 1  [0.167] 9
+Started game 11 of 30 (chess-ruby-cc vs sf_skill10)
+Finished game 10 (sf_skill10 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 8 - 1  [0.150] 10
+Started game 12 of 30 (sf_skill10 vs chess-ruby-cc)
+Finished game 11 (chess-ruby-cc vs sf_skill10): 0-1 {Black mates}
+Score of chess-ruby-cc vs sf_skill10: 1 - 9 - 1  [0.136] 11
+Started game 13 of 30 (chess-ruby-cc vs sf_skill10)
+Finished game 12 (sf_skill10 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_skill10: 1 - 10 - 1  [0.125] 12
+Finished game 13 (chess-ruby-cc vs sf_skill10): * {No result}
+Score of chess-ruby-cc vs sf_skill10: 1 - 10 - 1  [0.125] 12
+...      chess-ruby-cc playing White: 0 - 5 - 1  [0.083] 6
+...      chess-ruby-cc playing Black: 1 - 5 - 0  [0.167] 6
+...      White vs Black: 5 - 6 - 1  [0.458] 12
+Elo difference: -338.0 +/- nan, LOS: 0.3 %, DrawRatio: 8.3 %
+SPRT: llr -3.25 (-110.4%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-ruby-cc
+   "Draw by fifty moves rule": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 4
+   "Loss: White wins by adjudication": 5
+   "No result": 1
+   "Win: Black wins by adjudication": 1
+Player: sf_skill10
+   "Draw by fifty moves rule": 1
+   "Loss: Black wins by adjudication": 1
+   "No result": 1
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 4
+   "Win: White wins by adjudication": 5
+Finished match

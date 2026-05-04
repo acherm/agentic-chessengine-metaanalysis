@@ -1,0 +1,45 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-rust-codex vs sf_skill10)
+Started game 2 of 30 (sf_skill10 vs chess-rust-codex)
+Finished game 2 (sf_skill10 vs chess-rust-codex): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_skill10: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-rust-codex vs sf_skill10)
+Finished game 1 (chess-rust-codex vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_skill10: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill10 vs chess-rust-codex)
+Finished game 4 (sf_skill10 vs chess-rust-codex): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_skill10: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (chess-rust-codex vs sf_skill10)
+Finished game 3 (chess-rust-codex vs sf_skill10): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-rust-codex vs sf_skill10: 0 - 3 - 1  [0.125] 4
+Started game 6 of 30 (sf_skill10 vs chess-rust-codex)
+Finished game 5 (chess-rust-codex vs sf_skill10): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-rust-codex vs sf_skill10: 0 - 3 - 2  [0.200] 5
+Started game 7 of 30 (chess-rust-codex vs sf_skill10)
+Finished game 6 (sf_skill10 vs chess-rust-codex): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_skill10: 0 - 4 - 2  [0.167] 6
+Started game 8 of 30 (sf_skill10 vs chess-rust-codex)
+Finished game 7 (chess-rust-codex vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs sf_skill10: 0 - 5 - 2  [0.143] 7
+Started game 9 of 30 (chess-rust-codex vs sf_skill10)
+Finished game 8 (sf_skill10 vs chess-rust-codex): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs sf_skill10: 0 - 6 - 2  [0.125] 8
+Finished game 9 (chess-rust-codex vs sf_skill10): * {No result}
+Score of chess-rust-codex vs sf_skill10: 0 - 6 - 2  [0.125] 8
+...      chess-rust-codex playing White: 0 - 2 - 2  [0.250] 4
+...      chess-rust-codex playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 2 - 2  [0.625] 8
+Elo difference: -338.0 +/- nan, LOS: 0.7 %, DrawRatio: 25.0 %
+SPRT: llr -3.34 (-113.5%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-rust-codex
+   "Draw by 3-fold repetition": 2
+   "Loss: Black wins by adjudication": 2
+   "Loss: White wins by adjudication": 4
+   "No result": 1
+Player: sf_skill10
+   "Draw by 3-fold repetition": 2
+   "No result": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White wins by adjudication": 4
+Finished match

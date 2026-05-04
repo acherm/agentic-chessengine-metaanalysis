@@ -1,0 +1,633 @@
+{
+  "name": "COBOL-chess",
+  "path": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+  "primary_language": "COBOL",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 4,
+      "Text": 1,
+      "Python": 4,
+      "Shell": 1,
+      "JSON": 55,
+      "COBOL": 11
+    },
+    "loc_by_lang": {
+      "Markdown": 1149,
+      "Text": 2181,
+      "Python": 681,
+      "Shell": 42,
+      "JSON": 983,
+      "COBOL": 3854
+    },
+    "total_files": 76,
+    "total_loc": 8890
+  },
+  "features": {
+    "FEN parsing": 27,
+    "UCI protocol": 11,
+    "Perft": 9,
+    "Castling": 61,
+    "En passant": 3,
+    "Promotion": 9,
+    "Check/Checkmate": 6,
+    "PGN": 60,
+    "Board: 0x88": 6,
+    "Board: bitboard": 2,
+    "Board: mailbox 8x8": 5,
+    "Minimax/Negamax": 3,
+    "Alpha-beta": 6,
+    "Iterative deepening": 5,
+    "Quiescence": 7,
+    "Transposition table": 8,
+    "Zobrist hashing": 4,
+    "Move ordering (MVV-LVA)": 4,
+    "Killer moves": 4,
+    "History heuristic": 4,
+    "Principal-variation (PV)": 4,
+    "Null-move pruning": 5,
+    "Late-move reduction (LMR)": 4,
+    "Late-move pruning (LMP)": 3,
+    "Aspiration windows": 5,
+    "Evaluation/PST": 2,
+    "Tapered evaluation": 1,
+    "King safety": 3,
+    "Pawn structure": 5,
+    "Mobility": 2,
+    "Material counting": 13,
+    "Opening book": 4,
+    "Endgame tables": 2,
+    "Time management": 61
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "ARCHITECTURE.md",
+      "Makefile",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "tools/perft_check.py",
+      "tests/perft_cases.json",
+      "results/match_20260210_122326.pgn",
+      "results/match_20260209_204413.pgn",
+      "results/match_20260210_114051.pgn",
+      "results/match_20260209_205336.pgn",
+      "results/match_20260209_211540.pgn",
+      "results/match_20260209_211805.pgn",
+      "results/match_20260209_211652.pgn",
+      "results/match_20260209_131301.pgn",
+      "results/match_20260210_121924.pgn",
+      "results/match_20260209_201850.pgn",
+      "results/match_20260210_123520.pgn",
+      "results/match_20260209_202552.pgn",
+      "results/match_20260210_112505.pgn",
+      "results/match_20260210_121021.pgn",
+      "results/match_20260210_124953.pgn",
+      "results/match_20260209_201940.pgn",
+      "results/match_20260209_203159.pgn",
+      "results/match_20260209_204755.pgn",
+      "src/fen.cob",
+      "src/main.cob"
+    ],
+    "UCI protocol": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "Makefile",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "tools/elo_run.py",
+      "tools/uci_smoke.sh",
+      "src/fen.cob",
+      "src/main.cob",
+      "src/search.cob"
+    ],
+    "Perft": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "Makefile",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "tools/engine_check.py",
+      "tools/perft_check.py",
+      "src/main.cob"
+    ],
+    "Castling": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "results/match_20260210_214201.pgn",
+      "results/match_20260210_213630.pgn",
+      "results/match_20260210_122326.pgn",
+      "results/match_20260210_191311.pgn",
+      "results/match_20260209_204413.pgn",
+      "results/match_20260210_204952.pgn",
+      "results/match_20260210_114051.pgn",
+      "results/match_20260210_204401.pgn",
+      "results/match_20260210_221333.pgn",
+      "results/match_20260209_205336.pgn",
+      "results/match_20260210_221727.pgn",
+      "results/match_20260210_205646.pgn",
+      "results/match_20260210_185411.pgn",
+      "results/match_20260210_185820.pgn",
+      "results/match_20260210_215535.pgn",
+      "results/match_20260209_211540.pgn",
+      "results/match_20260209_211805.pgn",
+      "results/match_20260209_211652.pgn",
+      "results/match_20260209_131301.pgn",
+      "results/match_20260210_134041.pgn",
+      "results/match_20260210_212758.pgn",
+      "results/match_20260210_231340.pgn",
+      "results/match_20260210_220516.pgn",
+      "results/match_20260210_132343.pgn",
+      "results/match_20260210_184152.pgn",
+      "results/match_20260210_214927.pgn",
+      "results/match_20260210_121924.pgn",
+      "results/match_20260210_141948.pgn",
+      "results/match_20260210_201100.pgn",
+      "results/match_20260210_231438.pgn",
+      "results/match_20260210_195900.pgn",
+      "results/match_20260209_201850.pgn",
+      "results/match_20260210_123520.pgn",
+      "results/match_20260209_202552.pgn",
+      "results/match_20260210_201512.pgn",
+      "results/match_20260210_125540.pgn",
+      "results/match_20260211_131213.pgn",
+      "results/match_20260210_112505.pgn",
+      "results/match_20260210_125627.pgn",
+      "results/match_20260210_144152.pgn",
+      "results/match_20260210_222333.pgn",
+      "results/match_20260210_190841.pgn",
+      "results/match_20260210_132006.pgn",
+      "results/match_20260210_121021.pgn",
+      "results/match_20260210_210457.pgn",
+      "results/match_20260211_095304.pgn",
+      "results/match_20260210_212320.pgn",
+      "results/match_20260210_124953.pgn",
+      "results/match_20260210_142340.pgn",
+      "results/match_20260210_230838.pgn",
+      "results/match_20260210_131234.pgn",
+      "results/match_20260209_201940.pgn",
+      "results/match_20260209_203159.pgn",
+      "results/match_20260210_220035.pgn",
+      "results/match_20260209_204755.pgn",
+      "openings/book.pgn",
+      "src/makemove.cob"
+    ],
+    "En passant": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md"
+    ],
+    "Promotion": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "tests/perft_cases.json",
+      "copybooks/constants.cpy",
+      "src/makemove.cob",
+      "src/movegen.cob",
+      "src/search.cob"
+    ],
+    "Check/Checkmate": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "results/match_20260210_112505.pgn",
+      "src/makemove.cob",
+      "src/search.cob"
+    ],
+    "PGN": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "tools/elo_run.py",
+      "tools/elo_calc.py",
+      "results/match_20260210_114051.json",
+      "results/match_20260211_095304.json",
+      "results/match_20260210_201512.json",
+      "results/match_20260210_220035.json",
+      "results/match_20260210_212758.json",
+      "results/match_20260210_213630.json",
+      "results/match_20260210_220516.json",
+      "results/match_20260210_125540.json",
+      "results/match_20260210_214927.json",
+      "results/match_20260210_132006.json",
+      "results/match_20260209_205336.json",
+      "results/match_20260210_132343.json",
+      "results/match_20260211_131213.json",
+      "results/match_20260210_195900.json",
+      "results/match_20260210_210457.json",
+      "results/match_20260210_121021.json",
+      "results/match_20260210_141948.json",
+      "results/match_20260210_231340.json",
+      "results/match_20260210_230838.json",
+      "results/match_20260210_190841.json",
+      "results/match_20260209_201850.json",
+      "results/match_20260209_202552.json",
+      "results/match_20260210_221727.json",
+      "results/match_20260210_121924.json",
+      "results/match_20260209_204413.json",
+      "results/match_20260210_231438.json",
+      "results/match_20260210_212320.json",
+      "results/match_20260210_124953.json",
+      "results/match_20260209_211540.json",
+      "results/match_20260210_222333.json",
+      "results/match_20260210_214201.json",
+      "results/match_20260210_123520.json",
+      "results/match_20260209_201940.json",
+      "results/match_20260209_211805.json",
+      "results/match_20260210_205646.json",
+      "results/match_20260209_211652.json",
+      "results/match_20260210_112505.json",
+      "results/match_20260209_204755.json",
+      "results/match_20260210_122326.json",
+      "results/match_20260210_185820.json",
+      "results/match_20260209_131301.json",
+      "results/match_20260210_215535.json",
+      "results/match_20260210_144152.json",
+      "results/match_20260210_142340.json",
+      "results/match_20260210_185411.json",
+      "results/match_20260210_221333.json",
+      "results/match_20260210_191311.json",
+      "results/match_20260210_204401.json",
+      "results/match_20260210_204952.json",
+      "results/match_20260210_184152.json",
+      "results/match_20260210_134041.json",
+      "results/match_20260210_131234.json",
+      "results/match_20260210_125627.json",
+      "results/match_20260210_201100.json"
+    ],
+    "Board: 0x88": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "copybooks/types.cpy"
+    ],
+    "Board: bitboard": [
+      "ARCHITECTURE.md",
+      "README.md"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md"
+    ],
+    "Alpha-beta": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/search.cob"
+    ],
+    "Iterative deepening": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "Quiescence": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/movegen.cob",
+      "src/search.cob"
+    ],
+    "Transposition table": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "copybooks/searchstate.cpy",
+      "copybooks/constants.cpy",
+      "src/main.cob",
+      "src/search.cob"
+    ],
+    "Zobrist hashing": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/search.cob"
+    ],
+    "Killer moves": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/search.cob"
+    ],
+    "History heuristic": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "Principal-variation (PV)": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "src/search.cob"
+    ],
+    "Null-move pruning": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/search.cob"
+    ],
+    "Late-move reduction (LMR)": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/search.cob"
+    ],
+    "Late-move pruning (LMP)": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "src/search.cob"
+    ],
+    "Aspiration windows": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/search.cob"
+    ],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "SPECIFICATION.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "Tapered evaluation": [
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "King safety": [
+      "SPECIFICATION_BACKLOG.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/search.cob"
+    ],
+    "Pawn structure": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "src/eval.cob"
+    ],
+    "Mobility": [
+      "ARCHITECTURE.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "Material counting": [
+      "SPECIFICATION.md",
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "results/match_20260210_213630.pgn",
+      "results/match_20260210_221727.pgn",
+      "results/match_20260210_205646.pgn",
+      "results/match_20260210_132343.pgn",
+      "results/match_20260210_214927.pgn",
+      "results/match_20260210_144152.pgn",
+      "src/eval.cob",
+      "src/search.cob"
+    ],
+    "Opening book": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt"
+    ],
+    "Endgame tables": [
+      "ARCHITECTURE.md",
+      "README.md"
+    ],
+    "Time management": [
+      "ARCHITECTURE.md",
+      "SPECIFICATION_BACKLOG.md",
+      "README.md",
+      "2026-03-19-163737-you-are-a-post-session-backlog-strategy-analyst.txt",
+      "tools/elo_run.py",
+      "results/match_20260210_214201.pgn",
+      "results/match_20260210_213630.pgn",
+      "results/match_20260210_122326.pgn",
+      "results/match_20260210_191311.pgn",
+      "results/match_20260209_204413.pgn",
+      "results/match_20260210_204952.pgn",
+      "results/match_20260210_114051.pgn",
+      "results/match_20260210_204401.pgn",
+      "results/match_20260210_221333.pgn",
+      "results/match_20260209_205336.pgn",
+      "results/match_20260210_221727.pgn",
+      "results/match_20260210_205646.pgn",
+      "results/match_20260210_185411.pgn",
+      "results/match_20260210_185820.pgn",
+      "results/match_20260210_215535.pgn",
+      "results/match_20260209_211540.pgn",
+      "results/match_20260209_211805.pgn",
+      "results/match_20260209_211652.pgn",
+      "results/match_20260209_131301.pgn",
+      "results/match_20260210_134041.pgn",
+      "results/match_20260210_212758.pgn",
+      "results/match_20260210_231340.pgn",
+      "results/match_20260210_220516.pgn",
+      "results/match_20260210_132343.pgn",
+      "results/match_20260210_184152.pgn",
+      "results/match_20260210_214927.pgn",
+      "results/match_20260210_121924.pgn",
+      "results/match_20260210_141948.pgn",
+      "results/match_20260210_201100.pgn",
+      "results/match_20260210_231438.pgn",
+      "results/match_20260210_195900.pgn",
+      "results/match_20260209_201850.pgn",
+      "results/match_20260210_123520.pgn",
+      "results/match_20260209_202552.pgn",
+      "results/match_20260210_201512.pgn",
+      "results/match_20260210_125540.pgn",
+      "results/match_20260211_131213.pgn",
+      "results/match_20260210_112505.pgn",
+      "results/match_20260210_125627.pgn",
+      "results/match_20260210_144152.pgn",
+      "results/match_20260210_222333.pgn",
+      "results/match_20260210_190841.pgn",
+      "results/match_20260210_132006.pgn",
+      "results/match_20260210_121021.pgn",
+      "results/match_20260210_210457.pgn",
+      "results/match_20260211_095304.pgn",
+      "results/match_20260210_212320.pgn",
+      "results/match_20260210_124953.pgn",
+      "results/match_20260210_142340.pgn",
+      "results/match_20260210_230838.pgn",
+      "results/match_20260210_131234.pgn",
+      "results/match_20260209_201940.pgn",
+      "results/match_20260209_203159.pgn",
+      "results/match_20260210_220035.pgn",
+      "results/match_20260209_204755.pgn",
+      "src/main.cob"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 5,
+    "n_user_prompts": 8,
+    "n_assistant_messages": 85,
+    "models": [
+      "<synthetic>",
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 41,
+      "Read": 5,
+      "Agent": 5,
+      "Write": 2,
+      "Glob": 1,
+      "Edit": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 53152,
+        "output": 44782,
+        "cache_read": 5121398,
+        "cache_creation": 474819
+      },
+      "usd_estimate": 20.74
+    },
+    "first_ts": "2026-03-19T12:54:48.605Z",
+    "last_ts": "2026-04-16T09:40:54.105Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "fe558a17-0e95-4d84-8c0b-c093b7ae7a17",
+        "first_ts": "2026-03-19T12:54:48.605Z",
+        "last_ts": "2026-04-16T09:40:54.105Z",
+        "models": [
+          "<synthetic>",
+          "claude-opus-4-6"
+        ],
+        "turns": 8,
+        "n_events": 482,
+        "tokens": {
+          "input": 53152,
+          "output": 44782,
+          "cache_read": 5121398,
+          "cache_creation": 474819
+        },
+        "tool_uses": {
+          "Bash": 41,
+          "Glob": 1,
+          "Read": 5,
+          "Agent": 5,
+          "Write": 2,
+          "Edit": 1
+        },
+        "first_prompt_sample": "You are a \u201cPost-Session Backlog & Strategy Analyst\u201d operating locally inside the current repository.\n\nPRIMARY GOAL\nProduce an evidence-based, reproducible post-session report using a strict TWO-PASS workflow:\n- PASS 1 (Extraction): reconstruct the feature backlog + prompt ledger + replay package (re"
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 2,
+    "n_user_prompts": 25,
+    "n_assistant_messages": 32,
+    "models": [
+      "gpt-5.2",
+      "gpt-5.4"
+    ],
+    "tool_uses": {
+      "exec_command": 900,
+      "write_stdin": 836,
+      "update_plan": 6,
+      "request_user_input": 2
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 236150053,
+        "output": 1146954,
+        "cache_read": 232432640,
+        "cache_creation": 0,
+        "reasoning_output": 897503
+      },
+      "usd_estimate": 335.71
+    },
+    "first_ts": "2026-02-09T09:42:20.739Z",
+    "last_ts": "2026-03-19T14:07:48.149Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-09T10-42-20-019c41c7-d33c-7e03-89a7-1691d6ab564a",
+        "first_ts": "2026-02-09T09:42:20.739Z",
+        "last_ts": "2026-02-11T10:59:04.337Z",
+        "models": [
+          "gpt-5.2"
+        ],
+        "turns": 24,
+        "tokens": {
+          "input": 233512188,
+          "output": 1125255,
+          "cache_read": 229924096,
+          "reasoning_output": 887566
+        },
+        "tool_uses": {
+          "exec_command": 845,
+          "request_user_input": 2,
+          "update_plan": 6,
+          "write_stdin": 829
+        },
+        "first_prompt_sample": "I want to build a chess engine in COBOL (GNUCobol)... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      },
+      {
+        "session_id": "rollout-2026-03-19T14-57-38-019d0663-34ad-7a03-8d12-888778029a2a",
+        "first_ts": "2026-03-19T14:00:57.426Z",
+        "last_ts": "2026-03-19T14:07:48.149Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 1,
+        "tokens": {
+          "input": 2637865,
+          "output": 21699,
+          "cache_read": 2508544,
+          "reasoning_output": 9937
+        },
+        "tool_uses": {
+          "exec_command": 55,
+          "write_stdin": 7
+        },
+        "first_prompt_sample": "Please analyze thorughly the repo and write a README.md to document the architecture and features (being heavily inspired by the README of https://github.com/acherm/agentic-chessengine-latex-TeXCCChess and https://blog.mathieuacher.com/TeXCCChessEngine/)...\nI suggest a \"light\" README.md (as  https:/"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "faf0f16|2026-03-19T16:36:49+01:00|Mathieu Acher|Initial commit: cobochess \u2014 COBOL (GnuCOBOL) UCI chess engine (~1600-1700 Elo)"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

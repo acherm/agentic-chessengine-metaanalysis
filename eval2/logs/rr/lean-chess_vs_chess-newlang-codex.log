@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-newlang-codex vs lean-chess)
+Started game 1 of 2 (lean-chess vs chess-newlang-codex)
+Finished game 2 (chess-newlang-codex vs lean-chess): 1-0 {White mates}
+Score of lean-chess vs chess-newlang-codex: 0 - 1 - 0  [0.000] 1
+Finished game 1 (lean-chess vs chess-newlang-codex): 0-1 {Black mates}
+Score of lean-chess vs chess-newlang-codex: 0 - 2 - 0  [0.000] 2
+...      lean-chess playing White: 0 - 1 - 0  [0.000] 1
+...      lean-chess playing Black: 0 - 1 - 0  [0.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: -inf +/- nan, LOS: 7.9 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: lean-chess
+   "Loss: Black mates": 1
+   "Loss: White mates": 1
+Player: chess-newlang-codex
+   "Win: Black mates": 1
+   "Win: White mates": 1
+Finished match

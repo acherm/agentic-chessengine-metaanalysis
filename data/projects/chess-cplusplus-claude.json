@@ -1,0 +1,347 @@
+{
+  "name": "chess-cplusplus-claude",
+  "path": "/Users/mathieuacher/SANDBOX/chess-cplusplus-claude",
+  "primary_language": "C++",
+  "loc": {
+    "files_by_lang": {
+      "Text": 3,
+      "Markdown": 1,
+      "Shell": 2,
+      "C++": 11,
+      "C": 11
+    },
+    "loc_by_lang": {
+      "Text": 76,
+      "Markdown": 179,
+      "Shell": 341,
+      "C++": 2868,
+      "C": 784
+    },
+    "total_files": 28,
+    "total_loc": 4248
+  },
+  "features": {
+    "FEN parsing": 5,
+    "UCI protocol": 8,
+    "Perft": 8,
+    "Castling": 20,
+    "En passant": 5,
+    "Promotion": 8,
+    "Check/Checkmate": 4,
+    "PGN": 2,
+    "Board: bitboard": 11,
+    "Board: magic bitboards": 3,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 5,
+    "Transposition table": 12,
+    "Zobrist hashing": 5,
+    "Move ordering (MVV-LVA)": 2,
+    "Killer moves": 3,
+    "History heuristic": 3,
+    "Principal-variation (PV)": 2,
+    "Null-move pruning": 4,
+    "Late-move reduction (LMR)": 2,
+    "Late-move pruning (LMP)": 2,
+    "Aspiration windows": 1,
+    "Futility pruning": 2,
+    "Razoring": 2,
+    "Evaluation/PST": 2,
+    "Tapered evaluation": 3,
+    "King safety": 2,
+    "Pawn structure": 2,
+    "Mobility": 2,
+    "Material counting": 8,
+    "Time management": 23
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "tests/perft_test.cpp",
+      "src/main.cpp",
+      "src/position.h",
+      "src/position.cpp",
+      "src/uci.cpp"
+    ],
+    "UCI protocol": [
+      "CMakeLists.txt",
+      "ELO_REPORT.md",
+      "benchmark.sh",
+      "scripts/run_match.sh",
+      "src/search.h",
+      "src/main.cpp",
+      "src/uci.h",
+      "src/uci.cpp"
+    ],
+    "Perft": [
+      "CMakeLists.txt",
+      "ELO_REPORT.md",
+      "tests/perft_test.cpp",
+      "src/movegen.h",
+      "src/movegen.cpp",
+      "src/main.cpp",
+      "src/timeman.h",
+      "src/uci.cpp"
+    ],
+    "Castling": [
+      "test_sk10.pgn",
+      "test_sk5.pgn",
+      "test_sk10_v2.pgn",
+      "benchmark_results/vs_skill14_20260217_090734.pgn",
+      "benchmark_results/vs_skill10_20260217_090734.pgn",
+      "benchmark_results/vs_skill12_20260217_090734.pgn",
+      "benchmark_results/vs_skill5_20260217_090734.pgn",
+      "benchmark_results/vs_skill7_20260217_090734.pgn",
+      "results/quick_test.pgn",
+      "results/vs_sf_skill0.pgn",
+      "results/vs_sf_skill5.pgn",
+      "benchmark_batch4/vs_skill10_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill12_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill14_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill5_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill7_20260217_134913.pgn",
+      "src/move.h",
+      "src/movegen.cpp",
+      "src/position.h",
+      "src/position.cpp"
+    ],
+    "En passant": [
+      "src/movepick.cpp",
+      "src/search.cpp",
+      "src/move.h",
+      "src/movegen.cpp",
+      "src/position.cpp"
+    ],
+    "Promotion": [
+      "ELO_REPORT.md",
+      "tests/perft_test.cpp",
+      "src/movepick.cpp",
+      "src/search.cpp",
+      "src/move.h",
+      "src/movegen.cpp",
+      "src/position.cpp",
+      "src/uci.cpp"
+    ],
+    "Check/Checkmate": [
+      "src/search.cpp",
+      "src/movegen.cpp",
+      "src/position.h",
+      "src/position.cpp"
+    ],
+    "PGN": [
+      "benchmark.sh",
+      "scripts/run_match.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "CMakeLists.txt",
+      "ELO_REPORT.md",
+      "tests/perft_test.cpp",
+      "src/types.h",
+      "src/bitboard.cpp",
+      "src/bitboard.h",
+      "src/evaluate.cpp",
+      "src/movegen.cpp",
+      "src/main.cpp",
+      "src/position.h",
+      "src/position.cpp"
+    ],
+    "Board: magic bitboards": [
+      "ELO_REPORT.md",
+      "src/bitboard.cpp",
+      "src/bitboard.h"
+    ],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [
+      "ELO_REPORT.md"
+    ],
+    "Iterative deepening": [
+      "src/search.cpp"
+    ],
+    "Quiescence": [
+      "ELO_REPORT.md",
+      "src/movepick.cpp",
+      "src/search.cpp",
+      "src/movepick.h",
+      "src/search.h"
+    ],
+    "Transposition table": [
+      "CMakeLists.txt",
+      "ELO_REPORT.md",
+      "tests/perft_test.cpp",
+      "src/movepick.cpp",
+      "src/search.cpp",
+      "src/tt.cpp",
+      "src/search.h",
+      "src/tt.h",
+      "src/main.cpp",
+      "src/position.h",
+      "src/position.cpp",
+      "src/uci.cpp"
+    ],
+    "Zobrist hashing": [
+      "ELO_REPORT.md",
+      "tests/perft_test.cpp",
+      "src/main.cpp",
+      "src/position.h",
+      "src/position.cpp"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "ELO_REPORT.md",
+      "src/movepick.cpp"
+    ],
+    "Killer moves": [
+      "ELO_REPORT.md",
+      "src/search.cpp",
+      "src/search.h"
+    ],
+    "History heuristic": [
+      "ELO_REPORT.md",
+      "src/movepick.h",
+      "src/search.h"
+    ],
+    "Principal-variation (PV)": [
+      "ELO_REPORT.md",
+      "src/search.cpp"
+    ],
+    "Null-move pruning": [
+      "ELO_REPORT.md",
+      "src/search.cpp",
+      "src/position.h",
+      "src/position.cpp"
+    ],
+    "Late-move reduction (LMR)": [
+      "ELO_REPORT.md",
+      "src/search.cpp"
+    ],
+    "Late-move pruning (LMP)": [
+      "ELO_REPORT.md",
+      "src/search.cpp"
+    ],
+    "Aspiration windows": [
+      "src/search.cpp"
+    ],
+    "Futility pruning": [
+      "ELO_REPORT.md",
+      "src/search.cpp"
+    ],
+    "Razoring": [
+      "ELO_REPORT.md",
+      "src/search.cpp"
+    ],
+    "Evaluation/PST": [
+      "src/evaluate.cpp",
+      "src/position.cpp"
+    ],
+    "Tapered evaluation": [
+      "ELO_REPORT.md",
+      "src/types.h",
+      "src/evaluate.cpp"
+    ],
+    "King safety": [
+      "ELO_REPORT.md",
+      "src/evaluate.cpp"
+    ],
+    "Pawn structure": [
+      "ELO_REPORT.md",
+      "src/evaluate.cpp"
+    ],
+    "Mobility": [
+      "ELO_REPORT.md",
+      "src/evaluate.cpp"
+    ],
+    "Material counting": [
+      "ELO_REPORT.md",
+      "results/vs_sf_skill0.pgn",
+      "results/vs_sf_skill5.pgn",
+      "src/types.h",
+      "src/movepick.cpp",
+      "src/evaluate.cpp",
+      "src/search.cpp",
+      "src/position.cpp"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "test_sk10.pgn",
+      "ELO_REPORT.md",
+      "test_sk5.pgn",
+      "benchmark.sh",
+      "test_sk10_v2.pgn",
+      "benchmark_results/vs_skill14_20260217_090734.pgn",
+      "benchmark_results/vs_skill10_20260217_090734.pgn",
+      "benchmark_results/vs_skill12_20260217_090734.pgn",
+      "benchmark_results/vs_skill5_20260217_090734.pgn",
+      "benchmark_results/vs_skill7_20260217_090734.pgn",
+      "results/quick_test.pgn",
+      "results/vs_sf_skill0.pgn",
+      "results/vs_sf_skill5.pgn",
+      "scripts/run_match.sh",
+      "benchmark_batch4/vs_skill10_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill12_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill14_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill5_20260217_134913.pgn",
+      "benchmark_batch4/vs_skill7_20260217_134913.pgn",
+      "src/timeman.cpp",
+      "src/search.cpp",
+      "src/timeman.h",
+      "src/uci.cpp"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 18,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "97e5511|2026-02-18T20:56:09+01:00|Mathieu Acher|Batch 5: search improvements, ~2000 Elo (+54 from ~1946)",
+      "b843fe0|2026-02-17T16:24:59+01:00|Mathieu Acher|Update Elo report with Batch 4 results (~1946 Elo)",
+      "b9b1e51|2026-02-17T16:22:47+01:00|Mathieu Acher|Batch 4: search + eval enhancements, ~1946 Elo (+26 from ~1920)",
+      "39285ab|2026-02-17T12:33:11+01:00|Mathieu Acher|Batch 3: advanced search features, ~1920 Elo (+70 from ~1850)",
+      "ccca712|2026-02-16T21:51:57+01:00|Mathieu Acher|Claudius chess engine v1.0 \u2014 ~1850 Elo"
+    ],
+    "n_commits": 5,
+    "authors": [
+      "5\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "name": "chess-printf",
+  "path": "/Users/mathieuacher/SANDBOX/chess-printf",
+  "primary_language": "C",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1,
+      "C": 2
+    },
+    "loc_by_lang": {
+      "Markdown": 228,
+      "C": 792
+    },
+    "total_files": 3,
+    "total_loc": 1020
+  },
+  "features": {
+    "En passant": 1,
+    "Promotion": 2,
+    "Check/Checkmate": 3,
+    "Material counting": 2
+  },
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [
+      "README.md"
+    ],
+    "Promotion": [
+      "README.md",
+      "printf_chess.c"
+    ],
+    "Check/Checkmate": [
+      "README.md",
+      "printf_chess.c",
+      "printf_chess"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "README.md",
+      "printf_chess.c"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 12,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "c61feaf|2026-03-04T15:14:46+01:00|Mathieu Acher|Rewrite README to tell the full story of human-directed POP improvements",
+      "3736145|2026-03-04T14:35:30+01:00|Mathieu Acher|Improve POP purity: %hhn loop control, %.*s conditionals, remove atexit",
+      "296871a|2026-03-03T22:12:15+01:00|Mathieu Acher|Update README with tldr, expanded commentary, and supervision notes",
+      "c038063|2026-03-03T22:00:11+01:00|Mathieu Acher|Add README documenting the printf-chess approach and features",
+      "34d234a|2026-03-03T21:56:29+01:00|Mathieu Acher|Add eval display, legal move gen, random AI, checkmate detection, and simplify main",
+      "ce7f416|2026-03-03T01:29:31+01:00|Mathieu Acher|Initial printf chess: board display + move logic via while(*d) printf(fmt, arg)"
+    ],
+    "n_commits": 6,
+    "authors": [
+      "6\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

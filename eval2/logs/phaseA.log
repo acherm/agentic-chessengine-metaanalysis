@@ -1,0 +1,9 @@
+phaseA: SF-Skill-0 vs rustic (CCRL 1820) at 120+1 (30 games)
+phaseA: SF-Skill-0 vs asymptote (CCRL 2150) at 120+1 (30 games)
+phaseA: SF-Skill-5 vs rustic (CCRL 1820) at 120+1 (30 games)
+phaseA: SF-Skill-5 vs asymptote (CCRL 2150) at 120+1 (30 games)
+phaseA: SF-Skill-10 vs rustic (CCRL 1820) at 120+1 (30 games)
+phaseA: SF-Skill-10 vs asymptote (CCRL 2150) at 120+1 (30 games)
+phaseA: SF-Skill-15 vs rustic (CCRL 1820) at 120+1 (30 games)
+phaseA: SF-Skill-15 vs asymptote (CCRL 2150) at 120+1 (30 games)
+Phase A done. Score with: python3 lib/score_phaseA.py

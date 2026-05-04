@@ -1,0 +1,22 @@
+=== chess-assembly-codex Mon Apr 27 16:37:16 CEST 2026 ===
+gauntlet: chess-assembly-codex vs rustic at 120+1
+gauntlet: chess-assembly-codex vs asymptote at 120+1
+gauntlet: chess-assembly-codex vs sf_skill5 at 120+1
+gauntlet: chess-assembly-codex vs sf_skill10 at 120+1
+gauntlet: chess-assembly-codex vs sf_skill15 at 120+1
+anchor gauntlet done. PGNs in pgn/anchor/, logs in logs/anchor/.
+=== chess-Rocq Mon Apr 27 16:41:18 CEST 2026 ===
+gauntlet: chess-Rocq vs rustic at 120+1
+gauntlet: chess-Rocq vs asymptote at 120+1
+gauntlet: chess-Rocq vs sf_skill5 at 120+1
+gauntlet: chess-Rocq vs sf_skill10 at 120+1
+gauntlet: chess-Rocq vs sf_skill15 at 120+1
+anchor gauntlet done. PGNs in pgn/anchor/, logs in logs/anchor/.
+=== chess-icon-codex Mon Apr 27 18:53:31 CEST 2026 ===
+gauntlet: chess-icon-codex vs rustic at 120+1
+gauntlet: chess-icon-codex vs asymptote at 120+1
+gauntlet: chess-icon-codex vs sf_skill5 at 120+1
+gauntlet: chess-icon-codex vs sf_skill10 at 120+1
+gauntlet: chess-icon-codex vs sf_skill15 at 120+1
+anchor gauntlet done. PGNs in pgn/anchor/, logs in logs/anchor/.
+=== ALL DONE Mon Apr 27 21:14:51 CEST 2026 ===

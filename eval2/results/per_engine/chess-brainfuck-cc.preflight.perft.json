@@ -1,0 +1,10 @@
+{
+  "engine": "chess-brainfuck-cc",
+  "native": null,
+  "external": {
+    "mode": "external",
+    "ok": false,
+    "error": "BrokenPipeError(32, 'Broken pipe')"
+  },
+  "ok": false
+}

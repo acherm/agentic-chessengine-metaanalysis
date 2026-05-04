@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-apl-codex54 vs chess-why3-cc)
+Started game 1 of 2 (chess-why3-cc vs chess-apl-codex54)
+Finished game 1 (chess-why3-cc vs chess-apl-codex54): 1-0 {White mates}
+Score of chess-why3-cc vs chess-apl-codex54: 1 - 0 - 0  [1.000] 1
+Finished game 2 (chess-apl-codex54 vs chess-why3-cc): 0-1 {Black mates}
+Score of chess-why3-cc vs chess-apl-codex54: 2 - 0 - 0  [1.000] 2
+...      chess-why3-cc playing White: 1 - 0 - 0  [1.000] 1
+...      chess-why3-cc playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3-cc
+   "Win: Black mates": 1
+   "Win: White mates": 1
+Player: chess-apl-codex54
+   "Loss: Black mates": 1
+   "Loss: White mates": 1
+Finished match

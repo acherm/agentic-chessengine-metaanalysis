@@ -1,0 +1,61 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-py vs sf_skill10)
+Started game 2 of 30 (sf_skill10 vs chess-py)
+Finished game 1 (chess-py vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill10: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-py vs sf_skill10)
+Finished game 2 (sf_skill10 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill10: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill10 vs chess-py)
+Finished game 4 (sf_skill10 vs chess-py): 1-0 {White mates}
+Score of chess-py vs sf_skill10: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (chess-py vs sf_skill10)
+Finished game 3 (chess-py vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill10: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (sf_skill10 vs chess-py)
+Finished game 6 (sf_skill10 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill10: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (chess-py vs sf_skill10)
+Finished game 5 (chess-py vs sf_skill10): 1-0 {White mates}
+Score of chess-py vs sf_skill10: 1 - 5 - 0  [0.167] 6
+Started game 8 of 30 (sf_skill10 vs chess-py)
+Finished game 8 (sf_skill10 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill10: 1 - 6 - 0  [0.143] 7
+Started game 9 of 30 (chess-py vs sf_skill10)
+Finished game 7 (chess-py vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill10: 1 - 7 - 0  [0.125] 8
+Started game 10 of 30 (sf_skill10 vs chess-py)
+Finished game 9 (chess-py vs sf_skill10): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill10: 1 - 8 - 0  [0.111] 9
+Started game 11 of 30 (chess-py vs sf_skill10)
+Finished game 10 (sf_skill10 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill10: 1 - 9 - 0  [0.100] 10
+Started game 12 of 30 (sf_skill10 vs chess-py)
+Finished game 12 (sf_skill10 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill10: 1 - 10 - 0  [0.091] 11
+Started game 13 of 30 (chess-py vs sf_skill10)
+Finished game 11 (chess-py vs sf_skill10): 0-1 {Black mates}
+Score of chess-py vs sf_skill10: 1 - 11 - 0  [0.083] 12
+Finished game 13 (chess-py vs sf_skill10): * {No result}
+Score of chess-py vs sf_skill10: 1 - 11 - 0  [0.083] 12
+...      chess-py playing White: 1 - 5 - 0  [0.167] 6
+...      chess-py playing Black: 0 - 6 - 0  [0.000] 6
+...      White vs Black: 7 - 5 - 0  [0.583] 12
+Elo difference: -416.6 +/- nan, LOS: 0.2 %, DrawRatio: 0.0 %
+SPRT: llr -3.13 (-106.5%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-py
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 5
+   "No result": 1
+   "Win: White mates": 1
+Player: sf_skill10
+   "Loss: White mates": 1
+   "No result": 1
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 5
+Finished match

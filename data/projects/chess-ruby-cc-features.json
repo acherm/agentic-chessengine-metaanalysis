@@ -1,0 +1,248 @@
+{
+  "project": "chess-ruby-cc",
+  "n_write_events": 139,
+  "cumulative": [
+    0,
+    0,
+    23,
+    23,
+    23,
+    23,
+    29,
+    29,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32
+  ],
+  "first_appearances": {
+    "UCI protocol": {
+      "step": 3,
+      "ts": "2026-03-12T09:19:38.210Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine.rb",
+      "kind": "Write",
+      "snippet": "/search\" require_relative \"chess_engine/uci\""
+    },
+    "Transposition table": {
+      "step": 3,
+      "ts": "2026-03-12T09:19:38.210Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine.rb",
+      "kind": "Write",
+      "snippet": "ne/move\" require_relative \"chess_engine/zobrist\" require_relative \"chess_engine/board\""
+    },
+    "Zobrist hashing": {
+      "step": 3,
+      "ts": "2026-03-12T09:19:38.210Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine.rb",
+      "kind": "Write",
+      "snippet": "ne/move\" require_relative \"chess_engine/zobrist\" require_relative \"chess_engine/board\""
+    },
+    "Evaluation/PST": {
+      "step": 3,
+      "ts": "2026-03-12T09:19:38.210Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine.rb",
+      "kind": "Write",
+      "snippet": "nerator\" require_relative \"chess_engine/piece_square_tables\" require_relative \"chess_engine/"
+    },
+    "FEN parsing": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:02.812Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/constants.rb",
+      "kind": "Write",
+      "snippet": "G_MASK.freeze # Piece characters for FEN PIECE_TO_CHAR = { W_PAWN => 'P',"
+    },
+    "Castling": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:02.812Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/constants.rb",
+      "kind": "Write",
+      "snippet": "hen a piece moves from/to a square, AND castling rights with this mask CASTLING_MASK ="
+    },
+    "En passant": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:02.812Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/constants.rb",
+      "kind": "Write",
+      "snippet": "uble pawn push FLAG_EP = 2 # En passant capture FLAG_CASTLE_K = 3 # Kingsi"
+    },
+    "Board: 0x88": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:02.812Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/constants.rb",
+      "kind": "Write",
+      "snippet": "| QUEEN B_KING = BLACK | KING # 0x88 square indices for named squares # Ra"
+    },
+    "Move ordering (MVV-LVA)": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:02.812Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/constants.rb",
+      "kind": "Write",
+      "snippet": "HAR.invert.freeze # Piece values for MVV-LVA and evaluation PIECE_VALUES = { P"
+    },
+    "Material counting": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:02.812Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/constants.rb",
+      "kind": "Write",
+      "snippet": "IECE = PIECE_TO_CHAR.invert.freeze # Piece values for MVV-LVA and evaluation PIECE_VAL"
+    },
+    "Promotion": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:10.322Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/move.rb",
+      "kind": "Write",
+      "snippet": "red @flag = flag end def promotion? @flag >= FLAG_PROMO_N end"
+    },
+    "Check/Checkmate": {
+      "step": 3,
+      "ts": "2026-03-12T09:20:56.113Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/board.rb",
+      "kind": "Write",
+      "snippet": "end end end def in_check?(color = @side) king = @king_sq[c"
+    },
+    "Board: mailbox 8x8": {
+      "step": 3,
+      "ts": "2026-03-12T09:22:02.175Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/piece_square_tables.rb",
+      "kind": "Write",
+      "snippet": "les indexed by 0x88 square; we store as 8x8 arrays and convert PAWN_TABLE = ["
+    },
+    "Time management": {
+      "step": 3,
+      "ts": "2026-03-12T09:22:33.255Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/time_manager.rb",
+      "kind": "Write",
+      "snippet": "@max_depth = 100 end def start(wtime: nil, btime: nil, winc: nil, binc: nil,"
+    },
+    "Minimax/Negamax": {
+      "step": 3,
+      "ts": "2026-03-12T09:23:16.755Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": ".upto(max_depth) do |d| score = negamax(d, 0, -INFINITY, INFINITY) bre"
+    },
+    "Iterative deepening": {
+      "step": 3,
+      "ts": "2026-03-12T09:23:16.755Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "epth = @time_manager.max_depth # Iterative deepening 1.upto(max_depth) do |d|"
+    },
+    "Quiescence": {
+      "step": 3,
+      "ts": "2026-03-12T09:23:16.755Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "= tt_entry.best_move end # Quiescence at leaf if depth <= 0 ret"
+    },
+    "Killer moves": {
+      "step": 3,
+      "ts": "2026-03-12T09:23:16.755Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "if score >= beta # Store killer move if !move.capture?"
+    },
+    "History heuristic": {
+      "step": 3,
+      "ts": "2026-03-12T09:23:16.755Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "@killers[ply][0] = move # History heuristic @history[move.piece][move"
+    },
+    "Null-move pruning": {
+      "step": 3,
+      "ts": "2026-03-12T09:23:16.755Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "in_check = @board.in_check? # Null move pruning (not in check, not in endgame)"
+    },
+    "Late-move reduction (LMR)": {
+      "step": 3,
+      "ts": "2026-03-12T09:23:16.755Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "ve) legal_count += 1 # Late move reductions if moves_searched >= 4 && d"
+    },
+    "Perft": {
+      "step": 3,
+      "ts": "2026-03-12T09:37:04.765Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/test/test_perft.rb",
+      "kind": "Write",
+      "snippet": "test::Test include ChessEngine def perft(board, depth) return 1 if depth =="
+    },
+    "PGN": {
+      "step": 3,
+      "ts": "2026-03-12T09:37:56.731Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/scripts/elo_test.sh",
+      "kind": "Write",
+      "snippet": "-pgnout \"$ENGINE_DIR/results_vs_sf_$ELO.pgn\" \\ -concurrency 1 \\ -ratinginterval"
+    },
+    "King safety": {
+      "step": 7,
+      "ts": "2026-03-12T14:28:34.124Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/evaluation.rb",
+      "kind": "Write",
+      "snippet": "2 ROOK_SEVENTH_BONUS = 20 # King safety PAWN_SHIELD_BONUS = 10 # per p"
+    },
+    "Pawn structure": {
+      "step": 7,
+      "ts": "2026-03-12T14:28:34.124Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/evaluation.rb",
+      "kind": "Write",
+      "snippet": "Evaluation TEMPO_BONUS = 12 # Pawn structure bonuses/penalties DOUBLED_PAWN_PENA"
+    },
+    "Mobility": {
+      "step": 7,
+      "ts": "2026-03-12T14:28:34.124Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/evaluation.rb",
+      "kind": "Write",
+      "snippet": "KING_OPEN_FILE_PENALTY = -25 # Mobility weights per piece type (centipawns per"
+    },
+    "Principal-variation (PV)": {
+      "step": 7,
+      "ts": "2026-03-12T14:29:42.134Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "xt end end # Principal Variation Search (PVS) + Late Move Reductions"
+    },
+    "Aspiration windows": {
+      "step": 7,
+      "ts": "2026-03-12T14:29:42.134Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "1.upto(max_depth) do |d| # Aspiration windows if d >= 5 window = 5"
+    },
+    "Futility pruning": {
+      "step": 7,
+      "ts": "2026-03-12T14:29:42.134Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "end end # Reverse futility pruning (static eval based) if !i"
+    },
+    "Tapered evaluation": {
+      "step": 9,
+      "ts": "2026-03-12T20:13:32.552Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/piece_square_tables.rb",
+      "kind": "Write",
+      "snippet": "ne module PST # Phase weights for tapered evaluation PHASE_WEIGHTS = { PAWN ="
+    },
+    "Late-move pruning (LMP)": {
+      "step": 9,
+      "ts": "2026-03-12T20:16:03.726Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "_move CHECK_INTERVAL = 2048 # LMP move count thresholds by depth LMP_"
+    },
+    "Razoring": {
+      "step": 9,
+      "ts": "2026-03-12T20:16:03.726Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-ruby-cc/lib/chess_engine/search.rb",
+      "kind": "Write",
+      "snippet": "check static_eval = nil # Razoring: at low depths, if static eval is fa"
+    }
+  }
+}

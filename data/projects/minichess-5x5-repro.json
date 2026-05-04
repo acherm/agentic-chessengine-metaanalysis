@@ -1,0 +1,572 @@
+{
+  "name": "minichess-5x5-repro",
+  "path": "/Users/mathieuacher/SANDBOX/minichess-5x5-repro",
+  "primary_language": "Rust",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Markdown": 19,
+      "Text": 7,
+      "HTML": 1,
+      "CSS": 1,
+      "JavaScript": 1,
+      "Shell": 8,
+      "Python": 11,
+      "Rust": 8
+    },
+    "loc_by_lang": {
+      "TOML": 6,
+      "Markdown": 1412,
+      "Text": 466,
+      "HTML": 77,
+      "CSS": 439,
+      "JavaScript": 1716,
+      "Shell": 1569,
+      "Python": 4920,
+      "Rust": 11953
+    },
+    "total_files": 57,
+    "total_loc": 22558
+  },
+  "features": {
+    "FEN parsing": 56,
+    "UCI protocol": 131,
+    "Perft": 3,
+    "Castling": 1,
+    "Promotion": 8,
+    "Check/Checkmate": 15,
+    "PGN": 29,
+    "Board: bitboard": 7,
+    "Board: mailbox 8x8": 4,
+    "Minimax/Negamax": 2,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Transposition table": 3,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 3,
+    "Late-move reduction (LMR)": 1,
+    "Aspiration windows": 1,
+    "Futility pruning": 2,
+    "Pawn structure": 3,
+    "Mobility": 3,
+    "Material counting": 5,
+    "Opening book": 1,
+    "NNUE/neural eval": 5
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "README.md",
+      "artifacts/tmp_comprehensive_smoke/reports/oracle_claim_matrix_bench.md",
+      "artifacts/tmp_comprehensive_smoke/reports/oracle_analysis_20260306_003200.tsv",
+      "artifacts/gardneranalysis_comprehensive_night/source/Gardneranalysis.pgn",
+      "artifacts/gardneranalysis_comprehensive_night/reports/oracle_attention.tsv",
+      "artifacts/gardneranalysis_comprehensive_night/reports/oracle_analysis_20260307_082201.tsv",
+      "artifacts/gardneranalysis_comprehensive_night/reports/oracle_unresolved.tsv",
+      "artifacts/reproduction_2013_original/line_summary.tsv",
+      "artifacts/tmp_oracle_check/oracle_analysis_20260308_101114.tsv",
+      "artifacts/gardneranalysis_comprehensive/source/Gardneranalysis.pgn",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_attention.tsv",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_analysis_20260306_003637.tsv",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_analysis_20260306_003627.tsv",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_unresolved.tsv",
+      "artifacts/tmp_extract_smoke2/reports/gardneranalysis_revisit_20260306_000406.tsv",
+      "artifacts/tmp_oracle_positions_smoke/oracle_analysis_20260308_141945.tsv",
+      "artifacts/visual/C04_verdict/selected_refuted_row1.md",
+      "artifacts/runs/c4_bxc4_depth50_threads2_20260305_205701.uci",
+      "artifacts/reference/prost2013_oracle_positions.tsv",
+      "artifacts/reference/prost2013_oracle_positions.jsonl",
+      "artifacts/reference/prost2013_oracle_testcases.jsonl",
+      "artifacts/reference/prost2013_oracle_testcases.tsv",
+      "artifacts/reports/prost2013_official_AtoD_depth16_line_summary.tsv",
+      "artifacts/reports/prost2013_hard_cases_depth40.tsv",
+      "artifacts/reports/prost2013_claims_core_opening_depth40.tsv",
+      "artifacts/reports/2026-02-25_claim_check_section_4_2_c4_bxc4.md",
+      "artifacts/reports/prost2013_official_AtoD_depth8_line_summary.tsv",
+      "artifacts/reports/oracle_analysis_20260306_001813.tsv",
+      "artifacts/reports/oracle_analysis_20260306_001607.tsv",
+      "artifacts/reports/prost2013_claims_deviations_depth32.tsv",
+      "artifacts/reports/prost2013_claims_core_depth24.tsv",
+      "artifacts/reports/oracle_analysis_20260306_003210.tsv",
+      "artifacts/reports/oracle_analysis_20260306_001748.tsv",
+      "artifacts/reports/prost2013_hard_cases_depth40_t1.tsv",
+      "artifacts/reports/oracle_claim_matrix_20260306_002123.md",
+      "artifacts/reports/prost2013_claims_core_depth30_manual_20260306.tsv",
+      "artifacts/reports/prost2013_official_AtoD_depth24_line_summary.tsv",
+      "artifacts/reports/prost2013_hard_cases_tail_depth32_t1.tsv",
+      "artifacts/reports/oracle_analysis_20260306_001715.tsv",
+      "tools/pgn_viewer/index.html",
+      "tools/pgn_viewer/styles.css",
+      "tools/pgn_viewer/app.js",
+      "scripts/extract_gardneranalysis_tree_positions.py",
+      "scripts/analyze_oracle_cases.py",
+      "scripts/show_verdict_position.py",
+      "scripts/extract_revisit_gardneranalysis.py",
+      "scripts/build_prost2013_oracle_positions.py",
+      "scripts/build_prost2013_oracle_testcases.py",
+      "scripts/build_official_openings_dataset.sh",
+      "scripts/check_prost2013_claims_core.sh",
+      "scripts/reproduce_prost2013_original.sh",
+      "src/main.rs",
+      "src/alphazero.rs",
+      "src/proof.rs",
+      "src/model.rs",
+      "src/engine.rs"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "artifacts/reproduction_2013_original/baseline.bench.log",
+      "artifacts/reproduction_2013_original/line_summary.tsv",
+      "artifacts/reproduction_2013_original/line_logs/line_81.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_48.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_32.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_6.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_26.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_69.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_13.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_45.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_51.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_70.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_64.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_15.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_34.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_87.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_93.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_20.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_76.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_18.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_62.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_39.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_43.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_57.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_7.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_27.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_94.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_80.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_49.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_33.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_68.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_12.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_50.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_44.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_65.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_71.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_14.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_92.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_1.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_21.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_35.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_86.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_19.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_63.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_77.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_56.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_38.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_42.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_11.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_83.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_30.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_24.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_4.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_72.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_66.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_47.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_9.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_29.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_53.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_36.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_85.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_91.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_58.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_22.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_2.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_79.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_17.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_41.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_88.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_55.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_74.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_60.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_10.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_25.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_5.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_82.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_31.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_67.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_73.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_8.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_28.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_52.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_46.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_90.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_59.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_23.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_3.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_37.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_84.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_16.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_78.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_54.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_40.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_89.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_61.bench.log",
+      "artifacts/reproduction_2013_original/line_logs/line_75.bench.log",
+      "artifacts/visual/C04_verdict/selected_refuted_row1.md",
+      "artifacts/runs/c4_bxc4_go_depth32_20260306.log",
+      "artifacts/runs/c4_bxc4_go_depth50_threads2_live_20260305_2059.log",
+      "artifacts/runs/c4_bxc4_go_movetime5s_20260306.log",
+      "artifacts/runs/c4_bxc4_depth50_threads2_20260305_205701.uci",
+      "artifacts/reference/prost2013_claims_core.tsv",
+      "artifacts/reports/prost2013_official_AtoD_depth16_line_summary.tsv",
+      "artifacts/reports/prost2013_hard_cases_depth40.tsv",
+      "artifacts/reports/fairy_official20_depth20.tsv",
+      "artifacts/reports/2026-03-05_prost2013_claim_matrix_report.md",
+      "artifacts/reports/prost2013_claims_core_opening_depth40.tsv",
+      "artifacts/reports/prost2013_official_AtoD_depth8_line_summary.tsv",
+      "artifacts/reports/historical_claim_lines_d20_d24.tsv",
+      "artifacts/reports/fairy_claim_lines_d20_d24.tsv",
+      "artifacts/reports/prost2013_claims_deviations_depth32.tsv",
+      "artifacts/reports/prost2013_claims_core_depth24.tsv",
+      "artifacts/reports/prost2013_hard_cases_depth40_t1.tsv",
+      "artifacts/reports/historical_official20_depth20.tsv",
+      "artifacts/reports/2026-02-25_prost2013_reproduction_report.md",
+      "artifacts/reports/prost2013_claims_core_depth30_manual_20260306.tsv",
+      "artifacts/reports/prost2013_official_AtoD_depth24_line_summary.tsv",
+      "artifacts/reports/prost2013_hard_cases_tail_depth32_t1.tsv",
+      "tools/pgn_viewer/app.js",
+      "scripts/analyze_oracle_cases.py",
+      "scripts/show_verdict_position.py",
+      "scripts/extract_revisit_gardneranalysis.py",
+      "scripts/build_prost2013_oracle_positions.py",
+      "scripts/build_prost2013_oracle_testcases.py",
+      "scripts/check_prost2013_claims_core.sh",
+      "scripts/reproduce_prost2013_original.sh",
+      "src/main.rs",
+      "src/alphazero.rs",
+      "src/proof.rs",
+      "src/engine.rs"
+    ],
+    "Perft": [
+      "README.md",
+      "src/main.rs",
+      "src/model.rs"
+    ],
+    "Castling": [
+      "README.md"
+    ],
+    "En passant": [],
+    "Promotion": [
+      "README.md",
+      "tools/pgn_viewer/app.js",
+      "src/notation.rs",
+      "src/search.rs",
+      "src/alphazero.rs",
+      "src/proof.rs",
+      "src/model.rs",
+      "src/engine.rs"
+    ],
+    "Check/Checkmate": [
+      "README.md",
+      "artifacts/branch_b4_c4.proof",
+      "artifacts/closure/test_seeded.proof",
+      "artifacts/closure/test_seeded_d12.proof",
+      "artifacts/closure/phase2_smoke.proof",
+      "artifacts/closure/ne5_root_outcome_smoke.proof",
+      "artifacts/reports/engine_tournament_official20_fairy_white_d20.tsv",
+      "artifacts/reports/oracle_certs/C04.proof",
+      "tools/pgn_viewer/app.js",
+      "scripts/build_prost2013_oracle_testcases.py",
+      "src/main.rs",
+      "src/search.rs",
+      "src/alphazero.rs",
+      "src/proof.rs",
+      "src/model.rs"
+    ],
+    "PGN": [
+      "README.md",
+      "artifacts/gardneranalysis_comprehensive_night/reports/oracle_attention.tsv",
+      "artifacts/gardneranalysis_comprehensive_night/reports/oracle_analysis_20260307_082201.tsv",
+      "artifacts/gardneranalysis_comprehensive_night/reports/oracle_unresolved.tsv",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_attention.tsv",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_analysis_20260306_003637.tsv",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_analysis_20260306_003627.tsv",
+      "artifacts/gardneranalysis_comprehensive/reports/oracle_unresolved.tsv",
+      "artifacts/visual/night_gardner/verdict_lines_report.md",
+      "artifacts/visual/C04_verdict/verdict_lines_report.md",
+      "artifacts/reference/prost2013_oracle_positions.tsv",
+      "artifacts/reference/prost2013_oracle_positions.jsonl",
+      "artifacts/reference/gardneranalysis_forced_mate_cases.tsv",
+      "artifacts/reference/prost2013_oracle_testcases.jsonl",
+      "artifacts/reference/prost2013_oracle_testcases.tsv",
+      "artifacts/reports/2026-03-05_prost2013_claim_matrix_report.md",
+      "tools/pgn_viewer/index.html",
+      "tools/pgn_viewer/app.js",
+      "scripts/run_gardneranalysis_claim_revisit.sh",
+      "scripts/extract_gardneranalysis_tree_positions.py",
+      "scripts/visualize_verdict_position_web.sh",
+      "scripts/analyze_oracle_cases.py",
+      "scripts/show_verdict_position.py",
+      "scripts/extract_revisit_gardneranalysis.py",
+      "scripts/extract_verdict_lines.py",
+      "scripts/view_pgn_viewer.sh",
+      "scripts/build_prost2013_oracle_testcases.py",
+      "scripts/run_comprehensive_oracle_check.sh",
+      "src/main.rs"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "scripts/az_formats.py",
+      "src/main.rs",
+      "src/search.rs",
+      "src/alphazero.rs",
+      "src/proof.rs",
+      "src/model.rs",
+      "src/engine.rs"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "scripts/extract_gardneranalysis_tree_positions.py",
+      "scripts/build_prost2013_oracle_positions.py",
+      "scripts/build_prost2013_oracle_testcases.py",
+      "src/model.rs"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "README.md",
+      "src/search.rs"
+    ],
+    "Alpha-beta": [
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [],
+    "Transposition table": [
+      "README.md",
+      "src/main.rs",
+      "src/search.rs"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [
+      "src/search.rs"
+    ],
+    "History heuristic": [
+      "src/search.rs"
+    ],
+    "Principal-variation (PV)": [
+      "README.md",
+      "docs/reports/2026-03-07_fairy_stockfish_comparison_report.md",
+      "src/search.rs"
+    ],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [
+      "README.md"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "README.md"
+    ],
+    "Futility pruning": [
+      "README.md",
+      "src/search.rs"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [
+      "artifacts/runs/c4_bxc4_go_depth32_20260306.log",
+      "artifacts/runs/c4_bxc4_go_depth50_threads2_live_20260305_2059.log",
+      "artifacts/runs/c4_bxc4_go_movetime5s_20260306.log"
+    ],
+    "Mobility": [
+      "artifacts/runs/c4_bxc4_go_depth32_20260306.log",
+      "artifacts/runs/c4_bxc4_go_depth50_threads2_live_20260305_2059.log",
+      "artifacts/runs/c4_bxc4_go_movetime5s_20260306.log"
+    ],
+    "Material counting": [
+      "artifacts/reference/prost2013_repro_seed_lines.txt",
+      "docs/reports/2026-03-07_fairy_stockfish_comparison_report.md",
+      "docs/reports/2026-03-08_candidate_ranking_report.md",
+      "src/search.rs",
+      "src/model.rs"
+    ],
+    "Opening book": [
+      "tools/pgn_viewer/app.js"
+    ],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": [
+      "docs/reports/2026-03-07_fairy_stockfish_comparison_report.md",
+      "docs/reports/2026-03-08_prost2013_claims_fairy_signal_report.md",
+      "docs/reports/2026-03-08_candidate_ranking_report.md",
+      "src/main.rs",
+      "src/engine.rs"
+    ]
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 5,
+    "n_user_prompts": 120,
+    "n_assistant_messages": 818,
+    "models": [
+      "gpt-5.3-codex",
+      "gpt-5.4"
+    ],
+    "tool_uses": {
+      "exec_command": 1484,
+      "write_stdin": 603,
+      "update_plan": 20
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 215514187,
+        "output": 1104450,
+        "cache_read": 202948096,
+        "cache_creation": 0,
+        "reasoning_output": 578315
+      },
+      "usd_estimate": 305.81
+    },
+    "first_ts": "2026-02-25T07:33:02.725Z",
+    "last_ts": "2026-03-08T19:59:48.868Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-25T18-37-11-019c95e0-5007-7bb1-9eff-933aab5068bc",
+        "first_ts": "2026-02-25T17:39:55.109Z",
+        "last_ts": "2026-03-05T22:59:40.932Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 19,
+        "tokens": {
+          "input": 49496319,
+          "output": 153873,
+          "cache_read": 47415168,
+          "reasoning_output": 90187
+        },
+        "tool_uses": {
+          "exec_command": 279,
+          "write_stdin": 162
+        },
+        "first_prompt_sample": "Along with Mehdi Mhalla, Fr\u00e9d\u00e9ric Prost weakly solved Gardner's 5x5 Minichess as published in 2013. They modified Stockfish in order to make it play Gardner Chess. \nAbstract: A 5\u00d75 board is the smallest board on which one can set up all types of chess pieces as a start position. We consider Gardner\u2019"
+      },
+      {
+        "session_id": "rollout-2026-02-25T08-31-51-019c93b6-1afd-7213-a613-923d7232b38d",
+        "first_ts": "2026-02-25T07:33:02.725Z",
+        "last_ts": "2026-03-07T08:23:36.867Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 49,
+        "tokens": {
+          "input": 88432328,
+          "output": 452407,
+          "cache_read": 84105856,
+          "reasoning_output": 225472
+        },
+        "tool_uses": {
+          "exec_command": 621,
+          "write_stdin": 176,
+          "update_plan": 6
+        },
+        "first_prompt_sample": "Along with Mehdi Mhalla, Fr\u00e9d\u00e9ric Prost weakly solved Gardner's 5x5 Minichess as published in 2013. They modified Stockfish in order to make it play Gardner Chess. \nAbstract: A 5\u00d75 board is the smallest board on which one can set up all types of chess pieces as a start position. We consider Gardner\u2019"
+      },
+      {
+        "session_id": "rollout-2026-03-07T09-25-51-019cc767-260a-7483-9372-ee9aa5cd2793",
+        "first_ts": "2026-03-07T08:28:16.931Z",
+        "last_ts": "2026-03-08T09:53:18.853Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 17,
+        "tokens": {
+          "input": 26600116,
+          "output": 164485,
+          "cache_read": 24300672,
+          "reasoning_output": 87564
+        },
+        "tool_uses": {
+          "exec_command": 194,
+          "update_plan": 2,
+          "write_stdin": 163
+        },
+        "first_prompt_sample": "I have \"reproduced\" the original procedure for weak solving minichess 5x5, reusing the Sotckfish adaptation of 2013...\nPlease review all Codex threads and the folder.\n\nWhat I would like to do now is to modernize and target more recent Stockfish version... NNUE support is perhaps unlikely, but we can"
+      },
+      {
+        "session_id": "rollout-2026-03-08T10-56-02-019ccce0-11c2-7621-a043-9860aca525a8",
+        "first_ts": "2026-03-08T09:59:29.594Z",
+        "last_ts": "2026-03-08T14:20:21.194Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 5,
+        "tokens": {
+          "input": 16709410,
+          "output": 119421,
+          "cache_read": 15124096,
+          "reasoning_output": 73165
+        },
+        "tool_uses": {
+          "exec_command": 148,
+          "write_stdin": 34,
+          "update_plan": 4
+        },
+        "first_prompt_sample": "Along with Mehdi Mhalla, Fr\u00e9d\u00e9ric Prost weakly solved Gardner's 5x5 Minichess as published in 2013. They modified Stockfish in order to make it play Gardner Chess. \nAbstract: A 5\u00d75 board is the smallest board on which one can set up all types of chess pieces as a start position. We consider Gardner\u2019"
+      },
+      {
+        "session_id": "rollout-2026-03-06T00-00-50-019cc03b-7e30-7b73-b933-c1590ad6e7e2",
+        "first_ts": "2026-03-05T23:01:26.865Z",
+        "last_ts": "2026-03-08T19:59:48.868Z",
+        "models": [
+          "gpt-5.4"
+        ],
+        "turns": 30,
+        "tokens": {
+          "input": 34276014,
+          "output": 214264,
+          "cache_read": 32002304,
+          "reasoning_output": 101927
+        },
+        "tool_uses": {
+          "exec_command": 242,
+          "update_plan": 8,
+          "write_stdin": 68
+        },
+        "first_prompt_sample": "Along with Mehdi Mhalla, Fr\u00e9d\u00e9ric Prost weakly solved Gardner's 5x5 Minichess as published in 2013. They modified Stockfish in order to make it play Gardner Chess. \nAbstract: A 5\u00d75 board is the smallest board on which one can set up all types of chess pieces as a start position. We consider Gardner\u2019"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "322669d|2026-03-07T21:33:37+01:00|Mathieu Acher|Add Fairy-Stockfish comparison harness and findings"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

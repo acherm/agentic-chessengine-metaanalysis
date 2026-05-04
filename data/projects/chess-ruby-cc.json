@@ -1,0 +1,369 @@
+{
+  "name": "chess-ruby-cc",
+  "path": "/Users/mathieuacher/SANDBOX/chess-ruby-cc",
+  "primary_language": "Ruby",
+  "loc": {
+    "files_by_lang": {
+      "Ruby": 21,
+      "Shell": 1
+    },
+    "loc_by_lang": {
+      "Ruby": 2941,
+      "Shell": 23
+    },
+    "total_files": 22,
+    "total_loc": 2964
+  },
+  "features": {
+    "FEN parsing": 6,
+    "UCI protocol": 6,
+    "Perft": 2,
+    "Castling": 40,
+    "En passant": 6,
+    "Promotion": 6,
+    "Check/Checkmate": 5,
+    "PGN": 1,
+    "Board: 0x88": 7,
+    "Minimax/Negamax": 2,
+    "Iterative deepening": 1,
+    "Quiescence": 1,
+    "Transposition table": 7,
+    "Zobrist hashing": 4,
+    "Move ordering (MVV-LVA)": 1,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 2,
+    "Late-move reduction (LMR)": 1,
+    "Late-move pruning (LMP)": 1,
+    "Aspiration windows": 1,
+    "Futility pruning": 1,
+    "Razoring": 1,
+    "Evaluation/PST": 4,
+    "Tapered evaluation": 3,
+    "King safety": 1,
+    "Pawn structure": 1,
+    "Mobility": 1,
+    "Material counting": 14,
+    "Time management": 38
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "test/test_uci.rb",
+      "test/test_board.rb",
+      "scripts/perft.rb",
+      "lib/chess_engine/uci.rb",
+      "lib/chess_engine/constants.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "UCI protocol": [
+      "test/test_uci.rb",
+      "test/test_search.rb",
+      "scripts/perft.rb",
+      "scripts/elo_test.sh",
+      "lib/chess_engine.rb",
+      "lib/chess_engine/uci.rb"
+    ],
+    "Perft": [
+      "test/test_perft.rb",
+      "scripts/perft.rb"
+    ],
+    "Castling": [
+      "results_elo1500.pgn",
+      "v3_results_elo2100.pgn",
+      "results_elo1700.pgn",
+      "v3b_results_elo2100.pgn",
+      "v2_results_elo1800.pgn",
+      "v3b_results_elo1800.pgn",
+      "v3_results_elo1800.pgn",
+      "results_v4c_sf_1800.pgn",
+      "v3_results_elo2000.pgn",
+      "v2_results_elo2000.pgn",
+      "v3b_results_elo2000.pgn",
+      "results_elo1600.pgn",
+      "results_v4c_sf_2000.pgn",
+      "v3_results_elo2200.pgn",
+      "v2_results_elo1320.pgn",
+      "results_v4c_sf_1900.pgn",
+      "results_skill0.pgn",
+      "v2_results_elo1900.pgn",
+      "v3b_results_elo1900.pgn",
+      "v3_results_elo1900.pgn",
+      "results_v4b_sf_1800.pgn",
+      "results_v4_vs_sf_1900.pgn",
+      "v2_results_elo1700.pgn",
+      "results_v4_seq_sf_1800.pgn",
+      "results_v5b_sf2100.pgn",
+      "results_v4_vs_sf_2000.pgn",
+      "results_elo1800.pgn",
+      "results_v4_vs_sf_2200.pgn",
+      "results_v5b_sf1900.pgn",
+      "results_v5_sf1900.pgn",
+      "results_elo1320.pgn",
+      "results_v4_seq_sf_2000.pgn",
+      "results_v4_vs_sf_2100.pgn",
+      "results_v5b_sf2000.pgn",
+      "test/test_perft.rb",
+      "test/test_board.rb",
+      "test/test_move_generator.rb",
+      "lib/chess_engine/move_generator.rb",
+      "lib/chess_engine/constants.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "En passant": [
+      "test/test_perft.rb",
+      "test/test_move_generator.rb",
+      "lib/chess_engine/move_generator.rb",
+      "lib/chess_engine/constants.rb",
+      "lib/chess_engine/zobrist.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Promotion": [
+      "test/test_perft.rb",
+      "test/test_move_generator.rb",
+      "lib/chess_engine/move_generator.rb",
+      "lib/chess_engine/search.rb",
+      "lib/chess_engine/move.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Check/Checkmate": [
+      "results_v5_sf1900.pgn",
+      "test/test_move_generator.rb",
+      "lib/chess_engine/move_generator.rb",
+      "lib/chess_engine/search.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "PGN": [
+      "scripts/elo_test.sh"
+    ],
+    "Board: 0x88": [
+      "lib/chess_engine/move_generator.rb",
+      "lib/chess_engine/attack.rb",
+      "lib/chess_engine/constants.rb",
+      "lib/chess_engine/evaluation.rb",
+      "lib/chess_engine/zobrist.rb",
+      "lib/chess_engine/piece_square_tables.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "lib/chess_engine/search.rb",
+      "lib/chess_engine/attack.rb"
+    ],
+    "Alpha-beta": [],
+    "Iterative deepening": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Quiescence": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Transposition table": [
+      "test/test_board.rb",
+      "lib/chess_engine.rb",
+      "lib/chess_engine/transposition_table.rb",
+      "lib/chess_engine/search.rb",
+      "lib/chess_engine/uci.rb",
+      "lib/chess_engine/zobrist.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Zobrist hashing": [
+      "test/test_board.rb",
+      "lib/chess_engine.rb",
+      "lib/chess_engine/zobrist.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "lib/chess_engine/constants.rb"
+    ],
+    "Killer moves": [
+      "lib/chess_engine/search.rb"
+    ],
+    "History heuristic": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Principal-variation (PV)": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Null-move pruning": [
+      "lib/chess_engine/search.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Late-move reduction (LMR)": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Late-move pruning (LMP)": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Aspiration windows": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Futility pruning": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Razoring": [
+      "lib/chess_engine/search.rb"
+    ],
+    "Evaluation/PST": [
+      "lib/chess_engine.rb",
+      "lib/chess_engine/evaluation.rb",
+      "lib/chess_engine/piece_square_tables.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Tapered evaluation": [
+      "lib/chess_engine/evaluation.rb",
+      "lib/chess_engine/piece_square_tables.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "King safety": [
+      "lib/chess_engine/evaluation.rb"
+    ],
+    "Pawn structure": [
+      "lib/chess_engine/evaluation.rb"
+    ],
+    "Mobility": [
+      "lib/chess_engine/evaluation.rb"
+    ],
+    "Material counting": [
+      "v3b_results_elo2100.pgn",
+      "v3b_results_elo2000.pgn",
+      "results_v4c_sf_2000.pgn",
+      "results_v4b_sf_1800.pgn",
+      "results_v4_vs_sf_1900.pgn",
+      "results_v4_seq_sf_1800.pgn",
+      "results_v5b_sf1900.pgn",
+      "test/test_evaluation.rb",
+      "lib/chess_engine/search.rb",
+      "lib/chess_engine/attack.rb",
+      "lib/chess_engine/constants.rb",
+      "lib/chess_engine/evaluation.rb",
+      "lib/chess_engine/piece_square_tables.rb",
+      "lib/chess_engine/board.rb"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "results_elo1500.pgn",
+      "v3_results_elo2100.pgn",
+      "results_elo1700.pgn",
+      "v3b_results_elo2100.pgn",
+      "v2_results_elo1800.pgn",
+      "v3b_results_elo1800.pgn",
+      "v3_results_elo1800.pgn",
+      "results_v4c_sf_1800.pgn",
+      "v3_results_elo2000.pgn",
+      "v2_results_elo2000.pgn",
+      "v3b_results_elo2000.pgn",
+      "results_elo1600.pgn",
+      "results_v4c_sf_2000.pgn",
+      "v3_results_elo2200.pgn",
+      "v2_results_elo1320.pgn",
+      "results_v4c_sf_1900.pgn",
+      "results_skill0.pgn",
+      "v2_results_elo1900.pgn",
+      "v3b_results_elo1900.pgn",
+      "v3_results_elo1900.pgn",
+      "results_v4b_sf_1800.pgn",
+      "results_v4_vs_sf_1900.pgn",
+      "v2_results_elo1700.pgn",
+      "results_v4_seq_sf_1800.pgn",
+      "results_v5b_sf2100.pgn",
+      "results_v4_vs_sf_2000.pgn",
+      "results_elo1800.pgn",
+      "results_v4_vs_sf_2200.pgn",
+      "results_v5b_sf1900.pgn",
+      "results_v5_sf1900.pgn",
+      "results_elo1320.pgn",
+      "results_v4_seq_sf_2000.pgn",
+      "results_v4_vs_sf_2100.pgn",
+      "results_v5b_sf2000.pgn",
+      "test/test_search.rb",
+      "lib/chess_engine/search.rb",
+      "lib/chess_engine/uci.rb",
+      "lib/chess_engine/time_manager.rb"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 3,
+    "n_user_prompts": 46,
+    "n_assistant_messages": 521,
+    "models": [
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 181,
+      "Write": 41,
+      "Edit": 38,
+      "Read": 32,
+      "TaskOutput": 9,
+      "ToolSearch": 2,
+      "Glob": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 581,
+        "output": 223847,
+        "cache_read": 43817941,
+        "cache_creation": 3500979
+      },
+      "usd_estimate": 148.17
+    },
+    "first_ts": "2026-03-12T09:18:54.710Z",
+    "last_ts": "2026-03-17T07:50:23.744Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "266046ec-b9b9-4f2c-8fd9-0c3996935f33",
+        "first_ts": "2026-03-12T09:18:54.710Z",
+        "last_ts": "2026-03-17T07:50:23.744Z",
+        "models": [
+          "claude-opus-4-6"
+        ],
+        "turns": 46,
+        "n_events": 1139,
+        "tokens": {
+          "input": 581,
+          "output": 223847,
+          "cache_read": 43817941,
+          "cache_creation": 3500979
+        },
+        "tool_uses": {
+          "Bash": 181,
+          "Write": 41,
+          "Edit": 38,
+          "ToolSearch": 2,
+          "TaskOutput": 9,
+          "Read": 32,
+          "Glob": 1
+        },
+        "first_prompt_sample": "Implement the following plan:\n\n# Ruby Chess Engine \u2014 Implementation Plan\n\n## Context\n\nBuild a chess engine from scratch in Ruby that can play legal chess, communicate via UCI protocol, and be tested for Elo rating against other engines using cutechess-cli.\n\n## Architecture Decisions\n\n- **Board repre"
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": false
+  }
+}

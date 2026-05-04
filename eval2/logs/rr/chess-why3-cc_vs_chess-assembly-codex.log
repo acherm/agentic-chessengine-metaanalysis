@@ -1,0 +1,34 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-why3-cc vs chess-assembly-codex)
+Started game 2 of 2 (chess-assembly-codex vs chess-why3-cc)
+Finished game 2 (chess-assembly-codex vs chess-why3-cc): 0-1 {Black mates}
+Score of chess-why3-cc vs chess-assembly-codex: 1 - 0 - 0  [1.000] 1
+Terminating process of engine chess-why3-cc(0)
+...      chess-why3-cc playing White: 0 - 1 - 0  [0.000] 1
+...      chess-why3-cc playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 0 - 2 - 0  [0.000] 2
+Elo difference: 0.0 +/- nan, LOS: 50.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3-cc
+   "Loss: White's connection stalls": 1
+   "Win: Black mates": 1
+Player: chess-assembly-codex
+   "Loss: Black mates": 1
+   "Win: White's connection stalls": 1
+Finished match
+Finished game 1 (chess-why3-cc vs chess-assembly-codex): 0-1 {White's connection stalls}
+Score of chess-why3-cc vs chess-assembly-codex: 1 - 1 - 0  [0.500] 2
+...      chess-why3-cc playing White: 0 - 1 - 0  [0.000] 1
+...      chess-why3-cc playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 0 - 2 - 0  [0.000] 2
+Elo difference: 0.0 +/- nan, LOS: 50.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3-cc
+   "Loss: White's connection stalls": 1
+   "Win: Black mates": 1
+Player: chess-assembly-codex
+   "Loss: Black mates": 1
+   "Win: White's connection stalls": 1
+Finished match

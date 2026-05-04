@@ -1,0 +1,18 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-ruby-cc vs chess-py)
+Started game 2 of 2 (chess-py vs chess-ruby-cc)
+Finished game 2 (chess-py vs chess-ruby-cc): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-ruby-cc vs chess-py: 0 - 0 - 1  [0.500] 1
+Finished game 1 (chess-ruby-cc vs chess-py): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-ruby-cc vs chess-py: 0 - 0 - 2  [0.500] 2
+...      chess-ruby-cc playing White: 0 - 0 - 1  [0.500] 1
+...      chess-ruby-cc playing Black: 0 - 0 - 1  [0.500] 1
+...      White vs Black: 0 - 0 - 2  [0.500] 2
+Elo difference: 0.0 +/- 0.0, LOS: nan %, DrawRatio: 100.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-ruby-cc
+   "Draw by 3-fold repetition": 2
+Player: chess-py
+   "Draw by 3-fold repetition": 2
+Finished match

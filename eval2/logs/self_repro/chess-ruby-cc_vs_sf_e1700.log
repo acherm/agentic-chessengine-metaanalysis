@@ -1,0 +1,84 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-ruby-cc vs sf_e1700)
+Started game 2 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 2 (sf_e1700 vs chess-ruby-cc): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 1 (chess-ruby-cc vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 2 - 0 - 0  [1.000] 2
+Started game 4 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 3 (chess-ruby-cc vs sf_e1700): 1-0 {White mates}
+Score of chess-ruby-cc vs sf_e1700: 3 - 0 - 0  [1.000] 3
+Started game 5 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 4 (sf_e1700 vs chess-ruby-cc): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 4 - 0 - 0  [1.000] 4
+Started game 6 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 5 (chess-ruby-cc vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 5 - 0 - 0  [1.000] 5
+Started game 7 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 6 (sf_e1700 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 5 - 1 - 0  [0.833] 6
+Started game 8 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 8 (sf_e1700 vs chess-ruby-cc): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 6 - 1 - 0  [0.857] 7
+Started game 9 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 7 (chess-ruby-cc vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 7 - 1 - 0  [0.875] 8
+Started game 10 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 10 (sf_e1700 vs chess-ruby-cc): 0-1 {Black mates}
+Score of chess-ruby-cc vs sf_e1700: 8 - 1 - 0  [0.889] 9
+Started game 11 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 9 (chess-ruby-cc vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 9 - 1 - 0  [0.900] 10
+Started game 12 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 11 (chess-ruby-cc vs sf_e1700): 1-0 {White mates}
+Score of chess-ruby-cc vs sf_e1700: 10 - 1 - 0  [0.909] 11
+Started game 13 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 12 (sf_e1700 vs chess-ruby-cc): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 11 - 1 - 0  [0.917] 12
+Started game 14 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 13 (chess-ruby-cc vs sf_e1700): 0-1 {Black mates}
+Score of chess-ruby-cc vs sf_e1700: 11 - 2 - 0  [0.846] 13
+Started game 15 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 14 (sf_e1700 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 11 - 3 - 0  [0.786] 14
+Started game 16 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 15 (chess-ruby-cc vs sf_e1700): 1-0 {White mates}
+Score of chess-ruby-cc vs sf_e1700: 12 - 3 - 0  [0.800] 15
+Started game 17 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 16 (sf_e1700 vs chess-ruby-cc): 1-0 {White wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 12 - 4 - 0  [0.750] 16
+Started game 18 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 17 (chess-ruby-cc vs sf_e1700): 0-1 {Black mates}
+Score of chess-ruby-cc vs sf_e1700: 12 - 5 - 0  [0.706] 17
+Started game 19 of 20 (chess-ruby-cc vs sf_e1700)
+Finished game 18 (sf_e1700 vs chess-ruby-cc): 1/2-1/2 {Draw by insufficient mating material}
+Score of chess-ruby-cc vs sf_e1700: 12 - 5 - 1  [0.694] 18
+Started game 20 of 20 (sf_e1700 vs chess-ruby-cc)
+Finished game 19 (chess-ruby-cc vs sf_e1700): 0-1 {Black mates}
+Score of chess-ruby-cc vs sf_e1700: 12 - 6 - 1  [0.658] 19
+Finished game 20 (sf_e1700 vs chess-ruby-cc): 0-1 {Black wins by adjudication}
+Score of chess-ruby-cc vs sf_e1700: 13 - 6 - 1  [0.675] 20
+...      chess-ruby-cc playing White: 7 - 3 - 0  [0.700] 10
+...      chess-ruby-cc playing Black: 6 - 3 - 1  [0.650] 10
+...      White vs Black: 10 - 9 - 1  [0.525] 20
+Elo difference: 127.0 +/- 176.6, LOS: 94.6 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-ruby-cc
+   "Draw by insufficient mating material": 1
+   "Loss: Black mates": 3
+   "Loss: White wins by adjudication": 3
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 5
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 4
+Player: sf_e1700
+   "Draw by insufficient mating material": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 5
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 4
+   "Win: Black mates": 3
+   "Win: White wins by adjudication": 3
+Finished match

@@ -1,0 +1,29 @@
+{
+  "elo": null,
+  "ci95": null,
+  "status": "bounded",
+  "upper_bound": 1438.0,
+  "engine": "lean-chess",
+  "raw_pairs": [
+    {
+      "anchor": "rustic",
+      "anchor_elo": 1820,
+      "games": 9,
+      "W/D/L": "0/0/9",
+      "score_pct": 0.0,
+      "elo": 1438.0,
+      "se": null,
+      "bound": "upper"
+    },
+    {
+      "anchor": "asymptote",
+      "anchor_elo": 2150,
+      "games": 9,
+      "W/D/L": "0/0/9",
+      "score_pct": 0.0,
+      "elo": 1768.0,
+      "se": null,
+      "bound": "upper"
+    }
+  ]
+}

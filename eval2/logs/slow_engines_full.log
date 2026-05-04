@@ -1,0 +1,18 @@
+=== slow-engines RR start Fri May  1 10:44:19 CEST 2026 ===
+[10:44:23] chess-brainfuck vs chess-sql (6 games TC=120+1)
+[10:46:47] chess-brainfuck vs latex-chess-engine (6 games TC=120+1)
+[10:46:53] chess-sql vs latex-chess-engine (6 games TC=120+1)
+[10:46:56] chess-brainfuck vs chess-apl-codex54 (6 games TC=120+1)
+[10:50:23] chess-brainfuck vs chess-icon-codex (6 games TC=120+1)
+[11:03:17] chess-brainfuck vs chess-Rocq (6 games TC=120+1)
+[11:06:00] chess-brainfuck vs sf_skill0 (10 games TC=120+1)
+[11:21:03] chess-sql vs chess-apl-codex54 (6 games TC=120+1)
+[11:23:40] chess-sql vs chess-icon-codex (6 games TC=120+1)
+[11:28:19] chess-sql vs chess-Rocq (6 games TC=120+1)
+[11:31:56] chess-sql vs sf_skill0 (10 games TC=120+1)
+[11:44:04] latex-chess-engine vs chess-apl-codex54 (6 games TC=120+1)
+[11:44:08] latex-chess-engine vs chess-icon-codex (6 games TC=120+1)
+[11:44:14] latex-chess-engine vs chess-Rocq (6 games TC=120+1)
+[11:44:21] latex-chess-engine vs sf_skill0 (10 games TC=120+1)
+slow-engine RR done.
+=== slow-engines RR done Fri May  1 11:45:19 CEST 2026 ===

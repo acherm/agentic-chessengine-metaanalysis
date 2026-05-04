@@ -1,0 +1,36 @@
+Indexing opening suite...
+Started game 2 of 6 (chess-icon-codex vs chess-brainfuck)
+Started game 1 of 6 (chess-brainfuck vs chess-icon-codex)
+Finished game 2 (chess-icon-codex vs chess-brainfuck): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs chess-icon-codex: 0 - 1 - 0  [0.000] 1
+Started game 3 of 6 (chess-brainfuck vs chess-icon-codex)
+Finished game 3 (chess-brainfuck vs chess-icon-codex): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs chess-icon-codex: 1 - 1 - 0  [0.500] 2
+Started game 4 of 6 (chess-icon-codex vs chess-brainfuck)
+Finished game 1 (chess-brainfuck vs chess-icon-codex): 1-0 {White mates}
+Score of chess-brainfuck vs chess-icon-codex: 2 - 1 - 0  [0.667] 3
+Started game 5 of 6 (chess-brainfuck vs chess-icon-codex)
+Finished game 4 (chess-icon-codex vs chess-brainfuck): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs chess-icon-codex: 2 - 2 - 0  [0.500] 4
+Started game 6 of 6 (chess-icon-codex vs chess-brainfuck)
+Finished game 5 (chess-brainfuck vs chess-icon-codex): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs chess-icon-codex: 3 - 2 - 0  [0.600] 5
+Finished game 6 (chess-icon-codex vs chess-brainfuck): 1-0 {White mates}
+Score of chess-brainfuck vs chess-icon-codex: 3 - 3 - 0  [0.500] 6
+...      chess-brainfuck playing White: 3 - 0 - 0  [1.000] 3
+...      chess-brainfuck playing Black: 0 - 3 - 0  [0.000] 3
+...      White vs Black: 6 - 0 - 0  [1.000] 6
+Elo difference: 0.0 +/- 380.7, LOS: 50.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-brainfuck
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 2
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 2
+Player: chess-icon-codex
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 2
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 2
+Finished match

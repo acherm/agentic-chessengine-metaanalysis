@@ -1,0 +1,88 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-purec vs sf_e2400)
+Started game 2 of 20 (sf_e2400 vs chess-purec)
+Finished game 1 (chess-purec vs sf_e2400): 0-1 {Black mates}
+Score of chess-purec vs sf_e2400: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-purec vs sf_e2400)
+Finished game 2 (sf_e2400 vs chess-purec): 1-0 {White mates}
+Score of chess-purec vs sf_e2400: 0 - 2 - 0  [0.000] 2
+Started game 4 of 20 (sf_e2400 vs chess-purec)
+Finished game 3 (chess-purec vs sf_e2400): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 1 - 2 - 0  [0.333] 3
+Started game 5 of 20 (chess-purec vs sf_e2400)
+Finished game 4 (sf_e2400 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2400: 2 - 2 - 0  [0.500] 4
+Started game 6 of 20 (sf_e2400 vs chess-purec)
+Finished game 6 (sf_e2400 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 2 - 3 - 0  [0.400] 5
+Started game 7 of 20 (chess-purec vs sf_e2400)
+Finished game 5 (chess-purec vs sf_e2400): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2400: 2 - 4 - 0  [0.333] 6
+Started game 8 of 20 (sf_e2400 vs chess-purec)
+Finished game 7 (chess-purec vs sf_e2400): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 3 - 4 - 0  [0.429] 7
+Started game 9 of 20 (chess-purec vs sf_e2400)
+Finished game 8 (sf_e2400 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 3 - 5 - 0  [0.375] 8
+Started game 10 of 20 (sf_e2400 vs chess-purec)
+Finished game 9 (chess-purec vs sf_e2400): 1/2-1/2 {Draw by adjudication}
+Score of chess-purec vs sf_e2400: 3 - 5 - 1  [0.389] 9
+Started game 11 of 20 (chess-purec vs sf_e2400)
+Finished game 10 (sf_e2400 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 3 - 6 - 1  [0.350] 10
+Started game 12 of 20 (sf_e2400 vs chess-purec)
+Finished game 12 (sf_e2400 vs chess-purec): 0-1 {Black mates}
+Score of chess-purec vs sf_e2400: 4 - 6 - 1  [0.409] 11
+Started game 13 of 20 (chess-purec vs sf_e2400)
+Finished game 11 (chess-purec vs sf_e2400): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2400: 4 - 7 - 1  [0.375] 12
+Started game 14 of 20 (sf_e2400 vs chess-purec)
+Finished game 13 (chess-purec vs sf_e2400): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e2400: 4 - 8 - 1  [0.346] 13
+Started game 15 of 20 (chess-purec vs sf_e2400)
+Finished game 14 (sf_e2400 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 4 - 9 - 1  [0.321] 14
+Started game 16 of 20 (sf_e2400 vs chess-purec)
+Finished game 15 (chess-purec vs sf_e2400): 1-0 {White mates}
+Score of chess-purec vs sf_e2400: 5 - 9 - 1  [0.367] 15
+Started game 17 of 20 (chess-purec vs sf_e2400)
+Finished game 16 (sf_e2400 vs chess-purec): 1/2-1/2 {Draw by adjudication}
+Score of chess-purec vs sf_e2400: 5 - 9 - 2  [0.375] 16
+Started game 18 of 20 (sf_e2400 vs chess-purec)
+Finished game 17 (chess-purec vs sf_e2400): 1/2-1/2 {Draw by adjudication}
+Score of chess-purec vs sf_e2400: 5 - 9 - 3  [0.382] 17
+Started game 19 of 20 (chess-purec vs sf_e2400)
+Finished game 18 (sf_e2400 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 5 - 10 - 3  [0.361] 18
+Started game 20 of 20 (sf_e2400 vs chess-purec)
+Finished game 19 (chess-purec vs sf_e2400): 1-0 {White mates}
+Score of chess-purec vs sf_e2400: 6 - 10 - 3  [0.395] 19
+Finished game 20 (sf_e2400 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e2400: 6 - 11 - 3  [0.375] 20
+...      chess-purec playing White: 4 - 4 - 2  [0.500] 10
+...      chess-purec playing Black: 2 - 7 - 1  [0.250] 10
+...      White vs Black: 11 - 6 - 3  [0.625] 20
+Elo difference: -88.7 +/- 155.4, LOS: 11.3 %, DrawRatio: 15.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-purec
+   "Draw by adjudication": 3
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 6
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 2
+Player: sf_e2400
+   "Draw by adjudication": 3
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 2
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 6
+Finished match

@@ -1,0 +1,14 @@
+Indexing opening suite...
+Terminating process of engine tscp181(0)
+Terminating process of engine tscp181(3)
+Finished game 2 (sf1700 vs tscp181): * {No result}
+Score of tscp181 vs sf1700: 0 - 0 - 0  [nan] 0
+Elo difference: nan +/- nan, LOS: nan %, DrawRatio: nan %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: tscp181
+   "No result": 1
+Player: sf1700
+   "No result": 1
+Warning: Could not initialize player tscp181: 
+Finished match

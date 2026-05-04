@@ -1,0 +1,80 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_e1500 vs chess-purec)
+Started game 1 of 20 (chess-purec vs sf_e1500)
+Finished game 1 (chess-purec vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e1500: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-purec vs sf_e1500)
+Finished game 2 (sf_e1500 vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e1500: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_e1500 vs chess-purec)
+Finished game 4 (sf_e1500 vs chess-purec): 0-1 {Black mates}
+Score of chess-purec vs sf_e1500: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-purec vs sf_e1500)
+Finished game 3 (chess-purec vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e1500: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf_e1500 vs chess-purec)
+Finished game 5 (chess-purec vs sf_e1500): 1-0 {White mates}
+Score of chess-purec vs sf_e1500: 4 - 1 - 0  [0.800] 5
+Started game 7 of 20 (chess-purec vs sf_e1500)
+Finished game 7 (chess-purec vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e1500: 5 - 1 - 0  [0.833] 6
+Started game 8 of 20 (sf_e1500 vs chess-purec)
+Finished game 6 (sf_e1500 vs chess-purec): 0-1 {Black mates}
+Score of chess-purec vs sf_e1500: 6 - 1 - 0  [0.857] 7
+Started game 9 of 20 (chess-purec vs sf_e1500)
+Finished game 8 (sf_e1500 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e1500: 7 - 1 - 0  [0.875] 8
+Started game 10 of 20 (sf_e1500 vs chess-purec)
+Finished game 9 (chess-purec vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e1500: 8 - 1 - 0  [0.889] 9
+Started game 11 of 20 (chess-purec vs sf_e1500)
+Finished game 11 (chess-purec vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e1500: 9 - 1 - 0  [0.900] 10
+Started game 12 of 20 (sf_e1500 vs chess-purec)
+Finished game 10 (sf_e1500 vs chess-purec): 0-1 {Black mates}
+Score of chess-purec vs sf_e1500: 10 - 1 - 0  [0.909] 11
+Started game 13 of 20 (chess-purec vs sf_e1500)
+Finished game 12 (sf_e1500 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e1500: 11 - 1 - 0  [0.917] 12
+Started game 14 of 20 (sf_e1500 vs chess-purec)
+Finished game 13 (chess-purec vs sf_e1500): 1-0 {White mates}
+Score of chess-purec vs sf_e1500: 12 - 1 - 0  [0.923] 13
+Started game 15 of 20 (chess-purec vs sf_e1500)
+Finished game 14 (sf_e1500 vs chess-purec): 0-1 {Black mates}
+Score of chess-purec vs sf_e1500: 13 - 1 - 0  [0.929] 14
+Started game 16 of 20 (sf_e1500 vs chess-purec)
+Finished game 15 (chess-purec vs sf_e1500): 1-0 {White mates}
+Score of chess-purec vs sf_e1500: 14 - 1 - 0  [0.933] 15
+Started game 17 of 20 (chess-purec vs sf_e1500)
+Finished game 16 (sf_e1500 vs chess-purec): 0-1 {Black mates}
+Score of chess-purec vs sf_e1500: 15 - 1 - 0  [0.938] 16
+Started game 18 of 20 (sf_e1500 vs chess-purec)
+Finished game 17 (chess-purec vs sf_e1500): 1-0 {White wins by adjudication}
+Score of chess-purec vs sf_e1500: 16 - 1 - 0  [0.941] 17
+Started game 19 of 20 (chess-purec vs sf_e1500)
+Finished game 18 (sf_e1500 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e1500: 17 - 1 - 0  [0.944] 18
+Started game 20 of 20 (sf_e1500 vs chess-purec)
+Finished game 19 (chess-purec vs sf_e1500): 1-0 {White mates}
+Score of chess-purec vs sf_e1500: 18 - 1 - 0  [0.947] 19
+Finished game 20 (sf_e1500 vs chess-purec): 0-1 {Black wins by adjudication}
+Score of chess-purec vs sf_e1500: 19 - 1 - 0  [0.950] 20
+...      chess-purec playing White: 10 - 0 - 0  [1.000] 10
+...      chess-purec playing Black: 9 - 1 - 0  [0.900] 10
+...      White vs Black: 11 - 9 - 0  [0.550] 20
+Elo difference: 511.5 +/- nan, LOS: 100.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-purec
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 5
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 4
+   "Win: White wins by adjudication": 6
+Player: sf_e1500
+   "Loss: Black mates": 5
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 4
+   "Loss: White wins by adjudication": 6
+   "Win: White wins by adjudication": 1
+Finished match

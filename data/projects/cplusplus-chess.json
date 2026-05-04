@@ -1,0 +1,304 @@
+{
+  "name": "cplusplus-chess",
+  "path": "/Users/mathieuacher/SANDBOX/cplusplus-chess",
+  "primary_language": "C++",
+  "loc": {
+    "files_by_lang": {
+      "Text": 1,
+      "Markdown": 2,
+      "C++": 13,
+      "Shell": 2,
+      "Python": 2,
+      "C": 14
+    },
+    "loc_by_lang": {
+      "Text": 56,
+      "Markdown": 244,
+      "C++": 2889,
+      "Shell": 177,
+      "Python": 504,
+      "C": 550
+    },
+    "total_files": 34,
+    "total_loc": 4420
+  },
+  "features": {
+    "FEN parsing": 11,
+    "UCI protocol": 10,
+    "Perft": 7,
+    "Castling": 5,
+    "En passant": 4,
+    "Promotion": 3,
+    "Check/Checkmate": 4,
+    "PGN": 3,
+    "Board: bitboard": 5,
+    "Minimax/Negamax": 2,
+    "Quiescence": 2,
+    "Transposition table": 8,
+    "Zobrist hashing": 5,
+    "Move ordering (MVV-LVA)": 1,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 3,
+    "Aspiration windows": 1,
+    "Futility pruning": 1,
+    "Evaluation/PST": 5,
+    "King safety": 2,
+    "Pawn structure": 7,
+    "Mobility": 2,
+    "Material counting": 5,
+    "Opening book": 1,
+    "Time management": 7
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "README.md",
+      "tools/uci_match.cpp",
+      "tools/eval_dataset.cpp",
+      "tools/tuning/run_pipeline.sh",
+      "tools/tuning/label_with_stockfish.py",
+      "tests/perft_tests.cpp",
+      "docs/tuning_pipeline.md",
+      "src/board.cpp",
+      "src/board.h",
+      "src/main.cpp",
+      "src/uci.cpp"
+    ],
+    "UCI protocol": [
+      "CMakeLists.txt",
+      "README.md",
+      "tools/uci_match.cpp",
+      "tools/run_cutechess.sh",
+      "tools/tuning/label_with_stockfish.py",
+      "src/search.cpp",
+      "src/search.h",
+      "src/main.cpp",
+      "src/uci.h",
+      "src/uci.cpp"
+    ],
+    "Perft": [
+      "CMakeLists.txt",
+      "README.md",
+      "tests/perft_tests.cpp",
+      "src/perft.h",
+      "src/perft.cpp",
+      "src/main.cpp",
+      "src/uci.cpp"
+    ],
+    "Castling": [
+      "tools/openings.pgn",
+      "tests/perft_tests.cpp",
+      "src/board.cpp",
+      "src/board.h",
+      "src/movegen.cpp"
+    ],
+    "En passant": [
+      "src/board.cpp",
+      "src/search.cpp",
+      "src/move.h",
+      "src/movegen.cpp"
+    ],
+    "Promotion": [
+      "tests/perft_tests.cpp",
+      "src/board.cpp",
+      "src/search.cpp"
+    ],
+    "Check/Checkmate": [
+      "tools/uci_match.cpp",
+      "src/board.cpp",
+      "src/search.cpp",
+      "src/board.h"
+    ],
+    "PGN": [
+      "README.md",
+      "tools/run_cutechess.sh",
+      "tools/tuning/run_pipeline.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "CMakeLists.txt",
+      "src/attacks.cpp",
+      "src/board.h",
+      "src/movegen.cpp",
+      "src/eval.cpp"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "src/search.cpp",
+      "src/search.h"
+    ],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [
+      "src/search.cpp",
+      "src/search.h"
+    ],
+    "Transposition table": [
+      "CMakeLists.txt",
+      "src/zobrist.cpp",
+      "src/board.cpp",
+      "src/zobrist.h",
+      "src/board.h",
+      "src/tt.cpp",
+      "src/search.h",
+      "src/tt.h"
+    ],
+    "Zobrist hashing": [
+      "CMakeLists.txt",
+      "src/zobrist.cpp",
+      "src/board.cpp",
+      "src/zobrist.h",
+      "src/board.h"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "src/search.cpp"
+    ],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [
+      "src/search.cpp"
+    ],
+    "Null-move pruning": [
+      "src/board.cpp",
+      "src/search.cpp",
+      "src/board.h"
+    ],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "src/search.cpp"
+    ],
+    "Futility pruning": [
+      "src/search.cpp"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "docs/tuning_pipeline.md",
+      "src/zobrist.cpp",
+      "src/board.cpp",
+      "src/eval.h",
+      "src/zobrist.h"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [
+      "docs/tuning_pipeline.md",
+      "src/eval.cpp"
+    ],
+    "Pawn structure": [
+      "tools/eval_dataset.cpp",
+      "tools/tuning/fit_texel.py",
+      "docs/tuning_pipeline.md",
+      "src/eval.h",
+      "src/eval_weights.h",
+      "src/eval_tuned_weights.h",
+      "src/eval.cpp"
+    ],
+    "Mobility": [
+      "docs/tuning_pipeline.md",
+      "src/eval.cpp"
+    ],
+    "Material counting": [
+      "tools/uci_match.cpp",
+      "docs/tuning_pipeline.md",
+      "src/eval.h",
+      "src/search.cpp",
+      "src/eval.cpp"
+    ],
+    "Opening book": [
+      "README.md"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "tools/uci_match.cpp",
+      "tools/tuning/run_pipeline.sh",
+      "docs/tuning_pipeline.md",
+      "src/search.cpp",
+      "src/search.h",
+      "src/uci.cpp"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 16,
+    "n_assistant_messages": 33,
+    "models": [
+      "gpt-5.2",
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 298,
+      "write_stdin": 166,
+      "update_plan": 25
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 55733481,
+        "output": 460408,
+        "cache_read": 53877504,
+        "cache_creation": 0,
+        "reasoning_output": 339798
+      },
+      "usd_estimate": 81.01
+    },
+    "first_ts": "2026-02-10T11:14:59.308Z",
+    "last_ts": "2026-02-13T15:20:09.649Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-10T12-14-59-019c4743-0066-7740-a928-af9c02e05c94",
+        "first_ts": "2026-02-10T11:14:59.308Z",
+        "last_ts": "2026-02-13T15:20:09.649Z",
+        "models": [
+          "gpt-5.2",
+          "gpt-5.3-codex"
+        ],
+        "turns": 16,
+        "tokens": {
+          "input": 55733481,
+          "output": 460408,
+          "cache_read": 53877504,
+          "reasoning_output": 339798
+        },
+        "tool_uses": {
+          "update_plan": 25,
+          "exec_command": 298,
+          "write_stdin": 166
+        },
+        "first_prompt_sample": "I want to build a chess engine in C++ programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "bb35d8a|2026-02-12T20:38:16+01:00|Mathieu Acher|Initial commit"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

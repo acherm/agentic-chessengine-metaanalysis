@@ -1,0 +1,20 @@
+{
+  "engine": "cplusplus-chess",
+  "image": "eval2/cplusplus-chess:latest",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.11
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.07
+    }
+  },
+  "total_s": 0.19,
+  "ok": true
+}

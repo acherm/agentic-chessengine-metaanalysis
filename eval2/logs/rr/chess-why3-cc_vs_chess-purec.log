@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-why3-cc vs chess-purec)
+Started game 2 of 2 (chess-purec vs chess-why3-cc)
+Finished game 2 (chess-purec vs chess-why3-cc): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-why3-cc vs chess-purec: 0 - 0 - 1  [0.500] 1
+Finished game 1 (chess-why3-cc vs chess-purec): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs chess-purec: 1 - 0 - 1  [0.750] 2
+...      chess-why3-cc playing White: 1 - 0 - 0  [1.000] 1
+...      chess-why3-cc playing Black: 0 - 0 - 1  [0.500] 1
+...      White vs Black: 1 - 0 - 1  [0.750] 2
+Elo difference: 190.8 +/- nan, LOS: 84.1 %, DrawRatio: 50.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-why3-cc
+   "Draw by 3-fold repetition": 1
+   "Win: White wins by adjudication": 1
+Player: chess-purec
+   "Draw by 3-fold repetition": 1
+   "Loss: White wins by adjudication": 1
+Finished match

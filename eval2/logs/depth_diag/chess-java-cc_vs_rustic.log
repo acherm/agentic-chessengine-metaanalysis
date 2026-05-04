@@ -1,0 +1,32 @@
+Indexing opening suite...
+Started game 1 of 6 (chess-java-cc vs rustic)
+Finished game 1 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 1 - 0 - 0  [1.000] 1
+Started game 2 of 6 (rustic vs chess-java-cc)
+Finished game 2 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 2 - 0 - 0  [1.000] 2
+Started game 3 of 6 (chess-java-cc vs rustic)
+Finished game 3 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 3 - 0 - 0  [1.000] 3
+Started game 4 of 6 (rustic vs chess-java-cc)
+Finished game 4 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 4 - 0 - 0  [1.000] 4
+Started game 5 of 6 (chess-java-cc vs rustic)
+Finished game 5 (chess-java-cc vs rustic): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs rustic: 5 - 0 - 0  [1.000] 5
+Started game 6 of 6 (rustic vs chess-java-cc)
+Finished game 6 (rustic vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs rustic: 6 - 0 - 0  [1.000] 6
+...      chess-java-cc playing White: 3 - 0 - 0  [1.000] 3
+...      chess-java-cc playing Black: 3 - 0 - 0  [1.000] 3
+...      White vs Black: 3 - 3 - 0  [0.500] 6
+Elo difference: inf +/- nan, LOS: 99.3 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-java-cc
+   "Win: Black wins by adjudication": 3
+   "Win: White wins by adjudication": 3
+Player: rustic
+   "Loss: Black wins by adjudication": 3
+   "Loss: White wins by adjudication": 3
+Finished match

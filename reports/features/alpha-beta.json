@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "feature": "Alpha-beta",
+    "patterns": [
+      "alpha[- ]?beta|alphabeta",
+      "alpha.beta\\|alphabeta\\|negamax"
+    ],
+    "generated_at": "2026-04-20T12:03:17.586626+00:00",
+    "total_engines": 1,
+    "engines_with_feature": 0
+  },
+  "engines": {
+    "chess-purec": {
+      "path": "/Users/mathieuacher/SANDBOX/chess-purec",
+      "language": "C",
+      "tier": "A",
+      "corpus": "main",
+      "has_feature": false,
+      "match_count": 0,
+      "matches": [],
+      "hotspot": null
+    }
+  }
+}

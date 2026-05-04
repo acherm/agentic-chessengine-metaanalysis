@@ -1,0 +1,50 @@
+Indexing opening suite...
+Started game 1 of 10 (chess-brainfuck vs sf_skill0)
+Started game 2 of 10 (sf_skill0 vs chess-brainfuck)
+Finished game 1 (chess-brainfuck vs sf_skill0): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill0: 1 - 0 - 0  [1.000] 1
+Started game 3 of 10 (chess-brainfuck vs sf_skill0)
+Finished game 2 (sf_skill0 vs chess-brainfuck): 0-1 {Black wins by adjudication}
+Score of chess-brainfuck vs sf_skill0: 2 - 0 - 0  [1.000] 2
+Started game 4 of 10 (sf_skill0 vs chess-brainfuck)
+Finished game 3 (chess-brainfuck vs sf_skill0): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill0: 3 - 0 - 0  [1.000] 3
+Started game 5 of 10 (chess-brainfuck vs sf_skill0)
+Finished game 4 (sf_skill0 vs chess-brainfuck): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill0: 3 - 1 - 0  [0.750] 4
+Started game 6 of 10 (sf_skill0 vs chess-brainfuck)
+Finished game 5 (chess-brainfuck vs sf_skill0): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill0: 4 - 1 - 0  [0.800] 5
+Started game 7 of 10 (chess-brainfuck vs sf_skill0)
+Finished game 6 (sf_skill0 vs chess-brainfuck): 0-1 {Black wins by adjudication}
+Score of chess-brainfuck vs sf_skill0: 5 - 1 - 0  [0.833] 6
+Started game 8 of 10 (sf_skill0 vs chess-brainfuck)
+Finished game 7 (chess-brainfuck vs sf_skill0): 1-0 {White mates}
+Score of chess-brainfuck vs sf_skill0: 6 - 1 - 0  [0.857] 7
+Started game 9 of 10 (chess-brainfuck vs sf_skill0)
+Finished game 8 (sf_skill0 vs chess-brainfuck): 0-1 {Black mates}
+Score of chess-brainfuck vs sf_skill0: 7 - 1 - 0  [0.875] 8
+Started game 10 of 10 (sf_skill0 vs chess-brainfuck)
+Finished game 9 (chess-brainfuck vs sf_skill0): 1-0 {White wins by adjudication}
+Score of chess-brainfuck vs sf_skill0: 8 - 1 - 0  [0.889] 9
+Finished game 10 (sf_skill0 vs chess-brainfuck): 0-1 {Black wins by adjudication}
+Score of chess-brainfuck vs sf_skill0: 9 - 1 - 0  [0.900] 10
+...      chess-brainfuck playing White: 5 - 0 - 0  [1.000] 5
+...      chess-brainfuck playing Black: 4 - 1 - 0  [0.800] 5
+...      White vs Black: 6 - 4 - 0  [0.600] 10
+Elo difference: 381.7 +/- nan, LOS: 99.4 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-brainfuck
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 3
+Player: sf_skill0
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 3
+   "Win: White wins by adjudication": 1
+Finished match

@@ -1,0 +1,84 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Started game 2 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 1 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White mates}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 2 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 3 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 4 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 5 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 4 - 1 - 0  [0.800] 5
+Started game 7 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 7 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White mates}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 5 - 1 - 0  [0.833] 6
+Started game 8 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 6 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 6 - 1 - 0  [0.857] 7
+Started game 9 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 8 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 0-1 {Black mates}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 7 - 1 - 0  [0.875] 8
+Started game 10 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 9 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1/2-1/2 {Draw by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 7 - 1 - 1  [0.833] 9
+Started game 11 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 10 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 0-1 {Black mates}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 8 - 1 - 1  [0.850] 10
+Started game 12 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 11 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 8 - 2 - 1  [0.773] 11
+Started game 13 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 12 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 8 - 3 - 1  [0.708] 12
+Started game 14 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 14 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 8 - 4 - 1  [0.654] 13
+Started game 15 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 13 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 9 - 4 - 1  [0.679] 14
+Started game 16 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 15 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 10 - 4 - 1  [0.700] 15
+Started game 17 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 16 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 0-1 {Black mates}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 11 - 4 - 1  [0.719] 16
+Started game 18 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 17 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 12 - 4 - 1  [0.735] 17
+Started game 19 of 20 (chess-rust-cc-NATIVE vs sf2000-NATIVE)
+Finished game 19 (chess-rust-cc-NATIVE vs sf2000-NATIVE): 1-0 {White mates}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 13 - 4 - 1  [0.750] 18
+Started game 20 of 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE)
+Finished game 18 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 14 - 4 - 1  [0.763] 19
+Finished game 20 (sf2000-NATIVE vs chess-rust-cc-NATIVE): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-NATIVE vs sf2000-NATIVE: 15 - 4 - 1  [0.775] 20
+...      chess-rust-cc-NATIVE playing White: 8 - 1 - 1  [0.850] 10
+...      chess-rust-cc-NATIVE playing Black: 7 - 3 - 0  [0.700] 10
+...      White vs Black: 11 - 8 - 1  [0.575] 20
+Elo difference: 214.8 +/- 222.9, LOS: 99.4 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-cc-NATIVE
+   "Draw by adjudication": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White wins by adjudication": 3
+   "Win: Black mates": 3
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 5
+Player: sf2000-NATIVE
+   "Draw by adjudication": 1
+   "Loss: Black mates": 3
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 5
+   "Win: Black wins by adjudication": 1
+   "Win: White wins by adjudication": 3
+Finished match

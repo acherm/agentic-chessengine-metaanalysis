@@ -1,0 +1,41 @@
+=== Perft ===
+PASS COBOL-chess  (external)  -> COBOL-chess.preflight.perft.json
+PASS chess-brainfuck  (external)  -> chess-brainfuck.preflight.perft.json
+PASS chess-cobol-cc  (external)  -> chess-cobol-cc.preflight.perft.json
+PASS chess-cplusplus-claude  (native)  -> chess-cplusplus-claude.preflight.perft.json
+PASS chess-java-cc  (native)  -> chess-java-cc.preflight.perft.json
+FAIL chess-latex-codex-replication  (external)  -> chess-latex-codex-replication.preflight.perft.json
+PASS chess-purec  (external)  -> chess-purec.preflight.perft.json
+PASS chess-py-cc  (external)  -> chess-py-cc.preflight.perft.json
+PASS chess-py  (external)  -> chess-py.preflight.perft.json
+PASS chess-ruby-cc  (external)  -> chess-ruby-cc.preflight.perft.json
+PASS chess-ruby-codex  (external)  -> chess-ruby-codex.preflight.perft.json
+PASS chess-rust-cc  (native)  -> chess-rust-cc.preflight.perft.json
+PASS chess-rust-codex  (external)  -> chess-rust-codex.preflight.perft.json
+PASS chess-sql  (native)  -> chess-sql.preflight.perft.json
+PASS chess-why3-cc  (native)  -> chess-why3-cc.preflight.perft.json
+PASS chess-why3  (external)  -> chess-why3.preflight.perft.json
+FAIL cplusplus-chess  (native)  -> cplusplus-chess.preflight.perft.json
+FAIL latex-chess-engine  (external)  -> latex-chess-engine.preflight.perft.json
+PASS lean-chess  (external)  -> lean-chess.preflight.perft.json
+
+=== WAC-20 ===
+  COBOL-chess  0.0% solved -> COBOL-chess.preflight.tactics.json
+  chess-brainfuck  0.0% solved -> chess-brainfuck.preflight.tactics.json
+  chess-cobol-cc  55.0% solved -> chess-cobol-cc.preflight.tactics.json
+  chess-cplusplus-claude  95.0% solved -> chess-cplusplus-claude.preflight.tactics.json
+  chess-java-cc  100.0% solved -> chess-java-cc.preflight.tactics.json
+  chess-latex-codex-replication  0.0% solved -> chess-latex-codex-replication.preflight.tactics.json
+  chess-purec  85.0% solved -> chess-purec.preflight.tactics.json
+  chess-py-cc  75.0% solved -> chess-py-cc.preflight.tactics.json
+  chess-py  0.0% solved -> chess-py.preflight.tactics.json
+  chess-ruby-cc  90.0% solved -> chess-ruby-cc.preflight.tactics.json
+  chess-ruby-codex  0.0% solved -> chess-ruby-codex.preflight.tactics.json
+  chess-rust-cc  100.0% solved -> chess-rust-cc.preflight.tactics.json
+  chess-rust-codex  100.0% solved -> chess-rust-codex.preflight.tactics.json
+  chess-sql  10.0% solved -> chess-sql.preflight.tactics.json
+  chess-why3-cc  60.0% solved -> chess-why3-cc.preflight.tactics.json
+  chess-why3  0.0% solved -> chess-why3.preflight.tactics.json
+  cplusplus-chess  0.0% solved -> cplusplus-chess.preflight.tactics.json
+  latex-chess-engine  0.0% solved -> latex-chess-engine.preflight.tactics.json
+  lean-chess  75.0% solved -> lean-chess.preflight.tactics.json

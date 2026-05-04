@@ -1,0 +1,11 @@
+gauntlet: chess-revisit-java-toRust-codex vs rustic at 120+1
+gauntlet: chess-revisit-java-toRust-codex vs asymptote at 120+1
+gauntlet: chess-revisit-java-toRust-codex vs sf_skill5 at 120+1
+gauntlet: chess-revisit-java-toRust-codex vs sf_skill10 at 120+1
+gauntlet: chess-revisit-java-toRust-codex vs sf_skill15 at 120+1
+gauntlet: chess-revisit-java-toCOBOL-codex vs rustic at 120+1
+gauntlet: chess-revisit-java-toCOBOL-codex vs asymptote at 120+1
+gauntlet: chess-revisit-java-toCOBOL-codex vs sf_skill5 at 120+1
+gauntlet: chess-revisit-java-toCOBOL-codex vs sf_skill10 at 120+1
+gauntlet: chess-revisit-java-toCOBOL-codex vs sf_skill15 at 120+1
+anchor gauntlet done. PGNs in pgn/anchor/, logs in logs/anchor/.

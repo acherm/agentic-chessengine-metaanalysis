@@ -1,0 +1,268 @@
+{
+  "name": "lean-chess",
+  "path": "/Users/mathieuacher/SANDBOX/lean-chess",
+  "primary_language": "Lean",
+  "loc": {
+    "files_by_lang": {
+      "Lean": 12,
+      "Markdown": 1,
+      "JSON": 1,
+      "Shell": 1
+    },
+    "loc_by_lang": {
+      "Lean": 1670,
+      "Markdown": 91,
+      "JSON": 5,
+      "Shell": 567
+    },
+    "total_files": 15,
+    "total_loc": 2333
+  },
+  "features": {
+    "FEN parsing": 6,
+    "UCI protocol": 5,
+    "Perft": 5,
+    "Castling": 26,
+    "En passant": 2,
+    "Promotion": 1,
+    "Check/Checkmate": 2,
+    "PGN": 2,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 2,
+    "Iterative deepening": 1,
+    "Quiescence": 2,
+    "Transposition table": 3,
+    "Null-move pruning": 1,
+    "Evaluation/PST": 1,
+    "Pawn structure": 1,
+    "Material counting": 6,
+    "Time management": 27
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "PerftMain.lean",
+      "README.md",
+      "Chess.lean",
+      "Chess/UCI.lean",
+      "Chess/MoveGen.lean",
+      "Chess/FEN.lean"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "Chess.lean",
+      "Main.lean",
+      "scripts/run_match_and_elo.sh",
+      "Chess/UCI.lean"
+    ],
+    "Perft": [
+      "PerftMain.lean",
+      "README.md",
+      "Chess.lean",
+      "lakefile.lean",
+      "Chess/Perft.lean"
+    ],
+    "Castling": [
+      "matches/strengthwave2_sf1320_combined_g50.pgn",
+      "matches/lean_vs_sf_rand.pgn",
+      "matches/stage1_timed.pgn",
+      "matches/lean_vs_sf.pgn",
+      "matches/speed_smoke_d4_v3.pgn",
+      "matches/strengthpass_sf1320_g20_seed7_pvslmr.pgn",
+      "matches/speed_smoke_tc5_v1.pgn",
+      "matches/strengthpass_sf1320_combined_g50_pvslmr.pgn",
+      "matches/strengthpass_sf1450_g20_seed42_pvslmr.pgn",
+      "matches/calib_sf1320_vs_sf1320_seed42.pgn",
+      "matches/strengthwave2_sf1320_g20_seed7.pgn",
+      "matches/gauntlet_sf1600_g30_seed42_q1.pgn",
+      "matches/strengthwave2_sf1450_g20_seed7.pgn",
+      "matches/gauntlet_sf1200_g30_seed42_q1.pgn",
+      "matches/strengthwave2_sf1320_g30_seed42.pgn",
+      "matches/benchmark_clean_tc10_g40_seed42.pgn",
+      "matches/gauntlet_sf1450_g30_seed42_q1.pgn",
+      "matches/strengthwave2_sf1450_g20_seed42.pgn",
+      "matches/strengthpass_sf1320_g30_seed42_pvslmr.pgn",
+      "matches/stage1_tc15.pgn",
+      "matches/stage1_d4.pgn",
+      "matches/strengthwave2_sf1450_combined_g40.pgn",
+      "matches/speed_smoke_d4.pgn",
+      "Chess/MoveGen.lean",
+      "Chess/FEN.lean",
+      "Chess/Position.lean"
+    ],
+    "En passant": [
+      "Chess/MoveGen.lean",
+      "Chess/Search.lean"
+    ],
+    "Promotion": [
+      "Chess/MoveGen.lean"
+    ],
+    "Check/Checkmate": [
+      "Chess/MoveGen.lean",
+      "Chess/Search.lean"
+    ],
+    "PGN": [
+      "README.md",
+      "scripts/run_match_and_elo.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "Chess/Search.lean"
+    ],
+    "Alpha-beta": [
+      "README.md",
+      "Chess/Search.lean"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "Chess/Search.lean"
+    ],
+    "Transposition table": [
+      "README.md",
+      "Chess/UCI.lean",
+      "Chess/Search.lean"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [
+      "Chess/Search.lean"
+    ],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "Chess/Eval.lean"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [
+      "Chess/Eval.lean"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "matches/strengthpass_sf1320_combined_g50_pvslmr.pgn",
+      "matches/gauntlet_sf1200_g30_seed42_q1.pgn",
+      "matches/benchmark_clean_tc10_g40_seed42.pgn",
+      "matches/strengthpass_sf1320_g30_seed42_pvslmr.pgn",
+      "Chess/Eval.lean",
+      "Chess/Search.lean"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "matches/strengthwave2_sf1320_combined_g50.pgn",
+      "matches/lean_vs_sf_rand.pgn",
+      "matches/stage1_timed.pgn",
+      "matches/lean_vs_sf.pgn",
+      "matches/speed_smoke_one_d4.pgn",
+      "matches/speed_smoke_d4_v2.pgn",
+      "matches/speed_smoke_d4_v3.pgn",
+      "matches/strengthpass_sf1320_g20_seed7_pvslmr.pgn",
+      "matches/speed_smoke_tc5_v1.pgn",
+      "matches/strengthpass_sf1320_combined_g50_pvslmr.pgn",
+      "matches/strengthpass_sf1450_g20_seed42_pvslmr.pgn",
+      "matches/calib_sf1320_vs_sf1320_seed42.pgn",
+      "matches/strengthwave2_sf1320_g20_seed7.pgn",
+      "matches/gauntlet_sf1600_g30_seed42_q1.pgn",
+      "matches/strengthwave2_sf1450_g20_seed7.pgn",
+      "matches/gauntlet_sf1200_g30_seed42_q1.pgn",
+      "matches/strengthwave2_sf1320_g30_seed42.pgn",
+      "matches/benchmark_clean_tc10_g40_seed42.pgn",
+      "matches/gauntlet_sf1450_g30_seed42_q1.pgn",
+      "matches/strengthwave2_sf1450_g20_seed42.pgn",
+      "matches/strengthpass_sf1320_g30_seed42_pvslmr.pgn",
+      "matches/stage1_tc15.pgn",
+      "matches/stage1_d4.pgn",
+      "matches/strengthwave2_sf1450_combined_g40.pgn",
+      "matches/speed_smoke_d4.pgn",
+      "scripts/run_match_and_elo.sh",
+      "Chess/UCI.lean"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 21,
+    "n_assistant_messages": 117,
+    "models": [
+      "gpt-5.2",
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "write_stdin": 395,
+      "exec_command": 337,
+      "update_plan": 51
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 87667411,
+        "output": 301629,
+        "cache_read": 85070464,
+        "cache_creation": 0,
+        "reasoning_output": 184883
+      },
+      "usd_estimate": 123.23
+    },
+    "first_ts": "2026-02-09T19:24:54.785Z",
+    "last_ts": "2026-02-10T20:29:02.910Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-09T20-24-54-019c43dd-2e7a-7583-b330-ad96c92f9c7d",
+        "first_ts": "2026-02-09T19:24:54.785Z",
+        "last_ts": "2026-02-10T20:29:02.910Z",
+        "models": [
+          "gpt-5.2",
+          "gpt-5.3-codex"
+        ],
+        "turns": 21,
+        "tokens": {
+          "input": 87667411,
+          "output": 301629,
+          "cache_read": 85070464,
+          "reasoning_output": 184883
+        },
+        "tool_uses": {
+          "exec_command": 337,
+          "update_plan": 51,
+          "write_stdin": 395
+        },
+        "first_prompt_sample": "I want to build a chess engine in Lean programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

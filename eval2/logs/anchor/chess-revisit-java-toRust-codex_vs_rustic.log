@@ -1,0 +1,46 @@
+Indexing opening suite...
+Started game 2 of 30 (rustic vs chess-revisit-java-toRust-codex)
+Started game 1 of 30 (chess-revisit-java-toRust-codex vs rustic)
+Finished game 1 (chess-revisit-java-toRust-codex vs rustic): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 1 - 0 - 0  [1.000] 1
+Started game 3 of 30 (chess-revisit-java-toRust-codex vs rustic)
+Finished game 2 (rustic vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 2 - 0 - 0  [1.000] 2
+Started game 4 of 30 (rustic vs chess-revisit-java-toRust-codex)
+Finished game 3 (chess-revisit-java-toRust-codex vs rustic): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 3 - 0 - 0  [1.000] 3
+Started game 5 of 30 (chess-revisit-java-toRust-codex vs rustic)
+Finished game 4 (rustic vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 4 - 0 - 0  [1.000] 4
+Started game 6 of 30 (rustic vs chess-revisit-java-toRust-codex)
+Finished game 6 (rustic vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 5 - 0 - 0  [1.000] 5
+Started game 7 of 30 (chess-revisit-java-toRust-codex vs rustic)
+Finished game 5 (chess-revisit-java-toRust-codex vs rustic): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 6 - 0 - 0  [1.000] 6
+Started game 8 of 30 (rustic vs chess-revisit-java-toRust-codex)
+Finished game 8 (rustic vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 7 - 0 - 0  [1.000] 7
+Started game 9 of 30 (chess-revisit-java-toRust-codex vs rustic)
+Finished game 7 (chess-revisit-java-toRust-codex vs rustic): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 8 - 0 - 0  [1.000] 8
+Started game 10 of 30 (rustic vs chess-revisit-java-toRust-codex)
+Finished game 10 (rustic vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs rustic: 9 - 0 - 0  [1.000] 9
+Finished game 9 (chess-revisit-java-toRust-codex vs rustic): * {No result}
+Score of chess-revisit-java-toRust-codex vs rustic: 9 - 0 - 0  [1.000] 9
+...      chess-revisit-java-toRust-codex playing White: 4 - 0 - 0  [1.000] 4
+...      chess-revisit-java-toRust-codex playing Black: 5 - 0 - 0  [1.000] 5
+...      White vs Black: 4 - 5 - 0  [0.444] 9
+Elo difference: inf +/- nan, LOS: 99.9 %, DrawRatio: 0.0 %
+SPRT: llr 3.17 (107.7%), lbound -2.94, ubound 2.94 - H1 was accepted
+
+Player: chess-revisit-java-toRust-codex
+   "No result": 1
+   "Win: Black wins by adjudication": 5
+   "Win: White wins by adjudication": 4
+Player: rustic
+   "Loss: Black wins by adjudication": 5
+   "Loss: White wins by adjudication": 4
+   "No result": 1
+Finished match

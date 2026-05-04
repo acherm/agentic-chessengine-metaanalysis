@@ -1,0 +1,64 @@
+Indexing opening suite...
+Started game 1 of 30 (COBOL-chess vs sf_skill15)
+Started game 2 of 30 (sf_skill15 vs COBOL-chess)
+Finished game 2 (sf_skill15 vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs sf_skill15: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (COBOL-chess vs sf_skill15)
+Finished game 1 (COBOL-chess vs sf_skill15): 0-1 {Black mates}
+Score of COBOL-chess vs sf_skill15: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill15 vs COBOL-chess)
+Warning: Illegal PV move d7c5 from COBOL-chess (3)
+Warning: PV:  d7c5
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (3)
+Warning: PV:  e8f8
+Finished game 3 (COBOL-chess vs sf_skill15): 0-1 {White makes an illegal move: e8f8}
+Score of COBOL-chess vs sf_skill15: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (COBOL-chess vs sf_skill15)
+Finished game 4 (sf_skill15 vs COBOL-chess): 1-0 {White wins by adjudication}
+Score of COBOL-chess vs sf_skill15: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (sf_skill15 vs COBOL-chess)
+Finished game 5 (COBOL-chess vs sf_skill15): 0-1 {Black mates}
+Score of COBOL-chess vs sf_skill15: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (COBOL-chess vs sf_skill15)
+Finished game 6 (sf_skill15 vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs sf_skill15: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (sf_skill15 vs COBOL-chess)
+Finished game 8 (sf_skill15 vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs sf_skill15: 0 - 7 - 0  [0.000] 7
+Started game 9 of 30 (COBOL-chess vs sf_skill15)
+Finished game 7 (COBOL-chess vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of COBOL-chess vs sf_skill15: 0 - 8 - 0  [0.000] 8
+Started game 10 of 30 (sf_skill15 vs COBOL-chess)
+Finished game 10 (sf_skill15 vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs sf_skill15: 0 - 9 - 0  [0.000] 9
+Finished game 9 (COBOL-chess vs sf_skill15): * {No result}
+Score of COBOL-chess vs sf_skill15: 0 - 9 - 0  [0.000] 9
+...      COBOL-chess playing White: 0 - 4 - 0  [0.000] 4
+...      COBOL-chess playing Black: 0 - 5 - 0  [0.000] 5
+...      White vs Black: 5 - 4 - 0  [0.556] 9
+Elo difference: -inf +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr -3.17 (-107.7%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: COBOL-chess
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 1
+   "Loss: White makes an illegal move: e8f8": 1
+   "Loss: White mates": 4
+   "Loss: White wins by adjudication": 1
+   "No result": 1
+Player: sf_skill15
+   "No result": 1
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 1
+   "Win: White makes an illegal move: e8f8": 1
+   "Win: White mates": 4
+   "Win: White wins by adjudication": 1
+Finished match

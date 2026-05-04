@@ -1,0 +1,156 @@
+{
+  "name": "chess-in-conway",
+  "path": "/Users/mathieuacher/SANDBOX/chess-in-conway",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Python": 35,
+      "Markdown": 1,
+      "HTML": 1
+    },
+    "loc_by_lang": {
+      "Python": 12555,
+      "Markdown": 842,
+      "HTML": 559
+    },
+    "total_files": 37,
+    "total_loc": 13956
+  },
+  "features": {
+    "FEN parsing": 17,
+    "En passant": 2,
+    "Promotion": 8,
+    "Check/Checkmate": 5,
+    "King safety": 1,
+    "Material counting": 6
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "animate.py",
+      "chess_engine.py",
+      "compiler.py",
+      "verify_life.py",
+      "visualize.py",
+      "README.md",
+      "verify.py",
+      "main.py",
+      "demo.py",
+      "output/chess_4k3_8_8_8_8_8_8_4K2R_w_-_-_0_1.mc",
+      "output/chess_8_P7_8_8_8_8_8_4K2k_w_-_-_0_1.rle",
+      "output/chess_8_P7_8_8_8_8_8_4K2k_w_-_-_0_1.mc",
+      "output/chess_rnbqkbnr_pppppppp_8_8_4P3_8_PPPP1PPP_RNBQKBNR_b_-_.mc",
+      "output/chess_rnbqkbnr_pppppppp_8_8_4P3_8_PPPP1PPP_RNBQKBNR_b_-_.rle",
+      "output/chess_4k3_8_8_3r4_8_8_8_3QK3_w_-_-_0_1.mc",
+      "output/chess_4k3_8_8_8_8_8_8_4K2R_w_-_-_0_1.rle",
+      "output/chess_4k3_8_8_3r4_8_8_8_3QK3_w_-_-_0_1.rle"
+    ],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [
+      "chess_engine.py",
+      "README.md"
+    ],
+    "Promotion": [
+      "chess_engine.py",
+      "encoding.py",
+      "chess_circuit.py",
+      "verify_life.py",
+      "README.md",
+      "verify.py",
+      "main.py",
+      "demo.py"
+    ],
+    "Check/Checkmate": [
+      "chess_engine.py",
+      "chess_circuit.py",
+      "README.md",
+      "verify.py",
+      "main.py"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [
+      "chess_circuit.py"
+    ],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "chess_engine.py",
+      "chess_circuit.py",
+      "README.md",
+      "verify.py",
+      "main.py",
+      "demo.py"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 22,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": false
+  }
+}

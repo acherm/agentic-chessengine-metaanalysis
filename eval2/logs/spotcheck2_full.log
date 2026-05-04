@@ -1,0 +1,6 @@
+spotcheck: chess-java-cc vs sf_skill10
+spotcheck: chess-java-cc vs sf_skill15
+spotcheck: chess-rust-codex vs sf_skill10
+spotcheck: chess-rust-codex vs sf_skill15
+spotcheck: chess-py vs sf_skill10
+spotcheck: chess-py vs sf_skill15

@@ -1,0 +1,122 @@
+{
+  "name": "chessfoo-claude",
+  "path": "/Users/mathieuacher/SANDBOX/chessfoo-claude",
+  "primary_language": "TypeScript",
+  "loc": {
+    "files_by_lang": {
+      "JavaScript": 2,
+      "TypeScript": 11,
+      "Markdown": 1,
+      "JSON": 3,
+      "CSS": 1
+    },
+    "loc_by_lang": {
+      "JavaScript": 25,
+      "TypeScript": 1087,
+      "Markdown": 207,
+      "JSON": 7047,
+      "CSS": 26
+    },
+    "total_files": 18,
+    "total_loc": 8392
+  },
+  "features": {},
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "5989e5e|2026-01-06T12:47:42+01:00|Mathieu Acher|Add demo link to README",
+      "fe822af|2026-01-06T12:45:22+01:00|Mathieu Acher|Add .env.example template",
+      "cfb4672|2026-01-06T12:44:57+01:00|Mathieu Acher|Add comprehensive README with specs, features and DB schema",
+      "601d540|2026-01-06T12:16:31+01:00|Mathieu Acher|Switch to Supabase JS client",
+      "f935f7d|2026-01-06T12:14:33+01:00|Mathieu Acher|Fix SSL connection for Supabase",
+      "163993c|2026-01-06T12:12:38+01:00|Mathieu Acher|Switch to pg package for Supabase compatibility",
+      "1e42fef|2026-01-06T11:38:58+01:00|Mathieu Acher|Initial commit - Knight puzzle game with session tracking",
+      "d10102b|2026-01-06T11:23:31+01:00|Mathieu Acher|Initial commit from Create Next App"
+    ],
+    "n_commits": 8,
+    "authors": [
+      "8\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

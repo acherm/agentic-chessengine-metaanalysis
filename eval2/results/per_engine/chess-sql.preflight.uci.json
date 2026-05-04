@@ -1,0 +1,20 @@
+{
+  "engine": "chess-sql",
+  "image": "eval2/chess-sql:latest",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.14
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.07
+    }
+  },
+  "total_s": 0.21,
+  "ok": true
+}

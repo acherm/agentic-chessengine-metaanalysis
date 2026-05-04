@@ -1,0 +1,20 @@
+{
+  "engine": "chess-purec",
+  "image": "eval2/chess-purec:latest",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.35
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.03
+    }
+  },
+  "total_s": 0.39,
+  "ok": true
+}

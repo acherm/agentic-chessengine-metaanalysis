@@ -1,0 +1,34 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-purec-codex"]
+[Black "chess-revisit-java-toRust-codex"]
+[Result "0-1"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 e5 2. Nf3 Nf6 3. d4 exd4 4. Nxd4 Bb4 5. Bg5 O-O 6. Bc4 Ne5 7. Bd5 c6
+8. Bb3 h6 9. Bxf6 Bxc3+ 10. bxc3 Qxf6 11. O-O d6 12. f4 Ng6 13. f5 Ne5 14. Nf3
+b6 15. Qe2 a5 16. Qe3 a4 17. Nxe5 axb3 18. Ng4 Qh4 19. Nxh6+ gxh6 20. axb3 Rxa1
+21. Rxa1 Re8 22. Ra4 b5 23. Ra8 Kh7 24. Ra7 Bxf5 25. Rxf7+ Kg6 26. Rxf5 Rxe4
+27. Qf2 Re1+ 28. Qf1 Rxf1+ 29. Rxf1 Qe4 30. Rf2 Qe1+ 31. Rf1 Qxc3 32. Rf2 Qe1+
+33. Rf1 Qe3+ 34. Kh1 Qe2 35. Rc1 Qd2 36. Ra1 Qxc2 37. b4 Qb2 38. Re1 Qxb4
+39. Ra1 c5 40. Rf1 c4 41. g3 c3 42. Rf4 Qxf4 43. gxf4 b4 44. h4 b3 45. Kh2 c2
+46. Kh3 c1=Q 47. Kg4 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.29"]
+[Round "1"]
+[White "chess-revisit-java-toRust-codex"]
+[Black "chess-purec-codex"]
+[Result "1-0"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 d5 2. exd5 Qxd5 3. Nf3 Nf6 4. Nc3 Qe6+ 5. Be2 Qg4 6. d5 Nb4 7. a3 Na6
+8. O-O Nc5 9. Ne5 Qf5 10. f4 Nfe4 11. Nb5 Kd8 12. b4 Nd7 13. Bd3 Nxe5 14. fxe5
+Qxe5 15. Bf4 Qxd5 16. Bxe4 Qxd1 17. Raxd1+ Bd7 18. Bxb7 Rb8 19. Bc6 Kc8
+20. Nxa7+ Kd8 21. Rxd7+ Ke8 22. Rd5# 1-0
+

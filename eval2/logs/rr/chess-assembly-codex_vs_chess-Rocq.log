@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-Rocq vs chess-assembly-codex)
+Started game 1 of 2 (chess-assembly-codex vs chess-Rocq)
+Finished game 2 (chess-Rocq vs chess-assembly-codex): 0-1 {Black mates}
+Score of chess-assembly-codex vs chess-Rocq: 1 - 0 - 0  [1.000] 1
+Finished game 1 (chess-assembly-codex vs chess-Rocq): 0-1 {Black mates}
+Score of chess-assembly-codex vs chess-Rocq: 1 - 1 - 0  [0.500] 2
+...      chess-assembly-codex playing White: 0 - 1 - 0  [0.000] 1
+...      chess-assembly-codex playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 0 - 2 - 0  [0.000] 2
+Elo difference: 0.0 +/- nan, LOS: 50.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-assembly-codex
+   "Loss: Black mates": 1
+   "Win: Black mates": 1
+Player: chess-Rocq
+   "Loss: Black mates": 1
+   "Win: Black mates": 1
+Finished match

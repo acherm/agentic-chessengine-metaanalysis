@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-purec vs chess-Rocq)
+Started game 2 of 2 (chess-Rocq vs chess-purec)
+Finished game 1 (chess-purec vs chess-Rocq): 1-0 {White mates}
+Score of chess-purec vs chess-Rocq: 1 - 0 - 0  [1.000] 1
+Finished game 2 (chess-Rocq vs chess-purec): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-purec vs chess-Rocq: 1 - 0 - 1  [0.750] 2
+...      chess-purec playing White: 1 - 0 - 0  [1.000] 1
+...      chess-purec playing Black: 0 - 0 - 1  [0.500] 1
+...      White vs Black: 1 - 0 - 1  [0.750] 2
+Elo difference: 190.8 +/- nan, LOS: 84.1 %, DrawRatio: 50.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-purec
+   "Draw by 3-fold repetition": 1
+   "Win: White mates": 1
+Player: chess-Rocq
+   "Draw by 3-fold repetition": 1
+   "Loss: White mates": 1
+Finished match

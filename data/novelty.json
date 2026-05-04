@@ -1,0 +1,886 @@
+{
+  "COBOL-chess": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-09T09:49:24.279Z",
+        "match": "based on Stockfish",
+        "context": "the user is on Mac, we should confirm: do they want targets based on Stockfish's UCI_Elo or a fixed baseline? I think reporting the Elo di"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-09T18:38:56.173Z",
+        "match": "like python-chess",
+        "context": "untering a blank line after the tags. To avoid dependencies like python-chess, I'll implement a simple parser that scans lines and mainta"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-09T19:28:57.891Z",
+        "match": "like Stockfish",
+        "context": "e `-each depth=4` sets the search depth to 4 plies, engines like Stockfish might be thinking indefinitely since they could ignore dept"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-09T19:50:16.980Z",
+        "match": "like Stockfish",
+        "context": "a command in `tools/elo_run.py` to choose between opponents like Stockfish or cobochess, but it\u2019s not absolutely necessary. Instead, I"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-09T20:18:05.311Z",
+        "match": "similar to Stockfish",
+        "context": "matches showed that the engine took 0.17 seconds per move, similar to Stockfish. However, with 2 seconds total, typical per move should all"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T10:22:06.914Z",
+        "match": "like Stockfish",
+        "context": "ies, it shouldn't have taken that long. Perhaps one engine, like Stockfish, took unnecessary time on a specific move, leading to this"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T10:36:42.421Z",
+        "match": "like Stockfish",
+        "context": "hanges could help us close the gap against stronger engines like Stockfish. I need to decide on a clear approach and run some tests to"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T11:37:37.776Z",
+        "match": "like Stockfish",
+        "context": "ught. Maybe the earlier 20-game run was just luck or a bug, like Stockfish mismanaging time? I think we should wait for the 50-game ru"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T18:23:56.319Z",
+        "match": "like Stockfish",
+        "context": "ly limits its overall capability against stronger opponents like Stockfish."
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T21:08:05.424Z",
+        "match": "like Stockfish",
+        "context": "fter running many matches; perhaps the environment shifted, like Stockfish becoming more random? Comparing now to our baseline, it see"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-11T08:42:28.192Z",
+        "match": "like Sunfish",
+        "context": "orporates these. I can use piece-square values from engines like Sunfish but I can't pull from external sources directly. I\u2019ll have"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-Rocq": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "claude",
+        "role": "user",
+        "ts": "2026-02-15T07:34:52.446Z",
+        "match": "like TSCP",
+        "context": "trength (e.g., Stockfish with Elo limiting, or weak engines like TSCP, Micro-Max). Design the plan covering: - Toolchain setup ("
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-apl-codex54": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-03-05T20:02:20.445Z",
+        "match": "like stockfish",
+        "context": "I might need to parse the results and see. Running a match like stockfish vs. stockfish with different limits could help check these"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-03-05T20:13:27.727Z",
+        "match": "like Sunfish",
+        "context": "get a meaningful Elo, I might need to add a weaker engine, like Sunfish or CPW-engine, or improve the evaluator/search. Since the u"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-assembly-codex": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [
+      {
+        "file": "scripts/run_matches.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "scripts/uci_bridge.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "scripts/asm_core.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "scripts/core_selftest.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      }
+    ],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [
+      "python: import chess"
+    ],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [
+      {
+        "file": "scripts/run_matches.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "scripts/uci_bridge.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "scripts/asm_core.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "scripts/core_selftest.py",
+        "label": "python-chess API surface"
+      }
+    ],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [
+      "python-chess API surface"
+    ],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-brainfuck": {
+    "manifests": [
+      {
+        "file": "requirements.txt",
+        "type": "python",
+        "chess_libs": [
+          "python-chess"
+        ]
+      }
+    ],
+    "manifest_chess_libs": [
+      "python-chess"
+    ],
+    "imports_core": [],
+    "imports_tooling": [
+      {
+        "file": "scripts/run_matches.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "scripts/uci_smoke.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      }
+    ],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [
+      "python: import chess"
+    ],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [
+      {
+        "file": "scripts/run_matches.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "scripts/uci_smoke.py",
+        "label": "python-chess API surface"
+      }
+    ],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [
+      "python-chess API surface"
+    ],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-brainfuck-cc": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [
+      {
+        "file": "play_random.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "test_perft.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "play_stockfish.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      }
+    ],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [
+      "python: import chess"
+    ],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [
+      {
+        "file": "play_random.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "test_perft.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "play_stockfish.py",
+        "label": "python-chess API surface"
+      }
+    ],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [
+      "python-chess API surface"
+    ],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "claude",
+        "role": "user",
+        "ts": "2026-03-20T14:23:35.571Z",
+        "match": "like Stockfish",
+        "context": "an you organize a tournament with sufficient time something like Stockfish with UCI_LimitStrength=true at the 120+1s time control, whi"
+      },
+      {
+        "agent": "claude",
+        "role": "user",
+        "ts": "2026-03-20T14:23:35.571Z",
+        "match": "like Stockfish",
+        "context": "an you organize a tournament with sufficient time something like Stockfish with UCI_LimitStrength=true at the 120+1s time control, whi"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-cobol-cc": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-cplusplus-claude": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "claude",
+        "role": "assistant",
+        "ts": "2026-02-10T19:06:00.559Z",
+        "match": "like Stockfish",
+        "context": "ain implementation. This is the standard pattern in engines like Stockfish, Ethereal, and Laser. --- ## 2. CMakeLists.txt Design ``"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-css-codex": {
+    "manifests": [
+      {
+        "file": "pyproject.toml",
+        "type": "python",
+        "chess_libs": [
+          "python-chess"
+        ]
+      }
+    ],
+    "manifest_chess_libs": [
+      "python-chess"
+    ],
+    "imports_core": [
+      {
+        "file": "src/chess_css/uci.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "src/chess_css/engine.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "src/chess_css/search.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      },
+      {
+        "file": "src/chess_css/match.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      }
+    ],
+    "imports_tooling": [
+      {
+        "file": "tests/test_smoke.py",
+        "label": "python: import chess",
+        "match": "import chess"
+      }
+    ],
+    "source_chess_imports": [
+      "python: import chess"
+    ],
+    "source_chess_imports_tooling": [
+      "python: import chess"
+    ],
+    "fingerprints_core": [
+      {
+        "file": "src/chess_css/uci.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "src/chess_css/engine.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "src/chess_css/search.py",
+        "label": "python-chess API surface"
+      },
+      {
+        "file": "src/chess_css/match.py",
+        "label": "python-chess API surface"
+      }
+    ],
+    "fingerprints_tooling": [
+      {
+        "file": "tests/test_smoke.py",
+        "label": "python-chess API surface"
+      }
+    ],
+    "canonical_fingerprints": [
+      "python-chess API surface"
+    ],
+    "canonical_fingerprints_tooling": [
+      "python-chess API surface"
+    ],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "fingerprint-match"
+  },
+  "chess-css-codex-guided": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-icon-codex": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-java": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-java-cc": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-latex-codex-replication": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-purec": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "claude",
+        "role": "assistant",
+        "ts": "2026-02-15T19:20:36.438Z",
+        "match": "like Stockfish",
+        "context": "pare root-level node counts against a known-correct engine (like Stockfish). The branch with the wrong count reveals which move type i"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-purec-codex": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-py": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-11T08:12:50.480Z",
+        "match": "like the stockfish",
+        "context": "games. To run these matches, I'll need installed opponents like the stockfish binary, but I can check if that\u2019s available. Alternatively,"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-11T08:13:54.355Z",
+        "match": "like Sunfish",
+        "context": "areful about copyright if I'm building off existing engines like Sunfish."
+      },
+      {
+        "agent": "codex",
+        "role": "assistant",
+        "ts": "2026-02-11T10:35:57.702Z",
+        "match": "like Stockfish",
+        "context": ".py` to print the match config and warn when engine B looks like Stockfish but isn\u2019t being limited, so this is harder to miss next tim"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-py-cc": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "claude",
+        "role": "user",
+        "ts": "2026-02-18T21:32:38.740Z",
+        "match": "like Tscp",
+        "context": "ngines (e.g., Stockfish at reduced depth, or weaker engines like Tscp, Mediocre) Design the file structure and module breakdown."
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-ruby-cc": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-ruby-codex": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-rust-cc": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "claude",
+        "role": "assistant",
+        "ts": "2026-02-16T23:22:01.367Z",
+        "match": "like Stockfish",
+        "context": "tory Heuristic Improvements**: - No countermove history (like Stockfish's NNUE-era improvements) - No threat detection-based red"
+      },
+      {
+        "agent": "claude",
+        "role": "assistant",
+        "ts": "2026-02-16T23:21:46.071Z",
+        "match": "like Stockfish",
+        "context": "## 6. ESTIMATED TOTAL MISSING ELO Based on strong engines like Stockfish/Lichess analysis: - **Pawn Structure Weakness**: 20-30 Elo"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-rust-cc-redo": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "claude",
+        "role": "assistant",
+        "ts": "2026-04-19T15:49:17.468Z",
+        "match": "like Stockfish",
+        "context": "se `cutechess-cli` to run automated matches against engines like Stockfish (weakened via `Skill Level`), Fairy-Stockfish, or small eng"
+      }
+    ],
+    "classification": "scratch"
+  },
+  "chess-rust-codex": {
+    "manifests": [
+      {
+        "file": "Cargo.toml",
+        "type": "rust",
+        "chess_libs": [
+          "chess-rs (Rust)"
+        ]
+      }
+    ],
+    "manifest_chess_libs": [
+      "chess-rs (Rust)"
+    ],
+    "imports_core": [
+      {
+        "file": "src/uci.rs",
+        "label": "rust: chess crate",
+        "match": "use chess::"
+      },
+      {
+        "file": "src/engine.rs",
+        "label": "rust: chess crate",
+        "match": "use chess::"
+      }
+    ],
+    "imports_tooling": [],
+    "source_chess_imports": [
+      "rust: chess crate"
+    ],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "library-assisted"
+  },
+  "chess-sql": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-why3": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "chess-why3-cc": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "cplusplus-chess": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T12:19:42.416Z",
+        "match": "based on Stockfish",
+        "context": "und 1550-1600 Elo at 20ms per move on this machine. This is based on Stockfish's limited-strength scale with a confidence interval of abou"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T12:19:42.416Z",
+        "match": "based on the Stockfish",
+        "context": "heir machine, it seems like this engine is roughly 1550 Elo based on the Stockfish UCI_Elo scale. We might settle on 1560 as a practical estim"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T12:25:02.965Z",
+        "match": "based on Stockfish",
+        "context": "e time could reduce randomness. It seems we should estimate based on Stockfish at 1500 for a stable reference point."
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-10T15:03:29.635Z",
+        "match": "like Stockfish",
+        "context": "nt. For the best Elo estimation, creating a pool of engines like Stockfish at fixed settings would be ideal, even though UCI_Elo isn't"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-11T13:10:17.558Z",
+        "match": "like Stockfish",
+        "context": "ntial improvement could involve integrating NNUE evaluation like Stockfish does, but that's a complex task that requires a dataset and"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-11T13:17:02.464Z",
+        "match": "like Stockfish",
+        "context": "the engine seems capable of performing well against others like Stockfish."
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-11T13:17:02.464Z",
+        "match": "like Stockfish",
+        "context": "ld consider pitting the engine against a stronger opponent, like Stockfish at 2600. The user wants to see a jump relative to 2200, whi"
+      },
+      {
+        "agent": "codex",
+        "role": "reasoning",
+        "ts": "2026-02-12T06:43:26.204Z",
+        "match": "based on Stockfish",
+        "context": "tions where the engine loses and enhancing evaluation terms based on Stockfish\u2019s analysis."
+      }
+    ],
+    "classification": "scratch"
+  },
+  "latex-chess-engine": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [
+      {
+        "file": "pgn2latex.py",
+        "label": "python: import chess",
+        "match": "from chess"
+      }
+    ],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [
+      "python: import chess"
+    ],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  },
+  "lean-chess": {
+    "manifests": [],
+    "manifest_chess_libs": [],
+    "imports_core": [],
+    "imports_tooling": [],
+    "source_chess_imports": [],
+    "source_chess_imports_tooling": [],
+    "fingerprints_core": [],
+    "fingerprints_tooling": [],
+    "canonical_fingerprints": [],
+    "canonical_fingerprints_tooling": [],
+    "strong_copy_hits": [],
+    "weak_reference_hits": [],
+    "classification": "scratch"
+  }
+}

@@ -1,0 +1,13 @@
+=== weak-anchor sweep start Thu Apr 30 19:48:47 CEST 2026 ===
+weak-anchor: chess-apl-codex54 vs sf_skill0 (10 games at TC=120+1)
+weak-anchor: chess-icon-codex vs sf_skill0 (10 games at TC=120+1)
+weak-anchor: chess-latex-codex-replication vs sf_skill0 (10 games at TC=120+1)
+weak-anchor: chess-why3 vs sf_skill0 (10 games at TC=120+1)
+weak-anchor: chess-newlang-codex vs rustic (10 games at TC=120+1)
+weak-anchor: chess-newlang-codex vs asymptote (10 games at TC=120+1)
+weak-anchor: chess-newlang-codex vs sf_skill0 (10 games at TC=120+1)
+weak-anchor: chess-newlang-codex vs sf_skill5 (10 games at TC=120+1)
+weak-anchor: chess-newlang-codex vs sf_skill10 (10 games at TC=120+1)
+weak-anchor: chess-newlang-codex vs sf_skill15 (10 games at TC=120+1)
+weak-anchor sweep done. PGNs in pgn/anchor/, logs in logs/anchor/.
+=== weak-anchor done Thu Apr 30 23:18:38 CEST 2026 ===

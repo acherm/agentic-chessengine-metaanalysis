@@ -1,0 +1,277 @@
+{
+  "name": "chess-newlang-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-newlang-codex",
+  "primary_language": "C++",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Markdown": 1,
+      "C++": 2,
+      "Shell": 1,
+      "Python": 6
+    },
+    "loc_by_lang": {
+      "TOML": 22,
+      "Markdown": 145,
+      "C++": 3064,
+      "Shell": 74,
+      "Python": 1353
+    },
+    "total_files": 11,
+    "total_loc": 4658
+  },
+  "features": {
+    "FEN parsing": 6,
+    "UCI protocol": 7,
+    "Perft": 6,
+    "Castling": 5,
+    "Promotion": 1,
+    "Check/Checkmate": 2,
+    "PGN": 2,
+    "Board: bitboard": 4,
+    "Minimax/Negamax": 3,
+    "Alpha-beta": 1,
+    "Iterative deepening": 2,
+    "Quiescence": 6,
+    "Transposition table": 4,
+    "Zobrist hashing": 2,
+    "Move ordering (MVV-LVA)": 1,
+    "Null-move pruning": 5,
+    "Late-move reduction (LMR)": 1,
+    "Aspiration windows": 1,
+    "Futility pruning": 1,
+    "Razoring": 1,
+    "Evaluation/PST": 1,
+    "King safety": 2,
+    "Pawn structure": 2,
+    "Mobility": 1,
+    "Material counting": 4,
+    "Opening book": 2,
+    "Time management": 3
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "README.md",
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp",
+      "src/gambit/parser.py",
+      "src/gambit/cli.py",
+      "src/gambit/ast.py"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "engine",
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp",
+      "scripts/run_fixed_suite.sh",
+      "src/gambit/parser.py",
+      "src/gambit/cli.py"
+    ],
+    "Perft": [
+      "main.gmb",
+      "README.md",
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp",
+      "src/gambit/parser.py",
+      "src/gambit/cli.py"
+    ],
+    "Castling": [
+      "main.gmb",
+      "engine",
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp",
+      "openings/benchmark_suite.pgn"
+    ],
+    "En passant": [],
+    "Promotion": [
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Check/Checkmate": [
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "PGN": [
+      "README.md",
+      "scripts/run_fixed_suite.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "main.gmb",
+      "README.md",
+      "runtime/gambit_runtime.cpp",
+      "src/gambit/codegen.py"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "README.md",
+      "engine",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Alpha-beta": [
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "main.gmb",
+      "README.md"
+    ],
+    "Quiescence": [
+      "main.gmb",
+      "README.md",
+      "engine",
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp",
+      "src/gambit/parser.py"
+    ],
+    "Transposition table": [
+      "README.md",
+      "engine",
+      "runtime/gambit_runtime.cpp",
+      "src/gambit/cli.py"
+    ],
+    "Zobrist hashing": [
+      "engine",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "README.md"
+    ],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [
+      "main.gmb",
+      "README.md",
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp",
+      "src/gambit/parser.py"
+    ],
+    "Late-move reduction (LMR)": [
+      "README.md"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "README.md"
+    ],
+    "Futility pruning": [
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Razoring": [
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Evaluation/PST": [
+      "README.md"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [
+      "README.md",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Pawn structure": [
+      "engine",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Mobility": [
+      "README.md"
+    ],
+    "Material counting": [
+      "main.gmb",
+      "README.md",
+      "engine",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Opening book": [
+      "engine",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "runtime/gambit_runtime.hpp",
+      "runtime/gambit_runtime.cpp"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 21,
+    "n_assistant_messages": 200,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "write_stdin": 358,
+      "exec_command": 356,
+      "update_plan": 7
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 80580504,
+        "output": 249794,
+        "cache_read": 78551552,
+        "cache_creation": 0,
+        "reasoning_output": 101615
+      },
+      "usd_estimate": 113.04
+    },
+    "first_ts": "2026-02-27T07:03:42.791Z",
+    "last_ts": "2026-03-01T07:59:50.080Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-27T08-01-44-019c9de7-420a-7c12-bdfb-b7c22c3f4141",
+        "first_ts": "2026-02-27T07:03:42.791Z",
+        "last_ts": "2026-03-01T07:59:50.080Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 21,
+        "tokens": {
+          "input": 80580504,
+          "output": 249794,
+          "cache_read": 78551552,
+          "reasoning_output": 101615
+        },
+        "tool_uses": {
+          "exec_command": 356,
+          "update_plan": 7,
+          "write_stdin": 358
+        },
+        "first_prompt_sample": "Below is a **self-contained language + toolchain specification** for **GAMBIT v0.1** (a chess-engine-centric language). \n\nThis spec is **performance-oriented** and deliberately scoped: v0.1 is \u201cenough to build a real UCI chess engine\u201d with movegen + alpha-beta + TT + evaluation, while leaving room f"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "e357ed2|2026-03-01T08:59:33+01:00|Mathieu Acher|Wire search policy DSL into parser/codegen/runtime",
+      "57a259a|2026-03-01T07:41:14+01:00|Mathieu Acher|Improve search/time management and record Elo assessment (~2170)",
+      "ba1a9d4|2026-03-01T06:30:19+01:00|Mathieu Acher|Initial commit: GAMBIT compiler/runtime and engine improvements"
+    ],
+    "n_commits": 3,
+    "authors": [
+      "3\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

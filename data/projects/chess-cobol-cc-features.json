@@ -1,0 +1,213 @@
+{
+  "project": "chess-cobol-cc",
+  "n_write_events": 331,
+  "cumulative": [
+    0,
+    0,
+    0,
+    6,
+    6,
+    8,
+    8,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    13,
+    13,
+    13,
+    13,
+    15,
+    15,
+    15,
+    15,
+    15,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    21,
+    22,
+    22,
+    22,
+    24,
+    24
+  ],
+  "first_appearances": {
+    "FEN parsing": {
+      "step": 4,
+      "ts": "2026-03-12T20:01:24.260Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Write",
+      "snippet": "P-DC PIC S9(2). * For FEN parsing 01 WS-FEN-STRING"
+    },
+    "UCI protocol": {
+      "step": 4,
+      "ts": "2026-03-12T20:01:24.260Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Write",
+      "snippet": "L CHESS ENGINE - \"CobolChess\" * A UCI-compliant chess engine written in GNU C"
+    },
+    "Castling": {
+      "step": 4,
+      "ts": "2026-03-12T20:01:24.260Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Write",
+      "snippet": "GT-C) END-IF * Handle castling - move the rook IF WS-PIECE"
+    },
+    "En passant": {
+      "step": 4,
+      "ts": "2026-03-12T20:01:24.260Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Write",
+      "snippet": ", WS-MV-FC) TO WS-PIECE * Handle en passant capture IF (WS-PIECE = \"P\" O"
+    },
+    "Promotion": {
+      "step": 4,
+      "ts": "2026-03-12T20:01:24.260Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Write",
+      "snippet": "ve: from-row, from-col, to-row, to-col, promotion piece ************************"
+    },
+    "Check/Checkmate": {
+      "step": 4,
+      "ts": "2026-03-12T20:01:24.260Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Write",
+      "snippet": "). * For legality checking (king in check) 01 WS-KING-ROW PIC"
+    },
+    "Evaluation/PST": {
+      "step": 6,
+      "ts": "2026-03-12T20:50:10.264Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "PIC S9(8) VALUE 0. 01 WS-PST-INDEX PIC 9(2). * Pie"
+    },
+    "Material counting": {
+      "step": 6,
+      "ts": "2026-03-12T20:50:10.264Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "PIECE PIC X(1). 01 WS-MATERIAL PIC S9(8) VALUE 0. 0"
+    },
+    "Alpha-beta": {
+      "step": 8,
+      "ts": "2026-03-12T21:48:59.624Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "***************** * SEARCH STATE (Alpha-Beta) ********************************"
+    },
+    "Minimax/Negamax": {
+      "step": 8,
+      "ts": "2026-03-12T21:50:28.690Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "ARCH (iterative explicit stack) * Negamax with alpha-beta pruning, depth = WS-MAX"
+    },
+    "Iterative deepening": {
+      "step": 17,
+      "ts": "2026-03-13T09:16:18.519Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "TIME-CC PIC 9(2). * Iterative deepening 01 WS-ITER-DEPTH P"
+    },
+    "Time management": {
+      "step": 17,
+      "ts": "2026-03-13T09:16:18.519Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "NT PIC 9(8) VALUE 0. * Time management 01 WS-TIME-LIMIT-CS PIC"
+    },
+    "Move ordering (MVV-LVA)": {
+      "step": 17,
+      "ts": "2026-03-13T09:18:56.846Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "*** * ORDER MOVES AT CURRENT PLY (MVV-LVA for captures first) * Selection s"
+    },
+    "Quiescence": {
+      "step": 21,
+      "ts": "2026-03-14T08:26:18.530Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "* Per-ply data (max 20 plies for quiescence)"
+    },
+    "Killer moves": {
+      "step": 21,
+      "ts": "2026-03-14T08:26:18.530Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "TTACKER-VAL PIC S9(8). * Killer moves (2 per ply, max 20 plies) 01 W"
+    },
+    "History heuristic": {
+      "step": 26,
+      "ts": "2026-03-16T19:54:44.970Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "EXT PIC 9 VALUE 0. * History heuristic table (from-sq * to-sq, 64x64) *"
+    },
+    "Futility pruning": {
+      "step": 26,
+      "ts": "2026-03-16T19:54:44.970Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "N PIC S9(8) VALUE 200. * Futility pruning 01 WS-FUTILITY-MARGIN"
+    },
+    "Aspiration windows": {
+      "step": 26,
+      "ts": "2026-03-20T10:15:49.736Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "* Aspiration window 01 WS-ASP-ALPHA PIC"
+    },
+    "Null-move pruning": {
+      "step": 26,
+      "ts": "2026-03-20T14:22:31.889Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "* Reverse futility pruning (static null move) * At shallow depths, if eval >>"
+    },
+    "Late-move reduction (LMR)": {
+      "step": 32,
+      "ts": "2026-03-21T16:31:43.889Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "WS-PLY-SV-PROMO PIC X(1). * LMR state per ply 10 WS-PLY-SV-"
+    },
+    "Pawn structure": {
+      "step": 32,
+      "ts": "2026-03-21T16:31:53.976Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "* Most advanced pawn rank per file (for passed pawn) 01 WS-WHITE-PAWN-BEST-RANK."
+    },
+    "Tapered evaluation": {
+      "step": 33,
+      "ts": "2026-03-23T14:53:32.946Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "IMES. * Game phase tracking (for tapered eval) 01 WS-GAME-PHASE"
+    },
+    "Principal-variation (PV)": {
+      "step": 36,
+      "ts": "2026-03-24T15:08:34.427Z",
+      "file": "/Users/mathieuacher/SANDBOX/chess-cobol-cc/chess-engine.cob",
+      "kind": "Edit",
+      "snippet": "MOVE 0 TO WS-MV-SCORE * PV move from previous iteration at root"
+    },
+    "King safety": {
+      "step": 36,
+      "ts": "2026-03-24T23:41:44.888Z",
+      "file": "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-chess-cobol-cc/memory/project_elo_progress.md",
+      "kind": "Write",
+      "snippet": "Elo. Integer division rounding blunted king safety. - Check extensions at horizon: 45% (9/"
+    }
+  }
+}

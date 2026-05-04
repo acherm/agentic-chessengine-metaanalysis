@@ -1,0 +1,82 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-cobol-cc vs sf_skill4)
+Started game 2 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 2 (sf_skill4 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill4: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 1 (chess-cobol-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill4: 0 - 2 - 0  [0.000] 2
+Started game 4 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 3 (chess-cobol-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill4: 0 - 3 - 0  [0.000] 3
+Started game 5 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 4 (sf_skill4 vs chess-cobol-cc): 1-0 {White wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 0 - 4 - 0  [0.000] 4
+Started game 6 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 5 (chess-cobol-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill4: 0 - 5 - 0  [0.000] 5
+Started game 7 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 6 (sf_skill4 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill4: 0 - 6 - 0  [0.000] 6
+Started game 8 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 7 (chess-cobol-cc vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 0 - 7 - 0  [0.000] 7
+Started game 9 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 8 (sf_skill4 vs chess-cobol-cc): 1-0 {White wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 0 - 8 - 0  [0.000] 8
+Started game 10 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 10 (sf_skill4 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill4: 0 - 9 - 0  [0.000] 9
+Started game 11 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 9 (chess-cobol-cc vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 0 - 10 - 0  [0.000] 10
+Started game 12 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 11 (chess-cobol-cc vs sf_skill4): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill4: 1 - 10 - 0  [0.091] 11
+Started game 13 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 12 (sf_skill4 vs chess-cobol-cc): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 2 - 10 - 0  [0.167] 12
+Started game 14 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 13 (chess-cobol-cc vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 2 - 11 - 0  [0.154] 13
+Started game 15 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 14 (sf_skill4 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill4: 2 - 12 - 0  [0.143] 14
+Started game 16 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 16 (sf_skill4 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill4: 2 - 13 - 0  [0.133] 15
+Started game 17 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 15 (chess-cobol-cc vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 2 - 14 - 0  [0.125] 16
+Started game 18 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 17 (chess-cobol-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill4: 2 - 15 - 0  [0.118] 17
+Started game 19 of 20 (chess-cobol-cc vs sf_skill4)
+Finished game 18 (sf_skill4 vs chess-cobol-cc): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill4: 3 - 15 - 0  [0.167] 18
+Started game 20 of 20 (sf_skill4 vs chess-cobol-cc)
+Finished game 20 (sf_skill4 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill4: 3 - 16 - 0  [0.158] 19
+Finished game 19 (chess-cobol-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill4: 3 - 17 - 0  [0.150] 20
+...      chess-cobol-cc playing White: 1 - 9 - 0  [0.100] 10
+...      chess-cobol-cc playing Black: 2 - 8 - 0  [0.200] 10
+...      White vs Black: 9 - 11 - 0  [0.450] 20
+Elo difference: -301.3 +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-cobol-cc
+   "Loss: Black mates": 5
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 6
+   "Loss: White wins by adjudication": 2
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 1
+Player: sf_skill4
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 1
+   "Win: Black mates": 5
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 6
+   "Win: White wins by adjudication": 2
+Finished match

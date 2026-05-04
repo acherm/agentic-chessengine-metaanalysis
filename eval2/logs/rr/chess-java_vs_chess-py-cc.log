@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 2 of 2 (chess-py-cc vs chess-java)
+Started game 1 of 2 (chess-java vs chess-py-cc)
+Finished game 1 (chess-java vs chess-py-cc): 0-1 {Black wins by adjudication}
+Score of chess-java vs chess-py-cc: 0 - 1 - 0  [0.000] 1
+Finished game 2 (chess-py-cc vs chess-java): 0-1 {Black wins by adjudication}
+Score of chess-java vs chess-py-cc: 1 - 1 - 0  [0.500] 2
+...      chess-java playing White: 0 - 1 - 0  [0.000] 1
+...      chess-java playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 0 - 2 - 0  [0.000] 2
+Elo difference: 0.0 +/- nan, LOS: 50.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-java
+   "Loss: Black wins by adjudication": 1
+   "Win: Black wins by adjudication": 1
+Player: chess-py-cc
+   "Loss: Black wins by adjudication": 1
+   "Win: Black wins by adjudication": 1
+Finished match

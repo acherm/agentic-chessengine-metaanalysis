@@ -1,0 +1,260 @@
+{
+  "name": "chess-py-cc",
+  "path": "/Users/mathieuacher/SANDBOX/chess-py-cc",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Python": 21,
+      "Shell": 1
+    },
+    "loc_by_lang": {
+      "Python": 2968,
+      "Shell": 27
+    },
+    "total_files": 22,
+    "total_loc": 2995
+  },
+  "features": {
+    "FEN parsing": 5,
+    "UCI protocol": 6,
+    "Perft": 4,
+    "Castling": 6,
+    "En passant": 4,
+    "Promotion": 6,
+    "Check/Checkmate": 5,
+    "PGN": 1,
+    "Board: bitboard": 6,
+    "Board: mailbox 8x8": 4,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 2,
+    "Transposition table": 8,
+    "Zobrist hashing": 3,
+    "Move ordering (MVV-LVA)": 3,
+    "Killer moves": 2,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 3,
+    "Late-move reduction (LMR)": 1,
+    "Aspiration windows": 1,
+    "Futility pruning": 1,
+    "Razoring": 1,
+    "Evaluation/PST": 3,
+    "Tapered evaluation": 2,
+    "King safety": 1,
+    "Pawn structure": 1,
+    "Mobility": 1,
+    "Material counting": 7,
+    "Time management": 4
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "tools/perft_bench.py",
+      "tests/test_board.py",
+      "tests/test_perft.py",
+      "engine/board.py",
+      "engine/uci.py"
+    ],
+    "UCI protocol": [
+      "main.py",
+      "tools/run_tournament.sh",
+      "tests/test_search.py",
+      "engine/timeman.py",
+      "engine/types.py",
+      "engine/uci.py"
+    ],
+    "Perft": [
+      "tools/perft_bench.py",
+      "tests/test_perft.py",
+      "engine/movegen.py",
+      "engine/uci.py"
+    ],
+    "Castling": [
+      "tests/test_movegen.py",
+      "tests/test_board.py",
+      "tests/test_perft.py",
+      "engine/board.py",
+      "engine/movegen.py",
+      "engine/types.py"
+    ],
+    "En passant": [
+      "tables/zobrist.py",
+      "tests/test_movegen.py",
+      "engine/board.py",
+      "engine/movegen.py"
+    ],
+    "Promotion": [
+      "tests/test_movegen.py",
+      "tests/test_perft.py",
+      "engine/board.py",
+      "engine/movegen.py",
+      "engine/types.py",
+      "engine/search.py"
+    ],
+    "Check/Checkmate": [
+      "tests/test_search.py",
+      "tests/test_movegen.py",
+      "tests/test_board.py",
+      "engine/board.py",
+      "engine/search.py"
+    ],
+    "PGN": [
+      "tools/run_tournament.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "engine/board.py",
+      "engine/movegen.py",
+      "engine/types.py",
+      "engine/search.py",
+      "engine/evaluate.py",
+      "engine/bitboard.py"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "engine/board.py",
+      "engine/movorder.py",
+      "engine/types.py",
+      "engine/search.py"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [
+      "engine/search.py"
+    ],
+    "Iterative deepening": [
+      "engine/search.py"
+    ],
+    "Quiescence": [
+      "engine/movegen.py",
+      "engine/search.py"
+    ],
+    "Transposition table": [
+      "tables/zobrist.py",
+      "tests/test_search.py",
+      "tests/test_board.py",
+      "engine/board.py",
+      "engine/movorder.py",
+      "engine/tt.py",
+      "engine/uci.py",
+      "engine/search.py"
+    ],
+    "Zobrist hashing": [
+      "tables/zobrist.py",
+      "tests/test_board.py",
+      "engine/board.py"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "engine/movorder.py",
+      "engine/types.py",
+      "engine/search.py"
+    ],
+    "Killer moves": [
+      "engine/movorder.py",
+      "engine/search.py"
+    ],
+    "History heuristic": [
+      "engine/movorder.py"
+    ],
+    "Principal-variation (PV)": [
+      "engine/search.py"
+    ],
+    "Null-move pruning": [
+      "tests/test_board.py",
+      "engine/board.py",
+      "engine/search.py"
+    ],
+    "Late-move reduction (LMR)": [
+      "engine/search.py"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "engine/search.py"
+    ],
+    "Futility pruning": [
+      "engine/search.py"
+    ],
+    "Razoring": [
+      "engine/search.py"
+    ],
+    "Evaluation/PST": [
+      "tables/pst.py",
+      "engine/board.py",
+      "engine/evaluate.py"
+    ],
+    "Tapered evaluation": [
+      "tables/pst.py",
+      "engine/evaluate.py"
+    ],
+    "King safety": [
+      "engine/evaluate.py"
+    ],
+    "Pawn structure": [
+      "engine/evaluate.py"
+    ],
+    "Mobility": [
+      "engine/evaluate.py"
+    ],
+    "Material counting": [
+      "tables/pst.py",
+      "tests/test_search.py",
+      "engine/board.py",
+      "engine/movorder.py",
+      "engine/types.py",
+      "engine/search.py",
+      "engine/evaluate.py"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "tools/run_tournament.sh",
+      "engine/timeman.py",
+      "engine/uci.py",
+      "engine/search.py"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 1,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": false
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "name": "chess-printf-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-printf-codex",
+  "primary_language": "C",
+  "loc": {
+    "files_by_lang": {
+      "C": 52,
+      "Markdown": 2,
+      "Shell": 1,
+      "Python": 4
+    },
+    "loc_by_lang": {
+      "C": 52274,
+      "Markdown": 403,
+      "Shell": 17,
+      "Python": 2945
+    },
+    "total_files": 59,
+    "total_loc": 55639
+  },
+  "features": {
+    "Material counting": 2
+  },
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "README.md",
+      "tools/c2pop.py"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 5,
+    "n_user_prompts": 118,
+    "n_assistant_messages": 454,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 1256,
+      "write_stdin": 26
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 132823623,
+        "output": 1003008,
+        "cache_read": 126583680,
+        "cache_creation": 0,
+        "reasoning_output": 633230
+      },
+      "usd_estimate": 191.88
+    },
+    "first_ts": "2026-03-03T18:34:47.863Z",
+    "last_ts": "2026-03-05T13:55:23.543Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-03-03T19-33-31-019cb4fa-0b38-7f03-a937-dc2ffce0d095",
+        "first_ts": "2026-03-03T18:34:47.863Z",
+        "last_ts": "2026-03-04T14:22:19.630Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 27,
+        "tokens": {
+          "input": 25137758,
+          "output": 247574,
+          "cache_read": 23768064,
+          "reasoning_output": 153259
+        },
+        "tool_uses": {
+          "exec_command": 187
+        },
+        "first_prompt_sample": "read carefuly https://github.com/carlini/printf-tac-toe Basically git clone and analyze it. It show an implementation of tic-tac-toe using printf... \nNow implement a basic chess engine using printf exclusively, in the style of the repo\n"
+      },
+      {
+        "session_id": "rollout-2026-03-04T12-49-44-019cb8ae-ba06-7921-bce7-93852398dbf4",
+        "first_ts": "2026-03-04T11:50:46.833Z",
+        "last_ts": "2026-03-04T13:46:15.386Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 16,
+        "tokens": {
+          "input": 10949767,
+          "output": 121274,
+          "cache_read": 10551168,
+          "reasoning_output": 88032
+        },
+        "tool_uses": {
+          "exec_command": 94,
+          "write_stdin": 5
+        },
+        "first_prompt_sample": "still in the spirit of https://github.com/carlini/printf-tac-toe \nNow implement a basic snake using printf exclusively (as we have done it for a chess engine in this repo)\n"
+      },
+      {
+        "session_id": "rollout-2026-03-04T14-12-29-019cb8fa-7c39-77d0-8fc5-87840126aeed",
+        "first_ts": "2026-03-04T13:16:12.015Z",
+        "last_ts": "2026-03-05T13:55:23.543Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 63,
+        "tokens": {
+          "input": 91390470,
+          "output": 565413,
+          "cache_read": 87474560,
+          "reasoning_output": 350418
+        },
+        "tool_uses": {
+          "exec_command": 867,
+          "write_stdin": 21
+        },
+        "first_prompt_sample": "Here\u2019s a **refined POP Purity checklist** written as an **actionable coding-agent skill**. It\u2019s designed to prevent \u201cPOP-shaped but not POP\u201d solutions and to push the agent toward *format-string-as-VM* implementations.\n\n---\n\n## POP Purity Skill for a Coding Agent\n\n### Mission\n\nImplement the program "
+      },
+      {
+        "session_id": "rollout-2026-03-04T16-52-07-019cb98c-a28d-7723-8aa8-b71203a9be2b",
+        "first_ts": "2026-03-04T15:52:41.478Z",
+        "last_ts": "2026-03-04T16:47:50.989Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 7,
+        "tokens": {
+          "input": 3551017,
+          "output": 50674,
+          "cache_read": 3260672,
+          "reasoning_output": 29857
+        },
+        "tool_uses": {
+          "exec_command": 59
+        },
+        "first_prompt_sample": "here are some explanations:\n\nTic-Tac-Toe\nThe game itself is represented as a board of 18 bits, 9 bits per player, along with a turn counter that alternates between player 1 and player 2.\n\nTo detect who has won, we implement the following logic. Let A, B, and C be pointers to three squares in a row t"
+      },
+      {
+        "session_id": "rollout-2026-03-05T09-55-53-019cbd35-ea6b-7711-80c7-cf13cadeb241",
+        "first_ts": "2026-03-05T08:57:07.726Z",
+        "last_ts": "2026-03-05T09:26:08.884Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 5,
+        "tokens": {
+          "input": 1794611,
+          "output": 18073,
+          "cache_read": 1529216,
+          "reasoning_output": 11664
+        },
+        "tool_uses": {
+          "exec_command": 49
+        },
+        "first_prompt_sample": "I'd like you review all coding sessions/threads of this folder/repo that codex made... \n\nMy actual \"story\" is like this:\n\nbasically (1) first impression leads to apparent POP success, with even a working chess engine, but it was\n  just partly implemented with POP spirit, and a careful analysis shows"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "1d77768|2026-03-05T00:52:36+01:00|Mathieu Acher|Add basic snake subset example with POP artifact and tape encoder",
+      "0bce8dc|2026-03-05T00:44:18+01:00|Mathieu Acher|Document readable output filter for POP padded runs",
+      "e3dd2f5|2026-03-05T00:30:34+01:00|Mathieu Acher|Document expanded POP output size vs macro-compressed style",
+      "79f957f|2026-03-04T23:28:49+01:00|Mathieu Acher|Add generated POP artifacts and refresh compiler status docs",
+      "da1c4c3|2026-03-04T23:24:12+01:00|Mathieu Acher|Fix vm-pure scoring and host-snapshot audit",
+      "1fe61e2|2026-03-04T16:01:36+01:00|Mathieu Acher|Tighten VM-purity audit and reclassify strict-mode tic-tac-toe",
+      "f72de87|2026-03-04T15:39:23+01:00|Mathieu Acher|Add c2pop compiler MVP with purity modes, tape input, and examples",
+      "cae4aed|2026-03-04T14:01:12+01:00|Mathieu Acher|Refine POP chess core with script tape and board %hhn writes",
+      "2c1b58f|2026-03-04T13:40:35+01:00|Mathieu Acher|Remove Rust and Java variant docs",
+      "d31d349|2026-03-04T13:34:38+01:00|Mathieu Acher|Add strict POP snake driven by printf format semantics",
+      "79c9e33|2026-03-03T22:23:34+01:00|Mathieu Acher|Initial printf-oriented chess engine"
+    ],
+    "n_commits": 11,
+    "authors": [
+      "11\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_e2000 vs cplusplus-chess)
+Started game 1 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 2 (sf_e2000 vs cplusplus-chess): 1/2-1/2 {Draw by 3-fold repetition}
+Score of cplusplus-chess vs sf_e2000: 0 - 0 - 1  [0.500] 1
+Started game 3 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 1 (cplusplus-chess vs sf_e2000): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 1 - 0 - 1  [0.750] 2
+Started game 4 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 3 (cplusplus-chess vs sf_e2000): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 2 - 0 - 1  [0.833] 3
+Started game 5 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 4 (sf_e2000 vs cplusplus-chess): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 3 - 0 - 1  [0.875] 4
+Started game 6 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 5 (cplusplus-chess vs sf_e2000): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 3 - 1 - 1  [0.700] 5
+Started game 7 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 6 (sf_e2000 vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 3 - 2 - 1  [0.583] 6
+Started game 8 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 7 (cplusplus-chess vs sf_e2000): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 4 - 2 - 1  [0.643] 7
+Started game 9 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 9 (cplusplus-chess vs sf_e2000): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 5 - 2 - 1  [0.688] 8
+Started game 10 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 8 (sf_e2000 vs cplusplus-chess): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 5 - 3 - 1  [0.611] 9
+Started game 11 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 10 (sf_e2000 vs cplusplus-chess): 0-1 {Black mates}
+Score of cplusplus-chess vs sf_e2000: 6 - 3 - 1  [0.650] 10
+Started game 12 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 11 (cplusplus-chess vs sf_e2000): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 7 - 3 - 1  [0.682] 11
+Started game 13 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 12 (sf_e2000 vs cplusplus-chess): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 7 - 4 - 1  [0.625] 12
+Started game 14 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 13 (cplusplus-chess vs sf_e2000): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 8 - 4 - 1  [0.654] 13
+Started game 15 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 14 (sf_e2000 vs cplusplus-chess): 0-1 {Black mates}
+Score of cplusplus-chess vs sf_e2000: 9 - 4 - 1  [0.679] 14
+Started game 16 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 15 (cplusplus-chess vs sf_e2000): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 10 - 4 - 1  [0.700] 15
+Started game 17 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 17 (cplusplus-chess vs sf_e2000): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 11 - 4 - 1  [0.719] 16
+Started game 18 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 16 (sf_e2000 vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 11 - 5 - 1  [0.676] 17
+Started game 19 of 20 (cplusplus-chess vs sf_e2000)
+Finished game 18 (sf_e2000 vs cplusplus-chess): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 12 - 5 - 1  [0.694] 18
+Started game 20 of 20 (sf_e2000 vs cplusplus-chess)
+Finished game 19 (cplusplus-chess vs sf_e2000): 1-0 {White mates}
+Score of cplusplus-chess vs sf_e2000: 13 - 5 - 1  [0.711] 19
+Finished game 20 (sf_e2000 vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs sf_e2000: 13 - 6 - 1  [0.675] 20
+...      cplusplus-chess playing White: 9 - 1 - 0  [0.900] 10
+...      cplusplus-chess playing Black: 4 - 5 - 1  [0.450] 10
+...      White vs Black: 14 - 5 - 1  [0.725] 20
+Elo difference: 127.0 +/- 176.6, LOS: 94.6 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: cplusplus-chess
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 3
+   "Win: Black mates": 2
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 7
+   "Win: White wins by adjudication": 2
+Player: sf_e2000
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 2
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 7
+   "Loss: White wins by adjudication": 2
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 3
+Finished match

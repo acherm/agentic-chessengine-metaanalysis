@@ -1,0 +1,262 @@
+{
+  "name": "chess-py",
+  "path": "/Users/mathieuacher/SANDBOX/chess-py",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1,
+      "Shell": 1,
+      "Text": 1,
+      "Python": 19
+    },
+    "loc_by_lang": {
+      "Markdown": 84,
+      "Shell": 4,
+      "Text": 33,
+      "Python": 3769
+    },
+    "total_files": 22,
+    "total_loc": 3890
+  },
+  "features": {
+    "FEN parsing": 10,
+    "UCI protocol": 11,
+    "Perft": 3,
+    "Castling": 4,
+    "En passant": 2,
+    "Promotion": 5,
+    "Check/Checkmate": 3,
+    "PGN": 3,
+    "Board: 0x88": 5,
+    "Minimax/Negamax": 2,
+    "Alpha-beta": 2,
+    "Iterative deepening": 2,
+    "Quiescence": 2,
+    "Transposition table": 3,
+    "Zobrist hashing": 3,
+    "Null-move pruning": 3,
+    "Futility pruning": 1,
+    "Evaluation/PST": 3,
+    "Tapered evaluation": 1,
+    "Pawn structure": 1,
+    "Mobility": 1,
+    "Material counting": 3,
+    "Time management": 5
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "README.md",
+      "openings.example.txt",
+      "tools/perft.py",
+      "tools/rating.py",
+      "tools/match.py",
+      "chesspy/board.py",
+      "chesspy/uci.py",
+      "tests/test_openings.py",
+      "tests/test_null_move.py",
+      "tests/test_perft.py"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "openings.example.txt",
+      "tools/rating.py",
+      "tools/match.py",
+      "chesspy/board.py",
+      "chesspy/__init__.py",
+      "chesspy/uci.py",
+      "chesspy/move.py",
+      "chesspy/search.py",
+      "chesspy/__main__.py",
+      "tests/test_match_runner.py"
+    ],
+    "Perft": [
+      "README.md",
+      "tools/perft.py",
+      "tests/test_perft.py"
+    ],
+    "Castling": [
+      "README.md",
+      "tools/match.py",
+      "chesspy/board.py",
+      "chesspy/__init__.py"
+    ],
+    "En passant": [
+      "README.md",
+      "chesspy/board.py"
+    ],
+    "Promotion": [
+      "README.md",
+      "chesspy/board.py",
+      "chesspy/__init__.py",
+      "chesspy/move.py",
+      "chesspy/search.py"
+    ],
+    "Check/Checkmate": [
+      "tools/match.py",
+      "chesspy/board.py",
+      "chesspy/search.py"
+    ],
+    "PGN": [
+      "README.md",
+      "tools/rating.py",
+      "tools/match.py"
+    ],
+    "Board: 0x88": [
+      "README.md",
+      "chesspy/board.py",
+      "chesspy/squares.py",
+      "chesspy/search.py",
+      "chesspy/eval.py"
+    ],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "README.md",
+      "chesspy/search.py"
+    ],
+    "Alpha-beta": [
+      "README.md",
+      "chesspy/__init__.py"
+    ],
+    "Iterative deepening": [
+      "README.md",
+      "chesspy/__init__.py"
+    ],
+    "Quiescence": [
+      "README.md",
+      "chesspy/search.py"
+    ],
+    "Transposition table": [
+      "chesspy/board.py",
+      "chesspy/search.py",
+      "tests/test_null_move.py"
+    ],
+    "Zobrist hashing": [
+      "chesspy/board.py",
+      "chesspy/search.py",
+      "tests/test_null_move.py"
+    ],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [
+      "chesspy/board.py",
+      "chesspy/search.py",
+      "tests/test_null_move.py"
+    ],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [
+      "chesspy/search.py"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "chesspy/board.py",
+      "chesspy/zobrist.py",
+      "chesspy/eval.py"
+    ],
+    "Tapered evaluation": [
+      "chesspy/eval.py"
+    ],
+    "King safety": [],
+    "Pawn structure": [
+      "chesspy/eval.py"
+    ],
+    "Mobility": [
+      "chesspy/eval.py"
+    ],
+    "Material counting": [
+      "chesspy/board.py",
+      "chesspy/search.py",
+      "chesspy/eval.py"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "tools/rating.py",
+      "tools/match.py",
+      "chesspy/uci.py",
+      "tests/test_match_runner.py"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 10,
+    "n_assistant_messages": 16,
+    "models": [
+      "gpt-5.2",
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 136,
+      "write_stdin": 58,
+      "update_plan": 24
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 19373958,
+        "output": 273823,
+        "cache_read": 18671488,
+        "cache_creation": 0,
+        "reasoning_output": 206400
+      },
+      "usd_estimate": 29.29
+    },
+    "first_ts": "2026-02-11T08:12:29.320Z",
+    "last_ts": "2026-02-16T21:01:57.843Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-11T09-12-29-019c4bc2-4701-7961-a5be-1cd73453de50",
+        "first_ts": "2026-02-11T08:12:29.320Z",
+        "last_ts": "2026-02-16T21:01:57.843Z",
+        "models": [
+          "gpt-5.2",
+          "gpt-5.3-codex"
+        ],
+        "turns": 10,
+        "tokens": {
+          "input": 19373958,
+          "output": 273823,
+          "cache_read": 18671488,
+          "reasoning_output": 206400
+        },
+        "tool_uses": {
+          "update_plan": 24,
+          "exec_command": 136,
+          "write_stdin": 58
+        },
+        "first_prompt_sample": "I want to build a chess engine in Python programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

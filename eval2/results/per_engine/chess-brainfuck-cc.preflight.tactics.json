@@ -1,0 +1,5 @@
+{
+  "engine": "chess-brainfuck-cc",
+  "error": "BrokenPipeError(32, 'Broken pipe')",
+  "results": []
+}

@@ -1,0 +1,262 @@
+build eval2/stockfish:16.1
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.55kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [build 1/6] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#4 DONE 0.0s
+
+#5 [build 4/6] RUN git clone --depth 1 --branch sf_16.1 https://github.com/official-stockfish/Stockfish.git
+#5 CACHED
+
+#6 [build 6/6] RUN ARCH=$(uname -m) && case "$ARCH" in       x86_64)        SF_ARCH=x86-64-modern ;;       aarch64|arm64) SF_ARCH=armv8 ;;       *) echo "Unsupported arch $ARCH" >&2; exit 1 ;;     esac &&     make -j build ARCH="$SF_ARCH" && strip stockfish && cp stockfish /usr/local/bin/
+#6 CACHED
+
+#7 [build 5/6] WORKDIR /src/Stockfish/src
+#7 CACHED
+
+#8 [build 2/6] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential git ca-certificates wget     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 3/6] WORKDIR /src
+#9 CACHED
+
+#10 [stage-1 2/2] COPY --from=build /usr/local/bin/stockfish /usr/local/bin/stockfish
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:7685bcb84366d102eb5c3b5e65b9484147bac604cd7daaa8292b79bf511d3ab6 done
+#11 exporting config sha256:f80127a828ed0e085f1cf18c7c444e68f0fc150e3de1949e5a2e85397b244c5b done
+#11 exporting attestation manifest sha256:ceb83584ace89596288580182ad40ed8bf32c08f6ce1c69142e88b162fa1f4c6 0.0s done
+#11 exporting manifest list sha256:a156fa96b45b26497281b01feebfad5442a9f7990e43bed01e693b54a1a4d257 0.0s done
+#11 naming to docker.io/eval2/stockfish:16.1 done
+#11 unpacking to docker.io/eval2/stockfish:16.1 done
+#11 DONE 0.0s
+build eval2/anchor-tscp181:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.41kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 66B done
+#4 DONE 0.0s
+
+#5 [build 1/5] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 4/5] ADD https://www.tckerrigan.com/Chess/TSCP/tscp181.zip tscp181.zip
+#6 DONE 0.5s
+
+#7 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends       polyglot     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential wget unzip ca-certificates     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 3/5] WORKDIR /src
+#9 CACHED
+
+#10 [build 4/5] ADD https://www.tckerrigan.com/Chess/TSCP/tscp181.zip tscp181.zip
+#10 CACHED
+
+#11 [build 5/5] RUN unzip tscp181.zip     && cd tscp181     && gcc -O2 -o tscp main.c board.c book.c data.c eval.c search.c
+#11 CACHED
+
+#12 [stage-1 3/4] COPY --from=build /src/tscp181/tscp /usr/local/bin/tscp
+#12 CACHED
+
+#13 [stage-1 4/4] COPY tscp.cfg /etc/tscp/polyglot.cfg
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:87ffd8edfb03c5374f3346b1ce0c574936c05caa90288afd4b0e6e110a591806 done
+#14 exporting config sha256:ac1d1289e99d188d03912f6fda60ca59cdd9772eb98c3ed6a550858acb120a6d done
+#14 exporting attestation manifest sha256:0cde9a36f598be2b59dd39c109d7e98e9382f06317bc2b84eb0ac24ffe8619dc done
+#14 exporting manifest list sha256:381e3e37df7a6278c4bce0dd5d2e7d4dffb216eb06ce042f3aab0a37666398da done
+#14 naming to docker.io/eval2/anchor-tscp181:latest done
+#14 unpacking to docker.io/eval2/anchor-tscp181:latest done
+#14 DONE 0.0s
+build eval2/anchor-madchess32:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.08kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:8.0
+#2 DONE 0.1s
+
+#3 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:8.0
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 resolve mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183 done
+#5 DONE 0.0s
+
+#6 [build 2/6] WORKDIR /src
+#6 CACHED
+
+#7 [build 3/6] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6
+#8 resolve mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6 done
+#8 CACHED
+
+#9 [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+#9 0.090 Cloning into 'MadChess'...
+#9 0.333 fatal: could not read Username for 'https://github.com': No such device or address
+#9 ERROR: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+------
+ > [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git:
+0.090 Cloning into 'MadChess'...
+0.333 fatal: could not read Username for 'https://github.com': No such device or address
+------
+Dockerfile:13
+--------------------
+  11 |     # NOTE: MadChess git tags don't follow a "v3.2" convention; tracking master
+  12 |     # for now. Pin to a specific commit SHA once we know the build works.
+  13 | >>> RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+  14 |     WORKDIR /src/MadChess
+  15 |     RUN dotnet publish -c Release -o /opt/madchess \
+--------------------
+ERROR: failed to solve: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+FAILED eval2/anchor-madchess32:latest
+build eval2/anchor-countergo40:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 927B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.22-bookworm
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/2] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 1/5] FROM docker.io/library/golang:1.22-bookworm@sha256:3d699e4d15d0f8f13c9195c0632a16702b8cbdece2955af1c23b37ae5d55a253
+#6 resolve docker.io/library/golang:1.22-bookworm@sha256:3d699e4d15d0f8f13c9195c0632a16702b8cbdece2955af1c23b37ae5d55a253 done
+#6 DONE 0.0s
+
+#7 [build 3/5] RUN git clone --depth 1 https://github.com/ChizhovVadim/CounterGo.git
+#7 CACHED
+
+#8 [build 5/5] RUN go build -o /opt/countergo/counter ./cmd/counter  || go build -o /opt/countergo/counter .
+#8 CACHED
+
+#9 [build 4/5] WORKDIR /src/CounterGo
+#9 CACHED
+
+#10 [build 2/5] WORKDIR /src
+#10 CACHED
+
+#11 [stage-1 2/2] COPY --from=build /opt/countergo/counter /opt/countergo/counter
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:20cfc3f8b49c8bec150ac0cf60a269616ca5468e712b3bb736db03b98eadd457 done
+#12 exporting config sha256:a6d4814f95afc67c63776d8c4670578b09c28345b72f318ff0265af4c26f53bf done
+#12 exporting attestation manifest sha256:94091c795ed3b997cba4dc8b7c15c08e647d68e805f465424eeab9edeeb0d03a done
+#12 exporting manifest list sha256:ec3812a0302a4c18cf35a9b5b1da90f0c698ea6bd1180be6690c73234409e849 done
+#12 naming to docker.io/eval2/anchor-countergo40:latest done
+#12 unpacking to docker.io/eval2/anchor-countergo40:latest done
+#12 DONE 0.0s
+build eval2/chess-apl-codex54:latest  (src=/Users/mathieuacher/SANDBOX/chess-apl-codex54)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.91kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [build 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [stage-1 1/5] FROM docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf
+#6 resolve docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf done
+#6 DONE 0.0s
+
+#7 [build 2/4] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential wget ca-certificates libreadline-dev libncurses-dev       libpcre3-dev libsqlite3-dev       autoconf automake autoconf-archive     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [build 3/4] WORKDIR /tmp
+#8 CACHED
+
+#9 [build 4/4] RUN wget -q https://ftp.gnu.org/gnu/apl/apl-1.8.tar.gz  && tar xzf apl-1.8.tar.gz  && cd apl-1.8  && cp /usr/share/misc/config.sub /usr/share/misc/config.guess buildtag/ 2>/dev/null || true  && cp /usr/share/automake-*/config.sub config.sub  && cp /usr/share/automake-*/config.guess config.guess  && CXXFLAGS="-O2 -Wno-error" CFLAGS="-O2 -Wno-error"     ./configure --prefix=/usr/local  && make -j && make install
+#9 CACHED
+
+#10 [stage-1 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       libreadline8t64 libncurses6 libpcre2-8-0 libsqlite3-0     && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [internal] load build context
+#11 transferring context: 121.20kB done
+#11 DONE 0.0s
+
+#12 [stage-1 3/5] COPY --from=build /usr/local /usr/local
+#12 DONE 0.0s
+
+#13 [stage-1 4/5] COPY src/ /opt/engine/
+#13 DONE 0.0s
+
+#14 [stage-1 5/5] WORKDIR /opt/engine
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.4s done
+#15 exporting manifest sha256:a85e1ef33252c4f71d2a4256e985d753da60c2ca29074367ca4c9a3800887528 done
+#15 exporting config sha256:7de38bc7641566d0e1072c23fb078505b47aa955fd2ba969971f105ee986c6ae done
+#15 exporting attestation manifest sha256:6943c3035abd61d0645d17c198782cd868dcb981a055fed9896e6e91c9f50203 done
+#15 exporting manifest list sha256:8c48482ea1b92f6e7b6e4662185bec91ed7042ea7a925fd309612f99d5871718 done
+#15 naming to docker.io/eval2/chess-apl-codex54:latest done
+#15 unpacking to docker.io/eval2/chess-apl-codex54:latest 0.1s done
+#15 DONE 0.5s
+
+Build failures: 1 (see results/build_failures.txt)
+build_images.sh done.

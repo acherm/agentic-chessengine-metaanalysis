@@ -1,0 +1,92 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-cobol-cc vs sf_skill5)
+Started game 2 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 1 (chess-cobol-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill5: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 2 (sf_skill5 vs chess-cobol-cc): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 1 - 1 - 0  [0.500] 2
+Started game 4 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 3 (chess-cobol-cc vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 1 - 2 - 0  [0.333] 3
+Started game 5 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 4 (sf_skill5 vs chess-cobol-cc): 1-0 {White wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 1 - 3 - 0  [0.250] 4
+Started game 6 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 6 (sf_skill5 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill5: 1 - 4 - 0  [0.200] 5
+Started game 7 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 5 (chess-cobol-cc vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-cobol-cc vs sf_skill5: 1 - 4 - 1  [0.250] 6
+Started game 8 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 8 (sf_skill5 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill5: 1 - 5 - 1  [0.214] 7
+Started game 9 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 7 (chess-cobol-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill5: 1 - 6 - 1  [0.188] 8
+Started game 10 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 9 (chess-cobol-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill5: 1 - 7 - 1  [0.167] 9
+Started game 11 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 10 (sf_skill5 vs chess-cobol-cc): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 2 - 7 - 1  [0.250] 10
+Started game 12 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 11 (chess-cobol-cc vs sf_skill5): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 2 - 8 - 1  [0.227] 11
+Started game 13 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 12 (sf_skill5 vs chess-cobol-cc): 0-1 {Black wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 3 - 8 - 1  [0.292] 12
+Started game 14 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 13 (chess-cobol-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill5: 3 - 9 - 1  [0.269] 13
+Started game 15 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 14 (sf_skill5 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill5: 3 - 10 - 1  [0.250] 14
+Started game 16 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 15 (chess-cobol-cc vs sf_skill5): 0-1 {Black mates}
+Score of chess-cobol-cc vs sf_skill5: 3 - 11 - 1  [0.233] 15
+Started game 17 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 16 (sf_skill5 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill5: 3 - 12 - 1  [0.219] 16
+Started game 18 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 17 (chess-cobol-cc vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 4 - 12 - 1  [0.265] 17
+Started game 19 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 18 (sf_skill5 vs chess-cobol-cc): 1-0 {White wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 4 - 13 - 1  [0.250] 18
+Started game 20 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 19 (chess-cobol-cc vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-cobol-cc vs sf_skill5: 5 - 13 - 1  [0.289] 19
+Started game 21 of 30 (chess-cobol-cc vs sf_skill5)
+Finished game 20 (sf_skill5 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill5: 5 - 14 - 1  [0.275] 20
+Started game 22 of 30 (sf_skill5 vs chess-cobol-cc)
+Finished game 22 (sf_skill5 vs chess-cobol-cc): 1-0 {White mates}
+Score of chess-cobol-cc vs sf_skill5: 5 - 15 - 1  [0.262] 21
+Finished game 21 (chess-cobol-cc vs sf_skill5): * {No result}
+Score of chess-cobol-cc vs sf_skill5: 5 - 15 - 1  [0.262] 21
+...      chess-cobol-cc playing White: 2 - 7 - 1  [0.250] 10
+...      chess-cobol-cc playing Black: 3 - 8 - 0  [0.273] 11
+...      White vs Black: 10 - 10 - 1  [0.500] 21
+Elo difference: -180.0 +/- 192.5, LOS: 1.3 %, DrawRatio: 4.8 %
+SPRT: llr -3.14 (-106.6%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-cobol-cc
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 5
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 6
+   "Loss: White wins by adjudication": 2
+   "No result": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White wins by adjudication": 2
+Player: sf_skill5
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White wins by adjudication": 2
+   "No result": 1
+   "Win: Black mates": 5
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 6
+   "Win: White wins by adjudication": 2
+Finished match

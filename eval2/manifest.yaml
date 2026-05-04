@@ -1,0 +1,370 @@
+# Canonical engine manifest for eval2/
+#
+# One record per engine, real YAML. Fields:
+#   name      : stable identifier (matches PGN engine name + result-card filename)
+#   path      : absolute repo path on host (only used to build the docker image)
+#   tier      : A | B | C — drives time-control selection (see ladder.json)
+#   build     : host-side build command (kept here for reference; the canonical
+#               build is whatever is in docker/engines/<name>/Dockerfile)
+#   cmd       : UCI launch command *inside the container* (PID 1)
+#   image     : docker image tag (built from docker/engines/<name>/Dockerfile)
+#   notes     : free-form quirks
+#
+# Tier rationale (see ladder.json for time controls):
+#   A : native-fast (compiled, expected sub-second per ply at 120+1)
+#   B : interpreted-medium (Python/Java/OCaml/Ruby/COBOL/etc. at 120+1 with risk)
+#   C : slow-by-design (LaTeX, SQL, Brainfuck — fixed movetime, reduced ladder)
+#
+# `corpus` filters scope:
+#   main    : counted in the unified-Elo headline number
+#   port    : Java→X port (special-role section)
+#   dsl     : DSL design + transpile (special-role section)
+#   failure : reported but not pooled
+
+engines:
+
+  # =================== Tier A : native-fast ===================
+  - name: chess-purec
+    path: /Users/mathieuacher/SANDBOX/chess-purec
+    tier: A
+    corpus: main
+    build: make
+    cmd: ./chess
+    image: eval2/chess-purec:latest
+    notes: ~2100 Elo. Bitboard engine.
+
+  - name: chess-purec-codex
+    path: /Users/mathieuacher/SANDBOX/chess-purec-codex
+    tier: A
+    corpus: main
+    skipped: true
+    skip_reason: "Engine binary SIGSEGVs at startup on Linux regardless of optimization level, architecture, or ulimits. Works only as macOS Mach-O. Evaluated via host-native fallback instead."
+    build: make
+    cmd: ./engine
+    image: eval2/chess-purec-codex:latest
+    host_cmd: ./build/purec_chess
+    host_cwd: /Users/mathieuacher/SANDBOX/chess-purec-codex
+
+  - name: chess-cplusplus-claude
+    path: /Users/mathieuacher/SANDBOX/chess-cplusplus-claude
+    tier: A
+    corpus: main
+    build: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build -j
+    cmd: ./build/engine
+    image: eval2/chess-cplusplus-claude:latest
+
+  - name: cplusplus-chess
+    path: /Users/mathieuacher/SANDBOX/cplusplus-chess
+    tier: A
+    corpus: main
+    build: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build -j
+    cmd: ./build/engine
+    image: eval2/cplusplus-chess:latest
+
+  - name: chess-rust-cc
+    path: /Users/mathieuacher/SANDBOX/chess-rust-cc
+    tier: A
+    corpus: main
+    build: cargo build --release
+    cmd: ./target/release/chess-rust-cc
+    image: eval2/chess-rust-cc:latest
+
+  - name: chess-rust-codex
+    path: /Users/mathieuacher/SANDBOX/chess-rust-codex
+    tier: A
+    corpus: main
+    build: cargo build --release
+    cmd: ./target/release/engine
+    image: eval2/chess-rust-codex:latest
+    notes: Uses Rust `chess` crate.
+
+  - name: chess-rust-cc-redo
+    path: /Users/mathieuacher/SANDBOX/chess-rust-cc-redo
+    tier: A
+    corpus: main
+    build: cargo build --release
+    cmd: ./target/release/chess_engine
+    image: eval2/chess-rust-cc-redo:latest
+    notes: CC Rust, from-scratch redo with zero external crates. Intended as a library-free counterpart to chess-rust-codex (which used the `chess` crate); guards against evasion concerns.
+
+  - name: chess-why3-cc
+    path: /Users/mathieuacher/SANDBOX/chess-why3-cc
+    tier: B
+    corpus: main
+    build: dune build --release
+    cmd: ./engine
+    image: eval2/chess-why3-cc:latest
+    notes: Why3 extracted to OCaml ("cc" = Claude Code, not C).
+
+  - name: chess-assembly-codex
+    path: /Users/mathieuacher/SANDBOX/chess-assembly-codex
+    tier: A
+    corpus: main
+    skipped: true
+    skip_reason: "Repo ships src/core/core.s in Apple-clang assembly syntax (macOS-only). Linux clang/gcc cannot parse it. Evaluated via host-native fallback with the pre-built .dylib."
+    build: make
+    cmd: ./engine
+    image: eval2/chess-assembly-codex:latest
+    host_cmd: python3 scripts/uci_bridge.py --core build/libasm_core.dylib --depth 6
+    host_cwd: /Users/mathieuacher/SANDBOX/chess-assembly-codex
+
+  # =================== Tier B : interpreted-medium ===================
+  - name: chess-java
+    path: /Users/mathieuacher/SANDBOX/chess-java
+    tier: B
+    corpus: main
+    build: ./gradlew shadowJar
+    cmd: java -jar build/libs/engine.jar
+    image: eval2/chess-java:latest
+
+  - name: chess-java-cc
+    path: /Users/mathieuacher/SANDBOX/chess-java-cc
+    tier: B
+    corpus: main
+    build: ./gradlew shadowJar
+    cmd: java -jar build/libs/engine.jar
+    image: eval2/chess-java-cc:latest
+    notes: Verify ~2200 Elo with ladder; PGN-derived 2603 likely inflated.
+
+  - name: chess-py
+    path: /Users/mathieuacher/SANDBOX/chess-py
+    tier: B
+    corpus: main
+    build: ""
+    cmd: python3 -m engine
+    image: eval2/chess-py:latest
+
+  - name: chess-py-cc
+    path: /Users/mathieuacher/SANDBOX/chess-py-cc
+    tier: B
+    corpus: main
+    build: ""
+    cmd: python3 -m chess_engine
+    image: eval2/chess-py-cc:latest
+
+  - name: chess-ruby-cc
+    path: /Users/mathieuacher/SANDBOX/chess-ruby-cc
+    tier: B
+    corpus: main
+    build: ""
+    cmd: ruby bin/engine
+    image: eval2/chess-ruby-cc:latest
+    notes: 0x88 mailbox. Needs Ruby >= 3.0.
+
+  - name: chess-ruby-codex
+    path: /Users/mathieuacher/SANDBOX/chess-ruby-codex
+    tier: B
+    corpus: main
+    build: ""
+    cmd: ruby bin/engine
+    image: eval2/chess-ruby-codex:latest
+
+  - name: chess-Rocq
+    path: /Users/mathieuacher/SANDBOX/chess-Rocq
+    tier: B
+    corpus: main
+    skipped: true
+    skip_reason: "Rocq/Coq opam package naming in flux during 2025 Coq→Rocq rebrand; reliable Docker build not achievable without custom Rocq-from-source recipe. Evaluated via host-native fallback using agent's own opam switch."
+    build: dune build --release && cp _build/default/bin/main.exe engine.exe
+    cmd: ./engine.exe
+    image: eval2/chess-rocq:latest
+    host_cmd: ./chess_rocq
+    host_cwd: /Users/mathieuacher/SANDBOX/chess-Rocq
+
+  - name: chess-why3
+    path: /Users/mathieuacher/SANDBOX/chess-why3
+    tier: B
+    corpus: main
+    build: dune build --release
+    cmd: ./engine
+    image: eval2/chess-why3:latest
+
+  - name: lean-chess
+    path: /Users/mathieuacher/SANDBOX/lean-chess
+    tier: B
+    corpus: main
+    build: lake build
+    cmd: ./build/bin/engine
+    image: eval2/lean-chess:latest
+
+  - name: COBOL-chess
+    path: /Users/mathieuacher/SANDBOX/COBOL-chess
+    tier: B
+    corpus: main
+    build: make
+    cmd: ./bin/cobochess
+    image: eval2/cobol-chess:latest
+
+  - name: chess-cobol-cc
+    path: /Users/mathieuacher/SANDBOX/chess-cobol-cc
+    tier: B
+    corpus: main
+    build: make
+    cmd: ./chess-engine
+    image: eval2/chess-cobol-cc:latest
+
+  - name: chess-icon-codex
+    path: /Users/mathieuacher/SANDBOX/chess-icon-codex
+    tier: B
+    corpus: main
+    skipped: true
+    skip_reason: "Icon has no Debian package; cs.arizona.edu source build flaky in Docker. Evaluated via host-native fallback using brew-installed icont."
+    build: icont engine.icn
+    cmd: ./engine
+    image: eval2/chess-icon-codex:latest
+    host_cmd: build/icon_chess
+    host_cwd: /Users/mathieuacher/SANDBOX/chess-icon-codex
+
+  - name: chess-apl-codex54
+    path: /Users/mathieuacher/SANDBOX/chess-apl-codex54
+    tier: B
+    corpus: main
+    build: ""
+    cmd: dyalog -script engine.apl
+    image: eval2/chess-apl-codex54:latest
+    notes: Uses GNU APL (free), NOT Dyalog — confirmed via session logs. Debian's `apl` package suffices.
+
+  - name: chess-css-codex-guided
+    path: /Users/mathieuacher/SANDBOX/chess-css-codex-guided
+    tier: B
+    corpus: main
+    skipped: true
+    skip_reason: "Node engine.js exits silently in minimal container. Evaluated via host-native fallback using brew Node."
+    build: ""
+    cmd: node engine.js
+    image: eval2/chess-css-codex-guided:latest
+    host_cmd: node engine.js
+    host_cwd: /Users/mathieuacher/SANDBOX/chess-css-codex-guided
+
+  - name: chess-css-codex
+    path: /Users/mathieuacher/SANDBOX/chess-css-codex
+    tier: B
+    corpus: main
+    skipped: true
+    skip_reason: "Needs mandatory --style <file>; flagged as evasion-risk (uses python-chess). Evaluated via host-native fallback for completeness with a default style."
+    build: ""
+    cmd: python3 src/chess_css/uci.py
+    image: eval2/chess-css-codex:latest
+    notes: Evasion-risk (uses python-chess). Strict variant under strict-css/ if present.
+    host_cmd: python3 -m chess_css.uci --style ../styles/expert.css
+    host_cwd: /Users/mathieuacher/SANDBOX/chess-css-codex/src
+
+  - name: chess-css-cc
+    path: /Users/mathieuacher/SANDBOX/test-superset
+    tier: B
+    corpus: main
+    notes: ChessCSS by Claude Code. Move-gen, legality, check-detection and scoring in CSS (~104k LOC). JS is thin UCI glue only. Greedy depth-1 search (argmax over CSS-scored moves).
+
+  - name: chess-mojo
+    path: /Users/mathieuacher/SANDBOX/chess-mojo
+    tier: B
+    corpus: failure
+    skipped: true
+    skip_reason: "Already flagged as the paper's failure-case exemplar (PGN 963±68, claimed 1100); Mojo community image is paywalled behind Modular auth; no loss in coverage"
+    build: ""
+    cmd: mojo run src/mojo_engine/main.mojo
+    image: eval2/chess-mojo:latest
+    notes: Failure case — expected to score 0 at most rungs.
+
+  # =================== Tier C : slow-by-design ===================
+  - name: chess-latex-codex-replication
+    path: /Users/mathieuacher/SANDBOX/chess-latex-codex-replication
+    tier: C
+    corpus: main
+    build: ""
+    cmd: python3 engine/latex_uci_engine.py
+    image: eval2/chess-latex-codex-replication:latest
+    notes: pdflatex-spawning wrapper; needs texlive in image.
+
+  - name: latex-chess-engine
+    path: /Users/mathieuacher/SANDBOX/latex-chess-engine
+    tier: C
+    corpus: main
+    build: ""
+    cmd: python3 scripts/texcc_uci.py
+    image: eval2/latex-chess-engine:latest
+
+  - name: chess-sql
+    path: /Users/mathieuacher/SANDBOX/chess-sql
+    tier: C
+    corpus: main
+    build: ""
+    cmd: python3 bin/sql_engine
+    image: eval2/chess-sql:latest
+
+  - name: chess-brainfuck
+    path: /Users/mathieuacher/SANDBOX/chess-brainfuck
+    tier: C
+    corpus: main
+    build: make
+    cmd: python3 run_bf_engine.py
+    image: eval2/chess-brainfuck:latest
+
+  - name: chess-brainfuck-cc
+    path: /Users/mathieuacher/SANDBOX/chess-brainfuck-cc
+    tier: C
+    corpus: main
+    skipped: true
+    skip_reason: "bf_uci.py is a BF code emitter, not a UCI driver; actual UCI loop runs through emitted program + bfi interpreter. Runtime overhead makes Elo at CCRL-scale TCs not meaningful; prior PGN-mined 578±242 Elo already documented"
+    build: make
+    cmd: python3 bf_uci.py
+    image: eval2/chess-brainfuck-cc:latest
+
+  # =================== Special role: ports ===================
+  - name: chess-revisit-java-toRust-codex
+    path: /Users/mathieuacher/SANDBOX/chess-revisit-java-toRust-codex
+    tier: A
+    corpus: port
+    build: cargo build --release
+    cmd: ./target/release/engine
+    image: eval2/chess-revisit-java-torust-codex:latest
+    notes: TODO confirm cmd; not exercised in main pool.
+
+  - name: chess-revisit-java-toCOBOL-codex
+    path: /Users/mathieuacher/SANDBOX/chess-revisit-java-toRust-codex/chess-revisit-java-toCOBOL
+    tier: B
+    corpus: port
+    build: make
+    cmd: ./chess-engine
+    image: eval2/chess-revisit-java-tocobol-codex:latest
+    notes: TODO confirm cmd.
+
+  # =================== Special role: DSL ===================
+  - name: chess-newlang-codex
+    path: /Users/mathieuacher/SANDBOX/chess-newlang-codex
+    tier: A
+    corpus: dsl
+    build: ""
+    cmd: ./build/engine
+    image: eval2/chess-newlang-codex:latest
+    notes: TODO confirm cmd.
+
+# =================== External anchor engines ===================
+# Three CCRL 40/4 anchors that bracket the corpus. Run via the same
+# docker_engine wrapper as the main engines. Their published Elo lets
+# us cross-check that the SF UCI_Elo ladder is correctly calibrated
+# on this hardware.
+anchors:
+  - name: rustic
+    image: eval2/anchor-rustic:latest
+    cmd: rustic
+    ccrl_40_4_elo: 1820
+    notes: Rustic Alpha 3+ (Marcel Vanthoor, MIT). Replaces TSCP 1.81 which is xboard-v1-only and incompatible with modern polyglot.
+
+  - name: asymptote
+    image: eval2/anchor-asymptote:latest
+    cmd: asymptote
+    ccrl_40_4_elo: 2150
+    notes: Asymptote 0.7 (Maximilian Lupke). Mid-range anchor; native UCI, no internal strength limiter.
+
+  - name: madchess32
+    image: eval2/anchor-madchess32:latest
+    cmd: dotnet /opt/madchess/MadChess.Engine.dll
+    ccrl_40_4_elo: 2200
+    notes: MIT-licensed .NET engine.
+
+  - name: countergo40
+    image: eval2/anchor-countergo40:latest
+    cmd: /opt/countergo/counter
+    ccrl_40_4_elo: 2400
+    notes: Go-language engine, MIT.

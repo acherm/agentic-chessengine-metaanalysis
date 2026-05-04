@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (cplusplus-chess vs lean-chess)
+Started game 2 of 2 (lean-chess vs cplusplus-chess)
+Finished game 1 (cplusplus-chess vs lean-chess): 1-0 {White mates}
+Score of cplusplus-chess vs lean-chess: 1 - 0 - 0  [1.000] 1
+Finished game 2 (lean-chess vs cplusplus-chess): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs lean-chess: 2 - 0 - 0  [1.000] 2
+...      cplusplus-chess playing White: 1 - 0 - 0  [1.000] 1
+...      cplusplus-chess playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: cplusplus-chess
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 1
+Player: lean-chess
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 1
+Finished match

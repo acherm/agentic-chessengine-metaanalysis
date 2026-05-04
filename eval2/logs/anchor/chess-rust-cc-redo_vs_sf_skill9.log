@@ -1,0 +1,86 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-rust-cc-redo vs sf_skill9)
+Started game 2 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 1 (chess-rust-cc-redo vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 2 (sf_skill9 vs chess-rust-cc-redo): 1/2-1/2 {Draw by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 1 - 0 - 1  [0.750] 2
+Started game 4 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 3 (chess-rust-cc-redo vs sf_skill9): 1/2-1/2 {Draw by insufficient mating material}
+Score of chess-rust-cc-redo vs sf_skill9: 1 - 0 - 2  [0.667] 3
+Started game 5 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 4 (sf_skill9 vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 1 - 1 - 2  [0.500] 4
+Started game 6 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 5 (chess-rust-cc-redo vs sf_skill9): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 1 - 2 - 2  [0.400] 5
+Started game 7 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 6 (sf_skill9 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 2 - 2 - 2  [0.500] 6
+Started game 8 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 8 (sf_skill9 vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 2 - 3 - 2  [0.429] 7
+Started game 9 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 7 (chess-rust-cc-redo vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 3 - 3 - 2  [0.500] 8
+Started game 10 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 10 (sf_skill9 vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 3 - 4 - 2  [0.444] 9
+Started game 11 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 9 (chess-rust-cc-redo vs sf_skill9): 1/2-1/2 {Draw by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 3 - 4 - 3  [0.450] 10
+Started game 12 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 12 (sf_skill9 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 4 - 4 - 3  [0.500] 11
+Started game 13 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 11 (chess-rust-cc-redo vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 5 - 4 - 3  [0.542] 12
+Started game 14 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 14 (sf_skill9 vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 5 - 5 - 3  [0.500] 13
+Started game 15 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 13 (chess-rust-cc-redo vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 6 - 5 - 3  [0.536] 14
+Started game 16 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 16 (sf_skill9 vs chess-rust-cc-redo): 1-0 {White mates}
+Score of chess-rust-cc-redo vs sf_skill9: 6 - 6 - 3  [0.500] 15
+Started game 17 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 15 (chess-rust-cc-redo vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 7 - 6 - 3  [0.531] 16
+Started game 18 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 17 (chess-rust-cc-redo vs sf_skill9): 1/2-1/2 {Draw by insufficient mating material}
+Score of chess-rust-cc-redo vs sf_skill9: 7 - 6 - 4  [0.529] 17
+Started game 19 of 20 (chess-rust-cc-redo vs sf_skill9)
+Finished game 18 (sf_skill9 vs chess-rust-cc-redo): 1/2-1/2 {Draw by insufficient mating material}
+Score of chess-rust-cc-redo vs sf_skill9: 7 - 6 - 5  [0.528] 18
+Started game 20 of 20 (sf_skill9 vs chess-rust-cc-redo)
+Finished game 19 (chess-rust-cc-redo vs sf_skill9): 0-1 {Black mates}
+Score of chess-rust-cc-redo vs sf_skill9: 7 - 7 - 5  [0.500] 19
+Finished game 20 (sf_skill9 vs chess-rust-cc-redo): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_skill9: 7 - 8 - 5  [0.475] 20
+...      chess-rust-cc-redo playing White: 5 - 2 - 3  [0.650] 10
+...      chess-rust-cc-redo playing Black: 2 - 6 - 2  [0.300] 10
+...      White vs Black: 11 - 4 - 5  [0.675] 20
+Elo difference: -17.4 +/- 138.8, LOS: 39.8 %, DrawRatio: 25.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-cc-redo
+   "Draw by adjudication": 2
+   "Draw by insufficient mating material": 3
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 5
+   "Win: Black wins by adjudication": 2
+   "Win: White wins by adjudication": 5
+Player: sf_skill9
+   "Draw by adjudication": 2
+   "Draw by insufficient mating material": 3
+   "Loss: Black wins by adjudication": 2
+   "Loss: White wins by adjudication": 5
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 5
+Finished match

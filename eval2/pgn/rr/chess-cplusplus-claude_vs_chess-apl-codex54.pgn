@@ -1,0 +1,30 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-cplusplus-claude"]
+[Black "chess-apl-codex54"]
+[Result "1-0"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 e5 2. Bc4 Nf6 3. Nc3 Bc5 4. d3 O-O 5. Nd5 d6 6. Bg5 Nxd5 7. Bxd8 Nxd8
+8. exd5 Bf5 9. Bb5 a6 10. Ba4 b5 11. Bb3 Nb7 12. Nh4 Bd7 13. O-O Bd4 14. c3 Bb6
+15. Re1 Nc5 16. Bc2 Rfe8 17. Qh5 a5 18. d4 exd4 19. Qxh7+ Kf8 20. Qh8# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-apl-codex54"]
+[Black "chess-cplusplus-claude"]
+[Result "0-1"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 Nf6 2. Nc3 e5 3. Nf3 Bb4 4. dxe5 Nxe4 5. Qxd7+ Bxd7 6. Be3 Nxc3 7. bxc3
+Bxc3+ 8. Kd1 Bg4+ 9. Bd3 Bxf3+ 10. gxf3 Bxa1 11. f4 Bd4 12. Ke2 Bxe3 13. Kxe3
+Qd4+ 14. Kf3 Qd5+ 15. Be4 Nd4+ 16. Ke3 Nxc2+ 17. Kf3 Nd4+ 18. Ke3 Qxa2 19. Kxd4
+Qxf2+ 20. Kd3 O-O-O+ 21. Kc3 Qe3+ 22. Kb2 Qxe4 23. Rf1 Qb4+ 24. Kc2 Rd2+ 25. Kc1
+Qb2# 0-1
+

@@ -1,0 +1,32 @@
+Indexing opening suite...
+Started game 1 of 6 (chess-brainfuck vs chess-apl-codex54)
+Started game 2 of 6 (chess-apl-codex54 vs chess-brainfuck)
+Finished game 2 (chess-apl-codex54 vs chess-brainfuck): 0-1 {Black mates}
+Score of chess-brainfuck vs chess-apl-codex54: 1 - 0 - 0  [1.000] 1
+Started game 3 of 6 (chess-brainfuck vs chess-apl-codex54)
+Finished game 1 (chess-brainfuck vs chess-apl-codex54): 1-0 {White mates}
+Score of chess-brainfuck vs chess-apl-codex54: 2 - 0 - 0  [1.000] 2
+Started game 4 of 6 (chess-apl-codex54 vs chess-brainfuck)
+Finished game 3 (chess-brainfuck vs chess-apl-codex54): 1-0 {White mates}
+Score of chess-brainfuck vs chess-apl-codex54: 3 - 0 - 0  [1.000] 3
+Started game 5 of 6 (chess-brainfuck vs chess-apl-codex54)
+Finished game 4 (chess-apl-codex54 vs chess-brainfuck): 0-1 {Black mates}
+Score of chess-brainfuck vs chess-apl-codex54: 4 - 0 - 0  [1.000] 4
+Started game 6 of 6 (chess-apl-codex54 vs chess-brainfuck)
+Finished game 5 (chess-brainfuck vs chess-apl-codex54): 1-0 {White mates}
+Score of chess-brainfuck vs chess-apl-codex54: 5 - 0 - 0  [1.000] 5
+Finished game 6 (chess-apl-codex54 vs chess-brainfuck): 0-1 {Black mates}
+Score of chess-brainfuck vs chess-apl-codex54: 6 - 0 - 0  [1.000] 6
+...      chess-brainfuck playing White: 3 - 0 - 0  [1.000] 3
+...      chess-brainfuck playing Black: 3 - 0 - 0  [1.000] 3
+...      White vs Black: 3 - 3 - 0  [0.500] 6
+Elo difference: inf +/- nan, LOS: 99.3 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-brainfuck
+   "Win: Black mates": 3
+   "Win: White mates": 3
+Player: chess-apl-codex54
+   "Loss: Black mates": 3
+   "Loss: White mates": 3
+Finished match

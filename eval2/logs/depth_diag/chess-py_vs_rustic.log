@@ -1,0 +1,36 @@
+Indexing opening suite...
+Started game 1 of 6 (chess-py vs rustic)
+Finished game 1 (chess-py vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-py vs rustic: 0 - 1 - 0  [0.000] 1
+Started game 2 of 6 (rustic vs chess-py)
+Finished game 2 (rustic vs chess-py): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-py vs rustic: 0 - 1 - 1  [0.250] 2
+Started game 3 of 6 (chess-py vs rustic)
+Finished game 3 (chess-py vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-py vs rustic: 0 - 2 - 1  [0.167] 3
+Started game 4 of 6 (rustic vs chess-py)
+Finished game 4 (rustic vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs rustic: 0 - 3 - 1  [0.125] 4
+Started game 5 of 6 (chess-py vs rustic)
+Finished game 5 (chess-py vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-py vs rustic: 0 - 4 - 1  [0.100] 5
+Started game 6 of 6 (rustic vs chess-py)
+Finished game 6 (rustic vs chess-py): 1-0 {White mates}
+Score of chess-py vs rustic: 0 - 5 - 1  [0.083] 6
+...      chess-py playing White: 0 - 3 - 0  [0.000] 3
+...      chess-py playing Black: 0 - 2 - 1  [0.167] 3
+...      White vs Black: 2 - 3 - 1  [0.417] 6
+Elo difference: -416.6 +/- nan, LOS: 1.3 %, DrawRatio: 16.7 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-py
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 1
+Player: rustic
+   "Draw by 3-fold repetition": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 1
+Finished match

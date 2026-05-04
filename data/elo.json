@@ -1,0 +1,2128 @@
+{
+  "COBOL-chess": {
+    "name": "COBOL-chess",
+    "path": "/Users/mathieuacher/SANDBOX/COBOL-chess",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "Chess1MChallenge": {
+    "name": "Chess1MChallenge",
+    "path": "/Users/mathieuacher/SANDBOX/Chess1MChallenge",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-Rocq": {
+    "name": "chess-Rocq",
+    "path": "/Users/mathieuacher/SANDBOX/chess-Rocq",
+    "matches": [
+      {
+        "opp_elo": 1100,
+        "n_games": 250,
+        "agent_score_sum": 114.5
+      },
+      {
+        "opp_elo": 1350,
+        "n_games": 10,
+        "agent_score_sum": 0.5
+      },
+      {
+        "opp_elo": 1320,
+        "n_games": 100,
+        "agent_score_sum": 75.5
+      },
+      {
+        "opp_elo": 1500,
+        "n_games": 100,
+        "agent_score_sum": 49.5
+      },
+      {
+        "opp_elo": 1700,
+        "n_games": 100,
+        "agent_score_sum": 40.5
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1319.1,
+      "ci95": 29.8,
+      "n_games": 560,
+      "per_opp": [
+        {
+          "opp_elo": 1100,
+          "n_games": 250,
+          "score": 0.458,
+          "elo_diff": -29.3,
+          "se": 22.1,
+          "elo_est": 1070.7
+        },
+        {
+          "opp_elo": 1350,
+          "n_games": 10,
+          "score": 0.05,
+          "elo_diff": -511.5,
+          "se": 252.1,
+          "elo_est": 838.5
+        },
+        {
+          "opp_elo": 1320,
+          "n_games": 100,
+          "score": 0.755,
+          "elo_diff": 195.5,
+          "se": 40.4,
+          "elo_est": 1515.5
+        },
+        {
+          "opp_elo": 1500,
+          "n_games": 100,
+          "score": 0.495,
+          "elo_diff": -3.5,
+          "se": 34.7,
+          "elo_est": 1496.5
+        },
+        {
+          "opp_elo": 1700,
+          "n_games": 100,
+          "score": 0.405,
+          "elo_diff": -66.8,
+          "se": 35.4,
+          "elo_est": 1633.2
+        }
+      ]
+    },
+    "agent_claims": [
+      {
+        "file": "README.md",
+        "elo": 200,
+        "context": "ing to hold difficult positions  Each of these could add 50-200 Elo points.  ## On Formal Verification  ChessRocq is written in"
+      },
+      {
+        "file": "readme.md",
+        "elo": 200,
+        "context": "ing to hold difficult positions  Each of these could add 50-200 Elo points.  ## On Formal Verification  ChessRocq is written in"
+      }
+    ]
+  },
+  "chess-apl-codex54": {
+    "name": "chess-apl-codex54",
+    "path": "/Users/mathieuacher/SANDBOX/chess-apl-codex54",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": [
+      {
+        "file": "README.md",
+        "elo": 1040,
+        "context": "2026-03-20)  - **Provisional calibrated estimate**: about **1040 Elo** - **Calibration run**: `6` games vs `Stockfish UCI_Elo=13"
+      },
+      {
+        "file": "readme.md",
+        "elo": 1040,
+        "context": "2026-03-20)  - **Provisional calibrated estimate**: about **1040 Elo** - **Calibration run**: `6` games vs `Stockfish UCI_Elo=13"
+      }
+    ]
+  },
+  "chess-assembly-codex": {
+    "name": "chess-assembly-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-assembly-codex",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-brainfuck": {
+    "name": "chess-brainfuck",
+    "path": "/Users/mathieuacher/SANDBOX/chess-brainfuck",
+    "matches": [
+      {
+        "opp_elo": 1320,
+        "n_games": 75,
+        "agent_score_sum": 17.5
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1113.3,
+      "ci95": 93.0,
+      "n_games": 75,
+      "per_opp": [
+        {
+          "opp_elo": 1320,
+          "n_games": 75,
+          "score": 0.233,
+          "elo_diff": -206.7,
+          "se": 47.4,
+          "elo_est": 1113.3
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-brainfuck-cc": {
+    "name": "chess-brainfuck-cc",
+    "path": "/Users/mathieuacher/SANDBOX/chess-brainfuck-cc",
+    "matches": [
+      {
+        "opp_elo": 1320,
+        "n_games": 145,
+        "agent_score_sum": 2.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 578.3,
+      "ci95": 242.4,
+      "n_games": 145,
+      "per_opp": [
+        {
+          "opp_elo": 1320,
+          "n_games": 145,
+          "score": 0.014,
+          "elo_diff": -741.7,
+          "se": 123.7,
+          "elo_est": 578.3
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-brainfuck-gpt54-instant": {
+    "name": "chess-brainfuck-gpt54-instant",
+    "path": "/Users/mathieuacher/SANDBOX/chess-brainfuck-gpt54-instant",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-cobol-cc": {
+    "name": "chess-cobol-cc",
+    "path": "/Users/mathieuacher/SANDBOX/chess-cobol-cc",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-conway": {
+    "name": "chess-conway",
+    "path": "/Users/mathieuacher/SANDBOX/chess-conway",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-cplusplus-claude": {
+    "name": "chess-cplusplus-claude",
+    "path": "/Users/mathieuacher/SANDBOX/chess-cplusplus-claude",
+    "matches": [
+      {
+        "opp_elo": 2000,
+        "n_games": 160,
+        "agent_score_sum": 102.0
+      },
+      {
+        "opp_elo": 1650,
+        "n_games": 220,
+        "agent_score_sum": 153.0
+      },
+      {
+        "opp_elo": 2500,
+        "n_games": 58,
+        "agent_score_sum": 20.5
+      },
+      {
+        "opp_elo": 2200,
+        "n_games": 80,
+        "agent_score_sum": 31.5
+      },
+      {
+        "opp_elo": 1825,
+        "n_games": 80,
+        "agent_score_sum": 65.5
+      },
+      {
+        "opp_elo": 1100,
+        "n_games": 100,
+        "agent_score_sum": 98.5
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 2018.6,
+      "ci95": 29.9,
+      "n_games": 698,
+      "per_opp": [
+        {
+          "opp_elo": 2000,
+          "n_games": 160,
+          "score": 0.637,
+          "elo_diff": 98.1,
+          "se": 28.6,
+          "elo_est": 2098.1
+        },
+        {
+          "opp_elo": 1650,
+          "n_games": 220,
+          "score": 0.695,
+          "elo_diff": 143.4,
+          "se": 25.4,
+          "elo_est": 1793.4
+        },
+        {
+          "opp_elo": 2500,
+          "n_games": 58,
+          "score": 0.353,
+          "elo_diff": -104.9,
+          "se": 47.7,
+          "elo_est": 2395.1
+        },
+        {
+          "opp_elo": 2200,
+          "n_games": 80,
+          "score": 0.394,
+          "elo_diff": -75.0,
+          "se": 39.8,
+          "elo_est": 2125.0
+        },
+        {
+          "opp_elo": 1825,
+          "n_games": 80,
+          "score": 0.819,
+          "elo_diff": 261.9,
+          "se": 50.4,
+          "elo_est": 2086.9
+        },
+        {
+          "opp_elo": 1100,
+          "n_games": 100,
+          "score": 0.985,
+          "elo_diff": 726.9,
+          "se": 142.9,
+          "elo_est": 1826.9
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-css-codex": {
+    "name": "chess-css-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-css-codex",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-css-codex-guided": {
+    "name": "chess-css-codex-guided",
+    "path": "/Users/mathieuacher/SANDBOX/chess-css-codex-guided",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-css-x86": {
+    "name": "chess-css-x86",
+    "path": "/Users/mathieuacher/SANDBOX/chess-css-x86",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-excel": {
+    "name": "chess-excel",
+    "path": "/Users/mathieuacher/SANDBOX/chess-excel",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-fem": {
+    "name": "chess-fem",
+    "path": "/Users/mathieuacher/SANDBOX/chess-fem",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-icon-codex": {
+    "name": "chess-icon-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-icon-codex",
+    "matches": [
+      {
+        "opp_elo": 1100,
+        "n_games": 91,
+        "agent_score_sum": 8.5
+      },
+      {
+        "opp_elo": 1575,
+        "n_games": 22,
+        "agent_score_sum": 0.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 704.2,
+      "ci95": 122.5,
+      "n_games": 113,
+      "per_opp": [
+        {
+          "opp_elo": 1100,
+          "n_games": 91,
+          "score": 0.093,
+          "elo_diff": -394.8,
+          "se": 62.6,
+          "elo_est": 705.2
+        },
+        {
+          "opp_elo": 1575,
+          "n_games": 22,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 1171.8,
+          "elo_est": 375.2
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-in-conway": {
+    "name": "chess-in-conway",
+    "path": "/Users/mathieuacher/SANDBOX/chess-in-conway",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-java": {
+    "name": "chess-java",
+    "path": "/Users/mathieuacher/SANDBOX/chess-java",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-java-cc": {
+    "name": "chess-java-cc",
+    "path": "/Users/mathieuacher/SANDBOX/chess-java-cc",
+    "matches": [
+      {
+        "opp_elo": 1800,
+        "n_games": 80,
+        "agent_score_sum": 77.0
+      },
+      {
+        "opp_elo": 2500,
+        "n_games": 80,
+        "agent_score_sum": 58.0
+      },
+      {
+        "opp_elo": 2200,
+        "n_games": 80,
+        "agent_score_sum": 71.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 2603.0,
+      "ci95": 65.7,
+      "n_games": 240,
+      "per_opp": [
+        {
+          "opp_elo": 1800,
+          "n_games": 80,
+          "score": 0.963,
+          "elo_diff": 563.7,
+          "se": 102.2,
+          "elo_est": 2363.7
+        },
+        {
+          "opp_elo": 2500,
+          "n_games": 80,
+          "score": 0.725,
+          "elo_diff": 168.4,
+          "se": 43.5,
+          "elo_est": 2668.4
+        },
+        {
+          "opp_elo": 2200,
+          "n_games": 80,
+          "score": 0.887,
+          "elo_diff": 358.8,
+          "se": 61.5,
+          "elo_est": 2558.8
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-kasparov-claim": {
+    "name": "chess-kasparov-claim",
+    "path": "/Users/mathieuacher/SANDBOX/chess-kasparov-claim",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-kasparov-claim-bis": {
+    "name": "chess-kasparov-claim-bis",
+    "path": "/Users/mathieuacher/SANDBOX/chess-kasparov-claim-bis",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-latex-codex-replication": {
+    "name": "chess-latex-codex-replication",
+    "path": "/Users/mathieuacher/SANDBOX/chess-latex-codex-replication",
+    "matches": [
+      {
+        "opp_elo": 1320,
+        "n_games": 10,
+        "agent_score_sum": 0.0
+      },
+      {
+        "opp_elo": 1200,
+        "n_games": 142,
+        "agent_score_sum": 1.5
+      },
+      {
+        "opp_elo": 1500,
+        "n_games": 64,
+        "agent_score_sum": 1.0
+      },
+      {
+        "opp_elo": 1350,
+        "n_games": 56,
+        "agent_score_sum": 0.0
+      },
+      {
+        "opp_elo": 1650,
+        "n_games": 16,
+        "agent_score_sum": 0.0
+      },
+      {
+        "opp_elo": 1450,
+        "n_games": 2,
+        "agent_score_sum": 0.0
+      },
+      {
+        "opp_elo": 1600,
+        "n_games": 2,
+        "agent_score_sum": 0.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 546.8,
+      "ci95": 213.0,
+      "n_games": 292,
+      "per_opp": [
+        {
+          "opp_elo": 1320,
+          "n_games": 10,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 1738.0,
+          "elo_est": 120.2
+        },
+        {
+          "opp_elo": 1200,
+          "n_games": 142,
+          "score": 0.011,
+          "elo_diff": -788.6,
+          "se": 142.6,
+          "elo_est": 411.4
+        },
+        {
+          "opp_elo": 1500,
+          "n_games": 64,
+          "score": 0.016,
+          "elo_diff": -719.7,
+          "se": 175.1,
+          "elo_est": 780.3
+        },
+        {
+          "opp_elo": 1350,
+          "n_games": 56,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 734.5,
+          "elo_est": 150.2
+        },
+        {
+          "opp_elo": 1650,
+          "n_games": 16,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 1374.0,
+          "elo_est": 450.2
+        },
+        {
+          "opp_elo": 1450,
+          "n_games": 2,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 3886.4,
+          "elo_est": 250.2
+        },
+        {
+          "opp_elo": 1600,
+          "n_games": 2,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 3886.4,
+          "elo_est": 400.2
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-lean-vibe": {
+    "name": "chess-lean-vibe",
+    "path": "/Users/mathieuacher/SANDBOX/chess-lean-vibe",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-llmtraining": {
+    "name": "chess-llmtraining",
+    "path": "/Users/mathieuacher/SANDBOX/chess-llmtraining",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-mojo": {
+    "name": "chess-mojo",
+    "path": "/Users/mathieuacher/SANDBOX/chess-mojo",
+    "matches": [
+      {
+        "opp_elo": 1320,
+        "n_games": 230,
+        "agent_score_sum": 27.5
+      },
+      {
+        "opp_elo": 1500,
+        "n_games": 80,
+        "agent_score_sum": 1.0
+      },
+      {
+        "opp_elo": 1700,
+        "n_games": 40,
+        "agent_score_sum": 0.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 963.3,
+      "ci95": 67.8,
+      "n_games": 350,
+      "per_opp": [
+        {
+          "opp_elo": 1320,
+          "n_games": 230,
+          "score": 0.12,
+          "elo_diff": -346.8,
+          "se": 35.3,
+          "elo_est": 973.2
+        },
+        {
+          "opp_elo": 1500,
+          "n_games": 80,
+          "score": 0.013,
+          "elo_diff": -759.1,
+          "se": 174.8,
+          "elo_est": 740.9
+        },
+        {
+          "opp_elo": 1700,
+          "n_games": 40,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 869.0,
+          "elo_est": 500.2
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-newlang-codex": {
+    "name": "chess-newlang-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-newlang-codex",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": [
+      {
+        "file": "README.md",
+        "elo": 2170,
+        "context": "  Practical current estimate from these anchors:  - around `~2170 Elo` on this calibration scale - uncertainty roughly `+/-60-80 "
+      },
+      {
+        "file": "readme.md",
+        "elo": 2170,
+        "context": "  Practical current estimate from these anchors:  - around `~2170 Elo` on this calibration scale - uncertainty roughly `+/-60-80 "
+      }
+    ]
+  },
+  "chess-polyglot-eval": {
+    "name": "chess-polyglot-eval",
+    "path": "/Users/mathieuacher/SANDBOX/chess-polyglot-eval",
+    "matches": [
+      {
+        "opp_elo": 1900,
+        "n_games": 200,
+        "agent_score_sum": 78.5
+      },
+      {
+        "opp_elo": 1320,
+        "n_games": 200,
+        "agent_score_sum": 156.0
+      },
+      {
+        "opp_elo": 1700,
+        "n_games": 207,
+        "agent_score_sum": 110.0
+      },
+      {
+        "opp_elo": 1500,
+        "n_games": 200,
+        "agent_score_sum": 131.5
+      },
+      {
+        "opp_elo": 2100,
+        "n_games": 200,
+        "agent_score_sum": 60.0
+      },
+      {
+        "opp_elo": 2300,
+        "n_games": 10,
+        "agent_score_sum": 7.0
+      },
+      {
+        "opp_elo": 2500,
+        "n_games": 10,
+        "agent_score_sum": 3.5
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1750.7,
+      "ci95": 22.7,
+      "n_games": 1027,
+      "per_opp": [
+        {
+          "opp_elo": 1900,
+          "n_games": 200,
+          "score": 0.393,
+          "elo_diff": -75.9,
+          "se": 25.2,
+          "elo_est": 1824.1
+        },
+        {
+          "opp_elo": 1320,
+          "n_games": 200,
+          "score": 0.78,
+          "elo_diff": 219.9,
+          "se": 29.7,
+          "elo_est": 1539.9
+        },
+        {
+          "opp_elo": 1700,
+          "n_games": 207,
+          "score": 0.531,
+          "elo_diff": 21.8,
+          "se": 24.2,
+          "elo_est": 1721.8
+        },
+        {
+          "opp_elo": 1500,
+          "n_games": 200,
+          "score": 0.657,
+          "elo_diff": 113.3,
+          "se": 25.9,
+          "elo_est": 1613.3
+        },
+        {
+          "opp_elo": 2100,
+          "n_games": 200,
+          "score": 0.3,
+          "elo_diff": -147.2,
+          "se": 26.8,
+          "elo_est": 1952.8
+        },
+        {
+          "opp_elo": 2300,
+          "n_games": 10,
+          "score": 0.7,
+          "elo_diff": 147.2,
+          "se": 119.9,
+          "elo_est": 2447.2
+        },
+        {
+          "opp_elo": 2500,
+          "n_games": 10,
+          "score": 0.35,
+          "elo_diff": -107.5,
+          "se": 115.2,
+          "elo_est": 2392.5
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-printf": {
+    "name": "chess-printf",
+    "path": "/Users/mathieuacher/SANDBOX/chess-printf",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-printf-codex": {
+    "name": "chess-printf-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-printf-codex",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-purec": {
+    "name": "chess-purec",
+    "path": "/Users/mathieuacher/SANDBOX/chess-purec",
+    "matches": [
+      {
+        "opp_elo": 1500,
+        "n_games": 200,
+        "agent_score_sum": 191.0
+      },
+      {
+        "opp_elo": 2400,
+        "n_games": 200,
+        "agent_score_sum": 61.5
+      },
+      {
+        "opp_elo": 2000,
+        "n_games": 400,
+        "agent_score_sum": 250.5
+      },
+      {
+        "opp_elo": 2200,
+        "n_games": 400,
+        "agent_score_sum": 211.0
+      },
+      {
+        "opp_elo": 1800,
+        "n_games": 200,
+        "agent_score_sum": 152.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 2147.8,
+      "ci95": 20.3,
+      "n_games": 1400,
+      "per_opp": [
+        {
+          "opp_elo": 1500,
+          "n_games": 200,
+          "score": 0.955,
+          "elo_diff": 530.7,
+          "se": 59.3,
+          "elo_est": 2030.7
+        },
+        {
+          "opp_elo": 2400,
+          "n_games": 200,
+          "score": 0.307,
+          "elo_diff": -141.0,
+          "se": 26.6,
+          "elo_est": 2259.0
+        },
+        {
+          "opp_elo": 2000,
+          "n_games": 400,
+          "score": 0.626,
+          "elo_diff": 89.7,
+          "se": 18.0,
+          "elo_est": 2089.7
+        },
+        {
+          "opp_elo": 2200,
+          "n_games": 400,
+          "score": 0.527,
+          "elo_diff": 19.1,
+          "se": 17.4,
+          "elo_est": 2219.1
+        },
+        {
+          "opp_elo": 1800,
+          "n_games": 200,
+          "score": 0.76,
+          "elo_diff": 200.2,
+          "se": 28.8,
+          "elo_est": 2000.2
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-purec-codex": {
+    "name": "chess-purec-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-purec-codex",
+    "matches": [
+      {
+        "opp_elo": 1800,
+        "n_games": 160,
+        "agent_score_sum": 101.5
+      },
+      {
+        "opp_elo": 1900,
+        "n_games": 40,
+        "agent_score_sum": 20.5
+      },
+      {
+        "opp_elo": 1700,
+        "n_games": 200,
+        "agent_score_sum": 137.5
+      },
+      {
+        "opp_elo": 1600,
+        "n_games": 100,
+        "agent_score_sum": 65.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1836.5,
+      "ci95": 32.1,
+      "n_games": 500,
+      "per_opp": [
+        {
+          "opp_elo": 1800,
+          "n_games": 160,
+          "score": 0.634,
+          "elo_diff": 95.7,
+          "se": 28.5,
+          "elo_est": 1895.7
+        },
+        {
+          "opp_elo": 1900,
+          "n_games": 40,
+          "score": 0.512,
+          "elo_diff": 8.7,
+          "se": 55.0,
+          "elo_est": 1908.7
+        },
+        {
+          "opp_elo": 1700,
+          "n_games": 200,
+          "score": 0.688,
+          "elo_diff": 137.0,
+          "se": 26.5,
+          "elo_est": 1837.0
+        },
+        {
+          "opp_elo": 1600,
+          "n_games": 100,
+          "score": 0.65,
+          "elo_diff": 107.5,
+          "se": 36.4,
+          "elo_est": 1707.5
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-py": {
+    "name": "chess-py",
+    "path": "/Users/mathieuacher/SANDBOX/chess-py",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-py-cc": {
+    "name": "chess-py-cc",
+    "path": "/Users/mathieuacher/SANDBOX/chess-py-cc",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-revisit-java-toRust-codex": {
+    "name": "chess-revisit-java-toRust-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-revisit-java-toRust-codex",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-ruby-cc": {
+    "name": "chess-ruby-cc",
+    "path": "/Users/mathieuacher/SANDBOX/chess-ruby-cc",
+    "matches": [
+      {
+        "opp_elo": 1800,
+        "n_games": 90,
+        "agent_score_sum": 31.5
+      },
+      {
+        "opp_elo": 2000,
+        "n_games": 120,
+        "agent_score_sum": 42.5
+      },
+      {
+        "opp_elo": 1900,
+        "n_games": 120,
+        "agent_score_sum": 54.5
+      },
+      {
+        "opp_elo": 1100,
+        "n_games": 20,
+        "agent_score_sum": 19.0
+      },
+      {
+        "opp_elo": 2100,
+        "n_games": 60,
+        "agent_score_sum": 16.5
+      },
+      {
+        "opp_elo": 2200,
+        "n_games": 30,
+        "agent_score_sum": 2.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1840.4,
+      "ci95": 35.4,
+      "n_games": 440,
+      "per_opp": [
+        {
+          "opp_elo": 1800,
+          "n_games": 90,
+          "score": 0.35,
+          "elo_diff": -107.5,
+          "se": 38.4,
+          "elo_est": 1692.5
+        },
+        {
+          "opp_elo": 2000,
+          "n_games": 120,
+          "score": 0.354,
+          "elo_diff": -104.4,
+          "se": 33.2,
+          "elo_est": 1895.6
+        },
+        {
+          "opp_elo": 1900,
+          "n_games": 120,
+          "score": 0.454,
+          "elo_diff": -31.9,
+          "se": 31.9,
+          "elo_est": 1868.1
+        },
+        {
+          "opp_elo": 1100,
+          "n_games": 20,
+          "score": 0.95,
+          "elo_diff": 511.5,
+          "se": 178.2,
+          "elo_est": 1611.5
+        },
+        {
+          "opp_elo": 2100,
+          "n_games": 60,
+          "score": 0.275,
+          "elo_diff": -168.4,
+          "se": 50.2,
+          "elo_est": 1931.6
+        },
+        {
+          "opp_elo": 2200,
+          "n_games": 30,
+          "score": 0.067,
+          "elo_diff": -458.5,
+          "se": 127.1,
+          "elo_est": 1741.5
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-ruby-codex": {
+    "name": "chess-ruby-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-ruby-codex",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-rust-cc": {
+    "name": "chess-rust-cc",
+    "path": "/Users/mathieuacher/SANDBOX/chess-rust-cc",
+    "matches": [
+      {
+        "opp_elo": 1700,
+        "n_games": 20,
+        "agent_score_sum": 16.0
+      },
+      {
+        "opp_elo": 1500,
+        "n_games": 104,
+        "agent_score_sum": 93.0
+      },
+      {
+        "opp_elo": 2500,
+        "n_games": 100,
+        "agent_score_sum": 21.0
+      },
+      {
+        "opp_elo": 2100,
+        "n_games": 100,
+        "agent_score_sum": 53.5
+      },
+      {
+        "opp_elo": 1900,
+        "n_games": 20,
+        "agent_score_sum": 15.0
+      },
+      {
+        "opp_elo": 1320,
+        "n_games": 20,
+        "agent_score_sum": 20.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 2110.9,
+      "ci95": 44.6,
+      "n_games": 364,
+      "per_opp": [
+        {
+          "opp_elo": 1700,
+          "n_games": 20,
+          "score": 0.8,
+          "elo_diff": 240.8,
+          "se": 97.1,
+          "elo_est": 1940.8
+        },
+        {
+          "opp_elo": 1500,
+          "n_games": 104,
+          "score": 0.894,
+          "elo_diff": 370.8,
+          "se": 55.4,
+          "elo_est": 1870.8
+        },
+        {
+          "opp_elo": 2500,
+          "n_games": 100,
+          "score": 0.21,
+          "elo_diff": -230.2,
+          "se": 42.7,
+          "elo_est": 2269.8
+        },
+        {
+          "opp_elo": 2100,
+          "n_games": 100,
+          "score": 0.535,
+          "elo_diff": 24.4,
+          "se": 34.8,
+          "elo_est": 2124.4
+        },
+        {
+          "opp_elo": 1900,
+          "n_games": 20,
+          "score": 0.75,
+          "elo_diff": 190.8,
+          "se": 89.7,
+          "elo_est": 2090.8
+        },
+        {
+          "opp_elo": 1320,
+          "n_games": 20,
+          "score": 1.0,
+          "elo_diff": 1199.8,
+          "se": 1229.0,
+          "elo_est": 2519.8
+        }
+      ]
+    },
+    "agent_claims": [
+      {
+        "file": "ASSESSMENT.md",
+        "elo": 2100,
+        "context": "  | 22.5%  | -215          |  **Estimated playing strength: ~2100 Elo**  The engine convincingly beats Stockfish at 1320-1700 lev"
+      }
+    ]
+  },
+  "chess-rust-cc-redo": {
+    "name": "chess-rust-cc-redo",
+    "path": "/Users/mathieuacher/SANDBOX/chess-rust-cc-redo",
+    "matches": [
+      {
+        "opp_elo": 1900,
+        "n_games": 300,
+        "agent_score_sum": 133.5
+      },
+      {
+        "opp_elo": 2400,
+        "n_games": 300,
+        "agent_score_sum": 22.5
+      },
+      {
+        "opp_elo": 1650,
+        "n_games": 300,
+        "agent_score_sum": 240.0
+      },
+      {
+        "opp_elo": 2000,
+        "n_games": 300,
+        "agent_score_sum": 58.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1853.1,
+      "ci95": 24.7,
+      "n_games": 1200,
+      "per_opp": [
+        {
+          "opp_elo": 1900,
+          "n_games": 300,
+          "score": 0.445,
+          "elo_diff": -38.4,
+          "se": 20.2,
+          "elo_est": 1861.6
+        },
+        {
+          "opp_elo": 2400,
+          "n_games": 300,
+          "score": 0.075,
+          "elo_diff": -436.4,
+          "se": 38.1,
+          "elo_est": 1963.6
+        },
+        {
+          "opp_elo": 1650,
+          "n_games": 300,
+          "score": 0.8,
+          "elo_diff": 240.8,
+          "se": 25.1,
+          "elo_est": 1890.8
+        },
+        {
+          "opp_elo": 2000,
+          "n_games": 300,
+          "score": 0.193,
+          "elo_diff": -248.2,
+          "se": 25.4,
+          "elo_est": 1751.8
+        }
+      ]
+    },
+    "agent_claims": [
+      {
+        "file": "README.md",
+        "elo": 1879,
+        "context": "compatible chess engine written in Rust. Estimated strength ~1879 Elo (combined across Stockfish skill levels 5, 8, 10 at tc=10+0"
+      },
+      {
+        "file": "readme.md",
+        "elo": 1879,
+        "context": "compatible chess engine written in Rust. Estimated strength ~1879 Elo (combined across Stockfish skill levels 5, 8, 10 at tc=10+0"
+      }
+    ]
+  },
+  "chess-rust-codex": {
+    "name": "chess-rust-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-rust-codex",
+    "matches": [
+      {
+        "opp_elo": 1800,
+        "n_games": 120,
+        "agent_score_sum": 47.5
+      },
+      {
+        "opp_elo": 2000,
+        "n_games": 110,
+        "agent_score_sum": 55.5
+      },
+      {
+        "opp_elo": 1400,
+        "n_games": 60,
+        "agent_score_sum": 47.5
+      },
+      {
+        "opp_elo": 1600,
+        "n_games": 60,
+        "agent_score_sum": 26.5
+      },
+      {
+        "opp_elo": 1200,
+        "n_games": 60,
+        "agent_score_sum": 49.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1746.5,
+      "ci95": 35.9,
+      "n_games": 410,
+      "per_opp": [
+        {
+          "opp_elo": 1800,
+          "n_games": 120,
+          "score": 0.396,
+          "elo_diff": -73.5,
+          "se": 32.4,
+          "elo_est": 1726.5
+        },
+        {
+          "opp_elo": 2000,
+          "n_games": 110,
+          "score": 0.505,
+          "elo_diff": 3.2,
+          "se": 33.1,
+          "elo_est": 2003.2
+        },
+        {
+          "opp_elo": 1400,
+          "n_games": 60,
+          "score": 0.792,
+          "elo_diff": 231.9,
+          "se": 55.2,
+          "elo_est": 1631.9
+        },
+        {
+          "opp_elo": 1600,
+          "n_games": 60,
+          "score": 0.442,
+          "elo_diff": -40.7,
+          "se": 45.2,
+          "elo_est": 1559.3
+        },
+        {
+          "opp_elo": 1200,
+          "n_games": 60,
+          "score": 0.817,
+          "elo_diff": 259.5,
+          "se": 58.0,
+          "elo_est": 1459.5
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-sql": {
+    "name": "chess-sql",
+    "path": "/Users/mathieuacher/SANDBOX/chess-sql",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chess-why3": {
+    "name": "chess-why3",
+    "path": "/Users/mathieuacher/SANDBOX/chess-why3",
+    "matches": [
+      {
+        "opp_elo": 1400,
+        "n_games": 72,
+        "agent_score_sum": 7.0
+      },
+      {
+        "opp_elo": 1000,
+        "n_games": 42,
+        "agent_score_sum": 14.0
+      },
+      {
+        "opp_elo": 1200,
+        "n_games": 24,
+        "agent_score_sum": 10.0
+      },
+      {
+        "opp_elo": 1320,
+        "n_games": 90,
+        "agent_score_sum": 15.0
+      },
+      {
+        "opp_elo": 900,
+        "n_games": 6,
+        "agent_score_sum": 0.0
+      },
+      {
+        "opp_elo": 1100,
+        "n_games": 6,
+        "agent_score_sum": 0.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1008.1,
+      "ci95": 58.4,
+      "n_games": 240,
+      "per_opp": [
+        {
+          "opp_elo": 1400,
+          "n_games": 72,
+          "score": 0.097,
+          "elo_diff": -387.1,
+          "se": 69.1,
+          "elo_est": 1012.9
+        },
+        {
+          "opp_elo": 1000,
+          "n_games": 42,
+          "score": 0.333,
+          "elo_diff": -120.4,
+          "se": 56.9,
+          "elo_est": 879.6
+        },
+        {
+          "opp_elo": 1200,
+          "n_games": 24,
+          "score": 0.417,
+          "elo_diff": -58.5,
+          "se": 71.9,
+          "elo_est": 1141.5
+        },
+        {
+          "opp_elo": 1320,
+          "n_games": 90,
+          "score": 0.167,
+          "elo_diff": -279.6,
+          "se": 49.1,
+          "elo_est": 1040.4
+        },
+        {
+          "opp_elo": 900,
+          "n_games": 6,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 2243.8,
+          "elo_est": -299.8
+        },
+        {
+          "opp_elo": 1100,
+          "n_games": 6,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 2243.8,
+          "elo_est": -99.8
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chess-why3-cc": {
+    "name": "chess-why3-cc",
+    "path": "/Users/mathieuacher/SANDBOX/chess-why3-cc",
+    "matches": [
+      {
+        "opp_elo": 2000,
+        "n_games": 60,
+        "agent_score_sum": 29.5
+      },
+      {
+        "opp_elo": 1100,
+        "n_games": 20,
+        "agent_score_sum": 19.0
+      },
+      {
+        "opp_elo": 2200,
+        "n_games": 60,
+        "agent_score_sum": 16.5
+      },
+      {
+        "opp_elo": 1500,
+        "n_games": 20,
+        "agent_score_sum": 18.5
+      },
+      {
+        "opp_elo": 1800,
+        "n_games": 20,
+        "agent_score_sum": 14.5
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1991.2,
+      "ci95": 59.0,
+      "n_games": 180,
+      "per_opp": [
+        {
+          "opp_elo": 2000,
+          "n_games": 60,
+          "score": 0.492,
+          "elo_diff": -5.8,
+          "se": 44.9,
+          "elo_est": 1994.2
+        },
+        {
+          "opp_elo": 1100,
+          "n_games": 20,
+          "score": 0.95,
+          "elo_diff": 511.5,
+          "se": 178.2,
+          "elo_est": 1611.5
+        },
+        {
+          "opp_elo": 2200,
+          "n_games": 60,
+          "score": 0.275,
+          "elo_diff": -168.4,
+          "se": 50.2,
+          "elo_est": 2031.6
+        },
+        {
+          "opp_elo": 1500,
+          "n_games": 20,
+          "score": 0.925,
+          "elo_diff": 436.4,
+          "se": 147.5,
+          "elo_est": 1936.4
+        },
+        {
+          "opp_elo": 1800,
+          "n_games": 20,
+          "score": 0.725,
+          "elo_diff": 168.4,
+          "se": 87.0,
+          "elo_est": 1968.4
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chessball": {
+    "name": "chessball",
+    "path": "/Users/mathieuacher/SANDBOX/chessball",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chessfoo": {
+    "name": "chessfoo",
+    "path": "/Users/mathieuacher/SANDBOX/chessfoo",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chessfoo-claude": {
+    "name": "chessfoo-claude",
+    "path": "/Users/mathieuacher/SANDBOX/chessfoo-claude",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "chessprogramming-vm": {
+    "name": "chessprogramming-vm",
+    "path": "/Users/mathieuacher/SANDBOX/chessprogramming-vm",
+    "matches": [
+      {
+        "opp_elo": 1500,
+        "n_games": 1444,
+        "agent_score_sum": 335.0
+      },
+      {
+        "opp_elo": 2050,
+        "n_games": 96,
+        "agent_score_sum": 60.0
+      },
+      {
+        "opp_elo": 2150,
+        "n_games": 288,
+        "agent_score_sum": 140.0
+      },
+      {
+        "opp_elo": 2250,
+        "n_games": 288,
+        "agent_score_sum": 90.0
+      },
+      {
+        "opp_elo": 2350,
+        "n_games": 288,
+        "agent_score_sum": 124.0
+      },
+      {
+        "opp_elo": 2450,
+        "n_games": 416,
+        "agent_score_sum": 92.0
+      },
+      {
+        "opp_elo": 2550,
+        "n_games": 224,
+        "agent_score_sum": 22.0
+      },
+      {
+        "opp_elo": 2000,
+        "n_games": 1440,
+        "agent_score_sum": 158.0
+      },
+      {
+        "opp_elo": 2500,
+        "n_games": 1784,
+        "agent_score_sum": 154.0
+      },
+      {
+        "opp_elo": 1320,
+        "n_games": 152,
+        "agent_score_sum": 35.0
+      },
+      {
+        "opp_elo": 2400,
+        "n_games": 344,
+        "agent_score_sum": 84.0
+      },
+      {
+        "opp_elo": 2100,
+        "n_games": 192,
+        "agent_score_sum": 120.0
+      },
+      {
+        "opp_elo": 2200,
+        "n_games": 192,
+        "agent_score_sum": 88.0
+      },
+      {
+        "opp_elo": 2300,
+        "n_games": 192,
+        "agent_score_sum": 102.0
+      },
+      {
+        "opp_elo": 2600,
+        "n_games": 128,
+        "agent_score_sum": 22.0
+      },
+      {
+        "opp_elo": 2650,
+        "n_games": 128,
+        "agent_score_sum": 14.0
+      },
+      {
+        "opp_elo": 2700,
+        "n_games": 128,
+        "agent_score_sum": 6.0
+      },
+      {
+        "opp_elo": 2800,
+        "n_games": 128,
+        "agent_score_sum": 0.0
+      },
+      {
+        "opp_elo": 1800,
+        "n_games": 48,
+        "agent_score_sum": 0.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1886.3,
+      "ci95": 10.2,
+      "n_games": 7900,
+      "per_opp": [
+        {
+          "opp_elo": 1500,
+          "n_games": 1444,
+          "score": 0.232,
+          "elo_diff": -208.0,
+          "se": 10.8,
+          "elo_est": 1292.0
+        },
+        {
+          "opp_elo": 2050,
+          "n_games": 96,
+          "score": 0.625,
+          "elo_diff": 88.7,
+          "se": 36.6,
+          "elo_est": 2138.7
+        },
+        {
+          "opp_elo": 2150,
+          "n_games": 288,
+          "score": 0.486,
+          "elo_diff": -9.7,
+          "se": 20.5,
+          "elo_est": 2140.3
+        },
+        {
+          "opp_elo": 2250,
+          "n_games": 288,
+          "score": 0.312,
+          "elo_diff": -137.0,
+          "se": 22.1,
+          "elo_est": 2113.0
+        },
+        {
+          "opp_elo": 2350,
+          "n_games": 288,
+          "score": 0.431,
+          "elo_diff": -48.6,
+          "se": 20.7,
+          "elo_est": 2301.4
+        },
+        {
+          "opp_elo": 2450,
+          "n_games": 416,
+          "score": 0.221,
+          "elo_diff": -218.7,
+          "se": 20.5,
+          "elo_est": 2231.3
+        },
+        {
+          "opp_elo": 2550,
+          "n_games": 224,
+          "score": 0.098,
+          "elo_diff": -385.2,
+          "se": 39.0,
+          "elo_est": 2164.8
+        },
+        {
+          "opp_elo": 2000,
+          "n_games": 1440,
+          "score": 0.11,
+          "elo_diff": -363.7,
+          "se": 14.6,
+          "elo_est": 1636.3
+        },
+        {
+          "opp_elo": 2500,
+          "n_games": 1784,
+          "score": 0.086,
+          "elo_diff": -409.9,
+          "se": 14.6,
+          "elo_est": 2090.1
+        },
+        {
+          "opp_elo": 1320,
+          "n_games": 152,
+          "score": 0.23,
+          "elo_diff": -209.6,
+          "se": 33.5,
+          "elo_est": 1110.4
+        },
+        {
+          "opp_elo": 2400,
+          "n_games": 344,
+          "score": 0.244,
+          "elo_diff": -196.3,
+          "se": 21.8,
+          "elo_est": 2203.7
+        },
+        {
+          "opp_elo": 2100,
+          "n_games": 192,
+          "score": 0.625,
+          "elo_diff": 88.7,
+          "se": 25.9,
+          "elo_est": 2188.7
+        },
+        {
+          "opp_elo": 2200,
+          "n_games": 192,
+          "score": 0.458,
+          "elo_diff": -29.0,
+          "se": 25.2,
+          "elo_est": 2171.0
+        },
+        {
+          "opp_elo": 2300,
+          "n_games": 192,
+          "score": 0.531,
+          "elo_diff": 21.7,
+          "se": 25.1,
+          "elo_est": 2321.7
+        },
+        {
+          "opp_elo": 2600,
+          "n_games": 128,
+          "score": 0.172,
+          "elo_diff": -273.2,
+          "se": 40.7,
+          "elo_est": 2326.8
+        },
+        {
+          "opp_elo": 2650,
+          "n_games": 128,
+          "score": 0.109,
+          "elo_diff": -364.3,
+          "se": 49.2,
+          "elo_est": 2285.7
+        },
+        {
+          "opp_elo": 2700,
+          "n_games": 128,
+          "score": 0.047,
+          "elo_diff": -523.3,
+          "se": 72.6,
+          "elo_est": 2176.7
+        },
+        {
+          "opp_elo": 2800,
+          "n_games": 128,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 485.8,
+          "elo_est": 1600.2
+        },
+        {
+          "opp_elo": 1800,
+          "n_games": 48,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 793.3,
+          "elo_est": 600.2
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "chesspuzzle-tex-codex": {
+    "name": "chesspuzzle-tex-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chesspuzzle-tex-codex",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "cplusplus-chess": {
+    "name": "cplusplus-chess",
+    "path": "/Users/mathieuacher/SANDBOX/cplusplus-chess",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "gptchess": {
+    "name": "gptchess",
+    "path": "/Users/mathieuacher/SANDBOX/gptchess",
+    "matches": [
+      {
+        "opp_elo": 1954,
+        "n_games": 3,
+        "agent_score_sum": 0.0
+      },
+      {
+        "opp_elo": 1347,
+        "n_games": 1,
+        "agent_score_sum": 1.0
+      },
+      {
+        "opp_elo": 1490,
+        "n_games": 2,
+        "agent_score_sum": 1.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1485.6,
+      "ci95": 480.1,
+      "n_games": 6,
+      "per_opp": [
+        {
+          "opp_elo": 1954,
+          "n_games": 3,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 3173.2,
+          "elo_est": 754.2
+        },
+        {
+          "opp_elo": 1490,
+          "n_games": 2,
+          "score": 0.5,
+          "elo_diff": -0.0,
+          "se": 245.7,
+          "elo_est": 1490.0
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "latex-chess-engine": {
+    "name": "latex-chess-engine",
+    "path": "/Users/mathieuacher/SANDBOX/latex-chess-engine",
+    "matches": [
+      {
+        "opp_elo": 1320,
+        "n_games": 50,
+        "agent_score_sum": 21.5
+      },
+      {
+        "opp_elo": 1500,
+        "n_games": 50,
+        "agent_score_sum": 9.5
+      },
+      {
+        "opp_elo": 1600,
+        "n_games": 10,
+        "agent_score_sum": 1.0
+      },
+      {
+        "opp_elo": 1400,
+        "n_games": 50,
+        "agent_score_sum": 15.5
+      },
+      {
+        "opp_elo": 1700,
+        "n_games": 10,
+        "agent_score_sum": 0.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1260.3,
+      "ci95": 60.6,
+      "n_games": 170,
+      "per_opp": [
+        {
+          "opp_elo": 1320,
+          "n_games": 50,
+          "score": 0.43,
+          "elo_diff": -49.0,
+          "se": 49.6,
+          "elo_est": 1271.0
+        },
+        {
+          "opp_elo": 1500,
+          "n_games": 50,
+          "score": 0.19,
+          "elo_diff": -251.9,
+          "se": 62.6,
+          "elo_est": 1248.1
+        },
+        {
+          "opp_elo": 1600,
+          "n_games": 10,
+          "score": 0.1,
+          "elo_diff": -381.7,
+          "se": 183.1,
+          "elo_est": 1218.3
+        },
+        {
+          "opp_elo": 1400,
+          "n_games": 50,
+          "score": 0.31,
+          "elo_diff": -139.0,
+          "se": 53.1,
+          "elo_est": 1261.0
+        },
+        {
+          "opp_elo": 1700,
+          "n_games": 10,
+          "score": 0.0,
+          "elo_diff": -1199.8,
+          "se": 1738.0,
+          "elo_est": 500.2
+        }
+      ]
+    },
+    "agent_claims": [
+      {
+        "file": "README.md",
+        "elo": 1300,
+        "context": "ss engine ever written in LaTeX/TeX.  Estimated strength: **~1300 Elo** (measured: 46% score vs Stockfish 1320 over 100 games, ti"
+      },
+      {
+        "file": "readme.md",
+        "elo": 1300,
+        "context": "ss engine ever written in LaTeX/TeX.  Estimated strength: **~1300 Elo** (measured: 46% score vs Stockfish 1320 over 100 games, ti"
+      }
+    ]
+  },
+  "lean-chess": {
+    "name": "lean-chess",
+    "path": "/Users/mathieuacher/SANDBOX/lean-chess",
+    "matches": [
+      {
+        "opp_elo": 1320,
+        "n_games": 200,
+        "agent_score_sum": 136.0
+      },
+      {
+        "opp_elo": 1450,
+        "n_games": 130,
+        "agent_score_sum": 59.0
+      },
+      {
+        "opp_elo": 1600,
+        "n_games": 30,
+        "agent_score_sum": 5.0
+      },
+      {
+        "opp_elo": 1200,
+        "n_games": 30,
+        "agent_score_sum": 11.0
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 1404.7,
+      "ci95": 36.5,
+      "n_games": 390,
+      "per_opp": [
+        {
+          "opp_elo": 1320,
+          "n_games": 200,
+          "score": 0.68,
+          "elo_diff": 130.9,
+          "se": 26.3,
+          "elo_est": 1450.9
+        },
+        {
+          "opp_elo": 1450,
+          "n_games": 130,
+          "score": 0.454,
+          "elo_diff": -32.2,
+          "se": 30.6,
+          "elo_est": 1417.8
+        },
+        {
+          "opp_elo": 1600,
+          "n_games": 30,
+          "score": 0.167,
+          "elo_diff": -279.6,
+          "se": 85.1,
+          "elo_est": 1320.4
+        },
+        {
+          "opp_elo": 1200,
+          "n_games": 30,
+          "score": 0.367,
+          "elo_diff": -94.9,
+          "se": 65.8,
+          "elo_est": 1105.1
+        }
+      ]
+    },
+    "agent_claims": []
+  },
+  "minichess-5x5-repro": {
+    "name": "minichess-5x5-repro",
+    "path": "/Users/mathieuacher/SANDBOX/minichess-5x5-repro",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "minichess-5x5-repro-cc": {
+    "name": "minichess-5x5-repro-cc",
+    "path": "/Users/mathieuacher/SANDBOX/minichess-5x5-repro-cc",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "puzzles-chess": {
+    "name": "puzzles-chess",
+    "path": "/Users/mathieuacher/SANDBOX/puzzles-chess",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  },
+  "test-superset": {
+    "name": "test-superset",
+    "path": "/Users/mathieuacher/SANDBOX/test-superset",
+    "matches": [
+      {
+        "opp_elo": 1100,
+        "n_games": 8,
+        "agent_score_sum": 0.5
+      }
+    ],
+    "aggregate": {
+      "elo_estimate": 629.6,
+      "ci95": 497.3,
+      "n_games": 8,
+      "per_opp": [
+        {
+          "opp_elo": 1100,
+          "n_games": 8,
+          "score": 0.062,
+          "elo_diff": -470.4,
+          "se": 253.7,
+          "elo_est": 629.6
+        }
+      ]
+    },
+    "agent_claims": [
+      {
+        "file": "README.md",
+        "elo": 800,
+        "context": "tation, not JavaScript.  **Strength estimate:** Roughly 500-800 Elo based on tournament results. Stronger than random, weaker t"
+      },
+      {
+        "file": "readme.md",
+        "elo": 800,
+        "context": "tation, not JavaScript.  **Strength estimate:** Roughly 500-800 Elo based on tournament results. Stronger than random, weaker t"
+      }
+    ]
+  },
+  "chess-revisit-java-toCOBOL-codex": {
+    "name": "chess-revisit-java-toCOBOL-codex",
+    "path": "/Users/mathieuacher/SANDBOX/chess-revisit-java-toRust-codex/chess-revisit-java-toCOBOL",
+    "matches": [],
+    "aggregate": {
+      "n_games": 0,
+      "per_opp": []
+    },
+    "agent_claims": []
+  }
+}

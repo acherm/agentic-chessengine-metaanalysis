@@ -1,0 +1,32 @@
+Indexing opening suite...
+Started game 2 of 6 (chess-apl-codex54 vs latex-chess-engine)
+Started game 1 of 6 (latex-chess-engine vs chess-apl-codex54)
+Finished game 2 (chess-apl-codex54 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs chess-apl-codex54: 0 - 1 - 0  [0.000] 1
+Started game 3 of 6 (latex-chess-engine vs chess-apl-codex54)
+Finished game 3 (latex-chess-engine vs chess-apl-codex54): 0-1 {White makes an illegal move: b1c3}
+Score of latex-chess-engine vs chess-apl-codex54: 0 - 2 - 0  [0.000] 2
+Started game 4 of 6 (chess-apl-codex54 vs latex-chess-engine)
+Finished game 4 (chess-apl-codex54 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs chess-apl-codex54: 0 - 3 - 0  [0.000] 3
+Started game 5 of 6 (latex-chess-engine vs chess-apl-codex54)
+Finished game 1 (latex-chess-engine vs chess-apl-codex54): 0-1 {White makes an illegal move: b1c3}
+Score of latex-chess-engine vs chess-apl-codex54: 0 - 4 - 0  [0.000] 4
+Started game 6 of 6 (chess-apl-codex54 vs latex-chess-engine)
+Finished game 6 (chess-apl-codex54 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs chess-apl-codex54: 0 - 5 - 0  [0.000] 5
+Finished game 5 (latex-chess-engine vs chess-apl-codex54): 0-1 {White makes an illegal move: b1c3}
+Score of latex-chess-engine vs chess-apl-codex54: 0 - 6 - 0  [0.000] 6
+...      latex-chess-engine playing White: 0 - 3 - 0  [0.000] 3
+...      latex-chess-engine playing Black: 0 - 3 - 0  [0.000] 3
+...      White vs Black: 3 - 3 - 0  [0.500] 6
+Elo difference: -inf +/- nan, LOS: 0.7 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: latex-chess-engine
+   "Loss: Black makes an illegal move: b1c3": 3
+   "Loss: White makes an illegal move: b1c3": 3
+Player: chess-apl-codex54
+   "Win: Black makes an illegal move: b1c3": 3
+   "Win: White makes an illegal move: b1c3": 3
+Finished match

@@ -1,0 +1,328 @@
+{
+  "name": "chess-rust-cc",
+  "path": "/Users/mathieuacher/SANDBOX/chess-rust-cc",
+  "primary_language": "Rust",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Markdown": 1,
+      "Shell": 1,
+      "Rust": 20,
+      "Text": 4
+    },
+    "loc_by_lang": {
+      "TOML": 12,
+      "Markdown": 119,
+      "Shell": 174,
+      "Rust": 5372,
+      "Text": 195
+    },
+    "total_files": 27,
+    "total_loc": 5872
+  },
+  "features": {
+    "FEN parsing": 4,
+    "UCI protocol": 12,
+    "Perft": 5,
+    "Castling": 11,
+    "En passant": 6,
+    "Promotion": 4,
+    "Check/Checkmate": 3,
+    "PGN": 7,
+    "Board: bitboard": 15,
+    "Board: magic bitboards": 2,
+    "Board: mailbox 8x8": 2,
+    "Alpha-beta": 1,
+    "Iterative deepening": 3,
+    "Quiescence": 4,
+    "Transposition table": 7,
+    "Zobrist hashing": 5,
+    "Move ordering (MVV-LVA)": 2,
+    "Killer moves": 3,
+    "History heuristic": 2,
+    "Principal-variation (PV)": 2,
+    "Null-move pruning": 2,
+    "Late-move reduction (LMR)": 2,
+    "Late-move pruning (LMP)": 2,
+    "Aspiration windows": 2,
+    "Futility pruning": 2,
+    "Razoring": 1,
+    "Evaluation/PST": 4,
+    "Tapered evaluation": 2,
+    "King safety": 2,
+    "Pawn structure": 2,
+    "Mobility": 2,
+    "Material counting": 4,
+    "Opening book": 2,
+    "Time management": 14
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "ASSESSMENT.md",
+      "tests/perft_tests.rs",
+      "src/board.rs",
+      "src/uci.rs"
+    ],
+    "UCI protocol": [
+      "ASSESSMENT.md",
+      "elo_test.sh",
+      "elo_results/vs_sf_elo1320.log",
+      "elo_results/vs_sf_elo1900.log",
+      "elo_results/vs_sf_elo2500.log",
+      "elo_results/vs_sf_elo2100.log",
+      "elo_results/vs_sf_elo1500.log",
+      "elo_results/vs_sf_elo1700.log",
+      "src/lib.rs",
+      "src/main.rs",
+      "src/search.rs",
+      "src/uci.rs"
+    ],
+    "Perft": [
+      "ASSESSMENT.md",
+      "tests/perft_tests.rs",
+      "src/perft.rs",
+      "src/lib.rs",
+      "src/uci.rs"
+    ],
+    "Castling": [
+      "elo_results/vs_sf_elo1700.pgn",
+      "elo_results/vs_sf_elo1500.pgn",
+      "elo_results/vs_sf_elo2500.pgn",
+      "elo_results/vs_sf_elo2100.pgn",
+      "elo_results/vs_sf_elo1900.pgn",
+      "elo_results/vs_sf_elo1320.pgn",
+      "src/types.rs",
+      "src/movegen.rs",
+      "src/zobrist.rs",
+      "src/board.rs",
+      "src/search.rs"
+    ],
+    "En passant": [
+      "ASSESSMENT.md",
+      "src/movegen.rs",
+      "src/zobrist.rs",
+      "src/moves.rs",
+      "src/board.rs",
+      "src/search.rs"
+    ],
+    "Promotion": [
+      "src/movegen.rs",
+      "src/movepick.rs",
+      "src/moves.rs",
+      "src/board.rs"
+    ],
+    "Check/Checkmate": [
+      "ASSESSMENT.md",
+      "src/board.rs",
+      "src/search.rs"
+    ],
+    "PGN": [
+      "elo_test.sh",
+      "elo_results/vs_sf_elo1320.log",
+      "elo_results/vs_sf_elo1900.log",
+      "elo_results/vs_sf_elo2500.log",
+      "elo_results/vs_sf_elo2100.log",
+      "elo_results/vs_sf_elo1500.log",
+      "elo_results/vs_sf_elo1700.log"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "ASSESSMENT.md",
+      "src/tt.rs",
+      "src/types.rs",
+      "src/movegen.rs",
+      "src/perft.rs",
+      "src/zobrist.rs",
+      "src/lib.rs",
+      "src/time.rs",
+      "src/magic.rs",
+      "src/board.rs",
+      "src/bitboard.rs",
+      "src/attacks.rs",
+      "src/eval.rs",
+      "src/search.rs",
+      "src/uci.rs"
+    ],
+    "Board: magic bitboards": [
+      "ASSESSMENT.md",
+      "src/magic.rs"
+    ],
+    "Board: mailbox 8x8": [
+      "ASSESSMENT.md",
+      "src/board.rs"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [
+      "ASSESSMENT.md"
+    ],
+    "Iterative deepening": [
+      "ASSESSMENT.md",
+      "src/time.rs",
+      "src/search.rs"
+    ],
+    "Quiescence": [
+      "ASSESSMENT.md",
+      "src/movegen.rs",
+      "src/movepick.rs",
+      "src/search.rs"
+    ],
+    "Transposition table": [
+      "ASSESSMENT.md",
+      "src/tt.rs",
+      "src/zobrist.rs",
+      "src/lib.rs",
+      "src/board.rs",
+      "src/search.rs",
+      "src/uci.rs"
+    ],
+    "Zobrist hashing": [
+      "ASSESSMENT.md",
+      "src/zobrist.rs",
+      "src/lib.rs",
+      "src/board.rs",
+      "src/search.rs"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "ASSESSMENT.md",
+      "src/movepick.rs"
+    ],
+    "Killer moves": [
+      "ASSESSMENT.md",
+      "src/history.rs",
+      "src/search.rs"
+    ],
+    "History heuristic": [
+      "ASSESSMENT.md",
+      "src/history.rs"
+    ],
+    "Principal-variation (PV)": [
+      "ASSESSMENT.md",
+      "src/search.rs"
+    ],
+    "Null-move pruning": [
+      "ASSESSMENT.md",
+      "src/search.rs"
+    ],
+    "Late-move reduction (LMR)": [
+      "ASSESSMENT.md",
+      "src/search.rs"
+    ],
+    "Late-move pruning (LMP)": [
+      "ASSESSMENT.md",
+      "src/search.rs"
+    ],
+    "Aspiration windows": [
+      "ASSESSMENT.md",
+      "src/search.rs"
+    ],
+    "Futility pruning": [
+      "ASSESSMENT.md",
+      "src/search.rs"
+    ],
+    "Razoring": [
+      "src/search.rs"
+    ],
+    "Evaluation/PST": [
+      "src/pst.rs",
+      "src/lib.rs",
+      "src/board.rs",
+      "src/eval.rs"
+    ],
+    "Tapered evaluation": [
+      "ASSESSMENT.md",
+      "src/eval.rs"
+    ],
+    "King safety": [
+      "ASSESSMENT.md",
+      "src/eval.rs"
+    ],
+    "Pawn structure": [
+      "ASSESSMENT.md",
+      "src/eval.rs"
+    ],
+    "Mobility": [
+      "ASSESSMENT.md",
+      "src/eval.rs"
+    ],
+    "Material counting": [
+      "elo_results/vs_sf_elo2500.pgn",
+      "src/pst.rs",
+      "src/board.rs",
+      "src/search.rs"
+    ],
+    "Opening book": [
+      "ASSESSMENT.md",
+      "elo_test.sh"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "ASSESSMENT.md",
+      "elo_test.sh",
+      "elo_results/vs_sf_elo1700.pgn",
+      "elo_results/vs_sf_elo1500.pgn",
+      "elo_results/summary_20260217_084533.txt",
+      "elo_results/summary_20260216_235313.txt",
+      "elo_results/summary_20260217_064741.txt",
+      "elo_results/vs_sf_elo2500.pgn",
+      "elo_results/vs_sf_elo2100.pgn",
+      "elo_results/summary_20260216_235456.txt",
+      "elo_results/vs_sf_elo1900.pgn",
+      "elo_results/vs_sf_elo1320.pgn",
+      "src/time.rs",
+      "src/uci.rs"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 8,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "b15629e|2026-02-17T09:11:39+01:00|Mathieu Acher|Add second wave of engine improvements (~2100 \u2192 ~2200+ Elo)",
+      "0808060|2026-02-17T00:16:16+01:00|Mathieu Acher|Initial commit: RustChess UCI engine (~2100 Elo)"
+    ],
+    "n_commits": 2,
+    "authors": [
+      "2\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

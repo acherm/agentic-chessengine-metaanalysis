@@ -1,0 +1,84 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Started game 2 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 2 (sf_skill9 vs chess-revisit-java-toRust-codex): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 1 (chess-revisit-java-toRust-codex vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 3 (chess-revisit-java-toRust-codex vs sf_skill9): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 1 - 1 - 1  [0.500] 3
+Started game 5 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 4 (sf_skill9 vs chess-revisit-java-toRust-codex): 1/2-1/2 {Draw by fifty moves rule}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 1 - 1 - 2  [0.500] 4
+Started game 6 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 5 (chess-revisit-java-toRust-codex vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 2 - 1 - 2  [0.600] 5
+Started game 7 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 7 (chess-revisit-java-toRust-codex vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 3 - 1 - 2  [0.667] 6
+Started game 8 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 6 (sf_skill9 vs chess-revisit-java-toRust-codex): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 3 - 2 - 2  [0.571] 7
+Started game 9 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 8 (sf_skill9 vs chess-revisit-java-toRust-codex): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 3 - 3 - 2  [0.500] 8
+Started game 10 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 9 (chess-revisit-java-toRust-codex vs sf_skill9): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 3 - 4 - 2  [0.444] 9
+Started game 11 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 10 (sf_skill9 vs chess-revisit-java-toRust-codex): 1/2-1/2 {Draw by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 3 - 4 - 3  [0.450] 10
+Started game 12 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 11 (chess-revisit-java-toRust-codex vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 4 - 4 - 3  [0.500] 11
+Started game 13 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 12 (sf_skill9 vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 5 - 4 - 3  [0.542] 12
+Started game 14 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 13 (chess-revisit-java-toRust-codex vs sf_skill9): 1/2-1/2 {Draw by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 5 - 4 - 4  [0.538] 13
+Started game 15 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 14 (sf_skill9 vs chess-revisit-java-toRust-codex): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 5 - 5 - 4  [0.500] 14
+Started game 16 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 15 (chess-revisit-java-toRust-codex vs sf_skill9): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 5 - 6 - 4  [0.467] 15
+Started game 17 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 16 (sf_skill9 vs chess-revisit-java-toRust-codex): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 5 - 7 - 4  [0.438] 16
+Started game 18 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 17 (chess-revisit-java-toRust-codex vs sf_skill9): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 6 - 7 - 4  [0.471] 17
+Started game 19 of 20 (chess-revisit-java-toRust-codex vs sf_skill9)
+Finished game 18 (sf_skill9 vs chess-revisit-java-toRust-codex): 1-0 {White wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 6 - 8 - 4  [0.444] 18
+Started game 20 of 20 (sf_skill9 vs chess-revisit-java-toRust-codex)
+Finished game 20 (sf_skill9 vs chess-revisit-java-toRust-codex): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 7 - 8 - 4  [0.474] 19
+Finished game 19 (chess-revisit-java-toRust-codex vs sf_skill9): 0-1 {Black wins by adjudication}
+Score of chess-revisit-java-toRust-codex vs sf_skill9: 7 - 9 - 4  [0.450] 20
+...      chess-revisit-java-toRust-codex playing White: 5 - 3 - 2  [0.600] 10
+...      chess-revisit-java-toRust-codex playing Black: 2 - 6 - 2  [0.300] 10
+...      White vs Black: 11 - 5 - 4  [0.650] 20
+Elo difference: -34.9 +/- 144.6, LOS: 30.9 %, DrawRatio: 20.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-revisit-java-toRust-codex
+   "Draw by 3-fold repetition": 1
+   "Draw by adjudication": 2
+   "Draw by fifty moves rule": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White wins by adjudication": 6
+   "Win: Black wins by adjudication": 2
+   "Win: White wins by adjudication": 5
+Player: sf_skill9
+   "Draw by 3-fold repetition": 1
+   "Draw by adjudication": 2
+   "Draw by fifty moves rule": 1
+   "Loss: Black wins by adjudication": 2
+   "Loss: White wins by adjudication": 5
+   "Win: Black wins by adjudication": 3
+   "Win: White wins by adjudication": 6
+Finished match

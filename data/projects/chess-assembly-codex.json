@@ -1,0 +1,216 @@
+{
+  "name": "chess-assembly-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-assembly-codex",
+  "primary_language": "Assembly",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1,
+      "Python": 5,
+      "Assembly": 2,
+      "C": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 74,
+      "Python": 820,
+      "Assembly": 9494,
+      "C": 1922
+    },
+    "total_files": 9,
+    "total_loc": 12310
+  },
+  "features": {
+    "FEN parsing": 1,
+    "UCI protocol": 6,
+    "Castling": 4,
+    "Promotion": 1,
+    "Check/Checkmate": 1,
+    "Board: mailbox 8x8": 1,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 3,
+    "Transposition table": 4,
+    "Zobrist hashing": 3,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 1,
+    "Aspiration windows": 1,
+    "Futility pruning": 1,
+    "Tapered evaluation": 1,
+    "Pawn structure": 1,
+    "Material counting": 2,
+    "Opening book": 1,
+    "Time management": 5
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "scripts/uci_bridge.py"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "scripts/run_matches.py",
+      "scripts/uci_bridge.py",
+      "scripts/uci_smoke.py",
+      "scripts/core_selftest.py",
+      "src/engine/main.s"
+    ],
+    "Perft": [],
+    "Castling": [
+      "README.md",
+      "scripts/asm_core.py",
+      "scripts/core_selftest.py",
+      "src/core/core_impl.c"
+    ],
+    "En passant": [],
+    "Promotion": [
+      "scripts/asm_core.py"
+    ],
+    "Check/Checkmate": [
+      "src/core/core_impl.c"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "src/core/core_impl.c"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [
+      "scripts/asm_core.py"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "src/core/core.s",
+      "src/core/core_impl.c"
+    ],
+    "Transposition table": [
+      "README.md",
+      "scripts/asm_core.py",
+      "src/core/core.s",
+      "src/core/core_impl.c"
+    ],
+    "Zobrist hashing": [
+      "scripts/asm_core.py",
+      "src/core/core.s",
+      "src/core/core_impl.c"
+    ],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [
+      "README.md"
+    ],
+    "Null-move pruning": [
+      "README.md"
+    ],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "README.md"
+    ],
+    "Futility pruning": [
+      "README.md"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [
+      "README.md"
+    ],
+    "King safety": [],
+    "Pawn structure": [
+      "src/core/core_impl.c"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "src/core/core.s",
+      "src/core/core_impl.c"
+    ],
+    "Opening book": [
+      "scripts/asm_core.py"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "Makefile",
+      "README.md",
+      "scripts/run_matches.py",
+      "scripts/uci_bridge.py",
+      "scripts/uci_smoke.py"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 12,
+    "n_assistant_messages": 98,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 198,
+      "write_stdin": 92,
+      "update_plan": 2
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 32952290,
+        "output": 184660,
+        "cache_read": 31765120,
+        "cache_creation": 0,
+        "reasoning_output": 84532
+      },
+      "usd_estimate": 47.01
+    },
+    "first_ts": "2026-02-24T13:03:10.693Z",
+    "last_ts": "2026-02-25T14:36:32.406Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-24T14-00-53-019c8fbc-fe4f-7303-97e1-7bcbdcc8fbfc",
+        "first_ts": "2026-02-24T13:03:10.693Z",
+        "last_ts": "2026-02-25T14:36:32.406Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 12,
+        "tokens": {
+          "input": 32952290,
+          "output": 184660,
+          "cache_read": 31765120,
+          "reasoning_output": 84532
+        },
+        "tool_uses": {
+          "exec_command": 198,
+          "update_plan": 2,
+          "write_stdin": 92
+        },
+        "first_prompt_sample": "I want to build a chess engine in assembly language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

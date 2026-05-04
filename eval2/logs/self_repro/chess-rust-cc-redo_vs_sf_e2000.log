@@ -1,0 +1,82 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-rust-cc-redo vs sf_e2000)
+Started game 2 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 1 (chess-rust-cc-redo vs sf_e2000): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 2 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 2 - 0 - 0  [1.000] 2
+Started game 4 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 3 (chess-rust-cc-redo vs sf_e2000): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 3 - 0 - 0  [1.000] 3
+Started game 5 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 4 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 4 - 0 - 0  [1.000] 4
+Started game 6 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 5 (chess-rust-cc-redo vs sf_e2000): 1-0 {White mates}
+Score of chess-rust-cc-redo vs sf_e2000: 5 - 0 - 0  [1.000] 5
+Started game 7 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 6 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 6 - 0 - 0  [1.000] 6
+Started game 8 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 7 (chess-rust-cc-redo vs sf_e2000): 1-0 {White mates}
+Score of chess-rust-cc-redo vs sf_e2000: 7 - 0 - 0  [1.000] 7
+Started game 9 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 8 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 8 - 0 - 0  [1.000] 8
+Started game 10 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 9 (chess-rust-cc-redo vs sf_e2000): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 9 - 0 - 0  [1.000] 9
+Started game 11 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 10 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black mates}
+Score of chess-rust-cc-redo vs sf_e2000: 10 - 0 - 0  [1.000] 10
+Started game 12 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 11 (chess-rust-cc-redo vs sf_e2000): 0-1 {Black mates}
+Score of chess-rust-cc-redo vs sf_e2000: 10 - 1 - 0  [0.909] 11
+Started game 13 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 12 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 11 - 1 - 0  [0.917] 12
+Started game 14 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 13 (chess-rust-cc-redo vs sf_e2000): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 12 - 1 - 0  [0.923] 13
+Started game 15 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 14 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 13 - 1 - 0  [0.929] 14
+Started game 16 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 15 (chess-rust-cc-redo vs sf_e2000): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 14 - 1 - 0  [0.933] 15
+Started game 17 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 16 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 15 - 1 - 0  [0.938] 16
+Started game 18 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 17 (chess-rust-cc-redo vs sf_e2000): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 15 - 2 - 0  [0.882] 17
+Started game 19 of 20 (chess-rust-cc-redo vs sf_e2000)
+Finished game 18 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 16 - 2 - 0  [0.889] 18
+Started game 20 of 20 (sf_e2000 vs chess-rust-cc-redo)
+Finished game 19 (chess-rust-cc-redo vs sf_e2000): 1-0 {White wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 17 - 2 - 0  [0.895] 19
+Finished game 20 (sf_e2000 vs chess-rust-cc-redo): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc-redo vs sf_e2000: 18 - 2 - 0  [0.900] 20
+...      chess-rust-cc-redo playing White: 8 - 2 - 0  [0.800] 10
+...      chess-rust-cc-redo playing Black: 10 - 0 - 0  [1.000] 10
+...      White vs Black: 8 - 12 - 0  [0.400] 20
+Elo difference: 381.7 +/- nan, LOS: 100.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-cc-redo
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 1
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 9
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 6
+Player: sf_e2000
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 9
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 6
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 1
+Finished match

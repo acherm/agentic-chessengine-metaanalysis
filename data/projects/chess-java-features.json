@@ -1,0 +1,169 @@
+{
+  "project": "chess-java",
+  "n_write_events": 25,
+  "cumulative": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+  ],
+  "first_appearances": {
+    "FEN parsing": {
+      "step": 1,
+      "ts": "2026-02-17T12:56:17.530Z",
+      "file": "src/main/java/com/example/chess/engine/Piece.java",
+      "kind": "heredoc",
+      "snippet": "w new IllegalArgumentException(\"Invalid FEN piece char: \" + c); } r"
+    },
+    "Promotion": {
+      "step": 1,
+      "ts": "2026-02-17T12:56:17.530Z",
+      "file": "src/main/java/com/example/chess/engine/Piece.java",
+      "kind": "heredoc",
+      "snippet": "r, type); } public static char promotionToChar(int pieceType) { retur"
+    },
+    "Material counting": {
+      "step": 1,
+      "ts": "2026-02-17T12:56:17.530Z",
+      "file": "src/main/java/com/example/chess/engine/Piece.java",
+      "kind": "heredoc",
+      "snippet": "e : -type; } public static int materialValue(int type) { return switch"
+    },
+    "En passant": {
+      "step": 1,
+      "ts": "2026-02-17T12:56:36.372Z",
+      "file": "src/main/java/com/example/chess/engine/Move.java",
+      "kind": "heredoc",
+      "snippet": "E = 1; public static final int FLAG_EN_PASSANT = 1 << 1; public static final int F"
+    },
+    "Castling": {
+      "step": 1,
+      "ts": "2026-02-17T12:56:40.632Z",
+      "file": "src/main/java/com/example/chess/engine/Undo.java",
+      "kind": "heredoc",
+      "snippet": "blic int capturedPiece; public int castlingRights; public int enPassantSquare;"
+    },
+    "Check/Checkmate": {
+      "step": 1,
+      "ts": "2026-02-17T12:58:28.212Z",
+      "file": "src/main/java/com/example/chess/engine/Board.java",
+      "kind": "heredoc",
+      "snippet": "} } } public boolean isInCheck(int side) { int kingSquare = si"
+    },
+    "Evaluation/PST": {
+      "step": 1,
+      "ts": "2026-02-17T12:58:59.276Z",
+      "file": "src/main/java/com/example/chess/engine/Evaluator.java",
+      "kind": "heredoc",
+      "snippet": "ce.materialValue(type); int pst = pieceSquareBonus(type, piece > 0 ? sq"
+    },
+    "Time management": {
+      "step": 1,
+      "ts": "2026-02-17T12:59:21.257Z",
+      "file": "src/main/java/com/example/chess/engine/SearchLimits.java",
+      "kind": "heredoc",
+      "snippet": "; } public static SearchLimits moveTime(long millis) { return new Searc"
+    },
+    "Minimax/Negamax": {
+      "step": 1,
+      "ts": "2026-02-17T12:59:52.557Z",
+      "file": "src/main/java/com/example/chess/engine/Search.java",
+      "kind": "heredoc",
+      "snippet": "ve, undo); int score = -negamax(depth - 1, -beta, -alpha, 1);"
+    },
+    "Quiescence": {
+      "step": 1,
+      "ts": "2026-02-17T12:59:52.557Z",
+      "file": "src/main/java/com/example/chess/engine/Search.java",
+      "kind": "heredoc",
+      "snippet": "|| ply >= MAX_PLY) { return quiescence(alpha, beta, ply); } L"
+    },
+    "Perft": {
+      "step": 1,
+      "ts": "2026-02-17T12:59:59.187Z",
+      "file": "src/main/java/com/example/chess/engine/Perft.java",
+      "kind": "heredoc",
+      "snippet": "ort java.util.List; public final class Perft { private Perft() { } publ"
+    },
+    "UCI protocol": {
+      "step": 1,
+      "ts": "2026-02-17T13:01:00.009Z",
+      "file": "src/main/java/com/example/chess/uci/UciEngine.java",
+      "kind": "heredoc",
+      "snippet": "package com.example.chess.uci; import com.example.chess.engine.Board"
+    },
+    "PGN": {
+      "step": 1,
+      "ts": "2026-02-17T13:01:48.184Z",
+      "file": "scripts/run_match.sh",
+      "kind": "heredoc",
+      "snippet": "ild/matches/match_$(date +%Y%m%d_%H%M%S).pgn}\" if [ -z \"$OPPONENT_CMD\" ]; then ec"
+    },
+    "Alpha-beta": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": "- Search: - iterative deepening, - alpha-beta negamax, - quiescence search, - sim"
+    },
+    "Iterative deepening": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": "check legality filtering. - Search: - iterative deepening, - alpha-beta negamax, - quiesce"
+    },
+    "Transposition table": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": "Next steps to increase strength - Add transposition table (Zobrist hash + TT entries). - Ad"
+    },
+    "Zobrist hashing": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": "se strength - Add transposition table (Zobrist hash + TT entries). - Add move ordering"
+    },
+    "Tapered evaluation": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": "50-move draw detection in search. - Add tapered eval (middlegame/endgame) and mobility/"
+    },
+    "King safety": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": "eval (middlegame/endgame) and mobility/king safety terms. - Add opening book and simple en"
+    },
+    "Mobility": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": "d tapered eval (middlegame/endgame) and mobility/king safety terms. - Add opening book a"
+    },
+    "Opening book": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": ") and mobility/king safety terms. - Add opening book and simple endgame tablebase probing."
+    },
+    "Endgame tables": {
+      "step": 1,
+      "ts": "2026-02-17T13:06:33.154Z",
+      "file": "README.md",
+      "kind": "heredoc",
+      "snippet": ". - Add opening book and simple endgame tablebase probing."
+    }
+  }
+}

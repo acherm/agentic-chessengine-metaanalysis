@@ -1,0 +1,46 @@
+Indexing opening suite...
+Started game 1 of 30 (latex-chess-engine vs sf_skill15)
+Started game 2 of 30 (sf_skill15 vs latex-chess-engine)
+Finished game 2 (sf_skill15 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (latex-chess-engine vs sf_skill15)
+Finished game 3 (latex-chess-engine vs sf_skill15): 0-1 {White makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (sf_skill15 vs latex-chess-engine)
+Finished game 4 (sf_skill15 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (latex-chess-engine vs sf_skill15)
+Finished game 1 (latex-chess-engine vs sf_skill15): 0-1 {White makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (sf_skill15 vs latex-chess-engine)
+Finished game 5 (latex-chess-engine vs sf_skill15): 0-1 {White makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (latex-chess-engine vs sf_skill15)
+Finished game 6 (sf_skill15 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (sf_skill15 vs latex-chess-engine)
+Finished game 7 (latex-chess-engine vs sf_skill15): 0-1 {White makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 7 - 0  [0.000] 7
+Started game 9 of 30 (latex-chess-engine vs sf_skill15)
+Finished game 8 (sf_skill15 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 8 - 0  [0.000] 8
+Started game 10 of 30 (sf_skill15 vs latex-chess-engine)
+Finished game 10 (sf_skill15 vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of latex-chess-engine vs sf_skill15: 0 - 9 - 0  [0.000] 9
+Finished game 9 (latex-chess-engine vs sf_skill15): * {No result}
+Score of latex-chess-engine vs sf_skill15: 0 - 9 - 0  [0.000] 9
+...      latex-chess-engine playing White: 0 - 4 - 0  [0.000] 4
+...      latex-chess-engine playing Black: 0 - 5 - 0  [0.000] 5
+...      White vs Black: 5 - 4 - 0  [0.556] 9
+Elo difference: -inf +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr -3.17 (-107.7%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: latex-chess-engine
+   "Loss: Black makes an illegal move: b1c3": 5
+   "Loss: White makes an illegal move: b1c3": 4
+   "No result": 1
+Player: sf_skill15
+   "No result": 1
+   "Win: Black makes an illegal move: b1c3": 5
+   "Win: White makes an illegal move: b1c3": 4
+Finished match

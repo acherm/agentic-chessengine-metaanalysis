@@ -1,0 +1,70 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "1"]
+[White "chess-brainfuck"]
+[Black "chess-Rocq"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. Nf3 f5 3. d4 Nc6 4. Ne5 Nxe5 5. dxe5 d4 6. Nb5 c5 7. e3 dxe3 8. Qxd8+
+Kxd8 9. Bxe3 e6 10. Nd6 Bxd6 11. exd6 b6 12. Bc4 e5 13. Bd5 Rb8 14. O-O f4
+15. Bc1 Nf6 16. Bc4 b5 17. Bf7 Rf8 18. Bb3 c4 19. Bxc4 bxc4 20. Re1 Re8 21. Rb1
+Bf5 22. Ra1 Bxc2 23. Re2 Bd3 24. Re1 Ne4 25. Rd1 Rb6 26. d7 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "1"]
+[White "chess-Rocq"]
+[Black "chess-brainfuck"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nc6 2. d4 Nf6 3. d5 Ne5 4. e4 d6 5. f4 Ng6 6. Bb5+ Bd7 7. Bxd7+ Qxd7 8. Nf3
+e5 9. f5 Ne7 10. h3 O-O-O 11. g4 h6 12. Be3 Kb8 13. g5 hxg5 14. Nxg5 Qe8 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "2"]
+[White "chess-brainfuck"]
+[Black "chess-Rocq"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/6P1/PPPPPP1P/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. Nc3 d4 3. Ne4 f5 4. Ng5 c5 5. N1f3 Nc6 6. Bg2 e5 7. d3 h6 8. Nh3 g5
+9. Nd2 g4 10. Bxc6+ bxc6 11. Ng1 Nf6 12. e4 dxe3 13. fxe3 Qd5 14. e4 fxe4
+15. dxe4 Nxe4 16. c4 Qd4 17. Qa4 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "2"]
+[White "chess-Rocq"]
+[Black "chess-brainfuck"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/6P1/PPPPPP1P/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nc6 2. d4 Nf6 3. f4 d5 4. Nc3 Ne4 5. Nxe4 dxe4 6. d5 Nb4 7. c4 e6 8. dxe6
+Qxd1+ 9. Kxd1 Bxe6 10. e3 Nd3 11. Bxd3 exd3 12. b3 Bc5 13. Nf3 Bg4 14. Rf1 O-O
+15. e4 Rfe8 16. e5 Bd4 17. Rb1 Rad8 18. Bb2 Be3 19. Bc3 d2 20. Ke2 Bd4 21. Bxd4
+Bxf3+ 22. Rxf3 Rxd4 23. Rd3 Rxd3 24. Kxd3 Rd8+ 25. Kc2 f6 26. exf6 Kf7 27. fxg7
+Kxg7 28. Rd1 Kf6 29. Rxd2 Rxd2+ 30. Kxd2 Ke6 31. a4 a6 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.05.01"]
+[Round "3"]
+[White "chess-brainfuck"]
+[Black "chess-Rocq"]
+[Result "*"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/3P4/PPP1PPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+{No result} *
+

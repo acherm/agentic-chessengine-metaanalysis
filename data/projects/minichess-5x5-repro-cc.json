@@ -1,0 +1,366 @@
+{
+  "name": "minichess-5x5-repro-cc",
+  "path": "/Users/mathieuacher/SANDBOX/minichess-5x5-repro-cc",
+  "primary_language": "Rust",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Shell": 1,
+      "Markdown": 1,
+      "JSON": 24,
+      "HTML": 1,
+      "Rust": 10
+    },
+    "loc_by_lang": {
+      "TOML": 16,
+      "Shell": 56,
+      "Markdown": 119,
+      "JSON": 24,
+      "HTML": 797,
+      "Rust": 4802
+    },
+    "total_files": 38,
+    "total_loc": 5814
+  },
+  "features": {
+    "FEN parsing": 31,
+    "Perft": 3,
+    "Promotion": 8,
+    "Check/Checkmate": 31,
+    "PGN": 1,
+    "Board: bitboard": 9,
+    "Board: mailbox 8x8": 3,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 3,
+    "Iterative deepening": 1,
+    "Quiescence": 2,
+    "Transposition table": 30,
+    "Zobrist hashing": 3,
+    "Move ordering (MVV-LVA)": 2,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Evaluation/PST": 1,
+    "Pawn structure": 1,
+    "Material counting": 6,
+    "Opening book": 26,
+    "Endgame tables": 7
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "Gardneranalysis.pgn",
+      "TEST_CASES.md",
+      "nb4_e3_black.json",
+      "mate3_white.json",
+      "line34_white.json",
+      "tb6_build.log",
+      "line11_white.json",
+      "c4_exf5_black.json",
+      "viewer.html",
+      "mate1_black.json",
+      "kpvkp_draw_white.json",
+      "c4_ke3_black.json",
+      "nd4_d3_black.json",
+      "nb4_kb3_v2_black.json",
+      "mate2_white.json",
+      "test_preamble_black.json",
+      "proofs/line37_white.json",
+      "proofs/line36_black.json",
+      "proofs/line6_black.json",
+      "proofs/line25_black.json",
+      "proofs/line42_black.json",
+      "proofs4/line34_white.json",
+      "proofs4/line37_white.json",
+      "proofs4/line36_black.json",
+      "proofs4/line6_black.json",
+      "proofs4/line28_black.json",
+      "proofs4/line25_black.json",
+      "proofs4/line42_black.json",
+      "src/solver.rs",
+      "src/board.rs",
+      "src/main.rs"
+    ],
+    "UCI protocol": [],
+    "Perft": [
+      "tb6_build.log",
+      "src/movegen.rs",
+      "src/main.rs"
+    ],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [
+      "export_test_cases.sh",
+      "TEST_CASES.md",
+      "src/types.rs",
+      "src/movegen.rs",
+      "src/tablebase.rs",
+      "src/board.rs",
+      "src/eval.rs",
+      "src/main.rs"
+    ],
+    "Check/Checkmate": [
+      "export_test_cases.sh",
+      "TEST_CASES.md",
+      "nb4_e3_black.json",
+      "mate3_white.json",
+      "line34_white.json",
+      "line11_white.json",
+      "c4_exf5_black.json",
+      "mate1_black.json",
+      "kpvkp_draw_white.json",
+      "c4_ke3_black.json",
+      "nd4_d3_black.json",
+      "nb4_kb3_v2_black.json",
+      "mate2_white.json",
+      "test_preamble_black.json",
+      "proofs/line37_white.json",
+      "proofs/line36_black.json",
+      "proofs/line6_black.json",
+      "proofs/line25_black.json",
+      "proofs/line42_black.json",
+      "proofs4/line34_white.json",
+      "proofs4/line37_white.json",
+      "proofs4/line36_black.json",
+      "proofs4/line6_black.json",
+      "proofs4/line28_black.json",
+      "proofs4/line25_black.json",
+      "proofs4/line42_black.json",
+      "src/solver.rs",
+      "src/tablebase.rs",
+      "src/board.rs",
+      "src/main.rs",
+      "src/search.rs"
+    ],
+    "PGN": [
+      "src/main.rs"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "src/movegen.rs",
+      "src/solver.rs",
+      "src/zobrist.rs",
+      "src/tablebase.rs",
+      "src/board.rs",
+      "src/bitboard.rs",
+      "src/eval.rs",
+      "src/main.rs",
+      "src/search.rs"
+    ],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "src/tablebase.rs",
+      "src/board.rs",
+      "src/eval.rs"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "src/search.rs"
+    ],
+    "Alpha-beta": [
+      "src/solver.rs",
+      "src/main.rs",
+      "src/search.rs"
+    ],
+    "Iterative deepening": [
+      "src/search.rs"
+    ],
+    "Quiescence": [
+      "src/movegen.rs",
+      "src/search.rs"
+    ],
+    "Transposition table": [
+      "nb4_e3_black.json",
+      "mate3_white.json",
+      "line34_white.json",
+      "line11_white.json",
+      "c4_exf5_black.json",
+      "viewer.html",
+      "mate1_black.json",
+      "kpvkp_draw_white.json",
+      "c4_ke3_black.json",
+      "nd4_d3_black.json",
+      "nb4_kb3_v2_black.json",
+      "mate2_white.json",
+      "test_preamble_black.json",
+      "proofs/line37_white.json",
+      "proofs/line36_black.json",
+      "proofs/line6_black.json",
+      "proofs/line25_black.json",
+      "proofs/line42_black.json",
+      "proofs4/line34_white.json",
+      "proofs4/line37_white.json",
+      "proofs4/line36_black.json",
+      "proofs4/line6_black.json",
+      "proofs4/line28_black.json",
+      "proofs4/line25_black.json",
+      "proofs4/line42_black.json",
+      "src/solver.rs",
+      "src/zobrist.rs",
+      "src/board.rs",
+      "src/main.rs",
+      "src/search.rs"
+    ],
+    "Zobrist hashing": [
+      "src/zobrist.rs",
+      "src/board.rs",
+      "src/main.rs"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "src/eval.rs",
+      "src/search.rs"
+    ],
+    "Killer moves": [
+      "src/search.rs"
+    ],
+    "History heuristic": [
+      "src/search.rs"
+    ],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "src/eval.rs"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [
+      "TEST_CASES.md"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "TEST_CASES.md",
+      "src/solver.rs",
+      "src/tablebase.rs",
+      "src/board.rs",
+      "src/eval.rs",
+      "src/search.rs"
+    ],
+    "Opening book": [
+      "nb4_e3_black.json",
+      "mate3_white.json",
+      "line34_white.json",
+      "line11_white.json",
+      "c4_exf5_black.json",
+      "viewer.html",
+      "mate1_black.json",
+      "kpvkp_draw_white.json",
+      "c4_ke3_black.json",
+      "nd4_d3_black.json",
+      "nb4_kb3_v2_black.json",
+      "mate2_white.json",
+      "test_preamble_black.json",
+      "proofs/line37_white.json",
+      "proofs/line36_black.json",
+      "proofs/line6_black.json",
+      "proofs/line25_black.json",
+      "proofs/line42_black.json",
+      "proofs4/line34_white.json",
+      "proofs4/line37_white.json",
+      "proofs4/line36_black.json",
+      "proofs4/line6_black.json",
+      "proofs4/line28_black.json",
+      "proofs4/line25_black.json",
+      "proofs4/line42_black.json",
+      "src/solver.rs"
+    ],
+    "Endgame tables": [
+      "TEST_CASES.md",
+      "tb6_build.log",
+      "kpvkp_draw_white.json",
+      "src/types.rs",
+      "src/solver.rs",
+      "src/tablebase.rs",
+      "src/main.rs"
+    ],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 1,
+    "subagent_sessions_count": 27,
+    "n_user_prompts": 20,
+    "n_assistant_messages": 147,
+    "models": [
+      "claude-opus-4-6"
+    ],
+    "tool_uses": {
+      "Bash": 24,
+      "Edit": 19,
+      "Read": 12,
+      "TaskUpdate": 6,
+      "TaskCreate": 3,
+      "Write": 1,
+      "Agent": 1,
+      "Grep": 1
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 233,
+        "output": 173708,
+        "cache_read": 13167128,
+        "cache_creation": 1595074
+      },
+      "usd_estimate": 62.69
+    },
+    "first_ts": "2026-03-08T13:40:50.533Z",
+    "last_ts": "2026-03-12T08:10:26.236Z",
+    "missing_from_index": [],
+    "sessions": [
+      {
+        "session_id": "dbe86c49-6620-48a7-be24-7ee0eb3d8e85",
+        "first_ts": "2026-03-08T13:40:50.533Z",
+        "last_ts": "2026-03-12T08:10:26.236Z",
+        "models": [
+          "claude-opus-4-6"
+        ],
+        "turns": 20,
+        "n_events": 350,
+        "tokens": {
+          "input": 233,
+          "output": 173708,
+          "cache_read": 13167128,
+          "cache_creation": 1595074
+        },
+        "tool_uses": {
+          "Read": 12,
+          "TaskCreate": 3,
+          "TaskUpdate": 6,
+          "Edit": 19,
+          "Write": 1,
+          "Bash": 24,
+          "Agent": 1,
+          "Grep": 1
+        },
+        "first_prompt_sample": "Implement the following plan:\n\n# Plan: Optimize 6-Piece Tablebase (Time & Space)\n\n## Context\n\n5-piece tablebases: 286 classes, 853M positions, **77 min**, **10.7 GB** disk.\n6-piece projection: 1001 classes (+715 new), estimated **60-80 hours**, **350-500 GB**.\nMachine: **16 cores, 128 GB RAM**.\n\nGoa"
+      }
+    ]
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [],
+    "n_commits": 0,
+    "authors": []
+  }
+}

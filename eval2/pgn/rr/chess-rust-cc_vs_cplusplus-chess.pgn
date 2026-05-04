@@ -1,0 +1,51 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-rust-cc"]
+[Black "cplusplus-chess"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e5 2. Nc3 d5 3. cxd5 Nf6 4. Nf3 e4 5. Nxe4 Qxd5 6. Nxf6+ gxf6 7. Qa4+ Qc6
+8. Qh4 Rg8 9. Qxh7 Rg6 10. e3 Qd5 11. b3 b5 12. Nd4 Bd7 13. Be2 Rh6 14. Qb1 c5
+15. Bf3 Qe5 16. Bb2 cxd4 17. Bxd4 Qe6 18. Bxa8 Nc6 19. Qd3 Nxd4 20. Qxd4 Qe5
+21. Qxe5+ fxe5 22. Rc1 Ba3 23. Rc7 Kd8 24. Rxa7 Bc5 25. Rxd7+ Kxd7 26. Ke2 f5
+27. b4 Bxb4 28. Rb1 Bd6 29. h3 b4 30. Bd5 Bc5 31. Bc4 Kc6 32. Bd3 Rf6 33. Bc2
+Rf7 34. Bb3 Rg7 35. Kf1 e4 36. Be6 Rg5 37. Rc1 Kd6 38. Bc8 Bb6 39. Rc2 Bd8
+40. Rc4 Ba5 41. Rd4+ Ke5 42. Bb7 Kf6 43. Rd6+ Ke7 44. Rd5 Bc7 45. Rb5 Kf6
+46. Rxb4 f4 47. Bxe4 fxe3 48. dxe3 Rc5 49. Bd3 Bd6 50. Rb6 Ke7 51. Ke2 Rc7
+52. Be4 Ke6 53. Rb5 Rc3 54. Bd5+ Kd7 55. Bb3 Rc8 56. Rf5 Kc6 57. Bd5+ Kb6
+58. Be4 Re8 59. Bd3 Ra8 60. Rb5+ Kc7 61. Bc4 Kc6 62. Bd5+ Kxb5 63. Bxa8 Kb4
+64. Be4 Kc3 65. Bd5 Be7 66. Bb3 Kb4 67. Be6 Kc5 68. Kf3 Kd6 69. Bc8 Bf6 70. Bf5
+Ke5 71. Be4 Be7 72. Bc6 Ba3 73. Ba4 Bb4 74. Bc2 Ba5 75. Be4 Bd8 76. Bh7 Kd6
+77. Bb1 Ke6 78. Bc2 Bf6 79. Be4 Kd6 80. Ke2 Ke7 81. Bg6 Bh4 82. Bh5 Kd7 83. Bf7
+Bd8 84. Bd5 Kd6 85. Bb3 Ke7 86. Bc4 Bc7 87. Kf3 Kd6 88. Bd3 Ke5 89. Ke2 Kd6
+90. Bc2 Ke7 91. Kf3 Bd8 92. Bg6 Kf6 93. Bd3 Ke5 94. Be2 Kd6 95. Bb5 Ba5 96. Bd3
+Bc3 97. Kg4 Kc5 98. h4 Kd5 99. h5 Bg7 100. Kg5 Kd6 101. h6 Bh8 102. Kf5 Kc5
+103. Kf4 Bc3 104. Bf5 Kd6 105. Kf3 Ke7 106. h7 Kd6 107. Bc2 Kc5 108. Bb3 Be5
+109. Ba4 Kd6 110. Ke4 Bc3 111. Bb3 Kc5 112. Kd3 Bf6 113. Bc4 Kd6 114. Ke2 Ke5
+115. Bd3 Kd6 116. Kf3 Kc5 117. Bg6 Kd6 118. Kf4 Ke6 119. Bf5+ Kd5 120. Bc2 Bh8
+121. Bd3 Kc5 122. Bg6 Kd6 123. Bf7 Ke7 124. Bd5 Kd6 125. Bb3 Ke7 126. Kf5 Kf8
+127. Kg6 Bc3 128. f4 Bb2 129. e4 Bh8 130. e5 Bxe5 131. fxe5 Ke7 132. h8=Q Kd7
+1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "cplusplus-chess"]
+[Black "chess-rust-cc"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nc3 e5 3. d4 exd4 4. Qxd4 Nc6 5. Qe3+ Qe7 6. a3 Qxe3 7. Bxe3 Ng4
+8. Bf4 Nd4 9. Rd1 Nc2+ 10. Kd2 Nxa3 11. bxa3 Nxf2 12. Nd5 c6 13. Nc7+ Kd8 14. e3
+Nxh1 15. Nxa8 Nf2 16. g3 Nxd1 17. Bc7+ Ke8 18. Kxd1 Bc5 19. Be5 Rg8 20. Nf3 d6
+21. Bf4 Bg4 22. Be2 Bxf3 23. Bxf3 g5 24. Bxg5 Rxg5 25. Be4 Bxe3 26. Bxh7 Bg1
+27. h4 Rxg3 28. Bf5 Kd8 29. a4 Rc3 30. h5 Rxc4 31. h6 Rxa4 32. h7 Bd4 33. Ke2
+Be5 34. Bc2 Rh4 35. Bf5 Rh5 36. Be4 Rh2+ 37. Kd1 Kc8 38. Bd3 Bd4 39. Kc1 Kb8
+40. Bc2 Kxa8 41. Bd3 Kb8 42. Bc2 Kc7 43. Kd1 Bc3 44. Bf5 0-1
+

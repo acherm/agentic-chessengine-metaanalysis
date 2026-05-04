@@ -1,0 +1,21 @@
+{
+  "engine": "chess-purec-codex",
+  "image": "host-native",
+  "mode": "host",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.01
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.0
+    }
+  },
+  "total_s": 0.01,
+  "ok": true
+}

@@ -1,0 +1,463 @@
+{
+  "name": "chess-revisit-java-toRust-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-revisit-java-toRust-codex",
+  "primary_language": "COBOL",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Rust": 38,
+      "Markdown": 2,
+      "Python": 2,
+      "Shell": 1,
+      "COBOL": 1
+    },
+    "loc_by_lang": {
+      "TOML": 6,
+      "Rust": 4365,
+      "Markdown": 137,
+      "Python": 496,
+      "Shell": 4,
+      "COBOL": 6133
+    },
+    "total_files": 45,
+    "total_loc": 11141
+  },
+  "features": {
+    "FEN parsing": 16,
+    "UCI protocol": 13,
+    "Perft": 9,
+    "Castling": 18,
+    "En passant": 4,
+    "Promotion": 7,
+    "Check/Checkmate": 4,
+    "PGN": 2,
+    "Board: bitboard": 29,
+    "Board: magic bitboards": 7,
+    "Board: mailbox 8x8": 2,
+    "Minimax/Negamax": 4,
+    "Alpha-beta": 2,
+    "Iterative deepening": 2,
+    "Quiescence": 6,
+    "Transposition table": 17,
+    "Zobrist hashing": 14,
+    "Move ordering (MVV-LVA)": 3,
+    "Killer moves": 2,
+    "History heuristic": 3,
+    "Principal-variation (PV)": 2,
+    "Null-move pruning": 7,
+    "Late-move reduction (LMR)": 2,
+    "Aspiration windows": 1,
+    "Futility pruning": 1,
+    "Evaluation/PST": 7,
+    "Tapered evaluation": 2,
+    "King safety": 5,
+    "Pawn structure": 4,
+    "Mobility": 6,
+    "Material counting": 14,
+    "Opening book": 9,
+    "Time management": 12
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "tests/move_generator_test.rs",
+      "tests/fen_test.rs",
+      "tests/board_test.rs",
+      "tests/evaluation_test.rs",
+      "tests/zobrist_test.rs",
+      "tests/search_test.rs",
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/chess_engine",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/engine.rs",
+      "src/board/fen.rs",
+      "src/board/mod.rs",
+      "src/uci/uci.rs"
+    ],
+    "UCI protocol": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/Makefile",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/chess_engine",
+      "chess-revisit-java-toCOBOL/scripts/polyglot_smoke.py",
+      "chess-revisit-java-toCOBOL/scripts/assess_elo.py",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/lib.rs",
+      "src/engine.rs",
+      "src/uci/mod.rs",
+      "src/uci/uci.rs"
+    ],
+    "Perft": [
+      "tests/move_generator_test.rs",
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/chess_engine",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/mv/move_generator.rs",
+      "src/uci/uci.rs"
+    ],
+    "Castling": [
+      "java-vs-rust-smoke.pgn",
+      "tests/fen_test.rs",
+      "tests/board_test.rs",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/chess_engine",
+      "chess-revisit-java-toCOBOL/scripts/polyglot_smoke.py",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "tournament-results/java-vs-rust-long-20260219-120340.pgn",
+      "tournament-results/java-vs-rust-20260219-115548.pgn",
+      "tournament-results/java-vs-rust-long-postfix-20260221-143637.pgn",
+      "src/board/zobrist.rs",
+      "src/board/fen.rs",
+      "src/board/board.rs",
+      "src/book/polyglot_book.rs",
+      "src/mv/move_data.rs",
+      "src/mv/move_generator.rs"
+    ],
+    "En passant": [
+      "chess-revisit-java-toCOBOL/README.md",
+      "src/board/board.rs",
+      "src/mv/move_data.rs",
+      "src/mv/move_generator.rs"
+    ],
+    "Promotion": [
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/board/board.rs",
+      "src/mv/move_data.rs",
+      "src/mv/move_generator.rs"
+    ],
+    "Check/Checkmate": [
+      "tests/move_generator_test.rs",
+      "src/board/board.rs",
+      "src/search/search.rs",
+      "src/mv/move_generator.rs"
+    ],
+    "PGN": [
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/scripts/assess_elo.py"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "tests/fen_test.rs",
+      "tests/board_test.rs",
+      "tests/zobrist_test.rs",
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/engine.rs",
+      "src/board/zobrist.rs",
+      "src/board/fen.rs",
+      "src/board/board.rs",
+      "src/board/bitboard.rs",
+      "src/board/mod.rs",
+      "src/search/time_manager.rs",
+      "src/search/search_info.rs",
+      "src/search/transposition_table.rs",
+      "src/search/search.rs",
+      "src/book/polyglot_book.rs",
+      "src/mv/see.rs",
+      "src/mv/magic_bitboards.rs",
+      "src/mv/attack_tables.rs",
+      "src/mv/mod.rs",
+      "src/mv/move_data.rs",
+      "src/mv/move_generator.rs",
+      "src/uci/uci.rs",
+      "src/eval/evaluation.rs",
+      "src/eval/pawn_structure.rs",
+      "src/eval/king_safety.rs"
+    ],
+    "Board: magic bitboards": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "src/engine.rs",
+      "src/mv/see.rs",
+      "src/mv/mod.rs",
+      "src/mv/move_generator.rs",
+      "src/eval/evaluation.rs"
+    ],
+    "Board: mailbox 8x8": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/search/search.rs"
+    ],
+    "Alpha-beta": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md"
+    ],
+    "Iterative deepening": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md"
+    ],
+    "Quiescence": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/search/search.rs"
+    ],
+    "Transposition table": [
+      "tests/move_generator_test.rs",
+      "tests/board_test.rs",
+      "tests/zobrist_test.rs",
+      "tests/search_test.rs",
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/board/zobrist.rs",
+      "src/board/fen.rs",
+      "src/board/board.rs",
+      "src/board/mod.rs",
+      "src/search/mod.rs",
+      "src/search/transposition_table.rs",
+      "src/search/search.rs",
+      "src/uci/uci.rs"
+    ],
+    "Zobrist hashing": [
+      "tests/move_generator_test.rs",
+      "tests/board_test.rs",
+      "tests/zobrist_test.rs",
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/board/zobrist.rs",
+      "src/board/fen.rs",
+      "src/board/board.rs",
+      "src/board/mod.rs",
+      "src/search/transposition_table.rs",
+      "src/search/search.rs"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob"
+    ],
+    "Killer moves": [
+      "src/search/mod.rs",
+      "src/search/search.rs"
+    ],
+    "History heuristic": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "src/search/mod.rs",
+      "src/search/search.rs"
+    ],
+    "Principal-variation (PV)": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md"
+    ],
+    "Null-move pruning": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/board/board.rs",
+      "src/search/search.rs"
+    ],
+    "Late-move reduction (LMR)": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "src/search/search.rs"
+    ],
+    "Futility pruning": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md"
+    ],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/engine.rs",
+      "src/board/board.rs",
+      "src/eval/mod.rs"
+    ],
+    "Tapered evaluation": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md"
+    ],
+    "King safety": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "src/eval/evaluation.rs",
+      "src/eval/mod.rs",
+      "src/eval/king_safety.rs"
+    ],
+    "Pawn structure": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "src/eval/evaluation.rs",
+      "src/eval/mod.rs"
+    ],
+    "Mobility": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/eval/evaluation.rs"
+    ],
+    "Material counting": [
+      "tests/board_test.rs",
+      "tests/evaluation_test.rs",
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "tournament-results/java-vs-rust-long-postfix-20260221-143637.log",
+      "tournament-results/java-vs-rust-long-20260219-120340.pgn",
+      "tournament-results/java-vs-rust-long-20260219-120340.log",
+      "tournament-results/java-vs-rust-long-postfix-20260221-143637.pgn",
+      "src/board/board.rs",
+      "src/search/search.rs",
+      "src/eval/piece_square_tables.rs",
+      "src/eval/eval_constants.rs"
+    ],
+    "Opening book": [
+      "chess-revisit-java-toCOBOL/PORTING_NOTES.md",
+      "chess-revisit-java-toCOBOL/Makefile",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/scripts/polyglot_smoke.py",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "src/book/polyglot_book.rs",
+      "src/book/mod.rs",
+      "src/uci/uci.rs"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "java-vs-rust-smoke.pgn",
+      "chess-revisit-java-toCOBOL/Makefile",
+      "chess-revisit-java-toCOBOL/README.md",
+      "chess-revisit-java-toCOBOL/chess_engine_trace",
+      "chess-revisit-java-toCOBOL/chess_engine_dbg",
+      "chess-revisit-java-toCOBOL/chess_engine",
+      "chess-revisit-java-toCOBOL/scripts/assess_elo.py",
+      "chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob",
+      "tournament-results/java-vs-rust-long-20260219-120340.pgn",
+      "tournament-results/java-vs-rust-20260219-115548.pgn",
+      "tournament-results/java-vs-rust-long-postfix-20260221-143637.pgn",
+      "src/uci/uci.rs"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 2,
+    "n_user_prompts": 33,
+    "n_assistant_messages": 363,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 1037,
+      "write_stdin": 758
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 235736882,
+        "output": 695022,
+        "cache_read": 231608448,
+        "cache_creation": 0,
+        "reasoning_output": 324135
+      },
+      "usd_estimate": 330.57
+    },
+    "first_ts": "2026-02-19T09:50:06.075Z",
+    "last_ts": "2026-02-21T15:23:47.131Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-19T10-45-40-019c754a-782f-73d1-823e-0b5a08c44317",
+        "first_ts": "2026-02-19T09:50:06.075Z",
+        "last_ts": "2026-02-21T15:23:47.131Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 5,
+        "tokens": {
+          "input": 64337748,
+          "output": 102907,
+          "cache_read": 63717248,
+          "reasoning_output": 27385
+        },
+        "tool_uses": {
+          "exec_command": 117,
+          "write_stdin": 360
+        },
+        "first_prompt_sample": "The goal is to write a chess engine in Rust through the translation of an existing chess engine written in Java, and available here: /Users/mathieuacher/SANDBOX/chess-java-cc/\n\nPlease stick as much as possible to the original Java implementation, keeping the same set of features, data structure, alg"
+      },
+      {
+        "session_id": "rollout-2026-02-19T13-01-27-019c75c6-c737-7522-b22d-99cdb231bd10",
+        "first_ts": "2026-02-19T12:01:57.002Z",
+        "last_ts": "2026-02-21T13:20:42.334Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 28,
+        "tokens": {
+          "input": 171399134,
+          "output": 592115,
+          "cache_read": 167891200,
+          "reasoning_output": 296750
+        },
+        "tool_uses": {
+          "exec_command": 920,
+          "write_stdin": 398
+        },
+        "first_prompt_sample": "The goal is to write a chess engine in COBOL programming language (using GNU Cobol) through the translation of an existing chess engine written in Java, and available here: /Users/mathieuacher/SANDBOX/chess-java-cc/\n\nPlease stick as much as possible to the original Java implementation, keeping the s"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [],
+    "n_commits": 0,
+    "authors": []
+  }
+}

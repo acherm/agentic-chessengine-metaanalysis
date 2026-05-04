@@ -1,0 +1,987 @@
+========================================================================
+HOTSPOT REPORT  —  Feature: Evaluation/PST
+Patterns: piece[_ ]?square|\bPST\b
+Generated: 2026-04-21T06:43:43.595821+00:00
+Engines with feature: 20 / 36
+========================================================================
+
+[NO]  COBOL-chess  (COBOL)
+
+[YES] chess-Rocq  (OCaml)
+      theories/Eval.v  lines 24–32  (9 LOC)
+------------------------------------------------------------------------
+>>>    24  Definition piece_value (pk : PieceKind) : int :=
+       25    match pk with
+       26    | Pawn => val_pawn
+       27    | Knight => val_knight
+       28    | Bishop => val_bishop
+       29    | Rook => val_rook
+       30    | Queen => val_queen
+       31    | King => 0
+       32    end.
+------------------------------------------------------------------------
+
+[YES] chess-apl-codex54  (APL)
+      src/apl/engine.apl  lines 209–236  (28 LOC)
+------------------------------------------------------------------------
+>>>   209  ∇Z←PIECE_SQUARE_OPEN_VALUE QUERY;PIECE;IDX;LOOKUP
+      210   PIECE←⊃QUERY[0]
+      211   IDX←⊃QUERY[1]
+      212   LOOKUP←IDX
+      213   →(IS_BLACK PIECE)⍴BLACK
+      214   →TABLE
+      215  BLACK: LOOKUP←MIRROR_IDX IDX
+      216  TABLE:
+      217   →(PIECE∊'Pp')⍴PAWN
+      218   →(PIECE∊'Nn')⍴KNIGHT
+      219   →(PIECE∊'Bb')⍴BISHOP
+      220   →(PIECE∊'Rr')⍴ROOK
+      221   →(PIECE∊'Qq')⍴QUEEN
+      222   →(PIECE∊'Kk')⍴KING
+      223   Z←0
+      224   →0
+      225  PAWN: Z←PAWN_PST[LOOKUP]
+      226   →0
+      227  KNIGHT: Z←KNIGHT_PST[LOOKUP]
+      228   →0
+      229  BISHOP: Z←BISHOP_PST[LOOKUP]
+      230   →0
+      231  ROOK: Z←ROOK_PST[LOOKUP]
+      232   →0
+      233  QUEEN: Z←QUEEN_PST[LOOKUP]
+      234   →0
+      235  KING: Z←KING_OPEN_PST[LOOKUP]
+      236  ∇
+------------------------------------------------------------------------
+
+[NO]  chess-assembly-codex  (Assembly)
+
+[YES] chess-brainfuck  (Python)
+      src/search.py  lines 193–222  (30 LOC)
+------------------------------------------------------------------------
+>>>   193      def _piece_square_delta(self, move: Move) -> int:
+      194          frm, to, promo = move
+      195          moving = int(self.board.tape[frm]) if 0 <= frm < 64 else 0
+      196          moving_type = self._piece_type(moving)
+      197          if moving_type == 0:
+      198              return 0
+      199  
+      200          is_white = 1 <= moving <= 6
+      201  
+      202          def pst_idx(square: int) -> int:
+      203              return (square ^ 56) if is_white else square
+      204  
+      205          from_idx = pst_idx(frm)
+      206          to_idx = pst_idx(to)
+      207  
+      208          if promo:
+      209              promoted_type = self._piece_type(promo)
+      210              from_table = PST_BY_PIECE.get(1)
+      211              to_table = PST_BY_PIECE.get(promoted_type)
+      212              if from_table is not None and to_table is not None:
+      213                  return int(to_table[to_idx]) - int(from_table[from_idx])
+      214  
+      215          if moving_type == KING_TYPE:
+      216              table = PST_KING_MID
+      217          else:
+      218              table = PST_BY_PIECE.get(moving_type)
+      219              if table is None:
+      220                  return 0
+      221          return int(table[to_idx]) - int(table[from_idx])
+------------------------------------------------------------------------
+
+[NO]  chess-brainfuck-cc  (Python)
+
+[YES] chess-cobol-cc  (C)
+      chess-engine.cob  lines 349–469  (121 LOC)
+------------------------------------------------------------------------
+      349             10  WS-PLY-SV-MAXPLY    PIC 9(2).
+      350             10  WS-PLY-LMR          PIC 9.
+      351        * Per-ply static eval (for future use)
+      352             10  WS-PLY-EVAL         PIC S9(8).
+      353        * Legal moves at this ply (with score for ordering)
+      354             10  WS-PLY-LEGAL OCCURS 128 TIMES.
+      355               15  WS-PLY-LGL-FR     PIC 9.
+      356               15  WS-PLY-LGL-FC     PIC 9.
+      357               15  WS-PLY-LGL-TR     PIC 9.
+      358               15  WS-PLY-LGL-TC     PIC 9.
+      359               15  WS-PLY-LGL-PR     PIC X(1).
+      360               15  WS-PLY-LGL-SC     PIC S9(8).
+      361  
+      362        ******************************************************************
+      363        * EVALUATION
+      364        ******************************************************************
+      365         01  WS-EVAL-SCORE           PIC S9(8) VALUE 0.
+      366         01  WS-BEST-SCORE           PIC S9(8) VALUE 0.
+      367         01  WS-EVAL-ROW             PIC 9.
+      368         01  WS-EVAL-COL             PIC 9.
+      369         01  WS-EVAL-PIECE           PIC X(1).
+      370         01  WS-MATERIAL             PIC S9(8) VALUE 0.
+      371         01  WS-POSITIONAL           PIC S9(8) VALUE 0.
+      372         01  WS-PST-INDEX            PIC 9(2).
+      373        * Bishop pair & rook file bonuses
+      374         01  WS-WHITE-BISHOP-CNT     PIC 9 VALUE 0.
+      375         01  WS-BLACK-BISHOP-CNT     PIC 9 VALUE 0.
+      376        * Pawn file count per file (for doubled/open file checks)
+      377         01  WS-WHITE-PAWN-FILE.
+      378           05 WS-WPF PIC 9 OCCURS 8 TIMES.
+      379         01  WS-BLACK-PAWN-FILE.
+      380           05 WS-BPF PIC 9 OCCURS 8 TIMES.
+      381        * Rook file tracking
+      382         01  WS-WR-CNT               PIC 9 VALUE 0.
+      383         01  WS-BR-CNT               PIC 9 VALUE 0.
+      384         01  WS-WR-FILES.
+      385           05 WS-WRF PIC 9 OCCURS 2 TIMES.
+      386         01  WS-BR-FILES.
+      387           05 WS-BRF PIC 9 OCCURS 2 TIMES.
+      388        * Check extension flag
+      389         01  WS-IN-CHECK-EXT         PIC 9 VALUE 0.
+      390        * Most advanced pawn rank per file (for passed pawn)
+      391         01  WS-WHITE-PAWN-BEST-RANK.
+      392           05 WS-WPBR PIC 9 OCCURS 8 TIMES.
+      393         01  WS-BLACK-PAWN-BEST-RANK.
+      394           05 WS-BPBR PIC 9 OCCURS 8 TIMES.
+      395        * Temp for pawn structure eval
+      396         01  WS-PP-FLAG               PIC 9 VALUE 0.
+      397  
+      398        * Piece-square tables (from white's perspective, index 1-64)
+      399        * Stored as: row 1 cols 1-8, row 2 cols 1-8, etc.
+      400        * Values in centipawns added to piece value
+      401  
+      402        * Pawn PST
+      403         01  WS-PST-PAWN-DATA.
+      404           05 FILLER PIC S9(4) VALUE +0.
+      405           05 FILLER PIC S9(4) VALUE +0.
+      406           05 FILLER PIC S9(4) VALUE +0.
+      407           05 FILLER PIC S9(4) VALUE +0.
+      408           05 FILLER PIC S9(4) VALUE +0.
+      409           05 FILLER PIC S9(4) VALUE +0.
+      410           05 FILLER PIC S9(4) VALUE +0.
+      411           05 FILLER PIC S9(4) VALUE +0.
+      412           05 FILLER PIC S9(4) VALUE +5.
+      413           05 FILLER PIC S9(4) VALUE +10.
+      414           05 FILLER PIC S9(4) VALUE +10.
+      415           05 FILLER PIC S9(4) VALUE -20.
+      416           05 FILLER PIC S9(4) VALUE -20.
+      417           05 FILLER PIC S9(4) VALUE +10.
+      418           05 FILLER PIC S9(4) VALUE +10.
+      419           05 FILLER PIC S9(4) VALUE +5.
+      420           05 FILLER PIC S9(4) VALUE +5.
+      421           05 FILLER PIC S9(4) VALUE -5.
+      422           05 FILLER PIC S9(4) VALUE -10.
+      423           05 FILLER PIC S9(4) VALUE +0.
+      424           05 FILLER PIC S9(4) VALUE +0.
+      425           05 FILLER PIC S9(4) VALUE -10.
+      426           05 FILLER PIC S9(4) VALUE -5.
+      427           05 FILLER PIC S9(4) VALUE +5.
+      428           05 FILLER PIC S9(4) VALUE +0.
+      429           05 FILLER PIC S9(4) VALUE +0.
+      430           05 FILLER PIC S9(4) VALUE +0.
+      431           05 FILLER PIC S9(4) VALUE +20.
+      432           05 FILLER PIC S9(4) VALUE +20.
+      433           05 FILLER PIC S9(4) VALUE +0.
+      434           05 FILLER PIC S9(4) VALUE +0.
+      435           05 FILLER PIC S9(4) VALUE +0.
+      436           05 FILLER PIC S9(4) VALUE +5.
+      437           05 FILLER PIC S9(4) VALUE +10.
+      438           05 FILLER PIC S9(4) VALUE +10.
+      439           05 FILLER PIC S9(4) VALUE +25.
+      440           05 FILLER PIC S9(4) VALUE +25.
+      441           05 FILLER PIC S9(4) VALUE +10.
+      442           05 FILLER PIC S9(4) VALUE +10.
+      443           05 FILLER PIC S9(4) VALUE +5.
+      444           05 FILLER PIC S9(4) VALUE +10.
+      445           05 FILLER PIC S9(4) VALUE +10.
+      446           05 FILLER PIC S9(4) VALUE +20.
+      447           05 FILLER PIC S9(4) VALUE +30.
+      448           05 FILLER PIC S9(4) VALUE +30.
+      449           05 FILLER PIC S9(4) VALUE +20.
+      450           05 FILLER PIC S9(4) VALUE +10.
+      451           05 FILLER PIC S9(4) VALUE +10.
+      452           05 FILLER PIC S9(4) VALUE +50.
+      453           05 FILLER PIC S9(4) VALUE +50.
+      454           05 FILLER PIC S9(4) VALUE +50.
+      455           05 FILLER PIC S9(4) VALUE +50.
+      456           05 FILLER PIC S9(4) VALUE +50.
+      457           05 FILLER PIC S9(4) VALUE +50.
+      458           05 FILLER PIC S9(4) VALUE +50.
+      459           05 FILLER PIC S9(4) VALUE +50.
+      460           05 FILLER PIC S9(4) VALUE +0.
+      461           05 FILLER PIC S9(4) VALUE +0.
+      462           05 FILLER PIC S9(4) VALUE +0.
+      463           05 FILLER PIC S9(4) VALUE +0.
+      464           05 FILLER PIC S9(4) VALUE +0.
+      465           05 FILLER PIC S9(4) VALUE +0.
+      466           05 FILLER PIC S9(4) VALUE +0.
+      467           05 FILLER PIC S9(4) VALUE +0.
+      468         01  WS-PST-PAWN REDEFINES WS-PST-PAWN-DATA.
+>>>   469           05  WS-PST-PAWN-VAL       PIC S9(4)
+------------------------------------------------------------------------
+
+[YES] chess-cplusplus-claude  (C++)
+      src/evaluate.cpp  lines 200–214  (15 LOC)
+------------------------------------------------------------------------
+>>>   200  static Bitboard passed_pawn_mask(Color c, Square s) {
+      201      File f = file_of(s);
+      202      Rank r = rank_of(s);
+      203      Bitboard mask = 0;
+      204      Bitboard files = BB::FileBB[f] | adjacent_files(f);
+      205  
+      206      if (c == WHITE) {
+      207          for (Rank rr = Rank(r + 1); rr <= RANK_7; rr = Rank(rr + 1))
+      208              mask |= files & BB::RankBB[rr];
+      209      } else {
+      210          for (int rr = r - 1; rr >= RANK_2; --rr)
+      211              mask |= files & BB::RankBB[rr];
+      212      }
+      213      return mask;
+      214  }
+------------------------------------------------------------------------
+
+[YES] chess-css-cc  (HTML)
+      scripts/generate-css.js  lines 81–128  (48 LOC)
+------------------------------------------------------------------------
+       81  function generateEvalCss() {
+       82    const rules = [];
+       83  
+       84    rules.push('/* CSS Chess Engine — Evaluation Rules');
+       85    rules.push(' * 768 rules: material + piece-square table values via --piece-value custom property');
+       86    rules.push(' * The driver sums --piece-value across all 64 squares to get the position eval.');
+       87    rules.push(' */');
+       88    rules.push('');
+       89  
+       90    // Default: empty squares contribute 0
+       91    rules.push('.sq { --piece-value: 0; }');
+       92    rules.push('');
+       93  
+       94    let ruleCount = 0;
+       95  
+       96    for (const piece of Object.keys(MATERIAL)) {
+       97      rules.push(`/* ${piece} */`);
+       98      for (let rankIdx = 0; rankIdx < 8; rankIdx++) {
+       99        for (let fileIdx = 0; fileIdx < 8; fileIdx++) {
+      100          const sq = FILES[fileIdx] + RANKS[rankIdx];
+      101          const material = MATERIAL[piece];
+>>>   102          const pst = PST[piece][rankIdx][fileIdx];
+      103  
+      104          // White piece: positive contribution
+      105          const whiteVal = material + pst;
+      106          rules.push(`.sq[data-p="w${piece}"][data-s="${sq}"] { --piece-value: ${whiteVal}; }`);
+      107          ruleCount++;
+      108  
+      109          // Black piece: negative contribution, PST mirrored vertically
+      110          const mirroredRankIdx = 7 - rankIdx;
+      111          const blackPst = PST[piece][mirroredRankIdx][fileIdx];
+      112          const blackVal = -(material + blackPst);
+      113          rules.push(`.sq[data-p="b${piece}"][data-s="${sq}"] { --piece-value: ${blackVal}; }`);
+      114          ruleCount++;
+      115        }
+      116      }
+      117      rules.push('');
+      118    }
+      119  
+      120    const css = rules.join('\n');
+      121  
+      122    const outPath = path.join(__dirname, '..', 'css', 'eval.css');
+      123    fs.writeFileSync(outPath, css, 'utf8');
+      124  
+      125    console.log(`Generated ${outPath}`);
+      126    console.log(`Total piece-square rules: ${ruleCount}`);
+      127    console.log(`Expected: 768 (6 pieces x 2 colors x 64 squares)`);
+      128  }
+------------------------------------------------------------------------
+
+[NO]  chess-css-codex  (HTML)
+
+[NO]  chess-css-codex-guided  (JavaScript)
+
+[NO]  chess-icon-codex  (Icon)
+
+[YES] chess-java  (Java)
+      src/main/java/com/example/chess/engine/Evaluator.java  lines 95–112  (18 LOC)
+------------------------------------------------------------------------
+>>>    95      private int pieceSquareBonus(int pieceType, int square) {
+       96          switch (pieceType) {
+       97              case Piece.PAWN:
+       98                  return PAWN_PST[square];
+       99              case Piece.KNIGHT:
+      100                  return KNIGHT_PST[square];
+      101              case Piece.BISHOP:
+      102                  return BISHOP_PST[square];
+      103              case Piece.ROOK:
+      104                  return ROOK_PST[square];
+      105              case Piece.QUEEN:
+      106                  return QUEEN_PST[square];
+      107              case Piece.KING:
+      108                  return KING_PST[square];
+      109              default:
+      110                  return 0;
+      111          }
+      112      }
+------------------------------------------------------------------------
+
+[YES] chess-java-cc  (Java)
+      src/main/java/com/chess/engine/board/Board.java  lines 116–133  (18 LOC)
+------------------------------------------------------------------------
+>>>   116      public void putPiece(int piece, int sq) {
+      117          long bit = Bitboard.bit(sq);
+      118          pieces[piece] |= bit;
+      119          int color = piece / 6;
+      120          occupancy[color] |= bit;
+      121          occupancy[2] |= bit;
+      122          pieceAt[sq] = piece;
+      123          zobristKey ^= Zobrist.PIECE_KEYS[piece][sq];
+      124          int pieceType = piece % 6;
+      125          if (pieceType == 0) {
+      126              pawnKey ^= Zobrist.PIECE_KEYS[piece][sq];
+      127          }
+      128          phase += PHASE_VALUES[pieceType];
+      129          // Incremental PST
+      130          int pstSq = color == WHITE ? sq : sq ^ 56;
+      131          pstScore[0] += com.chess.engine.eval.PieceSquareTables.MG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+      132          pstScore[1] += com.chess.engine.eval.PieceSquareTables.EG_TABLE[pieceType][pstSq] * (color == WHITE ? 1 : -1);
+      133      }
+------------------------------------------------------------------------
+
+[NO]  chess-latex-codex-replication  (LaTeX)
+
+[NO]  chess-mojo  (Mojo)
+
+[NO]  chess-newlang-codex  (C++)
+
+[NO]  chess-purec  (C)
+
+[NO]  chess-purec-codex  (C)
+
+[YES] chess-py  (Python)
+      chesspy/board.py  lines 276–299  (24 LOC)
+------------------------------------------------------------------------
+>>>   276      def _set_ep_square_if_capturable(self, ep_sq: int | None) -> None:
+      277          """Set ep square only if the side to move can capture it (for repetition correctness)."""
+      278          if ep_sq is None:
+      279              self.ep_square = None
+      280              return
+      281  
+      282          capturer = -self.turn  # after a double push, capturer is the opponent
+      283          if capturer == WHITE:
+      284              from1, from2 = ep_sq - 15, ep_sq - 17
+      285              if (not _is_offboard(from1) and self.squares[from1] == WHITE * PAWN) or (
+      286                  not _is_offboard(from2) and self.squares[from2] == WHITE * PAWN
+      287              ):
+      288                  self.ep_square = ep_sq
+      289              else:
+      290                  self.ep_square = None
+      291          else:
+      292              from1, from2 = ep_sq + 15, ep_sq + 17
+      293              if (not _is_offboard(from1) and self.squares[from1] == BLACK * PAWN) or (
+      294                  not _is_offboard(from2) and self.squares[from2] == BLACK * PAWN
+      295              ):
+      296                  self.ep_square = ep_sq
+      297              else:
+      298                  self.ep_square = None
+------------------------------------------------------------------------
+
+[YES] chess-py-cc  (Python)
+      engine/evaluate.py  lines 1–2  (2 LOC)
+------------------------------------------------------------------------
+>>>     1  """Static evaluation: tapered PST + positional terms."""
+------------------------------------------------------------------------
+
+[YES] chess-revisit-java-toCOBOL-codex  (COBOL)
+      src/cobol/chess_engine.cob  lines 1441–1561  (121 LOC)
+------------------------------------------------------------------------
+     1441         BOARD-MAKE-MOVE.
+     1442             IF B-PLY >= MAX-PLY
+     1443                 EXIT PARAGRAPH
+     1444             END-IF
+     1445  
+     1446             ADD 1 TO B-PLY
+     1447             MOVE ENCODED-MOVE TO U-MOVE(B-PLY)
+     1448             MOVE B-ZOBRIST-KEY TO U-ZOBRIST(B-PLY)
+     1449             MOVE B-PAWN-KEY TO U-PAWN-KEY(B-PLY)
+     1450             MOVE B-CASTLING-RIGHTS TO U-CASTLING(B-PLY)
+     1451             MOVE B-EP-SQUARE TO U-EP-SQUARE(B-PLY)
+     1452             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+     1453             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+>>>  1454             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+     1455             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+     1456             MOVE B-PHASE TO U-PHASE(B-PLY)
+     1457  
+     1458             PERFORM MOVE-DECODE
+     1459             MOVE FROM-SQ TO ORIG-FROM-SQ
+     1460             MOVE TO-SQ TO ORIG-TO-SQ
+     1461             MOVE MOVED TO ORIG-MOVED
+     1462  
+     1463             ADD 1 TO B-HALF-MOVE
+     1464  
+     1465             IF B-EP-SQUARE NOT = -1
+     1466                 COMPUTE FILE-I = FUNCTION MOD(B-EP-SQUARE, 8) + 1
+     1467                 COMPUTE B-ZOBRIST-KEY = B-ZOBRIST-KEY B-XOR Z-EP-KEY(FILE-I)
+     1468             END-IF
+     1469             MOVE -1 TO B-EP-SQUARE
+     1470             COMPUTE B-ZOBRIST-KEY =
+     1471                 B-ZOBRIST-KEY B-XOR Z-CASTLING-KEY(B-CASTLING-RIGHTS + 1)
+     1472  
+     1473             EVALUATE MOVE-TYPE
+     1474                 WHEN MOVE-CASTLING
+     1475                     MOVE ORIG-MOVED TO MOVED
+     1476                     MOVE ORIG-FROM-SQ TO FROM-SQ
+     1477                     MOVE ORIG-TO-SQ TO TO-SQ
+     1478                     PERFORM BOARD-MOVE-PIECE
+     1479  
+     1480                     IF B-SIDE-TO-MOVE = WHITE
+     1481                         MOVE WR TO MOVED
+     1482                     ELSE
+     1483                         MOVE BR TO MOVED
+     1484                     END-IF
+     1485  
+     1486                     IF ORIG-TO-SQ > ORIG-FROM-SQ
+     1487                         COMPUTE FROM-SQ = ORIG-TO-SQ + 1
+     1488                         COMPUTE TO-SQ = ORIG-TO-SQ - 1
+     1489                     ELSE
+     1490                         COMPUTE FROM-SQ = ORIG-TO-SQ - 2
+     1491                         COMPUTE TO-SQ = ORIG-TO-SQ + 1
+     1492                     END-IF
+     1493                     PERFORM BOARD-MOVE-PIECE
+     1494                     MOVE 0 TO B-HALF-MOVE
+     1495  
+     1496                 WHEN MOVE-EN-PASSANT
+     1497                     IF B-SIDE-TO-MOVE = WHITE
+     1498                         COMPUTE TO-SQ = ORIG-TO-SQ - 8
+     1499                         MOVE BP TO MOVED
+     1500                     ELSE
+     1501                         COMPUTE TO-SQ = ORIG-TO-SQ + 8
+     1502                         MOVE WP TO MOVED
+     1503                     END-IF
+     1504                     PERFORM BOARD-REMOVE-PIECE
+     1505  
+     1506                     MOVE ORIG-MOVED TO MOVED
+     1507                     MOVE ORIG-FROM-SQ TO FROM-SQ
+     1508                     MOVE ORIG-TO-SQ TO TO-SQ
+     1509                     PERFORM BOARD-MOVE-PIECE
+     1510                     MOVE 0 TO B-HALF-MOVE
+     1511  
+     1512                 WHEN MOVE-PROMOTION
+     1513                     IF CAPTURED NOT = MOVE-NO-PIECE
+     1514                         MOVE CAPTURED TO MOVED
+     1515                         MOVE ORIG-TO-SQ TO TO-SQ
+     1516                         PERFORM BOARD-REMOVE-PIECE
+     1517                     END-IF
+     1518  
+     1519                     MOVE ORIG-MOVED TO MOVED
+     1520                     MOVE ORIG-FROM-SQ TO TO-SQ
+     1521                     PERFORM BOARD-REMOVE-PIECE
+     1522  
+     1523                     IF B-SIDE-TO-MOVE = WHITE
+     1524                         COMPUTE MOVED = PROMO + 1
+     1525                     ELSE
+     1526                         COMPUTE MOVED = 6 + PROMO + 1
+     1527                     END-IF
+     1528                     MOVE ORIG-TO-SQ TO TO-SQ
+     1529                     PERFORM BOARD-PUT-PIECE
+     1530                     MOVE 0 TO B-HALF-MOVE
+     1531  
+     1532                 WHEN OTHER
+     1533                     IF CAPTURED NOT = MOVE-NO-PIECE
+     1534                         MOVE CAPTURED TO MOVED
+     1535                         MOVE ORIG-TO-SQ TO TO-SQ
+     1536                         PERFORM BOARD-REMOVE-PIECE
+     1537                         MOVE 0 TO B-HALF-MOVE
+     1538                     END-IF
+     1539  
+     1540                     MOVE ORIG-MOVED TO MOVED
+     1541                     MOVE ORIG-FROM-SQ TO FROM-SQ
+     1542                     MOVE ORIG-TO-SQ TO TO-SQ
+     1543                     PERFORM BOARD-MOVE-PIECE
+     1544  
+     1545                     IF FUNCTION MOD(ORIG-MOVED, 6) = 0
+     1546                         MOVE 0 TO B-HALF-MOVE
+     1547                         IF FUNCTION ABS(ORIG-TO-SQ - ORIG-FROM-SQ) = 16
+     1548                             COMPUTE B-EP-SQUARE = (ORIG-FROM-SQ + ORIG-TO-SQ) / 2
+     1549                             COMPUTE FILE-I = FUNCTION MOD(B-EP-SQUARE, 8) + 1
+     1550                             COMPUTE B-ZOBRIST-KEY =
+     1551                                 B-ZOBRIST-KEY B-XOR Z-EP-KEY(FILE-I)
+     1552                         END-IF
+     1553                     END-IF
+     1554             END-EVALUATE
+     1555  
+     1556             MOVE ORIG-FROM-SQ TO FROM-SQ
+     1557             MOVE ORIG-TO-SQ TO TO-SQ
+     1558             PERFORM UPDATE-CASTLING-RIGHTS
+     1559             COMPUTE B-ZOBRIST-KEY =
+     1560                 B-ZOBRIST-KEY B-XOR Z-CASTLING-KEY(B-CASTLING-RIGHTS + 1)
+------------------------------------------------------------------------
+
+[YES] chess-revisit-java-toRust-codex  (COBOL)
+      chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob  lines 1441–1561  (121 LOC)
+------------------------------------------------------------------------
+     1441         BOARD-MAKE-MOVE.
+     1442             IF B-PLY >= MAX-PLY
+     1443                 EXIT PARAGRAPH
+     1444             END-IF
+     1445  
+     1446             ADD 1 TO B-PLY
+     1447             MOVE ENCODED-MOVE TO U-MOVE(B-PLY)
+     1448             MOVE B-ZOBRIST-KEY TO U-ZOBRIST(B-PLY)
+     1449             MOVE B-PAWN-KEY TO U-PAWN-KEY(B-PLY)
+     1450             MOVE B-CASTLING-RIGHTS TO U-CASTLING(B-PLY)
+     1451             MOVE B-EP-SQUARE TO U-EP-SQUARE(B-PLY)
+     1452             MOVE B-HALF-MOVE TO U-HALF-MOVE(B-PLY)
+     1453             MOVE B-FULL-MOVE TO U-FULL-MOVE(B-PLY)
+>>>  1454             MOVE B-PST-MG TO U-PST-MG(B-PLY)
+     1455             MOVE B-PST-EG TO U-PST-EG(B-PLY)
+     1456             MOVE B-PHASE TO U-PHASE(B-PLY)
+     1457  
+     1458             PERFORM MOVE-DECODE
+     1459             MOVE FROM-SQ TO ORIG-FROM-SQ
+     1460             MOVE TO-SQ TO ORIG-TO-SQ
+     1461             MOVE MOVED TO ORIG-MOVED
+     1462  
+     1463             ADD 1 TO B-HALF-MOVE
+     1464  
+     1465             IF B-EP-SQUARE NOT = -1
+     1466                 COMPUTE FILE-I = FUNCTION MOD(B-EP-SQUARE, 8) + 1
+     1467                 COMPUTE B-ZOBRIST-KEY = B-ZOBRIST-KEY B-XOR Z-EP-KEY(FILE-I)
+     1468             END-IF
+     1469             MOVE -1 TO B-EP-SQUARE
+     1470             COMPUTE B-ZOBRIST-KEY =
+     1471                 B-ZOBRIST-KEY B-XOR Z-CASTLING-KEY(B-CASTLING-RIGHTS + 1)
+     1472  
+     1473             EVALUATE MOVE-TYPE
+     1474                 WHEN MOVE-CASTLING
+     1475                     MOVE ORIG-MOVED TO MOVED
+     1476                     MOVE ORIG-FROM-SQ TO FROM-SQ
+     1477                     MOVE ORIG-TO-SQ TO TO-SQ
+     1478                     PERFORM BOARD-MOVE-PIECE
+     1479  
+     1480                     IF B-SIDE-TO-MOVE = WHITE
+     1481                         MOVE WR TO MOVED
+     1482                     ELSE
+     1483                         MOVE BR TO MOVED
+     1484                     END-IF
+     1485  
+     1486                     IF ORIG-TO-SQ > ORIG-FROM-SQ
+     1487                         COMPUTE FROM-SQ = ORIG-TO-SQ + 1
+     1488                         COMPUTE TO-SQ = ORIG-TO-SQ - 1
+     1489                     ELSE
+     1490                         COMPUTE FROM-SQ = ORIG-TO-SQ - 2
+     1491                         COMPUTE TO-SQ = ORIG-TO-SQ + 1
+     1492                     END-IF
+     1493                     PERFORM BOARD-MOVE-PIECE
+     1494                     MOVE 0 TO B-HALF-MOVE
+     1495  
+     1496                 WHEN MOVE-EN-PASSANT
+     1497                     IF B-SIDE-TO-MOVE = WHITE
+     1498                         COMPUTE TO-SQ = ORIG-TO-SQ - 8
+     1499                         MOVE BP TO MOVED
+     1500                     ELSE
+     1501                         COMPUTE TO-SQ = ORIG-TO-SQ + 8
+     1502                         MOVE WP TO MOVED
+     1503                     END-IF
+     1504                     PERFORM BOARD-REMOVE-PIECE
+     1505  
+     1506                     MOVE ORIG-MOVED TO MOVED
+     1507                     MOVE ORIG-FROM-SQ TO FROM-SQ
+     1508                     MOVE ORIG-TO-SQ TO TO-SQ
+     1509                     PERFORM BOARD-MOVE-PIECE
+     1510                     MOVE 0 TO B-HALF-MOVE
+     1511  
+     1512                 WHEN MOVE-PROMOTION
+     1513                     IF CAPTURED NOT = MOVE-NO-PIECE
+     1514                         MOVE CAPTURED TO MOVED
+     1515                         MOVE ORIG-TO-SQ TO TO-SQ
+     1516                         PERFORM BOARD-REMOVE-PIECE
+     1517                     END-IF
+     1518  
+     1519                     MOVE ORIG-MOVED TO MOVED
+     1520                     MOVE ORIG-FROM-SQ TO TO-SQ
+     1521                     PERFORM BOARD-REMOVE-PIECE
+     1522  
+     1523                     IF B-SIDE-TO-MOVE = WHITE
+     1524                         COMPUTE MOVED = PROMO + 1
+     1525                     ELSE
+     1526                         COMPUTE MOVED = 6 + PROMO + 1
+     1527                     END-IF
+     1528                     MOVE ORIG-TO-SQ TO TO-SQ
+     1529                     PERFORM BOARD-PUT-PIECE
+     1530                     MOVE 0 TO B-HALF-MOVE
+     1531  
+     1532                 WHEN OTHER
+     1533                     IF CAPTURED NOT = MOVE-NO-PIECE
+     1534                         MOVE CAPTURED TO MOVED
+     1535                         MOVE ORIG-TO-SQ TO TO-SQ
+     1536                         PERFORM BOARD-REMOVE-PIECE
+     1537                         MOVE 0 TO B-HALF-MOVE
+     1538                     END-IF
+     1539  
+     1540                     MOVE ORIG-MOVED TO MOVED
+     1541                     MOVE ORIG-FROM-SQ TO FROM-SQ
+     1542                     MOVE ORIG-TO-SQ TO TO-SQ
+     1543                     PERFORM BOARD-MOVE-PIECE
+     1544  
+     1545                     IF FUNCTION MOD(ORIG-MOVED, 6) = 0
+     1546                         MOVE 0 TO B-HALF-MOVE
+     1547                         IF FUNCTION ABS(ORIG-TO-SQ - ORIG-FROM-SQ) = 16
+     1548                             COMPUTE B-EP-SQUARE = (ORIG-FROM-SQ + ORIG-TO-SQ) / 2
+     1549                             COMPUTE FILE-I = FUNCTION MOD(B-EP-SQUARE, 8) + 1
+     1550                             COMPUTE B-ZOBRIST-KEY =
+     1551                                 B-ZOBRIST-KEY B-XOR Z-EP-KEY(FILE-I)
+     1552                         END-IF
+     1553                     END-IF
+     1554             END-EVALUATE
+     1555  
+     1556             MOVE ORIG-FROM-SQ TO FROM-SQ
+     1557             MOVE ORIG-TO-SQ TO TO-SQ
+     1558             PERFORM UPDATE-CASTLING-RIGHTS
+     1559             COMPUTE B-ZOBRIST-KEY =
+     1560                 B-ZOBRIST-KEY B-XOR Z-CASTLING-KEY(B-CASTLING-RIGHTS + 1)
+------------------------------------------------------------------------
+
+[YES] chess-ruby-cc  (Ruby)
+      lib/chess_engine/board.rb  lines 415–433  (19 LOC)
+------------------------------------------------------------------------
+>>>   415      def add_piece_eval(piece, pt, color, sq)
+      416        mg_pst = PST::MG_TABLES[piece]
+      417        eg_pst = PST::EG_TABLES[piece]
+      418        mg_val = PST::MG_PIECE_VALUE[pt] + (mg_pst ? mg_pst[sq] : 0)
+      419        eg_val = PST::EG_PIECE_VALUE[pt] + (eg_pst ? eg_pst[sq] : 0)
+      420  
+      421        if color == WHITE
+      422          @mg_score += mg_val
+      423          @eg_score += eg_val
+      424          @w_bishops += 1 if pt == BISHOP
+      425          @w_pawn_files[sq & 7] += 1 if pt == PAWN
+      426        else
+      427          @mg_score -= mg_val
+      428          @eg_score -= eg_val
+      429          @b_bishops += 1 if pt == BISHOP
+      430          @b_pawn_files[sq & 7] += 1 if pt == PAWN
+      431        end
+      432        @phase += PST::PHASE_WEIGHTS[pt] || 0
+      433      end
+------------------------------------------------------------------------
+
+[YES] chess-ruby-codex  (Ruby)
+      lib/ruby_chess_engine/evaluator.rb  lines 191–193  (3 LOC)
+------------------------------------------------------------------------
+>>>   191        def piece_value(piece)
+      192          PIECE_VALUES.fetch(piece.downcase, 0)
+      193        end
+------------------------------------------------------------------------
+
+[YES] chess-rust-cc  (Rust)
+      src/board.rs  lines 216–221  (6 LOC)
+------------------------------------------------------------------------
+>>>   216      pub fn put_piece(&mut self, piece: Piece, sq: Square) {
+      217          let bb = Bitboard::from_square(sq);
+      218          self.pieces[piece.piece_type.index()] |= bb;
+      219          self.colors[piece.color.index()] |= bb;
+      220          self.mailbox[sq.index()] = Some(piece);
+      221      }
+------------------------------------------------------------------------
+
+[NO]  chess-rust-codex  (Rust)
+
+[YES] chess-sql  (Python)
+      sql/eval.sql  lines 1–51  (51 LOC)
+------------------------------------------------------------------------
+        1  -- eval.sql: Static position evaluation
+        2  -- Score from white's perspective (positive = white advantage)
+        3  -- Components: material balance + piece-square table bonuses + center control
+        4  
+        5  WITH
+        6  pos AS (
+        7      SELECT board, side FROM position LIMIT 1
+        8  ),
+        9  
+       10  -- Evaluate each square
+       11  square_eval AS (
+       12      SELECT
+       13          s.sq,
+       14          s.rank AS r,
+       15          s.file AS f,
+       16          substr(p.board, s.sq + 1, 1) AS piece,
+       17          COALESCE(pv.value, 0) AS mat_value,
+       18          -- PST bonus: for white pieces use sq directly, for black pieces mirror vertically
+       19          COALESCE(
+       20              CASE
+       21                  WHEN substr(p.board, s.sq + 1, 1) BETWEEN 'A' AND 'Z' THEN
+>>>    22                      (SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(p.board, s.sq + 1, 1)) AND pst.sq = s.sq)
+       23                  WHEN substr(p.board, s.sq + 1, 1) BETWEEN 'a' AND 'z' THEN
+       24                      -(SELECT bonus FROM pst WHERE pst.piece = UPPER(substr(p.board, s.sq + 1, 1)) AND pst.sq = (7 - s.rank) * 8 + s.file)
+       25                  ELSE 0
+       26              END, 0
+       27          ) AS pst_bonus
+       28      FROM squares s, pos p
+       29      LEFT JOIN piece_value pv ON pv.piece = substr(p.board, s.sq + 1, 1)
+       30      WHERE substr(p.board, s.sq + 1, 1) != '.'
+       31  ),
+       32  
+       33  -- Center control bonus: pieces controlling center squares (d4,d5,e4,e5 = sq 27,28,35,36)
+       34  center_bonus AS (
+       35      SELECT COALESCE(SUM(
+       36          CASE
+       37              WHEN piece BETWEEN 'A' AND 'Z' AND sq IN (27, 28, 35, 36) THEN 10
+       38              WHEN piece BETWEEN 'a' AND 'z' AND sq IN (27, 28, 35, 36) THEN -10
+       39              WHEN piece BETWEEN 'A' AND 'Z' AND sq IN (18,19,20,21,26,29,34,37,42,43,44,45) THEN 5
+       40              WHEN piece BETWEEN 'a' AND 'z' AND sq IN (18,19,20,21,26,29,34,37,42,43,44,45) THEN -5
+       41              ELSE 0
+       42          END
+       43      ), 0) AS bonus
+       44      FROM square_eval
+       45  )
+       46  
+       47  SELECT
+       48      (SELECT COALESCE(SUM(mat_value), 0) FROM square_eval) +
+       49      (SELECT COALESCE(SUM(pst_bonus), 0) FROM square_eval) +
+       50      (SELECT bonus FROM center_bonus)
+       51      AS score;
+------------------------------------------------------------------------
+
+[NO]  chess-why3  (OCaml)
+
+[YES] chess-why3-cc  (C)
+      tests/engines/shallowblue-src/src/eval.cc  lines 192–232  (41 LOC)
+------------------------------------------------------------------------
+      192  int Eval::evaluateForPhase(const Board &board, Color color) {
+      193    int score = 0;
+      194  
+      195    Color otherColor = getOppositeColor(color);
+      196  
+      197    // Material value
+      198    score += MATERIAL_VALUES[phase][PAWN]
+      199        * (_popCount(board.getPieces(color, PAWN)) - _popCount(board.getPieces(otherColor, PAWN)));
+      200    score += MATERIAL_VALUES[phase][KNIGHT]
+      201        * (_popCount(board.getPieces(color, KNIGHT)) - _popCount(board.getPieces(otherColor, KNIGHT)));
+      202    score += MATERIAL_VALUES[phase][BISHOP]
+      203        * (_popCount(board.getPieces(color, BISHOP)) - _popCount(board.getPieces(otherColor, BISHOP)));
+      204    score += MATERIAL_VALUES[phase][ROOK]
+      205        * (_popCount(board.getPieces(color, ROOK)) - _popCount(board.getPieces(otherColor, ROOK)));
+      206    score += MATERIAL_VALUES[phase][QUEEN]
+      207        * (_popCount(board.getPieces(color, QUEEN)) - _popCount(board.getPieces(otherColor, QUEEN)));
+      208  
+>>>   209    // Piece square tables
+      210    score += board.getPSquareTable().getScore(phase, color) - board.getPSquareTable().getScore(phase, otherColor);
+      211  
+      212    // Mobility
+      213    score += evaluateMobility(board, phase, color) - evaluateMobility(board, phase, otherColor);
+      214  
+      215    // Rook on open file
+      216    score += ROOK_OPEN_FILE_BONUS[phase] * (rooksOnOpenFiles(board, color) - rooksOnOpenFiles(board, otherColor));
+      217  
+      218    // Bishop pair
+      219    score += hasBishopPair(board, color) ? BISHOP_PAIR_BONUS[phase] : 0;
+      220    score -= hasBishopPair(board, otherColor) ? BISHOP_PAIR_BONUS[phase] : 0;
+      221  
+      222    // Pawn structure
+      223    score += evaluatePawnStructure(board, color, phase);
+      224  
+      225    // King pawn shield (not done in endgame so omit)
+      226    if (phase == OPENING) {
+      227      score +=
+      228          KING_PAWN_SHIELD_BONUS[OPENING] * (pawnsShieldingKing(board, color) - pawnsShieldingKing(board, otherColor));
+      229    }
+      230  
+      231    return score;
+      232  }
+------------------------------------------------------------------------
+
+[NO]  countergo40  (?)
+
+[YES] cplusplus-chess  (C++)
+      src/board.cpp  lines 13–42  (30 LOC)
+------------------------------------------------------------------------
+>>>    13  Piece piece_from_fen(char c) {
+       14    switch (c) {
+       15      case 'P':
+       16        return Piece::WP;
+       17      case 'N':
+       18        return Piece::WN;
+       19      case 'B':
+       20        return Piece::WB;
+       21      case 'R':
+       22        return Piece::WR;
+       23      case 'Q':
+       24        return Piece::WQ;
+       25      case 'K':
+       26        return Piece::WK;
+       27      case 'p':
+       28        return Piece::BP;
+       29      case 'n':
+       30        return Piece::BN;
+       31      case 'b':
+       32        return Piece::BB;
+       33      case 'r':
+       34        return Piece::BR;
+       35      case 'q':
+       36        return Piece::BQ;
+       37      case 'k':
+       38        return Piece::BK;
+       39      default:
+       40        return Piece::Empty;
+       41    }
+       42  }
+------------------------------------------------------------------------
+
+[YES] latex-chess-engine  (LaTeX)
+      chess-engine.tex  lines 1–111  (111 LOC)
+------------------------------------------------------------------------
+        1  % chess-engine.tex -- A chess engine in pure pdfLaTeX (by Claude Code and Mathieu Acher)
+        2  % No Lua, no external programs for logic.
+        3  % Uses \count registers 200-263 for the 8x8 board.
+        4  % Piece encoding: 0=empty, 1=wP, 2=wN, 3=wB, 4=wR, 5=wQ, 6=wK
+        5  %                 negatives for black (-1=bP, -2=bN, etc.)
+        6  
+        7  \makeatletter
+        8  
+        9  %% ========================================================
+       10  %% Step 1: Board Representation & Coordinates
+       11  %% ========================================================
+       12  
+       13  % Square index: (rank-1)*8 + file, where file a=1..h=8, rank 1..8
+       14  % So a1=1, b1=2, ..., h1=8, a2=9, ..., h8=64
+       15  % Stored in \count registers 200..263 (square index i -> \count\numexpr199+i\relax)
+       16  
+       17  % Set a square value: \setsq{index}{value}
+       18  \def\setsq#1#2{\global\count\numexpr199+#1\relax=#2\relax}
+       19  
+       20  % Get a square value (expandable): \getsq{index}
+       21  \def\getsq#1{\the\count\numexpr199+#1\relax}
+       22  
+       23  % Precompute file and rank lookup tables for all 64 squares.
+       24  % \numexpr division ROUNDS (not truncates), so we use \divide (which truncates).
+       25  \count190=1\relax
+       26  \loop\ifnum\count190<65
+       27    \count191=\count190\relax \advance\count191 by -1\relax % 0-based index
+       28    \count192=\count191\relax \divide\count192 by 8\relax   % rank 0-based (truncating)
+       29    \count193=\count192\relax \multiply\count193 by 8\relax
+       30    \count194=\count191\relax \advance\count194 by -\count193\relax % file 0-based
+       31    \advance\count192 by 1\relax % rank 1-based
+       32    \advance\count194 by 1\relax % file 1-based
+       33    \expandafter\edef\csname sq@file@\the\count190\endcsname{\the\count194}%
+       34    \expandafter\edef\csname sq@rank@\the\count190\endcsname{\the\count192}%
+       35    \advance\count190 by 1\relax
+       36  \repeat
+       37  
+       38  % Precompute mirror table for PST: mirror(sq) = (8-rank)*8+file
+       39  % Used for black pieces: look up PST from white's perspective with mirrored square
+       40  \count190=1\relax
+       41  \loop\ifnum\count190<65
+       42    \count191=\csname sq@file@\the\count190\endcsname\relax  % file 1-8
+       43    \count192=\csname sq@rank@\the\count190\endcsname\relax  % rank 1-8
+       44    % mirror rank: 9-rank
+       45    \count193=\numexpr(9-\count192-1)*8+\count191\relax
+       46    \expandafter\edef\csname sq@mirror@\the\count190\endcsname{\the\count193}%
+       47    \advance\count190 by 1\relax
+       48  \repeat
+       49  
+       50  % --- Piece-Square Tables (Simplified Eval Function, white perspective) ---
+>>>    51  % Pawn PST (sq 1-64, a1=1, rank 1 at bottom)
+       52  \expandafter\def\csname psq@1@1\endcsname{0}\expandafter\def\csname psq@1@2\endcsname{0}\expandafter\def\csname psq@1@3\endcsname{0}\expandafter\def\csname psq@1@4\endcsname{0}\expandafter\def\csname psq@1@5\endcsname{0}\expandafter\def\csname psq@1@6\endcsname{0}\expandafter\def\csname psq@1@7\endcsname{0}\expandafter\def\csname psq@1@8\endcsname{0}%
+       53  \expandafter\def\csname psq@1@9\endcsname{5}\expandafter\def\csname psq@1@10\endcsname{10}\expandafter\def\csname psq@1@11\endcsname{10}\expandafter\def\csname psq@1@12\endcsname{-20}\expandafter\def\csname psq@1@13\endcsname{-20}\expandafter\def\csname psq@1@14\endcsname{10}\expandafter\def\csname psq@1@15\endcsname{10}\expandafter\def\csname psq@1@16\endcsname{5}%
+       54  \expandafter\def\csname psq@1@17\endcsname{5}\expandafter\def\csname psq@1@18\endcsname{-5}\expandafter\def\csname psq@1@19\endcsname{-10}\expandafter\def\csname psq@1@20\endcsname{0}\expandafter\def\csname psq@1@21\endcsname{0}\expandafter\def\csname psq@1@22\endcsname{-10}\expandafter\def\csname psq@1@23\endcsname{-5}\expandafter\def\csname psq@1@24\endcsname{5}%
+       55  \expandafter\def\csname psq@1@25\endcsname{0}\expandafter\def\csname psq@1@26\endcsname{0}\expandafter\def\csname psq@1@27\endcsname{0}\expandafter\def\csname psq@1@28\endcsname{20}\expandafter\def\csname psq@1@29\endcsname{20}\expandafter\def\csname psq@1@30\endcsname{0}\expandafter\def\csname psq@1@31\endcsname{0}\expandafter\def\csname psq@1@32\endcsname{0}%
+       56  \expandafter\def\csname psq@1@33\endcsname{5}\expandafter\def\csname psq@1@34\endcsname{5}\expandafter\def\csname psq@1@35\endcsname{10}\expandafter\def\csname psq@1@36\endcsname{25}\expandafter\def\csname psq@1@37\endcsname{25}\expandafter\def\csname psq@1@38\endcsname{10}\expandafter\def\csname psq@1@39\endcsname{5}\expandafter\def\csname psq@1@40\endcsname{5}%
+       57  \expandafter\def\csname psq@1@41\endcsname{10}\expandafter\def\csname psq@1@42\endcsname{10}\expandafter\def\csname psq@1@43\endcsname{20}\expandafter\def\csname psq@1@44\endcsname{30}\expandafter\def\csname psq@1@45\endcsname{30}\expandafter\def\csname psq@1@46\endcsname{20}\expandafter\def\csname psq@1@47\endcsname{10}\expandafter\def\csname psq@1@48\endcsname{10}%
+       58  \expandafter\def\csname psq@1@49\endcsname{50}\expandafter\def\csname psq@1@50\endcsname{50}\expandafter\def\csname psq@1@51\endcsname{50}\expandafter\def\csname psq@1@52\endcsname{50}\expandafter\def\csname psq@1@53\endcsname{50}\expandafter\def\csname psq@1@54\endcsname{50}\expandafter\def\csname psq@1@55\endcsname{50}\expandafter\def\csname psq@1@56\endcsname{50}%
+       59  \expandafter\def\csname psq@1@57\endcsname{0}\expandafter\def\csname psq@1@58\endcsname{0}\expandafter\def\csname psq@1@59\endcsname{0}\expandafter\def\csname psq@1@60\endcsname{0}\expandafter\def\csname psq@1@61\endcsname{0}\expandafter\def\csname psq@1@62\endcsname{0}\expandafter\def\csname psq@1@63\endcsname{0}\expandafter\def\csname psq@1@64\endcsname{0}%
+       60  % Knight PST
+       61  \expandafter\def\csname psq@2@1\endcsname{-50}\expandafter\def\csname psq@2@2\endcsname{-40}\expandafter\def\csname psq@2@3\endcsname{-30}\expandafter\def\csname psq@2@4\endcsname{-30}\expandafter\def\csname psq@2@5\endcsname{-30}\expandafter\def\csname psq@2@6\endcsname{-30}\expandafter\def\csname psq@2@7\endcsname{-40}\expandafter\def\csname psq@2@8\endcsname{-50}%
+       62  \expandafter\def\csname psq@2@9\endcsname{-40}\expandafter\def\csname psq@2@10\endcsname{-20}\expandafter\def\csname psq@2@11\endcsname{0}\expandafter\def\csname psq@2@12\endcsname{5}\expandafter\def\csname psq@2@13\endcsname{5}\expandafter\def\csname psq@2@14\endcsname{0}\expandafter\def\csname psq@2@15\endcsname{-20}\expandafter\def\csname psq@2@16\endcsname{-40}%
+       63  \expandafter\def\csname psq@2@17\endcsname{-30}\expandafter\def\csname psq@2@18\endcsname{0}\expandafter\def\csname psq@2@19\endcsname{10}\expandafter\def\csname psq@2@20\endcsname{15}\expandafter\def\csname psq@2@21\endcsname{15}\expandafter\def\csname psq@2@22\endcsname{10}\expandafter\def\csname psq@2@23\endcsname{0}\expandafter\def\csname psq@2@24\endcsname{-30}%
+       64  \expandafter\def\csname psq@2@25\endcsname{-30}\expandafter\def\csname psq@2@26\endcsname{5}\expandafter\def\csname psq@2@27\endcsname{15}\expandafter\def\csname psq@2@28\endcsname{20}\expandafter\def\csname psq@2@29\endcsname{20}\expandafter\def\csname psq@2@30\endcsname{15}\expandafter\def\csname psq@2@31\endcsname{5}\expandafter\def\csname psq@2@32\endcsname{-30}%
+       65  \expandafter\def\csname psq@2@33\endcsname{-30}\expandafter\def\csname psq@2@34\endcsname{0}\expandafter\def\csname psq@2@35\endcsname{15}\expandafter\def\csname psq@2@36\endcsname{20}\expandafter\def\csname psq@2@37\endcsname{20}\expandafter\def\csname psq@2@38\endcsname{15}\expandafter\def\csname psq@2@39\endcsname{0}\expandafter\def\csname psq@2@40\endcsname{-30}%
+       66  \expandafter\def\csname psq@2@41\endcsname{-30}\expandafter\def\csname psq@2@42\endcsname{5}\expandafter\def\csname psq@2@43\endcsname{10}\expandafter\def\csname psq@2@44\endcsname{15}\expandafter\def\csname psq@2@45\endcsname{15}\expandafter\def\csname psq@2@46\endcsname{10}\expandafter\def\csname psq@2@47\endcsname{5}\expandafter\def\csname psq@2@48\endcsname{-30}%
+       67  \expandafter\def\csname psq@2@49\endcsname{-40}\expandafter\def\csname psq@2@50\endcsname{-20}\expandafter\def\csname psq@2@51\endcsname{0}\expandafter\def\csname psq@2@52\endcsname{0}\expandafter\def\csname psq@2@53\endcsname{0}\expandafter\def\csname psq@2@54\endcsname{0}\expandafter\def\csname psq@2@55\endcsname{-20}\expandafter\def\csname psq@2@56\endcsname{-40}%
+       68  \expandafter\def\csname psq@2@57\endcsname{-50}\expandafter\def\csname psq@2@58\endcsname{-40}\expandafter\def\csname psq@2@59\endcsname{-30}\expandafter\def\csname psq@2@60\endcsname{-30}\expandafter\def\csname psq@2@61\endcsname{-30}\expandafter\def\csname psq@2@62\endcsname{-30}\expandafter\def\csname psq@2@63\endcsname{-40}\expandafter\def\csname psq@2@64\endcsname{-50}%
+       69  % Bishop PST
+       70  \expandafter\def\csname psq@3@1\endcsname{-20}\expandafter\def\csname psq@3@2\endcsname{-10}\expandafter\def\csname psq@3@3\endcsname{-10}\expandafter\def\csname psq@3@4\endcsname{-10}\expandafter\def\csname psq@3@5\endcsname{-10}\expandafter\def\csname psq@3@6\endcsname{-10}\expandafter\def\csname psq@3@7\endcsname{-10}\expandafter\def\csname psq@3@8\endcsname{-20}%
+       71  \expandafter\def\csname psq@3@9\endcsname{-10}\expandafter\def\csname psq@3@10\endcsname{5}\expandafter\def\csname psq@3@11\endcsname{0}\expandafter\def\csname psq@3@12\endcsname{0}\expandafter\def\csname psq@3@13\endcsname{0}\expandafter\def\csname psq@3@14\endcsname{0}\expandafter\def\csname psq@3@15\endcsname{5}\expandafter\def\csname psq@3@16\endcsname{-10}%
+       72  \expandafter\def\csname psq@3@17\endcsname{-10}\expandafter\def\csname psq@3@18\endcsname{10}\expandafter\def\csname psq@3@19\endcsname{10}\expandafter\def\csname psq@3@20\endcsname{10}\expandafter\def\csname psq@3@21\endcsname{10}\expandafter\def\csname psq@3@22\endcsname{10}\expandafter\def\csname psq@3@23\endcsname{10}\expandafter\def\csname psq@3@24\endcsname{-10}%
+       73  \expandafter\def\csname psq@3@25\endcsname{-10}\expandafter\def\csname psq@3@26\endcsname{0}\expandafter\def\csname psq@3@27\endcsname{10}\expandafter\def\csname psq@3@28\endcsname{10}\expandafter\def\csname psq@3@29\endcsname{10}\expandafter\def\csname psq@3@30\endcsname{10}\expandafter\def\csname psq@3@31\endcsname{0}\expandafter\def\csname psq@3@32\endcsname{-10}%
+       74  \expandafter\def\csname psq@3@33\endcsname{-10}\expandafter\def\csname psq@3@34\endcsname{5}\expandafter\def\csname psq@3@35\endcsname{5}\expandafter\def\csname psq@3@36\endcsname{10}\expandafter\def\csname psq@3@37\endcsname{10}\expandafter\def\csname psq@3@38\endcsname{5}\expandafter\def\csname psq@3@39\endcsname{5}\expandafter\def\csname psq@3@40\endcsname{-10}%
+       75  \expandafter\def\csname psq@3@41\endcsname{-10}\expandafter\def\csname psq@3@42\endcsname{0}\expandafter\def\csname psq@3@43\endcsname{5}\expandafter\def\csname psq@3@44\endcsname{10}\expandafter\def\csname psq@3@45\endcsname{10}\expandafter\def\csname psq@3@46\endcsname{5}\expandafter\def\csname psq@3@47\endcsname{0}\expandafter\def\csname psq@3@48\endcsname{-10}%
+       76  \expandafter\def\csname psq@3@49\endcsname{-10}\expandafter\def\csname psq@3@50\endcsname{0}\expandafter\def\csname psq@3@51\endcsname{0}\expandafter\def\csname psq@3@52\endcsname{0}\expandafter\def\csname psq@3@53\endcsname{0}\expandafter\def\csname psq@3@54\endcsname{0}\expandafter\def\csname psq@3@55\endcsname{0}\expandafter\def\csname psq@3@56\endcsname{-10}%
+       77  \expandafter\def\csname psq@3@57\endcsname{-20}\expandafter\def\csname psq@3@58\endcsname{-10}\expandafter\def\csname psq@3@59\endcsname{-10}\expandafter\def\csname psq@3@60\endcsname{-10}\expandafter\def\csname psq@3@61\endcsname{-10}\expandafter\def\csname psq@3@62\endcsname{-10}\expandafter\def\csname psq@3@63\endcsname{-10}\expandafter\def\csname psq@3@64\endcsname{-20}%
+       78  % Rook PST
+       79  \expandafter\def\csname psq@4@1\endcsname{0}\expandafter\def\csname psq@4@2\endcsname{0}\expandafter\def\csname psq@4@3\endcsname{0}\expandafter\def\csname psq@4@4\endcsname{5}\expandafter\def\csname psq@4@5\endcsname{5}\expandafter\def\csname psq@4@6\endcsname{0}\expandafter\def\csname psq@4@7\endcsname{0}\expandafter\def\csname psq@4@8\endcsname{0}%
+       80  \expandafter\def\csname psq@4@9\endcsname{-5}\expandafter\def\csname psq@4@10\endcsname{0}\expandafter\def\csname psq@4@11\endcsname{0}\expandafter\def\csname psq@4@12\endcsname{0}\expandafter\def\csname psq@4@13\endcsname{0}\expandafter\def\csname psq@4@14\endcsname{0}\expandafter\def\csname psq@4@15\endcsname{0}\expandafter\def\csname psq@4@16\endcsname{-5}%
+       81  \expandafter\def\csname psq@4@17\endcsname{-5}\expandafter\def\csname psq@4@18\endcsname{0}\expandafter\def\csname psq@4@19\endcsname{0}\expandafter\def\csname psq@4@20\endcsname{0}\expandafter\def\csname psq@4@21\endcsname{0}\expandafter\def\csname psq@4@22\endcsname{0}\expandafter\def\csname psq@4@23\endcsname{0}\expandafter\def\csname psq@4@24\endcsname{-5}%
+       82  \expandafter\def\csname psq@4@25\endcsname{-5}\expandafter\def\csname psq@4@26\endcsname{0}\expandafter\def\csname psq@4@27\endcsname{0}\expandafter\def\csname psq@4@28\endcsname{0}\expandafter\def\csname psq@4@29\endcsname{0}\expandafter\def\csname psq@4@30\endcsname{0}\expandafter\def\csname psq@4@31\endcsname{0}\expandafter\def\csname psq@4@32\endcsname{-5}%
+       83  \expandafter\def\csname psq@4@33\endcsname{-5}\expandafter\def\csname psq@4@34\endcsname{0}\expandafter\def\csname psq@4@35\endcsname{0}\expandafter\def\csname psq@4@36\endcsname{0}\expandafter\def\csname psq@4@37\endcsname{0}\expandafter\def\csname psq@4@38\endcsname{0}\expandafter\def\csname psq@4@39\endcsname{0}\expandafter\def\csname psq@4@40\endcsname{-5}%
+       84  \expandafter\def\csname psq@4@41\endcsname{-5}\expandafter\def\csname psq@4@42\endcsname{0}\expandafter\def\csname psq@4@43\endcsname{0}\expandafter\def\csname psq@4@44\endcsname{0}\expandafter\def\csname psq@4@45\endcsname{0}\expandafter\def\csname psq@4@46\endcsname{0}\expandafter\def\csname psq@4@47\endcsname{0}\expandafter\def\csname psq@4@48\endcsname{-5}%
+       85  \expandafter\def\csname psq@4@49\endcsname{5}\expandafter\def\csname psq@4@50\endcsname{10}\expandafter\def\csname psq@4@51\endcsname{10}\expandafter\def\csname psq@4@52\endcsname{10}\expandafter\def\csname psq@4@53\endcsname{10}\expandafter\def\csname psq@4@54\endcsname{10}\expandafter\def\csname psq@4@55\endcsname{10}\expandafter\def\csname psq@4@56\endcsname{5}%
+       86  \expandafter\def\csname psq@4@57\endcsname{0}\expandafter\def\csname psq@4@58\endcsname{0}\expandafter\def\csname psq@4@59\endcsname{0}\expandafter\def\csname psq@4@60\endcsname{0}\expandafter\def\csname psq@4@61\endcsname{0}\expandafter\def\csname psq@4@62\endcsname{0}\expandafter\def\csname psq@4@63\endcsname{0}\expandafter\def\csname psq@4@64\endcsname{0}%
+       87  % Queen PST
+       88  \expandafter\def\csname psq@5@1\endcsname{-20}\expandafter\def\csname psq@5@2\endcsname{-10}\expandafter\def\csname psq@5@3\endcsname{-10}\expandafter\def\csname psq@5@4\endcsname{-5}\expandafter\def\csname psq@5@5\endcsname{-5}\expandafter\def\csname psq@5@6\endcsname{-10}\expandafter\def\csname psq@5@7\endcsname{-10}\expandafter\def\csname psq@5@8\endcsname{-20}%
+       89  \expandafter\def\csname psq@5@9\endcsname{-10}\expandafter\def\csname psq@5@10\endcsname{0}\expandafter\def\csname psq@5@11\endcsname{5}\expandafter\def\csname psq@5@12\endcsname{0}\expandafter\def\csname psq@5@13\endcsname{0}\expandafter\def\csname psq@5@14\endcsname{0}\expandafter\def\csname psq@5@15\endcsname{0}\expandafter\def\csname psq@5@16\endcsname{-10}%
+       90  \expandafter\def\csname psq@5@17\endcsname{-10}\expandafter\def\csname psq@5@18\endcsname{5}\expandafter\def\csname psq@5@19\endcsname{5}\expandafter\def\csname psq@5@20\endcsname{5}\expandafter\def\csname psq@5@21\endcsname{5}\expandafter\def\csname psq@5@22\endcsname{5}\expandafter\def\csname psq@5@23\endcsname{0}\expandafter\def\csname psq@5@24\endcsname{-10}%
+       91  \expandafter\def\csname psq@5@25\endcsname{0}\expandafter\def\csname psq@5@26\endcsname{0}\expandafter\def\csname psq@5@27\endcsname{5}\expandafter\def\csname psq@5@28\endcsname{5}\expandafter\def\csname psq@5@29\endcsname{5}\expandafter\def\csname psq@5@30\endcsname{5}\expandafter\def\csname psq@5@31\endcsname{0}\expandafter\def\csname psq@5@32\endcsname{-5}%
+       92  \expandafter\def\csname psq@5@33\endcsname{-5}\expandafter\def\csname psq@5@34\endcsname{0}\expandafter\def\csname psq@5@35\endcsname{5}\expandafter\def\csname psq@5@36\endcsname{5}\expandafter\def\csname psq@5@37\endcsname{5}\expandafter\def\csname psq@5@38\endcsname{5}\expandafter\def\csname psq@5@39\endcsname{0}\expandafter\def\csname psq@5@40\endcsname{-5}%
+       93  \expandafter\def\csname psq@5@41\endcsname{-10}\expandafter\def\csname psq@5@42\endcsname{0}\expandafter\def\csname psq@5@43\endcsname{5}\expandafter\def\csname psq@5@44\endcsname{5}\expandafter\def\csname psq@5@45\endcsname{5}\expandafter\def\csname psq@5@46\endcsname{5}\expandafter\def\csname psq@5@47\endcsname{0}\expandafter\def\csname psq@5@48\endcsname{-10}%
+       94  \expandafter\def\csname psq@5@49\endcsname{-10}\expandafter\def\csname psq@5@50\endcsname{0}\expandafter\def\csname psq@5@51\endcsname{0}\expandafter\def\csname psq@5@52\endcsname{0}\expandafter\def\csname psq@5@53\endcsname{0}\expandafter\def\csname psq@5@54\endcsname{0}\expandafter\def\csname psq@5@55\endcsname{0}\expandafter\def\csname psq@5@56\endcsname{-10}%
+       95  \expandafter\def\csname psq@5@57\endcsname{-20}\expandafter\def\csname psq@5@58\endcsname{-10}\expandafter\def\csname psq@5@59\endcsname{-10}\expandafter\def\csname psq@5@60\endcsname{-5}\expandafter\def\csname psq@5@61\endcsname{-5}\expandafter\def\csname psq@5@62\endcsname{-10}\expandafter\def\csname psq@5@63\endcsname{-10}\expandafter\def\csname psq@5@64\endcsname{-20}%
+       96  % King PST (middlegame)
+       97  \expandafter\def\csname psq@6@1\endcsname{20}\expandafter\def\csname psq@6@2\endcsname{30}\expandafter\def\csname psq@6@3\endcsname{10}\expandafter\def\csname psq@6@4\endcsname{0}\expandafter\def\csname psq@6@5\endcsname{0}\expandafter\def\csname psq@6@6\endcsname{10}\expandafter\def\csname psq@6@7\endcsname{30}\expandafter\def\csname psq@6@8\endcsname{20}%
+       98  \expandafter\def\csname psq@6@9\endcsname{20}\expandafter\def\csname psq@6@10\endcsname{20}\expandafter\def\csname psq@6@11\endcsname{0}\expandafter\def\csname psq@6@12\endcsname{0}\expandafter\def\csname psq@6@13\endcsname{0}\expandafter\def\csname psq@6@14\endcsname{0}\expandafter\def\csname psq@6@15\endcsname{20}\expandafter\def\csname psq@6@16\endcsname{20}%
+       99  \expandafter\def\csname psq@6@17\endcsname{-10}\expandafter\def\csname psq@6@18\endcsname{-20}\expandafter\def\csname psq@6@19\endcsname{-20}\expandafter\def\csname psq@6@20\endcsname{-20}\expandafter\def\csname psq@6@21\endcsname{-20}\expandafter\def\csname psq@6@22\endcsname{-20}\expandafter\def\csname psq@6@23\endcsname{-20}\expandafter\def\csname psq@6@24\endcsname{-10}%
+      100  \expandafter\def\csname psq@6@25\endcsname{-20}\expandafter\def\csname psq@6@26\endcsname{-30}\expandafter\def\csname psq@6@27\endcsname{-30}\expandafter\def\csname psq@6@28\endcsname{-40}\expandafter\def\csname psq@6@29\endcsname{-40}\expandafter\def\csname psq@6@30\endcsname{-30}\expandafter\def\csname psq@6@31\endcsname{-30}\expandafter\def\csname psq@6@32\endcsname{-20}%
+      101  \expandafter\def\csname psq@6@33\endcsname{-30}\expandafter\def\csname psq@6@34\endcsname{-40}\expandafter\def\csname psq@6@35\endcsname{-40}\expandafter\def\csname psq@6@36\endcsname{-50}\expandafter\def\csname psq@6@37\endcsname{-50}\expandafter\def\csname psq@6@38\endcsname{-40}\expandafter\def\csname psq@6@39\endcsname{-40}\expandafter\def\csname psq@6@40\endcsname{-30}%
+      102  \expandafter\def\csname psq@6@41\endcsname{-30}\expandafter\def\csname psq@6@42\endcsname{-40}\expandafter\def\csname psq@6@43\endcsname{-40}\expandafter\def\csname psq@6@44\endcsname{-50}\expandafter\def\csname psq@6@45\endcsname{-50}\expandafter\def\csname psq@6@46\endcsname{-40}\expandafter\def\csname psq@6@47\endcsname{-40}\expandafter\def\csname psq@6@48\endcsname{-30}%
+      103  \expandafter\def\csname psq@6@49\endcsname{-30}\expandafter\def\csname psq@6@50\endcsname{-40}\expandafter\def\csname psq@6@51\endcsname{-40}\expandafter\def\csname psq@6@52\endcsname{-50}\expandafter\def\csname psq@6@53\endcsname{-50}\expandafter\def\csname psq@6@54\endcsname{-40}\expandafter\def\csname psq@6@55\endcsname{-40}\expandafter\def\csname psq@6@56\endcsname{-30}%
+      104  \expandafter\def\csname psq@6@57\endcsname{-30}\expandafter\def\csname psq@6@58\endcsname{-40}\expandafter\def\csname psq@6@59\endcsname{-40}\expandafter\def\csname psq@6@60\endcsname{-50}\expandafter\def\csname psq@6@61\endcsname{-50}\expandafter\def\csname psq@6@62\endcsname{-40}\expandafter\def\csname psq@6@63\endcsname{-40}\expandafter\def\csname psq@6@64\endcsname{-30}%
+      105  
+      106  % Extract file (1-8) from square index (expandable via csname lookup)
+      107  \def\sqfile#1{\csname sq@file@#1\endcsname}
+      108  
+      109  % Extract rank (1-8) from square index (expandable via csname lookup)
+      110  \def\sqrank#1{\csname sq@rank@#1\endcsname}
+------------------------------------------------------------------------
+
+[YES] lean-chess  (Lean)
+      Chess/Eval.lean  lines 42–62  (21 LOC)
+------------------------------------------------------------------------
+>>>    42  def pieceSquareValue (piece : Piece) (isEndgame : Bool) (sq : Square) : Int :=
+       43    let c := centrality sq
+       44    let adv := Int.ofNat (forwardRank piece.color sq)
+       45    let edgePenalty := if isEdgeSquare sq then 1 else 0
+       46    match piece.kind with
+       47    | .pawn =>
+       48        adv * 6 + c * 2
+       49    | .knight =>
+       50        c * 12 - Int.ofNat edgePenalty * 18 + adv
+       51    | .bishop =>
+       52        c * 6 + adv * 2
+       53    | .rook =>
+       54        c * 2 + adv * 2
+       55    | .queen =>
+       56        c * 3 + adv
+       57    | .king =>
+       58        if isEndgame then
+       59          c * 9 + adv * 2
+       60        else
+       61          kingCastledBonus piece.color sq - c * 7 - adv * 8
+------------------------------------------------------------------------
+
+[NO]  madchess32  (?)
+
+[NO]  tscp181  (?)
+
+========================================================================
+Engines WITHOUT the feature:
+  - COBOL-chess  (COBOL)
+  - chess-assembly-codex  (Assembly)
+  - chess-brainfuck-cc  (Python)
+  - chess-css-codex  (HTML)
+  - chess-css-codex-guided  (JavaScript)
+  - chess-icon-codex  (Icon)
+  - chess-latex-codex-replication  (LaTeX)
+  - chess-mojo  (Mojo)
+  - chess-newlang-codex  (C++)
+  - chess-purec  (C)
+  - chess-purec-codex  (C)
+  - chess-rust-codex  (Rust)
+  - chess-why3  (OCaml)
+  - countergo40  (?)
+  - madchess32  (?)
+  - tscp181  (?)

@@ -1,0 +1,223 @@
+{
+  "name": "chess-excel",
+  "path": "/Users/mathieuacher/SANDBOX/chess-excel",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 8,
+      "Python": 6,
+      "Shell": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 588,
+      "Python": 2234,
+      "Shell": 113
+    },
+    "total_files": 15,
+    "total_loc": 2935
+  },
+  "features": {
+    "FEN parsing": 11,
+    "UCI protocol": 16,
+    "Perft": 1,
+    "Castling": 8,
+    "Promotion": 3,
+    "PGN": 4,
+    "Minimax/Negamax": 1,
+    "King safety": 1,
+    "Material counting": 4,
+    "Time management": 2
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "google_sheets/template_tabs/Input.csv",
+      "google_sheets/template_tabs/Game.csv",
+      "docs/ods_port.md",
+      "docs/play_in_excel.md",
+      "docs/excel_formula_engine.md",
+      "docs/google_sheets_port.md",
+      "docs/excel_online_safe.md",
+      "scripts/build_ods_workbook.py",
+      "scripts/build_workbook.py",
+      "scripts/build_xlsx_online_safe.py",
+      "scripts/generate_move_tables.py"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "google_sheets/named_functions.csv",
+      "google_sheets/template_tabs/Input.csv",
+      "google_sheets/template_tabs/Search.csv",
+      "google_sheets/template_tabs/Moves.csv",
+      "google_sheets/template_tabs/Game.csv",
+      "docs/elo_testing.md",
+      "docs/ods_port.md",
+      "docs/play_in_excel.md",
+      "docs/excel_formula_engine.md",
+      "docs/google_sheets_port.md",
+      "docs/excel_online_safe.md",
+      "scripts/build_ods_workbook.py",
+      "scripts/build_workbook.py",
+      "scripts/build_xlsx_online_safe.py",
+      "scripts/run_cutechess_match.sh"
+    ],
+    "Perft": [
+      "docs/excel_formula_engine.md"
+    ],
+    "Castling": [
+      "google_sheets/template_tabs/Input.csv",
+      "docs/ods_port.md",
+      "docs/play_in_excel.md",
+      "docs/excel_formula_engine.md",
+      "docs/google_sheets_port.md",
+      "results/sf1320_vs_sf1500_smoke.pgn",
+      "results/sf1200_vs_sf1500_smoke.pgn",
+      "scripts/build_workbook.py"
+    ],
+    "En passant": [],
+    "Promotion": [
+      "docs/play_in_excel.md",
+      "scripts/build_ods_workbook.py",
+      "scripts/build_xlsx_online_safe.py"
+    ],
+    "Check/Checkmate": [],
+    "PGN": [
+      "README.md",
+      "docs/elo_testing.md",
+      "scripts/estimate_elo.py",
+      "scripts/run_cutechess_match.sh"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "docs/excel_formula_engine.md"
+    ],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [
+      "docs/excel_formula_engine.md"
+    ],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "google_sheets/named_functions.csv",
+      "google_sheets/template_tabs/Board.csv",
+      "docs/excel_formula_engine.md",
+      "scripts/build_workbook.py"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "results/sf1320_vs_sf1500_smoke.pgn",
+      "results/sf1200_vs_sf1500_smoke.pgn"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 2,
+    "n_user_prompts": 16,
+    "n_assistant_messages": 82,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 191,
+      "write_stdin": 190
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 33827204,
+        "output": 173988,
+        "cache_read": 32990592,
+        "cache_creation": 0,
+        "reasoning_output": 84281
+      },
+      "usd_estimate": 48.15
+    },
+    "first_ts": "2026-02-18T08:19:56.999Z",
+    "last_ts": "2026-02-18T22:57:49.434Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-18T09-19-21-019c6fd5-13c2-72a2-975d-796a80d7f7c9",
+        "first_ts": "2026-02-18T08:19:56.999Z",
+        "last_ts": "2026-02-18T14:34:47.406Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 13,
+        "tokens": {
+          "input": 7368348,
+          "output": 101028,
+          "cache_read": 6917504,
+          "reasoning_output": 52896
+        },
+        "tool_uses": {
+          "exec_command": 115,
+          "write_stdin": 7
+        },
+        "first_prompt_sample": "I want to build a chess engine in Excel, without VBA or macros, but only using the Excel formula... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels \n"
+      },
+      {
+        "session_id": "rollout-2026-02-18T22-28-32-019c72a7-99d4-79f3-aec0-38f611fbf707",
+        "first_ts": "2026-02-18T21:28:40.566Z",
+        "last_ts": "2026-02-18T22:57:49.434Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 3,
+        "tokens": {
+          "input": 26458856,
+          "output": 72960,
+          "cache_read": 26073088,
+          "reasoning_output": 31385
+        },
+        "tool_uses": {
+          "exec_command": 76,
+          "write_stdin": 183
+        },
+        "first_prompt_sample": "I want to build a chess engine in C programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

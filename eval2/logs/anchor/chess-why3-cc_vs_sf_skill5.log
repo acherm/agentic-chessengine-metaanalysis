@@ -1,0 +1,44 @@
+Indexing opening suite...
+Started game 2 of 30 (sf_skill5 vs chess-why3-cc)
+Started game 1 of 30 (chess-why3-cc vs sf_skill5)
+Finished game 2 (sf_skill5 vs chess-why3-cc): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_skill5: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-why3-cc vs sf_skill5)
+Finished game 1 (chess-why3-cc vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_skill5: 1 - 1 - 0  [0.500] 2
+Started game 4 of 30 (sf_skill5 vs chess-why3-cc)
+Finished game 3 (chess-why3-cc vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-why3-cc vs sf_skill5: 1 - 1 - 1  [0.500] 3
+Started game 5 of 30 (chess-why3-cc vs sf_skill5)
+Finished game 4 (sf_skill5 vs chess-why3-cc): 1-0 {White wins by adjudication}
+Score of chess-why3-cc vs sf_skill5: 1 - 2 - 1  [0.375] 4
+Started game 6 of 30 (sf_skill5 vs chess-why3-cc)
+Finished game 5 (chess-why3-cc vs sf_skill5): 1-0 {White mates}
+Score of chess-why3-cc vs sf_skill5: 2 - 2 - 1  [0.500] 5
+Started game 7 of 30 (chess-why3-cc vs sf_skill5)
+Terminating process of engine chess-why3-cc(0)
+Finished game 6 (sf_skill5 vs chess-why3-cc): 1-0 {Black's connection stalls}
+Score of chess-why3-cc vs sf_skill5: 2 - 3 - 1  [0.417] 6
+Finished game 7 (chess-why3-cc vs sf_skill5): * {No result}
+Score of chess-why3-cc vs sf_skill5: 2 - 3 - 1  [0.417] 6
+...      chess-why3-cc playing White: 2 - 0 - 1  [0.833] 3
+...      chess-why3-cc playing Black: 0 - 3 - 0  [0.000] 3
+...      White vs Black: 5 - 0 - 1  [0.917] 6
+Elo difference: -58.5 +/- 349.5, LOS: 32.7 %, DrawRatio: 16.7 %
+SPRT: llr -0.361 (-12.3%), lbound -2.94, ubound 2.94
+
+Player: chess-why3-cc
+   "Draw by 3-fold repetition": 1
+   "Loss: Black's connection stalls": 1
+   "Loss: White wins by adjudication": 2
+   "No result": 1
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 1
+Player: sf_skill5
+   "Draw by 3-fold repetition": 1
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 1
+   "No result": 1
+   "Win: Black's connection stalls": 1
+   "Win: White wins by adjudication": 2
+Finished match

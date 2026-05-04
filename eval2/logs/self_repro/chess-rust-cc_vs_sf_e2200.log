@@ -1,0 +1,82 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-rust-cc vs sf_e2200)
+Started game 2 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 1 (chess-rust-cc vs sf_e2200): 1-0 {White mates}
+Score of chess-rust-cc vs sf_e2200: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 2 (sf_e2200 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 3 (chess-rust-cc vs sf_e2200): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 4 (sf_e2200 vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 3 - 1 - 0  [0.750] 4
+Started game 6 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 5 (chess-rust-cc vs sf_e2200): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 3 - 2 - 0  [0.600] 5
+Started game 7 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 7 (chess-rust-cc vs sf_e2200): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 3 - 3 - 0  [0.500] 6
+Started game 8 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 6 (sf_e2200 vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 4 - 3 - 0  [0.571] 7
+Started game 9 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 8 (sf_e2200 vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 5 - 3 - 0  [0.625] 8
+Started game 10 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 9 (chess-rust-cc vs sf_e2200): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 5 - 4 - 0  [0.556] 9
+Started game 11 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 10 (sf_e2200 vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 6 - 4 - 0  [0.600] 10
+Started game 12 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 11 (chess-rust-cc vs sf_e2200): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 6 - 5 - 0  [0.545] 11
+Started game 13 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 12 (sf_e2200 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 6 - 6 - 0  [0.500] 12
+Started game 14 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 13 (chess-rust-cc vs sf_e2200): 1-0 {White mates}
+Score of chess-rust-cc vs sf_e2200: 7 - 6 - 0  [0.538] 13
+Started game 15 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 14 (sf_e2200 vs chess-rust-cc): 1-0 {White mates}
+Score of chess-rust-cc vs sf_e2200: 7 - 7 - 0  [0.500] 14
+Started game 16 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 15 (chess-rust-cc vs sf_e2200): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 7 - 8 - 0  [0.467] 15
+Started game 17 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 17 (chess-rust-cc vs sf_e2200): 1-0 {White mates}
+Score of chess-rust-cc vs sf_e2200: 8 - 8 - 0  [0.500] 16
+Started game 18 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 16 (sf_e2200 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 8 - 9 - 0  [0.471] 17
+Started game 19 of 20 (chess-rust-cc vs sf_e2200)
+Finished game 19 (chess-rust-cc vs sf_e2200): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 8 - 10 - 0  [0.444] 18
+Started game 20 of 20 (sf_e2200 vs chess-rust-cc)
+Finished game 18 (sf_e2200 vs chess-rust-cc): 0-1 {Black wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 9 - 10 - 0  [0.474] 19
+Finished game 20 (sf_e2200 vs chess-rust-cc): 1-0 {White wins by adjudication}
+Score of chess-rust-cc vs sf_e2200: 9 - 11 - 0  [0.450] 20
+...      chess-rust-cc playing White: 4 - 6 - 0  [0.400] 10
+...      chess-rust-cc playing Black: 5 - 5 - 0  [0.500] 10
+...      White vs Black: 9 - 11 - 0  [0.450] 20
+Elo difference: -34.9 +/- 164.5, LOS: 32.7 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-cc
+   "Loss: Black wins by adjudication": 6
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 4
+   "Win: Black wins by adjudication": 5
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 1
+Player: sf_e2200
+   "Loss: Black wins by adjudication": 5
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 1
+   "Win: Black wins by adjudication": 6
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 4
+Finished match

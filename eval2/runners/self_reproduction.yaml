@@ -1,0 +1,153 @@
+# Per-engine "reproduce the original claim" config.
+#
+# Each record captures the exact setup an engine's own eval script used
+# to derive its self-reported Elo. Running this harness reproduces the
+# same conditions so we can verify the original number and then compare
+# it to the anchor-based number.
+#
+# Fields:
+#   script         : path to the engine's original eval script (provenance)
+#   binary         : engine binary path (relative to engine repo root)
+#   tc             : cutechess -each tc=
+#   sf_hash        : Stockfish Hash option in MB
+#   sf_elos        : Stockfish UCI_Elo rungs (uses UCI_LimitStrength=true)
+#   sf_skill_levels: alternative — Stockfish Skill Level rungs (mutually exclusive with sf_elos)
+#   games_per_rung : games per rung
+#   notes          : anomalies in the original setup
+#   skip           : if true, the script is non-parametric / unsupported
+
+engines:
+
+  # ============= host-runnable native binaries =============
+
+  chess-purec:
+    script: play_stockfish.sh
+    binary: purec
+    tc: "10+0.1"
+    sf_hash: 16
+    sf_elos: [1500, 1800, 2000, 2200, 2400]
+    games_per_rung: 20
+    notes: "Blitz TC + hobbled SF (16 MB hash). Claim ~2147 Elo."
+
+  chess-purec-codex:
+    script: scripts/gauntlet_stockfish.sh
+    binary: build/purec_chess
+    tc: "10+0.1"
+    sf_hash: 64
+    sf_elos: [1500, 1700, 1800, 1900, 2000]
+    games_per_rung: 20
+    notes: "UCI_LimitStrength gauntlet at SF1700-1900. Claim band 1670-1972."
+
+  chess-rust-cc:
+    script: elo_test.sh
+    binary: target/release/chess-engine
+    tc: "10+0.1"
+    sf_hash: 64
+    sf_elos: [1500, 1800, 2000, 2200, 2400]
+    games_per_rung: 20
+    notes: "Blitz TC, Hash=64 MB. Claim 2110 Elo."
+
+  chess-rust-cc-redo:
+    script: elo_test.sh
+    binary: target/release/chess_engine
+    tc: "10+0.1"
+    sf_hash: 64
+    sf_elos: [1500, 1800, 2000, 2200, 2400]
+    games_per_rung: 20
+    notes: "Zero-dep redo of chess-rust-cc; reuses elo_test.sh."
+
+  chess-rust-codex:
+    script: scripts/run_vs_stockfish.sh
+    binary: target/release/rust_chess_engine
+    tc: "10+0.1"
+    sf_hash: 64
+    sf_elos: [1500, 1800, 2000, 2200]
+    games_per_rung: 20
+    notes: "Has its own run_vs_stockfish.sh and calibrate_elo.sh. Claim 2043."
+
+  chess-cplusplus-claude:
+    script: benchmark.sh
+    binary: build/engine
+    tc: "10+0.1"
+    sf_hash: 64
+    sf_skill_levels: [5, 7, 10, 12, 14]   # uses Skill Level, NOT UCI_Elo
+    games_per_rung: 20
+    notes: "SF Skill Level grid (5,7,10,12,14). Claim ~1897 Elo."
+
+  cplusplus-chess:
+    script: tools/run_cutechess.sh
+    binary: build/cplusplus_chess
+    tc: "10+0.1"
+    sf_hash: 16
+    sf_elos: [1500, 1800, 2000]
+    games_per_rung: 20
+    notes: "TC=10+0.1 Hash=16. Claim 2087 Elo."
+
+  chess-java:
+    script: scripts/assess_elo.sh
+    binary: ""    # NO JAR built; would require fresh maven build
+    skip: true
+    notes: "Skip: no JAR present in target/. Would need fresh maven build (target dir has classes only)."
+
+  chess-java-cc:
+    script: elo-test.sh
+    binary: ""    # JAR — wrapped via java -jar
+    tc: "40/5+0.05"
+    sf_hash: 128
+    sf_elos: [1600, 1800, 2000, 2200, 2400]
+    games_per_rung: 15
+    notes: "Claim ~2212 (anchor: 2096). Java + CC."
+
+  chess-ruby-cc:
+    script: scripts/elo_test.sh
+    binary: bin/ruby-chess
+    tc: "10+0.1"
+    sf_hash: 64
+    sf_elos: [1500, 1700, 1900]
+    games_per_rung: 20
+    notes: "Blitz TC. Claim 1840."
+
+  chess-why3-cc:
+    script: tests/elo_test.sh
+    binary: _build/default/ocaml/main.exe
+    tc: "2+1"
+    sf_hash: 128
+    sf_elos: [1500, 1800, 2000, 2200]
+    games_per_rung: 20
+    notes: "CCRL Blitz 2+1. Claim 1882."
+
+  chess-Rocq:
+    script: gauntlet.sh
+    binary: chess_rocq
+    tc: "10+0.1"
+    sf_hash: 64
+    sf_elos: [1320, 1500, 1700]
+    games_per_rung: 20
+    notes: "Rocq targets weak rungs (1320,1500,1700). Self-claim ~1500."
+
+  # ============= already self-reproduced; reference rows =============
+
+  chess-assembly-codex:
+    script: scripts/run_matches.py
+    binary: scripts/uci_bridge.py    # python wrapper
+    tc: ""    # uses fixed depth 8, movetime 200ms
+    sf_hash: 0
+    sf_elos: [2400, 2600]   # original used these
+    games_per_rung: 10
+    movetime_ms: 200
+    notes: "Reproduced: claim 2481, repro 2076-2481 across 3 configs (depth 8, mvt 200ms, levels 1320,1450,1600 OR 2400,2600). Anchor 1403."
+    already_done: true
+
+  # ============= skipped (non-parametric / not directly runnable) =============
+
+  chess-ruby-codex:
+    script: scripts/estimate_elo.rb
+    binary: ""
+    skip: true
+    notes: "estimate_elo.rb is post-hoc — takes manually-typed W/D/L. No automatic match runner. Anchor 1467 (claim 920, +547 Pattern B)."
+
+  latex-chess-engine:
+    script: run-elo-test.sh
+    binary: ""
+    skip: true
+    notes: "Slow LaTeX TC ~600s/move; would need >24h wall on host. Skip."

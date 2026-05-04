@@ -1,0 +1,44 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "cplusplus-chess"]
+[Black "chess-cplusplus-claude"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/1P6/8/P1PPPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nc6 2. b5 Ne5 3. d4 Ng6 4. h4 e6 5. h5 Nh4 6. g3 Nf5 7. e4 Nd6 8. Nc3 Nf6
+9. e5 Nde4 10. exf6 Nxc3 11. fxg7 Bxg7 12. Qd3 Nd5 13. Rb1 Qf6 14. c4 Nb6
+15. Nf3 Bh6 16. Bxh6 Qxh6 17. c5 Nd5 18. Qa3 Qf8 19. Bd3 Qe7 20. Kd2 O-O
+21. Rbe1 b6 22. h6 Bb7 23. Rh5 Nf6 24. Rf5 Qd8 25. Rg5+ Kh8 26. Ke2 Bxf3+
+27. Kxf3 Rg8 28. Rg7 Rxg7 29. hxg7+ Kxg7 30. Rh1 Qh8 31. Qc1 Kf8 32. Qa3 Kg8
+33. cxb6 cxb6 34. Qc1 Qg7 35. Kg2 Re8 36. Rh4 Rf8 37. Kf3 h5 38. Kg2 Ra8 39. Kg1
+Qh8 40. a3 Kf8 41. f3 Ke7 42. Qe1 Rc8 43. Qd2 Qg7 44. Kg2 Nd5 45. Be4 Rg8 46. g4
+Nf6 47. Bd3 hxg4 48. f4 Rh8 49. Rxh8 Qxh8 50. Kg1 Qh3 51. Qb4+ Ke8 52. Qd2 Qg3+
+53. Kh1 Qf3+ 54. Kg1 Nd5 55. Bc4 Ne3 56. Bd3 Qg3+ 57. Kh1 Qxf4 58. d5 Qf3+
+59. Kg1 Nxd5 60. Be2 Qg3+ 61. Kf1 Ne3+ 62. Qxe3 Qxe3 63. Bxg4 Qf4+ 64. Ke2 Qxg4+
+65. Ke3 Qg5+ 66. Ke2 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-cplusplus-claude"]
+[Black "cplusplus-chess"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/1P6/8/P1PPPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. Bb2 Nf6 3. Na3 e5 4. Bxe5 Nc6 5. Bxf6 Qxf6 6. Nb5 Kd8 7. c3 a6 8. Na3
+a5 9. b5 Ne5 10. Nc2 Bf5 11. Nd4 Bg4 12. Qb3 a4 13. Qxd5+ Kc8 14. g3 Ba3 15. Bh3
+h5 16. Bg2 Rb8 17. Ngf3 Re8 18. O-O Bb2 19. Rab1 a3 20. b6 c6 21. Qc5 Nd7
+22. Qg5 Nxb6 23. Qxf6 gxf6 24. Rfe1 Ra8 25. Nxc6 bxc6 26. Nd4 Bd7 27. Nxc6 Be6
+28. Nb4 Ra5 29. Bc6 Rd8 30. Red1 Rg5 31. Be4 h4 32. Kg2 f5 33. Bf3 f4 34. g4 f5
+35. h3 fxg4 36. Bxg4 Nc4 37. d3 Ne5 38. f3 Nxg4 39. hxg4 Rh8 40. Kh3 Rb5 41. d4
+Bc4 42. Rd2 Kd7 43. Rc2 Re8 44. Re1 Kd6 45. Kg2 Re3 46. Kh3 Bxc3 47. Rec1 Bb2
+48. Rxc4 Bxc1 49. Nd3 Bd2 50. Nxf4 Re7 51. Ng2 Rb1 52. Nxh4 Rh1+ 53. Kg3 Be1+
+54. Kf4 Bxh4 55. Ra4 Rxe2 56. Rxa3 Bf2 57. Ra6+ Kd5 58. Ra8 Bxd4 59. g5 Bc5
+60. Kf5 Re5+ 61. Kg6 Rf1 62. Kh6 Rxf3 63. Rd8+ Bd6 64. Kh5 Rh3+ 65. Kg4 Rh2
+66. Rd7 Rg2+ 67. Kf4 Rexg5+ 68. Rxd6+ 0-1
+

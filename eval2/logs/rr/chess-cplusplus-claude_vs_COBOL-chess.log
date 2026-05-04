@@ -1,0 +1,34 @@
+Indexing opening suite...
+Started game 2 of 2 (COBOL-chess vs chess-cplusplus-claude)
+Started game 1 of 2 (chess-cplusplus-claude vs COBOL-chess)
+Warning: Illegal PV move e8f8 from COBOL-chess (2)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (2)
+Warning: PV:  e8f8
+Warning: Illegal PV move e6e5 from COBOL-chess (2)
+Warning: PV:  e6e5
+Warning: Illegal PV move e6e5 from COBOL-chess (2)
+Warning: PV:  e6e5
+Warning: Illegal PV move e8f8 from COBOL-chess (2)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (2)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (2)
+Warning: PV:  e8f8
+Finished game 2 (COBOL-chess vs chess-cplusplus-claude): 0-1 {White makes an illegal move: e8f8}
+Score of chess-cplusplus-claude vs COBOL-chess: 1 - 0 - 0  [1.000] 1
+Finished game 1 (chess-cplusplus-claude vs COBOL-chess): 1-0 {White wins by adjudication}
+Score of chess-cplusplus-claude vs COBOL-chess: 2 - 0 - 0  [1.000] 2
+...      chess-cplusplus-claude playing White: 1 - 0 - 0  [1.000] 1
+...      chess-cplusplus-claude playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-cplusplus-claude
+   "Win: White makes an illegal move: e8f8": 1
+   "Win: White wins by adjudication": 1
+Player: COBOL-chess
+   "Loss: White makes an illegal move: e8f8": 1
+   "Loss: White wins by adjudication": 1
+Finished match

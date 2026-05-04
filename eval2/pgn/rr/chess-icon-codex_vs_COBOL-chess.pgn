@@ -1,0 +1,30 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-icon-codex"]
+[Black "COBOL-chess"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. d4 Na6 3. f4 Nb4 4. a4 Nbd5 5. Nxd5 Nxd5 6. c4 Nb6 7. e4 d6 8. a5
+Nd7 9. h4 c5 10. Nf3 cxd4 11. Qxd4 Nc5 12. b4 Nb3 13. Bd2 Nxd4 14. Nxd4 e5
+15. Nb5 exf4 16. Bxf4 Qf6 17. e5 dxe5 18. Bd3 exf4 19. Nxa7 Qxa1+ 20. Ke2 Bg4+
+21. Kf2 Qxh1 22. Nb5 Qxh4+ 23. Kf1 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "COBOL-chess"]
+[Black "chess-icon-codex"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... a5 2. Nd5 c6 3. Ne3 d5 4. c3 b5 5. a4 f5 6. g3 Be6 7. Nh3 h5 8. Nf4 bxa4
+9. Nxe6 Qd7 10. Nd4 e5 11. Nf3 e4 12. Nd4 c5 13. Ndxf5 Nf6 14. Nh4 d4 15. cxd4
+cxd4 16. Nc4 d3 17. Nb6 Qc6 18. Nxa8 Qxa8 19. Qxa4+ Qc6 20. Qxa5 Qxc1+ 21. Rxc1
+dxe2 22. Bxe2 Nbd7 23. Rc8+ Ke7 24. Qd8+ Ke6 25. Ng6 Nd5 1-0
+

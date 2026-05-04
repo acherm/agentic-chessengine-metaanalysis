@@ -1,0 +1,88 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_skill4 vs chess-py-cc)
+Started game 1 of 20 (chess-py-cc vs sf_skill4)
+Finished game 1 (chess-py-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill4: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-py-cc vs sf_skill4)
+Finished game 2 (sf_skill4 vs chess-py-cc): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill4: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 4 (sf_skill4 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 1 - 2 - 0  [0.333] 3
+Started game 5 of 20 (chess-py-cc vs sf_skill4)
+Finished game 3 (chess-py-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill4: 1 - 3 - 0  [0.250] 4
+Started game 6 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 5 (chess-py-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill4: 1 - 4 - 0  [0.200] 5
+Started game 7 of 20 (chess-py-cc vs sf_skill4)
+Finished game 6 (sf_skill4 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 1 - 5 - 0  [0.167] 6
+Started game 8 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 7 (chess-py-cc vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 1 - 6 - 0  [0.143] 7
+Started game 9 of 20 (chess-py-cc vs sf_skill4)
+Finished game 8 (sf_skill4 vs chess-py-cc): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 2 - 6 - 0  [0.250] 8
+Started game 10 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 10 (sf_skill4 vs chess-py-cc): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill4: 2 - 7 - 0  [0.222] 9
+Started game 11 of 20 (chess-py-cc vs sf_skill4)
+Finished game 11 (chess-py-cc vs sf_skill4): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill4: 3 - 7 - 0  [0.300] 10
+Started game 12 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 9 (chess-py-cc vs sf_skill4): 1/2-1/2 {Draw by insufficient mating material}
+Score of chess-py-cc vs sf_skill4: 3 - 7 - 1  [0.318] 11
+Started game 13 of 20 (chess-py-cc vs sf_skill4)
+Finished game 12 (sf_skill4 vs chess-py-cc): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 4 - 7 - 1  [0.375] 12
+Started game 14 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 13 (chess-py-cc vs sf_skill4): 0-1 {Black wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 4 - 8 - 1  [0.346] 13
+Started game 15 of 20 (chess-py-cc vs sf_skill4)
+Finished game 14 (sf_skill4 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 4 - 9 - 1  [0.321] 14
+Started game 16 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 15 (chess-py-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill4: 4 - 10 - 1  [0.300] 15
+Started game 17 of 20 (chess-py-cc vs sf_skill4)
+Finished game 16 (sf_skill4 vs chess-py-cc): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 4 - 11 - 1  [0.281] 16
+Started game 18 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 17 (chess-py-cc vs sf_skill4): 0-1 {Black mates}
+Score of chess-py-cc vs sf_skill4: 4 - 12 - 1  [0.265] 17
+Started game 19 of 20 (chess-py-cc vs sf_skill4)
+Finished game 18 (sf_skill4 vs chess-py-cc): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill4: 4 - 13 - 1  [0.250] 18
+Started game 20 of 20 (sf_skill4 vs chess-py-cc)
+Finished game 19 (chess-py-cc vs sf_skill4): 1-0 {White wins by adjudication}
+Score of chess-py-cc vs sf_skill4: 5 - 13 - 1  [0.289] 19
+Finished game 20 (sf_skill4 vs chess-py-cc): 1-0 {White mates}
+Score of chess-py-cc vs sf_skill4: 5 - 14 - 1  [0.275] 20
+...      chess-py-cc playing White: 2 - 7 - 1  [0.250] 10
+...      chess-py-cc playing Black: 3 - 7 - 0  [0.300] 10
+...      White vs Black: 9 - 10 - 1  [0.475] 20
+Elo difference: -168.4 +/- 193.0, LOS: 1.9 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-py-cc
+   "Draw by insufficient mating material": 1
+   "Loss: Black mates": 5
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 3
+   "Loss: White wins by adjudication": 4
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 1
+Player: sf_skill4
+   "Draw by insufficient mating material": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 2
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 5
+   "Win: Black wins by adjudication": 2
+   "Win: White mates": 3
+   "Win: White wins by adjudication": 4
+Finished match

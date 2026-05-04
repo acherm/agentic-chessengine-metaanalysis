@@ -1,0 +1,46 @@
+Indexing opening suite...
+Started game 2 of 30 (rustic vs chess-latex-codex-replication)
+Started game 1 of 30 (chess-latex-codex-replication vs rustic)
+Finished game 2 (rustic vs chess-latex-codex-replication): 1-0 {Black makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-latex-codex-replication vs rustic)
+Finished game 3 (chess-latex-codex-replication vs rustic): 0-1 {White makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (rustic vs chess-latex-codex-replication)
+Finished game 4 (rustic vs chess-latex-codex-replication): 1-0 {Black makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (chess-latex-codex-replication vs rustic)
+Finished game 5 (chess-latex-codex-replication vs rustic): 0-1 {White makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (rustic vs chess-latex-codex-replication)
+Finished game 1 (chess-latex-codex-replication vs rustic): 0-1 {White makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (chess-latex-codex-replication vs rustic)
+Finished game 6 (rustic vs chess-latex-codex-replication): 1-0 {Black makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (rustic vs chess-latex-codex-replication)
+Finished game 8 (rustic vs chess-latex-codex-replication): 1-0 {Black makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 7 - 0  [0.000] 7
+Started game 9 of 30 (chess-latex-codex-replication vs rustic)
+Finished game 9 (chess-latex-codex-replication vs rustic): 0-1 {White makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 8 - 0  [0.000] 8
+Started game 10 of 30 (rustic vs chess-latex-codex-replication)
+Finished game 7 (chess-latex-codex-replication vs rustic): 0-1 {White makes an illegal move: 0000}
+Score of chess-latex-codex-replication vs rustic: 0 - 9 - 0  [0.000] 9
+Finished game 10 (rustic vs chess-latex-codex-replication): * {No result}
+Score of chess-latex-codex-replication vs rustic: 0 - 9 - 0  [0.000] 9
+...      chess-latex-codex-replication playing White: 0 - 5 - 0  [0.000] 5
+...      chess-latex-codex-replication playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 5 - 0  [0.444] 9
+Elo difference: -inf +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr -3.17 (-107.7%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-latex-codex-replication
+   "Loss: Black makes an illegal move: 0000": 4
+   "Loss: White makes an illegal move: 0000": 5
+   "No result": 1
+Player: rustic
+   "No result": 1
+   "Win: Black makes an illegal move: 0000": 4
+   "Win: White makes an illegal move: 0000": 5
+Finished match

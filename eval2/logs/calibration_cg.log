@@ -1,0 +1,6 @@
+skip sf1320_vs_sf1500 (pgn exists)
+skip sf1700_vs_sf1900 (pgn exists)
+skip sf2300_vs_sf2500 (pgn exists)
+skip rustic_vs_sf1700 (pgn exists)
+calibration: countergo40 vs SF2300 at 120+1 (30 games)
+calibration done. PGNs in pgn/calibration/, logs in logs/calibration/.

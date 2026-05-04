@@ -1,0 +1,145 @@
+========================================================================
+COMPARISON REPORT  —  Feature: Evaluation/PST
+Engines analysed: 20 / 36 total
+(engines missing quiescence: see notes below)
+========================================================================
+
+Legend: engines without hotspot extraction (no quiescence detected):
+
+========================================================================
+Sub-feature presence matrix  (✓ = detected, · = absent)
+                                  material_v  pst_table_  midgame_ta  endgame_ta  tapered_ev  king_safet  passed_paw  mobility_t  sunfish_va  cpw_simpli  computed_p  phase_comp  perspectiv 
+chess-Rocq                            ✓           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-apl-codex54                     ·           ✓           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-brainfuck                       ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ✓      
+chess-cobol-cc                        ✓           ·           ·           ·           ·           ·           ✓           ·           ·           ·           ·           ·           ✓      
+chess-cplusplus-claude                ·           ·           ·           ·           ·           ·           ✓           ·           ·           ·           ·           ·           ✓      
+chess-css-cc                          ✓           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-java                            ·           ✓           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-java-cc                         ·           ·           ·           ·           ✓           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-py                              ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ✓      
+chess-py-cc                           ·           ·           ·           ·           ✓           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-revisit-java-toCOBOL-codex      ·           ·           ·           ·           ✓           ·           ·           ·           ·           ·           ·           ·           ✓      
+chess-revisit-java-toRust-codex       ·           ·           ·           ·           ✓           ·           ·           ·           ·           ·           ·           ·           ✓      
+chess-ruby-cc                         ✓           ✓           ✓           ✓           ✓           ·           ·           ·           ·           ·           ·           ·           ✓      
+chess-ruby-codex                      ✓           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-rust-cc                         ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·      
+chess-sql                             ✓           ·           ·           ·           ·           ·           ·           ·           ·           ·           ✓           ·           ✓      
+chess-why3-cc                         ✓           ·           ✓           ·           ✓           ✓           ·           ✓           ·           ·           ·           ·           ·      
+cplusplus-chess                       ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·      
+latex-chess-engine                    ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ✓      
+lean-chess                            ·           ·           ·           ·           ·           ·           ·           ·           ·           ·           ✓           ·           ·      
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                7/20        3/20        2/20        1/20        6/20        1/20        2/20        1/20        0/20        0/20        2/20        0/20        9/20    
+
+========================================================================
+Feature-Jaccard similarity (0–100 %)
+                      chess-  chess-  chess-  chess-  latex-  chess-  chess-  chess-  chess-  chess-  chess-  chess-  chess-  chess-  chess-  chess-  chess-  lean-c  chess-  cplusp 
+chess-revisit-java..   --    100%    50%    50%    50%    25%    25%    33%    33%     0%     0%     0%    50%    50%    17%     0%     0%     0%     0%     0% 
+chess-revisit-java..   100%   --     50%    50%    50%    25%    25%    33%    33%     0%     0%     0%    50%    50%    17%     0%     0%     0%     0%     0% 
+chess-brainfuck         50%    50%   --    100%   100%    33%    33%    17%    50%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0% 
+chess-py                50%    50%   100%   --    100%    33%    33%    17%    50%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0% 
+latex-chess-engine      50%    50%   100%   100%   --     33%    33%    17%    50%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0% 
+chess-cobol-cc          25%    25%    33%    33%    33%   --     50%    29%    67%    33%    33%    33%     0%     0%    14%     0%     0%     0%     0%     0% 
+chess-sql               25%    25%    33%    33%    33%    50%   --     29%    25%    33%    33%    33%     0%     0%    14%     0%     0%    33%     0%     0% 
+chess-ruby-cc           33%    33%    17%    17%    17%    29%    29%   --     14%    17%    17%    17%    17%    17%    38%    17%    17%     0%     0%     0% 
+chess-cplusplus-cl..    33%    33%    50%    50%    50%    67%    25%    14%   --      0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0% 
+chess-Rocq               0%     0%     0%     0%     0%    33%    33%    17%     0%   --    100%   100%     0%     0%    20%     0%     0%     0%     0%     0% 
+chess-css-cc             0%     0%     0%     0%     0%    33%    33%    17%     0%   100%   --    100%     0%     0%    20%     0%     0%     0%     0%     0% 
+chess-ruby-codex         0%     0%     0%     0%     0%    33%    33%    17%     0%   100%   100%   --      0%     0%    20%     0%     0%     0%     0%     0% 
+chess-java-cc           50%    50%     0%     0%     0%     0%     0%    17%     0%     0%     0%     0%   --    100%    20%     0%     0%     0%     0%     0% 
+chess-py-cc             50%    50%     0%     0%     0%     0%     0%    17%     0%     0%     0%     0%   100%   --     20%     0%     0%     0%     0%     0% 
+chess-why3-cc           17%    17%     0%     0%     0%    14%    14%    38%     0%    20%    20%    20%    20%    20%   --      0%     0%     0%     0%     0% 
+chess-apl-codex54        0%     0%     0%     0%     0%     0%     0%    17%     0%     0%     0%     0%     0%     0%     0%   --    100%     0%     0%     0% 
+chess-java               0%     0%     0%     0%     0%     0%     0%    17%     0%     0%     0%     0%     0%     0%     0%   100%   --      0%     0%     0% 
+lean-chess               0%     0%     0%     0%     0%     0%    33%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%   --      0%     0% 
+chess-rust-cc            0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%   --      0% 
+cplusplus-chess          0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%   --  
+
+Top 8 most-similar pairs:
+  100%  chess-Rocq (OCaml)  ↔  chess-css-cc (HTML)
+  100%  chess-Rocq (OCaml)  ↔  chess-ruby-codex (Ruby)
+  100%  chess-apl-codex54 (APL)  ↔  chess-java (Java)
+  100%  chess-brainfuck (Python)  ↔  chess-py (Python)
+  100%  chess-brainfuck (Python)  ↔  latex-chess-engine (LaTeX)
+  100%  chess-css-cc (HTML)  ↔  chess-ruby-codex (Ruby)
+  100%  chess-java-cc (Java)  ↔  chess-py-cc (Python)
+  100%  chess-py (Python)  ↔  latex-chess-engine (LaTeX)
+
+Bottom 8 least-similar pairs:
+    0%  chess-rust-cc (Rust)  ↔  lean-chess (Lean)
+    0%  chess-sql (Python)  ↔  cplusplus-chess (C++)
+    0%  chess-why3-cc (C)  ↔  cplusplus-chess (C++)
+    0%  chess-why3-cc (C)  ↔  latex-chess-engine (LaTeX)
+    0%  chess-why3-cc (C)  ↔  lean-chess (Lean)
+    0%  cplusplus-chess (C++)  ↔  latex-chess-engine (LaTeX)
+    0%  cplusplus-chess (C++)  ↔  lean-chess (Lean)
+    0%  latex-chess-engine (LaTeX)  ↔  lean-chess (Lean)
+
+========================================================================
+Token-Jaccard similarity (0–100 %)
+                      chess-  chess-  chess-  lean-c  chess-  chess-  chess-  chess-  chess-  cplusp  chess-  chess-  chess-  chess-  chess-  chess-  chess-  chess-  latex-  chess- 
+chess-revisit-java..   --    100%     3%     3%     2%     2%     4%     3%     9%     3%     7%     3%     0%     0%     3%     2%     1%     2%     1%     0% 
+chess-revisit-java..   100%   --      3%     3%     2%     2%     4%     3%     9%     3%     7%     3%     0%     0%     3%     2%     1%     2%     1%     0% 
+chess-java               3%     3%   --     18%    22%    11%     8%     6%     4%    21%     2%     4%    13%     5%     1%     2%     1%     3%     1%     0% 
+lean-chess               3%     3%    18%   --     13%    18%    12%    14%     5%     6%     3%     5%    12%     4%     1%     2%     3%     1%     1%     0% 
+chess-apl-codex54        2%     2%    22%    13%   --      8%     6%     7%     4%    11%     3%     6%     9%     3%     2%     3%     2%     2%     1%     0% 
+chess-rust-cc            2%     2%    11%    18%     8%   --     14%    10%     4%    10%     3%     2%     0%     7%     1%     1%    11%     1%     0%     0% 
+chess-java-cc            4%     4%     8%    12%     6%    14%   --     12%     8%     7%     5%     4%     0%     3%     1%     2%     3%     1%     1%     1% 
+chess-ruby-cc            3%     3%     6%    14%     7%    10%    12%   --      6%     3%     2%     4%     3%     3%     2%     2%     2%     0%     1%     2% 
+chess-sql                9%     9%     4%     5%     4%     4%     8%     6%   --      5%     7%     5%     0%     1%     4%     3%     2%     1%     3%     1% 
+cplusplus-chess          3%     3%    21%     6%    11%    10%     7%     3%     5%   --      6%     0%     0%     4%     1%     0%     1%     0%     0%     0% 
+chess-css-cc             7%     7%     2%     3%     3%     3%     5%     2%     7%     6%   --      1%     0%     1%     5%     1%     0%     1%     1%     0% 
+chess-why3-cc            3%     3%     4%     5%     6%     2%     4%     4%     5%     0%     1%   --      4%     1%     3%     2%     2%     1%     1%     0% 
+chess-Rocq               0%     0%    13%    12%     9%     0%     0%     3%     0%     0%     0%     4%   --      5%     0%     1%     0%     0%     0%     0% 
+chess-ruby-codex         0%     0%     5%     4%     3%     7%     3%     3%     1%     4%     1%     1%     5%   --      0%     0%     0%     0%     0%     0% 
+chess-cobol-cc           3%     3%     1%     1%     2%     1%     1%     2%     4%     1%     5%     3%     0%     0%   --      2%     1%     0%     3%     0% 
+chess-py                 2%     2%     2%     2%     3%     1%     2%     2%     3%     0%     1%     2%     1%     0%     2%   --      2%     5%     1%     0% 
+chess-cplusplus-cl..     1%     1%     1%     3%     2%    11%     3%     2%     2%     1%     0%     2%     0%     0%     1%     2%   --      1%     0%     0% 
+chess-brainfuck          2%     2%     3%     1%     2%     1%     1%     0%     1%     0%     1%     1%     0%     0%     0%     5%     1%   --      0%     0% 
+latex-chess-engine       1%     1%     1%     1%     1%     0%     1%     1%     3%     0%     1%     1%     0%     0%     3%     1%     0%     0%   --      0% 
+chess-py-cc              0%     0%     0%     0%     0%     0%     1%     2%     1%     0%     0%     0%     0%     0%     0%     0%     0%     0%     0%   --  
+
+Top 8 most-similar pairs:
+  100%  chess-revisit-java-toCOBOL-codex (COBOL)  ↔  chess-revisit-java-toRust-codex (COBOL)
+   22%  chess-apl-codex54 (APL)  ↔  chess-java (Java)
+   21%  chess-java (Java)  ↔  cplusplus-chess (C++)
+   18%  chess-java (Java)  ↔  lean-chess (Lean)
+   18%  chess-rust-cc (Rust)  ↔  lean-chess (Lean)
+   14%  chess-ruby-cc (Ruby)  ↔  lean-chess (Lean)
+   14%  chess-java-cc (Java)  ↔  chess-rust-cc (Rust)
+   13%  chess-apl-codex54 (APL)  ↔  lean-chess (Lean)
+
+Bottom 8 least-similar pairs:
+    0%  chess-py (Python)  ↔  chess-py-cc (Python)
+    0%  chess-py (Python)  ↔  chess-ruby-codex (Ruby)
+    0%  chess-py (Python)  ↔  cplusplus-chess (C++)
+    0%  chess-py-cc (Python)  ↔  chess-ruby-codex (Ruby)
+    0%  chess-py-cc (Python)  ↔  chess-rust-cc (Rust)
+    0%  chess-py-cc (Python)  ↔  chess-why3-cc (C)
+    0%  chess-py-cc (Python)  ↔  cplusplus-chess (C++)
+    0%  chess-py-cc (Python)  ↔  lean-chess (Lean)
+
+========================================================================
+Per-engine summary
+------------------------------------------------------------------------
+  chess-Rocq                                    OCaml            9 LOC  avg-tok=3%  avg-feat=16%  theories/Eval.v
+  chess-apl-codex54                             APL             28 LOC  avg-tok=6%  avg-feat=6%  src/apl/engine.apl
+  chess-brainfuck                               Python          30 LOC  avg-tok=1%  avg-feat=23%  src/search.py
+  chess-cobol-cc                                C              121 LOC  avg-tok=2%  avg-feat=22%  chess-engine.cob
+  chess-cplusplus-claude                        C++             15 LOC  avg-tok=2%  avg-feat=17%  src/evaluate.cpp
+  chess-css-cc                                  HTML           786 LOC  avg-tok=3%  avg-feat=16%  css/eval.css
+  chess-java                                    Java            18 LOC  avg-tok=7%  avg-feat=6%  src/main/java/com/example/chess/engine/Evaluator.java
+  chess-java-cc                                 Java            18 LOC  avg-tok=5%  avg-feat=12%  src/main/java/com/chess/engine/board/Board.java
+  chess-py                                      Python          24 LOC  avg-tok=2%  avg-feat=23%  chesspy/board.py
+  chess-py-cc                                   Python           2 LOC  avg-tok=0%  avg-feat=12%  engine/evaluate.py
+  chess-revisit-java-toCOBOL-codex              COBOL          121 LOC  avg-tok=8%  avg-feat=25%  src/cobol/chess_engine.cob
+  chess-revisit-java-toRust-codex               COBOL          121 LOC  avg-tok=8%  avg-feat=25%  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob
+  chess-ruby-cc                                 Ruby            19 LOC  avg-tok=4%  avg-feat=18%  lib/chess_engine/board.rb
+  chess-ruby-codex                              Ruby             3 LOC  avg-tok=2%  avg-feat=16%  lib/ruby_chess_engine/evaluator.rb
+  chess-rust-cc                                 Rust             6 LOC  avg-tok=5%  avg-feat=0%  src/board.rs
+  chess-sql                                     Python          51 LOC  avg-tok=4%  avg-feat=21%  sql/eval.sql
+  chess-why3-cc                                 C               41 LOC  avg-tok=3%  avg-feat=10%  tests/engines/shallowblue-src/src/eval.cc
+  cplusplus-chess                               C++             30 LOC  avg-tok=4%  avg-feat=0%  src/board.cpp
+  latex-chess-engine                            LaTeX          111 LOC  avg-tok=1%  avg-feat=23%  chess-engine.tex
+  lean-chess                                    Lean            21 LOC  avg-tok=7%  avg-feat=2%  Chess/Eval.lean

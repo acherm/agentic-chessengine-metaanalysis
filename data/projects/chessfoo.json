@@ -1,0 +1,249 @@
+{
+  "name": "chessfoo",
+  "path": "/Users/mathieuacher/SANDBOX/chessfoo",
+  "primary_language": "JavaScript",
+  "loc": {
+    "files_by_lang": {
+      "HTML": 1,
+      "JavaScript": 2,
+      "CSS": 1,
+      "TOML": 1,
+      "JSON": 1
+    },
+    "loc_by_lang": {
+      "HTML": 34,
+      "JavaScript": 686,
+      "CSS": 277,
+      "TOML": 7,
+      "JSON": 3
+    },
+    "total_files": 6,
+    "total_loc": 1007
+  },
+  "features": {},
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 7,
+    "n_user_prompts": 10,
+    "n_assistant_messages": 5,
+    "models": [
+      "gpt-5",
+      "gpt-5-codex",
+      "openai/gpt-5"
+    ],
+    "tool_uses": {
+      "shell": 63,
+      "update_plan": 12
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 1316594,
+        "output": 42574,
+        "cache_read": 1248000,
+        "cache_creation": 0,
+        "reasoning_output": 25408
+      },
+      "usd_estimate": 2.23
+    },
+    "first_ts": "2025-09-16T05:28:29.872Z",
+    "last_ts": "2025-09-16T13:53:33.325Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2025-09-16T15-44-33-7ea97b55-dd24-47a7-9a98-4931e22e873a",
+        "first_ts": "2025-09-16T13:44:33.597Z",
+        "last_ts": "2025-09-16T13:53:33.325Z",
+        "models": [
+          "gpt-5-codex"
+        ],
+        "turns": 1,
+        "tokens": {
+          "input": 551448,
+          "output": 11213,
+          "cache_read": 523904,
+          "reasoning_output": 8064
+        },
+        "tool_uses": {
+          "shell": 27,
+          "update_plan": 4
+        },
+        "first_prompt_sample": "write the sequence of moves throughout play"
+      },
+      {
+        "session_id": "rollout-2025-09-16T07-28-29-019d528a-bdf6-7dd0-8c9f-e387dafb0767",
+        "first_ts": "2025-09-16T05:28:29.872Z",
+        "last_ts": "2025-09-16T05:29:42.508Z",
+        "models": [
+          "gpt-5"
+        ],
+        "turns": 1,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "cache_read": 0,
+          "reasoning_output": 0
+        },
+        "tool_uses": {},
+        "first_prompt_sample": "write a Web app that allows users to play on 3x3 chessboard with 2 white knights and 2 black knights at the corners... goal is to swap positions of white knights and black knights"
+      },
+      {
+        "session_id": "rollout-2025-09-16T07-33-08-1c2ec540-d33d-4aa7-b5dd-f51d40f4034e",
+        "first_ts": "2025-09-16T05:33:08.345Z",
+        "last_ts": "2025-09-16T05:33:21.388Z",
+        "models": [
+          "gpt-5"
+        ],
+        "turns": 1,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "cache_read": 0,
+          "reasoning_output": 0
+        },
+        "tool_uses": {},
+        "first_prompt_sample": "write a Web app that allows users to play on 3x3 chessboard with 2 white knights and 2 black knights at the corners... goal is to swap positions of white knights and black knights"
+      },
+      {
+        "session_id": "rollout-2025-09-16T07-32-00-9fe90f74-b5b2-4b71-8ebe-f486fdaf6b4b",
+        "first_ts": "2025-09-16T05:32:00.751Z",
+        "last_ts": "2025-09-16T05:32:11.529Z",
+        "models": [
+          "openai/gpt-5"
+        ],
+        "turns": 1,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "cache_read": 0,
+          "reasoning_output": 0
+        },
+        "tool_uses": {},
+        "first_prompt_sample": "write a Web app that allows users to play on 3x3 chessboard with 2 white knights and 2 black knights at the corners... goal is to swap positions of white knights and black knights"
+      },
+      {
+        "session_id": "rollout-2025-09-16T07-28-29-c9cc6c29-0042-431f-b6ec-d88ad8913363",
+        "first_ts": "2025-09-16T05:28:29.872Z",
+        "last_ts": "2025-09-16T05:29:42.508Z",
+        "models": [
+          "gpt-5"
+        ],
+        "turns": 1,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "cache_read": 0,
+          "reasoning_output": 0
+        },
+        "tool_uses": {},
+        "first_prompt_sample": "write a Web app that allows users to play on 3x3 chessboard with 2 white knights and 2 black knights at the corners... goal is to swap positions of white knights and black knights"
+      },
+      {
+        "session_id": "rollout-2025-09-16T07-34-50-139c0f1d-6c1a-4ff3-8c67-51c91feca4cb",
+        "first_ts": "2025-09-16T05:34:50.272Z",
+        "last_ts": "2025-09-16T05:35:10.727Z",
+        "models": [
+          "gpt-5"
+        ],
+        "turns": 1,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "cache_read": 0,
+          "reasoning_output": 0
+        },
+        "tool_uses": {},
+        "first_prompt_sample": "write a Web app that allows users to play on 3x3 chessboard with 2 white knights and 2 black knights at the corners... goal is to swap positions of white knights and black knights"
+      },
+      {
+        "session_id": "rollout-2025-09-16T07-37-22-f71a9417-786c-4c0a-833e-f8e15bda68f0",
+        "first_ts": "2025-09-16T05:37:22.465Z",
+        "last_ts": "2025-09-16T06:00:44.872Z",
+        "models": [
+          "gpt-5-codex"
+        ],
+        "turns": 4,
+        "tokens": {
+          "input": 765146,
+          "output": 31361,
+          "cache_read": 724096,
+          "reasoning_output": 17344
+        },
+        "tool_uses": {
+          "update_plan": 8,
+          "shell": 36
+        },
+        "first_prompt_sample": "write a Web app that allows users to play on 3x3 chessboard with 2 white knights and 2 black knights at the corners... goal is to swap positions of white knights and black knights"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "f49345f|2025-09-16T07:49:17+02:00|Mathieu Acher|working version basic"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

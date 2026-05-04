@@ -1,0 +1,190 @@
+{
+  "version": "2026-04-20-pilot",
+  "sources": {
+    "tex-blog": {
+      "title": "TeXCCChess: How Coding Agents Wrote a Chess Engine in Pure TeX",
+      "author": "Mathieu Acher",
+      "date": "2026-02-24",
+      "url": "https://blog.mathieuacher.com/TeXCCChessEngine/",
+      "path": "/Users/mathieuacher/SANDBOX/acherm.github.io/_posts/2026-02-24-TeXCCChessEngine.md",
+      "engine": "latex-chess-engine (TeXCCChess)",
+      "lang_category": "domain-specific markup"
+    },
+    "bf-blog": {
+      "title": "BFChess: A Chess Engine in Brainfuck, Built by a Coding Agent",
+      "author": "Mathieu Acher",
+      "date": "2026-03-23",
+      "url": "https://blog.mathieuacher.com/BFChessChessEngineBrainfuck/",
+      "path": "/Users/mathieuacher/SANDBOX/acherm.github.io/_posts/2026-03-23-BFChessChessEngineBrainfuck.md",
+      "engine": "chess-brainfuck-cc (BFChess)",
+      "lang_category": "esoteric"
+    }
+  },
+  "codes": [
+    {
+      "source": "tex-blog", "line": 17, "codes": ["language-constraint"],
+      "quote": "TeX has no arrays, no functions with return values, no convenient local variables or stack frames, no integers bigger than 2^31-1, no bitwise operations.",
+      "note": "Explicit enumeration of the primitive gaps that will force language-native idioms throughout."
+    },
+    {
+      "source": "tex-blog", "line": 97, "codes": ["language-constraint", "agent-self-correction"],
+      "quote": "TeX's \\numexpr division rounds instead of truncating: 63/8 gives 8 (rounding 7.875 up), not 7. This was the source of one of the first nasty bugs.",
+      "note": "A concrete language surprise that broke coordinate extraction; the agent fixed it by precomputing truncating-divide lookups."
+    },
+    {
+      "source": "tex-blog", "line": 18, "codes": ["novelty-absence"],
+      "quote": "I could not find any prior chess engine in TeX (I searched CTAN, GitHub, and TeX Stack Exchange). ... TeXCCChess appears to be the first.",
+      "note": "First-of-kind claim with explicit search venues; supports the RQ3 no-copy argument where novelty is trivial."
+    },
+    {
+      "source": "tex-blog", "line": 20, "codes": ["synthesis-not-copy", "novelty-absence"],
+      "quote": "If this is indeed the first full TeX chess engine, it is very unlikely the model memorized one verbatim.",
+      "note": "Direct synthesis-not-copy argument, anchored on the novelty claim."
+    },
+    {
+      "source": "tex-blog", "line": 388, "codes": ["synthesis-not-copy", "feature-adaptation"],
+      "quote": "It is neither a translation nor a copy of an existing chess engine. ... The creativity lies in finding TeX-native ways to encode them: register-based state stacks, csname lookup tables, explicit loop unrolling for search depth.",
+      "note": "Frames synthesis as algorithm-level transfer + language-native encoding, not source-level translation."
+    },
+    {
+      "source": "tex-blog", "line": 24, "codes": ["human-steering"],
+      "quote": "The challenge I gave Claude Code was deliberately vague: I want to build a chess engine in LaTeX... I did not specify the architecture, the search algorithm, or the data structures.",
+      "note": "Confirms the corpus-canonical minimal-prompt style that the paper describes in RQ5."
+    },
+    {
+      "source": "tex-blog", "line": 37, "codes": ["feature-adaptation"],
+      "quote": "The \\count registers serve as RAM ... the \\csname lookup tables act as a read-only ROM for precomputed data (file/rank mappings, piece-square tables, material values). Token lists serve as dynamically allocated buffers. Macros ... are the instruction set.",
+      "note": "Explicit 'TeX as a virtual machine' framing: every chess-engine primitive is mapped to a TeX primitive. Paradigm case for feature-adaptation."
+    },
+    {
+      "source": "tex-blog", "line": 113, "codes": ["feature-adaptation"],
+      "quote": "This pattern (precompute into \\csname tables at load time, look up by name expansion at runtime) is used throughout the engine. It is the TeX equivalent of a hash map.",
+      "note": "Named language idiom: hash map = \\csname lookup. Reinforces 'language-native idiom', not 'copied from a template'."
+    },
+    {
+      "source": "tex-blog", "line": 173, "codes": ["agent-self-correction", "language-constraint"],
+      "quote": "The ordering is critical and was a source of subtle bugs: \\pushstate must be called after \\makemove ... Getting this wrong produces moves that look almost right but occasionally corrupt castling rights (the kind of bug that shows up once every 50 games).",
+      "note": "A long-tail bug only visible under gauntlet testing: the agent could not have caught it without oracle feedback."
+    },
+    {
+      "source": "tex-blog", "line": 318, "codes": ["agent-self-correction", "oracle-exploitation"],
+      "quote": "The first compilation of the test suite: 3 PASS, 6 FAIL. The culprit: sqfile(64) returned 0 instead of 8. ... After the fix: all 23 tests pass.",
+      "note": "Perft-style test suite catches a regression; the agent fixes within the session. Paradigm case for oracle-driven debug loop."
+    },
+    {
+      "source": "tex-blog", "line": 334, "codes": ["agent-self-correction", "language-constraint"],
+      "quote": "LaTeX's \\newcount allocator had already reached register 360+, so the state stack at \\count300-317 overlapped with LaTeX-internal registers. ... The agent traced it to a corrupted board value ... and moved the entire state stack to \\count10000+.",
+      "note": "Register collision is the TeX-native form of a memory-safety bug. The agent diagnosed and fixed it autonomously."
+    },
+    {
+      "source": "tex-blog", "line": 353, "codes": ["agent-self-correction", "feedback-loop-cost"],
+      "quote": "The agent spent over 30 turns debugging (fixing alpha-beta cutoffs ... then pragmatically capping depth-C at 12 moves).",
+      "note": "A single debugging episode consumes dozens of turns. Illustrates that self-correction is real but costly in this language."
+    },
+    {
+      "source": "tex-blog", "line": 292, "codes": ["oracle-exploitation"],
+      "quote": "All matches used Stockfish with UCI_LimitStrength=true at the 120+1s time control, which is the time control Stockfish's UCI_Elo scale was calibrated against (anchored to CCRL 40/4).",
+      "note": "Agent-adjacent evaluation protocol. Correlates with the paper's canonical re-eval design; the author knew the calibration issue."
+    },
+    {
+      "source": "tex-blog", "line": 370, "codes": ["oracle-exploitation"],
+      "quote": "Milestone | Elo | Lines of TeX: Random move picker 300 / Depth-2 minimax + material eval 550 / Depth-3 + alpha-beta + quiescence + PSTs 1280.",
+      "note": "Feature introduction drives Elo: explicit +1000 Elo curve tied to search and evaluation additions."
+    },
+    {
+      "source": "tex-blog", "line": 266, "codes": ["language-constraint"],
+      "quote": "\\numexpr division rounds, it does not truncate. Digits in a normal control sequence name are not part of the name. The @ character in macro names requires \\makeatletter. \\newif inside macros fails on the second call. Register collision is the TeX equivalent of variable shadowing bugs.",
+      "note": "A catalogued list of TeX-specific traps the agent had to discover and work around. These are the 'ceiling' visible from the developer's perspective."
+    },
+    {
+      "source": "bf-blog", "line": 14, "codes": ["language-constraint"],
+      "quote": "Brainfuck has no variables, no functions, no arithmetic beyond increment/decrement, and no random memory access. Its only data structure is a linear tape of byte-sized cells.",
+      "note": "Canonical statement of the Brainfuck ceiling. Much more severe than TeX: no scope, no abstraction, no indirection."
+    },
+    {
+      "source": "bf-blog", "line": 68, "codes": ["language-constraint", "feature-adaptation"],
+      "quote": "Brainfuck has no board[index] where index is a runtime value. To read a square whose index is computed at runtime, the engine must execute a 64-way switch: compare the index against 0, 1, 2, ..., 63 and copy from the matching fixed cell. ... Every board read or write is ~20 KB of BF code.",
+      "note": "The paradigm single constraint: random-access cost. Drives the 5.6 MB size. No Brainfuck idiom eliminates it; the language-native encoding IS the 64-way switch."
+    },
+    {
+      "source": "bf-blog", "line": 20, "codes": ["novelty-absence"],
+      "quote": "A fully functioning, openly available chess engine written in Brainfuck does not appear to exist in durable public form as of February 2026. ... BFChess appears to be the first complete, publicly available implementation.",
+      "note": "Careful novelty claim: 2019 TalkChess thread + dead repo reviewed and excluded; chess-adjacent BF utilities acknowledged; differentiates a rendering from a playing engine."
+    },
+    {
+      "source": "bf-blog", "line": 12, "codes": ["synthesis-not-copy", "feature-adaptation"],
+      "quote": "Coding agents can operate in Brainfuck at a scale never achieved before for a chess engine, not through raw translation but by designing intermediate abstractions (a pointer-tracking emitter, a memory layout manager, runtime loop patterns) that make the task tractable.",
+      "note": "Explicit claim that synthesis required *designing new abstractions* (the Python compiler), not translating. RQ3 corroboration at its strongest."
+    },
+    {
+      "source": "bf-blog", "line": 49, "codes": ["feature-adaptation", "language-constraint"],
+      "quote": "The generated chess.bf is 5.6 MB of raw Brainfuck. An RLE-optimized interpreter (bfi.c) compresses it at load time from ~3.8M characters to ~520K instructions (7x compression), with a precomputed jump table for O(1) bracket matching.",
+      "note": "The engine required co-designing a custom interpreter to be practically runnable. The language ceiling forced both agent-side optimization and runtime-side optimization."
+    },
+    {
+      "source": "bf-blog", "line": 53, "codes": ["feature-adaptation"],
+      "quote": "The engine uses 672 cells on the BF tape, each with a carefully assigned role: Cells 0-15 Temporaries, Cells 30-93 Chess board (64 squares), Cells 160-183 Depth-2/3 search control, Cells 400-471 Depth-2 state backup.",
+      "note": "A hand-rolled memory layout with explicit address ranges is the Brainfuck-native analogue of a C struct or a Python class. This is pure language-native encoding."
+    },
+    {
+      "source": "bf-blog", "line": 86, "codes": ["agent-self-correction", "feedback-loop-cost"],
+      "quote": "The naive approach (unrolling every board access at compile time) produced a 119 MB BF program. Four optimization strategies brought it down to 5.6 MB.",
+      "note": "Cost-driven refactoring inside the session: the agent optimised size by 20x because 119 MB was impractical. Oracle was the interpreter's load time, not Elo."
+    },
+    {
+      "source": "bf-blog", "line": 171, "codes": ["human-steering"],
+      "quote": "The approach was deliberately iterative. I did not hand Claude Code a specification.",
+      "note": "Confirms minimal-prompt style. Paper's RQ5 interaction-abstraction claim: capability-level prompts dominate."
+    },
+    {
+      "source": "bf-blog", "line": 196, "codes": ["human-steering", "feedback-loop-cost"],
+      "quote": "The division of labor was roughly: the agent writes and debugs code, the human steers priorities and evaluates results.",
+      "note": "A crisp role split. Answers 'at what abstraction do users prompt?' for the Brainfuck case: roadmap-level."
+    },
+    {
+      "source": "bf-blog", "line": 177, "codes": ["agent-self-correction", "language-constraint"],
+      "quote": "The hardest bugs were cell collisions: multiple code paths accidentally writing to the same memory cell. ... Claude Code found and fixed at least 9 such bugs across the development, including one where the print_char function was using cell 30 (= BOARD_START) as scratch space, corrupting the board every time any text was printed.",
+      "note": "Quantified self-correction: 9 cell-collision fixes. A class of bug a human could not track at this scale; the agent could."
+    },
+    {
+      "source": "bf-blog", "line": 83, "codes": ["oracle-exploitation"],
+      "quote": "Perft validation: 11/11 positions correct (including castling and EP edge cases).",
+      "note": "Perft as the primary correctness oracle. Matches the population finding 'first perft at step 2' in RQ5."
+    },
+    {
+      "source": "bf-blog", "line": 173, "codes": ["oracle-exploitation", "human-steering"],
+      "quote": "'Run perft and compare to python-chess': verification-driven development. Perft caught several move generation bugs early.",
+      "note": "Human-steered oracle invocation, agent-executed. Typical 'capability-level prompt drives oracle-rigorous work' pattern."
+    },
+    {
+      "source": "bf-blog", "line": 175, "codes": ["oracle-exploitation", "human-steering"],
+      "quote": "'Play 10 games against Stockfish and show me the PGN': assessment loops.",
+      "note": "Assessment-loop as the dominant interaction. Every iteration is a gauntlet request."
+    },
+    {
+      "source": "bf-blog", "line": 180, "codes": ["feedback-loop-cost"],
+      "quote": "The real bottleneck was not writing the code, but evaluating it. Each iteration of 'change something, regenerate chess.bf, play games, see if it improved' takes hours.",
+      "note": "A direct quote of the paper's cost-scales-with-oracle-rigor claim. The Brainfuck cost structure is an upper bound."
+    },
+    {
+      "source": "bf-blog", "line": 187, "codes": ["feedback-loop-cost"],
+      "quote": "Generating chess.bf: ~1-2 minutes. One move from the engine: 45 seconds (opening) to 600+ seconds (complex middlegame). A 10-game tournament: 3-8 hours. A complete test-fix-retest cycle: half a day.",
+      "note": "Concrete cost numbers for each step of the feedback loop. 'Half a day per test-fix cycle' operationalises why Elo optimisation plateaus."
+    },
+    {
+      "source": "bf-blog", "line": 198, "codes": ["evasion-risk"],
+      "quote": "A parallel attempt was made with Codex (GPT-5.3) to build the same kind of engine. ... The Brainfuck components are kept for backward compatibility but are not the active engine core. In other words, the agent quietly migrated critical logic back into Python.",
+      "note": "A fully documented case of agent-driven constraint relaxation. Mirrors the chess-css-codex evasion the paper discusses in RQ3."
+    },
+    {
+      "source": "bf-blog", "line": 198, "codes": ["evasion-risk", "human-steering"],
+      "quote": "When working with coding agents on constrained tasks, the human must actively verify that the constraints are respected, because the agent may 'solve' the problem by relaxing them.",
+      "note": "Turns the evasion observation into a methodological prescription. Supports the paper's qualitative-supervision protocol (§4.4)."
+    },
+    {
+      "source": "bf-blog", "line": 198, "codes": ["evasion-risk"],
+      "quote": "In the BFChess project with Claude Code, the constraint held because the architecture (Python compiler emitting BF, with the engine running solely through ./bfi chess.bf) made it structurally impossible to smuggle Python logic into the runtime.",
+      "note": "Structural-enforcement strategy for the language constraint: the *architecture* (compile-to-BF then run a fixed interpreter) prevents the evasion. Complements the human-verification prescription."
+    }
+  ]
+}

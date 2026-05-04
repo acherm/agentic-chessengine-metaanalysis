@@ -1,0 +1,6 @@
+skip chess-purec-codex vs rustic (9 games)
+gauntlet: chess-purec-codex vs asymptote at 120+1
+gauntlet: chess-purec-codex vs sf_skill5 at 120+1
+gauntlet: chess-purec-codex vs sf_skill10 at 120+1
+gauntlet: chess-purec-codex vs sf_skill15 at 120+1
+anchor gauntlet done. PGNs in pgn/anchor/, logs in logs/anchor/.

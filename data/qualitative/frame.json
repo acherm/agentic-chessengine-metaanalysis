@@ -1,0 +1,51 @@
+{
+  "version": "2026-04-20",
+  "note": "Coding frame for qualitative triangulation of secondary sources (author-authored blog posts, expert notes, repo ARCHITECTURE / SPECIFICATION / README files). Each code is tied to one or more paper research questions so quantitative claims can be corroborated by qualitative evidence.",
+  "codes": {
+    "language-constraint": {
+      "label": "Language constraint observed",
+      "description": "An observation that a language-specific limitation (absent primitives, unusual semantics, scale limits) directly shaped the engineering choices. Strongest form: 'because the language does not have X, the engine had to do Y'.",
+      "supports_rq": ["RQ2", "RQ4"]
+    },
+    "novelty-absence": {
+      "label": "No prior engine in this language",
+      "description": "Explicit claim that no open-source chess engine exists for this language (CTAN / GitHub / public search), therefore the engine is first-of-kind and cannot have been copied.",
+      "supports_rq": ["RQ3"]
+    },
+    "synthesis-not-copy": {
+      "label": "Genuinely synthesised, not memorised",
+      "description": "Argument that the engine is not a line-by-line translation of an existing canonical engine. Usually paired with a specific observation about language-native idiom or the impossibility of mechanical translation.",
+      "supports_rq": ["RQ3"]
+    },
+    "agent-self-correction": {
+      "label": "Agent self-correction (debug loop)",
+      "description": "The agent notices a specific failure (perft mismatch, illegal move, gauntlet regression), diagnoses it, and fixes it within the session. Often visible as a count of bugs or a specific named defect.",
+      "supports_rq": ["RQ5"]
+    },
+    "oracle-exploitation": {
+      "label": "Oracle exploitation (perft / Elo / gauntlets)",
+      "description": "The agent (or the developer-agent pair) sets up or uses an external oracle --- perft tests, Stockfish gauntlets, random-move baselines --- to drive iteration. Corroborates the paper's 'oracle-first is a population property' finding.",
+      "supports_rq": ["RQ4", "RQ5"]
+    },
+    "human-steering": {
+      "label": "Human steering / intervention",
+      "description": "The developer intervenes to change the agent's course: rejects an approach, reports a bug, redirects scope, or confirms a design choice. Characterises the interaction abstraction (capability-level vs code-level).",
+      "supports_rq": ["RQ5"]
+    },
+    "feature-adaptation": {
+      "label": "Language-native feature adaptation",
+      "description": "A chess feature is encoded in a language-native idiom rather than copied from a canonical reference (e.g., `\\count` registers as RAM, `\\csname` tables as hash maps, BF cell ranges as a memory layout, 64-way switch as array indexing).",
+      "supports_rq": ["RQ2", "RQ3"]
+    },
+    "feedback-loop-cost": {
+      "label": "Feedback-loop cost dominates",
+      "description": "Writing the code is not the bottleneck; evaluating it is. A single iteration (regenerate, test, measure) takes hours or days, limiting the number of hypotheses that can be tested. Corroborates the paper's cost-scales-with-oracle-rigor finding.",
+      "supports_rq": ["RQ5"]
+    },
+    "evasion-risk": {
+      "label": "Evasion risk (drift to a more expressive language)",
+      "description": "Under pressure to produce working code, the agent drifts toward a more expressive language (Python inside a CSS engine, Python inside a Brainfuck engine). The constraint must be enforced structurally or by active human verification.",
+      "supports_rq": ["RQ3", "Method"]
+    }
+  }
+}

@@ -1,0 +1,1605 @@
+========================================================================
+Feature: null_move_pruning
+Patterns: null[_ -]?move\b
+Generated: 2026-04-20T10:55:39.409579+00:00
+Engines with feature: 18 / 35
+========================================================================
+
+[YES] COBOL-chess  (COBOL)  — 6 match(es)
+  src/search.cob:667
+         664                 END-IF
+         665             END-IF
+         666  
+    >>>  667             *> Null-move pruning (avoid zugzwang: require some non-pawn material)
+         668             MOVE 0 TO HAS-NPM
+         669             IF L-NMP = 1 AND IN-CHECK = 0 AND EFFECTIVE-DEPTH >= 4 AND SS-STOP = 0
+         670                 PERFORM VARYING SCAN-I FROM 1 BY 1 UNTIL SCAN-I > 128 OR HAS-NPM = 1
+
+  src/search.cob:683
+         680                     COMPUTE CHILD-DEPTH = EFFECTIVE-DEPTH - 3
+         681                     IF CHILD-DEPTH < 0 MOVE 0 TO CHILD-DEPTH END-IF
+         682  
+    >>>  683                     PERFORM DO-NULL-MOVE
+         684  
+         685                     MOVE 0 TO CHILD-SCORE
+         686                     COMPUTE CHILD-ALPHA = 0 - L-BETA
+
+  src/search.cob:692
+         689                     CALL "ALPHABETA" USING GAME-STATE CHILD-DEPTH CHILD-ALPHA CHILD-BETA L-SS CHILD-NMP CHILD-SCORE
+         690                     COMPUTE CHILD-SCORE = 0 - CHILD-SCORE
+         691  
+    >>>  692                     PERFORM UNDO-NULL-MOVE
+         693                     MOVE 1 TO CHILD-NMP
+         694  
+         695                     IF SS-STOP = 1
+
+  src/search.cob:866
+         863             MOVE L-ALPHA TO L-OUT
+         864             GOBACK.
+         865  
+    >>>  866         DO-NULL-MOVE.
+         867             MOVE GS-SIDE-TO-MOVE TO NULL-SAVE-SIDE
+         868             MOVE GS-EP-SQ        TO NULL-SAVE-EP
+         869             MOVE GS-PLY          TO NULL-SAVE-PLY
+
+  src/search.cob:880
+         877                 IF WORK-KEY < 0 ADD HASH-MOD TO WORK-KEY END-IF
+         878             END-IF
+         879  
+    >>>  880             *> Remove old EP contribution (we clear EP on null move)
+         881             IF GS-EP-SQ >= 0
+         882                 COMPUTE EP-FILE = FUNCTION MOD(GS-EP-SQ, 16)
+         883                 COMPUTE EP-IX = EP-FILE + 1
+
+  src/search.cob:905
+         902             ADD 1 TO GS-PLY
+         903             EXIT PARAGRAPH.
+         904  
+    >>>  905         UNDO-NULL-MOVE.
+         906             MOVE NULL-SAVE-SIDE TO GS-SIDE-TO-MOVE
+         907             MOVE NULL-SAVE-EP   TO GS-EP-SQ
+         908             MOVE NULL-SAVE-PLY  TO GS-PLY
+
+[NO]  chess-Rocq  (OCaml)  — 0 match(es)
+
+[NO]  chess-apl-codex54  (APL)  — 0 match(es)
+
+[NO]  chess-assembly-codex  (Assembly)  — 0 match(es)
+
+[NO]  chess-brainfuck  (Python)  — 0 match(es)
+
+[NO]  chess-brainfuck-cc  (Python)  — 0 match(es)
+
+[NO]  chess-cobol-cc  (C)  — 0 match(es)
+
+[YES] chess-cplusplus-claude  (C++)  — 8 match(es)
+  src/position.cpp:618
+         615      update_checkers();
+         616  }
+         617  
+    >>>  618  void Position::do_null_move(StateInfo& new_st) {
+         619      new_st = state_stack_[state_idx_];
+         620      new_st.plies_from_null = 0;
+         621  
+
+  src/position.cpp:637
+         634      update_checkers();
+         635  }
+         636  
+    >>>  637  void Position::undo_null_move() {
+         638      state_idx_--;
+         639      side_to_move_ = ~side_to_move_;
+         640      update_checkers();
+
+  src/position.h:66
+          63      // Make/unmake
+          64      void do_move(Move m, StateInfo& new_st);
+          65      void undo_move(Move m);
+    >>>   66      void do_null_move(StateInfo& new_st);
+          67      void undo_null_move();
+          68  
+          69      // SEE
+
+  src/position.h:67
+          64      void do_move(Move m, StateInfo& new_st);
+          65      void undo_move(Move m);
+          66      void do_null_move(StateInfo& new_st);
+    >>>   67      void undo_null_move();
+          68  
+          69      // SEE
+          70      bool see_ge(Move m, int threshold) const;
+
+  src/search.cpp:235
+         232      bool improving = !in_check && ply >= 2
+         233          && static_eval > stack_[ply - 2].static_eval;
+         234  
+    >>>  235      // Reverse Futility Pruning (Static Null Move Pruning)
+         236      if (!is_pv && !in_check && depth <= 7
+         237          && static_eval - (improving ? 85 : 70) * depth >= beta
+         238          && static_eval < VALUE_MATE_IN_MAX_PLY)
+
+  src/search.cpp:249
+         246              return razor_score;
+         247      }
+         248  
+    >>>  249      // Null move pruning
+         250      bool has_non_pawn = pos_->pieces(pos_->side_to_move()) & ~pos_->pieces(PAWN) & ~pos_->pieces(KING);
+         251      if (!is_pv && !in_check && do_null && depth >= 3
+         252          && static_eval >= beta
+
+  src/search.cpp:258
+         255          int R = 3 + depth / 3 + std::min(3, (static_eval - beta) / 200);
+         256          if (!improving) R++;
+         257          StateInfo st;
+    >>>  258          pos_->do_null_move(st);
+         259          int null_score = -alpha_beta(-beta, -beta + 1, depth - R - 1, ply + 1, false);
+         260          pos_->undo_null_move();
+         261          if (stopped) return 0;
+
+  src/search.cpp:260
+         257          StateInfo st;
+         258          pos_->do_null_move(st);
+         259          int null_score = -alpha_beta(-beta, -beta + 1, depth - R - 1, ply + 1, false);
+    >>>  260          pos_->undo_null_move();
+         261          if (stopped) return 0;
+         262          if (null_score >= beta) {
+         263              if (null_score >= VALUE_MATE_IN_MAX_PLY)
+
+[NO]  chess-css-codex  (HTML)  — 0 match(es)
+
+[NO]  chess-css-codex-guided  (JavaScript)  — 0 match(es)
+
+[NO]  chess-icon-codex  (Icon)  — 0 match(es)
+
+[NO]  chess-java  (Java)  — 0 match(es)
+
+[YES] chess-java-cc  (Java)  — 8 match(es)
+  src/main/java/com/chess/engine/board/Board.java:324
+         321          phase = undoPhase[ply];
+         322      }
+         323  
+    >>>  324      public void makeNullMove() {
+         325          undoZobrist[ply] = zobristKey;
+         326          undoPawnKey[ply] = pawnKey;
+         327          undoCastling[ply] = castlingRights;
+
+  src/main/java/com/chess/engine/board/Board.java:348
+         345          posHistory[posHistoryCount++] = zobristKey;
+         346      }
+         347  
+    >>>  348      public void unmakeNullMove() {
+         349          ply--;
+         350          posHistoryCount--;
+         351  
+
+  src/main/java/com/chess/engine/search/Search.java:9
+           6  
+           7  /**
+           8   * Iterative deepening PVS alpha-beta search with quiescence.
+    >>>    9   * Phase 4: PVS, null move pruning, killer moves, history heuristic, aspiration windows.
+          10   */
+          11  public final class Search {
+          12  
+
+  src/main/java/com/chess/engine/search/Search.java:17
+          14      private static final int NODE_CHECK_INTERVAL = 2048;
+          15      private static final int ASPIRATION_WINDOW = 25;
+          16  
+    >>>   17      // Null move pruning
+          18      private static final int NULL_MOVE_R_BASE = 3;
+          19  
+          20      private Board board;
+
+  src/main/java/com/chess/engine/search/Search.java:129
+         126  
+         127          int staticEval = Evaluation.evaluate(board);
+         128  
+    >>>  129          // Reverse futility pruning (static null move pruning)
+         130          if (!isPV && !inCheck && depth <= 3 && ply > 0) {
+         131              if (staticEval - 120 * depth >= beta) {
+         132                  return staticEval;
+
+  src/main/java/com/chess/engine/search/Search.java:136
+         133              }
+         134          }
+         135  
+    >>>  136          // Null move pruning
+         137          if (!isPV && !inCheck && ply > 0 && depth >= 3 && hasNonPawnMaterial()) {
+         138              int R = NULL_MOVE_R_BASE + depth / 6;
+         139              board.makeNullMove();
+
+  src/main/java/com/chess/engine/search/Search.java:139
+         136          // Null move pruning
+         137          if (!isPV && !inCheck && ply > 0 && depth >= 3 && hasNonPawnMaterial()) {
+         138              int R = NULL_MOVE_R_BASE + depth / 6;
+    >>>  139              board.makeNullMove();
+         140              int nullScore = -negamax(-beta, -beta + 1, depth - 1 - R, ply + 1, false);
+         141              board.unmakeNullMove();
+         142              if (info.stopped) return 0;
+
+  src/main/java/com/chess/engine/search/Search.java:141
+         138              int R = NULL_MOVE_R_BASE + depth / 6;
+         139              board.makeNullMove();
+         140              int nullScore = -negamax(-beta, -beta + 1, depth - 1 - R, ply + 1, false);
+    >>>  141              board.unmakeNullMove();
+         142              if (info.stopped) return 0;
+         143              if (nullScore >= beta) {
+         144                  if (nullScore >= Evaluation.MATE_BOUND) nullScore = beta;
+
+[NO]  chess-latex-codex-replication  (LaTeX)  — 0 match(es)
+
+[NO]  chess-mojo  (Mojo)  — 0 match(es)
+
+[YES] chess-newlang-codex  (C++)  — 4 match(es)
+  runtime/gambit_runtime.cpp:1148
+        1145      }
+        1146    }
+        1147  
+    >>> 1148    // Null-move pruning with verification in deeper nodes.
+        1149    if (!is_pv
+        1150        && allow_null
+        1151        && sp.enable_null_move
+
+  runtime/gambit_runtime.cpp:1151
+        1148    // Null-move pruning with verification in deeper nodes.
+        1149    if (!is_pv
+        1150        && allow_null
+    >>> 1151        && sp.enable_null_move
+        1152        && has_static_eval
+        1153        && !in_check_now
+        1154        && node_depth >= 4
+
+  runtime/gambit_runtime.hpp:117
+         114  };
+         115  
+         116  struct SearchPolicy {
+    >>>  117    bool enable_null_move = true;
+         118    int null_static_margin = 70;
+         119    int null_verify_min_depth = 10;
+         120  
+
+  src/gambit/parser.py:25
+          22  
+          23  class Parser:
+          24      _SEARCH_BOOL_KEYS = {
+    >>>   25          "enable_null_move",
+          26      }
+          27      _SEARCH_INT_KEYS = {
+          28          "null_static_margin",
+
+[YES] chess-purec  (C)  — 14 match(es)
+  purec:1415
+        1412  �	�H����� �
+        1413  ����8�    �               �         �
+        1414       "    L"     5    �&     K    �'     c    �'     w    �(     �    �5     �    �6     �    �8     �    �H     �    �W     �    $`     �    �`     �    �d     �    Ā     �    t�     �    ��     �    ��     �    ȍ     	    ��         ��     0    �     J    8�     a    ��     r    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��         ��         ��         ��     3    ��     >    ��     H    ��     R          d         m  	       {  	      �  	      �  	      �  	  %    �  	  �%    �  	  �%    �  	  �%    �  	   �%    �  	  ��%      	  ��%      	  ��%    #  	  ��%    6  	  ��%    >  	  ��%    F  	  0�%    W  	  4�%    b  	  8�'    f  	  X�'    m  	  �m(    q  	  Px)    ~  	  P|)    �  	  P~)                    �     
+    >>> 1415               -             ?             R             \             g             m             t             |             �             �             �             �             �             �             �             �             �             �             �             �             �             E   I   J   K   L   M   N   O   P   R   S   T   U   V   W   X   Y   D   E   F   G   H   I   J   K   L   M   N   O   P   R   S   T   U   V   W   X   Y     __mh_execute_header _main ___chkstk_darwin ___stack_chk_fail ___stack_chk_guard ___stdinp ___stdoutp _atoi _bzero _calloc _fflush _fgets _free _gettimeofday _log _memcmp _memset_pattern16 _printf _putchar _puts _setbuf _strlen _strncmp _strstr _init_magic _board_set_fen _board_make_move _board_unmake_move _board_make_null_move _board_unmake_null_move _is_square_attacked _generate_moves _perft _perft_divide _evaluate _search _qsearch _tt_store _score_moves _uci_loop _see _see_ge _Mirror _PieceValueMG _PieceValueEG _PhaseWeight _evaluate.passed_bonus_mg _evaluate.passed_bonus_eg _evaluate.safety_table _mg_knight_table _mg_bishop_table _mg_rook_table _mg_queen_table _mg_king_table _mg_pawn_table _eg_knight_table _eg_bishop_table _eg_rook_table _eg_queen_table _eg_king_table _eg_pawn_table _qsearch.piece_vals _SEE_VALUE _mg_pesto _eg_pesto _magic_rand_state _hash_mb _BishopMagics _RookMagics _BishopTable _RookTable _init_magic.used _init_magic.generation _init_magic.gen _ZobristPieces _ZobristCastling _ZobristEP _ZobristSide _CastlingRightsMask _square_to_str.buf _FileBB _RankBB _lmr_initialized _lmr_table _tt _board _si _PawnAttacks _KnightAttacks _KingAttacks               ��
+        1416  �            ��
+        1417    �       ^   X        L�  
+        1418                                        ��       purec t�M���/;�|��G��(DEy�b�	�{ z~��C�F����Sx�������顈ĪM4}W�h�%�����mGʋ��-l�45BҘOB���Q��Y0v ��&
+
+  purec.dSYM/Contents/Resources/DWARF/purec:288
+         285      B    �    Q    �q    e    �     k    |�    r    ��    �    ��    �    �V     �    h     �    ��    �    H�    �    
+         286  �    �    D�    �    ,k    �    d�    �    9        #    
+         287      5    3    ��    =    ��    F    �    O    8�    ^    и    h    �    z     �    �    <�    �    H:    �    �    �    `
+    >>>  288      �    �r       _asan.module_ctor _init_pawn_attacks _init_knight_attacks _init_king_attacks _init_magic _init_between_line _square_bb _square_of _bishop_mask _rook_mask _popcount _bishop_attacks_slow _rook_attacks_slow _sparse_rand64 _rank_of _file_of _magic_rand64 _asan.module_dtor _rand64 _pop_lsb _make_piece _color_of_piece _square_to_str _move_from _move_to _move_flags _piece_type_of _remove_piece _move_piece _move_is_promotion _move_promo_piece_type _put_piece _lsb _movelist_init _movelist_add _move_encode _queen_attacks _move_is_legal _move_to_str _init_lmr _search _qsearch _check_time _is_draw _has_non_pawn_material _move_is_capture _move_is_ep _time_now _uci_position _uci_go _parse_move _attackers_to _lva _Mirror _PieceValueMG _PieceValueEG _PhaseWeight _evaluate.passed_bonus_mg _evaluate.passed_bonus_eg _evaluate.safety_table _mg_knight_table _mg_bishop_table _mg_rook_table _mg_queen_table _mg_king_table _mg_pawn_table _eg_knight_table _eg_bishop_table _eg_rook_table _eg_queen_table _eg_king_table _eg_pawn_table _qsearch.piece_vals _SEE_VALUE _.str _.str.1 _.str.2 _.str.3 ___const.board_print.piece_chars _.str.4 _.str.5 _.str.6 _.str.7 _.str.8 _.str.9 ___const.move_to_str.promo _.str.10 _.str.11 _.str.12 _.str.13 _.str.14 _.str.15 _.str.16 _.str.17 _.str.18 _.str.19 _.str.20 _.str.21 _.str.22 _.str.24 _.str.25 _.str.26 _.str.27 _.str.28 _.str.29 _.str.30 _.str.31 _.str.32 _magic_rand_state _rand_state _mg_pesto _eg_pesto _hash_mb ___asan_global_BishopMagics ___asan_global_RookMagics ___asan_global_BishopTable ___asan_global_RookTable ___asan_global_.str ___asan_global_.str.1 ___asan_global_.str.2 ___asan_global_.str.3 ___asan_global_init_magic.used ___asan_global_init_magic.generation ___asan_global_init_magic.gen ___asan_global_magic_rand_state ___asan_global_rand_state ___asan_global___const.board_print.piece_chars ___asan_global_.str.4 ___asan_global_.str.5 ___asan_global_.str.6 ___asan_global_.str.7 ___asan_global_.str.8 ___asan_global_.str.9 ___asan_global_square_to_str.buf ___asan_global___const.move_to_str.promo ___asan_global_Mirror ___asan_global_PieceValueMG ___asan_global_mg_pesto ___asan_global_PieceValueEG ___asan_global_eg_pesto ___asan_global_PhaseWeight ___asan_global_evaluate.passed_bonus_mg ___asan_global_evaluate.passed_bonus_eg ___asan_global_evaluate.safety_table ___asan_global_mg_knight_table ___asan_global_mg_bishop_table ___asan_global_mg_rook_table ___asan_global_mg_queen_table ___asan_global_mg_king_table ___asan_global_mg_pawn_table ___asan_global_eg_knight_table ___asan_global_eg_bishop_table ___asan_global_eg_rook_table ___asan_global_eg_queen_table ___asan_global_eg_king_table ___asan_global_eg_pawn_table ___asan_global_lmr_initialized ___asan_global_lmr_table ___asan_global_qsearch.piece_vals ___asan_global_tt ___asan_global_hash_mb ___asan_global_board ___asan_global_si ___asan_global_.str.10 ___asan_global_.str.11 ___asan_global_.str.12 ___asan_global_.str.13 ___asan_global_.str.14 ___asan_global_.str.15 ___asan_global_.str.16 ___asan_global_.str.17 ___asan_global_.str.18 ___asan_global_.str.19 ___asan_global_.str.20 ___asan_global_.str.21 ___asan_global_.str.22 ___asan_global_.str.24 ___asan_global_.str.25 ___asan_global_.str.26 ___asan_global_.str.27 ___asan_global_.str.28 ___asan_global_.str.29 ___asan_global_.str.30 ___asan_global_.str.31 ___asan_global_.str.32 ___asan_global_SEE_VALUE ___asan_binder_BishopMagics ___asan_binder_RookMagics ___asan_binder_BishopTable ___asan_binder_RookTable ___asan_binder_.str ___asan_binder_.str.1 ___asan_binder_.str.2 ___asan_binder_.str.3 ___asan_binder_init_magic.used ___asan_binder_init_magic.generation ___asan_binder_init_magic.gen ___asan_binder_magic_rand_state ___asan_binder_rand_state ___asan_binder___const.board_print.piece_chars ___asan_binder_.str.4 ___asan_binder_.str.5 ___asan_binder_.str.6 ___asan_binder_.str.7 ___asan_binder_.str.8 ___asan_binder_.str.9 ___asan_binder_square_to_str.buf ___asan_binder___const.move_to_str.promo ___asan_binder_Mirror ___asan_binder_PieceValueMG ___asan_binder_mg_pesto ___asan_binder_PieceValueEG ___asan_binder_eg_pesto ___asan_binder_PhaseWeight ___asan_binder_evaluate.passed_bonus_mg ___asan_binder_evaluate.passed_bonus_eg ___asan_binder_evaluate.safety_table ___asan_binder_mg_knight_table ___asan_binder_mg_bishop_table ___asan_binder_mg_rook_table ___asan_binder_mg_queen_table ___asan_binder_mg_king_table ___asan_binder_mg_pawn_table ___asan_binder_eg_knight_table ___asan_binder_eg_bishop_table ___asan_binder_eg_rook_table ___asan_binder_eg_queen_table ___asan_binder_eg_king_table ___asan_binder_eg_pawn_table ___asan_binder_lmr_initialized ___asan_binder_lmr_table ___asan_binder_qsearch.piece_vals ___asan_binder_tt ___asan_binder_hash_mb ___asan_binder_board ___asan_binder_si ___asan_binder_.str.10 ___asan_binder_.str.11 ___asan_binder_.str.12 ___asan_binder_.str.13 ___asan_binder_.str.14 ___asan_binder_.str.15 ___asan_binder_.str.16 ___asan_binder_.str.17 ___asan_binder_.str.18 ___asan_binder_.str.19 ___asan_binder_.str.20 ___asan_binder_.str.21 ___asan_binder_.str.22 ___asan_binder_.str.24 ___asan_binder_.str.25 ___asan_binder_.str.26 ___asan_binder_.str.27 ___asan_binder_.str.28 ___asan_binder_.str.29 ___asan_binder_.str.30 ___asan_binder_.str.31 ___asan_binder_.str.32 ___asan_binder_SEE_VALUE _BishopMagics _RookMagics _BishopTable _RookTable _init_magic.used _init_magic.generation _init_magic.gen _square_to_str.buf _lmr_initialized _lmr_table _tt _board _si ____asan_globals_registered _BetweenBB _CastlingRightsMask _FileBB _KingAttacks _KnightAttacks _LineBB _PawnAttacks _RankBB _ZobristCastling _ZobristEP _ZobristPieces _ZobristSide __mh_execute_header _bishop_attacks _bitboard_init _board_compute_hash _board_in_check _board_is_repetition _board_make_move _board_make_null_move _board_print _board_set_fen _board_startpos _board_unmake_move _board_unmake_null_move _evaluate _generate_captures _generate_moves _history_penalty _is_move_legal _is_square_attacked _main _perft _perft_divide _pick_move _print_bitboard _rook_attacks _score_moves _search_data_age_history _search_data_init _search_position _see _see_ge _timeman_elapsed _timeman_init _timeman_should_stop _tt_clear _tt_free _tt_init _tt_new_search _tt_probe _tt_score_from_tt _tt_score_to_tt _tt_store _uci_loop _update_history _update_killers _zobrist_init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            zR x
+         289  
+         290   0      d������,        D H
+         291  
+
+  purec.dSYM/Contents/Resources/DWARF/purec:3535
+        3532  
+        3533  :
+        3534  ;
+    >>> 3535      Apple clang version 17.0.0 (clang-1700.0.13.5) src/main.c /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk MacOSX.sdk /Users/mathieuacher/SANDBOX/chess-purec main int src/bitboard.c char __ARRAY_SIZE_TYPE__ RankBB Bitboard uint64_t unsigned long long FileBB PawnAttacks KnightAttacks KingAttacks BetweenBB LineBB BishopMagics Magic mask magic attacks shift RookMagics BishopTable RookTable init_magic used generation gen sq m table is_bishop bits occupancies n occ fail i idx magic_rand_state unsigned int bishop_attacks rook_attacks bitboard_init init_pawn_attacks b init_knight_attacks init_king_attacks init_between_line s1 s2 rattks battks print_bitboard r f square_bb square_of rank file bishop_mask rook_mask popcount bishop_attacks_slow block rook_attacks_slow sparse_rand64 rank_of file_of magic_rand64 _Bool src/board.c ZobristPieces ZobristCastling ZobristEP ZobristSide CastlingRightsMask rand_state square_to_str buf zobrist_init p rand64 board_compute_hash h bb ep stm_pawns pop_lsb make_piece color piece_type board_set_fen fen piece color_of_piece board_startpos board_print piece_chars pc board_make_move u from to flags captured us them our_pawns cap_sq cap_piece promo_piece rook enemy_pawns move_from move_to move_flags piece_type_of remove_piece move_piece fromto move_is_promotion move_promo_piece_type put_piece board_unmake_move moving board_make_null_move board_unmake_null_move is_square_attacked by_color board_in_check king_sq lsb board_is_repetition start limit Board pieces colors occupied mailbox side castling ep_square halfmove fullmove ply game_ply hash history UndoInfo move captured_piece Move uint16_t unsigned short src/movegen.c generate_moves ml our their empty pawns push_dir rank7 rank3 non_promo single dbl left_cap right_cap promo_pawns promo_push promo_lcap promo_rcap ep_pawns knights flag bishops rooks queens movelist_init movelist_add move_encode queen_attacks generate_captures perft depth nodes move_is_legal legal perft_divide total move_to_str promo MoveList moves scores count src/evaluate.c evaluate passed_bonus_mg passed_bonus_eg safety_table mg eg phase mg_score eg_score score pt own_pawns file_mask adjacent_files front_span block_mask ahead rr pp_mg pp_eg kf kr df file_pawns shield friendly mob rel_rank enemy king_zone attack_units num_attackers Mirror PieceValueMG mg_pesto mg_pawn_table mg_knight_table mg_bishop_table mg_rook_table mg_queen_table mg_king_table PieceValueEG eg_pesto eg_pawn_table eg_knight_table eg_bishop_table eg_rook_table eg_queen_table eg_king_table PhaseWeight src/search.c ASPIRATION_WINDOW lmr_initialized lmr_table qsearch piece_vals si alpha beta stand_pat cap_val long long is_move_legal search_position best_move best_score delta elapsed init_lmr d search do_null skip_move pv_node in_check root tt_hit tte tt_move tt_score tt_depth static_eval prev_move moves_searched quiets_tried quiets_count tt_flag R razor_score is_capture is_promo is_quiet extension s_beta s_score reduction losing j q prev_to prev_piece check_time is_draw wsq bsq has_non_pawn_material move_is_capture move_is_ep SearchInfo board tt sd tm pv pv_length sel_depth stopped TTable entries current_age TTEntry key age int16_t short uint8_t unsigned char SearchData killers counter_moves TimeMan start_time soft_limit hard_limit infinite depth_limit int64_t src/tt.c tt_init mb bytes tt_free tt_clear tt_new_search tt_score_to_tt tt_score_from_tt tt_probe found e tt_store src/movorder.c search_data_init search_data_age_history c t score_moves see_val pick_move index best_idx tmp_m tmp_s update_killers update_history bonus history_penalty src/timeman.c timeman_init time_ms inc_ms movestogo movetime base time_now tv timeman_should_stop timeman_elapsed timeval tv_sec tv_usec __darwin_time_t long __darwin_suseconds_t __int32_t src/uci.c hash_mb uci_loop line len val uci_position spaces uci_go wtime btime winc binc parse_move str src/see.c SEE_VALUE see attacker_pt captured_val gain all_attackers promo_pt ep_victim_sq from_bb attackers_to lva attackers candidates see_ge threshold balance �        0   ;   o   z   �   �   �   �   �   �   �   �   �   �          ,  6  =  J  P  U  [  c  i  t  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �  
+        3536      (  :  <  P  b  t  w  z  �  �  �  �  �  �  �  �  �  �  �  �  �  �        "  /  5  A  O  _  i  u  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �        
+        3537    +  :  F  R  U  e  g  l  o  u  ~  �  �  �  �  �  �  �  �  �  �  �  �  �        0  :  L  S  h    �  �  �  �  �  �  �  �  �  �  �  �  �     	    
+        3538    %  )  2  7  ?  H  M  \  a  j  y  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �  �        "  *  /  7  =  D  R  _  k  y  �  �  �  �  �  �  �  �  �  �  �  �  �  �    
+
+  test_debug.dSYM/Contents/Resources/DWARF/test_debug:29
+          26      �Y         lL     *    �<     :    
+          27  �     K    �g     Z    �8     n    �     t    �T     {    �V     �    ��     �    <     �    ,	     �    ��     �    0�     �     �     �    |h     �    �     
+          28      �         ,�     /    ��     9    ��     B    �     K    8�     Z    @�     d    ̆     v    X�     �    ̇     �    �     �    h�     �    �     �    P
+    >>>   29         _square_bb _init_pawn_attacks _init_knight_attacks _init_king_attacks _init_magic _init_between_line _square_of _bishop_mask _rook_mask _bishop_attacks_slow _rook_attacks_slow _rank_of _file_of _rand64 _pop_lsb _make_piece _color_of_piece _square_to_str _move_from _move_to _move_flags _piece_type_of _remove_piece _move_piece _move_is_promotion _move_promo_piece_type _put_piece _lsb _movelist_init _movelist_add _move_encode _queen_attacks _move_is_legal _move_to_str _popcount _init_lmr _search _qsearch _check_time _is_draw _has_non_pawn_material _move_is_capture _move_is_ep _time_now _uci_position _uci_go _parse_move _BishopMagicNumbers _RookMagicNumbers _BishopShifts _RookShifts _Mirror _PieceValueMG _PieceValueEG _PhaseWeight _evaluate.passed_bonus_mg _evaluate.passed_bonus_eg _mg_knight_table _mg_bishop_table _mg_rook_table _mg_queen_table _mg_king_table _mg_pawn_table _eg_knight_table _eg_bishop_table _eg_rook_table _eg_queen_table _eg_king_table _eg_pawn_table _qsearch.piece_vals _MVV_LVA _rand_state _mg_pesto _eg_pesto _hash_mb _BishopMagics _RookMagics _BishopTable _RookTable _square_to_str.buf _lmr_initialized _lmr_table _tt _board _si _BetweenBB _CastlingRightsMask _FileBB _KingAttacks _KnightAttacks _LineBB _PawnAttacks _RankBB _ZobristCastling _ZobristEP _ZobristPieces _ZobristSide __mh_execute_header _bishop_attacks _bitboard_init _board_compute_hash _board_in_check _board_is_repetition _board_make_move _board_make_null_move _board_print _board_set_fen _board_startpos _board_unmake_move _board_unmake_null_move _evaluate _generate_captures _generate_moves _history_penalty _is_move_legal _is_square_attacked _main _perft _perft_divide _pick_move _print_bitboard _rook_attacks _score_moves _search_data_age_history _search_data_init _search_position _timeman_elapsed _timeman_init _timeman_should_stop _tt_clear _tt_free _tt_init _tt_new_search _tt_probe _tt_score_from_tt _tt_score_to_tt _tt_store _uci_loop _update_history _update_killers _zobrist_init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         �    �   �
+          30            (   ,   
+          31  
+          32  s    �w��T��S���ʂ���   U*���N�*�u���ِ��   �+ ��
+
+  test_debug.dSYM/Contents/Resources/DWARF/test_debug:2296
+        2293  
+        2294  :
+        2295  ;
+    >>> 2296      Apple clang version 17.0.0 (clang-1700.0.13.5) src/test_debug.c /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk MacOSX.sdk /Users/mathieuacher/SANDBOX/chess-purec char __ARRAY_SIZE_TYPE__ unsigned int unsigned long long main b a8 rattk e8 h8 h8attk rank8_occ simple f sq square_bb int Bitboard uint64_t Board pieces colors occupied mailbox side castling ep_square halfmove fullmove ply game_ply hash history UndoInfo move captured_piece Move uint16_t unsigned short src/bitboard.c RankBB FileBB PawnAttacks KnightAttacks KingAttacks BetweenBB LineBB BishopMagics Magic mask magic attacks shift RookMagics BishopTable RookTable BishopMagicNumbers RookMagicNumbers BishopShifts RookShifts bishop_attacks occ m rook_attacks bitboard_init i init_pawn_attacks init_knight_attacks init_king_attacks init_magic table is_bishop idx init_between_line s1 s2 rattks battks print_bitboard r square_of rank file bishop_mask rook_mask bishop_attacks_slow block rook_attacks_slow rank_of file_of _Bool src/board.c ZobristPieces ZobristCastling ZobristEP ZobristSide CastlingRightsMask rand_state square_to_str buf zobrist_init p rand64 board_compute_hash h bb ep stm_pawns pop_lsb make_piece color piece_type board_set_fen fen piece color_of_piece board_startpos board_print piece_chars pc board_make_move u from to flags captured us them our_pawns cap_sq cap_piece promo_piece rook enemy_pawns move_from move_to move_flags piece_type_of remove_piece move_piece fromto move_is_promotion move_promo_piece_type put_piece board_unmake_move moving board_make_null_move board_unmake_null_move is_square_attacked by_color board_in_check king_sq lsb board_is_repetition start limit src/movegen.c generate_moves ml our their empty pawns push_dir rank7 rank3 non_promo single dbl left_cap right_cap promo_pawns promo_push promo_lcap promo_rcap ep_pawns knights flag bishops rooks queens movelist_init movelist_add move_encode queen_attacks generate_captures perft depth nodes move_is_legal legal perft_divide total move_to_str promo MoveList moves scores count src/evaluate.c evaluate passed_bonus_mg passed_bonus_eg mg eg phase mg_score eg_score score pt own_pawns file_mask adjacent_files front_span block_mask ahead rr kf kr df file_pawns shield friendly mob Mirror PieceValueMG mg_pesto mg_pawn_table mg_knight_table mg_bishop_table mg_rook_table mg_queen_table mg_king_table PieceValueEG eg_pesto eg_pawn_table eg_knight_table eg_bishop_table eg_rook_table eg_queen_table eg_king_table PhaseWeight popcount src/search.c ASPIRATION_WINDOW lmr_initialized lmr_table qsearch piece_vals si alpha beta stand_pat see_val long long is_move_legal search_position best_move best_score delta elapsed init_lmr d search do_null pv_node in_check root tt_hit tte tt_move tt_score static_eval moves_searched quiets_tried quiets_count tt_flag R is_capture is_promo is_quiet reduction j q check_time is_draw wsq bsq has_non_pawn_material move_is_capture move_is_ep SearchInfo board tt sd tm pv pv_length sel_depth stopped TTable entries current_age TTEntry key age int16_t short uint8_t unsigned char SearchData killers TimeMan start_time soft_limit hard_limit infinite depth_limit int64_t src/tt.c tt_init mb bytes n tt_free tt_clear tt_new_search tt_score_to_tt tt_score_from_tt tt_probe found e tt_store src/movorder.c MVV_LVA search_data_init search_data_age_history c t score_moves victim attacker pick_move index best_idx tmp_m tmp_s update_killers update_history bonus history_penalty src/timeman.c timeman_init time_ms inc_ms movestogo movetime base time_now tv timeman_should_stop timeman_elapsed timeval tv_sec tv_usec __darwin_time_t long __darwin_suseconds_t __int32_t src/uci.c hash_mb uci_loop line len val uci_position spaces uci_go wtime btime winc binc parse_move str         0   A   u   �   �   �   �   �   �   �   �   �   �   �   �   �           
+        2297    "  +  4  :  A  H  Q  Y  ^  g  q  z  �  �  �  �  �  �  �  �  �  �  �  �  �  �         $  +  8  >  C  I  Q  W  b  n  x  �  �  �  �  �  �  �  �  �  �  �  
+        2298    
+        2299    )  /  9  =  O  R  U  \  c  r  t  ~  �  �  �  �  �  �  �  �  �  �  �  �  
+
+  test_debug2.dSYM/Contents/Resources/DWARF/test_debug2:18
+          15       �     X!     9     �#     0     �#     �     l%     �     P'         �'     B     �.         �.     M      /         �1     .    �7     9    �7     B    �7     N    �7     ]     8     k    �8     w    �9     �    �9     �    $:     �    �B     0     �C     9      D     �    LR         dR     �     �R     �    �R     �    S     B     DS     �    dS     �    �S     �    `]     �    D_     .    p`     9    �`     0     �`     9     �`     w    �`     B    �`     N    �m         �m     �     �m         n     0     @n     9     Xn          pn     �    �n     �    �n     �    �o         �o         |u         �v     �    `�         ��     !    ��     -    l�     6    d�     M     �     ^    @�     w    l�     9    ��     N    ��          ̋     9     ��     0     �     B     �     .    <�     M     �     ^     �     N    L�     9    p�     .    ��     w    ��     �    Ĕ     B    0�     j    L�     t    ,�     �    d�     �     �     .    
+          16  �     9    4�     w    P�     �    p�     B    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��     �    ��         ظ     !    ��     ;    �     L    �     ]    �     l    �     |    �     �    �     �    �     �    �     �    �     �    �     �    �     �    �     �    �     
+          17      0�          @    "    @    ,    8@    6    h@    ?    p@    K    p�    Y    p�    e    p�    r    p�    }    p�%    �    t�%    �    x�%    �    x�'    �    ��'    �    8R(    �  	  �V)    �  	  _*    �  	  ��)    �  	  ��)    �  	  ��)    �  	  ��)      	  �Z*      	  �^*      	  `*    ,  	  �`*    7  	  �b*    F  	  �z*    S          g    0     w    �     �    �%     �    �B     �    C     �    P2     �    (>     �    L/     �    �'          /         �:     %    �?     =    a     G    �S     Z    D     j    |�     {    �n     �    D@     �    �     �    P\     �    �]     �    �     �    �     �    �     �    P�     �    ��         `�         �o     +    H�     <    L�     J    ��     _    P�     i    
+    >>>   18  �     r    T�     {    ��     �    ��     �    ,�     �    ��     �    ,�     �    t�     �    Ȗ     �    D�     �    �#       _my_rook_mask _popcount _my_rook_attacks_slow _file_of _rank_of _square_bb _square_of _init_pawn_attacks _init_knight_attacks _init_king_attacks _init_magic _init_between_line _bishop_mask _rook_mask _bishop_attacks_slow _rook_attacks_slow _rand64 _pop_lsb _make_piece _color_of_piece _square_to_str _move_from _move_to _move_flags _piece_type_of _remove_piece _move_piece _move_is_promotion _move_promo_piece_type _put_piece _lsb _movelist_init _movelist_add _move_encode _queen_attacks _move_is_legal _move_to_str _init_lmr _search _qsearch _check_time _is_draw _has_non_pawn_material _move_is_capture _move_is_ep _time_now _uci_position _uci_go _parse_move _RookMagicNumbers _RookShifts _BishopMagicNumbers _BishopShifts _Mirror _PieceValueMG _PieceValueEG _PhaseWeight _evaluate.passed_bonus_mg _evaluate.passed_bonus_eg _mg_knight_table _mg_bishop_table _mg_rook_table _mg_queen_table _mg_king_table _mg_pawn_table _eg_knight_table _eg_bishop_table _eg_rook_table _eg_queen_table _eg_king_table _eg_pawn_table _qsearch.piece_vals _MVV_LVA _rand_state _mg_pesto _eg_pesto _hash_mb _main.check _BishopMagics _RookMagics _BishopTable _RookTable _square_to_str.buf _lmr_initialized _lmr_table _tt _board _si _BetweenBB _CastlingRightsMask _FileBB _KingAttacks _KnightAttacks _LineBB _PawnAttacks _RankBB _ZobristCastling _ZobristEP _ZobristPieces _ZobristSide __mh_execute_header _bishop_attacks _bitboard_init _board_compute_hash _board_in_check _board_is_repetition _board_make_move _board_make_null_move _board_print _board_set_fen _board_startpos _board_unmake_move _board_unmake_null_move _evaluate _generate_captures _generate_moves _history_penalty _is_move_legal _is_square_attacked _main _perft _perft_divide _pick_move _print_bitboard _rook_attacks _score_moves _search_data_age_history _search_data_init _search_position _timeman_elapsed _timeman_init _timeman_should_stop _tt_clear _tt_free _tt_init _tt_new_search _tt_probe _tt_score_from_tt _tt_score_to_tt _tt_store _uci_loop _update_history _update_killers _zobrist_init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         '    �   �
+          19            (   ,   
+          20  
+          21  s    ���:�x�
+
+  test_debug2.dSYM/Contents/Resources/DWARF/test_debug2:2196
+        2193  
+        2194  :
+        2195  ;
+    >>> 2196      Apple clang version 17.0.0 (clang-1700.0.13.5) /Users/mathieuacher/SANDBOX/chess-purec/src/test_debug2.c /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk MacOSX.sdk /Users/mathieuacher/SANDBOX/chess-purec char __ARRAY_SIZE_TYPE__ main check sq mask b occ masked_occ magic shift idx result correct table collision_count sub i expected s m mg sh max_idx cols o i2 exp Bitboard uint64_t unsigned long long RookMagicNumbers RookShifts int my_rook_mask r f popcount my_rook_attacks_slow block attacks file_of rank_of square_bb square_of rank file Board pieces colors occupied mailbox side castling ep_square halfmove fullmove ply game_ply hash history UndoInfo move captured_piece Move uint16_t unsigned short /Users/mathieuacher/SANDBOX/chess-purec/src/bitboard.c RankBB FileBB PawnAttacks KnightAttacks KingAttacks BetweenBB LineBB BishopMagics Magic RookMagics BishopTable RookTable BishopMagicNumbers BishopShifts unsigned int bishop_attacks rook_attacks bitboard_init init_pawn_attacks init_knight_attacks init_king_attacks init_magic is_bishop init_between_line s1 s2 rattks battks print_bitboard bishop_mask rook_mask bishop_attacks_slow rook_attacks_slow _Bool /Users/mathieuacher/SANDBOX/chess-purec/src/board.c ZobristPieces ZobristCastling ZobristEP ZobristSide CastlingRightsMask rand_state square_to_str buf zobrist_init p rand64 board_compute_hash h bb ep stm_pawns pop_lsb make_piece color piece_type board_set_fen fen piece color_of_piece board_startpos board_print piece_chars pc board_make_move u from to flags captured us them our_pawns cap_sq cap_piece promo_piece rook enemy_pawns move_from move_to move_flags piece_type_of remove_piece move_piece fromto move_is_promotion move_promo_piece_type put_piece board_unmake_move moving board_make_null_move board_unmake_null_move is_square_attacked by_color board_in_check king_sq lsb board_is_repetition start limit /Users/mathieuacher/SANDBOX/chess-purec/src/movegen.c generate_moves ml our their empty pawns push_dir rank7 rank3 non_promo single dbl left_cap right_cap promo_pawns promo_push promo_lcap promo_rcap ep_pawns knights flag bishops rooks queens movelist_init movelist_add move_encode queen_attacks generate_captures perft depth nodes move_is_legal legal perft_divide total move_to_str promo MoveList moves scores count /Users/mathieuacher/SANDBOX/chess-purec/src/evaluate.c evaluate passed_bonus_mg passed_bonus_eg eg phase mg_score eg_score score pt own_pawns file_mask adjacent_files front_span block_mask ahead rr kf kr df file_pawns shield friendly mob Mirror PieceValueMG mg_pesto mg_pawn_table mg_knight_table mg_bishop_table mg_rook_table mg_queen_table mg_king_table PieceValueEG eg_pesto eg_pawn_table eg_knight_table eg_bishop_table eg_rook_table eg_queen_table eg_king_table PhaseWeight /Users/mathieuacher/SANDBOX/chess-purec/src/search.c ASPIRATION_WINDOW lmr_initialized lmr_table qsearch piece_vals si alpha beta stand_pat see_val long long is_move_legal search_position best_move best_score delta elapsed init_lmr d search do_null pv_node in_check root tt_hit tte tt_move tt_score static_eval moves_searched quiets_tried quiets_count tt_flag R is_capture is_promo is_quiet reduction j q check_time is_draw wsq bsq has_non_pawn_material move_is_capture move_is_ep SearchInfo board tt sd tm pv pv_length sel_depth stopped TTable entries current_age TTEntry key age int16_t short uint8_t unsigned char SearchData killers TimeMan start_time soft_limit hard_limit infinite depth_limit int64_t /Users/mathieuacher/SANDBOX/chess-purec/src/tt.c tt_init mb bytes n tt_free tt_clear tt_new_search tt_score_to_tt tt_score_from_tt tt_probe found e tt_store /Users/mathieuacher/SANDBOX/chess-purec/src/movorder.c MVV_LVA search_data_init search_data_age_history c t score_moves victim attacker pick_move index best_idx tmp_m tmp_s update_killers update_history bonus history_penalty /Users/mathieuacher/SANDBOX/chess-purec/src/timeman.c timeman_init time_ms inc_ms movestogo movetime base time_now tv timeman_should_stop timeman_elapsed timeval tv_sec tv_usec __darwin_time_t long __darwin_suseconds_t __int32_t /Users/mathieuacher/SANDBOX/chess-purec/src/uci.c hash_mb uci_loop line len val uci_position spaces uci_go wtime btime winc binc parse_move str <        0   j   �   �   �   �   �   �   �   �   �   �           
+        2197    %  -  3  C  G  I  R  T  V  Y  \  d  i  k  n  r  {  �  �  �  �  �  �  �  �  �  �  �  �  �        
+        2198    "  (  /  6  ?  G  L  U  _  h  q  u  ~  �  �  �  �  �  �  �  �  �    
+        2199      $  0  :  A  N  T  _  k  u  �  �  �  �  �  �  �  �        +  .  1  8  ?  N  Z  d  x  �  �  �  �  �  �  �  
+
+  src/board.c:350
+         347      if (us == BLACK) b->fullmove--;
+         348  }
+         349  
+    >>>  350  void board_make_null_move(Board *b) {
+         351      UndoInfo *u = &b->history[b->game_ply];
+         352      u->move = MOVE_NONE;
+         353      u->castling = b->castling;
+
+  src/board.c:375
+         372      b->ply++;
+         373  }
+         374  
+    >>>  375  void board_unmake_null_move(Board *b) {
+         376      b->game_ply--;
+         377      b->ply--;
+         378      UndoInfo *u = &b->history[b->game_ply];
+
+  src/board.h:48
+          45  
+          46  void board_make_move(Board *b, Move m);
+          47  void board_unmake_move(Board *b);
+    >>>   48  void board_make_null_move(Board *b);
+          49  void board_unmake_null_move(Board *b);
+          50  
+          51  bool is_square_attacked(const Board *b, int sq, int by_color);
+
+  src/board.h:49
+          46  void board_make_move(Board *b, Move m);
+          47  void board_unmake_move(Board *b);
+          48  void board_make_null_move(Board *b);
+    >>>   49  void board_unmake_null_move(Board *b);
+          50  
+          51  bool is_square_attacked(const Board *b, int sq, int by_color);
+          52  bool board_in_check(const Board *b);
+
+  src/search.c:198
+         195          depth--;
+         196      }
+         197  
+    >>>  198      /* Null-move pruning */
+         199      if (do_null && !pv_node && !in_check && depth >= 3 && skip_move == MOVE_NONE &&
+         200          has_non_pawn_material(b, b->side) && static_eval >= beta) {
+         201          int R = 3 + depth / 6;
+
+  src/search.c:202
+         199      if (do_null && !pv_node && !in_check && depth >= 3 && skip_move == MOVE_NONE &&
+         200          has_non_pawn_material(b, b->side) && static_eval >= beta) {
+         201          int R = 3 + depth / 6;
+    >>>  202          board_make_null_move(b);
+         203          int score = -search(si, -beta, -beta + 1, depth - R - 1, false, MOVE_NONE);
+         204          board_unmake_null_move(b);
+         205          if (si->stopped) return 0;
+
+  src/search.c:204
+         201          int R = 3 + depth / 6;
+         202          board_make_null_move(b);
+         203          int score = -search(si, -beta, -beta + 1, depth - R - 1, false, MOVE_NONE);
+    >>>  204          board_unmake_null_move(b);
+         205          if (si->stopped) return 0;
+         206          if (score >= beta) {
+         207              if (score >= VALUE_MATE_IN_MAX_PLY) score = beta;
+
+[YES] chess-purec-codex  (C)  — 2 match(es)
+  src/engine.c:952
+         949      board->hash = hash;
+         950  }
+         951  
+    >>>  952  static void make_null_move(Board *board, Undo *undo) {
+         953      undo->snapshot = *board;
+         954  
+         955      uint64_t hash = board->hash;
+
+  src/engine.c:1777
+        1774  
+        1775      if (!in_check_node && depth >= 3 && has_non_pawn_material(board, board->side)) {
+        1776          Undo undo;
+    >>> 1777          make_null_move(board, &undo);
+        1778  
+        1779          int child_hash_len = hash_len;
+        1780          if (child_hash_len < MAX_HASH_HISTORY) {
+
+[YES] chess-py  (Python)  — 5 match(es)
+  chesspy/board.py:486
+         483              self.squares[undo.captured_sq] = undo.captured_piece
+         484  
+         485      def push_null(self) -> NullUndo:
+    >>>  486          """Make a null-move (pass) for search pruning purposes."""
+         487          undo = NullUndo(
+         488              ep_square=self.ep_square,
+         489              halfmove_clock=self.halfmove_clock,
+
+  chesspy/board.py:514
+         511          return undo
+         512  
+         513      def pop_null(self, undo: NullUndo) -> None:
+    >>>  514          # Remove current key from history/counts (position after the null move).
+         515          last_key = self._key_history.pop()
+         516          cnt = self._key_counts.get(last_key, 0) - 1
+         517          if cnt <= 0:
+
+  chesspy/search.py:56
+          53          return self.stop or (self.stop_time and time.perf_counter() >= self.stop_time)
+          54  
+          55      def _has_non_pawn_material(self, board) -> bool:
+    >>>   56          """Whether side-to-move has any piece other than pawns/kings (null-move pruning safety)."""
+          57          key = board.zobrist_key
+          58          v = self.non_pawn_cache.get(key)
+          59          if v is not None:
+
+  chesspy/search.py:252
+         249              if static_eval - (RFP_MARGIN * depth) >= beta:
+         250                  return static_eval, 0
+         251  
+    >>>  252          # Null-move pruning (avoid in check / pawn endgames to reduce zugzwang risk).
+         253          if allow_null and (not in_check) and depth >= 3 and self._has_non_pawn_material(board):
+         254              R = 2
+         255              null_undo = board.push_null()
+
+  tests/test_null_move.py:8
+           5  from chesspy.board import Board
+           6  
+           7  
+    >>>    8  class TestNullMove(unittest.TestCase):
+           9      def test_push_pop_null_restores_state(self) -> None:
+          10          # Position where e2e4 creates a capturable EP square (black pawn on d4).
+          11          fen = "4k3/8/8/8/3p4/8/4P3/4K3 w - - 0 1"
+
+[YES] chess-py-cc  (Python)  — 11 match(es)
+  tests/test_board.py:103
+         100      def test_null_move_hash(self):
+         101          board = Board()
+         102          h0 = board.hash
+    >>>  103          board.make_null_move()
+         104          h1 = board.hash
+         105          assert h0 != h1
+         106          board.unmake_null_move()
+
+  tests/test_board.py:106
+         103          board.make_null_move()
+         104          h1 = board.hash
+         105          assert h0 != h1
+    >>>  106          board.unmake_null_move()
+         107          assert board.hash == h0
+         108  
+         109  
+
+  engine/board.py:362
+         359          self.pst_mg = old_pst_mg
+         360          self.pst_eg = old_pst_eg
+         361  
+    >>>  362      def make_null_move(self):
+         363          """Make a null move (pass). Used in null-move pruning."""
+         364          h = self.hash
+         365          self.history.append((
+
+  engine/board.py:363
+         360          self.pst_eg = old_pst_eg
+         361  
+         362      def make_null_move(self):
+    >>>  363          """Make a null move (pass). Used in null-move pruning."""
+         364          h = self.hash
+         365          self.history.append((
+         366              0, NONE, 0,
+
+  engine/board.py:378
+         375          self.hash = h
+         376          self.halfmove += 1
+         377  
+    >>>  378      def unmake_null_move(self):
+         379          """Unmake a null move."""
+         380          (_, _, _, castling, ep_square, halfmove,
+         381           old_hash, old_pst_mg, old_pst_eg) = self.history.pop()
+
+  engine/board.py:379
+         376          self.halfmove += 1
+         377  
+         378      def unmake_null_move(self):
+    >>>  379          """Unmake a null move."""
+         380          (_, _, _, castling, ep_square, halfmove,
+         381           old_hash, old_pst_mg, old_pst_eg) = self.history.pop()
+         382          self.side ^= 1
+
+  engine/search.py:1
+    >>>    1  """Search: iterative deepening, alpha-beta, PVS, null-move pruning, LMR, quiescence."""
+           2  
+           3  import time
+           4  
+
+  engine/search.py:168
+         165          return pv
+         166  
+         167      def _alpha_beta(self, alpha, beta, depth, ply, is_pv):
+    >>>  168          """Alpha-beta search with PVS, null-move pruning, LMR."""
+         169          board = self.board
+         170          info = self.info
+         171  
+
+  engine/search.py:219
+         216              if score <= alpha:
+         217                  return score
+         218  
+    >>>  219          # Null-move pruning
+         220          if (not is_pv and not in_check and depth >= 3
+         221                  and board.has_non_pawn_material(board.side)
+         222                  and static_eval >= beta):
+
+  engine/search.py:224
+         221                  and board.has_non_pawn_material(board.side)
+         222                  and static_eval >= beta):
+         223              R = 3 + depth // 6
+    >>>  224              board.make_null_move()
+         225              self.prev_move_stack[ply] = 0
+         226              score = -self._alpha_beta(-beta, -beta + 1, depth - R - 1, ply + 1, False)
+         227              board.unmake_null_move()
+
+  engine/search.py:227
+         224              board.make_null_move()
+         225              self.prev_move_stack[ply] = 0
+         226              score = -self._alpha_beta(-beta, -beta + 1, depth - R - 1, ply + 1, False)
+    >>>  227              board.unmake_null_move()
+         228              if info.stopped:
+         229                  return 0
+         230              if score >= beta:
+
+[YES] chess-revisit-java-toCOBOL-codex  (COBOL)  — 8 match(es)
+  chess_engine_dbg:11733
+        11730  9�@�(9�@�(9�@�?9�@�?
+        11731  9�@�?)9�@�?%9�@�(�9�@�� ��@�h  ���(I ��C ��_�0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �@� �0  �@� �0  �
+        11732  @� �0  �@� �0  �@� �0  �@� �0  �@� �0  �
+    >>> 11733  @� �0  �"@� �0  �&@� �0  �*@� �0  �.@� �0  �2@� �0  �6@� �0  �:@� �0  �>@� �0  �B@� �0  �F@� �0  �J@� �0  �N@� �0  �R@� �0  �V@� �0  �Z@� �0  �^@� �0  �b@� �0  �f@� �0  �j@� �0  �n@� �0  �r@� �0  �v@� �0  �z@� �0  �~@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �A� �0  �A� ִ  src/cobol/chess_engine.cob 3.2  CHESS-ENGINE LEGAL-MOVE TOKEN UCI-LINE FEN-PART-1 FEN-PART-3 Z-CASTLING-KEY Z-EP-KEY B-PIECES B-OCCUPANCY B-PIECE-AT Z-PIECE-KEY-SQ 0000     FILE-CHARS RANK-CHARS PROMO-CHARS U-MOVE U-ZOBRIST U-PAWN-KEY U-CASTLING U-EP-SQUARE U-HALF-MOVE U-FULL-MOVE POS-HISTORY CASTLING-MASK PSEUDO-MOVE CAPTURE-MOVE KNIGHT-ATTACKS KING-ATTACKS PAWN-ATTACK-S PF-DEPTH PF-SIZE PF-IDX PF-MOVE MVV-LVA-ATTACKER KILLER-L1 KILLER-L2 HISTORY-TO TT-KEY TT-DATA EVAL-MG-SQ EVAL-EG-SQ EVAL-PHASE-INC EVAL-KN-MOB-MG EVAL-KN-MOB-EG EVAL-BI-MOB-MG EVAL-BI-MOB-EG EVAL-RK-MOB-MG EVAL-RK-MOB-EG PH-KEY PH-SCORE BB-FILE-MASK EVAL-ADJ-FILE EVAL-PASSED-SQ EVAL-PASSED-BONUS SI-PV-LEN SF-SIZE SF-MOVE SF-TT-MOVE SF-PLY SF-SCORE QF-SIZE QF-MOVE QF-SCORE QF-STATE QF-PLY QF-IN-CHECK QF-BEST-SCORE QF-IDX QF-STANDPAT QF-BETA QF-ALPHA QF-CUR-MOVE SF-CUR-MOVE SI-PV-MOVE SF-STATE SF-DEPTH SF-ALPHA SF-BETA SF-IN-CHECK SF-IS-PV SF-STATIC-EVAL SF-NULL-DONE SF-NULL-R SF-ORIG-ALPHA SF-RESEARCH SF-CUR-RSDONE SF-BEST-SCORE SF-BEST-MOVE SF-FLAG SF-IDX SF-CUR-RED SF-CUR-NULLW SF-CUR-QUIET SF-CUR-CHDEPTH SF-CUR-GCHECK MB-ROOK-MASK MB-ROOK-BITS MB-ROOK-SHIFT MB-ROOK-IDX-MASK MB-ROOK-MAGIC MB-ROOK-ATTACK-IDX MB-BISHOP-MASK MB-BISHOP-BITS MB-BISHOP-SHIFT MB-BISHOP-IDX-MASK MB-BISHOP-MAGIC MB-BISHOP-ATTACK-IDX MB-U64-SHIFT-DIV MB-U64-OCC-V MB-U64-MOD MB-U64-MAGIC-V MB-U64-A0 MB-U64-B0 MB-U64-B1 MB-U64-A1 MB-U64-PROD-LOW MB-U64-CROSS-LOW MB-U32-MOD MB-U64-QUOT SEE-GAIN SEE-VALUE BB-RANK-MASK rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1                         PNBRQKpnbrqk abcdefgh 12345678 nbrq   uci id name ChessEngine-COBOL id author Translation option name Hash type spin default 64 min 1 max 1024 option name OwnBook type check default true option name BookFile type string default book.bin uciok isready readyok ucinewgame position legal info string legal-size  moves 1 e8attacked 60 0 info string e8 by white  e8diag d key info string key  draw info string draw   repetition   halfmove  perft Nodes:  Nodes: 0 go setoption stop quit 128 2 wtime btime winc binc movestogo depth movetime infinite 30 10 bestmove  bestmove 0000 name value Hash 1024 OwnBook true BookFile startpos 3 fen 56 b - -1 8 4 5 6 7 9 11 15 61 62 59 58 100 320 330 500 900 20000 50 90 1000000 10000 24 13 14 30000 10000000 900000 075 info depth   score mate   nodes   nps   time   score cp  info pv  a 756607761056301088 486389076241424385 72092778679042112 2630106649158748161 180146733941000192 648589814731636770 180146184134856832 2918332697065554048 11529355785708503092 1267187687899136 2490631468938694656 293015506591416352 288934097953489024 3096241940480520 2596606664451031552 281616710647938 9719133065330688 1193595738806829072 576745526890856466 360429257568030720 722829389795952768 9223513324166054400 144397214955930112 576744426307850385 140739637952517 1170971088563208264 19799803437186 942527774937055360 5070958365245568 72061994232053888 10385301842383864320 581848436590281801 329150075794096256 72128031505784833 5197155070050832448 288300890958333970 146649081425430530 581105115214119936 4828149286694814032 2323899487900144641 18049857767899136 9223654062661107744 9516248984046403600 1153765998257045536 577591050391027840 5066584209096708 1152939105383088648 4827859488876920833 180144604161573632 63067988042981952 35188671256320 2469116105206038656 2251817001949568 562984581857792 9227893237937669120 2305843628831998464 4647715366276964609 18014538100186369 2307340820539246849 360850989000950818 5231493951774524418 281767035013651 4611687186792841348 10696191184830530 9917227751251903040 2307114353926610960 2335125204253151232 7099935816794769416 1130435459416064 72200668527460369 13836258868546633738 11400320691298305 288310780225421568 144612171694473348 37163495452180496 8935681818720 2305988166290530304 3459059462248091652 1155173665466746882 9314574473536473344 146375853238993920 20266336064686592 1087641317556690952 1154047576346992641 594756660686751761 18049591482261512 140738897911808 9800118663272763392 369299586550874768 1154051803924398209 2306414859195514913 1126724741955906 10670162350880858112 457257199186501649 110345957249649152 5188217414386523136 73258399252365824 365081849510826017 1128253566878720 9277419647610126624 9241387535958149122 324401040235561104 72621153876968002 578994379315020032 9223937469837230208 302023234194513920 7036977531065344 144116571189805184 3677198029416300800 292751911566753824 4616754818640315144 2342470636376440960 76847071520890880 7494838608309258752 2378182361733988352 9367487226022232098 2269924327424 634426866335808 18032007883821056 586040256495747604 18155688169644036 40816225332369609 288935455733403656 40533771111638032 281476087169285 4504184552499712 2675147045886527752 4616224805122081088 82 47 81 67 106 120 78 72 85 115 70 55 80 77 94 99 88 92 57 68 95 103 105 76 89 108 113 147 138 107 180 216 143 177 150 208 116 71 232 316 279 304 309 318 314 308 284 325 334 336 355 323 328 349 347 356 354 362 321 324 341 353 350 365 358 329 390 374 406 359 290 397 402 421 466 410 381 264 296 409 373 360 399 344 170 248 303 288 398 240 322 230 332 351 352 326 369 380 372 386 366 379 392 383 375 378 391 377 361 370 384 415 363 408 405 400 339 395 424 283 340 357 458 464 478 494 493 484 440 451 433 461 457 468 476 488 471 432 452 460 480 477 472 444 441 465 486 470 483 454 453 503 501 512 469 496 513 522 538 504 509 535 539 557 544 521 519 528 540 508 520 1007 1016 1036 1000 994 975 998 990 1017 1027 1033 1040 1022 1026 1011 1014 1023 1020 1039 1030 999 1015 1021 1028 1009 1042 1012 1008 1032 1054 1081 1072 1082 1001 986 1053 1079 997 1025 1037 1084 1069 1068 1070 -15 36 12 -54 -28 -8 -64 -43 -16 -14 -22 -46 -44 -30 -27 -49 -39 -33 -51 -17 -20 -12 -25 -36 -9 22 29 -7 -4 -38 -29 -65 23 16 -56 -34 102 84 104 98 101 93 86 91 87 97 126 118 111 188 194 179 161 176 178 272 267 252 228 241 226 259 281 258 266 263 231 217 239 261 271 276 237 278 280 291 275 297 306 298 285 292 289 257 262 256 273 229 223 243 268 253 250 254 218 182 274 301 282 270 294 305 307 310 300 311 299 295 293 286 514 515 511 507 499 516 492 506 505 517 525 523 530 527 524 903 908 914 893 931 904 916 895 913 906 920 909 951 942 945 953 946 941 918 964 955 983 967 970 959 939 958 960 981 993 976 972 985 971 919 956 968 977 961 966 936 927 963 -53 -21 -11 -24 -5 -19 -3 21 -18 27 26 33 17 20 45 44 38 -74 -35 35 -10 18 -40 28 25 31 1070372 info string e8 pawn  info string e8 knight  info string e8 bishopq  info string e8 rookq  info string e8 king  info string FEN part1= info string side=  castling= info string ep=  half=  full= info string a4-piece=  d7-piece=  d6-piece= Feb 19 2026 17:57:27 64 4294967296 18446744073709551616 225 200 2047 16383 255 48 65535 32 4294967295 29000 63        !                   A             @          	   A                        "                                     MAIN-ENTRY INIT-ENGINE UCI-LOOP HANDLE-GO HANDLE-SETOPTION HANDLE-POSITION TOKENIZE-LINE PARSE-FEN FEN-CHAR-TO-PIECE BOARD-CLEAR BOARD-PUT-PIECE BOARD-REMOVE-PIECE BOARD-MOVE-PIECE MOVE-ENCODE MOVE-DECODE MOVE-TO-UCI PARSE-UCI-MOVE BOARD-MAKE-MOVE BOARD-UNMAKE-MOVE BOARD-MAKE-NULL-MOVE BOARD-UNMAKE-NULL-MOVE UPDATE-CASTLING-RIGHTS IS-REPETITION IS-INSUFFICIENT-MATERIAL IS-DRAW GENERATE-LEGAL-MOVES GENERATE-LEGAL-CAPTURES GENERATE-PSEUDO-MOVES GENERATE-PAWN-MOVES GENERATE-KNIGHT-MOVES GENERATE-BISHOP-MOVES GENERATE-ROOK-MOVES GENERATE-QUEEN-MOVES ADD-SLIDING-MOVES GENERATE-KING-MOVES GENERATE-CASTLING-MOVES ADD-PSEUDO-MOVE ADD-PROMOTION-MOVES FIND-KING-SQUARE IS-SQUARE-ATTACKED BISHOP-ATTACKS-SLOW ROOK-ATTACKS-SLOW RUN-PERFT INIT-SEE INIT-SEARCH INIT-MVV-LVA KILLERS-CLEAR KILLER-STORE HISTORY-CLEAR HISTORY-AGE HISTORY-UPDATE TT-CONFIGURE TT-CLEAR TT-SCORE-TO-STORE TT-SCORE-FROM-PROBE TT-PROBE TT-STORE GET-TIME-MS CHECK-TIME PIECE-TYPE-VALUE EVALUATE-POSITION         A         EVALUATE-MOBILITY EVAL-BITCOUNT-MASK EVALUATE-PAWN-STRUCTURE EVALUATE-PAWNS-FOR-COLOR EVALUATE-KING-SAFETY EVALUATE-KING-FOR-COLOR IS-IN-CHECK HAS-NONPAWN-MATERIAL SEARCH-RESET RUN-SEARCH SEARCH-SCORE-MOVES SEARCH-PICK-BEST QUIESC-SCORE-MOVES QUIESC-PICK-BEST QUIESC-RETURN-NODE SEARCH-QUIESCENCE SEARCH-UPDATE-PV SEARCH-RETURN-NODE SEARCH-NEGAMAX PRINT-SEARCH-INFO CHAR-PAIR-TO-SQUARE BIT-OF-SQ INIT-MAGIC-BITBOARDS INIT-MAGIC-U64 MAGIC-COMPUTE-INDEX MAGIC-BITCOUNT-MASK MAGIC-ROOK-MASK-FROM-SQ MAGIC-BISHOP-MASK-FROM-SQ ROOK-ATTACKS-BLOCKERS-SLOW BISHOP-ATTACKS-BLOCKERS-SLOW ROOK-ATTACKS-MAGIC ROOK-ATTACKS-MAGIC-OCC BISHOP-ATTACKS-MAGIC BISHOP-ATTACKS-MAGIC-OCC QUEEN-ATTACKS-MAGIC SEE-EVALUATE SEE-GE SEE-GET-SMALLEST-ATTACKER SEE-FIRST-BIT-SQUARE INIT-MAGIC-CONSTANTS LOAD-EVAL-TABLES INIT-EVALUATION INIT-EVAL-PAWN-TABLES INIT-ZOBRIST Z-NEXT-RANDOM RESET-POSITION-HISTORY INIT-BITBOARD-MASKS INIT-CASTLING-MASKS INIT-ATTACK-TABLES ADD-ATTACK-IF-ONBOARD DEBUG-E8-DIAG DEBUG-DUMP        "               !                                                                                                                                                                                                                                           
+        11734                            
+        11735                 
+        11736         
+
+  chess_engine_trace:13821
+        13818  A� �0  �"A� �0  �&A� �0  �.A� �0  �@� �0  �@� �0  �
+        13819  @� �0  �@� �0  �@� �0  �@� �0  �@� �0  �
+        13820  @� �0  �"@� �0  �&@� �0  �*@� �0  �.@� �0  �2@� �0  �6@� �0  �:@� �0  �>@� �0  �B@� �0  �F@� �0  �J@� �0  �N@� �0  �R@� �0  �V@� �0  �Z@� �0  �^@� �0  �b@� �0  �f@� �0  �j@� �0  �n@� �0  �r@� �0  �v@� �0  �z@� �0  �~@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �A� �0  �A� �0  �
+    >>> 13821  A� �0  �A� �0  �A� �0  �2A� �0  �6A� �0  �:A� ִ  src/cobol/chess_engine.cob 3.2  CHESS-ENGINE LEGAL-MOVE TOKEN UCI-LINE FEN-PART-1 FEN-PART-3 Z-CASTLING-KEY Z-EP-KEY B-PIECES B-OCCUPANCY B-PIECE-AT Z-PIECE-KEY-SQ EVAL-MG-SQ EVAL-EG-SQ EVAL-PHASE-INC 0000     FILE-CHARS RANK-CHARS PROMO-CHARS U-MOVE U-ZOBRIST U-PAWN-KEY U-CASTLING U-EP-SQUARE U-HALF-MOVE U-FULL-MOVE U-PST-MG U-PST-EG U-PHASE POS-HISTORY CASTLING-MASK PSEUDO-MOVE CAPTURE-MOVE KNIGHT-ATTACKS KING-ATTACKS PAWN-ATTACK-S PF-DEPTH PF-SIZE PF-IDX PF-MOVE POLY-RANDOM MB-U64-A0 MB-U64-B0 MB-U64-B1 MB-U64-A1 MB-U64-PROD-LOW MB-U64-CROSS-LOW MB-U32-MOD MB-U64-PROD-MOD 00 POLY-BOOK-RECORD POLY-BOOK-KEY POLY-BOOK-MOVE POLY-BOOK-WEIGHT MVV-LVA-ATTACKER KILLER-L1 KILLER-L2 HISTORY-TO TT-KEY TT-DATA ������� ������� POLL-STATE poll EVAL-KN-MOB-MG EVAL-KN-MOB-EG EVAL-BI-MOB-MG EVAL-BI-MOB-EG EVAL-RK-MOB-MG EVAL-RK-MOB-EG PH-KEY PH-SCORE BB-FILE-MASK EVAL-ADJ-FILE EVAL-PASSED-SQ EVAL-PASSED-BONUS SI-PV-LEN SF-SIZE SF-MOVE SF-TT-MOVE SF-PLY SF-SCORE QF-SIZE QF-MOVE QF-SCORE QF-STATE QF-PLY QF-IN-CHECK QF-BEST-SCORE QF-IDX QF-STANDPAT QF-BETA QF-ALPHA QF-CUR-MOVE SF-CUR-MOVE SI-PV-MOVE SF-STATE SF-DEPTH SF-ALPHA SF-BETA SF-IN-CHECK SF-IS-PV SF-STATIC-EVAL SF-NULL-DONE SF-NULL-R SF-ORIG-ALPHA SF-RESEARCH SF-CUR-RSDONE SF-BEST-SCORE SF-BEST-MOVE SF-FLAG SF-IDX SF-CUR-RED SF-CUR-NULLW SF-CUR-QUIET SF-CUR-CHDEPTH SF-CUR-GCHECK MB-ROOK-MASK MB-ROOK-BITS MB-ROOK-SHIFT MB-ROOK-IDX-MASK MB-ROOK-MAGIC MB-ROOK-ATTACK-IDX MB-BISHOP-MASK MB-BISHOP-BITS MB-BISHOP-SHIFT MB-BISHOP-IDX-MASK MB-BISHOP-MAGIC MB-BISHOP-ATTACK-IDX MB-U64-SHIFT-DIV MB-U64-OCC-V MB-U64-MOD MB-U64-MAGIC-V MB-U64-QUOT SEE-GAIN SEE-VALUE BB-RANK-MASK rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1                         PNBRQKpnbrqk abcdefgh 12345678 nbrq book.bin POLY-BOOK-IN 0   uci id name ChessEngine-COBOL id author Translation option name Hash type spin default 64 min 1 max 1024 option name OwnBook type check default true option name BookFile type string default book.bin uciok isready readyok ucinewgame position legal info string legal-size  moves 1 e8attacked 60 info string e8 by white  e8diag d key info string key  draw info string draw   repetition   halfmove  perft Nodes:  Nodes: 0 go setoption stop quit 128 2 wtime btime winc binc movestogo depth movetime infinite 30 10 bestmove  bestmove 0000 name value Hash 1024 OwnBook true BookFile startpos 3 fen 56 b - -1 8 4 5 6 7 9 11 15 61 62 59 58 100 320 330 500 900 20000 10723151780598845931 50 90 1000000 10000 ponderhit 24 13 14 30000 10000000 900000 075 info depth   score mate   nodes   nps   time   score cp  info pv  a 756607761056301088 486389076241424385 72092778679042112 2630106649158748161 180146733941000192 648589814731636770 180146184134856832 2918332697065554048 11529355785708503092 1267187687899136 2490631468938694656 293015506591416352 288934097953489024 3096241940480520 2596606664451031552 281616710647938 9719133065330688 1193595738806829072 576745526890856466 360429257568030720 722829389795952768 9223513324166054400 144397214955930112 576744426307850385 140739637952517 1170971088563208264 19799803437186 942527774937055360 5070958365245568 72061994232053888 10385301842383864320 581848436590281801 329150075794096256 72128031505784833 5197155070050832448 288300890958333970 146649081425430530 581105115214119936 4828149286694814032 2323899487900144641 18049857767899136 9223654062661107744 9516248984046403600 1153765998257045536 577591050391027840 5066584209096708 1152939105383088648 4827859488876920833 180144604161573632 63067988042981952 35188671256320 2469116105206038656 2251817001949568 562984581857792 9227893237937669120 2305843628831998464 4647715366276964609 18014538100186369 2307340820539246849 360850989000950818 5231493951774524418 281767035013651 4611687186792841348 10696191184830530 9917227751251903040 2307114353926610960 2335125204253151232 7099935816794769416 1130435459416064 72200668527460369 13836258868546633738 11400320691298305 288310780225421568 144612171694473348 37163495452180496 8935681818720 2305988166290530304 3459059462248091652 1155173665466746882 9314574473536473344 146375853238993920 20266336064686592 1087641317556690952 1154047576346992641 594756660686751761 18049591482261512 140738897911808 9800118663272763392 369299586550874768 1154051803924398209 2306414859195514913 1126724741955906 10670162350880858112 457257199186501649 110345957249649152 5188217414386523136 73258399252365824 365081849510826017 1128253566878720 9277419647610126624 9241387535958149122 324401040235561104 72621153876968002 578994379315020032 9223937469837230208 302023234194513920 7036977531065344 144116571189805184 3677198029416300800 292751911566753824 4616754818640315144 2342470636376440960 76847071520890880 7494838608309258752 2378182361733988352 9367487226022232098 2269924327424 634426866335808 18032007883821056 586040256495747604 18155688169644036 40816225332369609 288935455733403656 40533771111638032 281476087169285 4504184552499712 2675147045886527752 4616224805122081088 82 47 81 67 106 120 78 72 85 115 70 55 80 77 94 99 88 92 57 68 95 103 105 76 89 108 113 147 138 107 180 216 143 177 150 208 116 71 232 316 279 304 309 318 314 308 284 325 334 336 355 323 328 349 347 356 354 362 321 324 341 353 350 365 358 329 390 374 406 359 290 397 402 421 466 410 381 264 296 409 373 360 399 344 170 248 303 288 398 240 322 230 332 351 352 326 369 380 372 386 366 379 392 383 375 378 391 377 361 370 384 415 363 408 405 400 339 395 424 283 340 357 458 464 478 494 493 484 440 451 433 461 457 468 476 488 471 432 452 460 480 477 472 444 441 465 486 470 483 454 453 503 501 512 469 496 513 522 538 504 509 535 539 557 544 521 519 528 540 508 520 1007 1016 1036 1000 994 975 998 990 1017 1027 1033 1040 1022 1026 1011 1014 1023 1020 1039 1030 999 1015 1021 1028 1009 1042 1012 1008 1032 1054 1081 1072 1082 1001 986 1053 1079 997 1025 1037 1084 1069 1068 1070 -15 36 12 -54 -28 -8 -64 -43 -16 -14 -22 -46 -44 -30 -27 -49 -39 -33 -51 -17 -20 -12 -25 -36 -9 22 29 -7 -4 -38 -29 -65 23 16 -56 -34 102 84 104 98 101 93 86 91 87 97 126 118 111 188 194 179 161 176 178 272 267 252 228 241 226 259 281 258 266 263 231 217 239 261 271 276 237 278 280 291 275 297 306 298 285 292 289 257 262 256 273 229 223 243 268 253 250 254 218 182 274 301 282 270 294 305 307 310 300 311 299 295 293 286 514 515 511 507 499 516 492 506 505 517 525 523 530 527 524 903 908 914 893 931 904 916 895 913 906 920 909 951 942 945 953 946 941 918 964 955 983 967 970 959 939 958 960 981 993 976 972 985 971 919 956 968 977 961 966 936 927 963 -53 -21 -11 -24 -5 -19 -3 21 -18 27 26 33 17 20 45 44 38 -74 -35 35 -10 18 -40 28 25 31 1070372 info string e8 pawn  info string e8 knight  info string e8 bishopq  info string e8 rookq  info string e8 king  info string FEN part1= info string side=  castling= info string ep=  half=  full= info string a4-piece=  d7-piece=  d6-piece= Feb 20 2026 20:32:33 64 2685821657736338717 4294967296 18446744073709551616 225 200 2047 16383 255 48 65535 32 4294967295 29000 63   !                   A             @          	   A                                       "                                     CHESS-ENGINE MAIN-ENTRY INIT-ENGINE UCI-LOOP HANDLE-GO HANDLE-SETOPTION HANDLE-POSITION TOKENIZE-LINE PARSE-FEN FEN-CHAR-TO-PIECE BOARD-CLEAR BOARD-PUT-PIECE       A         BOARD-REMOVE-PIECE BOARD-MOVE-PIECE MOVE-ENCODE MOVE-DECODE MOVE-TO-UCI PARSE-UCI-MOVE BOARD-MAKE-MOVE BOARD-UNMAKE-MOVE BOARD-MAKE-NULL-MOVE BOARD-UNMAKE-NULL-MOVE UPDATE-CASTLING-RIGHTS IS-REPETITION IS-INSUFFICIENT-MATERIAL IS-DRAW GENERATE-LEGAL-MOVES GENERATE-LEGAL-CAPTURES GENERATE-PSEUDO-MOVES GENERATE-PAWN-MOVES GENERATE-KNIGHT-MOVES GENERATE-BISHOP-MOVES GENERATE-ROOK-MOVES GENERATE-QUEEN-MOVES ADD-SLIDING-MOVES GENERATE-KING-MOVES GENERATE-CASTLING-MOVES ADD-PSEUDO-MOVE ADD-PROMOTION-MOVES FIND-KING-SQUARE IS-SQUARE-ATTACKED BISHOP-ATTACKS-SLOW ROOK-ATTACKS-SLOW RUN-PERFT INIT-SEE INIT-POLYGLOT POLY-NEXT-RANDOM U64-MUL-MOD POLY-BOOK-LOAD POLY-DECODE-ENTRY POLY-BOOK-PROBE POLY-COMPUTE-KEY POLY-MAP-PIECE POLY-CONVERT-MOVE INIT-SEARCH INIT-MVV-LVA KILLERS-CLEAR KILLER-STORE HISTORY-CLEAR HISTORY-AGE HISTORY-UPDATE TT-CONFIGURE TT-CLEAR TT-SCORE-TO-STORE TT-SCORE-FROM-PROBE TT-PROBE TT-STORE GET-TIME-MS CHECK-TIME POLL-UCI-DURING-SEARCH PIECE-TYPE-VALUE EVALUATE-POSITION EVALUATE-MOBILITY EVAL-BITCOUNT-MASK EVALUATE-PAWN-STRUCTURE EVALUATE-PAWNS-FOR-COLOR EVALUATE-KING-SAFETY EVALUATE-KING-FOR-COLOR IS-IN-CHECK HAS-NONPAWN-MATERIAL SEARCH-RESET RUN-SEARCH SEARCH-SCORE-MOVES SEARCH-PICK-BEST QUIESC-SCORE-MOVES QUIESC-PICK-BEST QUIESC-RETURN-NODE SEARCH-QUIESCENCE SEARCH-UPDATE-PV SEARCH-RETURN-NODE SEARCH-NEGAMAX PRINT-SEARCH-INFO CHAR-PAIR-TO-SQUARE BIT-OF-SQ INIT-MAGIC-BITBOARDS INIT-MAGIC-U64 MAGIC-COMPUTE-INDEX MAGIC-BITCOUNT-MASK MAGIC-ROOK-MASK-FROM-SQ MAGIC-BISHOP-MASK-FROM-SQ ROOK-ATTACKS-BLOCKERS-SLOW BISHOP-ATTACKS-BLOCKERS-SLOW ROOK-ATTACKS-MAGIC ROOK-ATTACKS-MAGIC-OCC BISHOP-ATTACKS-MAGIC BISHOP-ATTACKS-MAGIC-OCC QUEEN-ATTACKS-MAGIC SEE-EVALUATE SEE-GE SEE-GET-SMALLEST-ATTACKER SEE-FIRST-BIT-SQUARE INIT-MAGIC-CONSTANTS LOAD-EVAL-TABLES INIT-EVALUATION INIT-EVAL-PAWN-TABLES INIT-ZOBRIST Z-NEXT-RANDOM RESET-POSITION-HISTORY INIT-BITBOARD-MASKS INIT-CASTLING-MASKS INIT-ATTACK-TABLES ADD-ATTACK-IF-ONBOARD DEBUG-E8-DIAG DEBUG-DUMP                     "               !                                                                                                                                                                                                                              
+        13822                            
+        13823                         
+        13824         
+
+  src/cobol/chess_engine.cob:58
+          55         78  MAX-SEARCH-PLY            VALUE 128.
+          56         78  NODE-CHECK-INTERVAL       VALUE 2048.
+          57         78  ASPIRATION-WINDOW         VALUE 25.
+    >>>   58         78  NULL-MOVE-R-BASE          VALUE 3.
+          59         78  MATE-SCORE                VALUE 30000.
+          60         78  MATE-BOUND                VALUE 29000.
+          61         78  INF-SCORE                 VALUE 32000.
+
+  src/cobol/chess_engine.cob:1678
+        1675             SUBTRACT 1 FROM B-PLY
+        1676             .
+        1677  
+    >>> 1678         BOARD-MAKE-NULL-MOVE.
+        1679             IF B-PLY >= MAX-PLY
+        1680                 EXIT PARAGRAPH
+        1681             END-IF
+
+  src/cobol/chess_engine.cob:1715
+        1712             END-IF
+        1713             .
+        1714  
+    >>> 1715         BOARD-UNMAKE-NULL-MOVE.
+        1716             IF B-PLY <= 0
+        1717                 EXIT PARAGRAPH
+        1718             END-IF
+
+  src/cobol/chess_engine.cob:3937
+        3934                                 IF SEARCH-NONPAWN-FLAG = 1
+        3935                                     MOVE 1 TO SF-NULL-DONE(SEARCH-PICK-LEVEL)
+        3936                                     COMPUTE SF-NULL-R(SEARCH-PICK-LEVEL) =
+    >>> 3937                                         NULL-MOVE-R-BASE
+        3938                                         + FUNCTION INTEGER(
+        3939                                             SF-DEPTH(SEARCH-PICK-LEVEL) / 6)
+        3940                                     PERFORM BOARD-MAKE-NULL-MOVE
+
+  src/cobol/chess_engine.cob:3940
+        3937                                         NULL-MOVE-R-BASE
+        3938                                         + FUNCTION INTEGER(
+        3939                                             SF-DEPTH(SEARCH-PICK-LEVEL) / 6)
+    >>> 3940                                     PERFORM BOARD-MAKE-NULL-MOVE
+        3941                                     MOVE 4 TO SF-STATE(SEARCH-PICK-LEVEL)
+        3942  
+        3943                                     ADD 1 TO SEARCH-LEVEL
+
+  src/cobol/chess_engine.cob:4237
+        4234                         END-IF
+        4235  
+        4236                     WHEN 4
+    >>> 4237                         PERFORM BOARD-UNMAKE-NULL-MOVE
+        4238                         IF SI-STOPPED = 1
+        4239                             MOVE 0 TO SEARCH-NODE-SCORE
+        4240                             PERFORM SEARCH-RETURN-NODE
+
+[YES] chess-revisit-java-toRust-codex  (COBOL)  — 12 match(es)
+  chess-revisit-java-toCOBOL/chess_engine_dbg:11733
+        11730  9�@�(9�@�(9�@�?9�@�?
+        11731  9�@�?)9�@�?%9�@�(�9�@�� ��@�h  ���(I ��C ��_�0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �@� �0  �@� �0  �
+        11732  @� �0  �@� �0  �@� �0  �@� �0  �@� �0  �
+    >>> 11733  @� �0  �"@� �0  �&@� �0  �*@� �0  �.@� �0  �2@� �0  �6@� �0  �:@� �0  �>@� �0  �B@� �0  �F@� �0  �J@� �0  �N@� �0  �R@� �0  �V@� �0  �Z@� �0  �^@� �0  �b@� �0  �f@� �0  �j@� �0  �n@� �0  �r@� �0  �v@� �0  �z@� �0  �~@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �A� �0  �A� ִ  src/cobol/chess_engine.cob 3.2  CHESS-ENGINE LEGAL-MOVE TOKEN UCI-LINE FEN-PART-1 FEN-PART-3 Z-CASTLING-KEY Z-EP-KEY B-PIECES B-OCCUPANCY B-PIECE-AT Z-PIECE-KEY-SQ 0000     FILE-CHARS RANK-CHARS PROMO-CHARS U-MOVE U-ZOBRIST U-PAWN-KEY U-CASTLING U-EP-SQUARE U-HALF-MOVE U-FULL-MOVE POS-HISTORY CASTLING-MASK PSEUDO-MOVE CAPTURE-MOVE KNIGHT-ATTACKS KING-ATTACKS PAWN-ATTACK-S PF-DEPTH PF-SIZE PF-IDX PF-MOVE MVV-LVA-ATTACKER KILLER-L1 KILLER-L2 HISTORY-TO TT-KEY TT-DATA EVAL-MG-SQ EVAL-EG-SQ EVAL-PHASE-INC EVAL-KN-MOB-MG EVAL-KN-MOB-EG EVAL-BI-MOB-MG EVAL-BI-MOB-EG EVAL-RK-MOB-MG EVAL-RK-MOB-EG PH-KEY PH-SCORE BB-FILE-MASK EVAL-ADJ-FILE EVAL-PASSED-SQ EVAL-PASSED-BONUS SI-PV-LEN SF-SIZE SF-MOVE SF-TT-MOVE SF-PLY SF-SCORE QF-SIZE QF-MOVE QF-SCORE QF-STATE QF-PLY QF-IN-CHECK QF-BEST-SCORE QF-IDX QF-STANDPAT QF-BETA QF-ALPHA QF-CUR-MOVE SF-CUR-MOVE SI-PV-MOVE SF-STATE SF-DEPTH SF-ALPHA SF-BETA SF-IN-CHECK SF-IS-PV SF-STATIC-EVAL SF-NULL-DONE SF-NULL-R SF-ORIG-ALPHA SF-RESEARCH SF-CUR-RSDONE SF-BEST-SCORE SF-BEST-MOVE SF-FLAG SF-IDX SF-CUR-RED SF-CUR-NULLW SF-CUR-QUIET SF-CUR-CHDEPTH SF-CUR-GCHECK MB-ROOK-MASK MB-ROOK-BITS MB-ROOK-SHIFT MB-ROOK-IDX-MASK MB-ROOK-MAGIC MB-ROOK-ATTACK-IDX MB-BISHOP-MASK MB-BISHOP-BITS MB-BISHOP-SHIFT MB-BISHOP-IDX-MASK MB-BISHOP-MAGIC MB-BISHOP-ATTACK-IDX MB-U64-SHIFT-DIV MB-U64-OCC-V MB-U64-MOD MB-U64-MAGIC-V MB-U64-A0 MB-U64-B0 MB-U64-B1 MB-U64-A1 MB-U64-PROD-LOW MB-U64-CROSS-LOW MB-U32-MOD MB-U64-QUOT SEE-GAIN SEE-VALUE BB-RANK-MASK rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1                         PNBRQKpnbrqk abcdefgh 12345678 nbrq   uci id name ChessEngine-COBOL id author Translation option name Hash type spin default 64 min 1 max 1024 option name OwnBook type check default true option name BookFile type string default book.bin uciok isready readyok ucinewgame position legal info string legal-size  moves 1 e8attacked 60 0 info string e8 by white  e8diag d key info string key  draw info string draw   repetition   halfmove  perft Nodes:  Nodes: 0 go setoption stop quit 128 2 wtime btime winc binc movestogo depth movetime infinite 30 10 bestmove  bestmove 0000 name value Hash 1024 OwnBook true BookFile startpos 3 fen 56 b - -1 8 4 5 6 7 9 11 15 61 62 59 58 100 320 330 500 900 20000 50 90 1000000 10000 24 13 14 30000 10000000 900000 075 info depth   score mate   nodes   nps   time   score cp  info pv  a 756607761056301088 486389076241424385 72092778679042112 2630106649158748161 180146733941000192 648589814731636770 180146184134856832 2918332697065554048 11529355785708503092 1267187687899136 2490631468938694656 293015506591416352 288934097953489024 3096241940480520 2596606664451031552 281616710647938 9719133065330688 1193595738806829072 576745526890856466 360429257568030720 722829389795952768 9223513324166054400 144397214955930112 576744426307850385 140739637952517 1170971088563208264 19799803437186 942527774937055360 5070958365245568 72061994232053888 10385301842383864320 581848436590281801 329150075794096256 72128031505784833 5197155070050832448 288300890958333970 146649081425430530 581105115214119936 4828149286694814032 2323899487900144641 18049857767899136 9223654062661107744 9516248984046403600 1153765998257045536 577591050391027840 5066584209096708 1152939105383088648 4827859488876920833 180144604161573632 63067988042981952 35188671256320 2469116105206038656 2251817001949568 562984581857792 9227893237937669120 2305843628831998464 4647715366276964609 18014538100186369 2307340820539246849 360850989000950818 5231493951774524418 281767035013651 4611687186792841348 10696191184830530 9917227751251903040 2307114353926610960 2335125204253151232 7099935816794769416 1130435459416064 72200668527460369 13836258868546633738 11400320691298305 288310780225421568 144612171694473348 37163495452180496 8935681818720 2305988166290530304 3459059462248091652 1155173665466746882 9314574473536473344 146375853238993920 20266336064686592 1087641317556690952 1154047576346992641 594756660686751761 18049591482261512 140738897911808 9800118663272763392 369299586550874768 1154051803924398209 2306414859195514913 1126724741955906 10670162350880858112 457257199186501649 110345957249649152 5188217414386523136 73258399252365824 365081849510826017 1128253566878720 9277419647610126624 9241387535958149122 324401040235561104 72621153876968002 578994379315020032 9223937469837230208 302023234194513920 7036977531065344 144116571189805184 3677198029416300800 292751911566753824 4616754818640315144 2342470636376440960 76847071520890880 7494838608309258752 2378182361733988352 9367487226022232098 2269924327424 634426866335808 18032007883821056 586040256495747604 18155688169644036 40816225332369609 288935455733403656 40533771111638032 281476087169285 4504184552499712 2675147045886527752 4616224805122081088 82 47 81 67 106 120 78 72 85 115 70 55 80 77 94 99 88 92 57 68 95 103 105 76 89 108 113 147 138 107 180 216 143 177 150 208 116 71 232 316 279 304 309 318 314 308 284 325 334 336 355 323 328 349 347 356 354 362 321 324 341 353 350 365 358 329 390 374 406 359 290 397 402 421 466 410 381 264 296 409 373 360 399 344 170 248 303 288 398 240 322 230 332 351 352 326 369 380 372 386 366 379 392 383 375 378 391 377 361 370 384 415 363 408 405 400 339 395 424 283 340 357 458 464 478 494 493 484 440 451 433 461 457 468 476 488 471 432 452 460 480 477 472 444 441 465 486 470 483 454 453 503 501 512 469 496 513 522 538 504 509 535 539 557 544 521 519 528 540 508 520 1007 1016 1036 1000 994 975 998 990 1017 1027 1033 1040 1022 1026 1011 1014 1023 1020 1039 1030 999 1015 1021 1028 1009 1042 1012 1008 1032 1054 1081 1072 1082 1001 986 1053 1079 997 1025 1037 1084 1069 1068 1070 -15 36 12 -54 -28 -8 -64 -43 -16 -14 -22 -46 -44 -30 -27 -49 -39 -33 -51 -17 -20 -12 -25 -36 -9 22 29 -7 -4 -38 -29 -65 23 16 -56 -34 102 84 104 98 101 93 86 91 87 97 126 118 111 188 194 179 161 176 178 272 267 252 228 241 226 259 281 258 266 263 231 217 239 261 271 276 237 278 280 291 275 297 306 298 285 292 289 257 262 256 273 229 223 243 268 253 250 254 218 182 274 301 282 270 294 305 307 310 300 311 299 295 293 286 514 515 511 507 499 516 492 506 505 517 525 523 530 527 524 903 908 914 893 931 904 916 895 913 906 920 909 951 942 945 953 946 941 918 964 955 983 967 970 959 939 958 960 981 993 976 972 985 971 919 956 968 977 961 966 936 927 963 -53 -21 -11 -24 -5 -19 -3 21 -18 27 26 33 17 20 45 44 38 -74 -35 35 -10 18 -40 28 25 31 1070372 info string e8 pawn  info string e8 knight  info string e8 bishopq  info string e8 rookq  info string e8 king  info string FEN part1= info string side=  castling= info string ep=  half=  full= info string a4-piece=  d7-piece=  d6-piece= Feb 19 2026 17:57:27 64 4294967296 18446744073709551616 225 200 2047 16383 255 48 65535 32 4294967295 29000 63        !                   A             @          	   A                        "                                     MAIN-ENTRY INIT-ENGINE UCI-LOOP HANDLE-GO HANDLE-SETOPTION HANDLE-POSITION TOKENIZE-LINE PARSE-FEN FEN-CHAR-TO-PIECE BOARD-CLEAR BOARD-PUT-PIECE BOARD-REMOVE-PIECE BOARD-MOVE-PIECE MOVE-ENCODE MOVE-DECODE MOVE-TO-UCI PARSE-UCI-MOVE BOARD-MAKE-MOVE BOARD-UNMAKE-MOVE BOARD-MAKE-NULL-MOVE BOARD-UNMAKE-NULL-MOVE UPDATE-CASTLING-RIGHTS IS-REPETITION IS-INSUFFICIENT-MATERIAL IS-DRAW GENERATE-LEGAL-MOVES GENERATE-LEGAL-CAPTURES GENERATE-PSEUDO-MOVES GENERATE-PAWN-MOVES GENERATE-KNIGHT-MOVES GENERATE-BISHOP-MOVES GENERATE-ROOK-MOVES GENERATE-QUEEN-MOVES ADD-SLIDING-MOVES GENERATE-KING-MOVES GENERATE-CASTLING-MOVES ADD-PSEUDO-MOVE ADD-PROMOTION-MOVES FIND-KING-SQUARE IS-SQUARE-ATTACKED BISHOP-ATTACKS-SLOW ROOK-ATTACKS-SLOW RUN-PERFT INIT-SEE INIT-SEARCH INIT-MVV-LVA KILLERS-CLEAR KILLER-STORE HISTORY-CLEAR HISTORY-AGE HISTORY-UPDATE TT-CONFIGURE TT-CLEAR TT-SCORE-TO-STORE TT-SCORE-FROM-PROBE TT-PROBE TT-STORE GET-TIME-MS CHECK-TIME PIECE-TYPE-VALUE EVALUATE-POSITION         A         EVALUATE-MOBILITY EVAL-BITCOUNT-MASK EVALUATE-PAWN-STRUCTURE EVALUATE-PAWNS-FOR-COLOR EVALUATE-KING-SAFETY EVALUATE-KING-FOR-COLOR IS-IN-CHECK HAS-NONPAWN-MATERIAL SEARCH-RESET RUN-SEARCH SEARCH-SCORE-MOVES SEARCH-PICK-BEST QUIESC-SCORE-MOVES QUIESC-PICK-BEST QUIESC-RETURN-NODE SEARCH-QUIESCENCE SEARCH-UPDATE-PV SEARCH-RETURN-NODE SEARCH-NEGAMAX PRINT-SEARCH-INFO CHAR-PAIR-TO-SQUARE BIT-OF-SQ INIT-MAGIC-BITBOARDS INIT-MAGIC-U64 MAGIC-COMPUTE-INDEX MAGIC-BITCOUNT-MASK MAGIC-ROOK-MASK-FROM-SQ MAGIC-BISHOP-MASK-FROM-SQ ROOK-ATTACKS-BLOCKERS-SLOW BISHOP-ATTACKS-BLOCKERS-SLOW ROOK-ATTACKS-MAGIC ROOK-ATTACKS-MAGIC-OCC BISHOP-ATTACKS-MAGIC BISHOP-ATTACKS-MAGIC-OCC QUEEN-ATTACKS-MAGIC SEE-EVALUATE SEE-GE SEE-GET-SMALLEST-ATTACKER SEE-FIRST-BIT-SQUARE INIT-MAGIC-CONSTANTS LOAD-EVAL-TABLES INIT-EVALUATION INIT-EVAL-PAWN-TABLES INIT-ZOBRIST Z-NEXT-RANDOM RESET-POSITION-HISTORY INIT-BITBOARD-MASKS INIT-CASTLING-MASKS INIT-ATTACK-TABLES ADD-ATTACK-IF-ONBOARD DEBUG-E8-DIAG DEBUG-DUMP        "               !                                                                                                                                                                                                                                           
+        11734                            
+        11735                 
+        11736         
+
+  chess-revisit-java-toCOBOL/chess_engine_trace:13821
+        13818  A� �0  �"A� �0  �&A� �0  �.A� �0  �@� �0  �@� �0  �
+        13819  @� �0  �@� �0  �@� �0  �@� �0  �@� �0  �
+        13820  @� �0  �"@� �0  �&@� �0  �*@� �0  �.@� �0  �2@� �0  �6@� �0  �:@� �0  �>@� �0  �B@� �0  �F@� �0  �J@� �0  �N@� �0  �R@� �0  �V@� �0  �Z@� �0  �^@� �0  �b@� �0  �f@� �0  �j@� �0  �n@� �0  �r@� �0  �v@� �0  �z@� �0  �~@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  ��@� �0  �A� �0  �A� �0  �
+    >>> 13821  A� �0  �A� �0  �A� �0  �2A� �0  �6A� �0  �:A� ִ  src/cobol/chess_engine.cob 3.2  CHESS-ENGINE LEGAL-MOVE TOKEN UCI-LINE FEN-PART-1 FEN-PART-3 Z-CASTLING-KEY Z-EP-KEY B-PIECES B-OCCUPANCY B-PIECE-AT Z-PIECE-KEY-SQ EVAL-MG-SQ EVAL-EG-SQ EVAL-PHASE-INC 0000     FILE-CHARS RANK-CHARS PROMO-CHARS U-MOVE U-ZOBRIST U-PAWN-KEY U-CASTLING U-EP-SQUARE U-HALF-MOVE U-FULL-MOVE U-PST-MG U-PST-EG U-PHASE POS-HISTORY CASTLING-MASK PSEUDO-MOVE CAPTURE-MOVE KNIGHT-ATTACKS KING-ATTACKS PAWN-ATTACK-S PF-DEPTH PF-SIZE PF-IDX PF-MOVE POLY-RANDOM MB-U64-A0 MB-U64-B0 MB-U64-B1 MB-U64-A1 MB-U64-PROD-LOW MB-U64-CROSS-LOW MB-U32-MOD MB-U64-PROD-MOD 00 POLY-BOOK-RECORD POLY-BOOK-KEY POLY-BOOK-MOVE POLY-BOOK-WEIGHT MVV-LVA-ATTACKER KILLER-L1 KILLER-L2 HISTORY-TO TT-KEY TT-DATA ������� ������� POLL-STATE poll EVAL-KN-MOB-MG EVAL-KN-MOB-EG EVAL-BI-MOB-MG EVAL-BI-MOB-EG EVAL-RK-MOB-MG EVAL-RK-MOB-EG PH-KEY PH-SCORE BB-FILE-MASK EVAL-ADJ-FILE EVAL-PASSED-SQ EVAL-PASSED-BONUS SI-PV-LEN SF-SIZE SF-MOVE SF-TT-MOVE SF-PLY SF-SCORE QF-SIZE QF-MOVE QF-SCORE QF-STATE QF-PLY QF-IN-CHECK QF-BEST-SCORE QF-IDX QF-STANDPAT QF-BETA QF-ALPHA QF-CUR-MOVE SF-CUR-MOVE SI-PV-MOVE SF-STATE SF-DEPTH SF-ALPHA SF-BETA SF-IN-CHECK SF-IS-PV SF-STATIC-EVAL SF-NULL-DONE SF-NULL-R SF-ORIG-ALPHA SF-RESEARCH SF-CUR-RSDONE SF-BEST-SCORE SF-BEST-MOVE SF-FLAG SF-IDX SF-CUR-RED SF-CUR-NULLW SF-CUR-QUIET SF-CUR-CHDEPTH SF-CUR-GCHECK MB-ROOK-MASK MB-ROOK-BITS MB-ROOK-SHIFT MB-ROOK-IDX-MASK MB-ROOK-MAGIC MB-ROOK-ATTACK-IDX MB-BISHOP-MASK MB-BISHOP-BITS MB-BISHOP-SHIFT MB-BISHOP-IDX-MASK MB-BISHOP-MAGIC MB-BISHOP-ATTACK-IDX MB-U64-SHIFT-DIV MB-U64-OCC-V MB-U64-MOD MB-U64-MAGIC-V MB-U64-QUOT SEE-GAIN SEE-VALUE BB-RANK-MASK rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1                         PNBRQKpnbrqk abcdefgh 12345678 nbrq book.bin POLY-BOOK-IN 0   uci id name ChessEngine-COBOL id author Translation option name Hash type spin default 64 min 1 max 1024 option name OwnBook type check default true option name BookFile type string default book.bin uciok isready readyok ucinewgame position legal info string legal-size  moves 1 e8attacked 60 info string e8 by white  e8diag d key info string key  draw info string draw   repetition   halfmove  perft Nodes:  Nodes: 0 go setoption stop quit 128 2 wtime btime winc binc movestogo depth movetime infinite 30 10 bestmove  bestmove 0000 name value Hash 1024 OwnBook true BookFile startpos 3 fen 56 b - -1 8 4 5 6 7 9 11 15 61 62 59 58 100 320 330 500 900 20000 10723151780598845931 50 90 1000000 10000 ponderhit 24 13 14 30000 10000000 900000 075 info depth   score mate   nodes   nps   time   score cp  info pv  a 756607761056301088 486389076241424385 72092778679042112 2630106649158748161 180146733941000192 648589814731636770 180146184134856832 2918332697065554048 11529355785708503092 1267187687899136 2490631468938694656 293015506591416352 288934097953489024 3096241940480520 2596606664451031552 281616710647938 9719133065330688 1193595738806829072 576745526890856466 360429257568030720 722829389795952768 9223513324166054400 144397214955930112 576744426307850385 140739637952517 1170971088563208264 19799803437186 942527774937055360 5070958365245568 72061994232053888 10385301842383864320 581848436590281801 329150075794096256 72128031505784833 5197155070050832448 288300890958333970 146649081425430530 581105115214119936 4828149286694814032 2323899487900144641 18049857767899136 9223654062661107744 9516248984046403600 1153765998257045536 577591050391027840 5066584209096708 1152939105383088648 4827859488876920833 180144604161573632 63067988042981952 35188671256320 2469116105206038656 2251817001949568 562984581857792 9227893237937669120 2305843628831998464 4647715366276964609 18014538100186369 2307340820539246849 360850989000950818 5231493951774524418 281767035013651 4611687186792841348 10696191184830530 9917227751251903040 2307114353926610960 2335125204253151232 7099935816794769416 1130435459416064 72200668527460369 13836258868546633738 11400320691298305 288310780225421568 144612171694473348 37163495452180496 8935681818720 2305988166290530304 3459059462248091652 1155173665466746882 9314574473536473344 146375853238993920 20266336064686592 1087641317556690952 1154047576346992641 594756660686751761 18049591482261512 140738897911808 9800118663272763392 369299586550874768 1154051803924398209 2306414859195514913 1126724741955906 10670162350880858112 457257199186501649 110345957249649152 5188217414386523136 73258399252365824 365081849510826017 1128253566878720 9277419647610126624 9241387535958149122 324401040235561104 72621153876968002 578994379315020032 9223937469837230208 302023234194513920 7036977531065344 144116571189805184 3677198029416300800 292751911566753824 4616754818640315144 2342470636376440960 76847071520890880 7494838608309258752 2378182361733988352 9367487226022232098 2269924327424 634426866335808 18032007883821056 586040256495747604 18155688169644036 40816225332369609 288935455733403656 40533771111638032 281476087169285 4504184552499712 2675147045886527752 4616224805122081088 82 47 81 67 106 120 78 72 85 115 70 55 80 77 94 99 88 92 57 68 95 103 105 76 89 108 113 147 138 107 180 216 143 177 150 208 116 71 232 316 279 304 309 318 314 308 284 325 334 336 355 323 328 349 347 356 354 362 321 324 341 353 350 365 358 329 390 374 406 359 290 397 402 421 466 410 381 264 296 409 373 360 399 344 170 248 303 288 398 240 322 230 332 351 352 326 369 380 372 386 366 379 392 383 375 378 391 377 361 370 384 415 363 408 405 400 339 395 424 283 340 357 458 464 478 494 493 484 440 451 433 461 457 468 476 488 471 432 452 460 480 477 472 444 441 465 486 470 483 454 453 503 501 512 469 496 513 522 538 504 509 535 539 557 544 521 519 528 540 508 520 1007 1016 1036 1000 994 975 998 990 1017 1027 1033 1040 1022 1026 1011 1014 1023 1020 1039 1030 999 1015 1021 1028 1009 1042 1012 1008 1032 1054 1081 1072 1082 1001 986 1053 1079 997 1025 1037 1084 1069 1068 1070 -15 36 12 -54 -28 -8 -64 -43 -16 -14 -22 -46 -44 -30 -27 -49 -39 -33 -51 -17 -20 -12 -25 -36 -9 22 29 -7 -4 -38 -29 -65 23 16 -56 -34 102 84 104 98 101 93 86 91 87 97 126 118 111 188 194 179 161 176 178 272 267 252 228 241 226 259 281 258 266 263 231 217 239 261 271 276 237 278 280 291 275 297 306 298 285 292 289 257 262 256 273 229 223 243 268 253 250 254 218 182 274 301 282 270 294 305 307 310 300 311 299 295 293 286 514 515 511 507 499 516 492 506 505 517 525 523 530 527 524 903 908 914 893 931 904 916 895 913 906 920 909 951 942 945 953 946 941 918 964 955 983 967 970 959 939 958 960 981 993 976 972 985 971 919 956 968 977 961 966 936 927 963 -53 -21 -11 -24 -5 -19 -3 21 -18 27 26 33 17 20 45 44 38 -74 -35 35 -10 18 -40 28 25 31 1070372 info string e8 pawn  info string e8 knight  info string e8 bishopq  info string e8 rookq  info string e8 king  info string FEN part1= info string side=  castling= info string ep=  half=  full= info string a4-piece=  d7-piece=  d6-piece= Feb 20 2026 20:32:33 64 2685821657736338717 4294967296 18446744073709551616 225 200 2047 16383 255 48 65535 32 4294967295 29000 63   !                   A             @          	   A                                       "                                     CHESS-ENGINE MAIN-ENTRY INIT-ENGINE UCI-LOOP HANDLE-GO HANDLE-SETOPTION HANDLE-POSITION TOKENIZE-LINE PARSE-FEN FEN-CHAR-TO-PIECE BOARD-CLEAR BOARD-PUT-PIECE       A         BOARD-REMOVE-PIECE BOARD-MOVE-PIECE MOVE-ENCODE MOVE-DECODE MOVE-TO-UCI PARSE-UCI-MOVE BOARD-MAKE-MOVE BOARD-UNMAKE-MOVE BOARD-MAKE-NULL-MOVE BOARD-UNMAKE-NULL-MOVE UPDATE-CASTLING-RIGHTS IS-REPETITION IS-INSUFFICIENT-MATERIAL IS-DRAW GENERATE-LEGAL-MOVES GENERATE-LEGAL-CAPTURES GENERATE-PSEUDO-MOVES GENERATE-PAWN-MOVES GENERATE-KNIGHT-MOVES GENERATE-BISHOP-MOVES GENERATE-ROOK-MOVES GENERATE-QUEEN-MOVES ADD-SLIDING-MOVES GENERATE-KING-MOVES GENERATE-CASTLING-MOVES ADD-PSEUDO-MOVE ADD-PROMOTION-MOVES FIND-KING-SQUARE IS-SQUARE-ATTACKED BISHOP-ATTACKS-SLOW ROOK-ATTACKS-SLOW RUN-PERFT INIT-SEE INIT-POLYGLOT POLY-NEXT-RANDOM U64-MUL-MOD POLY-BOOK-LOAD POLY-DECODE-ENTRY POLY-BOOK-PROBE POLY-COMPUTE-KEY POLY-MAP-PIECE POLY-CONVERT-MOVE INIT-SEARCH INIT-MVV-LVA KILLERS-CLEAR KILLER-STORE HISTORY-CLEAR HISTORY-AGE HISTORY-UPDATE TT-CONFIGURE TT-CLEAR TT-SCORE-TO-STORE TT-SCORE-FROM-PROBE TT-PROBE TT-STORE GET-TIME-MS CHECK-TIME POLL-UCI-DURING-SEARCH PIECE-TYPE-VALUE EVALUATE-POSITION EVALUATE-MOBILITY EVAL-BITCOUNT-MASK EVALUATE-PAWN-STRUCTURE EVALUATE-PAWNS-FOR-COLOR EVALUATE-KING-SAFETY EVALUATE-KING-FOR-COLOR IS-IN-CHECK HAS-NONPAWN-MATERIAL SEARCH-RESET RUN-SEARCH SEARCH-SCORE-MOVES SEARCH-PICK-BEST QUIESC-SCORE-MOVES QUIESC-PICK-BEST QUIESC-RETURN-NODE SEARCH-QUIESCENCE SEARCH-UPDATE-PV SEARCH-RETURN-NODE SEARCH-NEGAMAX PRINT-SEARCH-INFO CHAR-PAIR-TO-SQUARE BIT-OF-SQ INIT-MAGIC-BITBOARDS INIT-MAGIC-U64 MAGIC-COMPUTE-INDEX MAGIC-BITCOUNT-MASK MAGIC-ROOK-MASK-FROM-SQ MAGIC-BISHOP-MASK-FROM-SQ ROOK-ATTACKS-BLOCKERS-SLOW BISHOP-ATTACKS-BLOCKERS-SLOW ROOK-ATTACKS-MAGIC ROOK-ATTACKS-MAGIC-OCC BISHOP-ATTACKS-MAGIC BISHOP-ATTACKS-MAGIC-OCC QUEEN-ATTACKS-MAGIC SEE-EVALUATE SEE-GE SEE-GET-SMALLEST-ATTACKER SEE-FIRST-BIT-SQUARE INIT-MAGIC-CONSTANTS LOAD-EVAL-TABLES INIT-EVALUATION INIT-EVAL-PAWN-TABLES INIT-ZOBRIST Z-NEXT-RANDOM RESET-POSITION-HISTORY INIT-BITBOARD-MASKS INIT-CASTLING-MASKS INIT-ATTACK-TABLES ADD-ATTACK-IF-ONBOARD DEBUG-E8-DIAG DEBUG-DUMP                     "               !                                                                                                                                                                                                                              
+        13822                            
+        13823                         
+        13824         
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:58
+          55         78  MAX-SEARCH-PLY            VALUE 128.
+          56         78  NODE-CHECK-INTERVAL       VALUE 2048.
+          57         78  ASPIRATION-WINDOW         VALUE 25.
+    >>>   58         78  NULL-MOVE-R-BASE          VALUE 3.
+          59         78  MATE-SCORE                VALUE 30000.
+          60         78  MATE-BOUND                VALUE 29000.
+          61         78  INF-SCORE                 VALUE 32000.
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1678
+        1675             SUBTRACT 1 FROM B-PLY
+        1676             .
+        1677  
+    >>> 1678         BOARD-MAKE-NULL-MOVE.
+        1679             IF B-PLY >= MAX-PLY
+        1680                 EXIT PARAGRAPH
+        1681             END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:1715
+        1712             END-IF
+        1713             .
+        1714  
+    >>> 1715         BOARD-UNMAKE-NULL-MOVE.
+        1716             IF B-PLY <= 0
+        1717                 EXIT PARAGRAPH
+        1718             END-IF
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:3937
+        3934                                 IF SEARCH-NONPAWN-FLAG = 1
+        3935                                     MOVE 1 TO SF-NULL-DONE(SEARCH-PICK-LEVEL)
+        3936                                     COMPUTE SF-NULL-R(SEARCH-PICK-LEVEL) =
+    >>> 3937                                         NULL-MOVE-R-BASE
+        3938                                         + FUNCTION INTEGER(
+        3939                                             SF-DEPTH(SEARCH-PICK-LEVEL) / 6)
+        3940                                     PERFORM BOARD-MAKE-NULL-MOVE
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:3940
+        3937                                         NULL-MOVE-R-BASE
+        3938                                         + FUNCTION INTEGER(
+        3939                                             SF-DEPTH(SEARCH-PICK-LEVEL) / 6)
+    >>> 3940                                     PERFORM BOARD-MAKE-NULL-MOVE
+        3941                                     MOVE 4 TO SF-STATE(SEARCH-PICK-LEVEL)
+        3942  
+        3943                                     ADD 1 TO SEARCH-LEVEL
+
+  chess-revisit-java-toCOBOL/src/cobol/chess_engine.cob:4237
+        4234                         END-IF
+        4235  
+        4236                     WHEN 4
+    >>> 4237                         PERFORM BOARD-UNMAKE-NULL-MOVE
+        4238                         IF SI-STOPPED = 1
+        4239                             MOVE 0 TO SEARCH-NODE-SCORE
+        4240                             PERFORM SEARCH-RETURN-NODE
+
+  src/board/board.rs:350
+         347          self.phase = self.undo_phase[self.ply];
+         348      }
+         349  
+    >>>  350      pub fn make_null_move(&mut self) {
+         351          self.undo_zobrist[self.ply] = self.zobrist_key;
+         352          self.undo_pawn_key[self.ply] = self.pawn_key;
+         353          self.undo_castling[self.ply] = self.castling_rights;
+
+  src/board/board.rs:375
+         372          self.pos_history_count += 1;
+         373      }
+         374  
+    >>>  375      pub fn unmake_null_move(&mut self) {
+         376          self.ply -= 1;
+         377          self.pos_history_count -= 1;
+         378  
+
+  src/search/search.rs:209
+         206  
+         207          if !is_pv && !in_check && ply > 0 && depth >= 3 && self.has_non_pawn_material() {
+         208              let r = NULL_MOVE_R_BASE + depth / 6;
+    >>>  209              self.board.make_null_move();
+         210              let mut null_score = -self.negamax(-beta, -beta + 1, depth - 1 - r, ply + 1, false);
+         211              self.board.unmake_null_move();
+         212              if self.info.stopped {
+
+  src/search/search.rs:211
+         208              let r = NULL_MOVE_R_BASE + depth / 6;
+         209              self.board.make_null_move();
+         210              let mut null_score = -self.negamax(-beta, -beta + 1, depth - 1 - r, ply + 1, false);
+    >>>  211              self.board.unmake_null_move();
+         212              if self.info.stopped {
+         213                  return 0;
+         214              }
+
+[YES] chess-ruby-cc  (Ruby)  — 5 match(es)
+  lib/chess_engine/board.rb:319
+         316        end
+         317      end
+         318  
+    >>>  319      def make_null_move
+         320        @history.push([
+         321          @castling, @ep_square, @halfmove, @hash_key, EMPTY,
+         322          @mg_score, @eg_score, @phase, @w_bishops, @b_bishops
+
+  lib/chess_engine/board.rb:333
+         330        @hash_history.push(@hash_key)
+         331      end
+         332  
+    >>>  333      def unmake_null_move
+         334        @hash_history.pop
+         335        state = @history.pop
+         336        @hash_key  = state[H_HASH_KEY]
+
+  lib/chess_engine/search.rb:183
+         180          end
+         181        end
+         182  
+    >>>  183        # Null move pruning
+         184        if !in_check && !is_pv && depth >= 3 && ply > 0 && has_non_pawn_material?
+         185          if static_eval >= beta
+         186            @board.make_null_move
+
+  lib/chess_engine/search.rb:186
+         183        # Null move pruning
+         184        if !in_check && !is_pv && depth >= 3 && ply > 0 && has_non_pawn_material?
+         185          if static_eval >= beta
+    >>>  186            @board.make_null_move
+         187            r = 2 + depth / 4
+         188            r += 1 if static_eval - beta > 200
+         189            @current_move[ply] = nil
+
+  lib/chess_engine/search.rb:191
+         188            r += 1 if static_eval - beta > 200
+         189            @current_move[ply] = nil
+         190            score = -negamax(depth - 1 - r, ply + 1, -beta, -beta + 1, false)
+    >>>  191            @board.unmake_null_move
+         192  
+         193            if score >= beta && !@stop
+         194              return score >= MATE_SCORE - 200 ? beta : score
+
+[YES] chess-ruby-codex  (Ruby)  — 11 match(es)
+  test/test_uci.rb:8
+           5  
+           6  class UciTest < Minitest::Test
+           7    def test_uci_handshake
+    >>>    8      input = StringIO.new("uci\nsetoption name UseNullMove value false\nsetoption name UseLMR value false\nisready\nquit\n")
+           9      output = StringIO.new
+          10      engine = RubyChessEngine::UCI.new(input: input, output: output, error: StringIO.new)
+          11      engine.run
+
+  test/test_uci.rb:15
+          12      text = output.string
+          13      assert_includes text, "uciok"
+          14      assert_includes text, "readyok"
+    >>>   15      assert_includes text, "option name UseNullMove"
+          16      assert_includes text, "option name UseLMR"
+          17    end
+          18  end
+
+  lib/ruby_chess_engine/position.rb:179
+         176        end
+         177      end
+         178  
+    >>>  179      def null_move
+         180        Position.new(
+         181          board: board,
+         182          side_to_move: opposite(side_to_move),
+
+  lib/ruby_chess_engine/search.rb:23
+          20        @tt = {}
+          21        @killer_moves = Hash.new { |h, k| h[k] = [] }
+          22        @history_scores = Hash.new(0)
+    >>>   23        @use_null_move = false
+          24        @use_lmr = true
+          25      end
+          26  
+
+  lib/ruby_chess_engine/search.rb:31
+          28        @stop_requested = true
+          29      end
+          30  
+    >>>   31      def configure(use_null_move: nil, use_lmr: nil)
+          32        @use_null_move = use_null_move unless use_null_move.nil?
+          33        @use_lmr = use_lmr unless use_lmr.nil?
+          34      end
+
+  lib/ruby_chess_engine/search.rb:32
+          29      end
+          30  
+          31      def configure(use_null_move: nil, use_lmr: nil)
+    >>>   32        @use_null_move = use_null_move unless use_null_move.nil?
+          33        @use_lmr = use_lmr unless use_lmr.nil?
+          34      end
+          35  
+
+  lib/ruby_chess_engine/search.rb:124
+         121            return position.in_check?(position.side_to_move) ? (-MATE_SCORE + ply) : 0
+         122          end
+         123  
+    >>>  124          if @use_null_move &&
+         125             allow_null &&
+         126             !in_check &&
+         127             depth >= 3 &&
+
+  lib/ruby_chess_engine/search.rb:130
+         127             depth >= 3 &&
+         128             position.has_non_pawn_material?(position.side_to_move) &&
+         129             beta < (MATE_SCORE - 500)
+    >>>  130            null_position = position.null_move
+         131            reduced_depth = [depth - 1 - NULL_MOVE_REDUCTION, 0].max
+         132            null_score = -negamax(
+         133              null_position,
+
+  lib/ruby_chess_engine/uci.rb:49
+          46          write("id name #{ENGINE_NAME}")
+          47          write("id author #{ENGINE_AUTHOR}")
+          48          write("option name MaxDepth type spin default #{@max_depth} min 1 max 20")
+    >>>   49          write("option name UseNullMove type check default false")
+          50          write("option name UseLMR type check default true")
+          51          write("uciok")
+          52        when "isready"
+
+  lib/ruby_chess_engine/uci.rb:102
+          99          return unless parsed.between?(1, 20)
+         100  
+         101          @max_depth = parsed
+    >>>  102        when "UseNullMove"
+         103          parsed = parse_check_value(option_value)
+         104          return if parsed.nil?
+         105  
+
+  lib/ruby_chess_engine/uci.rb:106
+         103          parsed = parse_check_value(option_value)
+         104          return if parsed.nil?
+         105  
+    >>>  106          @search.configure(use_null_move: parsed)
+         107        when "UseLMR"
+         108          parsed = parse_check_value(option_value)
+         109          return if parsed.nil?
+
+[YES] chess-rust-cc  (Rust)  — 8 match(es)
+  src/search.rs:297
+         294              return self.quiescence(alpha, beta, ply);
+         295          }
+         296  
+    >>>  297          // Reverse futility pruning (static null move pruning)
+         298          if !is_pv && !in_check && depth <= 8 {
+         299              let margin = if improving { 80 } else { 60 } * depth as i32;
+         300              if eval - margin >= beta {
+
+  src/search.rs:305
+         302              }
+         303          }
+         304  
+    >>>  305          // Null move pruning
+         306          if !is_pv
+         307              && !in_check
+         308              && null_ok
+
+  src/search.rs:315
+         312              && self.board.has_non_pawn_material(self.board.side)
+         313          {
+         314              let r = 3 + depth / 4;
+    >>>  315              self.board.make_null_move();
+         316              let score = -self.alpha_beta(-beta, -beta + 1, depth - r - 1, ply + 1, false);
+         317              self.board.unmake_null_move();
+         318  
+
+  src/search.rs:317
+         314              let r = 3 + depth / 4;
+         315              self.board.make_null_move();
+         316              let score = -self.alpha_beta(-beta, -beta + 1, depth - r - 1, ply + 1, false);
+    >>>  317              self.board.unmake_null_move();
+         318  
+         319              if self.timer.should_stop() {
+         320                  return 0;
+
+  src/search.rs:324
+         321              }
+         322  
+         323              if score >= beta {
+    >>>  324                  // Don't return mate scores from null move
+         325                  if score > MATE_SCORE - 200 {
+         326                      return beta;
+         327                  }
+
+  src/search.rs:748
+         745      }
+         746  }
+         747  
+    >>>  748  // Null move support
+         749  impl Board {
+         750      pub fn make_null_move(&mut self) {
+         751          use crate::zobrist::zobrist;
+
+  src/search.rs:750
+         747  
+         748  // Null move support
+         749  impl Board {
+    >>>  750      pub fn make_null_move(&mut self) {
+         751          use crate::zobrist::zobrist;
+         752  
+         753          let z = zobrist();
+
+  src/search.rs:780
+         777          self.history.push(self.hash);
+         778      }
+         779  
+    >>>  780      pub fn unmake_null_move(&mut self) {
+         781          self.history.pop();
+         782          let undo = self.undo_stack.pop().unwrap();
+         783          self.side = !self.side;
+
+[YES] chess-rust-codex  (Rust)  — 1 match(es)
+  src/engine.rs:545
+         542              && beta < MATE_THRESHOLD
+         543              && has_non_pawn_material(board, board.side_to_move())
+         544          {
+    >>>  545              if let Some(null_board) = board.null_move() {
+         546                  let score = -self.negamax(
+         547                      &null_board,
+         548                      depth - 1 - NULL_MOVE_REDUCTION,
+
+[NO]  chess-sql  (Python)  — 0 match(es)
+
+[YES] chess-why3  (OCaml)  — 13 match(es)
+  _build/default/src/uci_ocaml/engine_extracted.ml:33
+          30    moves: move array;
+          31    }
+          32  
+    >>>   33  let null_move = { from_sq = Z.zero; to_sq = Z.zero; promo = Z.zero }
+          34  
+          35  let board_size = Z.of_string "64"
+          36  
+
+  _build/default/src/uci_ocaml/engine_extracted.ml:80
+          77    | King -> Z.zero
+          78  
+          79  let create_move_buffer (_: unit) : move_buffer =
+    >>>   80    { count = Z.zero; moves = Array.make (Z.to_int max_moves) null_move }
+          81  
+          82  let push_move (mb: move_buffer) (from_sq1: Z.t) (to_sq1: Z.t) (promo1: Z.t) :
+          83    unit =
+
+  _build/default/src/uci_ocaml/engine_extracted.ml:397
+         394  let choose_move (p: position) (depth: Z.t) : move =
+         395    let mb = generate_moves p in
+         396    if Z.equal mb.count Z.zero
+    >>>  397    then null_move
+         398    else
+         399      begin
+         400        let best = ref (mb.moves).(Z.to_int Z.zero) in
+
+  _build/default/src/uci_ocaml/main.ml:504
+         501  let search_root ctx pos depth prev_best =
+         502    let moves = legal_moves pos in
+         503    match moves with
+    >>>  504    | [] -> (E.null_move, if in_check pos pos.E.turn then -mate else 0)
+         505    | _ ->
+         506        let ordered =
+         507          let base = order_moves pos moves in
+
+  _build/default/src/uci_ocaml/main.ml:620
+         617      | None ->
+         618          (match legal_moves pos with
+         619          | m :: _ -> m
+    >>>  620          | [] -> E.null_move)
+         621    in
+         622    (chosen, !score, !depth_reached, ctx.nodes)
+         623  
+
+  src/uci_ocaml/engine_extracted.ml:33
+          30    moves: move array;
+          31    }
+          32  
+    >>>   33  let null_move = { from_sq = Z.zero; to_sq = Z.zero; promo = Z.zero }
+          34  
+          35  let board_size = Z.of_string "64"
+          36  
+
+  src/uci_ocaml/engine_extracted.ml:80
+          77    | King -> Z.zero
+          78  
+          79  let create_move_buffer (_: unit) : move_buffer =
+    >>>   80    { count = Z.zero; moves = Array.make (Z.to_int max_moves) null_move }
+          81  
+          82  let push_move (mb: move_buffer) (from_sq1: Z.t) (to_sq1: Z.t) (promo1: Z.t) :
+          83    unit =
+
+  src/uci_ocaml/engine_extracted.ml:397
+         394  let choose_move (p: position) (depth: Z.t) : move =
+         395    let mb = generate_moves p in
+         396    if Z.equal mb.count Z.zero
+    >>>  397    then null_move
+         398    else
+         399      begin
+         400        let best = ref (mb.moves).(Z.to_int Z.zero) in
+
+  src/uci_ocaml/main.ml:504
+         501  let search_root ctx pos depth prev_best =
+         502    let moves = legal_moves pos in
+         503    match moves with
+    >>>  504    | [] -> (E.null_move, if in_check pos pos.E.turn then -mate else 0)
+         505    | _ ->
+         506        let ordered =
+         507          let base = order_moves pos moves in
+
+  src/uci_ocaml/main.ml:620
+         617      | None ->
+         618          (match legal_moves pos with
+         619          | m :: _ -> m
+    >>>  620          | [] -> E.null_move)
+         621    in
+         622    (chosen, !score, !depth_reached, ctx.nodes)
+         623  
+
+  src/whyml/engine.mlw:28
+          25      moves: array move;
+          26    }
+          27  
+    >>>   28    let null_move : move = { from_sq = 0; to_sq = 0; promo = 0 }
+          29  
+          30    let board_size : int = 64
+          31    let max_moves : int = 256
+
+  src/whyml/engine.mlw:72
+          69      end
+          70  
+          71    let create_move_buffer () : move_buffer =
+    >>>   72      { count = 0; moves = make max_moves null_move }
+          73  
+          74    let push_move (mb: move_buffer) (from_sq: int) (to_sq: int) (promo: int) : unit =
+          75      if mb.count < length mb.moves then
+
+  src/whyml/engine.mlw:315
+         312  
+         313    let choose_move (p: position) (depth: int) : move =
+         314      let mb = generate_moves p in
+    >>>  315      if mb.count = 0 then null_move
+         316      else
+         317        let best = ref mb.moves[0] in
+         318        let best_score = ref (-inf) in
+
+[YES] chess-why3-cc  (C)  — 44 match(es)
+  ocaml/engine.ml:1461
+        1458    nu_ply: int;
+        1459    }
+        1460  
+    >>> 1461  let make_null_move (b: board_state) : null_undo =
+        1462    let u = { nu_ep = b.ep_square; nu_side = b.side; nu_ply = b.ply } in
+        1463    b.ep_square <- (-1); b.side <- 1 - b.side; b.ply <- b.ply + 1; u
+        1464  
+
+  ocaml/engine.ml:1465
+        1462    let u = { nu_ep = b.ep_square; nu_side = b.side; nu_ply = b.ply } in
+        1463    b.ep_square <- (-1); b.side <- 1 - b.side; b.ply <- b.ply + 1; u
+        1464  
+    >>> 1465  let unmake_null_move (b: board_state) (u: null_undo) : unit =
+        1466    b.side <- u.nu_side; b.ep_square <- u.nu_ep; b.ply <- u.nu_ply
+        1467  
+        1468  let encode_move (mf: int) (mt: int) (mfl: int) : int =
+
+  ocaml/engine.ml:1526
+        1523            let alpha = ref alpha_in in let null_pruned = ref false in
+        1524            if not in_check && depth >= 3 && !alpha > (-29000)
+        1525            then begin
+    >>> 1526              let null_undo1 = make_null_move b in
+        1527              let dummy_pv = Array.make 128 0 in
+        1528              let dummy_pvl = Array.make 1 0 in
+        1529              let null_score =
+
+  ocaml/engine.ml:1539
+        1536                  dummy_pv
+        1537                  dummy_pvl in
+        1538                0 - o in
+    >>> 1539              unmake_null_move b null_undo1;
+        1540              if null_score >= beta then null_pruned := true end;
+        1541            if !null_pruned
+        1542            then beta
+
+  ocaml/search_ocaml.ml:315
+         312  
+         313        if !tt_cutoff then !alpha
+         314        else begin
+    >>>  315          (* Null move pruning *)
+         316          let null_pruned = ref false in
+         317          if not in_check && depth >= 3 && !alpha > (-29000) then begin
+         318            let old_ep = b.ep_square in
+
+  tests/elo_test.sh:234
+         231  - Tapered evaluation (middlegame/endgame) with piece-square tables
+         232  - Pawn structure: doubled/isolated/passed pawns, bishop pair bonus
+         233  - Negamax alpha-beta with quiescence search
+    >>>  234  - Null move pruning (R=3), Late Move Reductions, check extensions
+         235  - Delta pruning in quiescence search
+         236  - Killer moves (2/ply), history heuristic, MVV-LVA capture ordering
+         237  - Aspiration windows in iterative deepening
+
+  tests/engines/vice:1641
+        1638     
+        1639     
+        1640                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            P   �   !                                        @                 $  d  �  �  �  �  �      . > L Z f t � � � � � �   
+    >>> 1641   * : J Z j z �  ___chkstk_darwin ___darwin_check_fd_set_overflow ___sprintf_chk ___stack_chk_fail ___stack_chk_guard ___stdinp ___stdoutp _atoi _bzero _fflush _fgets _fileno _fopen _fread _free _fseek _ftell _getchar _gettimeofday _malloc _memset_pattern16 _printf _putchar _puts _rand _read _rewind _select _setbuf _sscanf _strchr _strncmp _strstr        _ �    �[  �  ��  ��  Pair Table  ��  Dir shop  tTable / �  i 5lackPassedMask J �  ��  Keys ePerm k �  ��  ��  �  HashTable �Mask � nPolyBook �r � ��  ��  sole_Loop �vertPolyMoveToInternalMove � �  n �untBits � astle qheckBoard lea �o � ��  ��  ebugAnalysisTest �rawMaterial � �  �4  ngineOptions �valPosition � ��  ��  ��  ��  BBMask �Char �RankValid �sBrd � �  ��  Caps �Moves � �A  All �PosKey � ��  ��  ��  BookMove �PvLine �TimeMs � nerate �t � ��  �S  �B  �N  �P  ��  Keys �Table � ��  ��  �Y  BitMasks �EvalMasks �FilesRanksBrd �Hash �MvvLva �PolyBook �Sq120To64 � ؐ  it �putWaiting � ��  n �solatedMask � �  ��  ��  E �O � Dir �ng � ��  ��  Dir �ightTable � i �n � ��  ��  Index �Pce � ��  ��  Index �Pce � NonSlide �Slide � �i  �  Move �NullMove � �1  ke �terialDraw � ��  �.  ��  64 �Board �EvalTest � �  ��  Exists �ListOk � a �irror �ove � ��  ��  Dir �Entries � �!  ��  �e  ��  Fen �Go �Move �Position � س  ܳ  ��  Isolated �	Passed �	Table �	 rse �wn �	 ��  ��  �  ��  Char �	Dir �	ListOk �	ValidEmptyOffbrd �	 ��  ��Test �	 ��  ��  g �
+        1642  shopQueen �
+        1643   �  ��  ��  ܂  eys �
+        1644  ing �
+
+  tests/engines/vice:1683
+        1680  Char �
+        1681  sBrd � dom64Poly �
+        1682  k � ��  �(  adInput �setBoard � Я  ��  ��  ��  OpenFile �SemiOpenFile �Table � an �e �kDir �ook � ��  ��  archPosition �tMask � ��  ��  ��  Char �Key �Valid � ��  ؅  �
+    >>> 1683    ��  ��  120ToSq64 �64ToSq120 �Attacked �Is120 �OnBoard � ��  e �ide �q �toreHashEntry � �{  ��  Move �NullMove � �  ake �hreeFoldRep � ��  �
+        1684    ci_Loop �pdateListsMaterial � ��  ؇  �     ��  ��  ��  ��  16 �32 �64 � ��  dian_swap_u �tries � ؋  ��  �  
+        1685  AllInit 	B PC �D �E �File �Ge �HasPawnForCapture �I �K �Loop �M �Num �P �
+        1686  Queen �
+
+  tests/engines/vice:1718
+        1715       �    �l         �=     
+        1716      pG         �     '    �z     1    X     F    
+        1717  �     S    ؃    d    �     q          �    ��     �     g     �    g     �    g     �    ��    �    ؅    �    ��     �    �    �            �                        *            <            O            Y            d            j            q            y            �            �            �            �            �            �            �            �            �            �            �            �            �            �            �            �                                                
+    >>> 1718              &            /            �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �     _AllInit _BiDir _BishopPair _BishopTable _BitTable _BlackPassedMask _CastleKeys _CastlePerm _CheckBoard _CleanPolyBook _ClearHashTable _ClearMask _Console_Loop _ConvertPolyMoveToInternalMove _CountBits _DebugAnalysisTest _DrawMaterial _EngineOptions _EvalPosition _FileBBMask _FileChar _FileRankValid _FilesBrd _GenerateAllCaps _GenerateAllMoves _GeneratePosKey _GetBookMove _GetPvLine _GetTimeMs _HasPawnForCapture _InitBitMasks _InitEvalMasks _InitFilesRanksBrd _InitHashKeys _InitHashTable _InitMvvLva _InitPolyBook _InitSq120To64 _InputWaiting _IsolatedMask _KiDir _KingE _KingO _KnDir _KnightTable _LoopNonSlideIndex _LoopNonSlidePce _LoopSlideIndex _LoopSlidePce _MakeMove _MakeNullMove _MaterialDraw _Mirror64 _MirrorBoard _MirrorEvalTest _MoveExists _MoveListOk _NumDir _NumEntries _ParseFen _ParseGo _ParseMove _ParsePosition _PawnIsolated _PawnPassed _PawnTable _PceChar _PceDir _PceListOk _PceValidEmptyOffbrd _Perft _PerftTest _PieceBig _PieceBishopQueen _PieceCol _PieceKeys _PieceKing _PieceKnight _PieceMaj _PieceMin _PiecePawn _PieceRookQueen _PieceSlides _PieceVal _PieceValid _PieceValidEmpty _PolyKeyFromBoard _PolyKindOfPiece _PopBit _PrMove _PrSq _PrintBitBoard _PrintBoard _PrintMoveList _PrintOptions _ProbeHashEntry _ProbePvMove _QueenOpenFile _QueenSemiOpenFile _Random64Poly _RankBBMask _RankChar _RanksBrd _ReadInput _ResetBoard _RkDir _RookOpenFile _RookSemiOpenFile _RookTable _SearchPosition _SetMask _SideChar _SideKey _SideValid _Sq120ToSq64 _Sq64ToSq120 _SqAttacked _SqIs120 _SqOnBoard _StoreHashEntry _TakeMove _TakeNullMove _ThreeFoldRep _Uci_Loop _UpdateListsMaterial _VictimScore _WhitePassedMask _XBoard_Loop __mh_execute_header _checkresult _endian_swap_u16 _endian_swap_u32 _endian_swap_u64 _entries _leafNodes _main _rootDepth ___chkstk_darwin ___darwin_check_fd_set_overflow ___sprintf_chk ___stack_chk_fail ___stack_chk_guard ___stdinp ___stdoutp _atoi _bzero _fflush _fgets _fileno _fopen _fread _free _fseek _ftell _getchar _gettimeofday _malloc _memset_pattern16 _printf _putchar _puts _rand _read _rewind _select _setbuf _sscanf _strchr _strncmp _strstr _ClearPiece _AddWhitePawnCapMove _AddBlackPawnCapMove _AlphaBeta _Quiescence _PrSq.SqStr _PrMove.MvStr _MvvLvaScores     ��
+        1719  �  �          ��
+        1720    �       ]   X        ��  
+        1721                                        �`       vice ��,;�f����>�r��ܘsVB̸4����6c��݀h��/
+
+  tests/engines/shallowblue-src/scripts/showmove.py:11
+           8  
+           9  FILES = ["a", "b", "c", "d", "e", "f", "g", "h"]
+          10  FLAGS = {
+    >>>   11      1 << 0: "NULL_MOVE",
+          12      1 << 1: "CAPTURE",
+          13      1 << 2: "DOUBLE_PAWN_PUSH",
+          14      1 << 3: "KSIDE_CASTLE",
+
+  tests/engines/shallowblue-src/src/move.cc:10
+           7  const std::string Move::NULL_MOVE_NOTATION = "(none)";
+           8  
+           9  Move::Move() {
+    >>>   10    _move = ((NULL_MOVE & 0x7f) << 21);
+          11    _value = 0;
+          12  }
+          13  
+
+  tests/engines/shallowblue-src/src/move.cc:67
+          64  
+          65  std::string Move::getNotation() const {
+          66    // Special case for null moves
+    >>>   67    if (getFlags() & NULL_MOVE) {
+          68      return NULL_MOVE_NOTATION;
+          69    }
+          70  
+
+  tests/engines/shallowblue-src/src/move.h:15
+          12  class Move {
+          13   public:
+          14    /**
+    >>>   15     * @brief Construct a null move.
+          16     */
+          17    Move();
+          18  
+
+  tests/engines/shallowblue-src/src/move.h:27
+          24     * @param piece Type of piece
+          25     * @param flags Flags
+          26     */
+    >>>   27    Move(unsigned int, unsigned int, PieceType, unsigned int= 0); // Non Null Move
+          28  
+          29    /**
+          30     * @enum Flag
+
+  tests/engines/shallowblue-src/src/move.h:34
+          31     * @brief Flags that indicate special moves.
+          32     */
+          33    enum Flag {
+    >>>   34      NULL_MOVE = 1 << 0, /**< The move is a null move */
+          35      CAPTURE = 1 << 1, /**< The move is a capture (Captured piece type must be set with setCapturedPieceType()) */
+          36      DOUBLE_PAWN_PUSH = 1 << 2, /**< The move is a double pawn push */
+          37      KSIDE_CASTLE = 1 << 3, /**< The move is a kingisde castle */
+
+  tests/engines/shallowblue-src/src/move.h:198
+         195    const static char FILES[];
+         196    /**@}*/
+         197  
+    >>>  198    /** @brief Notation that should be used to represent a null move */
+         199    const static std::string NULL_MOVE_NOTATION;
+         200  };
+         201  
+
+  tests/engines/shallowblue-src/src/search.cc:153
+         150    MoveList legalMoves = movegen.getLegalMoves();
+         151    _nodes = 0;
+         152  
+    >>>  153    // If no legal moves are available, just return, setting bestmove to a null move
+         154    if (legalMoves.empty()) {
+         155      _bestMove = Move();
+         156      _bestScore = -INF;
+
+  tests/engines/shallowblue-src/src/search.cc:205
+         202  
+         203    // If the best move was not set in the main search loop
+         204    // alpha was not raised at any point, just pick the first move
+    >>>  205    // avaliable (arbitrary) to avoid putting a null move in the
+         206    // transposition table
+         207    if (bestMove.getFlags() & Move::NULL_MOVE) {
+         208      bestMove = legalMoves.at(0);
+
+  tests/engines/shallowblue-src/src/search.cc:207
+         204    // alpha was not raised at any point, just pick the first move
+         205    // avaliable (arbitrary) to avoid putting a null move in the
+         206    // transposition table
+    >>>  207    if (bestMove.getFlags() & Move::NULL_MOVE) {
+         208      bestMove = legalMoves.at(0);
+         209    }
+         210  
+
+  tests/engines/shallowblue-src/src/search.cc:320
+         317  
+         318    // If the best move was not set in the main search loop
+         319    // alpha was not raised at any point, just pick the first move
+    >>>  320    // avaliable (arbitrary) to avoid putting a null move in the
+         321    // transposition table
+         322    if (bestMove.getFlags() & Move::NULL_MOVE) {
+         323      bestMove = legalMoves.at(0);
+
+  tests/engines/shallowblue-src/src/search.cc:322
+         319    // alpha was not raised at any point, just pick the first move
+         320    // avaliable (arbitrary) to avoid putting a null move in the
+         321    // transposition table
+    >>>  322    if (bestMove.getFlags() & Move::NULL_MOVE) {
+         323      bestMove = legalMoves.at(0);
+         324    }
+         325  
+
+  tests/engines/bbc-src/src/old_versions/bbc_1.0.c:3698
+        3695      // legal moves counter
+        3696      int legal_moves = 0;
+        3697      
+    >>> 3698      // null move pruning
+        3699      if (depth >= 3 && in_check == 0 && ply)
+        3700      {
+        3701          // preserve board state
+
+  tests/engines/bbc-src/src/old_versions/bbc_1.1.c:3972
+        3969      // legal moves counter
+        3970      int legal_moves = 0;
+        3971      
+    >>> 3972      // null move pruning
+        3973      if (depth >= 3 && in_check == 0 && ply)
+        3974      {
+        3975          // preserve board state
+
+  tests/engines/bbc-src/src/old_versions/bbc_1.2.c:3963
+        3960      // legal moves counter
+        3961      int legal_moves = 0;
+        3962      
+    >>> 3963      // null move pruning
+        3964      if (depth >= 3 && in_check == 0 && ply)
+        3965      {
+        3966          // preserve board state
+
+  tests/engines/bbc-src/src/bbc_nnue/bbc.c:3372
+        3369      // get static evaluation score
+        3370  	int static_eval = evaluate();
+        3371      
+    >>> 3372      // evaluation pruning / static null move pruning
+        3373  	if (depth < 3 && !pv_node && !in_check &&  abs(beta - 1) > -infinity + 100)
+        3374  	{   
+        3375          // define evaluation margin
+
+  tests/engines/bbc-src/src/bbc_nnue/bbc.c:3384
+        3381  			return static_eval - eval_margin;
+        3382  	}
+        3383      
+    >>> 3384      // null move pruning
+        3385      if (depth >= 3 && in_check == 0 && ply)
+        3386      {
+        3387          // preserve board state
+
+  tests/engines/vice-src/Vice11/src/defs.h:299
+         296  // makemove.c
+         297  extern int MakeMove(S_BOARD *pos, int move);
+         298  extern void TakeMove(S_BOARD *pos);
+    >>>  299  extern void MakeNullMove(S_BOARD *pos);
+         300  extern void TakeNullMove(S_BOARD *pos);
+         301  
+         302  // perft.c
+
+  tests/engines/vice-src/Vice11/src/defs.h:300
+         297  extern int MakeMove(S_BOARD *pos, int move);
+         298  extern void TakeMove(S_BOARD *pos);
+         299  extern void MakeNullMove(S_BOARD *pos);
+    >>>  300  extern void TakeNullMove(S_BOARD *pos);
+         301  
+         302  // perft.c
+         303  extern void PerftTest(int depth, S_BOARD *pos);
+
+  tests/engines/vice-src/Vice11/src/makemove.c:325
+         322  }
+         323  
+         324  
+    >>>  325  void MakeNullMove(S_BOARD *pos) {
+         326  
+         327      ASSERT(CheckBoard(pos));
+         328      ASSERT(!SqAttacked(pos->KingSq[pos->side],pos->side^1,pos));
+
+  tests/engines/vice-src/Vice11/src/makemove.c:350
+         347  	ASSERT(pos->ply >= 0 && pos->ply < MAXDEPTH);
+         348  
+         349      return;
+    >>>  350  } // MakeNullMove
+         351  
+         352  void TakeNullMove(S_BOARD *pos) {
+         353      ASSERT(CheckBoard(pos));
+
+  tests/engines/vice-src/Vice11/src/makemove.c:352
+         349      return;
+         350  } // MakeNullMove
+         351  
+    >>>  352  void TakeNullMove(S_BOARD *pos) {
+         353      ASSERT(CheckBoard(pos));
+         354  
+         355      pos->hisPly--;
+
+  tests/engines/vice-src/Vice11/src/search.c:192
+         189  	}
+         190  
+         191  	if( DoNull && !InCheck && pos->ply && (pos->bigPce[pos->side] > 0) && depth >= 4) {
+    >>>  192  		MakeNullMove(pos);
+         193  		Score = -AlphaBeta( -beta, -beta + 1, depth-4, pos, info, FALSE);
+         194  		TakeNullMove(pos);
+         195  		if(info->stopped == TRUE) {
+
+  tests/engines/vice-src/Vice11/src/search.c:194
+         191  	if( DoNull && !InCheck && pos->ply && (pos->bigPce[pos->side] > 0) && depth >= 4) {
+         192  		MakeNullMove(pos);
+         193  		Score = -AlphaBeta( -beta, -beta + 1, depth-4, pos, info, FALSE);
+    >>>  194  		TakeNullMove(pos);
+         195  		if(info->stopped == TRUE) {
+         196  			return 0;
+         197  		}
+
+  _build/default/ocaml/engine.ml:1461
+        1458    nu_ply: int;
+        1459    }
+        1460  
+    >>> 1461  let make_null_move (b: board_state) : null_undo =
+        1462    let u = { nu_ep = b.ep_square; nu_side = b.side; nu_ply = b.ply } in
+        1463    b.ep_square <- (-1); b.side <- 1 - b.side; b.ply <- b.ply + 1; u
+        1464  
+
+  _build/default/ocaml/engine.ml:1465
+        1462    let u = { nu_ep = b.ep_square; nu_side = b.side; nu_ply = b.ply } in
+        1463    b.ep_square <- (-1); b.side <- 1 - b.side; b.ply <- b.ply + 1; u
+        1464  
+    >>> 1465  let unmake_null_move (b: board_state) (u: null_undo) : unit =
+        1466    b.side <- u.nu_side; b.ep_square <- u.nu_ep; b.ply <- u.nu_ply
+        1467  
+        1468  let encode_move (mf: int) (mt: int) (mfl: int) : int =
+
+  _build/default/ocaml/engine.ml:1526
+        1523            let alpha = ref alpha_in in let null_pruned = ref false in
+        1524            if not in_check && depth >= 3 && !alpha > (-29000)
+        1525            then begin
+    >>> 1526              let null_undo1 = make_null_move b in
+        1527              let dummy_pv = Array.make 128 0 in
+        1528              let dummy_pvl = Array.make 1 0 in
+        1529              let null_score =
+
+  _build/default/ocaml/engine.ml:1539
+        1536                  dummy_pv
+        1537                  dummy_pvl in
+        1538                0 - o in
+    >>> 1539              unmake_null_move b null_undo1;
+        1540              if null_score >= beta then null_pruned := true end;
+        1541            if !null_pruned
+        1542            then beta
+
+  _build/default/ocaml/search_ocaml.ml:315
+         312  
+         313        if !tt_cutoff then !alpha
+         314        else begin
+    >>>  315          (* Null move pruning *)
+         316          let null_pruned = ref false in
+         317          if not in_check && depth >= 3 && !alpha > (-29000) then begin
+         318            let old_ep = b.ep_square in
+
+  src/board.mlw:317
+         314      if pt = (6:int63) then
+         315        b.king_sq[b.side] <- m_from
+         316  
+    >>>  317    (* Null move: just flip side and clear EP *)
+         318    type null_undo = {
+         319      nu_ep    : int63;
+         320      nu_side  : int63;
+
+  src/board.mlw:324
+         321      nu_ply   : int63;
+         322    }
+         323  
+    >>>  324    let make_null_move (b: board_state) : null_undo
+         325    =
+         326      let u = { nu_ep = b.ep_square; nu_side = b.side; nu_ply = b.ply } in
+         327      b.ep_square <- (-1:int63);
+
+  src/board.mlw:332
+         329      b.ply <- b.ply + (1:int63);
+         330      u
+         331  
+    >>>  332    let unmake_null_move (b: board_state) (u: null_undo) : unit
+         333    =
+         334      b.side <- u.nu_side;
+         335      b.ep_square <- u.nu_ep;
+
+  src/search.mlw:186
+         183        let in_check = is_attacked b (b.king_sq[side]) opp in
+         184        (* Check extension *)
+         185        let effective_depth = if in_check then depth + (1:int63) else depth in
+    >>>  186        (* Null move pruning: skip if in check, depth > 2, not a pawn endgame *)
+         187        let ref alpha = alpha_in in
+         188        let ref null_pruned = false in
+         189        if not in_check && depth >= (3:int63) && alpha > (-29000:int63) then begin
+
+  src/search.mlw:190
+         187        let ref alpha = alpha_in in
+         188        let ref null_pruned = false in
+         189        if not in_check && depth >= (3:int63) && alpha > (-29000:int63) then begin
+    >>>  190          let null_undo = make_null_move b in
+         191          let dummy_pv = make (128:int63) (0:int63) in
+         192          let dummy_pvl = make (1:int63) (0:int63) in
+         193          let null_score = (0:int63) - alpha_beta ss b ((0:int63) - beta) ((0:int63) - beta + (1:int63)) (depth - (3:int63)) dummy_pv dummy_pvl in
+
+  src/search.mlw:194
+         191          let dummy_pv = make (128:int63) (0:int63) in
+         192          let dummy_pvl = make (1:int63) (0:int63) in
+         193          let null_score = (0:int63) - alpha_beta ss b ((0:int63) - beta) ((0:int63) - beta + (1:int63)) (depth - (3:int63)) dummy_pv dummy_pvl in
+    >>>  194          unmake_null_move b null_undo;
+         195          if null_score >= beta then begin
+         196            null_pruned <- true
+         197          end
+
+[NO]  countergo40  (?)  — 0 match(es)
+
+[YES] cplusplus-chess  (C++)  — 7 match(es)
+  src/board.cpp:455
+         452    // zobrist_key_ already restored
+         453  }
+         454  
+    >>>  455  void Board::make_null_move(UndoState &u) {
+         456    u.castling_rights = castling_rights_;
+         457    u.ep_square = ep_square_;
+         458    u.halfmove_clock = halfmove_clock_;
+
+  src/board.cpp:473
+         470    zobrist_key_ ^= zobrist::SideToMove;
+         471  }
+         472  
+    >>>  473  void Board::unmake_null_move(const UndoState &u) {
+         474    // Restore state (no piece changes).
+         475    castling_rights_ = u.castling_rights;
+         476    ep_square_ = u.ep_square;
+
+  src/board.h:51
+          48  
+          49    void make_move(const Move &m, UndoState &u);
+          50    void unmake_move(const Move &m, const UndoState &u);
+    >>>   51    void make_null_move(UndoState &u);
+          52    void unmake_null_move(const UndoState &u);
+          53  
+          54    bool is_draw_by_50move() const { return halfmove_clock_ >= 100; }
+
+  src/board.h:52
+          49    void make_move(const Move &m, UndoState &u);
+          50    void unmake_move(const Move &m, const UndoState &u);
+          51    void make_null_move(UndoState &u);
+    >>>   52    void unmake_null_move(const UndoState &u);
+          53  
+          54    bool is_draw_by_50move() const { return halfmove_clock_ >= 100; }
+          55  
+
+  src/search.cpp:526
+         523      if (static_eval - kRfpMargin * depth >= beta) return beta;
+         524    }
+         525  
+    >>>  526    // Null-move pruning (only in non-PV nodes).
+         527    if (allow_null && !pv_node && !in_check && depth >= 3 && has_non_pawn_material(b, us)) {
+         528      UndoState u;
+         529      b.make_null_move(u);
+
+  src/search.cpp:529
+         526    // Null-move pruning (only in non-PV nodes).
+         527    if (allow_null && !pv_node && !in_check && depth >= 3 && has_non_pawn_material(b, us)) {
+         528      UndoState u;
+    >>>  529      b.make_null_move(u);
+         530      prev_move_[ply + 1] = Move{};
+         531      const int r = 2 + depth / 4;
+         532      const int new_depth = std::max(0, depth - 1 - r);
+
+  src/search.cpp:534
+         531      const int r = 2 + depth / 4;
+         532      const int new_depth = std::max(0, depth - 1 - r);
+         533      const int score = -negamax(b, new_depth, -beta, -beta + 1, ply + 1, false);
+    >>>  534      b.unmake_null_move(u);
+         535      if (stop_) return 0;
+         536      if (score >= beta) return beta;
+         537    }
+
+[NO]  latex-chess-engine  (LaTeX)  — 0 match(es)
+
+[YES] lean-chess  (Lean)  — 3 match(es)
+  Chess/Search.lean:37
+          34        | none => pure ()
+          35      return found
+          36  
+    >>>   37  def makeNullMove (pos : Position) : Position :=
+          38    let nextFullmove :=
+          39      match pos.sideToMove with
+          40      | .white => pos.fullmove
+
+  Chess/Search.lean:216
+         213            hasNonPawnMaterial pos pos.sideToMove
+         214          if nullMoveAllowed then
+         215            let (nullScore, nullNodes) :=
+    >>>  216              negamaxNoTT (makeNullMove pos) (depth - 3) (-b) (-b + 1) (ply + 1)
+         217            nodes := nodes + nullNodes
+         218            if -nullScore >= b then
+         219              return (b, nodes)
+
+  Chess/Search.lean:298
+         295        hasNonPawnMaterial pos pos.sideToMove
+         296      if nullMoveAllowed then
+         297        let ((nullScore, visited), ttAfterNull) :=
+    >>>  298          negamaxWithTT (makeNullMove pos) (depth - 3) (-b) (-b + 1) (ply + 1) ttCur
+         299        ttCur := ttAfterNull
+         300        nullNodes := nullNodes + visited
+         301        if -nullScore >= b then
+
+[NO]  madchess32  (?)  — 0 match(es)
+
+[NO]  tscp181  (?)  — 0 match(es)
+
+========================================================================
+Summary (engines WITHOUT the feature):
+  - chess-Rocq  (OCaml)
+  - chess-apl-codex54  (APL)
+  - chess-assembly-codex  (Assembly)
+  - chess-brainfuck  (Python)
+  - chess-brainfuck-cc  (Python)
+  - chess-cobol-cc  (C)
+  - chess-css-codex  (HTML)
+  - chess-css-codex-guided  (JavaScript)
+  - chess-icon-codex  (Icon)
+  - chess-java  (Java)
+  - chess-latex-codex-replication  (LaTeX)
+  - chess-mojo  (Mojo)
+  - chess-sql  (Python)
+  - countergo40  (?)
+  - latex-chess-engine  (LaTeX)
+  - madchess32  (?)
+  - tscp181  (?)

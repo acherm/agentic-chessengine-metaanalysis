@@ -1,0 +1,82 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_skill11 vs chess-java-cc)
+Started game 1 of 20 (chess-java-cc vs sf_skill11)
+Finished game 1 (chess-java-cc vs sf_skill11): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (chess-java-cc vs sf_skill11)
+Finished game 2 (sf_skill11 vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 2 - 0  [0.000] 2
+Started game 4 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 3 (chess-java-cc vs sf_skill11): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 3 - 0  [0.000] 3
+Started game 5 of 20 (chess-java-cc vs sf_skill11)
+Finished game 4 (sf_skill11 vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 4 - 0  [0.000] 4
+Started game 6 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 5 (chess-java-cc vs sf_skill11): 1/2-1/2 {Draw by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 4 - 1  [0.100] 5
+Started game 7 of 20 (chess-java-cc vs sf_skill11)
+Finished game 6 (sf_skill11 vs chess-java-cc): 1/2-1/2 {Draw by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 4 - 2  [0.167] 6
+Started game 8 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 7 (chess-java-cc vs sf_skill11): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 5 - 2  [0.143] 7
+Started game 9 of 20 (chess-java-cc vs sf_skill11)
+Finished game 8 (sf_skill11 vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 6 - 2  [0.125] 8
+Started game 10 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 9 (chess-java-cc vs sf_skill11): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 7 - 2  [0.111] 9
+Started game 11 of 20 (chess-java-cc vs sf_skill11)
+Finished game 10 (sf_skill11 vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 8 - 2  [0.100] 10
+Started game 12 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 11 (chess-java-cc vs sf_skill11): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 9 - 2  [0.091] 11
+Started game 13 of 20 (chess-java-cc vs sf_skill11)
+Finished game 12 (sf_skill11 vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 10 - 2  [0.083] 12
+Started game 14 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 13 (chess-java-cc vs sf_skill11): 1/2-1/2 {Draw by fifty moves rule}
+Score of chess-java-cc vs sf_skill11: 0 - 10 - 3  [0.115] 13
+Started game 15 of 20 (chess-java-cc vs sf_skill11)
+Finished game 14 (sf_skill11 vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 0 - 11 - 3  [0.107] 14
+Started game 16 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 15 (chess-java-cc vs sf_skill11): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 1 - 11 - 3  [0.167] 15
+Started game 17 of 20 (chess-java-cc vs sf_skill11)
+Finished game 16 (sf_skill11 vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 2 - 11 - 3  [0.219] 16
+Started game 18 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 17 (chess-java-cc vs sf_skill11): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 2 - 12 - 3  [0.206] 17
+Started game 19 of 20 (chess-java-cc vs sf_skill11)
+Finished game 18 (sf_skill11 vs chess-java-cc): 0-1 {Black wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 3 - 12 - 3  [0.250] 18
+Started game 20 of 20 (sf_skill11 vs chess-java-cc)
+Finished game 19 (chess-java-cc vs sf_skill11): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 4 - 12 - 3  [0.289] 19
+Finished game 20 (sf_skill11 vs chess-java-cc): 1-0 {White wins by adjudication}
+Score of chess-java-cc vs sf_skill11: 4 - 13 - 3  [0.275] 20
+...      chess-java-cc playing White: 2 - 6 - 2  [0.300] 10
+...      chess-java-cc playing Black: 2 - 7 - 1  [0.250] 10
+...      White vs Black: 9 - 8 - 3  [0.525] 20
+Elo difference: -168.4 +/- 174.8, LOS: 1.5 %, DrawRatio: 15.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-java-cc
+   "Draw by adjudication": 2
+   "Draw by fifty moves rule": 1
+   "Loss: Black wins by adjudication": 6
+   "Loss: White wins by adjudication": 7
+   "Win: Black wins by adjudication": 2
+   "Win: White wins by adjudication": 2
+Player: sf_skill11
+   "Draw by adjudication": 2
+   "Draw by fifty moves rule": 1
+   "Loss: Black wins by adjudication": 2
+   "Loss: White wins by adjudication": 2
+   "Win: Black wins by adjudication": 6
+   "Win: White wins by adjudication": 7
+Finished match

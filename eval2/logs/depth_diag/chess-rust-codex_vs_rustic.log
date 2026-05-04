@@ -1,0 +1,36 @@
+Indexing opening suite...
+Started game 1 of 6 (chess-rust-codex vs rustic)
+Finished game 1 (chess-rust-codex vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs rustic: 0 - 1 - 0  [0.000] 1
+Started game 2 of 6 (rustic vs chess-rust-codex)
+Finished game 2 (rustic vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs rustic: 1 - 1 - 0  [0.500] 2
+Started game 3 of 6 (chess-rust-codex vs rustic)
+Finished game 3 (chess-rust-codex vs rustic): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs rustic: 1 - 2 - 0  [0.333] 3
+Started game 4 of 6 (rustic vs chess-rust-codex)
+Finished game 4 (rustic vs chess-rust-codex): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs rustic: 1 - 3 - 0  [0.250] 4
+Started game 5 of 6 (chess-rust-codex vs rustic)
+Finished game 5 (chess-rust-codex vs rustic): 1-0 {White wins by adjudication}
+Score of chess-rust-codex vs rustic: 2 - 3 - 0  [0.400] 5
+Started game 6 of 6 (rustic vs chess-rust-codex)
+Finished game 6 (rustic vs chess-rust-codex): 0-1 {Black wins by adjudication}
+Score of chess-rust-codex vs rustic: 3 - 3 - 0  [0.500] 6
+...      chess-rust-codex playing White: 1 - 2 - 0  [0.333] 3
+...      chess-rust-codex playing Black: 2 - 1 - 0  [0.667] 3
+...      White vs Black: 2 - 4 - 0  [0.333] 6
+Elo difference: 0.0 +/- 380.7, LOS: 50.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-rust-codex
+   "Loss: Black wins by adjudication": 2
+   "Loss: White wins by adjudication": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White wins by adjudication": 1
+Player: rustic
+   "Loss: Black wins by adjudication": 2
+   "Loss: White wins by adjudication": 1
+   "Win: Black wins by adjudication": 2
+   "Win: White wins by adjudication": 1
+Finished match

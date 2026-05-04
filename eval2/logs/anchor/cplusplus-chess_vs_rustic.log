@@ -1,0 +1,47 @@
+Indexing opening suite...
+Started game 1 of 30 (cplusplus-chess vs rustic)
+Started game 2 of 30 (rustic vs cplusplus-chess)
+Finished game 2 (rustic vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs rustic: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (cplusplus-chess vs rustic)
+Finished game 1 (cplusplus-chess vs rustic): 1/2-1/2 {Draw by 3-fold repetition}
+Score of cplusplus-chess vs rustic: 0 - 1 - 1  [0.250] 2
+Started game 4 of 30 (rustic vs cplusplus-chess)
+Finished game 3 (cplusplus-chess vs rustic): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs rustic: 0 - 2 - 1  [0.167] 3
+Started game 5 of 30 (cplusplus-chess vs rustic)
+Finished game 4 (rustic vs cplusplus-chess): 1-0 {White mates}
+Score of cplusplus-chess vs rustic: 0 - 3 - 1  [0.125] 4
+Started game 6 of 30 (rustic vs cplusplus-chess)
+Finished game 5 (cplusplus-chess vs rustic): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs rustic: 0 - 4 - 1  [0.100] 5
+Started game 7 of 30 (cplusplus-chess vs rustic)
+Finished game 6 (rustic vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs rustic: 0 - 5 - 1  [0.083] 6
+Started game 8 of 30 (rustic vs cplusplus-chess)
+Finished game 7 (cplusplus-chess vs rustic): 0-1 {Black wins by adjudication}
+Score of cplusplus-chess vs rustic: 0 - 6 - 1  [0.071] 7
+Started game 9 of 30 (cplusplus-chess vs rustic)
+Finished game 8 (rustic vs cplusplus-chess): 1-0 {White wins by adjudication}
+Score of cplusplus-chess vs rustic: 0 - 7 - 1  [0.063] 8
+Finished game 9 (cplusplus-chess vs rustic): * {No result}
+Score of cplusplus-chess vs rustic: 0 - 7 - 1  [0.063] 8
+...      cplusplus-chess playing White: 0 - 3 - 1  [0.125] 4
+...      cplusplus-chess playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 3 - 1  [0.563] 8
+Elo difference: -470.4 +/- nan, LOS: 0.4 %, DrawRatio: 12.5 %
+SPRT: llr -3.21 (-108.9%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: cplusplus-chess
+   "Draw by 3-fold repetition": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 3
+   "No result": 1
+Player: rustic
+   "Draw by 3-fold repetition": 1
+   "No result": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 3
+Finished match

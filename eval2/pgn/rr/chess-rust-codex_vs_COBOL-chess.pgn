@@ -1,0 +1,26 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-rust-codex"]
+[Black "COBOL-chess"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppp1ppp/4p3/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 Nc6 2. Nc3 Be7 3. d4 g5 4. d5 exd5 5. exd5 Nb4 6. a3 Na6 7. Ne4 g4 8. Ne5
+f5 9. d6 fxe4 10. Qd5 Nh6 11. Bxh6 Rf8 12. Bxf8 Bxf8 13. Qf7# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "COBOL-chess"]
+[Black "chess-rust-codex"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppp1ppp/4p3/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 Nc6 2. Nf3 Bb4 3. Bd3 Nf6 4. a3 Bc5 5. b4 Bd6 6. b5 Ne5 7. Nxe5 Bxe5
+8. Rb1 d5 9. exd5 exd5 10. Qe2 O-O 0-1
+

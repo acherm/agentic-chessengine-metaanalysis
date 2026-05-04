@@ -1,0 +1,142 @@
+{
+  "name": "chess-fem",
+  "path": "/Users/mathieuacher/SANDBOX/chess-fem",
+  "primary_language": "Python",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 10,
+      "Python": 7,
+      "YAML": 2,
+      "JSON": 18,
+      "Shell": 1,
+      "R": 1,
+      "Text": 1,
+      "HTML": 1,
+      "CSS": 2,
+      "JavaScript": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 1492,
+      "Python": 3489,
+      "YAML": 233,
+      "JSON": 226920,
+      "Shell": 52,
+      "R": 1080,
+      "Text": 45,
+      "HTML": 296,
+      "CSS": 901,
+      "JavaScript": 900
+    },
+    "total_files": 44,
+    "total_loc": 235408
+  },
+  "features": {
+    "Principal-variation (PV)": 3,
+    "Time management": 1
+  },
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [
+      "generate_explorable_data.py",
+      "multiverse_analysis.py",
+      "multiverse_fide.py"
+    ],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "STUDY_DESIGN.md"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [
+      "/Users/mathieuacher/.claude/projects/-Users-mathieuacher-SANDBOX-chess-fem/f59825dc-0bee-4809-ae44-2c782b556fd0.jsonl"
+    ],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "6e37384|2026-01-23T12:16:39+01:00|Mathieu Acher|Fix R constraint deduplication to match Python exactly",
+      "88441a1|2026-01-23T11:15:39+01:00|Mathieu Acher|Match R multiverse specification to Python/YAML spec",
+      "250458f|2026-01-23T10:57:36+01:00|Mathieu Acher|Fix R multiverse analysis to work with base R only",
+      "42ca998|2026-01-23T10:05:57+01:00|Mathieu Acher|Add R multiverse analysis as alternative implementation",
+      "160ac84|2026-01-23T09:35:26+01:00|Mathieu Acher|Add stratified statistics, specification curves, and model defensibility guide",
+      "321f44d|2026-01-22T09:12:06+01:00|Mathieu Acher|Add multiple inference models for multiverse analysis",
+      "fa9e1b5|2026-01-22T09:00:37+01:00|Mathieu Acher|Initial commit: Multiverse analysis of gender representation in chess"
+    ],
+    "n_commits": 7,
+    "authors": [
+      "7\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

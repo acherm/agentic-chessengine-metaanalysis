@@ -1,0 +1,248 @@
+{
+  "name": "test-superset",
+  "path": "/Users/mathieuacher/SANDBOX/test-superset",
+  "primary_language": "HTML",
+  "loc": {
+    "files_by_lang": {
+      "HTML": 2,
+      "Markdown": 1,
+      "JSON": 2,
+      "JavaScript": 22,
+      "CSS": 18,
+      "Shell": 1
+    },
+    "loc_by_lang": {
+      "HTML": 113887,
+      "Markdown": 284,
+      "JSON": 2181,
+      "JavaScript": 3711,
+      "CSS": 104590,
+      "Shell": 119
+    },
+    "total_files": 46,
+    "total_loc": 224772
+  },
+  "features": {
+    "FEN parsing": 17,
+    "UCI protocol": 11,
+    "Castling": 15,
+    "En passant": 7,
+    "Promotion": 13,
+    "Check/Checkmate": 13,
+    "PGN": 4,
+    "Board: mailbox 8x8": 1,
+    "Move ordering (MVV-LVA)": 5,
+    "Evaluation/PST": 1,
+    "King safety": 3,
+    "Material counting": 5,
+    "Opening book": 2,
+    "Time management": 5
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "play.html",
+      "README.md",
+      "test/eval.test.js",
+      "test/movegen.test.js",
+      "test/uci.test.js",
+      "test/check-detection.test.js",
+      "test/integration.test.js",
+      "scripts/elo-test.sh",
+      "src/driver.js",
+      "src/board-renderer.js",
+      "src/tournament.js",
+      "src/game-state.js",
+      "src/uci.js",
+      "src/search.js",
+      "src/css-evaluator.js",
+      "src/players/stockfish-player.js",
+      "src/players/css-player.js"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "test/uci.test.js",
+      "test/integration.test.js",
+      "scripts/elo-test.sh",
+      "src/driver.js",
+      "src/tournament.js",
+      "src/uci.js",
+      "src/search.js",
+      "src/players/stockfish-player.js",
+      "src/players/random-player.js",
+      "src/players/css-player.js"
+    ],
+    "Perft": [],
+    "Castling": [
+      "play.html",
+      "README.md",
+      "test/movegen.test.js",
+      "scss/legality.scss",
+      "scss/legality/_castling-check.scss",
+      "scss/legality/_constants.scss",
+      "scripts/generate-movegen-css.js",
+      "scripts/generate-movescoring-css.js",
+      "tournaments/random-4r-tournament.pgn",
+      "tournaments/post-rename-random.pgn",
+      "tournaments/2026-03-01-tournament.pgn",
+      "tournaments/post-rename-stockfish.pgn",
+      "tournaments/depth2-threat-scoring.pgn",
+      "tournaments/stockfish-4r-tournament.pgn",
+      "src/game-state.js"
+    ],
+    "En passant": [
+      "play.html",
+      "README.md",
+      "test/movegen.test.js",
+      "scss/legality/_ep-discovered-check.scss",
+      "scripts/generate-movegen-css.js",
+      "src/board-renderer.js",
+      "src/game-state.js"
+    ],
+    "Promotion": [
+      "play.html",
+      "README.md",
+      "test/movegen.test.js",
+      "test/integration.test.js",
+      "css/move-scoring.css",
+      "scripts/generate-movegen-css.js",
+      "scripts/elo-test.sh",
+      "scripts/generate-movescoring-css.js",
+      "src/board-renderer.js",
+      "src/game-state.js",
+      "src/search.js",
+      "src/css-evaluator.js",
+      "src/players/random-player.js"
+    ],
+    "Check/Checkmate": [
+      "play.html",
+      "README.md",
+      "test/movegen.test.js",
+      "test/check-detection.test.js",
+      "test/integration.test.js",
+      "css/move-scoring.css",
+      "css/check-detection.css",
+      "scss/legality/_default.scss",
+      "scripts/generate-check-css.js",
+      "src/board-renderer.js",
+      "src/tournament.js",
+      "src/search.js",
+      "src/css-evaluator.js"
+    ],
+    "PGN": [
+      "scripts/elo-test.sh",
+      "scripts/tournament.js",
+      "src/pgn-writer.js",
+      "src/tournament.js"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "src/board-renderer.js"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [
+      "README.md",
+      "css/move-scoring.css",
+      "scripts/generate-movescoring-css.js",
+      "src/search.js",
+      "src/css-evaluator.js"
+    ],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "scripts/generate-css.js"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [
+      "scss/legality/_king-safety-non-sliding.scss",
+      "scss/legality/_king-safety-sliding.scss",
+      "scss/legality/_king-safety-vacancy.scss"
+    ],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "README.md",
+      "css/eval.css",
+      "scripts/generate-css.js",
+      "scripts/generate-movescoring-css.js",
+      "src/tournament.js"
+    ],
+    "Opening book": [
+      "README.md",
+      "scripts/generate-movescoring-css.js"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "scripts/tournament.js",
+      "src/driver.js",
+      "src/tournament.js",
+      "src/uci.js",
+      "src/search.js"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 52,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "41a9ec5|2026-02-27T19:15:34+01:00|Mathieu Acher|Initial commit"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

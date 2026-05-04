@@ -1,0 +1,88 @@
+Indexing opening suite...
+Started game 2 of 20 (sf_skill3 vs lean-chess)
+Started game 1 of 20 (lean-chess vs sf_skill3)
+Finished game 2 (sf_skill3 vs lean-chess): 1-0 {White mates}
+Score of lean-chess vs sf_skill3: 0 - 1 - 0  [0.000] 1
+Started game 3 of 20 (lean-chess vs sf_skill3)
+Finished game 1 (lean-chess vs sf_skill3): 1-0 {White wins by adjudication}
+Score of lean-chess vs sf_skill3: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_skill3 vs lean-chess)
+Finished game 4 (sf_skill3 vs lean-chess): 0-1 {Black wins by adjudication}
+Score of lean-chess vs sf_skill3: 2 - 1 - 0  [0.667] 3
+Started game 5 of 20 (lean-chess vs sf_skill3)
+Finished game 3 (lean-chess vs sf_skill3): 0-1 {Black wins by adjudication}
+Score of lean-chess vs sf_skill3: 2 - 2 - 0  [0.500] 4
+Started game 6 of 20 (sf_skill3 vs lean-chess)
+Finished game 5 (lean-chess vs sf_skill3): 1-0 {White mates}
+Score of lean-chess vs sf_skill3: 3 - 2 - 0  [0.600] 5
+Started game 7 of 20 (lean-chess vs sf_skill3)
+Finished game 6 (sf_skill3 vs lean-chess): 1-0 {White wins by adjudication}
+Score of lean-chess vs sf_skill3: 3 - 3 - 0  [0.500] 6
+Started game 8 of 20 (sf_skill3 vs lean-chess)
+Finished game 7 (lean-chess vs sf_skill3): 0-1 {Black wins by adjudication}
+Score of lean-chess vs sf_skill3: 3 - 4 - 0  [0.429] 7
+Started game 9 of 20 (lean-chess vs sf_skill3)
+Finished game 8 (sf_skill3 vs lean-chess): 1-0 {White wins by adjudication}
+Score of lean-chess vs sf_skill3: 3 - 5 - 0  [0.375] 8
+Started game 10 of 20 (sf_skill3 vs lean-chess)
+Finished game 9 (lean-chess vs sf_skill3): 0-1 {Black mates}
+Score of lean-chess vs sf_skill3: 3 - 6 - 0  [0.333] 9
+Started game 11 of 20 (lean-chess vs sf_skill3)
+Finished game 10 (sf_skill3 vs lean-chess): 0-1 {Black mates}
+Score of lean-chess vs sf_skill3: 4 - 6 - 0  [0.400] 10
+Started game 12 of 20 (sf_skill3 vs lean-chess)
+Finished game 11 (lean-chess vs sf_skill3): 1-0 {White mates}
+Score of lean-chess vs sf_skill3: 5 - 6 - 0  [0.455] 11
+Started game 13 of 20 (lean-chess vs sf_skill3)
+Finished game 12 (sf_skill3 vs lean-chess): 1/2-1/2 {Draw by 3-fold repetition}
+Score of lean-chess vs sf_skill3: 5 - 6 - 1  [0.458] 12
+Started game 14 of 20 (sf_skill3 vs lean-chess)
+Finished game 14 (sf_skill3 vs lean-chess): 1-0 {White wins by adjudication}
+Score of lean-chess vs sf_skill3: 5 - 7 - 1  [0.423] 13
+Started game 15 of 20 (lean-chess vs sf_skill3)
+Finished game 13 (lean-chess vs sf_skill3): 0-1 {Black wins by adjudication}
+Score of lean-chess vs sf_skill3: 5 - 8 - 1  [0.393] 14
+Started game 16 of 20 (sf_skill3 vs lean-chess)
+Finished game 15 (lean-chess vs sf_skill3): 0-1 {Black wins by adjudication}
+Score of lean-chess vs sf_skill3: 5 - 9 - 1  [0.367] 15
+Started game 17 of 20 (lean-chess vs sf_skill3)
+Finished game 16 (sf_skill3 vs lean-chess): 1-0 {White mates}
+Score of lean-chess vs sf_skill3: 5 - 10 - 1  [0.344] 16
+Started game 18 of 20 (sf_skill3 vs lean-chess)
+Finished game 17 (lean-chess vs sf_skill3): 0-1 {Black wins by adjudication}
+Score of lean-chess vs sf_skill3: 5 - 11 - 1  [0.324] 17
+Started game 19 of 20 (lean-chess vs sf_skill3)
+Finished game 18 (sf_skill3 vs lean-chess): 1-0 {White wins by adjudication}
+Score of lean-chess vs sf_skill3: 5 - 12 - 1  [0.306] 18
+Started game 20 of 20 (sf_skill3 vs lean-chess)
+Finished game 19 (lean-chess vs sf_skill3): 1-0 {White wins by adjudication}
+Score of lean-chess vs sf_skill3: 6 - 12 - 1  [0.342] 19
+Finished game 20 (sf_skill3 vs lean-chess): 1-0 {White wins by adjudication}
+Score of lean-chess vs sf_skill3: 6 - 13 - 1  [0.325] 20
+...      lean-chess playing White: 4 - 6 - 0  [0.400] 10
+...      lean-chess playing Black: 2 - 7 - 1  [0.250] 10
+...      White vs Black: 11 - 8 - 1  [0.575] 20
+Elo difference: -127.0 +/- 176.6, LOS: 5.4 %, DrawRatio: 5.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: lean-chess
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 5
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 5
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 2
+Player: sf_skill3
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 2
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 5
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 5
+Finished match

@@ -1,0 +1,385 @@
+{
+  "name": "chess-why3",
+  "path": "/Users/mathieuacher/SANDBOX/chess-why3",
+  "primary_language": "OCaml",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 19,
+      "JSON": 17,
+      "OCaml": 5,
+      "Shell": 1,
+      "Python": 3,
+      "Why3": 1
+    },
+    "loc_by_lang": {
+      "Markdown": 531,
+      "JSON": 775,
+      "OCaml": 2265,
+      "Shell": 24,
+      "Python": 564,
+      "Why3": 371
+    },
+    "total_files": 46,
+    "total_loc": 4530
+  },
+  "features": {
+    "FEN parsing": 3,
+    "UCI protocol": 58,
+    "Perft": 2,
+    "Castling": 31,
+    "Promotion": 1,
+    "Check/Checkmate": 3,
+    "PGN": 21,
+    "Minimax/Negamax": 6,
+    "Alpha-beta": 3,
+    "Iterative deepening": 2,
+    "Quiescence": 4,
+    "Transposition table": 2,
+    "Null-move pruning": 5,
+    "Aspiration windows": 1,
+    "Evaluation/PST": 1,
+    "Tapered evaluation": 1,
+    "Mobility": 1,
+    "Material counting": 7,
+    "Time management": 48
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "docs/ROADMAP.md",
+      "_build/default/src/uci_ocaml/main.ml",
+      "src/uci_ocaml/main.ml"
+    ],
+    "UCI protocol": [
+      "Makefile",
+      "README.md",
+      "docs/ROADMAP.md",
+      "results/20260217-162042-whyml-quick-summary.md",
+      "results/20260217-162330-whyml-clean-summary.json",
+      "results/20260218-184217-tc10-probe-summary.md",
+      "results/20260217-162627-whyml-valid-elo-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162303-whyml-legal-whyml-uci-vs-sf-1000.pgn",
+      "results/20260218-185130-v2-quick-summary.md",
+      "results/20260217-162042-whyml-quick-summary.json",
+      "results/20260217-162805-clamp-test-summary.json",
+      "results/20260217-162946-whyml-valid-elo-v2-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-191452-strict-check-summary.md",
+      "results/20260217-162042-whyml-quick-whyml-uci-vs-sf-1200.pgn",
+      "results/20260217-162805-clamp-test-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-190811-whyml-long-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162434-whyml-tc3-summary.json",
+      "results/20260217-162434-whyml-tc3-summary.md",
+      "results/20260217-190811-whyml-long-summary.json",
+      "results/20260218-185231-v2-strict20-whyml-uci-v2-vs-sf-1320.pgn",
+      "results/20260218-183044-strict20-summary.json",
+      "results/20260217-162042-whyml-quick-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-190811-whyml-long-summary.md",
+      "results/20260218-183044-strict20-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162330-whyml-clean-summary.md",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-900.pgn",
+      "results/20260217-162149-whyml-debug-summary.json",
+      "results/20260217-162946-whyml-valid-elo-v2-whyml-uci-vs-sf-1320.pgn",
+      "results/20260218-184217-tc10-probe-summary.json",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-1100.pgn",
+      "results/20260217-162946-whyml-valid-elo-v2-summary.md",
+      "results/20260217-191452-strict-check-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-191452-strict-check-summary.json",
+      "results/20260218-185130-v2-quick-summary.json",
+      "results/20260217-162149-whyml-debug-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-162946-whyml-valid-elo-v2-summary.json",
+      "results/20260217-162627-whyml-valid-elo-whyml-uci-vs-sf-1320.pgn",
+      "results/20260218-185231-v2-strict20-summary.json",
+      "results/20260218-185231-v2-strict20-summary.md",
+      "results/20260218-184217-tc10-probe-whyml-uci-vs-sf-1320.pgn",
+      "results/20260218-185130-v2-quick-whyml-uci-v2-vs-sf-1320.pgn",
+      "results/20260217-162805-clamp-test-summary.md",
+      "results/20260217-162627-whyml-valid-elo-summary.md",
+      "results/20260217-162303-whyml-legal-summary.md",
+      "results/20260217-162627-whyml-valid-elo-summary.json",
+      "results/20260218-183044-strict20-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-162149-whyml-debug-summary.md",
+      "results/20260217-162330-whyml-clean-whyml-uci-vs-sf-1000.pgn",
+      "results/20260218-185231-v2-strict20-whyml-uci-v2-vs-sf-1400.pgn",
+      "results/20260218-183044-strict20-summary.md",
+      "results/20260217-190811-whyml-long-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162330-whyml-clean-whyml-uci-vs-sf-1200.pgn",
+      "results/20260217-162303-whyml-legal-summary.json",
+      "_build/default/src/uci_ocaml/main.ml",
+      "scripts/build_whyml_uci.sh",
+      "scripts/run_elo_benchmark.py",
+      "src/uci_ocaml/main.ml"
+    ],
+    "Perft": [
+      "README.md",
+      "docs/ROADMAP.md"
+    ],
+    "Castling": [
+      "README.md",
+      "docs/ROADMAP.md",
+      "results/20260217-162627-whyml-valid-elo-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162303-whyml-legal-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-135843-smoke-test-sf1300-vs-sf-1200.pgn",
+      "results/20260217-162946-whyml-valid-elo-v2-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162042-whyml-quick-whyml-uci-vs-sf-1200.pgn",
+      "results/20260217-135613-smoke-test-sf1300-vs-sf-1200.pgn",
+      "results/20260217-162805-clamp-test-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-190811-whyml-long-whyml-uci-vs-sf-1400.pgn",
+      "results/20260218-185231-v2-strict20-whyml-uci-v2-vs-sf-1320.pgn",
+      "results/20260217-162042-whyml-quick-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-135613-smoke-test-sf1300-vs-sf-1400.pgn",
+      "results/20260218-183044-strict20-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-900.pgn",
+      "results/20260217-162946-whyml-valid-elo-v2-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-1100.pgn",
+      "results/20260217-191452-strict-check-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-135949-smoke-test-sf1300-vs-sf-1200.pgn",
+      "results/20260217-162149-whyml-debug-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-162627-whyml-valid-elo-whyml-uci-vs-sf-1320.pgn",
+      "results/20260218-184217-tc10-probe-whyml-uci-vs-sf-1320.pgn",
+      "results/20260218-185130-v2-quick-whyml-uci-v2-vs-sf-1320.pgn",
+      "results/20260218-183044-strict20-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-162330-whyml-clean-whyml-uci-vs-sf-1000.pgn",
+      "results/20260218-185231-v2-strict20-whyml-uci-v2-vs-sf-1400.pgn",
+      "results/20260217-190811-whyml-long-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162330-whyml-clean-whyml-uci-vs-sf-1200.pgn",
+      "_build/default/src/uci_ocaml/main.ml",
+      "src/uci_ocaml/main.ml"
+    ],
+    "En passant": [],
+    "Promotion": [
+      "README.md"
+    ],
+    "Check/Checkmate": [
+      "README.md",
+      "_build/default/src/uci_ocaml/main.ml",
+      "src/uci_ocaml/main.ml"
+    ],
+    "PGN": [
+      "README.md",
+      "results/20260217-162330-whyml-clean-summary.json",
+      "results/20260217-135613-smoke-summary.json",
+      "results/20260217-162042-whyml-quick-summary.json",
+      "results/20260217-162805-clamp-test-summary.json",
+      "results/20260217-135843-smoke-summary.json",
+      "results/20260217-162434-whyml-tc3-summary.json",
+      "results/20260217-190811-whyml-long-summary.json",
+      "results/20260218-183044-strict20-summary.json",
+      "results/20260217-162149-whyml-debug-summary.json",
+      "results/20260217-135949-smoke-summary.json",
+      "results/20260218-184217-tc10-probe-summary.json",
+      "results/20260217-191452-strict-check-summary.json",
+      "results/20260218-185130-v2-quick-summary.json",
+      "results/20260217-162946-whyml-valid-elo-v2-summary.json",
+      "results/20260218-185231-v2-strict20-summary.json",
+      "results/20260217-162627-whyml-valid-elo-summary.json",
+      "results/20260217-162303-whyml-legal-summary.json",
+      "scripts/estimate_elo_from_pgn.py",
+      "scripts/elo_utils.py",
+      "scripts/run_elo_benchmark.py"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "README.md",
+      "_build/default/src/uci_ocaml/main.ml",
+      "_build/default/src/uci_ocaml/engine_extracted.ml",
+      "src/uci_ocaml/main.ml",
+      "src/uci_ocaml/engine_extracted.ml",
+      "src/whyml/engine.mlw"
+    ],
+    "Alpha-beta": [
+      "README.md",
+      "_build/default/src/uci_ocaml/main.ml",
+      "src/uci_ocaml/main.ml"
+    ],
+    "Iterative deepening": [
+      "README.md",
+      "docs/ROADMAP.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "docs/ROADMAP.md",
+      "_build/default/src/uci_ocaml/main.ml",
+      "src/uci_ocaml/main.ml"
+    ],
+    "Transposition table": [
+      "README.md",
+      "docs/ROADMAP.md"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [
+      "_build/default/src/uci_ocaml/main.ml",
+      "_build/default/src/uci_ocaml/engine_extracted.ml",
+      "src/uci_ocaml/main.ml",
+      "src/uci_ocaml/engine_extracted.ml",
+      "src/whyml/engine.mlw"
+    ],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [
+      "README.md"
+    ],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "docs/ROADMAP.md"
+    ],
+    "Tapered evaluation": [
+      "docs/ROADMAP.md"
+    ],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [
+      "docs/ROADMAP.md"
+    ],
+    "Material counting": [
+      "README.md",
+      "docs/ROADMAP.md",
+      "_build/default/src/uci_ocaml/main.ml",
+      "_build/default/src/uci_ocaml/engine_extracted.ml",
+      "src/uci_ocaml/main.ml",
+      "src/uci_ocaml/engine_extracted.ml",
+      "src/whyml/engine.mlw"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "docs/ROADMAP.md",
+      "results/20260217-162042-whyml-quick-summary.md",
+      "results/20260218-184217-tc10-probe-summary.md",
+      "results/20260217-162627-whyml-valid-elo-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162303-whyml-legal-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-135843-smoke-summary.md",
+      "results/20260218-185130-v2-quick-summary.md",
+      "results/20260217-135613-smoke-summary.md",
+      "results/20260217-135843-smoke-test-sf1300-vs-sf-1200.pgn",
+      "results/20260217-162946-whyml-valid-elo-v2-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-191452-strict-check-summary.md",
+      "results/20260217-162042-whyml-quick-whyml-uci-vs-sf-1200.pgn",
+      "results/20260217-135613-smoke-test-sf1300-vs-sf-1200.pgn",
+      "results/20260217-162805-clamp-test-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-190811-whyml-long-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162434-whyml-tc3-summary.md",
+      "results/20260218-185231-v2-strict20-whyml-uci-v2-vs-sf-1320.pgn",
+      "results/20260217-162042-whyml-quick-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-190811-whyml-long-summary.md",
+      "results/20260217-135613-smoke-test-sf1300-vs-sf-1400.pgn",
+      "results/20260218-183044-strict20-whyml-uci-vs-sf-1400.pgn",
+      "results/20260217-162330-whyml-clean-summary.md",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-900.pgn",
+      "results/20260217-162946-whyml-valid-elo-v2-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-1100.pgn",
+      "results/20260217-162946-whyml-valid-elo-v2-summary.md",
+      "results/20260217-191452-strict-check-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-135949-smoke-test-sf1300-vs-sf-1200.pgn",
+      "results/20260217-162149-whyml-debug-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-135949-smoke-summary.md",
+      "results/20260217-162627-whyml-valid-elo-whyml-uci-vs-sf-1320.pgn",
+      "results/20260218-185231-v2-strict20-summary.md",
+      "results/20260218-184217-tc10-probe-whyml-uci-vs-sf-1320.pgn",
+      "results/20260218-185130-v2-quick-whyml-uci-v2-vs-sf-1320.pgn",
+      "results/20260217-162805-clamp-test-summary.md",
+      "results/20260217-162627-whyml-valid-elo-summary.md",
+      "results/20260217-162303-whyml-legal-summary.md",
+      "results/20260218-183044-strict20-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162434-whyml-tc3-whyml-uci-vs-sf-1000.pgn",
+      "results/20260217-162149-whyml-debug-summary.md",
+      "results/20260217-162330-whyml-clean-whyml-uci-vs-sf-1000.pgn",
+      "results/20260218-185231-v2-strict20-whyml-uci-v2-vs-sf-1400.pgn",
+      "results/20260218-183044-strict20-summary.md",
+      "results/20260217-190811-whyml-long-whyml-uci-vs-sf-1320.pgn",
+      "results/20260217-162330-whyml-clean-whyml-uci-vs-sf-1200.pgn",
+      "_build/default/src/uci_ocaml/main.ml",
+      "scripts/run_elo_benchmark.py",
+      "src/uci_ocaml/main.ml"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 9,
+    "n_assistant_messages": 62,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 176,
+      "write_stdin": 21,
+      "update_plan": 2
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 16839308,
+        "output": 87065,
+        "cache_read": 15992704,
+        "cache_creation": 0,
+        "reasoning_output": 39679
+      },
+      "usd_estimate": 23.92
+    },
+    "first_ts": "2026-02-17T12:48:35.408Z",
+    "last_ts": "2026-02-18T19:57:37.197Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-17T13-46-49-019c6ba3-97a7-7513-991e-2484ef7c36c9",
+        "first_ts": "2026-02-17T12:48:35.408Z",
+        "last_ts": "2026-02-18T19:57:37.197Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 9,
+        "tokens": {
+          "input": 16839308,
+          "output": 87065,
+          "cache_read": 15992704,
+          "reasoning_output": 39679
+        },
+        "tool_uses": {
+          "exec_command": 176,
+          "update_plan": 2,
+          "write_stdin": 21
+        },
+        "first_prompt_sample": "I want to build a chess engine in WhyML programming language (from Why3)... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "53702fc|2026-02-18T20:57:30+01:00|Mathieu Acher|Initial WhyML chess engine + UCI + Elo benchmark tooling"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

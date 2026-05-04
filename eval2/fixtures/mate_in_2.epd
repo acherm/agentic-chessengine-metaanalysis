@@ -1,0 +1,11 @@
+# Small mate-in-2 battery for Tier-C tactical evaluation.
+# Format: FEN bm <move-leading-to-forced-mate-in-2> ; id "M2.NNN" ;
+#
+# These are simple enough that even slow engines (LaTeX, SQL) might find
+# them at depth 4 if given st=60. Useful as a thinking-quality signal
+# for engines whose game-Elo is bracketed but not point-estimated.
+#
+# Stub — populate from a public mate-in-2 corpus.
+
+r1b2k1r/ppp1qppp/8/4P3/2B5/2NQ4/PPP2PPP/R3K2R w KQ - 0 1 bm Bxf7+ ; id "M2.001" ;
+r3k2r/ppp2ppp/2n2n2/2bqp3/8/PPN1PNP1/2BP1PBP/R2QK2R w KQkq - 0 1 bm Nb5 ; id "M2.002" ;

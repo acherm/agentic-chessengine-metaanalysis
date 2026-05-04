@@ -1,0 +1,38 @@
+Indexing opening suite...
+Started game 1 of 8 (chess-py vs sf_skill15)
+Started game 2 of 8 (sf_skill15 vs chess-py)
+Finished game 2 (sf_skill15 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 1 - 0  [0.000] 1
+Started game 3 of 8 (chess-py vs sf_skill15)
+Finished game 1 (chess-py vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 2 - 0  [0.000] 2
+Started game 4 of 8 (sf_skill15 vs chess-py)
+Finished game 4 (sf_skill15 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 3 - 0  [0.000] 3
+Started game 5 of 8 (chess-py vs sf_skill15)
+Finished game 3 (chess-py vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 4 - 0  [0.000] 4
+Started game 6 of 8 (sf_skill15 vs chess-py)
+Finished game 6 (sf_skill15 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 5 - 0  [0.000] 5
+Started game 7 of 8 (chess-py vs sf_skill15)
+Finished game 5 (chess-py vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 6 - 0  [0.000] 6
+Started game 8 of 8 (sf_skill15 vs chess-py)
+Finished game 7 (chess-py vs sf_skill15): 0-1 {Black wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 7 - 0  [0.000] 7
+Finished game 8 (sf_skill15 vs chess-py): 1-0 {White wins by adjudication}
+Score of chess-py vs sf_skill15: 0 - 8 - 0  [0.000] 8
+...      chess-py playing White: 0 - 4 - 0  [0.000] 4
+...      chess-py playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 4 - 0  [0.500] 8
+Elo difference: -inf +/- nan, LOS: 0.2 %, DrawRatio: 0.0 %
+SPRT: llr -2.82 (-95.9%), lbound -2.94, ubound 2.94
+
+Player: chess-py
+   "Loss: Black wins by adjudication": 4
+   "Loss: White wins by adjudication": 4
+Player: sf_skill15
+   "Win: Black wins by adjudication": 4
+   "Win: White wins by adjudication": 4
+Finished match

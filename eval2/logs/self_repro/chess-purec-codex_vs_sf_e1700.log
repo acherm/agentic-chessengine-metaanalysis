@@ -1,0 +1,84 @@
+Indexing opening suite...
+Started game 1 of 20 (chess-purec-codex vs sf_e1700)
+Started game 2 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 1 (chess-purec-codex vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 1 - 0 - 0  [1.000] 1
+Started game 3 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 2 (sf_e1700 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_e1700: 1 - 1 - 0  [0.500] 2
+Started game 4 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 3 (chess-purec-codex vs sf_e1700): 0-1 {Black mates}
+Score of chess-purec-codex vs sf_e1700: 1 - 2 - 0  [0.333] 3
+Started game 5 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 4 (sf_e1700 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_e1700: 1 - 3 - 0  [0.250] 4
+Started game 6 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 5 (chess-purec-codex vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 2 - 3 - 0  [0.400] 5
+Started game 7 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 6 (sf_e1700 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_e1700: 2 - 4 - 0  [0.333] 6
+Started game 8 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 7 (chess-purec-codex vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 3 - 4 - 0  [0.429] 7
+Started game 9 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 8 (sf_e1700 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_e1700: 3 - 5 - 0  [0.375] 8
+Started game 10 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 9 (chess-purec-codex vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 4 - 5 - 0  [0.444] 9
+Started game 11 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 10 (sf_e1700 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 5 - 5 - 0  [0.500] 10
+Started game 12 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 11 (chess-purec-codex vs sf_e1700): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 5 - 6 - 0  [0.455] 11
+Started game 13 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 12 (sf_e1700 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 6 - 6 - 0  [0.500] 12
+Started game 14 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 13 (chess-purec-codex vs sf_e1700): 1-0 {White mates}
+Score of chess-purec-codex vs sf_e1700: 7 - 6 - 0  [0.538] 13
+Started game 15 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 14 (sf_e1700 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 8 - 6 - 0  [0.571] 14
+Started game 16 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 15 (chess-purec-codex vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 9 - 6 - 0  [0.600] 15
+Started game 17 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 16 (sf_e1700 vs chess-purec-codex): 0-1 {Black wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 10 - 6 - 0  [0.625] 16
+Started game 18 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 17 (chess-purec-codex vs sf_e1700): 1-0 {White mates}
+Score of chess-purec-codex vs sf_e1700: 11 - 6 - 0  [0.647] 17
+Started game 19 of 20 (chess-purec-codex vs sf_e1700)
+Finished game 18 (sf_e1700 vs chess-purec-codex): 1-0 {White mates}
+Score of chess-purec-codex vs sf_e1700: 11 - 7 - 0  [0.611] 18
+Started game 20 of 20 (sf_e1700 vs chess-purec-codex)
+Finished game 19 (chess-purec-codex vs sf_e1700): 1-0 {White wins by adjudication}
+Score of chess-purec-codex vs sf_e1700: 12 - 7 - 0  [0.632] 19
+Finished game 20 (sf_e1700 vs chess-purec-codex): 0-1 {Black mates}
+Score of chess-purec-codex vs sf_e1700: 13 - 7 - 0  [0.650] 20
+...      chess-purec-codex playing White: 8 - 2 - 0  [0.800] 10
+...      chess-purec-codex playing Black: 5 - 5 - 0  [0.500] 10
+...      White vs Black: 13 - 7 - 0  [0.650] 20
+Elo difference: 107.5 +/- 177.3, LOS: 91.0 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-purec-codex
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 1
+   "Loss: White mates": 5
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 4
+   "Win: White mates": 2
+   "Win: White wins by adjudication": 6
+Player: sf_e1700
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 4
+   "Loss: White mates": 2
+   "Loss: White wins by adjudication": 6
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 1
+   "Win: White mates": 5
+Finished match

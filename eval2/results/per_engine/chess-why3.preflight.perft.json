@@ -1,0 +1,13 @@
+{
+  "engine": "chess-why3",
+  "native": null,
+  "external": {
+    "mode": "external",
+    "n_tested": 30,
+    "illegal_count": 0,
+    "timeout_count": 0,
+    "illegal_examples": [],
+    "ok": true
+  },
+  "ok": true
+}

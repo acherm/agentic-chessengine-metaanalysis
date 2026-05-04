@@ -1,0 +1,21 @@
+{
+  "engine": "chess-assembly-codex",
+  "image": "host-native",
+  "mode": "host",
+  "stages": {
+    "uciok": {
+      "ok": true,
+      "elapsed_s": 0.14
+    },
+    "readyok": {
+      "ok": true,
+      "elapsed_s": 0.0
+    },
+    "quit": {
+      "ok": true,
+      "elapsed_s": 0.0
+    }
+  },
+  "total_s": 0.15,
+  "ok": true
+}

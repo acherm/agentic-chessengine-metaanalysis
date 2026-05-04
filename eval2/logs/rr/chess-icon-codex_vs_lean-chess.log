@@ -1,0 +1,20 @@
+Indexing opening suite...
+Started game 1 of 2 (chess-icon-codex vs lean-chess)
+Started game 2 of 2 (lean-chess vs chess-icon-codex)
+Finished game 1 (chess-icon-codex vs lean-chess): 0-1 {Black mates}
+Score of chess-icon-codex vs lean-chess: 0 - 1 - 0  [0.000] 1
+Finished game 2 (lean-chess vs chess-icon-codex): 1-0 {White wins by adjudication}
+Score of chess-icon-codex vs lean-chess: 0 - 2 - 0  [0.000] 2
+...      chess-icon-codex playing White: 0 - 1 - 0  [0.000] 1
+...      chess-icon-codex playing Black: 0 - 1 - 0  [0.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: -inf +/- nan, LOS: 7.9 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-icon-codex
+   "Loss: Black mates": 1
+   "Loss: White wins by adjudication": 1
+Player: lean-chess
+   "Win: Black mates": 1
+   "Win: White wins by adjudication": 1
+Finished match

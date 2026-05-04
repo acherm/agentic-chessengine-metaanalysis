@@ -1,0 +1,32 @@
+Indexing opening suite...
+Started game 1 of 6 (chess-sql vs latex-chess-engine)
+Started game 2 of 6 (latex-chess-engine vs chess-sql)
+Finished game 1 (chess-sql vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of chess-sql vs latex-chess-engine: 1 - 0 - 0  [1.000] 1
+Started game 3 of 6 (chess-sql vs latex-chess-engine)
+Finished game 3 (chess-sql vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of chess-sql vs latex-chess-engine: 2 - 0 - 0  [1.000] 2
+Started game 4 of 6 (latex-chess-engine vs chess-sql)
+Finished game 2 (latex-chess-engine vs chess-sql): 0-1 {White makes an illegal move: b1c3}
+Score of chess-sql vs latex-chess-engine: 3 - 0 - 0  [1.000] 3
+Started game 5 of 6 (chess-sql vs latex-chess-engine)
+Finished game 5 (chess-sql vs latex-chess-engine): 1-0 {Black makes an illegal move: b1c3}
+Score of chess-sql vs latex-chess-engine: 4 - 0 - 0  [1.000] 4
+Started game 6 of 6 (latex-chess-engine vs chess-sql)
+Finished game 4 (latex-chess-engine vs chess-sql): 0-1 {White makes an illegal move: b1c3}
+Score of chess-sql vs latex-chess-engine: 5 - 0 - 0  [1.000] 5
+Finished game 6 (latex-chess-engine vs chess-sql): 0-1 {White makes an illegal move: b1c3}
+Score of chess-sql vs latex-chess-engine: 6 - 0 - 0  [1.000] 6
+...      chess-sql playing White: 3 - 0 - 0  [1.000] 3
+...      chess-sql playing Black: 3 - 0 - 0  [1.000] 3
+...      White vs Black: 3 - 3 - 0  [0.500] 6
+Elo difference: inf +/- nan, LOS: 99.3 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-sql
+   "Win: Black makes an illegal move: b1c3": 3
+   "Win: White makes an illegal move: b1c3": 3
+Player: latex-chess-engine
+   "Loss: Black makes an illegal move: b1c3": 3
+   "Loss: White makes an illegal move: b1c3": 3
+Finished match

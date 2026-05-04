@@ -1,0 +1,216 @@
+{
+  "name": "chess-css-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-css-codex",
+  "primary_language": "HTML",
+  "loc": {
+    "files_by_lang": {
+      "TOML": 1,
+      "Markdown": 2,
+      "HTML": 3,
+      "CSS": 5,
+      "JSON": 1,
+      "Python": 10
+    },
+    "loc_by_lang": {
+      "TOML": 21,
+      "Markdown": 177,
+      "HTML": 34988,
+      "CSS": 2093,
+      "JSON": 17,
+      "Python": 1388
+    },
+    "total_files": 22,
+    "total_loc": 38684
+  },
+  "features": {
+    "FEN parsing": 4,
+    "UCI protocol": 7,
+    "En passant": 1,
+    "Promotion": 2,
+    "Check/Checkmate": 2,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 2,
+    "Transposition table": 2,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Evaluation/PST": 1,
+    "Pawn structure": 1,
+    "Mobility": 5,
+    "Material counting": 2,
+    "Time management": 3
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "strict-css/index.html",
+      "strict-css/engine.css",
+      "scripts/run_matches.py",
+      "src/chess_css/uci.py"
+    ],
+    "UCI protocol": [
+      "pyproject.toml",
+      "README.md",
+      "tests/test_smoke.py",
+      "scripts/run_matches.py",
+      "scripts/css_engine.py",
+      "src/chess_css/__init__.py",
+      "src/chess_css/uci.py"
+    ],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [
+      "src/chess_css/search.py"
+    ],
+    "Promotion": [
+      "README.md",
+      "src/chess_css/search.py"
+    ],
+    "Check/Checkmate": [
+      "src/chess_css/engine.py",
+      "src/chess_css/search.py"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "src/chess_css/search.py"
+    ],
+    "Alpha-beta": [
+      "README.md"
+    ],
+    "Iterative deepening": [
+      "README.md"
+    ],
+    "Quiescence": [
+      "README.md",
+      "src/chess_css/search.py"
+    ],
+    "Transposition table": [
+      "README.md",
+      "src/chess_css/search.py"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [
+      "README.md"
+    ],
+    "Principal-variation (PV)": [
+      "README.md"
+    ],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "README.md"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [
+      "src/chess_css/engine.py"
+    ],
+    "Mobility": [
+      "README.md",
+      "styles/club.css",
+      "styles/novice.css",
+      "styles/expert.css",
+      "src/chess_css/css_style.py"
+    ],
+    "Material counting": [
+      "src/chess_css/engine.py",
+      "src/chess_css/search.py"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [
+      "tests/test_smoke.py",
+      "src/chess_css/uci.py",
+      "src/chess_css/search.py"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 17,
+    "n_assistant_messages": 74,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 178,
+      "write_stdin": 13
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 18165231,
+        "output": 224606,
+        "cache_read": 17469824,
+        "cache_creation": 0,
+        "reasoning_output": 90807
+      },
+      "usd_estimate": 27.14
+    },
+    "first_ts": "2026-02-28T14:24:59.418Z",
+    "last_ts": "2026-03-01T07:48:26.809Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-28T15-24-47-019ca4a3-3c61-7553-be29-1effa10437ca",
+        "first_ts": "2026-02-28T14:24:59.418Z",
+        "last_ts": "2026-03-01T07:48:26.809Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 17,
+        "tokens": {
+          "input": 18165231,
+          "output": 224606,
+          "cache_read": 17469824,
+          "reasoning_output": 90807
+        },
+        "tool_uses": {
+          "exec_command": 178,
+          "write_stdin": 13
+        },
+        "first_prompt_sample": "I want to build a chess engine in pure CSS programming language... at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \"similar\" levels\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "1bb2c45|2026-02-28T17:17:59+01:00|Mathieu Acher|Initial commit: CSS chess engine prototypes and strict CSS variant"
+    ],
+    "n_commits": 1,
+    "authors": [
+      "1\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+Indexing opening suite...
+Started game 1 of 30 (chess-ruby-codex vs sf_skill5)
+Started game 2 of 30 (sf_skill5 vs chess-ruby-codex)
+Finished game 2 (sf_skill5 vs chess-ruby-codex): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (chess-ruby-codex vs sf_skill5)
+Finished game 1 (chess-ruby-codex vs sf_skill5): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 1 - 1 - 0  [0.500] 2
+Started game 4 of 30 (sf_skill5 vs chess-ruby-codex)
+Finished game 3 (chess-ruby-codex vs sf_skill5): 0-1 {Black mates}
+Score of chess-ruby-codex vs sf_skill5: 1 - 2 - 0  [0.333] 3
+Started game 5 of 30 (chess-ruby-codex vs sf_skill5)
+Finished game 4 (sf_skill5 vs chess-ruby-codex): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 1 - 3 - 0  [0.250] 4
+Started game 6 of 30 (sf_skill5 vs chess-ruby-codex)
+Finished game 6 (sf_skill5 vs chess-ruby-codex): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 1 - 4 - 0  [0.200] 5
+Started game 7 of 30 (chess-ruby-codex vs sf_skill5)
+Finished game 5 (chess-ruby-codex vs sf_skill5): 0-1 {Black mates}
+Score of chess-ruby-codex vs sf_skill5: 1 - 5 - 0  [0.167] 6
+Started game 8 of 30 (sf_skill5 vs chess-ruby-codex)
+Finished game 7 (chess-ruby-codex vs sf_skill5): 1-0 {White wins by adjudication}
+Score of chess-ruby-codex vs sf_skill5: 2 - 5 - 0  [0.286] 7
+Started game 9 of 30 (chess-ruby-codex vs sf_skill5)
+Finished game 8 (sf_skill5 vs chess-ruby-codex): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 2 - 6 - 0  [0.250] 8
+Started game 10 of 30 (sf_skill5 vs chess-ruby-codex)
+Finished game 9 (chess-ruby-codex vs sf_skill5): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-ruby-codex vs sf_skill5: 2 - 6 - 1  [0.278] 9
+Started game 11 of 30 (chess-ruby-codex vs sf_skill5)
+Finished game 10 (sf_skill5 vs chess-ruby-codex): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 2 - 7 - 1  [0.250] 10
+Started game 12 of 30 (sf_skill5 vs chess-ruby-codex)
+Finished game 11 (chess-ruby-codex vs sf_skill5): 0-1 {Black mates}
+Score of chess-ruby-codex vs sf_skill5: 2 - 8 - 1  [0.227] 11
+Started game 13 of 30 (chess-ruby-codex vs sf_skill5)
+Finished game 12 (sf_skill5 vs chess-ruby-codex): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 2 - 9 - 1  [0.208] 12
+Started game 14 of 30 (sf_skill5 vs chess-ruby-codex)
+Finished game 13 (chess-ruby-codex vs sf_skill5): 0-1 {Black mates}
+Score of chess-ruby-codex vs sf_skill5: 2 - 10 - 1  [0.192] 13
+Started game 15 of 30 (chess-ruby-codex vs sf_skill5)
+Finished game 14 (sf_skill5 vs chess-ruby-codex): 1-0 {White mates}
+Score of chess-ruby-codex vs sf_skill5: 2 - 11 - 1  [0.179] 14
+Finished game 15 (chess-ruby-codex vs sf_skill5): * {No result}
+Score of chess-ruby-codex vs sf_skill5: 2 - 11 - 1  [0.179] 14
+...      chess-ruby-codex playing White: 2 - 4 - 1  [0.357] 7
+...      chess-ruby-codex playing Black: 0 - 7 - 0  [0.000] 7
+...      White vs Black: 9 - 4 - 1  [0.679] 14
+Elo difference: -265.1 +/- nan, LOS: 0.6 %, DrawRatio: 7.1 %
+SPRT: llr -3.03 (-103.1%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: chess-ruby-codex
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 4
+   "Loss: White mates": 7
+   "No result": 1
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 1
+Player: sf_skill5
+   "Draw by 3-fold repetition": 1
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 1
+   "No result": 1
+   "Win: Black mates": 4
+   "Win: White mates": 7
+Finished match

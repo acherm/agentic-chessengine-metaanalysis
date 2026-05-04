@@ -1,0 +1,54 @@
+Indexing opening suite...
+Started game 1 of 10 (chess-icon-codex vs sf_skill0)
+Started game 2 of 10 (sf_skill0 vs chess-icon-codex)
+Finished game 1 (chess-icon-codex vs sf_skill0): 0-1 {Black mates}
+Score of chess-icon-codex vs sf_skill0: 0 - 1 - 0  [0.000] 1
+Started game 3 of 10 (chess-icon-codex vs sf_skill0)
+Finished game 2 (sf_skill0 vs chess-icon-codex): 0-1 {Black wins by adjudication}
+Score of chess-icon-codex vs sf_skill0: 1 - 1 - 0  [0.500] 2
+Started game 4 of 10 (sf_skill0 vs chess-icon-codex)
+Finished game 4 (sf_skill0 vs chess-icon-codex): 0-1 {Black wins by adjudication}
+Score of chess-icon-codex vs sf_skill0: 2 - 1 - 0  [0.667] 3
+Started game 5 of 10 (chess-icon-codex vs sf_skill0)
+Finished game 3 (chess-icon-codex vs sf_skill0): 1/2-1/2 {Draw by 3-fold repetition}
+Score of chess-icon-codex vs sf_skill0: 2 - 1 - 1  [0.625] 4
+Started game 6 of 10 (sf_skill0 vs chess-icon-codex)
+Finished game 5 (chess-icon-codex vs sf_skill0): 1-0 {White wins by adjudication}
+Score of chess-icon-codex vs sf_skill0: 3 - 1 - 1  [0.700] 5
+Started game 7 of 10 (chess-icon-codex vs sf_skill0)
+Finished game 6 (sf_skill0 vs chess-icon-codex): 1-0 {White wins by adjudication}
+Score of chess-icon-codex vs sf_skill0: 3 - 2 - 1  [0.583] 6
+Started game 8 of 10 (sf_skill0 vs chess-icon-codex)
+Finished game 7 (chess-icon-codex vs sf_skill0): 1-0 {White mates}
+Score of chess-icon-codex vs sf_skill0: 4 - 2 - 1  [0.643] 7
+Started game 9 of 10 (chess-icon-codex vs sf_skill0)
+Finished game 8 (sf_skill0 vs chess-icon-codex): 0-1 {Black mates}
+Score of chess-icon-codex vs sf_skill0: 5 - 2 - 1  [0.688] 8
+Started game 10 of 10 (sf_skill0 vs chess-icon-codex)
+Finished game 9 (chess-icon-codex vs sf_skill0): 0-1 {Black mates}
+Score of chess-icon-codex vs sf_skill0: 5 - 3 - 1  [0.611] 9
+Finished game 10 (sf_skill0 vs chess-icon-codex): 0-1 {Black wins by adjudication}
+Score of chess-icon-codex vs sf_skill0: 6 - 3 - 1  [0.650] 10
+...      chess-icon-codex playing White: 2 - 2 - 1  [0.500] 5
+...      chess-icon-codex playing Black: 4 - 1 - 0  [0.800] 5
+...      White vs Black: 3 - 6 - 1  [0.350] 10
+Elo difference: 107.5 +/- 268.4, LOS: 84.1 %, DrawRatio: 10.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-icon-codex
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 2
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 1
+   "Win: Black wins by adjudication": 3
+   "Win: White mates": 1
+   "Win: White wins by adjudication": 1
+Player: sf_skill0
+   "Draw by 3-fold repetition": 1
+   "Loss: Black mates": 1
+   "Loss: Black wins by adjudication": 3
+   "Loss: White mates": 1
+   "Loss: White wins by adjudication": 1
+   "Win: Black mates": 2
+   "Win: White wins by adjudication": 1
+Finished match

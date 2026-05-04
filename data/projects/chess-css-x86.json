@@ -1,0 +1,159 @@
+{
+  "name": "chess-css-x86",
+  "path": "/Users/mathieuacher/SANDBOX/chess-css-x86",
+  "primary_language": "HTML",
+  "loc": {
+    "files_by_lang": {
+      "HTML": 3,
+      "Python": 4,
+      "Markdown": 1,
+      "JSON": 1,
+      "Assembly": 1,
+      "Text": 1,
+      "C": 2
+    },
+    "loc_by_lang": {
+      "HTML": 53875,
+      "Python": 687,
+      "Markdown": 169,
+      "JSON": 4146,
+      "Assembly": 1045,
+      "Text": 306,
+      "C": 242
+    },
+    "total_files": 13,
+    "total_loc": 60470
+  },
+  "features": {
+    "Transposition table": 2,
+    "Material counting": 1
+  },
+  "feature_paths": {
+    "FEN parsing": [],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [
+      "static/Lekton-bold.woff2",
+      "static/Lekton.woff2"
+    ],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [
+      "LICENSE"
+    ],
+    "Opening book": [],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 13,
+    "n_assistant_messages": 43,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 111
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 11135032,
+        "output": 86833,
+        "cache_read": 10353280,
+        "cache_creation": 0,
+        "reasoning_output": 55894
+      },
+      "usd_estimate": 16.08
+    },
+    "first_ts": "2026-03-01T22:48:28.106Z",
+    "last_ts": "2026-03-02T19:59:48.402Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-03-01T23-47-17-019cab95-a624-7b81-a84b-0438da55b923",
+        "first_ts": "2026-03-01T22:48:28.106Z",
+        "last_ts": "2026-03-02T19:59:48.402Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 13,
+        "tokens": {
+          "input": 11135032,
+          "output": 86833,
+          "cache_read": 10353280,
+          "reasoning_output": 55894
+        },
+        "tool_uses": {
+          "exec_command": 111
+        },
+        "first_prompt_sample": "Considering https://lyra.horse/x86css/ \nx86CSS demonstrates a working x86(8086) CPU/emulator implemented in CSS, explicitly stating \u201cNo JavaScript required\u201d (with an optional JS clock for stability), and relying on newer CSS features such as if() and style queries/custom functions. This establishes "
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "2c7ab3c|2026-02-26T02:24:10+02:00|Lyra Rebane|License under GPLv3",
+      "fa82b48|2026-02-24T18:09:22+02:00|Lyra Rebane|More stuff in FAQ",
+      "b2d7428|2026-02-24T17:47:11+02:00|Lyra Rebane|rename to match docs",
+      "f0095b8|2026-02-24T04:35:19+02:00|Lyra Rebane|add link to c program",
+      "4b0bd97|2026-02-24T04:25:28+02:00|Lyra Rebane|add socials",
+      "5961c2a|2026-02-24T04:14:26+02:00|Lyra Rebane|here we go :3c",
+      "e37dc51|2026-02-24T04:00:22+02:00|Lyra Rebane|Update README",
+      "3eaf61c|2026-02-24T03:45:58+02:00|Lyra Rebane|Initial commit"
+    ],
+    "n_commits": 8,
+    "authors": [
+      "8\tLyra Rebane <rebane2001@gmail.com>"
+    ]
+  }
+}

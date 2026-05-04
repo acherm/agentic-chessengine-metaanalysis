@@ -1,0 +1,36 @@
+Indexing opening suite...
+Started game 2 of 2 (COBOL-chess vs chess-assembly-codex)
+Started game 1 of 2 (chess-assembly-codex vs COBOL-chess)
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Warning: Illegal PV move h8h7 from COBOL-chess (2)
+Warning: PV:  h8h7
+Finished game 2 (COBOL-chess vs chess-assembly-codex): 0-1 {White makes an illegal move: h8h7}
+Score of chess-assembly-codex vs COBOL-chess: 1 - 0 - 0  [1.000] 1
+Finished game 1 (chess-assembly-codex vs COBOL-chess): 1-0 {White mates}
+Score of chess-assembly-codex vs COBOL-chess: 2 - 0 - 0  [1.000] 2
+...      chess-assembly-codex playing White: 1 - 0 - 0  [1.000] 1
+...      chess-assembly-codex playing Black: 1 - 0 - 0  [1.000] 1
+...      White vs Black: 1 - 1 - 0  [0.500] 2
+Elo difference: inf +/- nan, LOS: 92.1 %, DrawRatio: 0.0 %
+SPRT: llr 0 (0.0%), lbound -inf, ubound inf
+
+Player: chess-assembly-codex
+   "Win: White makes an illegal move: h8h7": 1
+   "Win: White mates": 1
+Player: COBOL-chess
+   "Loss: White makes an illegal move: h8h7": 1
+   "Loss: White mates": 1
+Finished match

@@ -1,0 +1,560 @@
+build eval2/stockfish:16.1
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.55kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 2.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [build 1/6] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#4 DONE 0.0s
+
+#5 [build 2/6] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential git ca-certificates wget     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [build 4/6] RUN git clone --depth 1 --branch sf_16.1 https://github.com/official-stockfish/Stockfish.git
+#6 CACHED
+
+#7 [build 5/6] WORKDIR /src/Stockfish/src
+#7 CACHED
+
+#8 [build 6/6] RUN ARCH=$(uname -m) && case "$ARCH" in       x86_64)        SF_ARCH=x86-64-modern ;;       aarch64|arm64) SF_ARCH=armv8 ;;       *) echo "Unsupported arch $ARCH" >&2; exit 1 ;;     esac &&     make -j build ARCH="$SF_ARCH" && strip stockfish && cp stockfish /usr/local/bin/
+#8 CACHED
+
+#9 [build 3/6] WORKDIR /src
+#9 CACHED
+
+#10 [stage-1 2/2] COPY --from=build /usr/local/bin/stockfish /usr/local/bin/stockfish
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:7685bcb84366d102eb5c3b5e65b9484147bac604cd7daaa8292b79bf511d3ab6 done
+#11 exporting config sha256:f80127a828ed0e085f1cf18c7c444e68f0fc150e3de1949e5a2e85397b244c5b done
+#11 exporting attestation manifest sha256:0b18b6aff7001c432f51d8db029ae46698264935f450186087374535214e86a3 done
+#11 exporting manifest list sha256:68a1b81b3f2203b7559c582a9cdf25c8c0c49039f22c0e975b1c87fd3d60d7e2 done
+#11 naming to docker.io/eval2/stockfish:16.1 done
+#11 unpacking to docker.io/eval2/stockfish:16.1 done
+#11 DONE 0.0s
+build eval2/anchor-tscp181:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.41kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 66B done
+#4 DONE 0.0s
+
+#5 [build 1/5] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 4/5] ADD https://www.tckerrigan.com/Chess/TSCP/tscp181.zip tscp181.zip
+#6 DONE 0.5s
+
+#7 [build 5/5] RUN unzip tscp181.zip     && cd tscp181     && gcc -O2 -o tscp main.c board.c book.c data.c eval.c search.c
+#7 CACHED
+
+#8 [stage-1 3/4] COPY --from=build /src/tscp181/tscp /usr/local/bin/tscp
+#8 CACHED
+
+#9 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends       polyglot     && rm -rf /var/lib/apt/lists/*
+#9 CACHED
+
+#10 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential wget unzip ca-certificates     && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [build 3/5] WORKDIR /src
+#11 CACHED
+
+#12 [build 4/5] ADD https://www.tckerrigan.com/Chess/TSCP/tscp181.zip tscp181.zip
+#12 CACHED
+
+#13 [stage-1 4/4] COPY tscp.cfg /etc/tscp/polyglot.cfg
+#13 CACHED
+
+#14 exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:87ffd8edfb03c5374f3346b1ce0c574936c05caa90288afd4b0e6e110a591806 done
+#14 exporting config sha256:ac1d1289e99d188d03912f6fda60ca59cdd9772eb98c3ed6a550858acb120a6d done
+#14 exporting attestation manifest sha256:10d5765c0a56d6dbf86d9a72e168f0c4e2962d3398b6b492c7a864d71bf35347 done
+#14 exporting manifest list sha256:60a9f686f09af1a46c7e0e21eb2922f13e74a4a805daf91b5e3c28f2053d64a2 done
+#14 naming to docker.io/eval2/anchor-tscp181:latest done
+#14 unpacking to docker.io/eval2/anchor-tscp181:latest done
+#14 DONE 0.0s
+build eval2/anchor-madchess32:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.08kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for mcr.microsoft.com/dotnet/sdk:8.0
+#2 DONE 0.1s
+
+#3 [internal] load metadata for mcr.microsoft.com/dotnet/runtime:8.0
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [build 1/6] FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183
+#5 resolve mcr.microsoft.com/dotnet/sdk:8.0@sha256:ec47373b40fc22a31c891c5be8df83f8cbadc24e785b10899545e33a1a1c2183 done
+#5 DONE 0.0s
+
+#6 [build 2/6] WORKDIR /src
+#6 CACHED
+
+#7 [build 3/6] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [stage-1 1/2] FROM mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6
+#8 resolve mcr.microsoft.com/dotnet/runtime:8.0@sha256:d0a2313ac5fbf1dfda2bf57e63a431010ae030dc3b9d7fc0fd1cff163b49b0e6 done
+#8 CACHED
+
+#9 [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+#9 0.072 Cloning into 'MadChess'...
+#9 0.303 fatal: could not read Username for 'https://github.com': No such device or address
+#9 ERROR: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+------
+ > [build 4/6] RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git:
+0.072 Cloning into 'MadChess'...
+0.303 fatal: could not read Username for 'https://github.com': No such device or address
+------
+Dockerfile:13
+--------------------
+  11 |     # NOTE: MadChess git tags don't follow a "v3.2" convention; tracking master
+  12 |     # for now. Pin to a specific commit SHA once we know the build works.
+  13 | >>> RUN git clone --depth 1 https://github.com/ErikMadsen/MadChess.git
+  14 |     WORKDIR /src/MadChess
+  15 |     RUN dotnet publish -c Release -o /opt/madchess \
+--------------------
+ERROR: failed to solve: process "/bin/sh -c git clone --depth 1 https://github.com/ErikMadsen/MadChess.git" did not complete successfully: exit code: 128
+FAILED eval2/anchor-madchess32:latest
+build eval2/anchor-countergo40:latest
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 927B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.22-bookworm
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#3 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/library/golang:1.22-bookworm
+#2 DONE 1.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/2] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 1/5] FROM docker.io/library/golang:1.22-bookworm@sha256:3d699e4d15d0f8f13c9195c0632a16702b8cbdece2955af1c23b37ae5d55a253
+#6 resolve docker.io/library/golang:1.22-bookworm@sha256:3d699e4d15d0f8f13c9195c0632a16702b8cbdece2955af1c23b37ae5d55a253 done
+#6 DONE 0.0s
+
+#7 [build 4/5] WORKDIR /src/CounterGo
+#7 CACHED
+
+#8 [build 2/5] WORKDIR /src
+#8 CACHED
+
+#9 [build 3/5] RUN git clone --depth 1 https://github.com/ChizhovVadim/CounterGo.git
+#9 CACHED
+
+#10 [build 5/5] RUN go build -o /opt/countergo/counter ./cmd/counter  || go build -o /opt/countergo/counter .
+#10 CACHED
+
+#11 [stage-1 2/2] COPY --from=build /opt/countergo/counter /opt/countergo/counter
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:20cfc3f8b49c8bec150ac0cf60a269616ca5468e712b3bb736db03b98eadd457 done
+#12 exporting config sha256:a6d4814f95afc67c63776d8c4670578b09c28345b72f318ff0265af4c26f53bf done
+#12 exporting attestation manifest sha256:9ae7acfb5ea224a84982856f8e1e99564b5a42052a1fd092940e2b4529b1c185 done
+#12 exporting manifest list sha256:2ca56afd3673536c42f448b8bec09001c7d2f3110d7b3dbfa5dff8ea359b0cdf done
+#12 naming to docker.io/eval2/anchor-countergo40:latest done
+#12 unpacking to docker.io/eval2/anchor-countergo40:latest done
+#12 DONE 0.0s
+build eval2/chess-why3-cc:latest  (src=/Users/mathieuacher/SANDBOX/chess-why3-cc)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.03kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#3 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 1/5] FROM docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5
+#6 resolve docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5 done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 28.41MB 0.1s done
+#7 DONE 0.1s
+
+#8 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       libgmp-dev pkg-config     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 3/5] COPY --chown=opam:opam src/ /opt/engine/
+#9 DONE 0.1s
+
+#10 [build 4/5] WORKDIR /opt/engine
+#10 DONE 0.0s
+
+#11 [build 5/5] RUN opam install --yes dune zarith  && eval $(opam env) && dune build --release  && find _build/default -name '*.exe' -exec cp {} engine ; -quit  && test -x engine
+#11 1.648 The following actions will be performed:
+#11 1.648   - install dune            3.22.2
+#11 1.648   - install conf-pkg-config 4      [required by zarith]
+#11 1.648   - install ocamlfind       1.9.8  [required by zarith]
+#11 1.648   - install conf-gmp        5      [required by zarith]
+#11 1.648   - install zarith          1.14
+#11 1.648 ===== 5 to install =====
+#11 1.649 
+#11 1.649 <><> Gathering sources ><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#11 1.764 [conf-gmp.5/test.c] downloaded from https://opam.ocaml.org/cache
+#11 1.862 [ocamlfind.1.9.8] downloaded from cache at https://opam.ocaml.org/cache
+#11 1.965 [zarith.1.14] downloaded from cache at https://opam.ocaml.org/cache
+#11 2.390 [dune.3.22.2] downloaded from cache at https://opam.ocaml.org/cache
+#11 2.911 
+#11 2.911 <><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#11 3.677 -> installed conf-gmp.5
+#11 3.698 -> installed conf-pkg-config.4
+#11 4.779 -> installed ocamlfind.1.9.8
+#11 5.853 -> installed zarith.1.14
+#11 11.81 -> installed dune.3.22.2
+#11 11.89 Done.
+#11 11.89 # Run eval $(opam env) to update the current shell environment
+#11 ERROR: process "/bin/sh -c opam install --yes dune zarith  && eval $(opam env) && dune build --release  && find _build/default -name '*.exe' -exec cp {} engine \\; -quit  && test -x engine" did not complete successfully: exit code: 1
+------
+ > [build 5/5] RUN opam install --yes dune zarith  && eval $(opam env) && dune build --release  && find _build/default -name '*.exe' -exec cp {} engine ; -quit  && test -x engine:
+2.390 [dune.3.22.2] downloaded from cache at https://opam.ocaml.org/cache
+2.911 
+2.911 <><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+3.677 -> installed conf-gmp.5
+3.698 -> installed conf-pkg-config.4
+4.779 -> installed ocamlfind.1.9.8
+5.853 -> installed zarith.1.14
+11.81 -> installed dune.3.22.2
+11.89 Done.
+11.89 # Run eval $(opam env) to update the current shell environment
+------
+Dockerfile:12
+--------------------
+  11 |     WORKDIR /opt/engine
+  12 | >>> RUN opam install --yes dune zarith \
+  13 | >>>  && eval $(opam env) && dune build --release \
+  14 | >>>  && find _build/default -name '*.exe' -exec cp {} engine \; -quit \
+  15 | >>>  && test -x engine
+  16 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c opam install --yes dune zarith  && eval $(opam env) && dune build --release  && find _build/default -name '*.exe' -exec cp {} engine \\; -quit  && test -x engine" did not complete successfully: exit code: 1
+FAILED eval2/chess-why3-cc:latest
+build eval2/chess-py-cc:latest  (src=/Users/mathieuacher/SANDBOX/chess-py-cc)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 516B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.8s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf
+#4 resolve docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 107.69kB done
+#5 DONE 0.0s
+
+#6 [2/4] COPY src/ /opt/engine/
+#6 CACHED
+
+#7 [3/4] WORKDIR /opt/engine
+#7 CACHED
+
+#8 [4/4] RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+#8 CACHED
+
+#9 exporting to image
+#9 exporting layers done
+#9 exporting manifest sha256:f1e60aecb201b384b390e766d53c90b18a7c14d219086bb13d48a0e78147ce76 done
+#9 exporting config sha256:73d523f14d86f7dc891b3d9334122c417e6b7c9a4df8c268b05a571087d88912 done
+#9 exporting attestation manifest sha256:7d03f7dac6944bc72c1ac366fbda87e537c96c67205e550dd24d877358b52996 done
+#9 exporting manifest list sha256:ae8bef2a4afbb73783f9639f7c85ab3c58bfeba1e94644433aa4a19257ad93df done
+#9 naming to docker.io/eval2/chess-py-cc:latest done
+#9 unpacking to docker.io/eval2/chess-py-cc:latest done
+#9 DONE 0.0s
+build eval2/chess-why3:latest  (src=/Users/mathieuacher/SANDBOX/chess-why3)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.00kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#3 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/ocaml/opam:debian-12-ocaml-5.1
+#2 DONE 0.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/4] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#5 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#5 DONE 0.0s
+
+#6 [build 1/5] FROM docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5
+#6 resolve docker.io/ocaml/opam:debian-12-ocaml-5.1@sha256:441d5fcf1d8d9d1ffab06b651f6bf9f87c4562c3b9d7adf774dbb876d503acc5 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 106.07kB done
+#7 DONE 0.0s
+
+#8 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       libgmp-dev pkg-config     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [build 3/5] COPY --chown=opam:opam src/ /opt/engine/
+#9 DONE 0.0s
+
+#10 [build 4/5] WORKDIR /opt/engine
+#10 DONE 0.0s
+
+#11 [build 5/5] RUN opam install --yes dune zarith  && eval $(opam env) && dune build --release  && cp _build/default/src/uci_ocaml/main.exe engine
+#11 1.764 The following actions will be performed:
+#11 1.764   - install dune            3.22.2
+#11 1.764   - install conf-pkg-config 4      [required by zarith]
+#11 1.764   - install ocamlfind       1.9.8  [required by zarith]
+#11 1.764   - install conf-gmp        5      [required by zarith]
+#11 1.764   - install zarith          1.14
+#11 1.764 ===== 5 to install =====
+#11 1.764 
+#11 1.764 <><> Gathering sources ><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#11 1.847 [conf-gmp.5/test.c] downloaded from https://opam.ocaml.org/cache
+#11 2.002 [ocamlfind.1.9.8] downloaded from cache at https://opam.ocaml.org/cache
+#11 2.145 [zarith.1.14] downloaded from cache at https://opam.ocaml.org/cache
+#11 2.575 [dune.3.22.2] downloaded from cache at https://opam.ocaml.org/cache
+#11 3.099 
+#11 3.099 <><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+#11 3.873 -> installed conf-gmp.5
+#11 3.895 -> installed conf-pkg-config.4
+#11 4.997 -> installed ocamlfind.1.9.8
+#11 6.061 -> installed zarith.1.14
+#11 11.87 -> installed dune.3.22.2
+#11 11.96 Done.
+#11 11.96 # Run eval $(opam env) to update the current shell environment
+#11 11.99 cp: cannot stat '_build/default/src/uci_ocaml/main.exe': No such file or directory
+#11 ERROR: process "/bin/sh -c opam install --yes dune zarith  && eval $(opam env) && dune build --release  && cp _build/default/src/uci_ocaml/main.exe engine" did not complete successfully: exit code: 1
+------
+ > [build 5/5] RUN opam install --yes dune zarith  && eval $(opam env) && dune build --release  && cp _build/default/src/uci_ocaml/main.exe engine:
+3.099 
+3.099 <><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+3.873 -> installed conf-gmp.5
+3.895 -> installed conf-pkg-config.4
+4.997 -> installed ocamlfind.1.9.8
+6.061 -> installed zarith.1.14
+11.87 -> installed dune.3.22.2
+11.96 Done.
+11.96 # Run eval $(opam env) to update the current shell environment
+11.99 cp: cannot stat '_build/default/src/uci_ocaml/main.exe': No such file or directory
+------
+Dockerfile:12
+--------------------
+  11 |     WORKDIR /opt/engine
+  12 | >>> RUN opam install --yes dune zarith \
+  13 | >>>  && eval $(opam env) && dune build --release \
+  14 | >>>  && cp _build/default/src/uci_ocaml/main.exe engine
+  15 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c opam install --yes dune zarith  && eval $(opam env) && dune build --release  && cp _build/default/src/uci_ocaml/main.exe engine" did not complete successfully: exit code: 1
+FAILED eval2/chess-why3:latest
+build eval2/cobol-chess:latest  (src=/Users/mathieuacher/SANDBOX/COBOL-chess)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 861B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [build 1/5] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 8.59MB 0.1s done
+#5 DONE 0.1s
+
+#6 [build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends       build-essential gnucobol4     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [build 3/5] COPY src/ /opt/engine/
+#7 CACHED
+
+#8 [build 4/5] WORKDIR /opt/engine
+#8 CACHED
+
+#9 [build 5/5] RUN rm -rf bin && mkdir bin && make bin/cobochess
+#9 0.084 PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH" cobc -free -O2 -frecursive -Wall -x -o bin/cobochess src/main.cob src/board.cob src/fen.cob src/attack.cob src/movegen.cob src/makemove.cob src/perft.cob src/time.cob src/eval.cob src/search.cob src/uci.cob
+#9 DONE 1.5s
+
+#10 [stage-1 2/4] RUN apt-get update && apt-get install -y --no-install-recommends       libcob4 libcob5 libgmp10     && rm -rf /var/lib/apt/lists/*
+#10 CACHED
+
+#11 [stage-1 3/4] COPY --from=build /opt/engine/bin/cobochess /usr/local/bin/engine
+#11 DONE 0.0s
+
+#12 [stage-1 4/4] WORKDIR /opt/engine
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.0s done
+#13 exporting manifest sha256:78d7b865b5976c29a25f49d62cda3c630bee2636299a11d3df0c8d47d0ca8f77 done
+#13 exporting config sha256:452f35306e68d16054b0299ad67b604de3e9447bf7e9e343f42fd03e372c1e47 done
+#13 exporting attestation manifest sha256:3fac323f8597108567f0da6614acf65ded9878c78f2f861e4d1794008c05b32b done
+#13 exporting manifest list sha256:49ade433df34938340b413751de982955c023178806da32b7b762e0f07a6ee6a done
+#13 naming to docker.io/eval2/cobol-chess:latest done
+#13 unpacking to docker.io/eval2/cobol-chess:latest done
+#13 DONE 0.1s
+build eval2/latex-chess-engine:latest  (src=/Users/mathieuacher/SANDBOX/latex-chess-engine)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 573B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:4724b8cc51e33e398f0e2e15e18d5ec2851ff0c2280647e1310bc1642182655d done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 2.43MB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends       python3       texlive-latex-base texlive-latex-recommended texlive-latex-extra       texlive-fonts-recommended texlive-pictures     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [3/4] COPY src/ /opt/engine/
+#7 DONE 0.0s
+
+#8 [4/4] WORKDIR /opt/engine
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers 0.1s done
+#9 exporting manifest sha256:c6a044e44f6e4dabdcc662bceb775559be351691b666d3022cfb9337fc5d37d7 done
+#9 exporting config sha256:aa3373b737fdd0d9aadddbc121124978784be58ff8475b00e93b781ec3117374 done
+#9 exporting attestation manifest sha256:d59e2e3acfabf831b36e22a62279077e9dfd60f5f868b929e4e74866fd15cc35 done
+#9 exporting manifest list sha256:a2e3efd7e6eb57e2627de8ccd9b9bf511baad939ee11aaa0d1f4c43da4867005 done
+#9 naming to docker.io/eval2/latex-chess-engine:latest done
+#9 unpacking to docker.io/eval2/latex-chess-engine:latest 0.0s done
+#9 DONE 0.1s
+build eval2/chess-sql:latest  (src=/Users/mathieuacher/SANDBOX/chess-sql)
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 511B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf
+#4 resolve docker.io/library/python:3.11-slim@sha256:233de06753d30d120b1a3ce359d8d3be8bda78524cd8f520c99883bfe33964cf done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 11.20MB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends sqlite3     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [3/5] COPY src/ /opt/engine/
+#7 DONE 0.1s
+
+#8 [4/5] WORKDIR /opt/engine
+#8 DONE 0.0s
+
+#9 [5/5] RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+#9 DONE 0.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 exporting manifest sha256:041660e2d5ee80f0113987a25ac18cf443fa2d03e24763ff141bdbee183973da done
+#10 exporting config sha256:8a1fa0e591219161018339558c6b8fe3a4b646a573bffd827a2abb39e1ec3c9b done
+#10 exporting attestation manifest sha256:ba67ef611f834d3a17d648683e20ca5d74b3647408fb675217cbf04679030531 done
+#10 exporting manifest list sha256:1e90031d1b5504e5d15791e07e2bc712ac1c6e57997633049a09cf5ea938aef6 done
+#10 naming to docker.io/eval2/chess-sql:latest done
+#10 unpacking to docker.io/eval2/chess-sql:latest 0.1s done
+#10 DONE 0.3s
+
+Build failures: 3 (see results/build_failures.txt)
+build_images.sh done.

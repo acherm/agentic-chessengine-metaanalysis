@@ -1,0 +1,175 @@
+{
+  "name": "chesspuzzle-tex-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chesspuzzle-tex-codex",
+  "primary_language": "LaTeX",
+  "loc": {
+    "files_by_lang": {
+      "LaTeX": 131,
+      "Python": 1,
+      "Markdown": 1
+    },
+    "loc_by_lang": {
+      "LaTeX": 58047,
+      "Python": 156,
+      "Markdown": 39
+    },
+    "total_files": 133,
+    "total_loc": 58242
+  },
+  "features": {
+    "FEN parsing": 1,
+    "Board: mailbox 8x8": 19,
+    "Opening book": 2
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "generate_all_solutions.py"
+    ],
+    "UCI protocol": [],
+    "Perft": [],
+    "Castling": [],
+    "En passant": [],
+    "Promotion": [],
+    "Check/Checkmate": [],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [
+      "all_solutions_pure_latex.tex",
+      "all_solutions_no_expl3_pure_latex.tex",
+      "all_solutions_4q2b_no_expl3_pruned.tex",
+      "all_solutions_no_expl3_recursive.tex",
+      "all_solutions_3q1r1b_expl3.tex",
+      "all_solutions_4q1n_no_expl3.tex",
+      "all_solutions_4q2b_no_expl3.tex",
+      "all_solutions_3q2b_no_expl3.tex",
+      "solution.tex",
+      "all_solutions_4q1n_expl3.tex",
+      "_debug_3q2r_los_q1.tex",
+      "generate_all_solutions.py",
+      "all_solutions_no_expl3.tex",
+      "all_solutions.tex",
+      "solution_no_expl3.tex",
+      "all_solutions_3q2r_no_expl3.tex",
+      "all_solutions_3q1r1b_no_expl3.tex",
+      "ATTEMPTS_NO_EXPL3.md",
+      "all_solutions_2q4b_expl3.tex"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [],
+    "Alpha-beta": [],
+    "Iterative deepening": [],
+    "Quiescence": [],
+    "Transposition table": [],
+    "Zobrist hashing": [],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [],
+    "Late-move reduction (LMR)": [],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [],
+    "King safety": [],
+    "Pawn structure": [],
+    "Mobility": [],
+    "Material counting": [],
+    "Opening book": [
+      "solution_no_expl3.log",
+      "solution_no_expl3.tex"
+    ],
+    "Endgame tables": [],
+    "Time management": [],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 27,
+    "n_assistant_messages": 204,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "exec_command": 513,
+      "write_stdin": 275
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 82776266,
+        "output": 362855,
+        "cache_read": 80066176,
+        "cache_creation": 0,
+        "reasoning_output": 193907
+      },
+      "usd_estimate": 117.11
+    },
+    "first_ts": "2026-02-27T09:26:54.904Z",
+    "last_ts": "2026-03-03T10:03:58.616Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-02-27T10-26-37-019c9e6b-e55c-7d82-8c2d-7f15f1649978",
+        "first_ts": "2026-02-27T09:26:54.904Z",
+        "last_ts": "2026-03-03T10:03:58.616Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 27,
+        "tokens": {
+          "input": 82776266,
+          "output": 362855,
+          "cache_read": 80066176,
+          "reasoning_output": 193907
+        },
+        "tool_uses": {
+          "exec_command": 513,
+          "write_stdin": 275
+        },
+        "first_prompt_sample": "Given a 8x8 chessboard, your goal is to place 4 queens and 1 bishop so that all squares of the board are controlled (through diagonales/lines; a piece controls the square where it is located).\n\nPlease implement a solution in LaTeX programming language\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "df3054a|2026-02-28T19:40:09+01:00|Mathieu Acher|Add pure LaTeX solver for 3Q+2B coverage",
+      "f094138|2026-02-28T15:13:24+01:00|Mathieu Acher|Fix LOS for sliding pieces in 3Q+2R solver",
+      "c068395|2026-02-28T14:12:31+01:00|Mathieu Acher|Add pure-LaTeX no-expl3 solver for 3 queens and 2 rooks",
+      "4a7ce04|2026-02-28T09:01:03+01:00|Mathieu Acher|Add generated pure-LaTeX solution PDFs",
+      "4afd5d5|2026-02-28T08:57:30+01:00|Mathieu Acher|Add pure-LaTeX no-expl3 generator with attempt log and outputs",
+      "ce01bcf|2026-02-27T11:25:11+01:00|Mathieu Acher|Add generated PDF outputs",
+      "4ebcb56|2026-02-27T11:23:55+01:00|Mathieu Acher|Add no-expl3 solution and full-generation variant",
+      "f74cccf|2026-02-27T11:08:55+01:00|Mathieu Acher|Add exhaustive 4Q+1B solution generator and all placements",
+      "6534af4|2026-02-27T10:59:11+01:00|Mathieu Acher|Add LaTeX solution for board coverage puzzle"
+    ],
+    "n_commits": 9,
+    "authors": [
+      "9\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

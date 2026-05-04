@@ -1,0 +1,2241 @@
+{
+  "chess-py": {
+    "n_steps": 10,
+    "n_phases": 7,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "debug",
+      "feature",
+      "other",
+      "meta",
+      "feature"
+    ],
+    "task_class": {
+      "feature": 0.6,
+      "other": 0.2,
+      "debug": 0.1,
+      "meta": 0.1
+    },
+    "intent": {
+      "FeatureRequest": 0.188,
+      "TestRequest": 0.062,
+      "ToolingBuild": 0.062,
+      "Improve": 0.188,
+      "Scenario": 0.312,
+      "BugFixRequest": 0.062,
+      "Question": 0.062,
+      "Steer": 0.062
+    },
+    "bash_kinds": {},
+    "tools": {
+      "update_plan": 0.11,
+      "exec_command": 0.624,
+      "write_stdin": 0.266
+    },
+    "total_tokens": 76715989,
+    "wallclock_h": 3.19,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-why3": {
+    "n_steps": 9,
+    "n_phases": 4,
+    "modal_class_seq": [
+      "feature",
+      "debug",
+      "other",
+      "feature"
+    ],
+    "task_class": {
+      "feature": 0.333,
+      "debug": 0.111,
+      "other": 0.556
+    },
+    "intent": {
+      "FeatureRequest": 0.214,
+      "TestRequest": 0.071,
+      "ToolingBuild": 0.071,
+      "BugFixRequest": 0.071,
+      "Constraint": 0.071,
+      "Steer": 0.214,
+      "Other": 0.214,
+      "Improve": 0.071
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.884,
+      "update_plan": 0.01,
+      "write_stdin": 0.106
+    },
+    "total_tokens": 65554497,
+    "wallclock_h": 0.92,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        8,
+        520
+      ]
+    ],
+    "elo_shape": "single",
+    "front_load_ratio": null
+  },
+  "chess-cobol-cc": {
+    "n_steps": 23,
+    "n_phases": 18,
+    "modal_class_seq": [
+      "eval",
+      "other",
+      "meta",
+      "eval",
+      "other",
+      "eval",
+      "meta",
+      "eval",
+      "test",
+      "meta",
+      "eval",
+      "meta",
+      "eval",
+      "meta",
+      "eval",
+      "debug",
+      "meta",
+      "eval"
+    ],
+    "task_class": {
+      "eval": 0.565,
+      "other": 0.087,
+      "meta": 0.261,
+      "test": 0.043,
+      "debug": 0.043
+    },
+    "intent": {
+      "FeatureRequest": 0.129,
+      "TestRequest": 0.118,
+      "ToolingBuild": 0.054,
+      "Steer": 0.065,
+      "BugFixRequest": 0.118,
+      "Documentation": 0.054,
+      "Constraint": 0.129,
+      "Meta": 0.118,
+      "RefactorRequest": 0.054,
+      "Scenario": 0.065,
+      "Improve": 0.097
+    },
+    "bash_kinds": {
+      "inspect": 0.58,
+      "other": 0.168,
+      "gauntlet": 0.048,
+      "uci_run": 0.188,
+      "stockfish": 0.005,
+      "git": 0.001,
+      "build": 0.01
+    },
+    "tools": {
+      "Bash": 0.626,
+      "Write": 0.006,
+      "Edit": 0.147,
+      "Read": 0.131,
+      "Grep": 0.054,
+      "ToolSearch": 0.001,
+      "TaskOutput": 0.032,
+      "Agent": 0.001,
+      "Glob": 0.001
+    },
+    "total_tokens": 85859556,
+    "wallclock_h": 370.13,
+    "new_files": 13,
+    "edited_files": 324,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": 1,
+    "first_build_step": 14,
+    "elo_curve": [
+      [
+        5,
+        1200
+      ],
+      [
+        9,
+        1337
+      ],
+      [
+        11,
+        1548
+      ],
+      [
+        13,
+        1200
+      ],
+      [
+        14,
+        1548
+      ],
+      [
+        15,
+        1548
+      ],
+      [
+        16,
+        1621
+      ],
+      [
+        17,
+        1621
+      ],
+      [
+        18,
+        1627
+      ],
+      [
+        22,
+        1647
+      ],
+      [
+        23,
+        1630
+      ]
+    ],
+    "elo_shape": "zigzag",
+    "front_load_ratio": 0.154
+  },
+  "lean-chess": {
+    "n_steps": 21,
+    "n_phases": 18,
+    "modal_class_seq": [
+      "feature",
+      "debug",
+      "meta",
+      "feature",
+      "debug",
+      "other",
+      "meta",
+      "feature",
+      "other",
+      "meta",
+      "feature",
+      "other",
+      "debug",
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "feature"
+    ],
+    "task_class": {
+      "feature": 0.333,
+      "debug": 0.143,
+      "meta": 0.19,
+      "other": 0.333
+    },
+    "intent": {
+      "FeatureRequest": 0.189,
+      "TestRequest": 0.027,
+      "ToolingBuild": 0.081,
+      "BugFixRequest": 0.081,
+      "RefactorRequest": 0.027,
+      "Constraint": 0.108,
+      "Other": 0.135,
+      "Question": 0.027,
+      "Scenario": 0.054,
+      "Improve": 0.054,
+      "Steer": 0.189,
+      "Meta": 0.027
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.43,
+      "update_plan": 0.065,
+      "write_stdin": 0.504
+    },
+    "total_tokens": 346144262,
+    "wallclock_h": 4.42,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        19,
+        1297
+      ],
+      [
+        20,
+        1462
+      ],
+      [
+        21,
+        1426
+      ]
+    ],
+    "elo_shape": "mixed",
+    "front_load_ratio": null
+  },
+  "latex-chess-engine": {
+    "n_steps": 37,
+    "n_phases": 23,
+    "modal_class_seq": [
+      "other",
+      "feature",
+      "meta",
+      "feature",
+      "other",
+      "feature",
+      "debug",
+      "meta",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "meta",
+      "other",
+      "meta",
+      "other",
+      "meta",
+      "feature",
+      "other",
+      "eval",
+      "meta",
+      "other"
+    ],
+    "task_class": {
+      "other": 0.378,
+      "feature": 0.189,
+      "meta": 0.378,
+      "debug": 0.027,
+      "eval": 0.027
+    },
+    "intent": {
+      "Documentation": 0.11,
+      "Other": 0.077,
+      "FeatureRequest": 0.143,
+      "RefactorRequest": 0.077,
+      "TestRequest": 0.121,
+      "Constraint": 0.121,
+      "Scenario": 0.121,
+      "BugFixRequest": 0.066,
+      "Meta": 0.077,
+      "Improve": 0.033,
+      "Question": 0.055
+    },
+    "bash_kinds": {
+      "inspect": 0.449,
+      "other": 0.5,
+      "git": 0.038,
+      "perft": 0.006,
+      "stockfish": 0.006
+    },
+    "tools": {
+      "Bash": 0.545,
+      "WebSearch": 0.036,
+      "WebFetch": 0.009,
+      "Read": 0.227,
+      "Glob": 0.023,
+      "Grep": 0.049,
+      "TaskCreate": 0.005,
+      "TaskUpdate": 0.009,
+      "exec_command": 0.097
+    },
+    "total_tokens": 24642343,
+    "wallclock_h": 2.33,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": 35,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        12,
+        1100
+      ],
+      [
+        27,
+        1300
+      ],
+      [
+        30,
+        1320
+      ],
+      [
+        33,
+        1320
+      ],
+      [
+        34,
+        835
+      ],
+      [
+        35,
+        1300
+      ],
+      [
+        37,
+        835
+      ]
+    ],
+    "elo_shape": "zigzag",
+    "front_load_ratio": null
+  },
+  "cplusplus-chess": {
+    "n_steps": 16,
+    "n_phases": 9,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "feature",
+      "meta",
+      "feature",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.5,
+      "other": 0.375,
+      "meta": 0.125
+    },
+    "intent": {
+      "FeatureRequest": 0.207,
+      "TestRequest": 0.034,
+      "ToolingBuild": 0.103,
+      "Scenario": 0.31,
+      "Improve": 0.103,
+      "Constraint": 0.069,
+      "Other": 0.034,
+      "Documentation": 0.069,
+      "Steer": 0.069
+    },
+    "bash_kinds": {},
+    "tools": {
+      "update_plan": 0.051,
+      "exec_command": 0.609,
+      "write_stdin": 0.339
+    },
+    "total_tokens": 221076144,
+    "wallclock_h": 5.04,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        2,
+        1560
+      ],
+      [
+        3,
+        2000
+      ],
+      [
+        6,
+        2347
+      ],
+      [
+        7,
+        2270
+      ]
+    ],
+    "elo_shape": "mixed",
+    "front_load_ratio": null
+  },
+  "chess-icon-codex": {
+    "n_steps": 6,
+    "n_phases": 3,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature"
+    ],
+    "task_class": {
+      "feature": 0.5,
+      "other": 0.5
+    },
+    "intent": {
+      "FeatureRequest": 0.182,
+      "TestRequest": 0.182,
+      "ToolingBuild": 0.091,
+      "Steer": 0.182,
+      "Scenario": 0.182,
+      "Other": 0.091,
+      "Improve": 0.091
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.949,
+      "write_stdin": 0.051
+    },
+    "total_tokens": 53215125,
+    "wallclock_h": 0.52,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-brainfuck": {
+    "n_steps": 38,
+    "n_phases": 21,
+    "modal_class_seq": [
+      "feature",
+      "meta",
+      "other",
+      "meta",
+      "other",
+      "feature",
+      "other",
+      "debug",
+      "feature",
+      "tooling",
+      "feature",
+      "meta",
+      "debug",
+      "meta",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "feature"
+    ],
+    "task_class": {
+      "feature": 0.211,
+      "meta": 0.132,
+      "other": 0.579,
+      "debug": 0.053,
+      "tooling": 0.026
+    },
+    "intent": {
+      "FeatureRequest": 0.115,
+      "TestRequest": 0.019,
+      "ToolingBuild": 0.058,
+      "Other": 0.231,
+      "Steer": 0.173,
+      "Documentation": 0.058,
+      "Scenario": 0.096,
+      "BugFixRequest": 0.058,
+      "Improve": 0.115,
+      "Question": 0.058,
+      "RefactorRequest": 0.019
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.502,
+      "write_stdin": 0.496,
+      "update_plan": 0.002
+    },
+    "total_tokens": 462466229,
+    "wallclock_h": 8.1,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-revisit-java-toRust-codex": {
+    "n_steps": 5,
+    "n_phases": 3,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "debug"
+    ],
+    "task_class": {
+      "feature": 0.2,
+      "other": 0.6,
+      "debug": 0.2
+    },
+    "intent": {
+      "FeatureRequest": 0.125,
+      "Question": 0.25,
+      "Scenario": 0.25,
+      "Steer": 0.125,
+      "Documentation": 0.125,
+      "BugFixRequest": 0.125
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.245,
+      "write_stdin": 0.755
+    },
+    "total_tokens": 255961159,
+    "wallclock_h": 2.98,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-latex-codex-replication": {
+    "n_steps": 15,
+    "n_phases": 10,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.267,
+      "other": 0.6,
+      "meta": 0.133
+    },
+    "intent": {
+      "FeatureRequest": 0.115,
+      "TestRequest": 0.077,
+      "ToolingBuild": 0.038,
+      "Scenario": 0.231,
+      "Question": 0.038,
+      "Steer": 0.077,
+      "Other": 0.115,
+      "Constraint": 0.077,
+      "Documentation": 0.038,
+      "RefactorRequest": 0.077,
+      "Meta": 0.077,
+      "Improve": 0.038
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.861,
+      "write_stdin": 0.139
+    },
+    "total_tokens": 334984262,
+    "wallclock_h": 9.84,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-java": {
+    "n_steps": 7,
+    "n_phases": 3,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature"
+    ],
+    "task_class": {
+      "feature": 0.429,
+      "other": 0.571
+    },
+    "intent": {
+      "FeatureRequest": 0.231,
+      "TestRequest": 0.231,
+      "ToolingBuild": 0.154,
+      "Other": 0.077,
+      "Constraint": 0.077,
+      "Scenario": 0.154,
+      "Improve": 0.077
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.678,
+      "update_plan": 0.015,
+      "write_stdin": 0.307
+    },
+    "total_tokens": 59725990,
+    "wallclock_h": 2.16,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-why3-cc": {
+    "n_steps": 6,
+    "n_phases": 6,
+    "modal_class_seq": [
+      "tooling",
+      "feature",
+      "meta",
+      "feature",
+      "tooling",
+      "meta"
+    ],
+    "task_class": {
+      "tooling": 0.333,
+      "feature": 0.333,
+      "meta": 0.333
+    },
+    "intent": {
+      "RefactorRequest": 0.071,
+      "TestRequest": 0.214,
+      "ToolingBuild": 0.107,
+      "Constraint": 0.143,
+      "Scenario": 0.107,
+      "FeatureRequest": 0.107,
+      "BugFixRequest": 0.071,
+      "Documentation": 0.071,
+      "Meta": 0.071,
+      "Improve": 0.036
+    },
+    "bash_kinds": {
+      "inspect": 0.808,
+      "other": 0.192
+    },
+    "tools": {
+      "WebSearch": 0.395,
+      "Glob": 0.042,
+      "WebFetch": 0.294,
+      "Bash": 0.218,
+      "Read": 0.05
+    },
+    "total_tokens": 967538,
+    "wallclock_h": 2.23,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        2,
+        400
+      ],
+      [
+        4,
+        2200
+      ],
+      [
+        5,
+        2000
+      ]
+    ],
+    "elo_shape": "mixed",
+    "front_load_ratio": null
+  },
+  "chess-brainfuck-cc": {
+    "n_steps": 192,
+    "n_phases": 82,
+    "modal_class_seq": [
+      "feature",
+      "eval",
+      "feature",
+      "tooling",
+      "meta",
+      "other",
+      "debug",
+      "meta",
+      "debug",
+      "other",
+      "meta",
+      "other",
+      "feature",
+      "meta",
+      "feature",
+      "other",
+      "feature",
+      "meta",
+      "other",
+      "feature",
+      "debug",
+      "feature",
+      "debug",
+      "other",
+      "tooling",
+      "meta",
+      "debug",
+      "meta",
+      "tooling",
+      "feature",
+      "debug",
+      "other",
+      "feature",
+      "other",
+      "debug",
+      "meta",
+      "debug",
+      "feature",
+      "other",
+      "feature",
+      "meta",
+      "eval",
+      "debug",
+      "meta",
+      "debug",
+      "meta",
+      "other",
+      "meta",
+      "other",
+      "meta",
+      "other",
+      "meta",
+      "debug",
+      "other",
+      "eval",
+      "other",
+      "meta",
+      "debug",
+      "other",
+      "meta",
+      "other",
+      "test",
+      "debug",
+      "other",
+      "eval",
+      "other",
+      "feature",
+      "other",
+      "eval",
+      "debug",
+      "other",
+      "meta",
+      "other",
+      "refactor",
+      "other",
+      "meta",
+      "debug",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.083,
+      "eval": 0.031,
+      "tooling": 0.016,
+      "meta": 0.552,
+      "other": 0.219,
+      "debug": 0.089,
+      "test": 0.005,
+      "refactor": 0.005
+    },
+    "intent": {
+      "Improve": 0.02,
+      "Meta": 0.125,
+      "Documentation": 0.131,
+      "Scenario": 0.053,
+      "FeatureRequest": 0.145,
+      "RefactorRequest": 0.035,
+      "TestRequest": 0.143,
+      "ToolingBuild": 0.015,
+      "Constraint": 0.153,
+      "Other": 0.033,
+      "BugFixRequest": 0.137,
+      "Steer": 0.004,
+      "Question": 0.009
+    },
+    "bash_kinds": {
+      "inspect": 0.411,
+      "other": 0.483,
+      "gauntlet": 0.007,
+      "stockfish": 0.012,
+      "build": 0.041,
+      "uci_run": 0.012,
+      "git": 0.035
+    },
+    "tools": {
+      "WebSearch": 0.007,
+      "Bash": 0.459,
+      "WebFetch": 0.004,
+      "Read": 0.319,
+      "Glob": 0.016,
+      "Grep": 0.085,
+      "Edit": 0.043,
+      "Task": 0.001,
+      "Write": 0.004,
+      "TaskOutput": 0.024,
+      "TaskStop": 0.002,
+      "exec_command": 0.031,
+      "update_plan": 0.001,
+      "Agent": 0.003,
+      "ToolSearch": 0.001
+    },
+    "total_tokens": 70254834,
+    "wallclock_h": 281.26,
+    "new_files": 8,
+    "edited_files": 79,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": 2,
+    "first_build_step": 2,
+    "elo_curve": [
+      [
+        3,
+        1320
+      ],
+      [
+        22,
+        500
+      ],
+      [
+        32,
+        620
+      ],
+      [
+        34,
+        700
+      ],
+      [
+        37,
+        820
+      ],
+      [
+        40,
+        500
+      ],
+      [
+        42,
+        1019
+      ],
+      [
+        45,
+        1320
+      ],
+      [
+        53,
+        720
+      ],
+      [
+        70,
+        720
+      ],
+      [
+        72,
+        520
+      ],
+      [
+        73,
+        720
+      ],
+      [
+        74,
+        520
+      ],
+      [
+        75,
+        520
+      ],
+      [
+        76,
+        800
+      ],
+      [
+        77,
+        800
+      ],
+      [
+        78,
+        800
+      ],
+      [
+        79,
+        600
+      ],
+      [
+        80,
+        600
+      ],
+      [
+        81,
+        600
+      ],
+      [
+        82,
+        600
+      ],
+      [
+        83,
+        600
+      ],
+      [
+        84,
+        600
+      ],
+      [
+        85,
+        600
+      ],
+      [
+        86,
+        600
+      ],
+      [
+        87,
+        600
+      ],
+      [
+        88,
+        600
+      ],
+      [
+        89,
+        600
+      ],
+      [
+        90,
+        600
+      ],
+      [
+        91,
+        600
+      ],
+      [
+        92,
+        600
+      ],
+      [
+        93,
+        600
+      ],
+      [
+        94,
+        600
+      ],
+      [
+        95,
+        600
+      ],
+      [
+        96,
+        600
+      ],
+      [
+        97,
+        600
+      ],
+      [
+        98,
+        600
+      ],
+      [
+        99,
+        600
+      ],
+      [
+        100,
+        600
+      ],
+      [
+        101,
+        600
+      ],
+      [
+        102,
+        600
+      ],
+      [
+        103,
+        600
+      ],
+      [
+        104,
+        600
+      ],
+      [
+        105,
+        600
+      ],
+      [
+        106,
+        600
+      ],
+      [
+        107,
+        600
+      ],
+      [
+        108,
+        600
+      ],
+      [
+        109,
+        600
+      ],
+      [
+        110,
+        600
+      ],
+      [
+        111,
+        600
+      ],
+      [
+        112,
+        600
+      ],
+      [
+        113,
+        600
+      ],
+      [
+        114,
+        600
+      ],
+      [
+        115,
+        600
+      ],
+      [
+        116,
+        600
+      ],
+      [
+        117,
+        600
+      ],
+      [
+        118,
+        600
+      ],
+      [
+        119,
+        600
+      ],
+      [
+        120,
+        600
+      ],
+      [
+        121,
+        600
+      ],
+      [
+        122,
+        600
+      ],
+      [
+        123,
+        600
+      ],
+      [
+        124,
+        600
+      ],
+      [
+        125,
+        600
+      ],
+      [
+        126,
+        600
+      ],
+      [
+        127,
+        600
+      ],
+      [
+        128,
+        600
+      ],
+      [
+        129,
+        600
+      ],
+      [
+        130,
+        600
+      ],
+      [
+        131,
+        600
+      ],
+      [
+        132,
+        600
+      ],
+      [
+        133,
+        600
+      ],
+      [
+        134,
+        600
+      ],
+      [
+        135,
+        600
+      ],
+      [
+        136,
+        600
+      ],
+      [
+        137,
+        600
+      ],
+      [
+        138,
+        600
+      ],
+      [
+        139,
+        600
+      ],
+      [
+        140,
+        520
+      ],
+      [
+        143,
+        520
+      ],
+      [
+        149,
+        520
+      ],
+      [
+        160,
+        600
+      ],
+      [
+        162,
+        800
+      ],
+      [
+        171,
+        1320
+      ],
+      [
+        172,
+        500
+      ],
+      [
+        173,
+        1280
+      ]
+    ],
+    "elo_shape": "zigzag",
+    "front_load_ratio": 0.0
+  },
+  "chess-cplusplus-claude": {
+    "n_steps": 18,
+    "n_phases": 14,
+    "modal_class_seq": [
+      "eval",
+      "debug",
+      "other",
+      "meta",
+      "other",
+      "debug",
+      "meta",
+      "other",
+      "debug",
+      "feature",
+      "debug",
+      "meta",
+      "feature",
+      "debug"
+    ],
+    "task_class": {
+      "eval": 0.056,
+      "debug": 0.333,
+      "other": 0.278,
+      "meta": 0.167,
+      "feature": 0.167
+    },
+    "intent": {
+      "FeatureRequest": 0.13,
+      "TestRequest": 0.13,
+      "ToolingBuild": 0.014,
+      "Scenario": 0.116,
+      "Improve": 0.13,
+      "BugFixRequest": 0.145,
+      "Constraint": 0.145,
+      "Documentation": 0.058,
+      "Meta": 0.058,
+      "Other": 0.029,
+      "RefactorRequest": 0.043
+    },
+    "bash_kinds": {
+      "inspect": 0.526,
+      "build": 0.105,
+      "gauntlet": 0.158,
+      "other": 0.211
+    },
+    "tools": {
+      "Bash": 0.112,
+      "Read": 0.724,
+      "Glob": 0.041,
+      "Grep": 0.106,
+      "Edit": 0.006,
+      "TaskCreate": 0.006,
+      "TaskUpdate": 0.006
+    },
+    "total_tokens": 3066153,
+    "wallclock_h": 1.83,
+    "new_files": 0,
+    "edited_files": 1,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": 1,
+    "first_build_step": 1,
+    "elo_curve": [
+      [
+        1,
+        2000
+      ],
+      [
+        7,
+        1900
+      ],
+      [
+        8,
+        1650
+      ],
+      [
+        11,
+        1500
+      ],
+      [
+        13,
+        1920
+      ],
+      [
+        15,
+        2200
+      ],
+      [
+        17,
+        2000
+      ]
+    ],
+    "elo_shape": "zigzag",
+    "front_load_ratio": null
+  },
+  "chess-Rocq": {
+    "n_steps": 11,
+    "n_phases": 7,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "tooling",
+      "feature",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.182,
+      "other": 0.364,
+      "meta": 0.364,
+      "tooling": 0.091
+    },
+    "intent": {
+      "FeatureRequest": 0.15,
+      "RefactorRequest": 0.075,
+      "TestRequest": 0.125,
+      "ToolingBuild": 0.075,
+      "Constraint": 0.125,
+      "Scenario": 0.05,
+      "BugFixRequest": 0.1,
+      "Documentation": 0.15,
+      "Meta": 0.075,
+      "Other": 0.025,
+      "Question": 0.025,
+      "Steer": 0.025
+    },
+    "bash_kinds": {
+      "inspect": 0.4,
+      "other": 0.333,
+      "git": 0.267
+    },
+    "tools": {
+      "Bash": 0.316,
+      "WebSearch": 0.2,
+      "WebFetch": 0.179,
+      "Agent": 0.011,
+      "Read": 0.242,
+      "Write": 0.011,
+      "Grep": 0.021,
+      "Edit": 0.021
+    },
+    "total_tokens": 1620750,
+    "wallclock_h": 0.38,
+    "new_files": 1,
+    "edited_files": 2,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        1,
+        800
+      ],
+      [
+        4,
+        1350
+      ],
+      [
+        5,
+        1240
+      ],
+      [
+        6,
+        1600
+      ],
+      [
+        9,
+        1633
+      ]
+    ],
+    "elo_shape": "mixed",
+    "front_load_ratio": 0.0
+  },
+  "chess-rust-cc": {
+    "n_steps": 8,
+    "n_phases": 5,
+    "modal_class_seq": [
+      "eval",
+      "other",
+      "debug",
+      "meta",
+      "feature"
+    ],
+    "task_class": {
+      "eval": 0.125,
+      "other": 0.125,
+      "debug": 0.125,
+      "meta": 0.25,
+      "feature": 0.375
+    },
+    "intent": {
+      "FeatureRequest": 0.143,
+      "RefactorRequest": 0.071,
+      "TestRequest": 0.143,
+      "ToolingBuild": 0.071,
+      "Constraint": 0.143,
+      "Scenario": 0.143,
+      "BugFixRequest": 0.107,
+      "Documentation": 0.036,
+      "Meta": 0.036,
+      "Improve": 0.107
+    },
+    "bash_kinds": {
+      "inspect": 0.647,
+      "build": 0.294,
+      "gauntlet": 0.059
+    },
+    "tools": {
+      "Bash": 0.156,
+      "WebSearch": 0.239,
+      "Read": 0.339,
+      "WebFetch": 0.101,
+      "Edit": 0.138,
+      "Grep": 0.018,
+      "Glob": 0.009
+    },
+    "total_tokens": 1394977,
+    "wallclock_h": 0.43,
+    "new_files": 0,
+    "edited_files": 15,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": 1,
+    "first_build_step": 1,
+    "elo_curve": [
+      [
+        1,
+        2200
+      ],
+      [
+        5,
+        2100
+      ]
+    ],
+    "elo_shape": "monotone-down",
+    "front_load_ratio": null
+  },
+  "chess-ruby-cc": {
+    "n_steps": 10,
+    "n_phases": 7,
+    "modal_class_seq": [
+      "eval",
+      "debug",
+      "eval",
+      "meta",
+      "eval",
+      "meta",
+      "eval"
+    ],
+    "task_class": {
+      "eval": 0.6,
+      "debug": 0.1,
+      "meta": 0.3
+    },
+    "intent": {
+      "TestRequest": 0.133,
+      "ToolingBuild": 0.044,
+      "Constraint": 0.133,
+      "Scenario": 0.111,
+      "Improve": 0.156,
+      "FeatureRequest": 0.089,
+      "BugFixRequest": 0.111,
+      "RefactorRequest": 0.067,
+      "Question": 0.022,
+      "Documentation": 0.044,
+      "Meta": 0.089
+    },
+    "bash_kinds": {
+      "inspect": 0.127,
+      "other": 0.521,
+      "gauntlet": 0.244,
+      "stockfish": 0.003,
+      "perft": 0.012,
+      "uci_run": 0.075,
+      "build": 0.018
+    },
+    "tools": {
+      "Bash": 0.603,
+      "WebSearch": 0.004,
+      "Write": 0.149,
+      "Edit": 0.103,
+      "ToolSearch": 0.007,
+      "TaskOutput": 0.033,
+      "Read": 0.1,
+      "Glob": 0.002
+    },
+    "total_tokens": 30674848,
+    "wallclock_h": 98.81,
+    "new_files": 82,
+    "edited_files": 57,
+    "stagnation_steps": 0,
+    "first_perft_step": 2,
+    "first_gauntlet_step": 1,
+    "first_build_step": 5,
+    "elo_curve": [
+      [
+        1,
+        1700
+      ],
+      [
+        3,
+        1600
+      ],
+      [
+        4,
+        1800
+      ],
+      [
+        5,
+        1900
+      ],
+      [
+        7,
+        1900
+      ],
+      [
+        8,
+        1965
+      ],
+      [
+        9,
+        1965
+      ]
+    ],
+    "elo_shape": "mixed",
+    "front_load_ratio": 0.78
+  },
+  "chess-css-codex": {
+    "n_steps": 17,
+    "n_phases": 12,
+    "modal_class_seq": [
+      "feature",
+      "meta",
+      "other",
+      "feature",
+      "meta",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "debug",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.294,
+      "meta": 0.118,
+      "other": 0.529,
+      "debug": 0.059
+    },
+    "intent": {
+      "FeatureRequest": 0.182,
+      "TestRequest": 0.045,
+      "ToolingBuild": 0.045,
+      "Other": 0.273,
+      "Scenario": 0.182,
+      "Constraint": 0.045,
+      "Steer": 0.091,
+      "Improve": 0.045,
+      "BugFixRequest": 0.045,
+      "Meta": 0.045
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.932,
+      "write_stdin": 0.068
+    },
+    "total_tokens": 71303639,
+    "wallclock_h": 1.22,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "COBOL-chess": {
+    "n_steps": 34,
+    "n_phases": 25,
+    "modal_class_seq": [
+      "feature",
+      "debug",
+      "tooling",
+      "debug",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "feature",
+      "debug",
+      "feature",
+      "debug",
+      "other",
+      "debug",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.294,
+      "debug": 0.324,
+      "tooling": 0.029,
+      "other": 0.324,
+      "meta": 0.029
+    },
+    "intent": {
+      "FeatureRequest": 0.165,
+      "TestRequest": 0.138,
+      "ToolingBuild": 0.138,
+      "BugFixRequest": 0.11,
+      "Documentation": 0.037,
+      "Constraint": 0.083,
+      "Scenario": 0.138,
+      "Meta": 0.037,
+      "Other": 0.046,
+      "Improve": 0.046,
+      "Steer": 0.018,
+      "Question": 0.018,
+      "RefactorRequest": 0.028
+    },
+    "bash_kinds": {
+      "inspect": 0.663,
+      "git": 0.12,
+      "other": 0.196,
+      "build": 0.011,
+      "perft": 0.011
+    },
+    "tools": {
+      "exec_command": 0.462,
+      "request_user_input": 0.001,
+      "update_plan": 0.003,
+      "write_stdin": 0.43,
+      "Bash": 0.047,
+      "Glob": 0.002,
+      "Read": 0.051,
+      "Agent": 0.003,
+      "Write": 0.001,
+      "Edit": 0.001
+    },
+    "total_tokens": 937763910,
+    "wallclock_h": 666.29,
+    "new_files": 2,
+    "edited_files": 1,
+    "stagnation_steps": 7,
+    "first_perft_step": 34,
+    "first_gauntlet_step": null,
+    "first_build_step": 29,
+    "elo_curve": [
+      [
+        29,
+        1700
+      ]
+    ],
+    "elo_shape": "single",
+    "front_load_ratio": 0.0
+  },
+  "chess-apl-codex54": {
+    "n_steps": 34,
+    "n_phases": 25,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "eval",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "eval",
+      "other",
+      "meta",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.235,
+      "other": 0.559,
+      "meta": 0.147,
+      "eval": 0.059
+    },
+    "intent": {
+      "FeatureRequest": 0.17,
+      "TestRequest": 0.064,
+      "ToolingBuild": 0.043,
+      "Other": 0.255,
+      "Scenario": 0.17,
+      "Steer": 0.149,
+      "Improve": 0.021,
+      "Documentation": 0.064,
+      "Question": 0.064
+    },
+    "bash_kinds": {
+      "inspect": 0.227,
+      "gauntlet": 0.091,
+      "git": 0.545,
+      "stockfish": 0.045,
+      "other": 0.091
+    },
+    "tools": {
+      "exec_command": 0.568,
+      "update_plan": 0.016,
+      "write_stdin": 0.358,
+      "Agent": 0.001,
+      "Bash": 0.026,
+      "Read": 0.026,
+      "Write": 0.001,
+      "Edit": 0.002,
+      "Glob": 0.001
+    },
+    "total_tokens": 157072635,
+    "wallclock_h": 7.24,
+    "new_files": 1,
+    "edited_files": 2,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": 17,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        15,
+        903
+      ],
+      [
+        28,
+        1040
+      ]
+    ],
+    "elo_shape": "monotone-up",
+    "front_load_ratio": 0.0
+  },
+  "chess-newlang-codex": {
+    "n_steps": 21,
+    "n_phases": 14,
+    "modal_class_seq": [
+      "debug",
+      "other",
+      "meta",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "feature",
+      "other"
+    ],
+    "task_class": {
+      "debug": 0.048,
+      "other": 0.476,
+      "meta": 0.095,
+      "feature": 0.381
+    },
+    "intent": {
+      "FeatureRequest": 0.216,
+      "BugFixRequest": 0.027,
+      "RefactorRequest": 0.027,
+      "TestRequest": 0.027,
+      "ToolingBuild": 0.054,
+      "Constraint": 0.054,
+      "Scenario": 0.108,
+      "Improve": 0.135,
+      "Other": 0.054,
+      "Steer": 0.216,
+      "Question": 0.054,
+      "Meta": 0.027
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.494,
+      "update_plan": 0.01,
+      "write_stdin": 0.497
+    },
+    "total_tokens": 317994449,
+    "wallclock_h": 2.85,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        9,
+        2500
+      ],
+      [
+        10,
+        2500
+      ],
+      [
+        12,
+        2050
+      ],
+      [
+        15,
+        2140
+      ],
+      [
+        16,
+        2170
+      ]
+    ],
+    "elo_shape": "mixed",
+    "front_load_ratio": null
+  },
+  "chess-assembly-codex": {
+    "n_steps": 12,
+    "n_phases": 7,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "feature",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.5,
+      "other": 0.417,
+      "meta": 0.083
+    },
+    "intent": {
+      "FeatureRequest": 0.294,
+      "TestRequest": 0.059,
+      "ToolingBuild": 0.059,
+      "Other": 0.176,
+      "Steer": 0.176,
+      "Improve": 0.059,
+      "Question": 0.118,
+      "Scenario": 0.059
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.678,
+      "update_plan": 0.007,
+      "write_stdin": 0.315
+    },
+    "total_tokens": 129679448,
+    "wallclock_h": 2.27,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-purec": {
+    "n_steps": 5,
+    "n_phases": 4,
+    "modal_class_seq": [
+      "feature",
+      "debug",
+      "feature",
+      "tooling"
+    ],
+    "task_class": {
+      "feature": 0.6,
+      "debug": 0.2,
+      "tooling": 0.2
+    },
+    "intent": {
+      "FeatureRequest": 0.158,
+      "TestRequest": 0.105,
+      "Documentation": 0.053,
+      "ToolingBuild": 0.105,
+      "Constraint": 0.158,
+      "Scenario": 0.105,
+      "BugFixRequest": 0.053,
+      "RefactorRequest": 0.158,
+      "Improve": 0.105
+    },
+    "bash_kinds": {
+      "inspect": 0.275,
+      "build": 0.125,
+      "perft": 0.5,
+      "uci_run": 0.025,
+      "other": 0.075
+    },
+    "tools": {
+      "Bash": 0.28,
+      "WebSearch": 0.063,
+      "WebFetch": 0.021,
+      "Read": 0.566,
+      "Edit": 0.049,
+      "Grep": 0.007,
+      "Write": 0.014
+    },
+    "total_tokens": 2636236,
+    "wallclock_h": 0.93,
+    "new_files": 2,
+    "edited_files": 7,
+    "stagnation_steps": 0,
+    "first_perft_step": 2,
+    "first_gauntlet_step": null,
+    "first_build_step": 2,
+    "elo_curve": [
+      [
+        1,
+        2200
+      ],
+      [
+        4,
+        2380
+      ]
+    ],
+    "elo_shape": "monotone-up",
+    "front_load_ratio": 1.0
+  },
+  "chess-mojo": {
+    "n_steps": 6,
+    "n_phases": 5,
+    "modal_class_seq": [
+      "feature",
+      "debug",
+      "other",
+      "meta",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.333,
+      "debug": 0.167,
+      "other": 0.333,
+      "meta": 0.167
+    },
+    "intent": {
+      "FeatureRequest": 0.182,
+      "TestRequest": 0.182,
+      "ToolingBuild": 0.182,
+      "BugFixRequest": 0.091,
+      "Scenario": 0.091,
+      "Other": 0.273
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.879,
+      "write_stdin": 0.121
+    },
+    "total_tokens": 65389367,
+    "wallclock_h": 1.26,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        3,
+        1100
+      ]
+    ],
+    "elo_shape": "single",
+    "front_load_ratio": null
+  },
+  "chess-revisit-java-toCOBOL-codex": {
+    "n_steps": 28,
+    "n_phases": 16,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "other",
+      "feature",
+      "other",
+      "debug",
+      "other",
+      "debug",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.179,
+      "other": 0.714,
+      "meta": 0.036,
+      "debug": 0.071
+    },
+    "intent": {
+      "FeatureRequest": 0.147,
+      "Other": 0.206,
+      "Steer": 0.294,
+      "Constraint": 0.029,
+      "TestRequest": 0.029,
+      "Question": 0.147,
+      "Scenario": 0.088,
+      "BugFixRequest": 0.059
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.698,
+      "write_stdin": 0.302
+    },
+    "total_tokens": 678616423,
+    "wallclock_h": 8.08,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  },
+  "chess-ruby-codex": {
+    "n_steps": 7,
+    "n_phases": 6,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature",
+      "other",
+      "meta",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.286,
+      "other": 0.571,
+      "meta": 0.143
+    },
+    "intent": {
+      "FeatureRequest": 0.111,
+      "TestRequest": 0.111,
+      "ToolingBuild": 0.111,
+      "Question": 0.111,
+      "Improve": 0.111,
+      "Steer": 0.444
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 0.411,
+      "write_stdin": 0.589
+    },
+    "total_tokens": 86318102,
+    "wallclock_h": 10.22,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        2,
+        920
+      ]
+    ],
+    "elo_shape": "single",
+    "front_load_ratio": null
+  },
+  "chess-java-cc": {
+    "n_steps": 6,
+    "n_phases": 5,
+    "modal_class_seq": [
+      "feature",
+      "meta",
+      "other",
+      "feature",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.333,
+      "meta": 0.167,
+      "other": 0.5
+    },
+    "intent": {
+      "FeatureRequest": 0.176,
+      "TestRequest": 0.118,
+      "ToolingBuild": 0.059,
+      "Constraint": 0.118,
+      "Scenario": 0.118,
+      "Improve": 0.059,
+      "BugFixRequest": 0.059,
+      "Documentation": 0.059,
+      "Meta": 0.059,
+      "Question": 0.118,
+      "Steer": 0.059
+    },
+    "bash_kinds": {
+      "inspect": 1.0
+    },
+    "tools": {
+      "Bash": 0.039,
+      "WebSearch": 0.026,
+      "WebFetch": 0.184,
+      "Edit": 0.039,
+      "Agent": 0.013,
+      "Read": 0.618,
+      "Write": 0.013,
+      "Glob": 0.066
+    },
+    "total_tokens": 1268003,
+    "wallclock_h": 3.11,
+    "new_files": 1,
+    "edited_files": 3,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [
+      [
+        1,
+        1800
+      ],
+      [
+        5,
+        2700
+      ],
+      [
+        6,
+        2700
+      ]
+    ],
+    "elo_shape": "monotone-up",
+    "front_load_ratio": 0.0
+  },
+  "chess-css-codex-guided": {
+    "n_steps": 9,
+    "n_phases": 5,
+    "modal_class_seq": [
+      "feature",
+      "other",
+      "feature",
+      "meta",
+      "other"
+    ],
+    "task_class": {
+      "feature": 0.222,
+      "other": 0.444,
+      "meta": 0.333
+    },
+    "intent": {
+      "FeatureRequest": 0.182,
+      "ToolingBuild": 0.091,
+      "Other": 0.182,
+      "Constraint": 0.273,
+      "Meta": 0.091,
+      "Steer": 0.182
+    },
+    "bash_kinds": {},
+    "tools": {
+      "exec_command": 1.0
+    },
+    "total_tokens": 29155196,
+    "wallclock_h": 0.42,
+    "new_files": 0,
+    "edited_files": 0,
+    "stagnation_steps": 0,
+    "first_perft_step": null,
+    "first_gauntlet_step": null,
+    "first_build_step": null,
+    "elo_curve": [],
+    "elo_shape": "none",
+    "front_load_ratio": null
+  }
+}

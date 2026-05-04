@@ -1,0 +1,340 @@
+{
+  "name": "chess-purec",
+  "path": "/Users/mathieuacher/SANDBOX/chess-purec",
+  "primary_language": "C",
+  "loc": {
+    "files_by_lang": {
+      "Shell": 1,
+      "YAML": 3,
+      "Text": 1,
+      "C": 23
+    },
+    "loc_by_lang": {
+      "Shell": 149,
+      "YAML": 15,
+      "Text": 19,
+      "C": 2975
+    },
+    "total_files": 28,
+    "total_loc": 3158
+  },
+  "features": {
+    "FEN parsing": 11,
+    "UCI protocol": 9,
+    "Perft": 7,
+    "Castling": 12,
+    "En passant": 3,
+    "Promotion": 2,
+    "Check/Checkmate": 6,
+    "PGN": 2,
+    "Board: bitboard": 13,
+    "Board: magic bitboards": 4,
+    "Board: mailbox 8x8": 8,
+    "Minimax/Negamax": 1,
+    "Iterative deepening": 1,
+    "Quiescence": 6,
+    "Transposition table": 14,
+    "Zobrist hashing": 7,
+    "Move ordering (MVV-LVA)": 1,
+    "Killer moves": 1,
+    "History heuristic": 1,
+    "Principal-variation (PV)": 1,
+    "Null-move pruning": 7,
+    "Late-move reduction (LMR)": 1,
+    "Late-move pruning (LMP)": 1,
+    "Aspiration windows": 4,
+    "Futility pruning": 1,
+    "Razoring": 2,
+    "Tapered evaluation": 1,
+    "King safety": 1,
+    "Pawn structure": 1,
+    "Mobility": 1,
+    "Material counting": 12,
+    "Opening book": 1,
+    "Time management": 13
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "elo_results/purec_vs_sf1500.pgn",
+      "elo_results/purec_vs_sf2400.pgn",
+      "elo_results/purec_vs_sf2000.pgn",
+      "elo_results/purec_vs_sf2200.pgn",
+      "elo_results/purec_vs_sf1800.pgn",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/board.c",
+      "src/uci.c",
+      "src/board.h"
+    ],
+    "UCI protocol": [
+      "Makefile",
+      "play_stockfish.sh",
+      "purec",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/uci.c",
+      "src/search.c",
+      "src/main.c"
+    ],
+    "Perft": [
+      "purec",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/movegen.c",
+      "src/uci.c",
+      "src/movegen.h"
+    ],
+    "Castling": [
+      "selfplay.pgn",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "elo_results/purec_vs_sf1500.pgn",
+      "elo_results/purec_vs_sf2400.pgn",
+      "elo_results/purec_vs_sf2000.pgn",
+      "elo_results/purec_vs_sf2200.pgn",
+      "elo_results/purec_vs_sf1800.pgn",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/movegen.c",
+      "src/board.c",
+      "src/board.h"
+    ],
+    "En passant": [
+      "src/movegen.c",
+      "src/board.c",
+      "src/board.h"
+    ],
+    "Promotion": [
+      "src/see.c",
+      "src/movegen.c"
+    ],
+    "Check/Checkmate": [
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/board.c",
+      "src/search.c",
+      "src/board.h"
+    ],
+    "PGN": [
+      "play_stockfish.sh",
+      "elo_results/summary.txt"
+    ],
+    "Board: 0x88": [],
+    "Board: bitboard": [
+      "Makefile",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/see.c",
+      "src/movegen.c",
+      "src/types.h",
+      "src/board.c",
+      "src/evaluate.c",
+      "src/uci.c",
+      "src/bitboard.h",
+      "src/board.h",
+      "src/bitboard.c"
+    ],
+    "Board: magic bitboards": [
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/bitboard.h",
+      "src/bitboard.c"
+    ],
+    "Board: mailbox 8x8": [
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/see.c",
+      "src/board.c",
+      "src/search.c",
+      "src/board.h",
+      "src/movorder.c"
+    ],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "src/see.c"
+    ],
+    "Alpha-beta": [],
+    "Iterative deepening": [
+      "src/search.c"
+    ],
+    "Quiescence": [
+      "purec",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/movegen.c",
+      "src/search.c"
+    ],
+    "Transposition table": [
+      "Makefile",
+      "purec",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/board.c",
+      "src/movorder.h",
+      "src/tt.c",
+      "src/uci.c",
+      "src/search.c",
+      "src/board.h",
+      "src/search.h",
+      "src/tt.h",
+      "src/uci.h"
+    ],
+    "Zobrist hashing": [
+      "purec",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/board.c",
+      "src/uci.c",
+      "src/board.h"
+    ],
+    "Move ordering (MVV-LVA)": [
+      "src/movorder.h"
+    ],
+    "Killer moves": [
+      "src/movorder.c"
+    ],
+    "History heuristic": [
+      "src/movorder.c"
+    ],
+    "Principal-variation (PV)": [
+      "src/search.c"
+    ],
+    "Null-move pruning": [
+      "purec",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/board.c",
+      "src/search.c",
+      "src/board.h"
+    ],
+    "Late-move reduction (LMR)": [
+      "src/search.c"
+    ],
+    "Late-move pruning (LMP)": [
+      "src/search.c"
+    ],
+    "Aspiration windows": [
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/search.c"
+    ],
+    "Futility pruning": [
+      "src/search.c"
+    ],
+    "Razoring": [
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "src/search.c"
+    ],
+    "Evaluation/PST": [],
+    "Tapered evaluation": [
+      "src/evaluate.c"
+    ],
+    "King safety": [
+      "src/evaluate.c"
+    ],
+    "Pawn structure": [
+      "src/evaluate.c"
+    ],
+    "Mobility": [
+      "src/evaluate.c"
+    ],
+    "Material counting": [
+      "purec",
+      "selfplay.pgn",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "elo_results/purec_vs_sf2200.log",
+      "elo_results/purec_vs_sf2000.pgn",
+      "elo_results/purec_vs_sf2200.pgn",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/see.c",
+      "src/evaluate.c",
+      "src/search.c",
+      "src/see.h"
+    ],
+    "Opening book": [
+      "play_stockfish.sh"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "purec",
+      "selfplay.pgn",
+      "purec.dSYM/Contents/Resources/DWARF/purec",
+      "elo_results/purec_vs_sf1500.pgn",
+      "elo_results/purec_vs_sf2400.pgn",
+      "elo_results/purec_vs_sf2000.pgn",
+      "elo_results/purec_vs_sf2200.pgn",
+      "elo_results/purec_vs_sf1800.pgn",
+      "test_debug.dSYM/Contents/Resources/DWARF/test_debug",
+      "test_debug2.dSYM/Contents/Resources/DWARF/test_debug2",
+      "src/timeman.c",
+      "src/uci.c",
+      "src/timeman.h"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 5,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "sessions": []
+  },
+  "git": {
+    "is_git": true,
+    "log": [
+      "9bfdd78|2026-02-16T22:44:11+01:00|Mathieu Acher|Improve PureC from ~2100 to ~2200 Elo with SEE, search pruning, and eval upgrades",
+      "1405914|2026-02-16T16:59:11+01:00|Mathieu Acher|Add Elo gauntlet results: PureC ~2100 Elo vs Stockfish",
+      "0708978|2026-02-16T14:44:15+01:00|Mathieu Acher|Fix awk field indices in play_stockfish.sh result parsing",
+      "3d15d9c|2026-02-16T13:09:40+01:00|Mathieu Acher|Fix illegal PV moves and add Stockfish gauntlet script",
+      "8dfb0cb|2026-02-16T12:35:01+01:00|Mathieu Acher|Implement PureC chess engine with bitboard representation and UCI support"
+    ],
+    "n_commits": 5,
+    "authors": [
+      "5\tMathieu Acher <mathieu.acher@irisa.fr>"
+    ]
+  }
+}

@@ -1,0 +1,396 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "1"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nc3 c6 3. Bf4 d6 4. Nf3 Qa5 5. Bd2 e5 6. Ne4 Qb5 7. Nxf6+ gxf6
+8. Bc3 Rg8 9. g3 e4 10. Nd2 Qd5 11. Bg2 Bf5 12. O-O Rg6 13. Nxe4 Qc4 14. b3 Qe6
+15. d5 cxd5 16. Nxf6+ Kd8 17. Bxd5 Qc8 18. e4 Be6 19. Qf3 Be7 20. e5 dxe5
+21. Bxe5 Nc6 22. Bc3 Bxd5 23. Nxd5 Qh3 24. Rad1 Ke8 25. Nc7+ Kf8 26. Nxa8 h5
+27. Nc7 h4 28. Qh5 b6 29. Qh8+ Rg8 30. Bg7# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "1"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. e3 e6 3. Be2 Nc6 4. Nf3 d5 5. O-O Bd6 6. Nbd2 O-O 7. b3 a5 8. Bb2 a4
+9. bxa4 Bd7 10. Bb5 Ne7 11. Bxd7 Nxd7 12. Rc1 Nb6 13. Qe2 Rxa4 14. a3 Bxa3
+15. Bxa3 Rxa3 16. Rfe1 Qd6 17. c4 dxc4 18. Qf1 Ned5 19. Nxc4 Nxc4 20. Qxc4 c6
+21. Ne5 f6 22. Nf3 Nb4 23. Red1 b5 24. Qe2 Ra2 25. Rd2 Rfa8 26. Qd1 R2a3 27. d5
+exd5 28. Nd4 Qd7 29. Qf1 Ra2 30. Rxa2 Rxa2 31. h4 g6 32. h5 Kg7 33. hxg6 hxg6
+34. Qd1 Rb2 35. Rc5 Qd6 36. g3 Kh7 37. Rc1 f5 38. Qf1 Ra2 39. Qh3+ Kg8 40. Qh2
+Kg7 41. Qh3 Qf6 42. Kg2 Qe5 43. Rh1 Kf7 44. Qh7+ Qg7 45. Qh4 Nd3 46. Qd8 Rxf2+
+47. Kg1 Rb2 48. Rh8 Rb1+ 49. Kg2 Rb2+ 50. Kh3 Nf2+ 51. Kg2 Ng4+ 52. Kh1 Rb1+
+53. Kg2 Nxe3+ 54. Kh2 Ng4+ 55. Kh3 Qxh8+ 56. Qxh8 Rh1+ 57. Kg2 Rxh8 58. Nxc6
+Rh2+ 59. Kf1 Ne3+ 60. Ke1 Kf6 61. Nb8 b4 62. g4 fxg4 63. Nc6 b3 64. Nd4 b2
+65. Ne2 b1=Q+ 66. Kd2 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "2"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 Nf6 2. e4 e6 3. Nf3 Be7 4. Bd3 Nbd7 5. O-O e5 6. Re1 c6 7. a3 O-O 8. Bg5
+exd4 9. Nxd4 Re8 10. Rb1 h6 11. Bf4 Bf8 12. Qd2 Qc7 13. Nf5 Nh7 14. Ra1 Ne5
+15. Qe3 Bxf5 16. exf5 Nxd3 17. Qxd3 Qd7 18. Rad1 Rxe1+ 19. Rxe1 Nf6 20. Re2 b5
+21. h3 Rc8 22. Re1 d5 23. Bg3 d4 24. Ne4 Qxf5 25. Nxf6+ Qxf6 26. Re4 a5 27. Be5
+Qf5 28. Bxg7 Bxg7 29. Re8+ Rxe8 30. Qxf5 a4 31. Kh2 Re6 32. Qg4 Kf8 33. g3 Be5
+34. Kg1 d3 35. cxd3 Bf6 36. Kg2 c5 37. Qh5 Be5 38. Qf5 Bd4 39. h4 Rf6 40. Qc8+
+Kg7 41. f4 b4 42. axb4 cxb4 43. Qg4+ Kh8 44. Qd7 Bxb2 45. Qxa4 Ba3 46. d4 Kg8
+47. d5 Rb6 48. Qa7 Rb5 49. d6 Bb2 50. d7 Bf6 51. Qa6 Rb8 52. Qxf6 Rf8 53. d8=Q
+Rxd8 54. Qxd8+ Kg7 55. Qd4+ Kg6 56. h5+ Kxh5 57. Qg7 f6 58. Qxf6 Kg4 59. Qg6#
+1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "2"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 Nf6 2. Bg5 h6 3. Bxf6 exf6 4. Qd3 Be7 5. e4 f5 6. O-O-O fxe4 7. Qxe4 c6
+8. d5 O-O 9. Nf3 Re8 10. Qf4 Qb6 11. dxc6 bxc6 12. g4 Nd7 13. Bc4 d5 14. Bb3 Nf6
+15. h3 Qxf2 16. Rhe1 g5 17. Qc7 Qxf3 18. Rxe7 Rxe7 19. Qxe7 Be6 20. Rd3 Qf4+
+21. Kb1 Ne4 22. a4 Nf2 23. Ne2 Qe4 24. Nc1 Nxd3 25. Qb7 Nxc1 26. Bxd5 Bxd5
+27. Qxa8+ Kg7 28. Qg8+ Kxg8 29. a5 Ba2+ 30. Kxc1 Qe1# 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "3"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... g6 2. Nf3 c5 3. Nc3 Nf6 4. d4 cxd4 5. exd4 d5 6. Ne5 Bg7 7. Bf4 Qb6 8. Bb5+
+Nc6 9. O-O Bf5 10. g4 Be6 11. Re1 O-O 12. Bxc6 g5 13. Na4 Bxg4 14. Nxb6 axb6
+15. Nxg4 Kh8 16. Bxb7 gxf4 17. Bxa8 Rg8 18. Ne5 h6 19. Nxf7+ Kh7 20. Qd3+ Ne4
+21. Qxe4+ dxe4 22. Bxe4# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "3"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. h3 e5 3. b3 Nf6 4. d3 Nc6 5. g3 Bc5 6. Bg2 O-O 7. Bb2 d4 8. e4 a5
+9. a4 Be6 10. Ne2 Qd7 11. Nd2 Rad8 12. f4 exf4 13. Nxf4 Bd6 14. Qf3 Nb4 15. Qd1
+c5 16. O-O Bxf4 17. Rxf4 Bxh3 18. Nc4 Rfe8 19. Rh4 Bxg2 20. Kxg2 Qc7 21. Bc1 h6
+22. Qh1 Nxc2 23. Bxh6 gxh6 24. Rxh6 Kg7 25. Qh4 Re6 26. Qg5+ Kf8 27. Rf1 Ke8
+28. Rfxf6 Rxf6 29. Rxf6 Qe7 30. Kf3 Ne1+ 31. Ke2 Nc2 32. e5 Nb4 33. e6 fxe6
+34. Ne5 Qxf6 35. Qxf6 Rd5 36. Qxe6+ Kd8 37. Nc4 Kc7 38. Qe7+ Rd7 39. Qxc5+ Nc6
+40. Kd1 Kb8 41. Qf8+ Rd8 42. Qf4+ Ka8 43. Qc7 Re8 44. Nb6+ Ka7 45. Nc4 Ka8
+46. Qg7 Kb8 47. Kd2 Ka7 48. Nd6 Rb8 49. g4 Kb6 50. Nc4+ Ka7 51. Kd1 Ka6 52. Qc7
+Ka7 53. Nd6 Nb4 54. g5 Na6 55. Nb5+ Ka8 56. Qb6 Rg8 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "4"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... c6 2. Nf3 g6 3. Bd3 Bg7 4. O-O d6 5. a4 Nd7 6. Bf4 e5 7. Bg3 Qc7 8. Nbd2
+Ngf6 9. c3 Rb8 10. Bh4 b6 11. a5 b5 12. Bg5 h6 13. Bh4 a6 14. Qc2 c5 15. b3 cxd4
+16. cxd4 Qxc2 17. Bxc2 Nh5 18. d5 Nf8 19. Rac1 Nf4 20. Rfe1 Bb7 21. b4 Nh7
+22. Bg3 Nh5 23. Nf1 Kd7 24. Bh4 g5 25. Bg3 f5 26. exf5 Rhe8 27. Ne3 Nxg3
+28. fxg3 e4 29. Nd2 Bd4 30. Nxe4 Rbc8 31. Kf1 Rxe4 32. Bxe4 Rxc1 33. Rxc1 Bxe3
+34. Rd1 g4 35. Ke2 Ba7 36. Kd3 h5 37. h3 Nf6 38. hxg4 Nxg4 39. Kc3 Bf2 40. Bf3
+Bxg3 41. Kb3 Ke7 42. Rc1 Kd7 43. Ka2 Nf6 44. Rd1 Kd8 45. Rc1 Bc8 46. Rc6 Be5
+47. Kb3 Bb7 48. Rc1 Bg3 49. Ka3 Ba8 50. Rc3 Bf4 51. Rd3 h4 52. Kb3 Bb7 53. Rc3
+Be5 54. Rc1 Bf4 55. Re1 Be5 56. Rh1 Bg3 57. Rc1 Be5 58. Ka3 Bg3 59. Rc2 Bf4
+60. Rc3 Be5 61. Rc2 Bh2 62. Kb3 Bg3 63. Re2 Bf4 64. Ka3 Bg3 65. Kb3 Kd7 66. Rd2
+Nh7 67. Bh5 Kd8 68. Bf7 Nf6 69. Be6 Ke7 70. Rd4 Kf8 71. Ka3 Kg7 72. Rd1 Kf8
+73. Kb3 Kg7 74. Rd2 Be1 75. Rd3 Kh6 76. Rd1 Bg3 77. Rd4 Bf2 78. Rd2 Bg3 79. Ka3
+Kg5 80. Rd4 Be1 81. Rd1 Bg3 82. Rd4 Be5 83. Rd3 Kg4 84. Kb3 Kg5 85. Rd1 Bg3
+86. Rd4 Be5 87. Rd2 Ba8 88. Kc2 Bg3 89. Kb3 Bb7 90. Rd4 Bf4 91. Kc2 Bh2 92. Rd3
+Bg3 93. Kd2 Kf4 94. Kc2 Be1 95. Kb3 Ke4 96. Rf3 Bd2 97. Rf1 Ba8 98. Rd1 Bg5
+99. Bc8 Be3 100. Bxa6 Bxd5+ 101. Rxd5 Kxd5 102. Bxb5 Bd2 103. a6 Be3 104. Bd3
+Kc6 105. b5+ Kc7 106. Kb4 Bb6 107. Kc3 Kd7 108. Kb3 Ke8 109. Ka3 d5 110. Kb3 Ng4
+111. Kb4 Kd7 112. Be2 Nf6 113. Bd1 Ne8 114. Bc2 Ke7 115. Bb3 d4 116. Kc4 Nf6
+117. Kd3 Kd6 118. Bc4 Kc5 119. Be6 Kxb5 120. Bc4+ Kc5 121. Bf7 Kd6 122. Bg6 Ke5
+123. Kc4 Kf4 124. Kb5 Ba7 125. Kb4 Ke5 126. Kb3 Nd5 127. Bh5 Ne7 128. f6 Kxf6
+129. Kc4 Kf5 130. Bf7 Kf4 131. Bh5 Ke5 132. Bf3 Ng8 133. Kd3 Kf4 134. Bc6 Ne7
+135. Be4 Ng8 136. Bc6 Ne7 137. Be4 Nf5 138. Bc6 Ne3 139. Kd2 Kg3 140. Kd3 Ng4
+141. Ke2 Ne5 142. Be4 Ng4 143. Bc6 Ne3 144. Kd3 Nxg2 145. Bd7 Kf2 146. Ke4 Kg3
+147. Kd3 h3 148. Bxh3 Kxh3 149. Kd2 Bb6 150. Ke2 Ba7 151. Kd2 Kh4 152. Kd3 Kg3
+153. Kd2 Kf2 154. Kd3 Kf3 155. Kc2 Ke3 156. Kb2 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "4"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... c5 2. d5 d6 3. Nc3 Nf6 4. a4 e5 5. Bd3 Be7 6. h3 O-O 7. Nf3 Na6 8. Bxa6
+bxa6 9. Nd2 a5 10. Nc4 Ba6 11. Qe2 Bxc4 12. Qxc4 Rb8 13. b3 Rb4 14. Qe2 c4
+15. O-O cxb3 16. cxb3 Rxb3 17. Nb5 Rb4 18. Nxa7 Qc7 19. Nc6 Rxe4 20. Qf3 Rc4
+21. Qe2 Rc3 22. Bb2 Rb3 23. Qc2 Rb6 24. Rfd1 Rfb8 25. Rab1 R8b7 26. Qd2 Nxd5
+27. Rbc1 Rxc6 28. Rxc6 Qxc6 29. Rc1 Qa6 30. Rc8+ Bf8 31. Bc1 Rb3 32. Qc2 Qd3
+33. Qc6 Rc3 34. Rxf8+ Kxf8 35. Qa8+ Ke7 36. Bb2 Qb1+ 37. Kh2 Qxb2 38. Qa7+ Ke6
+39. Kg1 Rc7 40. Qxa5 Qc1+ 41. Qe1 Qxe1+ 42. Kh2 Qxf2 43. a5 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "5"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 d5 2. exd5 Qxd5 3. Nf3 Bg4 4. Nc3 Bxf3 5. Nxd5 Bxd1 6. Nxc7+ Kd7 7. Nxa8
+Bg4 8. Bf4 e6 9. f3 Bf5 10. d5 Nb4 11. dxe6+ Kc8 12. O-O-O Ne7 13. exf7 Ned5
+14. Bg3 g6 15. Re1 Nc6 16. Kb1 Bg7 17. Re8+ Kd7 18. Rxh8 Ke7 19. Bc4 Bxc2+
+20. Kxc2 Ne3+ 21. Kd3 Nxc4 22. f8=Q+ Bxf8 23. Rxh7+ Kd8 24. Kxc4 Na5+ 25. Kb5
+Be7 26. Rd1+ Ke8 27. Kxa5 Bh4 28. Bxh4 a6 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "5"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "r1bqkbnr/pppppppp/2n5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nf3 Nf6 2. Nc3 e5 3. Bd3 Bc5 4. Nd5 Nxd5 5. exd5 Nb4 6. Bc4 e4 7. O-O exf3
+8. a3 O-O 9. axb4 fxg2 10. Kxg2 Qh4 11. bxc5 Qxc4 12. b3 Qxc5 13. c4 Qd4 14. Ra2
+d6 15. Qf3 Re8 16. Qg3 Re2 17. Kg1 g6 18. Bb2 Qxd2 19. Qh4 f6 20. Bd4 Qxa2
+21. Qxf6 Re5 22. Be3 Rf5 23. Qd8+ Rf8 24. Qxf8+ Kxf8 25. h3 Bxh3 26. Bh6+ Kf7
+27. Re1 Qxb3 28. f3 Bf5 29. Ra1 Qxf3 30. Bf4 Qg4+ 31. Kf1 Qxf4+ 32. Kg2 Qe4+
+33. Kf2 Qd4+ 34. Kf1 Qxa1+ 35. Kf2 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "6"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/1P6/P1PPPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nf3 e6 3. e3 Be7 4. Bb2 c5 5. Bd3 O-O 6. Nc3 Nc6 7. O-O a6 8. a3 b5
+9. a4 b4 10. Ne2 d5 11. Ng3 Qc7 12. Re1 g6 13. c4 bxc3 14. dxc3 e5 15. c4 d4
+16. Rb1 Bb7 17. Rc1 Rfe8 18. Ba3 Rab8 19. Bb2 a5 20. Bb1 Nd8 21. Ng5 Ba8
+22. exd4 cxd4 23. Nf3 Bc5 24. Ba2 Bb7 25. Qe2 Rc8 26. Bb1 Qd6 27. Rcd1 Bb4
+28. Rf1 Rb8 29. Rc1 Ba8 30. Ng5 e4 31. N3xe4 Bxe4 32. Nxe4 Nxe4 33. Bxe4 Qe5
+34. f3 h5 35. Qc2 Ne6 36. Rcd1 Bc3 37. Bxc3 dxc3 38. Rd5 Qg7 39. Rfd1 h4 40. g3
+Red8 41. Kg2 Kf8 42. R1d3 hxg3 43. hxg3 Ke7 44. Rxc3 Qh7 45. Rcd3 Rh8 46. Rd7+
+Ke8 47. Rd1 Nc5 48. Ra7 Kf8 49. Rg1 Qh3+ 50. Kf2 Rxb3 51. Ra8+ Kg7 52. Rxa5 Qd7
+53. Kg2 Nxe4 54. fxe4 Qg4 55. Kf1 Qf3+ 56. Ke1 Re3+ 57. Kd2 Re2+ 58. Kc1 Rxc2+
+59. Kxc2 Rh2+ 60. Rg2 Qxg2+ 61. Kc3 Qb2+ 62. Kd3 Qa3+ 63. Kd4 Qb2+ 64. Kd3 Qa3+
+65. Kd4 Rc2 66. Kd5 Rd2+ 67. Kc6 Qd6+ 68. Kb7 Qd7+ 69. Kb6 Qd6+ 70. Kb7 Qe7+
+71. Kb6 Rd6+ 72. Kb5 Qb7+ 73. Kc5 Qb6# 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "6"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/1P6/P1PPPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. d4 Bf5 3. Bb2 Nf6 4. e3 e6 5. Nf3 Bb4+ 6. c3 Bd6 7. Bd3 Bxd3 8. Qxd3
+O-O 9. c4 c5 10. cxd5 Nxd5 11. O-O Nc6 12. Nc3 Ndb4 13. Qe4 cxd4 14. exd4 Rc8
+15. Rfd1 Nd5 16. Nxd5 exd5 17. Qf5 Ne7 18. Qh3 Rc2 19. Bc1 Qc8 20. Ne1 Qxh3
+21. gxh3 Re2 22. a4 Re8 23. Nd3 Nf5 24. Bf4 Bf8 25. Rac1 Nxd4 26. Rc7 R2e7
+27. Rxe7 Bxe7 28. Be3 Nc6 29. Rc1 Ba3 30. Rd1 d4 31. Bg5 Re2 32. Bd2 Ne5 33. Bc1
+Nxd3 34. Bxa3 Re1+ 35. Rxe1 Nxe1 36. Bc5 b6 37. Be7 d3 38. Kf1 Nf3 39. Bb4 Nd4
+40. h4 Nxb3 41. Ke1 f6 42. h3 Kf7 43. f3 Ke6 44. Bf8 g6 45. h5 Ke5 46. hxg6 hxg6
+47. Bg7 g5 48. Bf8 Na5 49. Bb4 Nc4 50. Bc3+ Kf5 51. Bd4 Ke6 52. Bf2 Ke5 53. Bg3+
+Kd4 54. f4 Ke3 55. Bf2+ Kxf4 56. Kd1 f5 57. a5 bxa5 58. Bd4 a4 59. h4 gxh4
+60. Bf6 h3 61. Bd8 h2 62. Bc7+ Ne5 63. Bd6 h1=Q+ 64. Kd2 Qg2+ 65. Kc3 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "7"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e5 2. Nc3 Nf6 3. Nf3 d6 4. e3 Qe7 5. Be2 g6 6. O-O e4 7. Nd4 c6 8. d3 Bg7
+9. dxe4 a5 10. Nf3 Nbd7 11. Qd4 O-O 12. Rd1 Nc5 13. e5 dxe5 14. Qxe5 Qxe5
+15. Nxe5 Nfe4 16. Nxe4 Nxe4 17. Nd7 Bxd7 18. Rxd7 a4 19. Rxb7 Rfb8 20. Rxb8+
+Rxb8 21. Bf3 a3 22. Bxe4 c5 23. Rb1 Bxb2 24. Bd2 h6 25. Bd5 Rb6 26. e4 h5
+27. Be3 Ra6 28. Bxc5 Ra4 29. Bd6 Ra7 30. c5 Ra5 31. c6 Bd4 32. c7 h4 33. c8=Q+
+Kg7 34. Qf8+ Kh7 35. Qxf7+ Kh6 36. Bf4+ g5 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "7"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. d4 e6 3. g3 Nc6 4. a3 Be7 5. Nf3 O-O 6. Bg2 d5 7. Qc2 dxc4 8. Be3
+Ng4 9. Qxc4 Nxe3 10. fxe3 Qd5 11. Qd3 Rd8 12. Nc3 Qh5 13. O-O a6 14. Rad1 Qg6
+15. Qxg6 hxg6 16. h4 Bd7 17. Rc1 Ra7 18. Ne4 b6 19. Rc3 f5 20. Neg5 Bd6 21. Kf2
+e5 22. Nxe5 Nxe5 23. Bd5+ Kf8 24. dxe5 Bxe5 25. Rc2 Bf6 26. e4 Bxg5 27. hxg5 Ba4
+28. Rc3 Rd6 29. Rf3 c6 30. Ba2 Ke8 31. exf5 gxf5 32. Bb1 Rd2 33. b3 Re7 34. Re3
+Bb5 35. a4 Rxe2+ 36. Rxe2 Bxe2 37. Rg1 Bg4 38. Bd3 b5 39. b4 Kd7 40. Ra1 Re6
+41. Rh1 Kd6 42. Rh8 bxa4 43. Rg8 Re7 44. Ra8 Rb7 45. g6 Rxb4 46. Ke3 Rb6 47. Bc4
+a3 48. Ba2 Rb4 49. Ra7 Re4+ 50. Kf2 Re2+ 51. Kf1 Rxa2 52. Ke1 Re2+ 53. Kf1 Re7
+54. Rxe7 Kxe7 55. Kf2 a2 56. Ke1 a1=Q+ 57. Kf2 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "8"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. d4 Nf6 2. Nc3 e5 3. dxe5 dxe5 4. Qxd8+ Kxd8 5. Nf3 Nbd7 6. Ng5 Ke7 7. Bc4 Rg8
+8. Nxf7 a5 9. Ng5 Ke8 10. Bf7+ Ke7 11. Bxg8 h6 12. O-O hxg5 13. Bxg5 c6 14. Rad1
+Ke8 15. Bc4 Bc5 16. Be2 Bd4 17. Na4 g6 18. Bf3 Rb8 19. c3 b5 20. cxd4 Nh7
+21. Bc1 bxa4 22. d5 Bb7 23. d6 Ba6 24. Rfe1 Bb5 25. Be3 Kf7 26. a3 c5 27. Rd2
+Ba6 28. Rc1 Nhf6 29. Rc3 Ke6 30. Bg5 Bc4 31. Rxc4 Rb3 32. Rxa4 Nb6 33. Bxf6 c4
+34. d7 c3 35. d8=Q Nc8 36. Bg4+ Kf7 37. Rd7+ Ne7 38. Rxe7+ Kxf6 39. Ra7# 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "8"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "rnbqkbnr/ppp1pppp/3p4/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 1"]
+[SetUp "1"]
+
+1. Nc3 Be6 2. f4 g6 3. b3 Nc6 4. Nf3 Nf6 5. d4 d5 6. Bd3 dxe4 7. Nxe4 Nxe4
+8. Bxe4 Bd5 9. Qe2 Bxe4 10. Qxe4 f5 11. Qd3 Bg7 12. Bb2 Qd5 13. Qd2 O-O-O
+14. Rd1 Qe6+ 15. Kf1 Qf6 16. c4 Qd6 17. Kf2 e6 18. Bc3 Rhf8 19. Qe3 Qa3
+20. Qxe6+ Kb8 21. Rde1 Qxa2+ 22. Qe2 Qxb3 23. Qd2 Qxc4 24. Rd1 Rd5 25. Kg3 Nxd4
+26. Rhe1 Nxf3 27. Qxd5 Qxd5 28. Bxg7 Qb3 29. Rd3 Qxd3 30. gxf3 Rc8 31. Bb2 Qd2
+32. Bc3 Qxc3 33. Re7 Qc5 34. Re5 Qg1+ 35. Kh4 Qxh2+ 36. Kg5 Qg3+ 37. Kf6 c5
+38. Re6 Qxf3 39. Re7 Qxf4 40. Rf7 Qd4+ 41. Kg5 Qd2+ 42. Kf6 Qd8+ 43. Re7 Qf8+
+44. Ke5 0-1
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "9"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/6P1/PPPPPP1P/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... e5 2. Bg2 d5 3. d4 exd4 4. c3 dxc3 5. Nxc3 Nf6 6. Bxd5 Nxd5 7. Qxd5 Qxd5
+8. Nxd5 Na6 9. Bd2 Bf5 10. Nf3 O-O-O 11. Ne3 Be4 12. Bc3 Nc5 13. O-O Na4 14. Ne5
+Bg6 15. Rac1 b6 16. Nxg6 fxg6 17. Be5 Nc5 18. Rfd1 Rd7 19. Kg2 Rg8 20. Rxd7 Kxd7
+21. Rd1+ Bd6 22. Nc4 Nb7 23. e4 Kc8 24. Nxd6+ Nxd6 25. Bxd6 Rd8 26. e5 cxd6
+27. e6 Kb7 28. Kf3 Rf8+ 29. Ke3 Kc7 30. Re1 Rf6 31. Kd4 Kd8 32. e7+ Ke8 33. Kd5
+Rf5+ 34. Kxd6 Rxf2 35. Kc6 b5 36. b4 Rc2+ 37. Kxb5 a6+ 38. Kxa6 Rxa2+ 39. Kb7
+Rxh2 40. b5 Rg2 41. Re3 h5 42. b6 Rb2 43. Ka7 g5 44. b7 h4 45. Re5 hxg3 46. Rxg5
+Kd7 47. b8=Q Rxb8 48. Kxb8 Kxe7 49. Rxg7+ Ke6 50. Rxg3 Kd5 51. Kb7 Kc5 52. Kc8
+Kd4 53. Kd7 Ke5 54. Ra3 Kf4 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "9"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/6P1/PPPPPP1P/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. Nf3 Nf6 3. d4 e6 4. Bg2 Nc6 5. O-O Be7 6. b3 O-O 7. c4 a5 8. Nc3 a4
+9. Nxa4 Ne4 10. Ne5 Bf6 11. Nxc6 bxc6 12. Re1 e5 13. Bb2 exd4 14. cxd5 cxd5
+15. Bxd4 Re8 16. f3 Bxd4+ 17. Qxd4 Ng5 18. f4 Ne4 19. Nc3 Nxc3 20. Qxc3 Bb7
+21. Qb4 Qc8 22. Qc5 Ra6 23. Bf3 Rd8 24. Rec1 Rc6 25. Qb4 Qe6 26. Rxc6 Bxc6
+27. Qc5 Qf6 28. Rb1 Rd6 29. Rc1 Qb2 30. Qc3 Qa3 31. Qc2 Rf6 32. Kg2 Re6 33. Kf1
+Rd6 34. Qd2 Qa8 35. b4 Qc8 36. Rc5 Qb7 37. a3 Kh8 38. Kf2 Kg8 39. Qc3 Rh6
+40. Ke1 Rd6 41. Kf2 Rh6 42. h3 Rd6 43. e3 h6 44. Qc1 Qb6 45. h4 Qb7 46. h5 Kf8
+47. Be2 Qb6 48. Qc3 Kg8 49. Bf1 Re6 50. b5 Be8 51. Bh3 Re4 52. Bf5 Rc4 53. Qe5
+Kf8 54. Rxc4 dxc4 55. a4 f6 56. Qc3 Qc5 57. Bd3 Bf7 58. g4 Be6 59. f5 Bd5
+60. Bc2 Kf7 61. Ke2 Ke7 62. Ke1 Bf3 63. Qd4 Qxd4 64. exd4 Bxg4 65. Kd2 Bxh5
+66. Kc3 Bf3 67. Kxc4 h5 68. Kd3 h4 69. Ke3 Bg2 70. Be4 Bf1 71. Kf2 Bc4 72. Bb7
+Bd3 73. Ke3 Bf1 74. Kf2 Bd3 75. a5 Bxb5 76. a6 Bxa6 77. Bxa6 Kd6 78. Bb7 h3
+79. Kf3 h2 80. Kg3 c6 81. Kxh2 Kd5 82. Kh3 Kxd4 83. Bxc6 Kc5 84. Ba8 Kd6 85. Bb7
+Ke5 86. Kg4 Kd6 87. Be4 Ke7 88. Bd5 Kd6 89. Be4 Ke7 90. Bg2 Kd6 91. Kh5 Ke5
+92. Kg6 Kf4 93. Bd5 Kg4 94. Be4 Kf4 95. Bc2 Ke3 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "10"]
+[White "chess-rust-cc-redo"]
+[Black "sf_e2200"]
+[Result "1-0"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. Nc3 d4 3. Ne4 Nf6 4. d3 c5 5. c3 Qb6 6. cxd4 cxd4 7. e3 Nc6 8. Be2 g6
+9. Nxf6+ exf6 10. exd4 Bb4+ 11. Bd2 Be6 12. Bxb4 Qxb4+ 13. Qd2 a5 14. Qxb4 axb4
+15. Kd2 g5 16. h3 Ke7 17. a4 Kd6 18. Rhc1 Bd5 19. Ke1 Rae8 20. Kf1 f5 21. Nxg5
+Nxd4 22. Bh5 Re7 23. Re1 Rc7 24. Rac1 Nc2 25. Red1 Rhc8 26. Kg1 Nd4 27. Rxc7
+Rxc7 28. Nxh7 Rc8 29. Ng5 Ke7 30. a5 b3 31. Ra1 Kf6 32. Ra4 Rc1+ 33. Kh2 Nc6
+34. Bf3 Ke5 35. Bxd5 Kxd5 36. Ra3 f4 37. Rxb3 Rf1 38. Rxb7 f6 39. Ne4 Kd4
+40. Rd7+ Ke5 41. a6 Ra1 42. Nc5 Nb4 43. d4+ Kf5 44. Rd6 Nc2 45. Nb3 Ra4 46. Rd5+
+Ke6 47. Nc5+ Kxd5 48. Nxa4 Kc4 49. a7 Nxd4 50. a8=Q Kb3 51. Qd5+ Kxa4 52. Qxd4+
+Kb5 53. h4 Ka5 54. Qxf4 f5 55. Qxf5+ Kb6 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.30"]
+[Round "10"]
+[White "sf_e2200"]
+[Black "chess-rust-cc-redo"]
+[Result "0-1"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 0 1"]
+[SetUp "1"]
+
+1... d5 2. d4 Nf6 3. g3 e6 4. c4 Nc6 5. Bg2 Bb4+ 6. Bd2 a5 7. O-O dxc4 8. Be1
+O-O 9. a3 Bxe1 10. Qxe1 Nxd4 11. Ra2 e5 12. Nbd2 Nxf3+ 13. Bxf3 Bh3 14. Bxb7 Rb8
+15. Bh1 Bxf1 16. Bc6 c3 17. b3 Bh3 18. Nc4 Rxb3 19. Nxa5 Rb2 20. Ra1 Qd4 21. Bh1
+Qc5 22. Nc6 e4 23. Rc1 Qxc6 24. Bg2 Bxg2 25. Qd1 e3 26. Qd4 Rxe2 27. f3 Qxf3
+28. Qf4 Qxf4 29. gxf4 Bf3 30. h4 0-1
+

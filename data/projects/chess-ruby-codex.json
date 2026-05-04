@@ -1,0 +1,259 @@
+{
+  "name": "chess-ruby-codex",
+  "path": "/Users/mathieuacher/SANDBOX/chess-ruby-codex",
+  "primary_language": "Ruby",
+  "loc": {
+    "files_by_lang": {
+      "Markdown": 1,
+      "JSON": 27,
+      "Ruby": 15
+    },
+    "loc_by_lang": {
+      "Markdown": 86,
+      "JSON": 122232,
+      "Ruby": 2125
+    },
+    "total_files": 43,
+    "total_loc": 124443
+  },
+  "features": {
+    "FEN parsing": 3,
+    "UCI protocol": 9,
+    "Perft": 3,
+    "Castling": 3,
+    "En passant": 3,
+    "Promotion": 3,
+    "Check/Checkmate": 3,
+    "Minimax/Negamax": 1,
+    "Alpha-beta": 1,
+    "Quiescence": 1,
+    "Transposition table": 2,
+    "Zobrist hashing": 1,
+    "Killer moves": 1,
+    "Null-move pruning": 8,
+    "Late-move reduction (LMR)": 1,
+    "Evaluation/PST": 1,
+    "King safety": 1,
+    "Pawn structure": 1,
+    "Material counting": 4,
+    "Opening book": 5,
+    "Time management": 30
+  },
+  "feature_paths": {
+    "FEN parsing": [
+      "test/test_position.rb",
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/uci.rb"
+    ],
+    "UCI protocol": [
+      "README.md",
+      "test/test_position.rb",
+      "test/test_uci.rb",
+      "scripts/run_matches.rb",
+      "lib/ruby_chess_engine.rb",
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/search.rb",
+      "lib/ruby_chess_engine/move.rb",
+      "lib/ruby_chess_engine/uci.rb"
+    ],
+    "Perft": [
+      "README.md",
+      "test/test_perft.rb",
+      "lib/ruby_chess_engine/position.rb"
+    ],
+    "Castling": [
+      "test/test_position.rb",
+      "lib/ruby_chess_engine/evaluator.rb",
+      "lib/ruby_chess_engine/position.rb"
+    ],
+    "En passant": [
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/search.rb",
+      "lib/ruby_chess_engine/move.rb"
+    ],
+    "Promotion": [
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/search.rb",
+      "lib/ruby_chess_engine/move.rb"
+    ],
+    "Check/Checkmate": [
+      "scripts/run_matches.rb",
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/search.rb"
+    ],
+    "PGN": [],
+    "Board: 0x88": [],
+    "Board: bitboard": [],
+    "Board: magic bitboards": [],
+    "Board: mailbox 8x8": [],
+    "Board: mailbox 10x12": [],
+    "Minimax/Negamax": [
+      "lib/ruby_chess_engine/search.rb"
+    ],
+    "Alpha-beta": [
+      "README.md"
+    ],
+    "Iterative deepening": [],
+    "Quiescence": [
+      "lib/ruby_chess_engine/search.rb"
+    ],
+    "Transposition table": [
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/search.rb"
+    ],
+    "Zobrist hashing": [
+      "lib/ruby_chess_engine/position.rb"
+    ],
+    "Move ordering (MVV-LVA)": [],
+    "Killer moves": [
+      "lib/ruby_chess_engine/search.rb"
+    ],
+    "History heuristic": [],
+    "Principal-variation (PV)": [],
+    "Null-move pruning": [
+      "README.md",
+      "artifacts/ab_null_only_g60_t20.json",
+      "artifacts/ab_lmr_only_g60_t20.json",
+      "artifacts/ab_selective_search_g100_t20.json",
+      "test/test_uci.rb",
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/search.rb",
+      "lib/ruby_chess_engine/uci.rb"
+    ],
+    "Late-move reduction (LMR)": [
+      "lib/ruby_chess_engine/search.rb"
+    ],
+    "Late-move pruning (LMP)": [],
+    "Aspiration windows": [],
+    "Futility pruning": [],
+    "Razoring": [],
+    "Evaluation/PST": [
+      "lib/ruby_chess_engine/evaluator.rb"
+    ],
+    "Tapered evaluation": [],
+    "King safety": [
+      "lib/ruby_chess_engine/evaluator.rb"
+    ],
+    "Pawn structure": [
+      "lib/ruby_chess_engine/evaluator.rb"
+    ],
+    "Mobility": [],
+    "Material counting": [
+      "scripts/run_matches.rb",
+      "lib/ruby_chess_engine/evaluator.rb",
+      "lib/ruby_chess_engine/position.rb",
+      "lib/ruby_chess_engine/search.rb"
+    ],
+    "Opening book": [
+      "README.md",
+      "test/test_opening_book.rb",
+      "lib/ruby_chess_engine.rb",
+      "lib/ruby_chess_engine/opening_book.rb",
+      "lib/ruby_chess_engine/uci.rb"
+    ],
+    "Endgame tables": [],
+    "Time management": [
+      "README.md",
+      "artifacts/vs_sf_skill0_g100_t20.json",
+      "artifacts/vs_sf_skill0_g30_t20_pass5_timeoutfix.json",
+      "artifacts/vs_sf_skill0_g50_t20.json",
+      "artifacts/vs_sf1320_g100_t20.json",
+      "artifacts/vs_sf_skill0_g30_t100_pass2_default.json",
+      "artifacts/vs_sf_skill0_g100_t20_pass2_d3.json",
+      "artifacts/vs_sf_skill0_g20_t20_pass2_d3.json",
+      "artifacts/vs_sf_skill0_g30_t20_pass3b_default.json",
+      "artifacts/vs_sf_skill0_g100_t20_improved_d3.json",
+      "artifacts/vs_sf_skill0_g100_t20_pass2_tuned_default.json",
+      "artifacts/vs_sf_skill0_g30_t20_pass3c_default.json",
+      "artifacts/vs_sf_skill0_g50_t20_pass2b_d3.json",
+      "artifacts/vs_sf_skill0_g100_t20_pass5_timeoutfix.json",
+      "artifacts/vs_sf1320_g50_t20.json",
+      "artifacts/ab_null_only_g60_t20.json",
+      "artifacts/smoke.json",
+      "artifacts/vs_stockfish_smoke.json",
+      "artifacts/vs_sf_skill0_g30_t20_pass2_d4.json",
+      "artifacts/vs_sf_skill0_g50_t20_improved_d3.json",
+      "artifacts/vs_sf_skill0_g30_t20_pass4_default.json",
+      "artifacts/vs_sf_skill0_g30_t20_pass3_default.json",
+      "artifacts/vs_sf_skill0_g50_t20_improved.json",
+      "artifacts/ab_lmr_only_g60_t20.json",
+      "artifacts/vs_sf_skill0_g100_t20_pass2b_d3.json",
+      "artifacts/ab_selective_search_g100_t20.json",
+      "artifacts/vs_sf_skill0_g50_t20_improved_default.json",
+      "artifacts/vs_sf_skill0_g100_t20_pass3c_default.json",
+      "scripts/run_matches.rb",
+      "lib/ruby_chess_engine/uci.rb"
+    ],
+    "NNUE/neural eval": []
+  },
+  "claude": {
+    "n_sessions": 0,
+    "subagent_sessions_count": 0,
+    "n_user_prompts": 0,
+    "n_assistant_messages": 0,
+    "models": [],
+    "tool_uses": {},
+    "cost": {
+      "tokens_total": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_creation": 0
+      },
+      "usd_estimate": 0.0
+    },
+    "first_ts": null,
+    "last_ts": null,
+    "missing_from_index": [],
+    "sessions": []
+  },
+  "codex": {
+    "n_sessions": 1,
+    "n_user_prompts": 7,
+    "n_assistant_messages": 108,
+    "models": [
+      "gpt-5.3-codex"
+    ],
+    "tool_uses": {
+      "write_stdin": 268,
+      "exec_command": 187
+    },
+    "cost": {
+      "tokens_total": {
+        "input": 43425851,
+        "output": 121863,
+        "cache_read": 42037376,
+        "cache_creation": 0,
+        "reasoning_output": 54070
+      },
+      "usd_estimate": 60.76
+    },
+    "first_ts": "2026-03-12T19:36:37.871Z",
+    "last_ts": "2026-03-13T07:03:34.851Z",
+    "sessions": [
+      {
+        "session_id": "rollout-2026-03-12T20-35-58-019ce38c-74a9-7730-b8c8-a9dd7bebc270",
+        "first_ts": "2026-03-12T19:36:37.871Z",
+        "last_ts": "2026-03-13T07:03:34.851Z",
+        "models": [
+          "gpt-5.3-codex"
+        ],
+        "turns": 7,
+        "tokens": {
+          "input": 43425851,
+          "output": 121863,
+          "cache_read": 42037376,
+          "reasoning_output": 54070
+        },
+        "tool_uses": {
+          "exec_command": 187,
+          "write_stdin": 268
+        },
+        "first_prompt_sample": "I want to build a chess engine in Ruby\u2026 at the end, I want to test this chess engine and assess its Elo rating, typically by playing games against chess engines of \u201csimilar\u201d levels.\n"
+      }
+    ]
+  },
+  "git": {
+    "is_git": false
+  }
+}

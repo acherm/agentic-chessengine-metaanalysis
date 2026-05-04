@@ -1,0 +1,46 @@
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-java"]
+[Black "chess-py"]
+[Result "1/2-1/2"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/3P4/PPP1PPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nc6 2. Nc3 e5 3. Nf3 Bb4 4. Bd2 Nf6 5. Nb5 Bxd2+ 6. Qxd2 d6 7. O-O-O O-O
+8. Nc3 Bg4 9. Ng5 Qe7 10. Nge4 Rfe8 11. Nxf6+ Qxf6 12. Nd5 Qd8 13. Kb1 Nd4
+14. Qb4 b6 15. Qc3 c6 16. Ne3 Qh4 17. Nxg4 Qxg4 18. Rd2 c5 19. Qc4 b5 20. Qd5
+Qe6 21. Qxe6 Nxe6 22. Ka1 d5 23. e3 d4 24. exd4 Nxd4 25. Be2 Re6 26. Bg4 f5
+27. Bh3 Rf6 28. Re1 Nc6 29. Rdd1 Rd8 30. Kb1 a6 31. Rh1 a5 32. Rhe1 Kf7 33. Ka1
+b4 34. Rf1 g5 35. f3 Nd4 36. Rc1 Re6 37. c3 bxc3 38. bxc3 Ne2 39. Rce1 Nxc3
+40. Bxf5 Re7 41. Rc1 Kf6 42. Be4 Nxe4 43. fxe4+ Kg7 44. Rxc5 Rxd3 45. Rxa5 Rd4
+46. Rf5 Rxe4 47. Rxg5+ Kf6 48. Rg3 Re1+ 49. Kb2 Rb7+ 50. Kc3 e4 51. Rgg5 e3
+52. Raf5+ Ke6 53. Rb5 Rxb5 54. Rxb5 Re2 55. a4 Rxg2 56. Rh5 Ra2 57. Rh6+ Kd5
+58. Rxh7 Rxa4 59. Rh5+ Ke6 60. Kd3 Ra3+ 61. Ke2 Kf6 62. Kf3 Ke6 63. Kg3 e2+
+64. Kf2 Ra2 65. Ke1 Kf6 66. Rd5 Ke6 67. Rd2 Ra3 68. Kxe2 Rh3 69. Kf1 Rh4 70. Kg2
+Ke5 71. Kg3 Rh5 72. Kg4 Rh8 73. Kg5 Rg8+ 74. Kh6 Kf4 75. Kh7 Rg4 76. Rf2+ Ke3
+77. Rc2 Kd4 78. Re2 Kd5 79. Kh8 Kd4 80. Kh7 Kc3 81. Rf2 Kd3 82. Kh6 Ke3 83. Rb2
+Kf4 84. Kh5 Rg7 85. Kh6 Rg4 86. Kh5 Rg5+ 87. Kh6 Rg4 1/2-1/2
+
+[Event "?"]
+[Site "?"]
+[Date "2026.04.28"]
+[Round "1"]
+[White "chess-py"]
+[Black "chess-java"]
+[Result "1/2-1/2"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/3P4/PPP1PPPP/RNBQKBNR b KQkq - 0 1"]
+[SetUp "1"]
+
+1... Nf6 2. Nc3 Nc6 3. Nf3 e6 4. e4 Bb4 5. Bd2 O-O 6. e5 Bxc3 7. Bxc3 Nd5 8. Bd2
+Qe7 9. d4 Kh8 10. c4 Nb6 11. Bd3 Nb4 12. Be2 Nc6 13. c5 Nd5 14. O-O f6 15. Qc2
+fxe5 16. dxe5 Rf5 17. g4 Rf8 18. Ng5 g6 19. Nf3 Nf4 20. Bb5 Nh3+ 21. Kg2 Rxf3
+22. Bxc6 Rxf2+ 23. Kxh3 Rxf1 24. Rxf1 bxc6 25. Qc4 Bb7 26. Kg2 Rb8 27. Rf6 Qd8
+28. Bg5 Qe8 29. Qa4 a6 30. Rf1 Kg8 31. Qc4 a5 32. h3 Ra8 33. Qd4 a4 34. a3 Ba6
+35. Rf2 h5 36. Rd2 Bc8 37. Be3 Kh8 38. Rd1 Qf7 39. g5 Rb8 40. Rb1 Ba6 41. Re1
+Rb3 42. Rh1 Be2 43. Qe4 Qf5 44. Qxf5 gxf5 45. Kf2 Rxb2 46. Bd4 Rc2 47. Ke3 Bc4
+48. Kf4 Bb3 49. Rb1 Rd2 50. Be3 Ra2 51. g6 Rxa3 52. Re1 Kg7 53. Kg5 Bd5 54. Kxh5
+f4 55. Bxf4 Rxh3+ 56. Kg4 Rh8 57. Ra1 Bb3 58. Kg5 Rf8 59. Be3 Rf5+ 60. Kg4 Kxg6
+61. Bf4 Kh7 62. Kf3 Kg7 63. Kg4 Kh7 64. Kf3 Kg7 65. Kg4 Kh7 1/2-1/2
+

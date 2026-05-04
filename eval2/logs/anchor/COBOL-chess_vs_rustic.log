@@ -1,0 +1,76 @@
+Indexing opening suite...
+Started game 2 of 30 (rustic vs COBOL-chess)
+Started game 1 of 30 (COBOL-chess vs rustic)
+Finished game 1 (COBOL-chess vs rustic): 0-1 {Black mates}
+Score of COBOL-chess vs rustic: 0 - 1 - 0  [0.000] 1
+Started game 3 of 30 (COBOL-chess vs rustic)
+Finished game 2 (rustic vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs rustic: 0 - 2 - 0  [0.000] 2
+Started game 4 of 30 (rustic vs COBOL-chess)
+Warning: Illegal PV move b8d7 from COBOL-chess (0)
+Warning: PV:  b8d7
+Warning: Illegal PV move a7a6 from COBOL-chess (0)
+Warning: PV:  a7a6
+Warning: Illegal PV move a7a6 from COBOL-chess (0)
+Warning: PV:  a7a6
+Warning: Illegal PV move a7a6 from COBOL-chess (0)
+Warning: PV:  a7a6
+Warning: Illegal PV move a7a6 from COBOL-chess (0)
+Warning: PV:  a7a6
+Warning: Illegal PV move a7a6 from COBOL-chess (0)
+Warning: PV:  a7a6
+Warning: Illegal PV move a7a6 from COBOL-chess (0)
+Warning: PV:  a7a6
+Finished game 3 (COBOL-chess vs rustic): 0-1 {White makes an illegal move: a7a6}
+Score of COBOL-chess vs rustic: 0 - 3 - 0  [0.000] 3
+Started game 5 of 30 (COBOL-chess vs rustic)
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move e8f8 from COBOL-chess (0)
+Warning: PV:  e8f8
+Warning: Illegal PV move c8e6 from COBOL-chess (0)
+Warning: PV:  c8e6
+Warning: Illegal PV move f7d5 from COBOL-chess (0)
+Warning: PV:  f7d5
+Warning: Illegal PV move f7d5 from COBOL-chess (0)
+Warning: PV:  f7d5
+Warning: Illegal PV move f7d5 from COBOL-chess (0)
+Warning: PV:  f7d5
+Finished game 5 (COBOL-chess vs rustic): 0-1 {White makes an illegal move: f7d5}
+Score of COBOL-chess vs rustic: 0 - 4 - 0  [0.000] 4
+Started game 6 of 30 (rustic vs COBOL-chess)
+Finished game 4 (rustic vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs rustic: 0 - 5 - 0  [0.000] 5
+Started game 7 of 30 (COBOL-chess vs rustic)
+Finished game 7 (COBOL-chess vs rustic): 0-1 {Black mates}
+Score of COBOL-chess vs rustic: 0 - 6 - 0  [0.000] 6
+Started game 8 of 30 (rustic vs COBOL-chess)
+Finished game 6 (rustic vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs rustic: 0 - 7 - 0  [0.000] 7
+Started game 9 of 30 (COBOL-chess vs rustic)
+Finished game 8 (rustic vs COBOL-chess): 1-0 {White mates}
+Score of COBOL-chess vs rustic: 0 - 8 - 0  [0.000] 8
+Started game 10 of 30 (rustic vs COBOL-chess)
+Finished game 9 (COBOL-chess vs rustic): 0-1 {Black mates}
+Score of COBOL-chess vs rustic: 0 - 9 - 0  [0.000] 9
+Finished game 10 (rustic vs COBOL-chess): * {No result}
+Score of COBOL-chess vs rustic: 0 - 9 - 0  [0.000] 9
+...      COBOL-chess playing White: 0 - 5 - 0  [0.000] 5
+...      COBOL-chess playing Black: 0 - 4 - 0  [0.000] 4
+...      White vs Black: 4 - 5 - 0  [0.444] 9
+Elo difference: -inf +/- nan, LOS: 0.1 %, DrawRatio: 0.0 %
+SPRT: llr -3.17 (-107.7%), lbound -2.94, ubound 2.94 - H0 was accepted
+
+Player: COBOL-chess
+   "Loss: Black mates": 3
+   "Loss: White makes an illegal move: a7a6": 1
+   "Loss: White makes an illegal move: f7d5": 1
+   "Loss: White mates": 4
+   "No result": 1
+Player: rustic
+   "No result": 1
+   "Win: Black mates": 3
+   "Win: White makes an illegal move: a7a6": 1
+   "Win: White makes an illegal move: f7d5": 1
+   "Win: White mates": 4
+Finished match
